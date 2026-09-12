@@ -5,18 +5,18 @@
 # PyTorch 2.9.0 with CUDA 12.8 (for B200 GPUs with sm_100 architecture)
 # Note: PyTorch 2.6.0 only supports up to sm_90, B200 requires 2.8.0+
 # For non-B200 machines with CUDA 12.4, change to cu124 and torch==2.6.0
---index-url https://download.pytorch.org/whl/cu128
+# Keep PyPI as the primary index while making the pinned CUDA wheels visible.
+# Requirements-file index options are global, so two --index-url directives do
+# not scope the first index to Torch and leave Torch unresolvable.
+--extra-index-url https://download.pytorch.org/whl/cu128
 torch==2.9.0
 torchvision==0.24.0
-
-# Reset to default index for other packages
---index-url https://pypi.org/simple
 
 # Core LlamaFactory package (PyPI latest is 0.9.3, Docker uses 0.9.4 from GitHub)
 llamafactory==0.9.3
 
-# FlashAttention-2: installed separately via llm_finetune_flash_attn.txt
-# (requires torch installed first, and --no-build-isolation flag)
+# FlashAttention-2 is pinned and installed by reproduction/ft_agent/install_backends.py
+# after the project-local CUDA 12.8 compiler is available.
 
 # Transformers library (for tokenizer)
 transformers
@@ -24,7 +24,8 @@ transformers
 # Additional dependencies (matches Dockerfile line 17)
 bitsandbytes>=0.39.0
 mixture-of-depth>=1.1.6
-litellm
+# 1.98.0 imports typing.NotRequired, which is unavailable on Python 3.10.
+litellm==1.80.17
 
 # Common utilities for data processing scripts
 requests
@@ -51,8 +52,8 @@ adam-mini
 # Quantization
 hqq
 
-# FP8 training support
-torchao>=0.8.0
+# FP8 training support. TorchAO 0.14.1 is the release built for PyTorch 2.9.0.
+torchao==0.14.1
 
 # Chemistry support
 rdkit

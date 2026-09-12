@@ -4,18 +4,24 @@
 # PyTorch 2.9.0 with CUDA 12.8 (for B200 GPUs with sm_100 architecture)
 # Note: PyTorch 2.1.0 only supports up to sm_90, B200 requires 2.8.0+
 # For non-B200 machines with CUDA 12.4, change to cu124 and torch==2.6.0
---index-url https://download.pytorch.org/whl/cu128
+# Keep PyPI as the primary index while making the pinned CUDA wheels visible.
+# Requirements-file index options are global, so two --index-url directives do
+# not scope the first index to Torch and leave Torch unresolvable.
+--extra-index-url https://download.pytorch.org/whl/cu128
 torch==2.9.0
 torchvision==0.24.0
 
-# Reset to default index for other packages
---index-url https://pypi.org/simple
+# vLLM 0.12.0 is the release matched to PyTorch 2.9.0. A lower bound would
+# currently resolve to newer vLLM releases that replace the pinned Torch build.
+vllm==0.12.0
 
-# vLLM for model inference (latest version supports PyTorch 2.9.0)
-vllm>=0.12.0
+# MMEngine's OpenCompass config loader still imports pkg_resources, which was
+# removed in Setuptools 81.
+setuptools==80.9.0
 
-# OpenCompass benchmark framework (custom fork with cascade eval support)
-opencompass @ git+https://github.com/Jensen246/opencompass.git
+# OpenCompass benchmark framework (custom fork with cascade eval support).
+# Pinned archive avoids an unversioned Git checkout and works where Git smart HTTP is blocked.
+opencompass @ https://codeload.github.com/Jensen246/opencompass/tar.gz/abc7c91a485bc1e3188e71e330a7140be385da29
 
 # Math evaluation dependencies (matches Dockerfile line 22)
 math_verify

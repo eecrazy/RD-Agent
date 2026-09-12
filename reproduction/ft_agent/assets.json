@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "resolved_at": "2026-08-26",
+  "assets": [
+    {
+      "id": "dataset-chemcot",
+      "kind": "dataset",
+      "name": "chemcot",
+      "repo_id": "OpenMol/ChemCoTDataset",
+      "revision": "d88a8af379ba4a7e79f58c04590ad037e79b06ba"
+    },
+    {
+      "id": "dataset-panorama",
+      "kind": "dataset",
+      "name": "panorama",
+      "repo_id": "LG-AI-Research/PANORAMA",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d"
+    },
+    {
+      "id": "dataset-deepscaler",
+      "kind": "dataset",
+      "name": "deepscaler",
+      "repo_id": "agentica-org/DeepScaleR-Preview-Dataset",
+      "revision": "b6ae8c60f5c1f2b594e2140b91c49c9ad0949e29"
+    },
+    {
+      "id": "dataset-financeiq",
+      "kind": "dataset",
+      "name": "financeiq",
+      "repo_id": "Duxiaoman-DI/FinanceIQ",
+      "revision": "fca1d9ceb6925041264d211b9ddf7264e8145248"
+    },
+    {
+      "id": "dataset-tableinstruct",
+      "kind": "dataset",
+      "name": "tableinstruct",
+      "repo_id": "Multilingual-Multimodal-NLP/TableInstruct",
+      "revision": "41f6406234f22dee9323d4ce6aa5fdb33d9a2bd1"
+    },
+    {
+      "id": "dataset-bioprobench",
+      "kind": "dataset",
+      "name": "bioprobench",
+      "repo_id": "bowenxian/BioProBench",
+      "revision": "c9ae37cac1b789eda6f3ffa62047fce92c286fbb"
+    },
+    {
+      "id": "benchmark-aime2025",
+      "kind": "dataset",
+      "role": "benchmark",
+      "name": "aime2025",
+      "repo_id": "opencompass/aime2025",
+      "revision": "a6ad95f611d72cf628a80b58bd0432ef6638f958",
+      "target": "benchmarks/pinned/aime2025",
+      "dataset_path": "aime2025.jsonl",
+      "benchmarks": [
+        "aime25"
+      ],
+      "postprocess": "combine_aime2025",
+      "allow_patterns": [
+        ".gitattributes",
+        "README.md",
+        "aime2025-I.jsonl",
+        "aime2025-II.jsonl"
+      ]
+    },
+    {
+      "id": "benchmark-panorama",
+      "kind": "dataset",
+      "role": "benchmark",
+      "name": "panorama",
+      "repo_id": "LG-AI-Research/PANORAMA",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "target": "benchmarks/pinned/panorama",
+      "dataset_path": ".",
+      "benchmarks": [
+        "panorama_par4pc",
+        "panorama_noc4pc",
+        "panorama_pi4pc"
+      ],
+      "allow_patterns": [
+        ".gitattributes",
+        "README.md",
+        "NOC4PC/test.parquet",
+        "PAR4PC/test.parquet",
+        "PI4PC/test.parquet"
+      ]
+    },
+    {
+      "id": "benchmark-chemcotbench",
+      "kind": "dataset",
+      "role": "benchmark",
+      "name": "chemcotbench",
+      "repo_id": "OpenMol/ChemCoTBench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "target": "benchmarks/pinned/chemcotbench",
+      "dataset_path": ".",
+      "benchmarks": [
+        "chemcotbench_mol_und",
+        "chemcotbench_mol_edit",
+        "chemcotbench_mol_opt",
+        "chemcotbench_reaction"
+      ],
+      "verified_git_mirror": {
+        "provider": "github-git",
+        "repository": "little1d/MolAct",
+        "revision": "7f39250c77bf6d3527f8bb433b685df22f2f0182",
+        "prefix": "ChemCoTBench_benchmark",
+        "files": {
+          ".gitattributes": "1ef325f1b111266a6b26e0196871bd78baa8c2f3",
+          "README.md": "33e7a4f3d190005c0637369077e4505389dea6e6",
+          "chemcotbench/mol_edit/add.json": "0272d2e7534eab4f4b21558ad98ab83819db7e76",
+          "chemcotbench/mol_edit/delete.json": "cbb6a4a0d309f67977514a901e8db9d96461aedd",
+          "chemcotbench/mol_edit/sub.json": "5c8693eb68632f3776de3a96ad165551cd7da4a8",
+          "chemcotbench/mol_opt/drd.json": "940b839903ae3ceb4f3263984ba3c97d04e0e9a3",
+          "chemcotbench/mol_opt/gsk.json": "3a447d220e1b843ae847be9c8600db5a9496dd10",
+          "chemcotbench/mol_opt/jnk.json": "ed0040cefe49c250789fef5201f21c09761b2598",
+          "chemcotbench/mol_opt/logp.json": "a6e5de2b2287da26d84717d6ef2db8e2fa30709b",
+          "chemcotbench/mol_opt/qed.json": "e5d03ce40bb70d07eac1d714921a3750bedb8c77",
+          "chemcotbench/mol_opt/solubility.json": "435f24c999dd67f360d7058eb5757056a074e7dd",
+          "chemcotbench/mol_und/Murcko_scaffold.json": "d829c3ba1c22808e8083e3adc828dfc4333fe813",
+          "chemcotbench/mol_und/equivalence.json": "8b7aac3e3d1c1c9208f498398636d9c4e8cf121b",
+          "chemcotbench/mol_und/fg_count.json": "aefee14f2bafdfddcfebdb597e6f031211517783",
+          "chemcotbench/mol_und/ring_count.json": "82c4753061083b4b73852da870ce6233a923a9f5",
+          "chemcotbench/mol_und/ring_system_scaffold.json": "f26a908164ca56f1a36e6f5417f2c0b10ca7a6aa",
+          "chemcotbench/reaction/fs.json": "fd402639abf1983f6202d6cc65191082cb24b597",
+          "chemcotbench/reaction/mechsel.json": "5d4b2753a03213e0242798ba6befb95055f6930b",
+          "chemcotbench/reaction/nepp.json": "50907ef85bd2d3c522823ba05afa505a9d007f8e",
+          "chemcotbench/reaction/rcr.json": "6c00bb61723dc76f331469de9b44098733772c07",
+          "chemcotbench/reaction/retro.json": "2bee44c48eecf6252b01f603f8eeb36d549d5697"
+        },
+        "source_oids": {
+          "chemcotbench/mol_opt/logp.json": "544d165142cc685db0e50cd040d9b7e096a78dee"
+        },
+        "append_final_newline": [
+          "chemcotbench/mol_opt/logp.json"
+        ]
+      }
+    },
+    {
+      "id": "benchmark-financeiq",
+      "kind": "dataset",
+      "role": "benchmark",
+      "name": "financeiq",
+      "repo_id": "Duxiaoman-DI/FinanceIQ",
+      "revision": "fca1d9ceb6925041264d211b9ddf7264e8145248",
+      "target": "benchmarks/pinned/financeiq",
+      "dataset_path": ".",
+      "benchmarks": [
+        "FinanceIQ_gen"
+      ],
+      "postprocess": "financeiq_eval"
+    },
+    {
+      "id": "benchmark-tablebench",
+      "kind": "dataset",
+      "role": "benchmark",
+      "name": "tablebench",
+      "repo_id": "Multilingual-Multimodal-NLP/TableBench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "target": "benchmarks/pinned/tablebench",
+      "dataset_path": ".",
+      "benchmarks": [
+        "tablebench_data_analysis",
+        "tablebench_fact_checking",
+        "tablebench_numerical_reasoning",
+        "tablebench_visualization"
+      ]
+    },
+    {
+      "id": "model-qwen2.5-7b-instruct",
+      "kind": "model",
+      "name": "Qwen/Qwen2.5-7B-Instruct",
+      "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+    },
+    {
+      "id": "model-qwen2.5-3b-instruct",
+      "kind": "model",
+      "name": "Qwen/Qwen2.5-3B-Instruct",
+      "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+    }
+  ]
+}
