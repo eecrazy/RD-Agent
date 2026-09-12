@@ -19,6 +19,25 @@ unified_hypothesis_gen:
     # PART 1: DATA PROCESSING
     # ═══════════════════════════════════════════════════════════════════════════
 
+    {% if formal_expected_samples %}
+    ## 1.0 Formal Reproduction Contract (HIGHEST PRIORITY)
+
+    The final training dataset must contain exactly {{ formal_expected_samples }}
+    records. This is not a target range or upper limit. Quality filtering must
+    draw deterministic replacements so the final count remains exact. Any
+    validation set is additional, independently registered data and must not be
+    split from those {{ formal_expected_samples }} records. Debug mode remains a
+    small (~100-record) execution check.
+
+    Do not make a probabilistic rejection allowance or comfort margin a hard
+    preflight requirement on the number of unique sources. Refill based on
+    actual accepted records. When a defensible source pool has fewer identities
+    than the required output count, reserve validation identities first and use
+    distinct, answer-preserving variants of training-side sources as appropriate;
+    never duplicate an identical record or cross source identities between train
+    and validation.
+    {% endif %}
+
     ## 1.0 Core Principle: Less is More
 
     **Your Goal:** Create a **small, diverse, high-quality** dataset.
@@ -164,25 +183,37 @@ unified_hypothesis_gen:
     # PART 2: TRAINING CONFIGURATION
     # ═══════════════════════════════════════════════════════════════════════════
 
-    ## 2.1 Hardware Memory Constraints
+    ## 2.0 Active Training Method Policy (Hard Constraint)
 
-    The **Hardware Memory Constraints** table in Scenario Description shows:
+    Active policy: `{{ training_policy }}`
+
+    {{ training_policy_guidance }}
+
+    Under `paper`, autonomously choose exactly one of Full SFT or ordinary,
+    unquantized LoRA based on the task and the paper resource envelope. Never
+    choose freeze tuning, QLoRA, rsLoRA, or DoRA. The worker-local H20 CUDA view
+    is an execution detail and must not be used to declare Full SFT infeasible.
+
+    ## 2.1 Training Resource Memory Constraints
+
+    The **Training Resource Memory Constraints** table in Scenario Description shows:
     - Max `seq_len` each method can support at `batch_size=1`
     - Model's `max_position_embeddings` limit
 
     **Method Selection Framework (You Decide):**
     
-    Consider these factors when choosing a fine-tuning method. There are NO fixed rules - learn from history and adapt:
+    Consider these factors when choosing among the methods allowed by the active
+    policy. Learn from history and adapt within that method set:
     
     1. **Memory Constraints** (Hard Limit)
-       - Check Hardware Memory Constraints table for max seq_len each method supports
+       - Check the Training Resource Memory Constraints table for max seq_len each method supports
        - Your required seq_len must fit within the method's capability
        - cutoff_len ≤ min(max_seq_len from table, max_position_embeddings)
     
     2. **Dataset Size vs Overfitting Risk** (Trade-off to Explore)
        - Smaller datasets → higher risk of overfitting with full-parameter training
        - Consider: Can you augment data? Use regularization? Early stopping?
-       - PEFT methods (LoRA/QLoRA) are one option, but not the only solution
+       - Ordinary unquantized LoRA is the only PEFT method in the paper-policy search space
     
     3. **Training Quality vs Efficiency** (Your Decision)
        - Full methods generally offer more capacity but require more resources
@@ -199,7 +230,9 @@ unified_hypothesis_gen:
     **Batch Size Trade-offs** (You Decide):
     - Balance between: sequence length, batch size, gradient accumulation, GPU memory
     - Consider: longer sequences need smaller batches, but what's the optimal trade-off?
-    - Effective batch size = per_device_batch × gradient_accumulation × num_gpus
+    - Draft the logical single-B200 batch as
+      `logical_global_batch = per_device_batch × gradient_accumulation`; do not
+      pre-scale it for the number of H20s used by the execution backend
     - Find the configuration that maximizes training stability and quality for YOUR setup
 
     ## 2.2 Available Resources
@@ -356,4 +389,3 @@ unified_hypothesis_gen:
     }
     ```
     {% endif %}
-

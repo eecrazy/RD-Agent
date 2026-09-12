@@ -21,7 +21,6 @@ from rdagent.components.coder.finetune.conf import (
     FT_YAML_FILE_NAME,
     FTCoderCoSTEERSettings,
 )
-from rdagent.components.coder.finetune.eval import FTDataEvaluator
 from rdagent.core.experiment import FBWorkspace, Task
 from rdagent.core.scenario import Scenario
 from rdagent.log import rdagent_logger as logger
@@ -78,6 +77,13 @@ class LLMFinetuneRunner(CoSTEER):
 
         # Use runner-specific evolving strategy for full dataset training
         es = FTRunnerEvolvingStrategy(scen=scen, settings=settings, improve_mode=True)
+
+        # Training and benchmark feedback must not depend on optional RAG
+        # persistence.  Some OpenAI-compatible planner endpoints are chat-only
+        # and do not implement /embeddings; generating knowledge after a
+        # successful evaluation would otherwise turn the whole run into a
+        # failure.
+        kwargs.setdefault("knowledge_self_gen", False)
 
         # Initialize with LLM-specific configuration
         super().__init__(

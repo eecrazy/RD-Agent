@@ -5,6 +5,7 @@ Based on EleutherAI Transformer Math: https://blog.eleuther.ai/transformer-math/
 """
 
 import re
+from collections.abc import Sequence
 
 
 class MemoryEstimator:
@@ -35,12 +36,16 @@ class MemoryEstimator:
         gpu_mem: float,
         num_gpus: int,
         max_position_embeddings: int = 32768,
+        gpu_name: str = "GPU",
+        resource_scope: str = "runtime-visible physical resources",
     ):
         self.params_b = params_b
         self.gpu_mem = gpu_mem
         self.num_gpus = num_gpus
         self.total_mem = gpu_mem * num_gpus
         self.max_ctx = max_position_embeddings
+        self.gpu_name = gpu_name
+        self.resource_scope = resource_scope
 
         # Estimate architecture
         self.hidden, self.layers = next(
@@ -55,6 +60,8 @@ class MemoryEstimator:
         gpu_mem: float,
         num_gpus: int,
         model_specs: str = "",
+        gpu_name: str = "GPU",
+        resource_scope: str = "runtime-visible physical resources",
     ) -> "MemoryEstimator":
         """Create from model name and specs."""
         # Parse params from name: Qwen2.5-7B -> 7.0
@@ -68,19 +75,24 @@ class MemoryEstimator:
             if ctx_match:
                 max_ctx = int(ctx_match.group(1))
 
-        return cls(params_b, gpu_mem, num_gpus, max_ctx)
+        return cls(
+            params_b,
+            gpu_mem,
+            num_gpus,
+            max_ctx,
+            gpu_name=gpu_name,
+            resource_scope=resource_scope,
+        )
 
     def _base_memory(self, method: str) -> float:
         """Base memory without activations (GB)."""
         lora_p = 2 * self.DEFAULT_LORA_RANK * self.hidden * 4 * self.layers / 1e9
 
-        if method == "full":
+        if method == "full" or method == "full_gc":
             return self.params_b * self.MEM_FACTOR["full"]
-        elif method == "full_gc":
-            return self.params_b * self.MEM_FACTOR["full"]
-        elif method == "lora":
+        if method == "lora":
             return self.params_b * self.MEM_FACTOR["base_bf16"] + lora_p * self.MEM_FACTOR["trainable"]
-        elif method == "qlora":
+        if method == "qlora":
             return self.params_b * self.MEM_FACTOR["base_4bit"] + lora_p * self.MEM_FACTOR["trainable"]
         return 0
 
@@ -102,19 +114,27 @@ class MemoryEstimator:
         max_seq = int(remaining * 1e9 / (self.hidden * self.layers * 8 * batch_size * act_factor * 1.2))
         return max_seq  # Don't cap at max_ctx here, show raw capability
 
-    def estimate(self) -> dict[str, int]:
+    def estimate(self, methods: Sequence[str] | None = None) -> dict[str, int]:
         """Calculate max seq_len for each method (batch=1)."""
-        methods = ["full", "full_gc", "lora", "qlora"]
-        return {m: self._find_max_seq_len(m) for m in methods}
+        selected_methods = methods if methods is not None else ("full", "full_gc", "lora", "qlora")
+        return {method: self._find_max_seq_len(method) for method in selected_methods}
 
-    def format(self, estimates: dict[str, int] = None) -> str:
+    def format(
+        self,
+        estimates: dict[str, int] | None = None,
+        methods: Sequence[str] | None = None,
+    ) -> str:
         """Format as constraint table."""
         if estimates is None:
-            estimates = self.estimate()
+            estimates = self.estimate(methods)
 
         lines = [
-            "## Hardware Memory Constraints",
-            f"**Hardware**: {self.num_gpus}x {self.gpu_mem:.0f}GB GPU = {self.total_mem:.0f}GB total",
+            "## Training Resource Memory Constraints",
+            f"**Resource scope**: {self.resource_scope}",
+            (
+                f"**Hardware**: {self.num_gpus}x {self.gpu_name}, "
+                f"{self.gpu_mem:.0f}GB each = {self.total_mem:.0f}GB total"
+            ),
             f"**Model**: {self.params_b}B parameters",
             f"**Model max_position_embeddings**: {self.max_ctx}",
             "",
@@ -131,6 +151,10 @@ class MemoryEstimator:
         lines.append("")
         lines.append("**Note**: Choose `cutoff_len` <= min(max_seq_len, max_position_embeddings)")
         lines.append("- Larger `cutoff_len` enables longer CoT but reduces batch_size")
-        lines.append("- Method quality: full > lora > qlora (when all can support your seq_len needs)")
+        visible_methods = set(estimates)
+        if "qlora" in visible_methods:
+            lines.append("- Method quality: full > lora > qlora (when all can support your seq_len needs)")
+        elif {"full", "lora"} & visible_methods:
+            lines.append("- Compare only methods allowed by the active training policy")
 
         return "\n".join(lines)

@@ -1,9 +1,6 @@
 import json
 import os
-import re
-import shutil
 from pathlib import Path
-from typing import Any, Literal
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.components.coder.CoSTEER.config import CoSTEERSettings
@@ -47,6 +44,53 @@ FT_DATA_SCRIPT_NAME = "process_data.py"
 # ENV Info:  the path of the model and dataset in the container/environment
 FT_MODEL_PATH = "/assets/models"
 FT_DATASET_PATH = "/assets/datasets"
+
+# The local Responses endpoint has been verified to sustain more than the
+# eight concurrent matrix workers.  Two requests per experiment shortens the
+# API-bound data-generation stage without creating the 64-way burst implied by
+# the generic default of eight workers.  A route-specific override keeps the
+# limit reversible when a different Responses endpoint is used.
+DEFAULT_RESPONSES_API_MAX_WORKERS = 2
+RESPONSES_API_MAX_WORKERS_ENV = "FT_RESPONSES_API_MAX_WORKERS"
+DEFAULT_RESPONSES_DATA_PROCESSING_TIMEOUT = 12 * 60 * 60
+RESPONSES_DATA_PROCESSING_TIMEOUT_ENV = "FT_RESPONSES_DATA_PROCESSING_TIMEOUT"
+
+
+def effective_api_max_workers() -> int:
+    """Return the safe data-generation concurrency for the active API route."""
+    protocol = os.getenv("FT_API_PROTOCOL", "chat_completions").strip().lower().replace("-", "_")
+    if protocol == "responses":
+        configured = os.getenv(RESPONSES_API_MAX_WORKERS_ENV)
+        if configured is None:
+            return DEFAULT_RESPONSES_API_MAX_WORKERS
+        message = f"{RESPONSES_API_MAX_WORKERS_ENV} must be a positive integer"
+        try:
+            workers = int(configured)
+        except ValueError as error:
+            raise ValueError(message) from error
+        if workers < 1:
+            raise ValueError(message)
+        return workers
+    return FT_RD_SETTING.api_max_workers
+
+
+def effective_data_processing_timeout() -> int:
+    """Return the full-data timeout for the active experiment and API route."""
+    protocol = os.getenv("FT_API_PROTOCOL", "chat_completions").strip().lower().replace("-", "_")
+    if protocol != "responses" or not os.getenv("FT_EXPERIMENT_ID"):
+        return FT_RD_SETTING.data_processing_timeout
+
+    configured = os.getenv(RESPONSES_DATA_PROCESSING_TIMEOUT_ENV)
+    if configured is None:
+        return DEFAULT_RESPONSES_DATA_PROCESSING_TIMEOUT
+    message = f"{RESPONSES_DATA_PROCESSING_TIMEOUT_ENV} must be a positive integer"
+    try:
+        timeout = int(configured)
+    except ValueError as error:
+        raise ValueError(message) from error
+    if timeout < 1:
+        raise ValueError(message)
+    return timeout
 
 
 def get_data_processing_cache_key(local_path: str | Path) -> list[list[str]]:
@@ -196,7 +240,7 @@ def get_ft_env(
 
     # Select timeout based on operation type
     timeout_map = {
-        "data_processing": FT_RD_SETTING.data_processing_timeout,
+        "data_processing": effective_data_processing_timeout(),
         "debug_data_processing": FT_RD_SETTING.debug_data_processing_timeout,
         "micro_batch": FT_RD_SETTING.micro_batch_timeout,
         "full_training": FT_RD_SETTING.full_timeout,
@@ -220,7 +264,8 @@ def get_ft_env(
         # Conda mode: no volume mounts needed, use local paths directly
         # extra_volumes are ignored in conda mode
     else:
-        raise ValueError(f"Unknown env type: {conf.env_type}")
+        message = f"Unknown env type: {conf.env_type}"
+        raise ValueError(message)
 
     env.conf.running_timeout_period = running_timeout_period
     env.conf.enable_cache = enable_cache
@@ -253,7 +298,14 @@ def get_data_processing_env(
     )
 
     # Collect LLM API environment variables to pass to env.run()
-    llm_env_vars = {"PYTHONPATH": "./"}  # Base env var
+    # Data preparation is intentionally CPU/API-only.  With multiple FT-Agent
+    # pipelines assigned to one card, hiding CUDA here prevents a generated
+    # preprocessing script from allocating memory alongside the lease-guarded
+    # training or benchmark stage of a sibling pipeline.
+    llm_env_vars = {
+        "PYTHONPATH": "./",
+        "CUDA_VISIBLE_DEVICES": "",
+    }
 
     # Pass OPENAI_API_KEY directly
     if api_key := os.getenv("OPENAI_API_KEY"):
@@ -266,6 +318,9 @@ def get_data_processing_env(
     # Pass model pools as JSON environment variables for load balancing
     llm_env_vars["STRONG_MODEL_POOL"] = json.dumps(FT_RD_SETTING.strong_models)
     llm_env_vars["WEAK_MODEL_POOL"] = json.dumps(FT_RD_SETTING.weak_models)
+    # Keep the execution environment consistent with the route-aware value
+    # rendered into the generated script prompt.
+    llm_env_vars["FT_API_MAX_WORKERS"] = str(effective_api_max_workers())
 
     return env, llm_env_vars
 
@@ -337,29 +392,29 @@ def get_benchmark_env(
         "mode": "rw",
     }
     env_dict = {"COMPASS_DATA_CACHE": "./benchmarks/opencompass_data"}
-    # Mount models directory for LoRA base model access (vLLM needs base model config)
-    models_path = FT_RD_SETTING.file_path / "models"
-    if models_path.exists():
-        benchmark_volumes[str(models_path.resolve())] = {"bind": FT_MODEL_PATH, "mode": "ro"}
-    benchmark_volumes.update(extra_volumes)
-
     if conf.env_type == "docker":
+        # Docker needs an explicit base-model mount for LoRA evaluation. A Conda
+        # evaluation uses the project-local absolute model path directly; giving
+        # LocalEnv this absolute bind would make concurrent jobs race while
+        # creating and removing the shared /assets/models symlink.
+        models_path = FT_RD_SETTING.file_path / "models"
+        if models_path.exists():
+            benchmark_volumes[str(models_path.resolve())] = {"bind": FT_MODEL_PATH, "mode": "ro"}
+        benchmark_volumes.update(extra_volumes)
         docker_conf = BenchmarkDockerConf()
         docker_conf.running_timeout_period = timeout
         docker_conf.extra_volumes = benchmark_volumes
         docker_conf.env_dict = env_dict
         env = BenchmarkDockerEnv(conf=docker_conf)
     elif conf.env_type == "conda":
-        # NOTE:
-        # We assume user has the permissions to create the softlink in the target directory.
-        # If we have requirements in the future, we suggest make the target directory configurable in BenchmarkCondaConf.
         conda_conf = BenchmarkCondaConf()
         conda_conf.running_timeout_period = timeout
         conda_conf.extra_volumes = benchmark_volumes
         conda_conf.env_dict = env_dict
         env = BenchmarkCondaEnv(conf=conda_conf)  # Auto-installs dependencies if env doesn't exist
     else:
-        raise ValueError(f"Unknown env type: {conf.env_type}")
+        message = f"Unknown env type: {conf.env_type}"
+        raise ValueError(message)
 
     env.prepare()
     return env

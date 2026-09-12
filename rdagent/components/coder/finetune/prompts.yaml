@@ -15,13 +15,54 @@ data_coder:
     The following datasets are available for processing:
     {{ dataset_info }}
 
+    ## 1.3.1 Dataset Grounding (HIGHEST PRIORITY)
+    - Treat the Available Datasets inventory and its file tree as authoritative.
+    - Read source files that actually exist in that inventory. A filename or
+      directory described as `raw` is not grounds to prohibit a released source.
+    - Do not require an input artifact, curated split, manifest, or schema version
+      merely because the Task Description hypothesizes one. If it is absent from
+      the inventory, adapt the implementation to the listed released sources and
+      create derived artifacts only in the writable workspace.
+    - A manifest-backed verification rule applies only when the selected dataset
+      actually contains the stated manifest. Its absence must not be converted
+      into a requirement for an invented manifest.
+
     ## 1.4 Priority Rules (CRITICAL)
-    **Task Description requirements are MANDATORY.** You MUST implement all data processing requirements specified in the Task Description exactly as described.
+    **Task Description requirements are MANDATORY except where they conflict with
+    the authoritative Dataset Grounding rules above.** Implement all compatible
+    data processing requirements exactly as described.
+
+    {% if formal_expected_samples | default(none) %}
+    ## 1.4.1 Formal Reproduction Contract (HIGHEST PRIORITY)
+    - A full, non-debug execution MUST leave exactly {{ formal_expected_samples }}
+      records in the dataset(s) selected for training by `train.yaml`.
+    - {{ formal_expected_samples }} is an exact count, not an upper bound or a
+      1-to-{{ formal_expected_samples }} range. Refill deterministically after
+      filtering until the count is exact; fail clearly if the source cannot do so.
+    - Do not require `training + validation + estimated rejection allowance`
+      unique sources as a hard preflight. A rejection-rate estimate is for
+      scheduling attempts, not for changing the formal capacity contract; refill
+      from actual outcomes until the accepted artifacts have the exact counts.
+    - If usable source identities are fewer than the requested output records,
+      reserve validation identities first, then create distinct, traceable,
+      ground-truth-preserving training variants from training-side identities when
+      the task permits. Never copy an identical Alpaca record, and never use a
+      reserved validation identity for a training variant.
+    - An internal validation set, when requested, is additional data. Write it to
+      a distinct registered file and ensure it has no records in common with the
+      {{ formal_expected_samples }} training examples. Never carve it out of the
+      required training set.
+    - Debug mode remains bounded to about 100 processed examples.
+    {% endif %}
 
     # Part 2: Output Specification
 
     ## 2.1 Alpaca Format Definition
-    Your script must output a JSON file named `data.json` in the current working directory (`{{ workspace_path }}`).
+    Your script must always output an aggregate JSON file named `data.json` in the current working directory (`{{ workspace_path }}`).
+    If the Task Description explicitly requires additional processed-data artifacts (for example,
+    separate train/validation JSON files, a processing manifest, or workspace-local
+    `dataset_info.json` registrations), those artifacts are also mandatory and take precedence
+    over the default single-file convention below.
     The output must be in Alpaca format: a JSON array where each element has:
     - `instruction`: The instruction or prompt for the model (required, non-empty)
     - `input`: Optional additional context (can be empty string)
@@ -59,7 +100,30 @@ data_coder:
     - Answer format varies by task (e.g., `\boxed{}` for math, JSON for structured, code output for programming)
     - Filter samples with mismatched answers
 
-    ### 2.4.2 Over-length Filtering (MANDATORY)
+    ### 2.4.2 Manifest-Backed Reference Integrity (CRITICAL WHEN PRESENT)
+    If a selected dataset has a JSON manifest with a top-level
+    `verification_references` object, that mapping is the independent source of truth for
+    answer verification. For each unmodified source row, compute its identity exactly as:
+    ```python
+    payload = json.dumps(
+        row,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    identity = hashlib.sha256(payload.encode("utf-8")).hexdigest()
+    expected = manifest["verification_references"][identity]
+    ```
+    - Compute the identity before changing, normalizing, or augmenting any row field.
+    - Extract the candidate answer separately, then compare it with `expected` using the
+      task-appropriate deterministic normalization (for example, RDKit canonical SMILES).
+    - Reject or fail closed when the identity is absent, duplicated with a conflicting
+      reference, or cannot be verified.
+    - Never use the row's own answer/output text, an LLM-generated answer, or a metadata
+      heuristic as the independent reference. Such values are candidates to verify, not
+      ground truth.
+
+    ### 2.4.3 Over-length Filtering (MANDATORY)
     - Filter out samples where `total_tokens > max_position_embeddings`
     - Do NOT truncate - filter instead
     - See Part 6 for COT-specific validation requirements
@@ -79,6 +143,13 @@ data_coder:
     - Sampling/filtering is pure code operation (no LLM), so it runs completely in both modes
     - `--debug`: Process ~100 samples through LLM pipeline, print actual sampled total
     - No flag: Process ALL sampled data through LLM pipeline
+    - On large datasets, make the complete-source pass cheap and bounded in memory: use
+      column projection, vectorized predicates, parquet row groups/batches, or deterministic
+      reservoir/group sampling to form a bounded candidate pool first.
+    - Do expensive per-record work only after that candidate pool is bounded. In particular,
+      debug mode MUST NOT normalize or tokenize every row of a large source table, extract or
+      scan unrelated archives, or render every full prompt before selecting its small candidate
+      pool. A nominally code-only pass that consumes most of the debug timeout is not "fast".
 
     ### Debug Mode Example
     ```python
@@ -133,10 +204,17 @@ data_coder:
     ```
 
     # Part 4: Scope Clarification (IMPORTANT)
-    **Your script should ONLY handle data processing and output data.json.**
+    **Your script should ONLY handle data processing and its Task-Description-required artifacts.**
     - DO NOT generate training configuration files (e.g., train.yaml, training_config.json)
     - DO NOT include training scripts or fine-tuning code
-    - DO NOT save any files other than data.json
+    - By default, save only data.json. When the Task Description explicitly requires additional
+      split files, manifests, or dataset registrations, save all of them in the writable workspace.
+    - When an explicit validation dataset is required, the processing script itself MUST create
+      the nonempty train/validation files and atomically update workspace-local `dataset_info.json`
+      with stable registration keys (normally `processed_data` and
+      `processed_data_validation`). Both debug and full runs must use the same keys; a full run may
+      repoint those keys to its newly generated versioned files. Do not leave registration to the
+      training component or emit an `eval_dataset` name that is absent from `dataset_info.json`.
     - Training configuration will be handled separately by another component
 
     # Part 5: LLM API Usage Guide
@@ -308,26 +386,61 @@ finetune_coder:
     {{ params_desc }}
     {% endfor %}
 
+    ## Global Execution Policy (HIGHEST PRIORITY)
+    Active policy: `{{ training_policy }}`
+    {{ training_policy_guidance }}
+
+    Only the controlled `full`, `lora`, and `rslora` methods are supported. Under
+    `paper`, choose only full-parameter SFT or ordinary LoRA; rsLoRA is reserved for
+    the separate `rslora` comparison policy. Keep `use_dora: false` (or omit it).
+    The execution boundary validates this policy before leasing a GPU, and full SFT
+    receives its ZeRO-3 configuration there.
+
+    {% if formal_expected_samples | default(none) %}
+    ## Formal Data Contract (HIGHEST PRIORITY)
+    `dataset` must resolve to exactly {{ formal_expected_samples }} training
+    records. Set `val_size: 0` (or omit it). If evaluation/checkpoint selection is
+    enabled, use a separately registered, nonempty `eval_dataset` with no file or
+    record overlap with the training data. If no independent validation set is
+    available, disable Trainer evaluation and let the external validation sweep
+    select among completed formal checkpoints. A positive `val_size` is rejected
+    before any GPU is leased.
+    {% endif %}
+
     ## Priority Rules (CRITICAL)
-    **Task Description parameters are MANDATORY.** You MUST use exactly the hyperparameter values specified in the Task Description. Guidelines below are defaults only - they apply ONLY when task description does not specify a value.
+    Under `paper`, the Task Description and hypothesis determine the method. Under a
+    controlled method policy, that policy determines only the method while all
+    non-conflicting task requirements remain mandatory.
 
     ## Requirements
     1. Create a LlamaFactory configuration file named `train.yaml`
-    2. Based on the hypothesis provided by the user, select the most appropriate fine-tuning method
+    2. Based on the hypothesis provided by the user, select the most appropriate paper method:
+       full-parameter SFT or ordinary LoRA. Never select rsLoRA under `paper`.
     3. Generate full training configuration (no sample limit)
     4. Ensure all parameters are valid for LlamaFactory
     5. **Adaptive Logging Configuration (CRITICAL)**:
        - Set `logging_strategy` to 'steps' for consistent monitoring
        - Calculate `logging_steps` adaptively:
          * Check `stdout_summary` in data_stats for `Estimated full output` (NOT `total_samples` which is debug mode count)
-         * total_steps = estimated_full × num_epochs / (batch_size × gradient_accumulation_steps × num_gpus)
+         * logical_global_batch = batch_size * gradient_accumulation_steps (the paper's single-B200 contract; do not include H20 num_gpus)
+         * total_steps = estimated_full * num_epochs / logical_global_batch
          * Target 20-50 log entries total
     6. **Validation and Checkpoint Strategy (CRITICAL for best model selection)**:
+       {% if formal_expected_samples | default(none) %}
+       - **Complete training set**: Set `val_size: 0` or omit it; never split validation from the required {{ formal_expected_samples }} training examples.
+       - **Independent validation**: When enabling evaluation, set `eval_dataset` to a distinct, registered, nonempty dataset generated in addition to the training set. It must share neither a file nor a record with training data.
+       - **No independent validation available**: Set `do_eval: false`, `eval_strategy: no`, and `load_best_model_at_end: false`; save checkpoints by the declared schedule for the external validation sweep.
+       {% else %}
        - **Validation Split**: Set `val_size` to split a portion of training data for validation. Choose ratio based on dataset size and task needs.
+       {% endif %}
+       {% if formal_expected_samples | default(none) %}
+       - **Save Strategy**: Choose `save_strategy` ('steps' or 'epoch') based on training duration. When Trainer evaluation is enabled, `eval_strategy` MUST equal `save_strategy`; when it is disabled, use `eval_strategy: no` and retain the chosen checkpoint-saving schedule.
+       {% else %}
        - **Save Strategy**: Choose `save_strategy` ('steps' or 'epoch') based on training duration. MUST ensure `eval_strategy` == `save_strategy`.
+       {% endif %}
         - If using 'steps', set `save_steps` based on estimated full output appropriately, DON'T set it very low or high.
         - set 'per_device_eval_batch_size' appropriately to speed up eval without OOM.
-       - **Best Model Selection**: Use `load_best_model_at_end: true` with `save_total_limit: 1` to automatically keep and load the best checkpoint based on eval_loss. Note: `save_total_limit` will be force-injected to 1.
+       - **Best Model Selection**: When an independent validation dataset is configured, use `load_best_model_at_end: true` with `save_total_limit: 1` to automatically keep and load the best checkpoint based on eval_loss. `metric_for_best_model` MUST be `eval_loss` (or be omitted so the system injects `eval_loss`) and `greater_is_better` MUST be `false`. Paper benchmark metrics such as accuracy, macro-F1, hit rate, FTS, or Tanimoto are computed only by the separate benchmark validation stage; they are not Trainer metrics. Note: `save_total_limit` will be force-injected to 1.
     7. If the former configuration faces error, please make sure to fix the error while aligning with the task. If these two goals conflict, please prioritize fixing the error.
 
     ## Configuration Principle
@@ -363,11 +476,18 @@ finetune_coder:
     - tokenized_path: MUST set to "{{ workspace_path }}tokenized_cache" (datasets directory is read-only mounted)
     - batch_size: Be aware that `auto_find_batch_size` can cause synchronization issues in multi-GPU (DDP) training. Consider setting `per_device_train_batch_size` explicitly if training hangs
     - flash_attn: For models supporting flash attention2 (e.g., Qwen series, llama series), set to "fa2" to enhance training speed and reduce memory usage
-    {% if deepspeed_path %}- deepspeed: If number of GPUs > 1, use DeepSpeed with ZeRO Stage 2 or 3 for memory optimization. specifically, set to "{{ deepspeed_path }}ds_z3_config.json" for ZeRO Stage 3, otherwise use "{{ deepspeed_path }}ds_z2_config.json" for ZeRO Stage 2{% endif %}
+    - dataloader_persistent_workers: Set this to `false`. In the pinned Trainer stack, repeated step evaluation can retain a fresh worker pool after every evaluation and eventually exhaust host process/memory limits. Keep `dataloader_num_workers` at 8 or lower instead.
+    - training policy: `{{ training_policy }}` — {{ training_policy_guidance }}
+    - use_dora: MUST be `false` or omitted; DoRA is not part of this controlled experiment.
+    - lora_rank: Either omit this field to use the default or choose only one of 1, 8, 16, 32, 64, 128, 256, 320, 512. Other ranks are incompatible with the vLLM evaluator.
+    {% if formal_expected_samples | default(none) %}- formal sample contract: `dataset` must select exactly {{ formal_expected_samples }} records; `val_size` must be zero/omitted; any enabled validation must use an independent `eval_dataset`.{% endif %}
+    {% if deepspeed_path %}- deepspeed: For full SFT the runtime injects "{{ deepspeed_path }}ds_z3_config.json". Do not select ZeRO-2 for full SFT.{% endif %}
     - **IMPORTANT Compatibility Rules**:
+      - Do NOT enable `use_dora`. The current vLLM evaluator cannot load DoRA adapters directly; existing DoRA artifacts are merged by the validation compatibility path instead.
       - `pissa_init: true` is NOT compatible with DeepSpeed ZeRO-3. If using ZeRO-3, do NOT set pissa_init to true
         - If you need PiSSA initialization, use ZeRO Stage 2 instead of ZeRO Stage 3
       - `load_best_model_at_end: true` requires `eval_strategy` == `save_strategy` (both "steps" or both "epoch"). Always set both to the same value.
+      - `metric_for_best_model`: use only `eval_loss` (or omit it). Do not use the paper benchmark metric here; LlamaFactory's SFT Trainer does not emit those metrics.
 
     {% if force_think_token %}
     {% if has_think_token is defined and not has_think_token %}
@@ -393,12 +513,17 @@ finetune_coder:
 
     **Your Task**: Implement the training configuration specified in the task description.
     
-    - Follow task requirements first (method, batch size, epochs, cutoff_len, etc.)
+    - Apply the active `{{ training_policy }}` policy: {{ training_policy_guidance }}
+    - Preserve all non-conflicting task requirements (batch size, epochs, cutoff_len, optimizer, and schedule).
     - Apply technical constraints only when task doesn't specify:
       - `cutoff_len`: ≤ min(max_position_embeddings, memory limit, data p99)
       - `per_device_train_batch_size`: Choose based on Memory Estimates table
-      - `gradient_accumulation_steps`: Adjust for stable training (effective_batch = batch × accum × gpus)
+      - `gradient_accumulation_steps`: Adjust for the paper's logical single-B200 batch contract (`logical_global_batch = batch * accum`). Do not pre-scale it for the H20 GPU count; the runtime preserves that global batch when mapping full SFT onto multiple GPUs.
+    {% if formal_expected_samples | default(none) %}
+    - Validation setup: `val_size: 0`; use a distinct `eval_dataset` with `eval_strategy == save_strategy` and `load_best_model_at_end: true`, or disable Trainer evaluation when no independent validation data exists.
+    {% else %}
     - Validation setup: `val_size`, `eval_strategy` == `save_strategy`, `load_best_model_at_end: true`
+    {% endif %}
     {% endif %}
 
     {% if latest_code %}
@@ -418,7 +543,9 @@ finetune_coder:
 
     **Remember to include ALL required fields:**
     - stage: sft
-    - finetuning_type: [select appropriate method based on hypothesis]
+    - finetuning_type: [full or lora, as required by the active policy]
+    - use_rslora: [false for ordinary LoRA; true only under the separate rslora policy; omit for full]
+    - use_dora: false (omit for full)
     - do_train: true
     - model_name_or_path: {{ models_path }}{{ base_model }}
     - dataset: processed_data
@@ -435,6 +562,10 @@ finetune_coder:
     **Example for Test Parameters:**
     - Set `num_train_epochs` to 1.
     - Set `max_samples` to a very small number.
+    - Always set `packing: false` and `neat_packing: false`. Packing a tiny
+      subset can collapse it into one sequence before the validation split.
+    - Always set `tokenized_path: null` so the debug subset neither reuses nor
+      overwrites the formal-training tokenized cache.
 
     **Output Format:**
     Output ONLY the YAML block for these test parameters:
@@ -606,7 +737,12 @@ data_eval:
 
     ### 2. Sample Count Check
     - Debug mode should generate ~100 samples
+    {% if formal_expected_samples | default(none) %}
+    - The estimated full run must produce exactly {{ formal_expected_samples }} training samples; this is not merely an upper bound
+    - Any validation samples must be additional and disjoint from the training set
+    {% else %}
     - Estimated full run samples should be at most {{ upper_data_size_limit }}
+    {% endif %}
     - Reject if either criteria is not met
 
     ## Final Decision Guidelines

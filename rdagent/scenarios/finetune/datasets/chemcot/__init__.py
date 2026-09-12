@@ -28,10 +28,8 @@ def normalize_rcr(out_dir: str) -> None:
         # 2. Rename cot_result -> struct_cot, strip markdown wrapper
         if "cot_result" in item:
             cot = item.pop("cot_result").strip()
-            if cot.startswith("```json"):
-                cot = cot[7:]
-            if cot.endswith("```"):
-                cot = cot[:-3]
+            cot = cot.removeprefix("```json")
+            cot = cot.removesuffix("```")
             item["struct_cot"] = cot.strip()
 
     with open(rcr_path, "w") as f:

@@ -1,5 +1,6 @@
 import json
-from typing import Any, Dict, List, Optional
+import os
+from typing import Any
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.components.coder.CoSTEER.evaluators import (
@@ -11,6 +12,7 @@ from rdagent.components.coder.finetune.conf import (
     FT_DATA_SCRIPT_NAME,
     FT_YAML_FILE_NAME,
     clear_workspace,
+    effective_data_processing_timeout,
     get_data_processing_cache_key,
     get_data_processing_env,
     get_ft_env,
@@ -18,16 +20,30 @@ from rdagent.components.coder.finetune.conf import (
     inject_data_stats,
 )
 from rdagent.components.coder.finetune.exp import FTTask
-from rdagent.components.coder.finetune.unified_validator import LLMConfigValidator
+from rdagent.components.coder.finetune.unified_validator import (
+    LLMConfigValidator,
+    get_training_policy,
+    training_policy_guidance,
+    validate_training_policy,
+)
 from rdagent.core.evolving_framework import QueriedKnowledge
 from rdagent.core.experiment import FBWorkspace
 from rdagent.log import rdagent_logger as logger
 from rdagent.scenarios.finetune.benchmark import get_benchmark_ranges, run_benchmark
+from rdagent.scenarios.finetune.train.formal_training import (
+    FORMAL_TRAINING_EVIDENCE_FILE,
+    FormalTrainingEvidenceError,
+    formal_expected_samples,
+    load_formal_training_records,
+    make_formal_training_evidence,
+    validate_formal_training_evidence,
+    validate_formal_training_inputs,
+)
 from rdagent.utils.agent.tpl import T
 from rdagent.utils.agent.workflow import build_cls_from_json_with_retry
 
 
-def extract_loss_history(output_path) -> Dict[str, List[Dict[str, Any]]]:
+def extract_loss_history(output_path) -> dict[str, list[dict[str, Any]]]:
     """
     Extract training and evaluation loss history from LlamaFactory's trainer_state.json.
 
@@ -56,7 +72,7 @@ def extract_loss_history(output_path) -> Dict[str, List[Dict[str, Any]]]:
                         "step": entry.get("step"),
                         "epoch": entry.get("epoch"),
                         "loss": entry.get("loss"),
-                    }
+                    },
                 )
             if "eval_loss" in entry:
                 result["eval"].append(
@@ -64,7 +80,7 @@ def extract_loss_history(output_path) -> Dict[str, List[Dict[str, Any]]]:
                         "step": entry.get("step"),
                         "epoch": entry.get("epoch"),
                         "eval_loss": entry.get("eval_loss"),
-                    }
+                    },
                 )
 
         logger.info(f"Extracted {len(result['train'])} train + {len(result['eval'])} eval entries")
@@ -83,7 +99,7 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
         target_task: FTTask,
         implementation: FBWorkspace,
         gt_implementation: FBWorkspace,
-        queried_knowledge: Optional[QueriedKnowledge] = None,
+        queried_knowledge: QueriedKnowledge | None = None,
         **kwargs,
     ) -> CoSTEERSingleFeedback:
         """Evaluate LLM fine-tuning implementation using dedicated LLM environment.
@@ -106,11 +122,42 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
             logger.log_object(fb, tag="evaluator_feedback.FTRunnerEvaluator")
             return fb
 
+        # Re-check the persisted configuration at the formal-training boundary
+        # so a stale or externally edited artifact cannot consume a GPU under
+        # the wrong controlled policy.
+        policy = get_training_policy()
+        policy_errors = validate_training_policy(implementation.file_dict[FT_YAML_FILE_NAME], policy)
+        if policy_errors:
+            details = "\n- ".join(policy_errors)
+            fb = CoSTEERSingleFeedback(
+                execution=f"Training policy '{policy}' rejected {FT_YAML_FILE_NAME}:\n- {details}",
+                return_checking="Training was not started because the configuration violates its method policy.",
+                code=training_policy_guidance(policy),
+                final_decision=False,
+            )
+            implementation.feedback = fb
+            logger.log_object(fb, tag="evaluator_feedback.FTRunnerEvaluator")
+            return fb
+
         # Use LLM-specific environment with appropriate timeout for training
         env = get_ft_env(operation="full_training")
 
+        expected_samples = formal_expected_samples()
+        experiment_id = os.getenv("FT_EXPERIMENT_ID", "").strip()
+        if expected_samples is not None and not experiment_id:
+            raise FormalTrainingEvidenceError(
+                "FT_EXPERIMENT_ID is required when the formal sample contract is enabled",
+            )
+
         # ========== Stage 0: Clean Workspace ==========
         # Clean old training outputs before data processing and training
+        # and never let evidence from an earlier attempt survive a retry.
+        if FORMAL_TRAINING_EVIDENCE_FILE in implementation.file_dict:
+            implementation.remove_files(FORMAL_TRAINING_EVIDENCE_FILE)
+        else:
+            evidence_path = implementation.workspace_path / FORMAL_TRAINING_EVIDENCE_FILE
+            if evidence_path.exists() or evidence_path.is_symlink():
+                evidence_path.unlink()
         clear_workspace(implementation, env)
 
         # ========== Stage 1: Full Data Processing ==========
@@ -134,14 +181,38 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
 
         logger.info("Full data processing completed successfully")
 
-        # Update data_stats.json with full dataset statistics
-        # This ensures feedback sees the correct sample count, not debug mode count
-        data_json_path = implementation.workspace_path / FT_DATA_FILE_NAME
-        if data_json_path.exists():
-            with open(data_json_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            if isinstance(data, list) and len(data) > 0:
-                inject_data_stats(implementation, data, data_stdout)
+        # Recompute statistics from the dataset(s) actually selected by
+        # train.yaml.  Looking only at root data.json previously allowed a
+        # different registered dataset (including a truncated one) to train.
+        try:
+            if expected_samples is not None:
+                training_records = load_formal_training_records(implementation.workspace_path)
+                inject_data_stats(implementation, training_records, data_stdout)
+                validate_formal_training_inputs(
+                    implementation.workspace_path,
+                    expected_samples=expected_samples,
+                    experiment_id=experiment_id,
+                    training_policy=policy,
+                    require_runtime_contract=False,
+                )
+            else:
+                data_json_path = implementation.workspace_path / FT_DATA_FILE_NAME
+                if data_json_path.exists():
+                    with data_json_path.open(encoding="utf-8") as stream:
+                        data = json.load(stream)
+                    if isinstance(data, list) and data:
+                        inject_data_stats(implementation, data, data_stdout)
+        except (FormalTrainingEvidenceError, OSError, json.JSONDecodeError) as error:
+            return self._generate_llm_feedback(
+                target_task=target_task,
+                implementation=implementation,
+                raw_stdout=f"{data_stdout}\n\nFORMAL TRAINING INPUT REJECTED: {error}",
+                exit_code=78,
+                model_files_exist=False,
+                benchmark_result=None,
+                loss_history=None,
+                failed_stage="data_processing",
+            )
 
         # ========== Stage 2: Full Training ==========
 
@@ -150,6 +221,12 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
             env=env,
             entry=f"llamafactory-cli train {FT_YAML_FILE_NAME}",
         )
+        # The H20 wrapper injects the Full-SFT ZeRO-3/runtime batch contract
+        # into the on-disk config.  Preserve that exact executed plan instead
+        # of later restoring the agent's pre-wrapper YAML from file_dict.
+        executed_config_path = implementation.workspace_path / FT_YAML_FILE_NAME
+        if executed_config_path.is_file():
+            implementation.file_dict[FT_YAML_FILE_NAME] = executed_config_path.read_text(encoding="utf-8")
         # Combine data processing and training stdout for comprehensive feedback
         combined_stdout = (
             f"=== DATA PROCESSING OUTPUT ===\n{data_stdout}\n\n=== TRAINING OUTPUT ===\n{train_result.stdout or ''}"
@@ -184,6 +261,45 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
                 failed_stage="training",
             )
 
+        formal_evidence: dict[str, Any] | None = None
+        if expected_samples is not None:
+            try:
+                formal_evidence = make_formal_training_evidence(
+                    workspace_path,
+                    expected_samples=expected_samples,
+                    experiment_id=experiment_id,
+                    training_policy=policy,
+                    output_path=output_path,
+                )
+                implementation.inject_files(
+                    **{
+                        FORMAL_TRAINING_EVIDENCE_FILE: json.dumps(
+                            formal_evidence,
+                            indent=2,
+                            sort_keys=True,
+                        )
+                        + "\n",
+                    },
+                )
+                formal_evidence = validate_formal_training_evidence(
+                    workspace_path,
+                    expected_samples=expected_samples,
+                    experiment_id=experiment_id,
+                    training_policy=policy,
+                    output_path=output_path,
+                )
+            except (FormalTrainingEvidenceError, OSError) as error:
+                return self._generate_llm_feedback(
+                    target_task=target_task,
+                    implementation=implementation,
+                    raw_stdout=f"{combined_stdout}\n\nFORMAL TRAINING OUTPUT REJECTED: {error}",
+                    exit_code=78,
+                    model_files_exist=len(model_output_files) > 0,
+                    benchmark_result=None,
+                    loss_history=None,
+                    failed_stage="training",
+                )
+
         # Extract loss history from training output
         loss_history = extract_loss_history(output_path)
 
@@ -200,29 +316,43 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
             result_subdir="validation",
         )
 
-        # Test set - only for frontend display, not visible to agent
-        test_result = run_benchmark(
-            workspace_path=str(workspace_path),
-            model_path=output_path,
-            model_name=target_task.base_model,
-            benchmark_name=target_task.benchmark,
-            gpu_count=self.scen.gpu_count,
-            test_range=test_range,
-            result_subdir="test",
-        )
+        # Keep iterative checkpoint search validation-only.  The reproduction
+        # final-test runner evaluates the selected checkpoint exactly once.
+        # The explicit opt-in preserves the old UI behavior for callers that
+        # need it outside the strict reproduction protocol.
+        test_result = None
+        if FT_RD_SETTING.evaluate_held_out_during_search:
+            test_result = run_benchmark(
+                workspace_path=str(workspace_path),
+                model_path=output_path,
+                model_name=target_task.base_model,
+                benchmark_name=target_task.benchmark,
+                gpu_count=self.scen.gpu_count,
+                test_range=test_range,
+                result_subdir="test",
+            )
 
-        # Build comprehensive result with training metrics and benchmark results
-        # Note: "benchmark" is for agent (SOTA judgment), "benchmark_test" is for frontend only
+        # Build comprehensive result with training metrics and validation results.
         train_history = loss_history.get("train", []) if loss_history else []
         implementation.running_info.result = {
             "benchmark": validation_result,  # Agent visible - used for SOTA judgment
-            "benchmark_test": test_result,  # Agent invisible - frontend display only
             "training_metrics": {
                 "loss_history": loss_history,
                 "final_loss": train_history[-1]["loss"] if train_history else None,
                 "initial_loss": train_history[0]["loss"] if train_history else None,
             },
         }
+        if formal_evidence is not None:
+            implementation.running_info.result["formal_training"] = {
+                "evidence_signature": formal_evidence["evidence_signature"],
+                "training_method": formal_evidence["training_method"],
+                "expected_samples": formal_evidence["expected_samples"],
+                "training_sample_count": formal_evidence["training_sample_count"],
+                "global_step": formal_evidence["completion"]["global_step"],
+                "max_steps": formal_evidence["completion"]["max_steps"],
+            }
+        if test_result is not None:
+            implementation.running_info.result["benchmark_test"] = test_result
         benchmark_result = validation_result  # For backward compatibility with feedback
 
         # Call LLM for feedback analysis - LLM will determine final_decision
@@ -243,9 +373,9 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
         raw_stdout: str,
         exit_code: int,
         model_files_exist: bool,
-        benchmark_result: Optional[Dict] = None,
-        loss_history: Optional[Dict[str, List[Dict]]] = None,
-        failed_stage: Optional[str] = None,
+        benchmark_result: dict | None = None,
+        loss_history: dict[str, list[dict]] | None = None,
+        failed_stage: str | None = None,
     ) -> CoSTEERSingleFeedback:
         """Generate LLM-based feedback for runner evaluation.
 
@@ -261,7 +391,7 @@ class FTRunnerEvaluator(CoSTEEREvaluator):
         # Get timeout config for the failed stage
         timeout_seconds = None
         if failed_stage == "data_processing":
-            timeout_seconds = FT_RD_SETTING.data_processing_timeout
+            timeout_seconds = effective_data_processing_timeout()
         elif failed_stage == "training":
             timeout_seconds = FT_RD_SETTING.full_timeout
 

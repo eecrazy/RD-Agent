@@ -9,9 +9,10 @@ Usage:
 """
 
 import shutil
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Callable, Optional
+from typing import Optional
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.scenarios.finetune.datasets.chemcot import normalize_rcr
@@ -29,7 +30,7 @@ class DatasetConfig:
     """
 
     repo_id: str
-    post_download_fn: Optional[Callable[[str], None]] = field(default=None)
+    post_download_fn: Callable[[str], None] | None = field(default=None)
 
 
 def _remove_eval_splits(out_dir: str) -> None:

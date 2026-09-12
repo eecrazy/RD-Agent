@@ -1,7 +1,6 @@
 from pathlib import Path
 
 from pydantic_settings import SettingsConfigDict
-
 from rdagent.core.conf import ExtendedBaseSettings
 
 
@@ -39,12 +38,18 @@ class LLMFinetunePropSetting(ExtendedBaseSettings):
     # Timeouts (longer for LLM training, all for Docker container timeout)
     full_timeout: int = 360000
     """Full training timeout in seconds (default 100 hours, env: FT_FULL_TIMEOUT). Used in running stage for complete model training."""
-    data_processing_timeout: int = 3600
-    """Data processing script timeout in seconds (default 1 hour, env: FT_DATA_PROCESSING_TIMEOUT). Used for full data processing in running stage."""
-    debug_data_processing_timeout: int = 1200
-    """Debug data processing timeout in seconds (default 20 minutes, env: FT_DEBUG_DATA_PROCESSING_TIMEOUT). Used for --debug mode in coding stage."""
-    micro_batch_timeout: int = 1800
-    """Micro-batch test timeout in seconds (default 30 minutes, env: FT_MICRO_BATCH_TIMEOUT)."""
+    data_processing_timeout: int = 21600
+    """Data processing timeout (default 6 hours, env: FT_DATA_PROCESSING_TIMEOUT).
+
+    Used for full data processing in the running stage.
+    """
+    debug_data_processing_timeout: int = 3600
+    """Debug processing timeout (default 1 hour, env: FT_DEBUG_DATA_PROCESSING_TIMEOUT).
+
+    Used for ``--debug`` mode in the coding stage.
+    """
+    micro_batch_timeout: int = 3600
+    """Micro-batch test timeout in seconds (default 60 minutes, env: FT_MICRO_BATCH_TIMEOUT)."""
 
     # Pipeline behavior
     coder_on_whole_pipeline: bool = True
@@ -76,6 +81,14 @@ class LLMFinetunePropSetting(ExtendedBaseSettings):
 
     benchmark_pass_k: list[int] | None = None
     """Pass@k parameter list for code generation tasks (e.g., [1, 5, 10]). None to disable."""
+
+    evaluate_held_out_during_search: bool = False
+    """Legacy opt-in for evaluating test on every search iteration.
+
+    The default is deliberately false: checkpoint selection uses validation,
+    and the held-out test split is evaluated once after selection by the
+    reproduction final-test runner.
+    """
 
     # Data paths and processing
     file_path: Path = Path.cwd() / "git_ignore_folder" / "finetune_files"

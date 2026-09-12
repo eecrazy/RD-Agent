@@ -1,12 +1,8 @@
-import asyncio
 from typing import Any
 
 from rdagent.app.finetune.llm.conf import LLMFinetunePropSetting
-from rdagent.components.coder.finetune.conf import get_ft_env
 from rdagent.components.workflow.rd_loop import RDLoop
-from rdagent.core.conf import RD_AGENT_SETTINGS
 from rdagent.core.exception import CoderError
-from rdagent.core.proposal import HypothesisFeedback
 from rdagent.log import rdagent_logger as logger
 from rdagent.scenarios.finetune.proposal.trace import FTTrace
 
@@ -48,7 +44,7 @@ class LLMFinetuneRDLoop(RDLoop):
 
         # Get experiment from available sources
         exp = prev_out.get("running") or prev_out.get("coding") or prev_out.get("direct_exp_gen")
-        e = prev_out.get(self.EXCEPTION_KEY, None)
+        e = prev_out.get(self.EXCEPTION_KEY)
         feedback = self.summarizer.generate_feedback(exp, self.trace, exception=e)
 
         logger.log_object(feedback, tag="feedback")

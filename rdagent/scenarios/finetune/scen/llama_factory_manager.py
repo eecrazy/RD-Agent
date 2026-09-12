@@ -6,14 +6,10 @@ import json
 import re
 import shutil
 from pathlib import Path
-from typing import Dict, List, Optional
-
-import requests
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.components.coder.finetune.conf import (
     get_ft_env,
-    get_workspace_prefix,
     is_docker_env,
 )
 from rdagent.core.experiment import FBWorkspace
@@ -102,9 +98,9 @@ class LLaMAFactoryManager:
     def __init__(self):
         """Initialize the manager instance."""
         self.cache_dir = Path(FT_RD_SETTING.file_path) / ".llama_factory_info"
-        self._info_cache: Optional[Dict] = None
+        self._info_cache: dict | None = None
 
-    def extract_info_from_docker(self) -> Dict:
+    def extract_info_from_docker(self) -> dict:
         """Extract LLaMA Factory information from Docker/Conda environment."""
         if not self.cache_dir.exists() or not any(self.cache_dir.iterdir()):
             logger.info("Extract LLaMA Factory parameters")
@@ -151,7 +147,7 @@ class LLaMAFactoryManager:
         logger.info("Successfully extracted LLaMA Factory parameters")
         return self._info_cache
 
-    def _load_extracted_data(self) -> Dict:
+    def _load_extracted_data(self) -> dict:
         """Load extracted information from flat file structure."""
         data = {}
 
@@ -169,41 +165,41 @@ class LLaMAFactoryManager:
 
         return data
 
-    def get_info(self) -> Dict:
+    def get_info(self) -> dict:
         """Get complete LLaMA Factory information, extracting on first call."""
         if self._info_cache is None:
             self._info_cache = self.extract_info_from_docker()
         return self._info_cache
 
     @property
-    def methods(self) -> List[str]:
+    def methods(self) -> list[str]:
         """Available fine-tuning methods."""
         return self.get_info().get("methods", [])
 
     @property
-    def models(self) -> List[str]:
+    def models(self) -> list[str]:
         """Available base models."""
         return list(self.get_info().get("supported_models", {}).keys())
 
     @property
-    def hf_models(self) -> List[str]:
+    def hf_models(self) -> list[str]:
         """Available HuggingFace models."""
         supported_models = self.get_info().get("supported_models", {})
         return list({v for v in supported_models.values() if isinstance(v, str)})
 
     @property
-    def peft_methods(self) -> List[str]:
+    def peft_methods(self) -> list[str]:
         """Available PEFT methods, dynamically filtered from available methods."""
         known_peft = {"lora", "qlora", "adalora"}
         return [m for m in self.methods if m in known_peft]
 
     @property
-    def training_stages(self) -> Dict[str, str]:
+    def training_stages(self) -> dict[str, str]:
         """Training stage mapping."""
         return self.get_info().get("training_stages", {})
 
     @property
-    def templates(self) -> List[str]:
+    def templates(self) -> list[str]:
         """Available chat templates."""
         return self.get_info().get("templates", [])
 
@@ -211,7 +207,7 @@ class LLaMAFactoryManager:
         """Check if the given method is a PEFT method."""
         return method in self.peft_methods
 
-    def get_parameters(self, param_type: Optional[str] = None) -> Dict:
+    def get_parameters(self, param_type: str | None = None) -> dict:
         """Get parameters by type or all parameters."""
         params = self.get_info().get("parameters", {})
         if param_type:

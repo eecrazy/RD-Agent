@@ -8,17 +8,40 @@ import json
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.components.coder.finetune.exp import FTTask
+from rdagent.components.coder.finetune.unified_validator import (
+    get_training_policy,
+    training_policy_guidance,
+)
 from rdagent.core.proposal import ExpGen, Hypothesis, Trace
 from rdagent.log import rdagent_logger as logger
 from rdagent.oai.llm_utils import APIBackend
 from rdagent.scenarios.finetune.experiment.experiment import FTExperiment
-from rdagent.scenarios.finetune.proposal.trace import FTTrace
 from rdagent.scenarios.finetune.scen.llama_factory_manager import (
     LLaMAFactory_manager,
 )
 from rdagent.scenarios.finetune.scen.scenario import LLMFinetuneScen
+from rdagent.scenarios.finetune.train.formal_training import formal_expected_samples
 from rdagent.scenarios.finetune.utils import ensure_ft_assets_exist
 from rdagent.utils.agent.tpl import T
+
+
+def proposal_training_methods(policy: str, framework_methods: list[str]) -> list[str]:
+    """Expose only methods that belong to the active experimental policy."""
+    required = {
+        "paper": ("full", "lora"),
+        "full": ("full",),
+        "lora": ("lora",),
+        # rsLoRA is configured through LlamaFactory's LoRA method plus
+        # ``use_rslora: true``; it is not a separate framework method.
+        "rslora": ("lora",),
+    }[policy]
+    available = {str(method).strip().lower() for method in framework_methods}
+    missing = [method for method in required if method not in available]
+    if missing:
+        raise RuntimeError(
+            "LLaMA-Factory does not expose required training method(s): " + ", ".join(missing),
+        )
+    return list(required)
 
 
 class FTHypothesis(Hypothesis):
@@ -85,8 +108,10 @@ class LLMFinetuneExpGen(ExpGen):
         based_on_a_successful_parent = parent_exp is not None
         logger.info(f"Generating hypothesis based on (parent_exp={parent_exp})")
 
+        training_policy = get_training_policy()
+        policy_guidance = training_policy_guidance(training_policy)
         available_models = LLaMAFactory_manager.models
-        available_methods = LLaMAFactory_manager.methods
+        available_methods = proposal_training_methods(training_policy, LLaMAFactory_manager.methods)
         shared_params = LLaMAFactory_manager.format_shared_params()
         methods_specific_params = {}
         for method in available_methods:
@@ -110,6 +135,9 @@ class LLMFinetuneExpGen(ExpGen):
             methods_specific_params=methods_specific_params,
             select_model=base_model is None,
             force_think_token=FT_RD_SETTING.force_think_token,
+            training_policy=training_policy,
+            training_policy_guidance=policy_guidance,
+            formal_expected_samples=formal_expected_samples(),
         )
 
         user_prompt = T(".prompts:unified_hypothesis_gen.user_prompt").r(
@@ -124,19 +152,19 @@ class LLMFinetuneExpGen(ExpGen):
             session.build_chat_completion(
                 user_prompt=user_prompt + "\n" + T(".prompts:unified_hypothesis_gen.specific_format").r(field="reason"),
                 json_target_type=dict,
-            )
+            ),
         )
         hypothesis_dict = json.loads(
             session.build_chat_completion(
                 user_prompt=T(".prompts:unified_hypothesis_gen.specific_format").r(field="hypothesis"),
                 json_target_type=dict,
-            )
+            ),
         )
         task_dict = json.loads(
             session.build_chat_completion(
                 user_prompt=T(".prompts:unified_hypothesis_gen.specific_format").r(field="task"),
                 json_target_type=dict,
-            )
+            ),
         )
 
         ensure_ft_assets_exist(model=base_model, check_model=True)

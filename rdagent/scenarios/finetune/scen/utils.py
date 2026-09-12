@@ -7,7 +7,6 @@ from typing import Any
 import numpy as np
 import pandas as pd
 import tiktoken
-
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.core.utils import cache_with_pickle
 from rdagent.log import rdagent_logger as logger
@@ -16,6 +15,17 @@ from rdagent.utils import md5_hash
 
 # Fixed tokenizer model for token counting
 _TOKENIZER_MODEL = "gpt-3.5-turbo"
+
+# Files emitted to describe or audit a generated dataset are not training
+# records.  Advertising them as samples can make a failed preprocessing
+# attempt look like a small, usable dataset to a later matrix worker.
+_NON_SAMPLE_DATA_FILENAMES = {
+    "data_stats.json",
+    "dataset_info.json",
+    "formal_training_evidence.json",
+    "processing_manifest.json",
+    "processing_report.json",
+}
 
 
 def _find_data_files(dataset_path: Path, max_files: int = 50) -> list[Path]:
@@ -33,8 +43,14 @@ def _find_data_files(dataset_path: Path, max_files: int = 50) -> list[Path]:
     for pattern in patterns:
         files.extend(dataset_path.rglob(pattern))
     # Sort by name for deterministic order, limit count to avoid excessive files
-    dataset_files = sorted(files, key=lambda x: x.name)[:max_files]
-    return [f for f in dataset_files if f != dataset_path / "dataset_info.json"]
+    dataset_files = sorted(files, key=lambda x: x.name)
+    visible_files = [
+        path
+        for path in dataset_files
+        if path.name not in _NON_SAMPLE_DATA_FILENAMES
+        and not any(part.startswith(".") for part in path.relative_to(dataset_path).parts)
+    ]
+    return visible_files[:max_files]
 
 
 def _truncate_long_values(obj, max_length: int = 3000):
@@ -51,14 +67,14 @@ def _truncate_long_values(obj, max_length: int = 3000):
     if isinstance(obj, np.ndarray):
         # Convert numpy array to list first, then process recursively
         return _truncate_long_values(obj.tolist(), max_length)
-    elif isinstance(obj, dict):
+    if isinstance(obj, dict):
         return {k: _truncate_long_values(v, max_length) for k, v in obj.items()}
-    elif isinstance(obj, list):
+    if isinstance(obj, list):
         return [_truncate_long_values(item, max_length) for item in obj]
-    elif isinstance(obj, str) and len(obj) > max_length:
+    if isinstance(obj, str) and len(obj) > max_length:
         omitted = len(obj) - max_length
         return obj[:max_length] + f"...(omitted {omitted} chars)"
-    elif isinstance(obj, (np.integer, np.floating)):
+    if isinstance(obj, (np.integer, np.floating)):
         # Convert numpy scalar types to Python native types
         return obj.item()
     return obj
@@ -110,11 +126,14 @@ def _compute_column_stats(data: list[dict]) -> dict[str, dict]:
         if texts:
             # Batch encode all texts at once (10-50x faster than individual calls)
             try:
-                encoded_batch = encoding.encode_batch(texts)
+                # Dataset fields are untrusted text.  Tokenizer sentinel strings
+                # such as ``<|endoftext|>`` must be counted as ordinary content
+                # rather than rejected as an attempted special-token injection.
+                encoded_batch = encoding.encode_batch(texts, disallowed_special=())
                 token_counts = [len(tokens) for tokens in encoded_batch]
             except Exception as e:
                 logger.warning(f"Batch encoding failed for column '{col}': {e}, falling back to sequential")
-                token_counts = [len(encoding.encode(t)) for t in texts]
+                token_counts = [len(encoding.encode(t, disallowed_special=())) for t in texts]
 
             column_stats[col] = {
                 "empty_count": empty_count,
@@ -154,7 +173,7 @@ def _load_dataset_for_stats(data_files: list[Path], max_samples: int = 50000) ->
         suffix = data_file.suffix.lower()
         try:
             if suffix == ".json":
-                with open(data_file, "r", encoding="utf-8") as f:
+                with open(data_file, encoding="utf-8") as f:
                     data = json.load(f)
                     if isinstance(data, list):
                         all_data.extend(data[: max_samples - len(all_data)])
@@ -162,7 +181,7 @@ def _load_dataset_for_stats(data_files: list[Path], max_samples: int = 50000) ->
                         all_data.append(data)
 
             elif suffix == ".jsonl":
-                with open(data_file, "r", encoding="utf-8") as f:
+                with open(data_file, encoding="utf-8") as f:
                     for line in f:
                         if len(all_data) >= max_samples:
                             break
@@ -207,7 +226,7 @@ class FinetuneDatasetDescription(dict):
                 f"## Statistics:\n"
                 f"- Files: {stats.get('file_count', 0)}\n"
                 f"- Samples: {stats.get('sample_count', 0)}\n"
-                f"- Size: {stats.get('total_size_mb', 0)} MB"
+                f"- Size: {stats.get('total_size_mb', 0)} MB",
             )
 
         return "\n\n".join(parts) if parts else "Empty dataset description"
@@ -237,7 +256,7 @@ class FinetuneDatasetDescriptor:
             return generator.generate_tree(dataset_path)
         except Exception as e:
             logger.warning(f"Could not generate file tree: {e}")
-            return f"Error generating file tree: {str(e)}"
+            return f"Error generating file tree: {e!s}"
 
     def _count_samples_in_file(self, data_file: Path) -> int:
         """Count total samples in a single data file.
@@ -252,15 +271,15 @@ class FinetuneDatasetDescriptor:
 
         try:
             if suffix == ".json":
-                with open(data_file, "r", encoding="utf-8") as f:
+                with open(data_file, encoding="utf-8") as f:
                     data = json.load(f)
                     if isinstance(data, list):
                         return len(data)
-                    elif isinstance(data, dict):
+                    if isinstance(data, dict):
                         return 1  # Single object
 
             elif suffix == ".jsonl":
-                with open(data_file, "r", encoding="utf-8") as f:
+                with open(data_file, encoding="utf-8") as f:
                     return sum(1 for line in f if line.strip())
 
             elif suffix in [".csv", ".parquet"]:
@@ -316,7 +335,7 @@ class FinetuneDatasetDescriptor:
                         stats["column_stats"] = _compute_column_stats(dataset_samples)
                         logger.info(
                             f"Computed column token stats for {len(stats['column_stats'])} columns "
-                            f"(using tokenizer: {_TOKENIZER_MODEL})"
+                            f"(using tokenizer: {_TOKENIZER_MODEL})",
                         )
                 except Exception as e:
                     logger.warning(f"Failed to compute column token stats: {e}")
@@ -332,7 +351,7 @@ class FinetuneDatasetDescriptor:
             }
 
     def hash_dataset_path(
-        self, dataset_path: Path, dataset_name: str | None = None, include_dataset_readme: bool = False
+        self, dataset_path: Path, dataset_name: str | None = None, include_dataset_readme: bool = False,
     ) -> str:
         """Generate hash key for dataset description caching."""
         key_parts = []
@@ -346,7 +365,7 @@ class FinetuneDatasetDescriptor:
 
     @cache_with_pickle(hash_dataset_path)
     def describe_dataset_folder(
-        self, dataset_path: Path, dataset_name: str | None = None, include_dataset_readme: bool = False
+        self, dataset_path: Path, dataset_name: str | None = None, include_dataset_readme: bool = False,
     ) -> FinetuneDatasetDescription:
         """Generate complete dataset folder description.
 
@@ -371,7 +390,7 @@ class FinetuneDatasetDescriptor:
             for data_file in data_files[: FT_RD_SETTING.data_sample_count]:  # Process first N files for samples
                 try:
                     file_path_to_descriptions.append(
-                        (data_file.relative_to(dataset_path), self.describe_data_file(data_file))
+                        (data_file.relative_to(dataset_path), self.describe_data_file(data_file)),
                     )
                 except Exception as e:
                     logger.warning(f"Could not describe file {data_file.name}: {e}")
@@ -404,14 +423,14 @@ class FinetuneDatasetDescriptor:
                     "sample_count": stats.get("sample_count", 0),
                     "total_size_mb": stats.get("total_size_mb", 0),
                     "file_count": stats.get("file_count", 0),
-                }
+                },
             )
         except Exception as e:
             logger.warning(f"Could not generate dataset folder description: {e}")
             return FinetuneDatasetDescription(
                 {
-                    "file_tree": f"Error: {str(e)}",
-                    "data_samples": f"Error: {str(e)}",
+                    "file_tree": f"Error: {e!s}",
+                    "data_samples": f"Error: {e!s}",
                     "stats": {"sample_count": 0, "total_size_mb": 0, "file_count": 0},
                     "name": dataset_name or "unknown",
                     "readme_file_descs": None,
@@ -419,7 +438,7 @@ class FinetuneDatasetDescriptor:
                     "sample_count": 0,
                     "total_size_mb": 0,
                     "file_count": 0,
-                }
+                },
             )
 
     def get_dataset_stats(self, dataset_path: Path) -> dict[str, Any]:
@@ -579,7 +598,7 @@ class FinetuneDatasetDescriptor:
     def describe_file_json(self, data_file: Path, max_samples: int = 3) -> FinetuneFileDescription:
         samples = []
         try:
-            with open(data_file, "r", encoding="utf-8") as f:
+            with open(data_file, encoding="utf-8") as f:
                 data = json.load(f)
                 if isinstance(data, list) and len(data) > 0:
                     samples = _truncate_long_values(data[:max_samples])
@@ -595,7 +614,7 @@ class FinetuneDatasetDescriptor:
         samples = []
         jsonl_shape = None
         try:
-            with open(data_file, "r", encoding="utf-8") as f:
+            with open(data_file, encoding="utf-8") as f:
                 for i, line in enumerate(f):
                     if i >= max_samples:
                         break
@@ -610,7 +629,7 @@ class FinetuneDatasetDescriptor:
             logger.warning(f"Error extracting samples from {data_file.name}: {e}")
 
         return FinetuneFileDescription(
-            {"name": data_file.name, "type": "jsonl", "samples": samples, "shape": jsonl_shape}
+            {"name": data_file.name, "type": "jsonl", "samples": samples, "shape": jsonl_shape},
         )
 
     def describe_file_csv(self, data_file: Path, max_samples: int = 3) -> FinetuneFileDescription:
@@ -628,7 +647,7 @@ class FinetuneDatasetDescriptor:
             logger.warning(f"Error extracting samples from {data_file.name}: {e}")
 
         return FinetuneFileDescription(
-            {"name": data_file.name, "type": "csv", "samples": samples, "shape": df_shape, "columns": df_columns}
+            {"name": data_file.name, "type": "csv", "samples": samples, "shape": df_shape, "columns": df_columns},
         )
 
     def describe_file_parquet(self, data_file: Path, max_samples: int = 3) -> FinetuneFileDescription:
@@ -646,7 +665,7 @@ class FinetuneDatasetDescriptor:
             logger.warning(f"Error extracting samples from {data_file.name}: {e}")
 
         return FinetuneFileDescription(
-            {"name": data_file.name, "type": "parquet", "samples": samples, "shape": df_shape, "columns": df_columns}
+            {"name": data_file.name, "type": "parquet", "samples": samples, "shape": df_shape, "columns": df_columns},
         )
 
     def describe_data_file(self, data_file: Path) -> FinetuneFileDescription:
@@ -699,6 +718,10 @@ class FinetuneDatasetDescriptor:
                 continue
 
             rel_path = data_file.relative_to(dataset_dir)
+            if data_file.name in _NON_SAMPLE_DATA_FILENAMES or any(
+                part.startswith(".") for part in rel_path.parts
+            ):
+                continue
             # Use deepest directory name as subtask, or "_root" if file is in top-level
             subtask_name = rel_path.parent.name if len(rel_path.parts) > 1 else "_root"
 
@@ -827,6 +850,49 @@ def _read_single_dataset_readme(dataset_path: Path, max_chars: int = 2000) -> st
     return ""
 
 
+def dataset_directory_is_eligible(dataset_dir: Path) -> bool:
+    """Reject an explicitly failed generated-dataset directory.
+
+    Raw released datasets generally have no ``processing_manifest.json`` and
+    remain eligible.  When a generator does emit that control artifact, an
+    explicit non-production marker or terminal failure must fail closed so a
+    concurrent task cannot consume the partial files as a new dataset.
+    """
+    manifest_path = dataset_dir / "processing_manifest.json"
+    if not manifest_path.exists():
+        return True
+    try:
+        if not manifest_path.is_file():
+            raise OSError("manifest path is not a regular file")
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as error:
+        logger.warning(f"Rejecting dataset with unreadable processing manifest {manifest_path}: {error}")
+        return False
+
+    rejection_reason: str | None = None
+    if not isinstance(manifest, dict):
+        rejection_reason = "processing manifest is not a JSON object"
+    elif "production_eligible" in manifest and manifest.get("production_eligible") is not True:
+        rejection_reason = f"production_eligible={manifest.get('production_eligible')!r}"
+    else:
+        status = str(manifest.get("status", "")).strip().lower().replace("-", "_")
+        if status in {
+            "aborted",
+            "error",
+            "failed",
+            "in_progress",
+            "incomplete",
+            "invalid",
+            "pending",
+            "running",
+        }:
+            rejection_reason = f"status={status!r}"
+    if rejection_reason is not None:
+        logger.warning(f"Rejecting unfinished/non-production dataset {dataset_dir.name!r}: {rejection_reason}")
+        return False
+    return True
+
+
 def check_all_dataset_in_info(ft_file_path, existing_config, max_depth: int = 3):
     """Scan datasets directory and return top-level dataset names not yet in existing_config.
 
@@ -851,13 +917,76 @@ def check_all_dataset_in_info(ft_file_path, existing_config, max_depth: int = 3)
 
     try:
         for item in root_path.iterdir():
-            if item.is_dir() and not item.name.startswith("."):
+            if (
+                item.is_dir()
+                and not item.name.startswith(".")
+                and dataset_directory_is_eligible(item)
+            ):
                 dataset_list.append(item.name)
     except Exception as e:
         logger.warning(f"Error scanning datasets directory: {e}")
 
     remain_dataset_list = [dataset_name for dataset_name in dataset_list if dataset_name not in existing_config]
     return remain_dataset_list
+
+
+def dataset_info_cache_entry_is_valid(dataset_dir: Path, config: Any) -> bool:
+    """Return whether every data file referenced by a cached entry still exists.
+
+    ``dataset_info.json`` is derived metadata, not an asset manifest.  Generated
+    training files can therefore disappear (for example, after an experimental
+    artifact is quarantined) while the top-level dataset directory remains.  A
+    directory-only cache check would keep advertising those ghost files to the
+    agent indefinitely.
+    """
+    if (
+        not dataset_dir.is_dir()
+        or not dataset_directory_is_eligible(dataset_dir)
+        or not isinstance(config, dict)
+    ):
+        return False
+
+    tasks = config.get("tasks")
+    if not isinstance(tasks, dict):
+        return False
+
+    for task_name, task in tasks.items():
+        files = task.get("files") if isinstance(task, dict) else None
+        if not isinstance(files, list):
+            logger.warning(f"Dataset-info cache task {task_name!r} has no file list in {dataset_dir.name!r}")
+            return False
+        for value in files:
+            relative = Path(value) if isinstance(value, str) and value else Path()
+            if (
+                not value
+                or relative.is_absolute()
+                or ".." in relative.parts
+                or relative == Path()
+            ):
+                logger.warning(f"Unsafe dataset-info cache path {value!r} in {dataset_dir.name!r}")
+                return False
+            if not (dataset_dir / relative).is_file():
+                logger.warning(
+                    f"Invalidating dataset-info cache for {dataset_dir.name!r}: "
+                    f"referenced file is missing: {value}",
+                )
+                return False
+
+    return True
+
+
+def valid_dataset_info_cache(ft_file_path: str | Path, existing_config: Any) -> dict:
+    """Drop malformed or stale dataset-info entries before treating them as cached."""
+    if not isinstance(existing_config, dict):
+        return {}
+
+    datasets_root = Path(ft_file_path) / "datasets"
+    return {
+        dataset_name: config
+        for dataset_name, config in existing_config.items()
+        if isinstance(dataset_name, str)
+        and dataset_info_cache_entry_is_valid(datasets_root / dataset_name, config)
+    }
 
 
 def generate_dataset_info_config(target_dataset_list: list, ft_file_path: str, existing_config: dict) -> dict:
@@ -881,8 +1010,10 @@ def generate_dataset_info_config(target_dataset_list: list, ft_file_path: str, e
     Returns:
         dict: New configuration entries for dataset_info.json
     """
-    # Find datasets not yet in existing_config
-    remain_dataset_list = check_all_dataset_in_info(ft_file_path, existing_config)
+    # A cache hit is valid only while all files described by the entry remain
+    # present.  This makes the utility safe even when called outside Scenario.
+    cached_config = valid_dataset_info_cache(ft_file_path, existing_config)
+    remain_dataset_list = check_all_dataset_in_info(ft_file_path, cached_config)
     if not remain_dataset_list:
         return {}
 
@@ -903,7 +1034,7 @@ def generate_dataset_info_config(target_dataset_list: list, ft_file_path: str, e
             logger.info(
                 f"Analyzed dataset '{dataset_name}': "
                 f"{new_config[dataset_name].get('total_samples', 0)} samples, "
-                f"{new_config[dataset_name].get('total_size_mb', 0)} MB"
+                f"{new_config[dataset_name].get('total_size_mb', 0)} MB",
             )
 
     return new_config

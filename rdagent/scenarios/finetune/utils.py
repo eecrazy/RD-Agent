@@ -7,7 +7,7 @@ from rdagent.scenarios.finetune.download.hf import download_model
 
 
 def ensure_ft_assets_exist(
-    *, model: str | None = None, dataset: str | None = None, check_model: bool = False, check_dataset: bool = False
+    *, model: str | None = None, dataset: str | None = None, check_model: bool = False, check_dataset: bool = False,
 ) -> None:
     """Ensure dataset and model assets exist under FT_FILE_PATH structure.
 

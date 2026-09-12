@@ -6,7 +6,6 @@ model performance evaluation, training metrics analysis, and improvement suggest
 """
 
 import json
-from typing import Dict
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.core.proposal import (
@@ -15,11 +14,9 @@ from rdagent.core.proposal import (
     HypothesisFeedback,
 )
 from rdagent.core.scenario import Scenario
-from rdagent.log import rdagent_logger as logger
 from rdagent.log.utils import dict_get_with_warning
 from rdagent.oai.llm_utils import APIBackend
 from rdagent.scenarios.finetune.experiment.experiment import FTExperiment
-from rdagent.scenarios.finetune.proposal.proposal import FTHypothesis
 from rdagent.scenarios.finetune.proposal.trace import FTTrace
 from rdagent.utils import convert2bool
 from rdagent.utils.agent.tpl import T
@@ -33,7 +30,7 @@ class FTExperiment2Feedback(Experiment2Feedback):
         self.version = version
 
     def generate_feedback(
-        self, exp: FTExperiment, trace: FTTrace | None = None, exception: Exception | None = None
+        self, exp: FTExperiment, trace: FTTrace | None = None, exception: Exception | None = None,
     ) -> ExperimentFeedback:
         """
         Generate comprehensive feedback for LLM fine-tuning experiment.
@@ -139,8 +136,8 @@ class FTExperiment2Feedback(Experiment2Feedback):
                 user_prompt=user_prompt,
                 system_prompt=system_prompt,
                 json_mode=True,
-                json_target_type=Dict[str, str | bool | int],
-            )
+                json_target_type=dict[str, str | bool | int],
+            ),
         )
 
         # Extract feedback components

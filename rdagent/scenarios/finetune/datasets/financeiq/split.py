@@ -5,7 +5,7 @@ from typing import Literal
 
 
 def get_split_indices(
-    total_count: int, split: Literal["train", "test"], test_limit: int = 100, test_ratio: float = 0.5
+    total_count: int, split: Literal["train", "test"], test_limit: int = 100, test_ratio: float = 0.5,
 ) -> slice:
     """
     Calculate the slice for train/test split.
@@ -19,8 +19,7 @@ def get_split_indices(
 
     if split == "test":
         return slice(total_count - test_count, total_count)
-    else:
-        return slice(0, total_count - test_count)
+    return slice(0, total_count - test_count)
 
 
 def split_financeiq_dataset(data_dir: str, split: Literal["train", "test"]) -> None:
@@ -45,7 +44,7 @@ def split_financeiq_dataset(data_dir: str, split: Literal["train", "test"]) -> N
         header = None
         # Use 'utf-8-sig' to handle potential BOM in Excel-saved CSVs, or just 'utf-8'
         # Assuming 'utf-8' for now as it's standard for HF datasets
-        with open(f, "r", encoding="utf-8", newline="") as fp:
+        with open(f, encoding="utf-8", newline="") as fp:
             reader = csv.reader(fp)
             try:
                 header = next(reader)

@@ -1,8 +1,12 @@
+import hashlib
 import json
 import os
 import shutil
+import tempfile
 from pathlib import Path
+from typing import Any
 
+from filelock import FileLock
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.components.coder.finetune.conf import get_ft_env
 from rdagent.core.utils import cache_with_pickle
@@ -17,10 +21,18 @@ from rdagent.scenarios.finetune.scen.memory_estimator import MemoryEstimator
 from rdagent.scenarios.finetune.scen.utils import (
     FinetuneDatasetDescriptor,
     generate_dataset_info_config,
+    valid_dataset_info_cache,
 )
+from rdagent.scenarios.finetune.train.formal_training import formal_expected_samples
 from rdagent.scenarios.finetune.utils import ensure_ft_assets_exist
 from rdagent.scenarios.shared.get_runtime_info import get_runtime_environment_by_env
 from rdagent.utils.agent.tpl import T
+
+LOGICAL_GPU_COUNT_ENV = "FT_LOGICAL_TRAINING_GPU_COUNT"
+LOGICAL_GPU_MEMORY_ENV = "FT_LOGICAL_TRAINING_GPU_MEMORY_GB"
+LOGICAL_GPU_NAME_ENV = "FT_LOGICAL_TRAINING_GPU_NAME"
+LOGICAL_RESOURCE_SCOPE_ENV = "FT_LOGICAL_TRAINING_RESOURCE_SCOPE"
+PHYSICAL_EXECUTION_MAPPING_ENV = "FT_PHYSICAL_TRAINING_MAPPING"
 
 
 class LLMFinetuneScen(DataScienceScen):
@@ -60,22 +72,49 @@ class LLMFinetuneScen(DataScienceScen):
         self.gpu_count = json.loads(self.device_info).get("gpu_count", 0)
         self.model_info = FinetuneDatasetDescriptor().describe_model(self.base_model)
 
-        # Initialize memory estimator
+        # Method selection uses an explicit logical resource envelope.  The
+        # reproduction runner supplies the paper's B200 envelope while the
+        # worker-local CUDA view remains available for execution and baseline
+        # evaluation only.
+        self.training_resource = self._resolve_training_resource()
+        self.training_resource_info = json.dumps(self.training_resource, indent=2)
+        self.physical_execution_mapping = os.environ.get(PHYSICAL_EXECUTION_MAPPING_ENV, "").strip()
         self.memory_report = self._generate_memory_report()
 
         baseline_result = self.run_baseline_model_evaluation(
-            model_name=self.base_model, benchmark_name=self.target_benchmark
+            model_name=self.base_model, benchmark_name=self.target_benchmark,
         )
         # Agent only sees validation score
         self.baseline_benchmark_score = baseline_result.get("benchmark", {})
-        # Test score is for frontend display only
-        self.baseline_benchmark_score_test = baseline_result.get("benchmark_test", {})
+        # Normally populated only by the separate final-test runner.  The
+        # legacy search-time opt-in may still populate it for UI callers.
+        self.baseline_benchmark_score_test = (
+            baseline_result.get("benchmark_test", {})
+            if FT_RD_SETTING.evaluate_held_out_during_search
+            else {}
+        )
 
-    def benchmark_hash(self, model_name, benchmark_name) -> str:
-        return f"llm_finetune_baseline_eval_{model_name}_{benchmark_name}"
+    def benchmark_hash(self, model_name: str, benchmark_name: str) -> str:
+        payload = {
+            "schema_version": 2,
+            "evaluation_mode": (
+                "legacy_with_held_out"
+                if FT_RD_SETTING.evaluate_held_out_during_search
+                else "validation_only"
+            ),
+            "model": model_name,
+            "benchmark": benchmark_name,
+            "benchmark_dataset_path": os.environ.get("FT_BENCHMARK_DATASET_PATH"),
+            "benchmark_limit": FT_RD_SETTING.benchmark_limit,
+            "benchmark_num_runs": FT_RD_SETTING.benchmark_num_runs,
+            "benchmark_pass_k": FT_RD_SETTING.benchmark_pass_k,
+            "judge_model": FT_RD_SETTING.judge_model,
+        }
+        digest = hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
+        return f"llm_finetune_baseline_eval_v2_{digest}"
 
     @cache_with_pickle(benchmark_hash)
-    def run_baseline_model_evaluation(self, model_name, benchmark_name) -> dict:
+    def run_baseline_model_evaluation(self, model_name: str, benchmark_name: str) -> dict[str, Any]:
         ws = FTWorkspace()
         shutil.copytree(
             Path(FT_RD_SETTING.file_path) / "models" / model_name,
@@ -94,55 +133,97 @@ class LLMFinetuneScen(DataScienceScen):
             test_range=val_range,
             result_subdir="validation",
         )
-        # Test set - NOT visible to agent, frontend only
-        test_result = run_benchmark(
-            workspace_path=str(ws.workspace_path),
-            model_path=ws.workspace_path / "models" / model_name,
-            model_name=model_name,
-            benchmark_name=benchmark_name,
-            gpu_count=self.gpu_count,
-            test_range=test_range,
-            result_subdir="test",
-        )
-        return {
-            "benchmark": validation_result,  # Agent sees this
-            "benchmark_test": test_result,  # Agent does NOT see this
-        }
+        result = {"benchmark": validation_result}
+        if FT_RD_SETTING.evaluate_held_out_during_search:
+            result["benchmark_test"] = run_benchmark(
+                workspace_path=str(ws.workspace_path),
+                model_path=ws.workspace_path / "models" / model_name,
+                model_name=model_name,
+                benchmark_name=benchmark_name,
+                gpu_count=self.gpu_count,
+                test_range=test_range,
+                result_subdir="test",
+            )
+        return result
 
     def real_full_timeout(self):
         return FT_RD_SETTING.full_timeout
 
-    def _generate_memory_report(self) -> str:
-        """Generate memory estimation report based on hardware and model."""
+    def _physical_training_resource(self) -> dict[str, Any]:
+        """Return one-GPU memory and topology from the runtime-visible device report."""
+        device_info = json.loads(self.device_info) if isinstance(self.device_info, str) else self.device_info
+        gpu_info = device_info.get("gpu", {})
+        gpus = gpu_info.get("gpus", [])
+        num_gpus = gpu_info.get("gpu_count") or len(gpus) or device_info.get("gpu_count")
+        first_gpu = gpus[0] if gpus else {}
+        gpu_name = first_gpu.get("name") or "GPU"
+        gpu_mem = first_gpu.get("memory_total_gb")
+        if not gpu_mem:
+            total_mem = gpu_info.get("summary", {}).get("total_memory_gb")
+            gpu_mem = total_mem / num_gpus if total_mem and num_gpus else None
+        if not num_gpus or not gpu_mem:
+            message = "GPU topology or per-device memory is unavailable"
+            raise ValueError(message)
+        return {
+            "scope": "runtime-visible physical resources",
+            "source": "runtime_device_report",
+            "gpu_count": int(num_gpus),
+            "gpu_name": str(gpu_name),
+            "memory_per_gpu_gb": float(gpu_mem),
+            "total_memory_gb": float(gpu_mem) * int(num_gpus),
+        }
+
+    def _resolve_training_resource(self) -> dict[str, Any]:
+        """Resolve the resource envelope used for autonomous method selection."""
+        raw_count = os.environ.get(LOGICAL_GPU_COUNT_ENV)
+        raw_memory = os.environ.get(LOGICAL_GPU_MEMORY_ENV)
+        if raw_count is None and raw_memory is None:
+            return self._physical_training_resource()
+        if raw_count is None or raw_memory is None:
+            message = f"{LOGICAL_GPU_COUNT_ENV} and {LOGICAL_GPU_MEMORY_ENV} must be set together"
+            raise ValueError(message)
         try:
-            # Parse device info
-            device_info = json.loads(self.device_info) if isinstance(self.device_info, str) else self.device_info
-            gpu_info = device_info.get("gpu", {})
+            count = int(raw_count)
+            memory = float(raw_memory)
+        except ValueError as error:
+            message = "Logical training GPU count and memory must be numeric"
+            raise ValueError(message) from error
+        if count < 1 or memory <= 0:
+            message = "Logical training GPU count and memory must be positive"
+            raise ValueError(message)
+        name = os.environ.get(LOGICAL_GPU_NAME_ENV, "GPU").strip() or "GPU"
+        scope = os.environ.get(
+            LOGICAL_RESOURCE_SCOPE_ENV,
+            "logical method-selection resources",
+        ).strip()
+        return {
+            "scope": scope,
+            "source": "logical_resource_override",
+            "gpu_count": count,
+            "gpu_name": name,
+            "memory_per_gpu_gb": memory,
+            "total_memory_gb": memory * count,
+        }
 
-            # Extract GPU info based on source
-            if gpu_info.get("source") == "pytorch":
-                # PyTorch format: gpu_count at top level, total_memory_gb in summary
-                num_gpus = gpu_info.get("gpu_count")
-                gpu_mem = gpu_info.get("summary", {}).get("total_memory_gb")
-            else:
-                # nvidia-smi format: has gpus array with memory_total_gb
-                gpus = gpu_info.get("gpus", [])
-                num_gpus = len(gpus) if gpus else None
-                gpu_mem = gpus[0].get("memory_total_gb", 0) if gpus else None
-
-            # Skip if GPU info not available
-            if not num_gpus or not gpu_mem:
-                logger.warning("GPU info not available, skipping memory report")
-                return ""
-
-            # Create estimator from model name (pass model_specs for max_position_embeddings)
+    def _generate_memory_report(self) -> str:
+        """Generate the method-selection report from the logical resource envelope."""
+        try:
+            resource = self.training_resource
             estimator = MemoryEstimator.from_model_name(
                 name=self.base_model,
-                gpu_mem=gpu_mem,
-                num_gpus=num_gpus,
+                gpu_mem=resource["memory_per_gpu_gb"],
+                num_gpus=resource["gpu_count"],
                 model_specs=self.model_info.get("specs", ""),
+                gpu_name=resource["gpu_name"],
+                resource_scope=resource["scope"],
             )
-            return estimator.format()
+            policy_methods = {
+                "paper": ("full", "full_gc", "lora"),
+                "full": ("full", "full_gc"),
+                "lora": ("lora",),
+                "rslora": ("lora",),
+            }.get(os.environ.get("FT_TRAINING_POLICY", "").strip().lower().replace("-", ""))
+            return estimator.format(methods=policy_methods)
         except Exception as e:
             logger.warning(f"Failed to generate memory report: {e}")
             return ""
@@ -247,12 +328,10 @@ class LLMFinetuneScen(DataScienceScen):
         existing_config = {}
         if dataset_info_path.exists():
             try:
-                with open(dataset_info_path, "r", encoding="utf-8") as f:
+                with open(dataset_info_path, encoding="utf-8") as f:
                     existing_config = json.load(f)
 
-                # Only keep entries that have corresponding local directories
-                local_datasets = {d.name for d in datasets_dir.iterdir() if d.is_dir() and not d.name.startswith(".")}
-                existing_config = {k: v for k, v in existing_config.items() if k in local_datasets}
+                existing_config = valid_dataset_info_cache(FT_RD_SETTING.file_path, existing_config)
 
             except Exception as e:
                 logger.warning(f"Failed to load existing dataset_info.json: {e}")
@@ -260,7 +339,7 @@ class LLMFinetuneScen(DataScienceScen):
         # Generate config for all datasets (will be filtered later by _select_relevant_datasets)
         target_dataset_list = [] if self.dataset is None else [self.dataset]
         logger.info(
-            f"Generating dataset_info.json configuration for: {target_dataset_list if target_dataset_list else 'all datasets'}"
+            f"Generating dataset_info.json configuration for: {target_dataset_list or 'all datasets'}",
         )
         generated_config = generate_dataset_info_config(target_dataset_list, FT_RD_SETTING.file_path, existing_config)
         for dataset_name, config in generated_config.items():
@@ -269,11 +348,49 @@ class LLMFinetuneScen(DataScienceScen):
         try:
             os.makedirs(datasets_dir, mode=0o777, exist_ok=True)
 
-            with open(dataset_info_path, "w", encoding="utf-8") as f:
-                json.dump(existing_config, f, indent=2, ensure_ascii=False)
+            # Many matrix workers initialize this scenario concurrently.  A
+            # direct ``open(..., 'w')`` exposes a truncated/partially-written
+            # JSON document to readers and can also discard entries generated
+            # by another worker.  Merge once more while holding a short write
+            # lock, then atomically replace the cache file.
+            lock_path = dataset_info_path.with_suffix(dataset_info_path.suffix + ".lock")
+            with FileLock(lock_path):
+                latest_config: dict[str, Any] = {}
+                if dataset_info_path.exists():
+                    try:
+                        with open(dataset_info_path, encoding="utf-8") as f:
+                            latest_config = json.load(f)
+                    except Exception as e:
+                        logger.warning(f"Failed to reload existing dataset_info.json before update: {e}")
+
+                latest_config = valid_dataset_info_cache(FT_RD_SETTING.file_path, latest_config)
+                latest_config.update(existing_config)
+
+                temp_path: Path | None = None
+                try:
+                    with tempfile.NamedTemporaryFile(
+                        mode="w",
+                        encoding="utf-8",
+                        dir=datasets_dir,
+                        prefix=f".{dataset_info_path.name}.",
+                        suffix=".tmp",
+                        delete=False,
+                    ) as f:
+                        temp_path = Path(f.name)
+                        json.dump(latest_config, f, indent=2, ensure_ascii=False)
+                        f.flush()
+                        os.fsync(f.fileno())
+                    os.replace(temp_path, dataset_info_path)
+                    temp_path = None
+                finally:
+                    if temp_path is not None:
+                        temp_path.unlink(missing_ok=True)
+
+                existing_config = latest_config
             logger.info(f"Successfully updated dataset_info.json with configuration for: {target_dataset_list}")
         except Exception as e:
-            raise RuntimeError(f"Failed to write dataset_info.json: {e}")
+            message = f"Failed to write dataset_info.json: {e}"
+            raise RuntimeError(message) from e
         return existing_config
 
     @property
@@ -291,7 +408,8 @@ class LLMFinetuneScen(DataScienceScen):
             user_target_scenario=self.user_target_scenario,
             target_benchmark=self.target_benchmark,
             benchmark_description=self.benchmark_description,
-            device_info=self.device_info,
+            training_resource_info=self.training_resource_info,
+            physical_execution_mapping=self.physical_execution_mapping,
             memory_report=self.memory_report,
             chosen_model=FT_RD_SETTING.base_model is not None,
             base_model=FT_RD_SETTING.base_model,
@@ -301,4 +419,5 @@ class LLMFinetuneScen(DataScienceScen):
             data_processing_timeout=f"{FT_RD_SETTING.data_processing_timeout / 60:.0f} minutes",
             enable_dataset_description=enable_dataset_description,
             upper_data_size_limit=FT_RD_SETTING.upper_data_size_limit,
+            formal_expected_samples=formal_expected_samples(),
         )

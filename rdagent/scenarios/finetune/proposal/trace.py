@@ -13,7 +13,6 @@ from rdagent.components.coder.finetune.conf import (
 )
 from rdagent.core.evolving_framework import KnowledgeBase
 from rdagent.core.proposal import ExperimentFeedback, Trace
-from rdagent.log import rdagent_logger as logger
 
 if TYPE_CHECKING:
     from rdagent.scenarios.finetune.experiment.experiment import FTExperiment
@@ -27,7 +26,7 @@ class FTTrace(Trace["LLMFinetuneScen", KnowledgeBase]):
     SOTA is explicitly managed via DAG traversal.
     """
 
-    def __init__(self, scen: "LLMFinetuneScen", knowledge_base: KnowledgeBase | None = None) -> None:
+    def __init__(self, scen: LLMFinetuneScen, knowledge_base: KnowledgeBase | None = None) -> None:
         super().__init__(scen, knowledge_base)
 
         # Type hint for linting
@@ -46,7 +45,7 @@ class FTTrace(Trace["LLMFinetuneScen", KnowledgeBase]):
             return result["benchmark"]
         return None
 
-    def get_experiment_info(self, exp: "FTExperiment") -> dict[str, Any]:
+    def get_experiment_info(self, exp: FTExperiment) -> dict[str, Any]:
         """Return experiment's full info for hypothesis generation."""
         info: dict[str, Any] = {
             "hypothesis": str(exp.hypothesis) if exp.hypothesis else None,

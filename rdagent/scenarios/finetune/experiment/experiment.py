@@ -1,7 +1,4 @@
-import re
 from typing import Literal
-
-import pandas as pd
 
 from rdagent.components.coder.finetune.conf import FT_YAML_FILE_NAME
 from rdagent.core.experiment import Experiment, Task

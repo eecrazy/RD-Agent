@@ -12,13 +12,21 @@ scenario_description: |-
   The benchmark can be described as: {{ benchmark_description }}.
   {% endif %}
 
-  # Device Information
-  The device available for fine-tuning has the following specifications:
-  {{ device_info }}
-  The hardware constraints might limit certain choices, so consider them carefully.
+  # Training Resource Envelope
+  Use this resource envelope, and only this envelope, when deciding whether a
+  fine-tuning method is viable. In paper reproduction runs it represents the
+  paper's logical per-experiment hardware rather than a worker's local CUDA view:
+  {{ training_resource_info }}
 
   {% if memory_report %}
   {{ memory_report }}
+  {% endif %}
+
+  {% if physical_execution_mapping %}
+  # Physical Execution Mapping (informational; not a method-selection constraint)
+  {{ physical_execution_mapping }}
+  Do not reject Full SFT because a worker process initially sees only one H20;
+  the runtime acquires the required H20 group after the method is selected.
   {% endif %}
 
   {% if chosen_model %}
@@ -67,14 +75,49 @@ scenario_description: |-
   {%- endif %}
   {%- endfor %}
 
+  The dataset inventory and file tree above are authoritative. Propose a pipeline
+  using files that actually appear there. A filename containing `raw` does not
+  make a released source unusable. Do not invent or require a curated artifact,
+  manifest, schema version, or split that is absent from the inventory; create
+  any required derived train/validation artifacts in the writable workspace.
+
   ## Timeout Constraints
   - Full Training Timeout: {{ full_timeout }}
   - Data Processing Timeout: {{ data_processing_timeout }}
   {% endif %}
 
   ## (Very important!)Sample Size Control (Code-Based, No LLM)
+  {#
+    ``physical_execution_mapping`` is set only by the formal paper-matrix
+    runner.  The fallback keeps already-running workers, which may have loaded
+    the pre-contract Python caller, on the exact-count protocol after this
+    template is updated in place.
+  #}
+  {% set effective_formal_expected_samples = formal_expected_samples | default(upper_data_size_limit if (physical_execution_mapping | default("")) else none) %}
+  {% if effective_formal_expected_samples %}
+  This is a formal reproduction run. The sample count is an exact training
+  contract, not an upper bound: the dataset(s) selected by `train.yaml` MUST
+  contain exactly {{ effective_formal_expected_samples }} training records after every
+  filtering and generation step. If quality filtering rejects candidates,
+  deterministically draw replacements until the exact count is restored.
+
+  Do not turn an estimated rejection rate, comfort margin, or replacement
+  allowance into a larger hard source-capacity requirement. Capacity is judged
+  by the required accepted artifacts, and generation must refill dynamically.
+  If there are fewer usable source identities than required output records,
+  first reserve any internal-validation identities, then create distinct,
+  ground-truth-preserving training variants from training-side identities when
+  appropriate for the task. Never clone identical Alpaca records, and never
+  reuse a reserved validation identity in training.
+
+  Debug mode should still process only about 100 records. In the full run,
+  validation examples must be generated or selected in addition to the
+  {{ effective_formal_expected_samples }} training records. Never remove validation
+  examples from that required training set and never use a positive `val_size`.
+  {% else %}
   To avoid unlimited training cost, we have a strict upper limit on the number of training samples fed into LLM fine-tuning. You should sample the data with some rule which does not including feeding all the data into LLM because going through all data may exceed budget or time limits.
   The upper limit is {{ upper_data_size_limit }} samples.
+  {% endif %}
 
   You can choose one of the following strategies to control the sample size(all strategies should be code based, no LLM calls):
   1. Quality-first: Prefer samples with complete fields, reasonable length, and clear structure

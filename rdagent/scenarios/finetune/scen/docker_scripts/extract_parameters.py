@@ -5,12 +5,10 @@ Always pulls the latest LLaMA Factory code before extraction.
 """
 
 import json
-import subprocess
 import sys
 from dataclasses import fields
 from pathlib import Path
 
-import requests
 from llamafactory.data.template import TEMPLATES
 from llamafactory.extras.constants import METHODS, SUPPORTED_MODELS, TRAINING_STAGES
 from llamafactory.hparams.data_args import DataArguments

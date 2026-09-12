@@ -1,14 +1,13 @@
 import os
 import shutil
 from pathlib import Path
-from typing import Optional
 
 
 def _ensure_parent(path: Path) -> None:
     os.makedirs(path.parent, mode=0o777, exist_ok=True)
 
 
-def _get_hf_token(token: Optional[str] = None) -> Optional[str]:
+def _get_hf_token(token: str | None = None) -> str | None:
     """Get HuggingFace token from parameter or environment variables."""
     return (
         token
@@ -21,8 +20,8 @@ def _get_hf_token(token: Optional[str] = None) -> Optional[str]:
 def download_dataset(
     repo_id: str,
     out_dir: str,
-    token: Optional[str] = None,
-    revision: Optional[str] = None,
+    token: str | None = None,
+    revision: str | None = None,
     force: bool = False,
 ) -> str:
     """
@@ -49,7 +48,7 @@ def download_dataset(
         from huggingface_hub import snapshot_download
     except Exception as e:
         raise ImportError(
-            "huggingface_hub is missing. Please install it first: pip install -U 'huggingface_hub[cli]'"
+            "huggingface_hub is missing. Please install it first: pip install -U 'huggingface_hub[cli]'",
         ) from e
 
     snapshot_download(
@@ -65,9 +64,9 @@ def download_dataset(
 
 def download_model(
     repo_id: str,
-    out_dir_root: Optional[str] = None,
-    token: Optional[str] = None,
-    revision: Optional[str] = None,
+    out_dir_root: str | None = None,
+    token: str | None = None,
+    revision: str | None = None,
     force: bool = False,
 ) -> str:
     """
@@ -94,7 +93,7 @@ def download_model(
         from huggingface_hub import snapshot_download
     except Exception as e:
         raise ImportError(
-            "huggingface_hub is missing. Please install it first: pip install -U 'huggingface_hub[cli]'"
+            "huggingface_hub is missing. Please install it first: pip install -U 'huggingface_hub[cli]'",
         ) from e
 
     snapshot_download(

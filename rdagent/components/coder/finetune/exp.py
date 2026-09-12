@@ -4,7 +4,6 @@ LLM Fine-tuning Experiment Components
 Defines tasks for LLM fine-tuning following data science pattern.
 """
 
-from typing import List, Optional
 
 from rdagent.components.coder.CoSTEER.task import CoSTEERTask
 
@@ -17,7 +16,7 @@ class FTTask(CoSTEERTask):
         base_model: str,
         description: str,
         benchmark: str,
-        involving_datasets: Optional[List[str]] = None,
+        involving_datasets: list[str] | None = None,
         skip_data_processing: bool = False,
         *args,
         **kwargs,

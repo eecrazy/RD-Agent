@@ -7,8 +7,8 @@ No redundant LLM feedback generation - test results speak for themselves.
 
 import json
 import random
+import shutil
 from pathlib import Path
-from typing import Optional
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.components.coder.CoSTEER.evaluators import (
@@ -29,14 +29,22 @@ from rdagent.components.coder.finetune.conf import (
 from rdagent.components.coder.finetune.unified_validator import (
     SYSTEM_MANAGED_PARAMS,
     LLMConfigValidator,
+    get_training_policy,
+    training_policy_guidance,
+    validate_training_policy,
 )
 from rdagent.core.evolving_framework import QueriedKnowledge
 from rdagent.core.experiment import FBWorkspace, Task
 from rdagent.log import rdagent_logger as logger
+from rdagent.scenarios.finetune.train.formal_training import formal_expected_samples
 from rdagent.utils.agent.tpl import T
 from rdagent.utils.agent.workflow import build_cls_from_json_with_retry
 
 DIRNAME = Path(__file__).absolute().resolve().parent
+
+DEBUG_DATA_FILE_NAME = f"debug_{FT_DATA_FILE_NAME}"
+VALIDATION_DATA_FILE_NAME = "validation_data.json"
+DEBUG_VALIDATION_DATA_FILE_NAME = f"debug_{VALIDATION_DATA_FILE_NAME}"
 
 
 class FTDataEvaluator(CoSTEEREvaluator):
@@ -53,7 +61,7 @@ class FTDataEvaluator(CoSTEEREvaluator):
         target_task: Task,
         implementation: FBWorkspace,
         gt_implementation: FBWorkspace,
-        queried_knowledge: Optional[QueriedKnowledge] = None,
+        queried_knowledge: QueriedKnowledge | None = None,
         **kwargs,
     ) -> CoSTEERSingleFeedback:
         """Evaluate data processing implementation with LLM feedback."""
@@ -93,10 +101,24 @@ class FTDataEvaluator(CoSTEEREvaluator):
             entry=f"python {ws_prefix}/{FT_DATA_SCRIPT_NAME} --debug",
             env_vars=env_vars,
             cache_key_extra_func=get_data_processing_cache_key,
-            cache_files_to_extract=[FT_DATA_FILE_NAME],
+            cache_files_to_extract=[
+                FT_DATA_FILE_NAME,
+                VALIDATION_DATA_FILE_NAME,
+                DEBUG_DATA_FILE_NAME,
+                DEBUG_VALIDATION_DATA_FILE_NAME,
+                "dataset_info.json",
+            ],
         )
         execution_output = result.stdout if hasattr(result, "stdout") else str(result)
         exit_code = result.exit_code if hasattr(result, "exit_code") else -1
+
+        # Some otherwise valid task-specific processors isolate debug artifacts
+        # under debug_*.json names.  The following micro-batch still consumes the
+        # stable dataset registrations, so provide canonical *debug-only* copies.
+        # Full training clears generated artifacts and reruns the processor
+        # without --debug, preventing these bounded samples from becoming formal
+        # training evidence.
+        self._materialize_debug_dataset_aliases(implementation)
 
         # Step 4: Validate output
         if not data_json_path.exists():
@@ -110,7 +132,7 @@ class FTDataEvaluator(CoSTEEREvaluator):
 
         # Step 5: Load data if valid
         if error_msg is None and data_json_path.exists():
-            with open(data_json_path, "r", encoding="utf-8") as f:
+            with open(data_json_path, encoding="utf-8") as f:
                 data = json.load(f)
 
         # Step 5.5: Compute token stats and inject data_stats for yaml coder
@@ -137,9 +159,9 @@ class FTDataEvaluator(CoSTEEREvaluator):
         script_code: str,
         stdout: str,
         exit_code: int,
-        data: Optional[list],
-        error_msg: Optional[str],
-        queried_knowledge: Optional[QueriedKnowledge],
+        data: list | None,
+        error_msg: str | None,
+        queried_knowledge: QueriedKnowledge | None,
         raw_stdout: str = "",
     ) -> CoSTEERSingleFeedback:
         """Generate LLM-based feedback for data processing evaluation."""
@@ -163,7 +185,7 @@ class FTDataEvaluator(CoSTEEREvaluator):
         if queried_knowledge is not None:
             task_info = target_task.get_task_information()
             queried_similar_successful_knowledge = queried_knowledge.task_to_similar_task_successful_knowledge.get(
-                task_info, []
+                task_info, [],
             )
 
         # Build prompts
@@ -172,6 +194,7 @@ class FTDataEvaluator(CoSTEEREvaluator):
             queried_similar_successful_knowledge=queried_similar_successful_knowledge,
             upper_data_size_limit=FT_RD_SETTING.upper_data_size_limit,
             force_think_token=FT_RD_SETTING.force_think_token,
+            formal_expected_samples=formal_expected_samples(),
         )
         user_prompt = T(".prompts:data_eval.user").r(
             task_desc=target_task.get_task_information(),
@@ -185,7 +208,7 @@ class FTDataEvaluator(CoSTEEREvaluator):
         )
 
         logger.info(
-            f"Generating LLM feedback for data evaluation (samples: {total_samples}, has_error: {bool(error_msg)})"
+            f"Generating LLM feedback for data evaluation (samples: {total_samples}, has_error: {bool(error_msg)})",
         )
 
         feedback = build_cls_from_json_with_retry(
@@ -195,8 +218,10 @@ class FTDataEvaluator(CoSTEEREvaluator):
             init_kwargs_update_func=CoSTEERSingleFeedback.val_and_update_init_dict,
         )
 
-        # NOTE: 0 exit code is a hard criteria for success
-        if exit_code != 0:
+        # Both successful execution and a usable canonical dataset are hard
+        # criteria.  Do not let an LLM approve a zero-exit script that omitted
+        # the artifact required by the subsequent micro-batch.
+        if exit_code != 0 or error_msg is not None:
             feedback.final_decision = False
 
         feedback.raw_execution = raw_stdout
@@ -204,10 +229,30 @@ class FTDataEvaluator(CoSTEEREvaluator):
         logger.log_object(feedback, tag="evaluator_feedback.FTDataEvaluator")
         return feedback
 
+    @staticmethod
+    def _materialize_debug_dataset_aliases(implementation: FBWorkspace) -> None:
+        """Copy isolated debug splits to the canonical micro-batch filenames.
+
+        These files remain generated workspace artifacts rather than members of
+        ``file_dict``.  Consequently ``clear_workspace`` removes them before the
+        non-debug formal data pass.
+        """
+        workspace_path = implementation.workspace_path
+        aliases = (
+            (DEBUG_DATA_FILE_NAME, FT_DATA_FILE_NAME),
+            (DEBUG_VALIDATION_DATA_FILE_NAME, VALIDATION_DATA_FILE_NAME),
+        )
+        for source_name, target_name in aliases:
+            source = workspace_path / source_name
+            target = workspace_path / target_name
+            if source.is_file() and not target.exists():
+                shutil.copy2(source, target)
+                logger.info(f"Materialized debug dataset alias: {source_name} -> {target_name}")
+
     def _validate_data_json(self, data_json_path: Path) -> dict:
         """Validate data.json file format and content."""
         try:
-            with open(data_json_path, "r", encoding="utf-8") as f:
+            with open(data_json_path, encoding="utf-8") as f:
                 data = json.load(f)
 
             # Must be a non-empty list
@@ -243,28 +288,48 @@ class FTDataEvaluator(CoSTEEREvaluator):
         except Exception as e:
             return {"valid": False, "error": f"Error reading file: {e}", "sample_count": 0}
 
-    def _update_dataset_info(self, implementation: FBWorkspace, sample_count: int):
-        """Generate dataset_info.json for LlamaFactory to use the processed data.
+    def _update_dataset_info(self, implementation: FBWorkspace, sample_count: int) -> None:
+        """Ensure dataset_info.json contains the default processed-data entry.
 
         Note: LlamaFactory's columns mapping uses internal names (prompt, query, response)
         that map to the actual column names in the data file (instruction, input, output).
         See: https://github.com/hiyouga/LLaMA-Factory/blob/main/src/llamafactory/data/parser.py
+
+        A task-specific processing script may also create explicit train/validation files and
+        registrations. Preserve those registrations (including a task-specific
+        ``processed_data`` target) instead of replacing the complete metadata file with the
+        single default entry.
         """
-        dataset_info = {
-            "processed_data": {
-                "file_name": FT_DATA_FILE_NAME,
-                "formatting": "alpaca",
-                "columns": {
-                    "prompt": "instruction",
-                    "query": "input",
-                    "response": "output",
-                },
-            }
+        default_entry = {
+            "file_name": FT_DATA_FILE_NAME,
+            "formatting": "alpaca",
+            "columns": {
+                "prompt": "instruction",
+                "query": "input",
+                "response": "output",
+            },
         }
 
         try:
+            dataset_info_path = implementation.workspace_path / "dataset_info.json"
+            if dataset_info_path.exists():
+                with dataset_info_path.open("r", encoding="utf-8") as file:
+                    dataset_info = json.load(file)
+                if not isinstance(dataset_info, dict):
+                    logger.warning("Ignoring non-object dataset_info.json")
+                    dataset_info = {}
+            else:
+                dataset_info = {}
+            dataset_info.setdefault("processed_data", default_entry)
+            validation_path = implementation.workspace_path / VALIDATION_DATA_FILE_NAME
+            if validation_path.is_file():
+                validation_entry = {
+                    **default_entry,
+                    "file_name": VALIDATION_DATA_FILE_NAME,
+                }
+                dataset_info.setdefault("processed_data_validation", validation_entry)
             implementation.inject_files(**{"dataset_info.json": json.dumps(dataset_info, indent=2)})
-            logger.info(f"Updated dataset_info.json with processed_data ({sample_count} samples)")
+            logger.info(f"Preserved dataset_info.json registrations ({sample_count} samples)")
         except Exception as e:
             logger.warning(f"Failed to update dataset_info.json: {e}")
 
@@ -326,7 +391,7 @@ class FTCoderEvaluator(CoSTEEREvaluator):
         if queried_knowledge is not None:
             if task_info in queried_knowledge.success_task_to_knowledge_dict:
                 return queried_knowledge.success_task_to_knowledge_dict[task_info].feedback
-            elif task_info in queried_knowledge.failed_task_info_set:
+            if task_info in queried_knowledge.failed_task_info_set:
                 feedback = CoSTEERSingleFeedback(
                     execution="Task failed too many times, skipping.",
                     return_checking="Task failed too many times, skipping.",
@@ -336,7 +401,6 @@ class FTCoderEvaluator(CoSTEEREvaluator):
                 logger.log_object(feedback, tag="evaluator_feedback.FTCoderEvaluator")
                 return feedback
 
-        env = get_ft_env(operation="micro_batch")
         config_yaml = implementation.file_dict.get(FT_YAML_FILE_NAME, "")
         if not config_yaml:
             feedback = CoSTEERSingleFeedback(
@@ -348,9 +412,36 @@ class FTCoderEvaluator(CoSTEEREvaluator):
             logger.log_object(feedback, tag="evaluator_feedback.FTCoderEvaluator")
             return feedback
 
+        # Give deterministic method-policy feedback before preparing a
+        # micro-batch environment or asking another LLM to reinterpret it.
+        policy = get_training_policy()
+        policy_errors = validate_training_policy(config_yaml, policy)
+        if policy_errors:
+            details = "\n- ".join(policy_errors)
+            feedback = CoSTEERSingleFeedback(
+                execution=(
+                    f"Training policy '{policy}' rejected {FT_YAML_FILE_NAME} "
+                    "before micro-batch execution:\n"
+                    f"- {details}"
+                ),
+                return_checking=(
+                    f"The active '{policy}' training policy is enforced at the execution boundary. "
+                    "No micro-batch process or GPU lease was started."
+                ),
+                code=f"Regenerate train.yaml under this constraint: {training_policy_guidance(policy)}",
+                final_decision=False,
+            )
+            feedback.raw_execution = feedback.execution
+            feedback.source_feedback[self.__class__.__name__] = False
+            implementation.feedback = feedback
+            logger.log_object(feedback, tag="evaluator_feedback.FTCoderEvaluator")
+            return feedback
+
+        env = get_ft_env(operation="micro_batch")
+
         # Two-step validation: parameter filtering + micro-batch test
         validation_result = LLMConfigValidator().validate_and_test(
-            config_yaml=config_yaml, workspace=implementation, env=env
+            config_yaml=config_yaml, workspace=implementation, env=env,
         )
         # NOTE: Docker execution is logged by FTWorkspace.run() automatically
 
@@ -378,7 +469,7 @@ class FTCoderEvaluator(CoSTEEREvaluator):
                     f"- {file.name} ({file.stat().st_size} bytes)"
                     for file in implementation.workspace_path.rglob("*")
                     if file.is_file() and "checkpoint" not in file.absolute().as_posix()
-                ]
+                ],
             ),
         )
         feedback = build_cls_from_json_with_retry(
