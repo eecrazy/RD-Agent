@@ -8,14 +8,14 @@ import time
 import tokenize
 import uuid
 from abc import ABC, abstractmethod
+from collections.abc import Callable
 from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Callable, List, Optional, Tuple, Type, Union, cast
+from typing import Any, cast
 
 import pytz
 from pydantic import BaseModel, TypeAdapter
-
 from rdagent.core.exception import CodeBlockParseError, PolicyError
 from rdagent.core.utils import LLM_CACHE_SEED_GEN, SingletonBaseClass
 from rdagent.log import LogColors
@@ -38,7 +38,7 @@ class JSONParser:
     """JSON parser supporting multiple strategies"""
 
     def __init__(self, add_json_in_prompt: bool = False) -> None:
-        self.strategies: List[Callable[[str], str]] = [
+        self.strategies: list[Callable[[str], str]] = [
             self._direct_parse,
             self._extract_from_code_block,
             self._fix_python_syntax,
@@ -65,8 +65,7 @@ class JSONParser:
             )
             error.message = "Failed to parse JSON after all attempts, maybe because 'messages' must contain the word 'json' in some form"  # type: ignore[attr-defined]
             raise error
-        else:
-            raise json.JSONDecodeError("Failed to parse JSON after all attempts", original_content, 0)
+        raise json.JSONDecodeError("Failed to parse JSON after all attempts", original_content, 0)
 
     def _direct_parse(self, content: str) -> str:
         """Strategy 1: Direct parsing (including handling extra data)"""
@@ -158,7 +157,7 @@ class CodeBlockParser:
         self.fallback_to_raw = fallback_to_raw
         self._lang_aliases = self._get_language_aliases(self.language)
 
-    def _get_language_aliases(self, language: str) -> List[str]:
+    def _get_language_aliases(self, language: str) -> list[str]:
         """Get all possible aliases for the language."""
         for lang, aliases in self.SUPPORTED_LANGUAGES.items():
             if language in [lang] + aliases:
@@ -175,12 +174,24 @@ class CodeBlockParser:
         Raises:
             CodeBlockParseError: When extraction fails and fallback_to_raw=False.
         """
-        # Match code block with exact language tag (```python, ```yaml, etc.)
+        # Use the final standalone fence after the requested opening fence.
+        # Generated source can legitimately contain Markdown fences inside a
+        # prompt string; a non-greedy regex would truncate the source at the
+        # first such embedded fence.
         for alias in self._lang_aliases:
-            pattern = rf"```{alias}\s*\n(.*?)\n```"
-            match = re.search(pattern, content, re.DOTALL | re.IGNORECASE)
-            if match:
-                return match.group(1).strip()
+            opening = re.search(
+                rf"```{re.escape(alias)}[^\S\r\n]*\r?\n",
+                content,
+                re.IGNORECASE,
+            )
+            if opening is None:
+                continue
+            remainder = content[opening.end() :]
+            closing_fences = list(
+                re.finditer(r"^[ \t]*```[ \t]*\r?$", remainder, re.MULTILINE),
+            )
+            if closing_fences:
+                return remainder[: closing_fences[-1].start()].strip()
 
         if self.fallback_to_raw:
             return content.strip()
@@ -246,7 +257,6 @@ class SQliteLazyCache(SingletonBaseClass):
             (md5_key, value),
         )
         self.conn.commit()
-        return None
 
     def embedding_set(self, content_to_embedding_dict: dict) -> None:
         for key, value in content_to_embedding_dict.items():
@@ -260,7 +270,7 @@ class SQliteLazyCache(SingletonBaseClass):
     def message_get(self, conversation_id: str) -> list[dict[str, Any]]:
         self.c.execute("SELECT message FROM message_cache WHERE conversation_id=?", (conversation_id,))
         result = self.c.fetchone()
-        return [] if result is None else cast(list[dict[str, Any]], json.loads(result[0]))
+        return [] if result is None else cast("list[dict[str, Any]]", json.loads(result[0]))
 
     def message_set(self, conversation_id: str, message_value: list[dict[str, Any]]) -> None:
         self.c.execute(
@@ -268,7 +278,6 @@ class SQliteLazyCache(SingletonBaseClass):
             (conversation_id, json.dumps(message_value)),
         )
         self.conn.commit()
-        return None
 
 
 class SessionChatHistoryCache(SingletonBaseClass):
@@ -513,7 +522,7 @@ class APIBackend(ABC):
         if former_messages is None:
             former_messages = []
         messages = self._build_messages(
-            user_prompt, system_prompt, former_messages, shrink_multiple_break=shrink_multiple_break
+            user_prompt, system_prompt, former_messages, shrink_multiple_break=shrink_multiple_break,
         )
         return self._calculate_token_from_messages(messages)
 
@@ -538,7 +547,7 @@ class APIBackend(ABC):
                     return self._create_embedding_with_cache(*args, **kwargs)
                 if chat_completion:
                     return self._create_chat_completion_auto_continue(*args, **kwargs)
-            except Exception as e:  # noqa: BLE001
+            except Exception as e:
                 if hasattr(e, "message") and (
                     "'messages' must contain the word 'json' in some form" in e.message
                     or "\\'messages\\' must contain the word \\'json\\' in some form" in e.message
@@ -563,8 +572,8 @@ class APIBackend(ABC):
                     else:
                         # Already tried truncation, raise error with guidance
                         raise RuntimeError(
-                            f"Embedding failed even after truncation. "
-                            f"Please set LLM_SETTINGS.embedding_max_length to a smaller value."
+                            "Embedding failed even after truncation. "
+                            "Please set LLM_SETTINGS.embedding_max_length to a smaller value.",
                         ) from e
                 else:
                     RD_Agent_TIMER_wrapper.api_fail_count += 1
@@ -585,8 +594,8 @@ class APIBackend(ABC):
                             raise PolicyError(e)
 
                     if (
-                        openai_imported
-                        and isinstance(e, openai.APITimeoutError)
+                        (openai_imported
+                        and isinstance(e, openai.APITimeoutError))
                         or (
                             isinstance(e, openai.APIError)
                             and hasattr(e, "message")
@@ -627,11 +636,11 @@ class APIBackend(ABC):
         messages: list[dict[str, Any]],
         json_mode: bool = False,
         chat_cache_prefix: str = "",
-        seed: Optional[int] = None,
-        json_target_type: Optional[str] = None,
+        seed: int | None = None,
+        json_target_type: str | None = None,
         add_json_in_prompt: bool = False,
-        response_format: Optional[Union[dict, Type[BaseModel]]] = None,
-        code_block_language: Optional[str] = None,
+        response_format: dict | type[BaseModel] | None = None,
+        code_block_language: str | None = None,
         code_block_fallback: bool = False,
         **kwargs: Any,
     ) -> str:
@@ -675,10 +684,13 @@ class APIBackend(ABC):
             )
             all_response += response
 
-            # Handle litellm bug: finish_reason='stop' but code block not closed
-            # TODO: this is a temporary solution, and should be removed when litellm is fixed.
+            # Generated source may embed Markdown fences in prompt strings, so
+            # counting every ``` token cannot tell whether the outer response
+            # fence is closed. Parse the requested outer block instead.
             if finish_reason == "stop" and code_block_language:
-                if all_response.count("```") % 2 == 1:  # Odd count = unclosed code block
+                try:
+                    CodeBlockParser(language=code_block_language).parse(all_response)
+                except CodeBlockParseError:
                     logger.warning("Detected unclosed code block with finish_reason='stop', treating as truncated")
                     finish_reason = "length"
 
@@ -731,7 +743,7 @@ class APIBackend(ABC):
         return all_response
 
     def _create_embedding_with_cache(
-        self, input_content_list: list[str], *args: Any, **kwargs: Any
+        self, input_content_list: list[str], *args: Any, **kwargs: Any,
     ) -> list[list[float]]:
         content_to_embedding_dict = {}
         filtered_input_content_list = []
@@ -775,10 +787,10 @@ class APIBackend(ABC):
         raise NotImplementedError("Subclasses must implement this method")
 
     @abstractmethod
-    def _create_chat_completion_inner_function(  # type: ignore[no-untyped-def] # noqa: C901, PLR0912, PLR0915
+    def _create_chat_completion_inner_function(  # type: ignore[no-untyped-def]
         self,
         messages: list[dict[str, Any]],
-        response_format: Optional[Union[dict, Type[BaseModel]]] = None,
+        response_format: dict | type[BaseModel] | None = None,
         *args,
         **kwargs,
     ) -> tuple[str, str | None]:

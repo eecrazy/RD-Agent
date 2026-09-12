@@ -11,7 +11,7 @@ class TestFBWorkspace(unittest.TestCase):
     Unit-tests for `FBWorkspace`.
     """
 
-    def setUp(self) -> None:  # noqa: D401
+    def setUp(self) -> None:
         """
         Create an isolated temporary directory for each test case.
         """
@@ -145,3 +145,51 @@ class TestFBWorkspace(unittest.TestCase):
 
         self.assertFalse(outside_link.is_symlink())
         self.assertFalse(outside_target.exists())
+
+    def test_inject_files_replaces_symlinks(self) -> None:
+        """Injected files replace live and dangling links without following them."""
+        ws = FBWorkspace()
+        ws.workspace_path = self.tmp_path / "ws"
+        ws.prepare()
+
+        external = self.tmp_path / "external.txt"
+        external.write_text("external")
+        injected = ws.workspace_path / "dataset_info.json"
+        injected.symlink_to(external)
+
+        ws.inject_files(**{"dataset_info.json": "live-link replacement"})
+
+        assert not injected.is_symlink()
+        assert injected.read_text() == "live-link replacement"
+        assert external.read_text() == "external"
+
+        injected.unlink()
+        injected.symlink_to(self.tmp_path / "missing" / "dataset_info.json")
+        ws.inject_files(**{"dataset_info.json": "dangling-link replacement"})
+
+        assert not injected.is_symlink()
+        assert injected.read_text() == "dangling-link replacement"
+
+        injected.unlink()
+        injected.symlink_to(self.tmp_path / "missing-again")
+        ws.inject_files(**{"dataset_info.json": ws.DEL_KEY})
+        assert not injected.is_symlink()
+
+    def test_checkpoint_recovery_removes_read_only_tree(self) -> None:
+        """Checkpoint recovery replaces immutable generated data directories."""
+        ws = FBWorkspace()
+        ws.workspace_path = self.tmp_path / "ws"
+        ws.prepare()
+
+        immutable = ws.workspace_path / "processed_runs" / "immutable"
+        immutable.mkdir(parents=True)
+        payload = immutable / "validation_data.json"
+        payload.write_text('[{"output": "yes"}]')
+        payload.chmod(0o444)
+        immutable.chmod(0o555)
+        ws.create_ws_ckp()
+
+        ws.recover_ws_ckp()
+
+        recovered = ws.workspace_path / "processed_runs" / "immutable" / "validation_data.json"
+        assert recovered.read_text() == '[{"output": "yes"}]'

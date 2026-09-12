@@ -5,6 +5,7 @@ import os
 import platform
 import re
 import shutil
+import stat
 import typing
 import uuid
 import zipfile
@@ -259,9 +260,15 @@ class FBWorkspace(Workspace):
                     target_file_path.unlink()  # Unlink the file if it exists
                 self.file_dict.pop(k, None)  # Safely remove the key from file_dict
             else:
-                target_file_path = self._resolve_workspace_path(k)
+                target_file_path = self._resolve_workspace_path(k, follow_leaf_symlink=False)
                 self.file_dict[k] = v
                 target_file_path.parent.mkdir(parents=True, exist_ok=True)
+                # Injection means replacing the workspace entry itself.  Following
+                # a symlink here can write outside the workspace and a dangling
+                # symlink raises FileNotFoundError after its generated target is
+                # cleaned between fine-tuning iterations.
+                if target_file_path.is_symlink():
+                    target_file_path.unlink()
                 target_file_path.write_text(v)
 
     def remove_files(self, file_names: str | list[str]) -> None:
@@ -312,11 +319,45 @@ class FBWorkspace(Workspace):
         """
         return deepcopy(self)
 
+    @staticmethod
+    def _remove_workspace_tree(path: Path) -> None:
+        """Remove a workspace even when generated artifacts are read-only.
+
+        Data-processing implementations may deliberately make immutable run
+        directories ``0555`` and their payloads ``0444``.  A plain
+        ``shutil.rmtree(..., ignore_errors=True)`` silently leaves those
+        entries behind, which makes checkpoint restoration fail when it tries
+        to recreate an archived file at the same path.  Make only directories
+        owner-writable before removal; never follow workspace symlinks.
+        """
+        if path.is_symlink():
+            path.unlink()
+            return
+        if not path.exists():
+            return
+        if not path.is_dir():
+            path.unlink()
+            return
+
+        def make_directory_removable(directory: Path) -> None:
+            mode = stat.S_IMODE(directory.lstat().st_mode)
+            directory.chmod(mode | stat.S_IRWXU, follow_symlinks=False)
+
+        make_directory_removable(path)
+        for root, directories, _files in os.walk(path, topdown=True, followlinks=False):
+            root_path = Path(root)
+            make_directory_removable(root_path)
+            for directory_name in directories:
+                directory = root_path / directory_name
+                if not directory.is_symlink():
+                    make_directory_removable(directory)
+        shutil.rmtree(path)
+
     def clear(self) -> None:
         """
         Clear the workspace
         """
-        shutil.rmtree(self.workspace_path, ignore_errors=True)
+        self._remove_workspace_tree(self.workspace_path)
         self.file_dict = {}
 
     def before_execute(self) -> None:
@@ -377,7 +418,7 @@ class FBWorkspace(Workspace):
         if self.ws_ckp is None:
             msg = "Workspace checkpoint doesn't exist. Call `create_ws_ckp` first."
             raise RuntimeError(msg)
-        shutil.rmtree(self.workspace_path, ignore_errors=True)
+        self._remove_workspace_tree(self.workspace_path)
         self.workspace_path.mkdir(parents=True, exist_ok=True)
         buf = io.BytesIO(self.ws_ckp)
         with zipfile.ZipFile(buf, "r") as zf:

@@ -7,6 +7,7 @@ Tries to create uniform environment for the agent to run;
 
 # TODO: move the scenario specific docker env into other folders.
 
+import codecs
 import contextlib
 import json
 import os
@@ -705,39 +706,59 @@ class LocalEnv(Env[ASpecificLocalConf]):
                 stderr_fd = process.stderr.fileno()
 
                 poller = select.poll()
-                poller.register(stdout_fd, select.POLLIN)
-                poller.register(stderr_fd, select.POLLIN)
+                poll_mask = select.POLLIN | select.POLLHUP | select.POLLERR
+                poller.register(stdout_fd, poll_mask)
+                poller.register(stderr_fd, poll_mask)
 
-                combined_output = ""
-                while True:
-                    if process.poll() is not None:
-                        break
+                # readline() is unsafe here: a progress update may contain no
+                # newline, leaving this process blocked on one stream while the
+                # child fills the other pipe.  Drain both descriptors in
+                # non-blocking chunks instead.
+                streams = {
+                    stdout_fd: process.stdout,
+                    stderr_fd: process.stderr,
+                }
+                decoders = {
+                    fd: codecs.getincrementaldecoder(stream.encoding or "utf-8")(errors="replace")
+                    for fd, stream in streams.items()
+                }
+                for fd in streams:
+                    os.set_blocking(fd, False)
+
+                combined_output_parts: list[str] = []
+                while streams:
                     events = poller.poll(100)
-                    for fd, event in events:
-                        if event & select.POLLIN:
-                            if fd == stdout_fd:
-                                while True:
-                                    output = process.stdout.readline()
-                                    if output == "":
-                                        break
-                                    Console().print(output.strip(), markup=False)
-                                    combined_output += output
-                            elif fd == stderr_fd:
-                                while True:
-                                    error = process.stderr.readline()
-                                    if error == "":
-                                        break
-                                    Console().print(error.strip(), markup=False)
-                                    combined_output += error
+                    if not events and process.poll() is not None:
+                        # The process has exited; force one final drain even on
+                        # platforms that do not report POLLHUP reliably.
+                        events = [(fd, poll_mask) for fd in streams]
 
-                # Capture any final output
-                remaining_output, remaining_error = process.communicate()
-                if remaining_output:
-                    Console().print(remaining_output.strip(), markup=False)
-                    combined_output += remaining_output
-                if remaining_error:
-                    Console().print(remaining_error.strip(), markup=False)
-                    combined_output += remaining_error
+                    for fd, event in events:
+                        if fd not in streams or not event & poll_mask:
+                            continue
+                        while True:
+                            try:
+                                chunk = os.read(fd, 65536)
+                            except BlockingIOError:
+                                break
+
+                            if not chunk:
+                                final_text = decoders[fd].decode(b"", final=True)
+                                if final_text:
+                                    Console().print(final_text, end="", markup=False)
+                                    combined_output_parts.append(final_text)
+                                poller.unregister(fd)
+                                streams.pop(fd)
+                                decoders.pop(fd)
+                                break
+
+                            output = decoders[fd].decode(chunk)
+                            if output:
+                                Console().print(output, end="", markup=False)
+                                combined_output_parts.append(output)
+
+                process.wait()
+                combined_output = "".join(combined_output_parts)
             else:
                 # Sacrifice real-time output to avoid possible standard I/O hangs
                 out, err = process.communicate()

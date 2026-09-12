@@ -1,8 +1,10 @@
 import os
+import shlex
 import sys
 import time
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 import shutil
@@ -65,6 +67,26 @@ class EnvUtils(unittest.TestCase):
         le.prepare()
         result = le.run(local_path=str(code_path))
         print(result.stdout, result.exit_code, result.running_time)
+
+    def test_local_live_output_drains_stdout_and_stderr_without_newlines(self):
+        local_conf = LocalConf(default_entry="true", live_output=True)
+        le = LocalEnv(conf=local_conf)
+        script = (
+            "import os;"
+            "os.write(1, bytes([111,117,116,45,115,116,97,114,116]));"
+            "os.write(2, bytes([120]) * (2 * 1024 * 1024));"
+            "os.write(1, bytes([111,117,116,45,101,110,100]))"
+        )
+        entry = f'timeout 5 {shlex.quote(sys.executable)} -c "{script}"'
+
+        # Suppress the deliberately large child output in the test log.
+        with patch("rdagent.utils.env.Console"):
+            result = le.run(local_path=str(self.test_workspace), entry=entry)
+
+        self.assertEqual(result.exit_code, 0)
+        self.assertIn("out-start", result.full_stdout)
+        self.assertIn("out-end", result.full_stdout)
+        self.assertEqual(result.full_stdout.count("x"), 2 * 1024 * 1024)
 
     def test_conda_simple(self):
         conda_conf = CondaConf(default_entry="which python", conda_env_name="MLE")
