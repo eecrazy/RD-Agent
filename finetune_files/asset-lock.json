@@ -1,0 +1,977 @@
+{
+  "schema_version": 1,
+  "manifest": "reproduction/ft_agent/assets.json",
+  "assets": [
+    {
+      "id": "dataset-chemcot",
+      "kind": "dataset",
+      "repo_id": "OpenMol/ChemCoTDataset",
+      "revision": "d88a8af379ba4a7e79f58c04590ad037e79b06ba",
+      "path": "finetune_files/datasets/chemcot",
+      "file_count": 22,
+      "total_bytes": 174023087,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2989,
+          "sha256": "8af6e52fd1d231264afdfa0d806873903d3ee3d7e3e08dbbe3482228b121e852"
+        },
+        {
+          "path": "README.md",
+          "size": 4360,
+          "sha256": "7e41e45b191e740735430e2d8dc417a22edaa236a46c3f31db4a1a80df88ce88"
+        },
+        {
+          "path": "chemcotbench-cot/mol_edit/add.json",
+          "size": 17210542,
+          "sha256": "1ed0175ac33fa3ae2911aee3a18b291b3361a497e43bc23eddd921ed6bcfcc90"
+        },
+        {
+          "path": "chemcotbench-cot/mol_edit/delete.json",
+          "size": 18013653,
+          "sha256": "4a8ab3718f07d47f182085a6663d28a1cf564c2baa9d01f0302a7e4995c209c7"
+        },
+        {
+          "path": "chemcotbench-cot/mol_edit/sub.json",
+          "size": 18629771,
+          "sha256": "70b7860cd4cddea53e4976d81ba9b100653118051ced07e4a1e9d7a5db48fd3a"
+        },
+        {
+          "path": "chemcotbench-cot/mol_opt/drd.json",
+          "size": 9501705,
+          "sha256": "5234a0cb24e28951cb8ad73355431f6b12e8224d5247d970fe392e39187f6a6e"
+        },
+        {
+          "path": "chemcotbench-cot/mol_opt/gsk.json",
+          "size": 5280785,
+          "sha256": "7c6820ce8c580d7d27ef28ddbba0507247f81e7467a705cb67fb370aa1f12cda"
+        },
+        {
+          "path": "chemcotbench-cot/mol_opt/jnk.json",
+          "size": 1418903,
+          "sha256": "63e74939b3406be7ccb29201806de873dc19ae637f2d6857c6d64839644f6bf2"
+        },
+        {
+          "path": "chemcotbench-cot/mol_opt/logp.json",
+          "size": 2923046,
+          "sha256": "549d94e2b3e3dae88dbee6b2b6107146ff3446d95cdb03e1879e0db2fec7e2d5"
+        },
+        {
+          "path": "chemcotbench-cot/mol_opt/qed.json",
+          "size": 2336119,
+          "sha256": "a14f4de971ae9235064fab32f5ad113b48b4096b1fd002cdfa712ff0058d2c2f"
+        },
+        {
+          "path": "chemcotbench-cot/mol_opt/solubility.json",
+          "size": 2832645,
+          "sha256": "65a8818c82feb9dc009f39031b982f3ee929cf2734fab6a7f54a67362e746597"
+        },
+        {
+          "path": "chemcotbench-cot/mol_und/Murcko_scaffold.json",
+          "size": 12691128,
+          "sha256": "284a8f1bfeae98eac282a9bc6f1973e397d396280a1cbcc62f81cdf86365aa48"
+        },
+        {
+          "path": "chemcotbench-cot/mol_und/equivalence.json",
+          "size": 2512859,
+          "sha256": "1dc514d65a26a8b55caff4665b9ae2c9a1672e32723923a758bb2efb5b0fbbe6"
+        },
+        {
+          "path": "chemcotbench-cot/mol_und/fg_count.json",
+          "size": 9422502,
+          "sha256": "0bcde76eadb6d8fc9d0a11668265f2ca400fb2a2464792a024b2da70b4919ca3"
+        },
+        {
+          "path": "chemcotbench-cot/mol_und/ring_count.json",
+          "size": 20512708,
+          "sha256": "514ec31ed00246ef40072d5dea957a7d6c1c63d6265269247880ab9a042c153b"
+        },
+        {
+          "path": "chemcotbench-cot/mol_und/ring_system_scaffold.json",
+          "size": 15445847,
+          "sha256": "017e1a33d1e432d591f9694b16a85df813a5f2a441a00f63898fe682e87165ec"
+        },
+        {
+          "path": "chemcotbench-cot/rxn/fs_by_product.json",
+          "size": 2988745,
+          "sha256": "1248fde2148ad91090f9cc7433f43c45b3a8c06e209592ce626e192e36c8b31c"
+        },
+        {
+          "path": "chemcotbench-cot/rxn/fs_major_product.json",
+          "size": 7683166,
+          "sha256": "c980445eec7b7a8bb4da279ed3d6080c57fd01c9a6a3636bc654512bb7bb44bd"
+        },
+        {
+          "path": "chemcotbench-cot/rxn/mech_sel.json",
+          "size": 1302418,
+          "sha256": "df97c659519f8a71a4a36188dce8e15fc6fc081dc24490feca1abd692c72e05f"
+        },
+        {
+          "path": "chemcotbench-cot/rxn/nepp.json",
+          "size": 4939216,
+          "sha256": "25337bd3554627faaa28070c82abe24518b3256da1b924e06efe1984f9522f82"
+        },
+        {
+          "path": "chemcotbench-cot/rxn/rcr.json",
+          "size": 11483372,
+          "sha256": "6f2d691589f3e37dfa5e57a3eb84f2bf407f4b12c6faef25554d384b71d42c40"
+        },
+        {
+          "path": "chemcotbench-cot/rxn/retro.json",
+          "size": 6886608,
+          "sha256": "12886cfc476c3ead8b1a8418c09e0776ffb2ad569598aac72e6a7885393b2a32"
+        }
+      ]
+    },
+    {
+      "id": "dataset-panorama",
+      "kind": "dataset",
+      "repo_id": "LG-AI-Research/PANORAMA",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "path": "finetune_files/datasets/panorama",
+      "file_count": 9,
+      "total_bytes": 17941823939,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2461,
+          "sha256": "e7a120ab07b1bc5b486be249e9fc6c83d59448d0093e1dfebe95d1566d9cafc0"
+        },
+        {
+          "path": "NOC4PC/train.parquet",
+          "size": 1041119820,
+          "sha256": "b5b51c9cf662c71f0832962f472dca68559abec1a7514bfc994b4f3b64697716"
+        },
+        {
+          "path": "PAR4PC/train.parquet",
+          "size": 410748766,
+          "sha256": "4fa5d4a257405e0099b6e9ae5f3cca6ef072ed48fe363d1c96a8ce54a5c2fc69"
+        },
+        {
+          "path": "PI4PC/train.parquet",
+          "size": 1594660130,
+          "sha256": "35b2919cc5afdc2327bc42fab897fd3bebd49f9e3529d8afae9d89512ad26132"
+        },
+        {
+          "path": "README.md",
+          "size": 4379,
+          "sha256": "5d1c616871cd4505339b12133016639406df860ab8233e041f71753fea809349"
+        },
+        {
+          "path": "gitattributes.txt",
+          "size": 740,
+          "sha256": "a880aac04b834d7ecce9b100eec07305ee6335ace294af874518206a4f0e2906"
+        },
+        {
+          "path": "panorama.parquet",
+          "size": 167031631,
+          "sha256": "827a3940e52dae76ac6749528c93019d7fe2fcba90d817063a1a397018861aa9"
+        },
+        {
+          "path": "spec_app-2.zip",
+          "size": 3822600407,
+          "sha256": "810cdafaa1c8a442bed9ee4e7adbc7dc7bf3b09455dba16bac488e9c51bfe62d"
+        },
+        {
+          "path": "spec_cited.zip",
+          "size": 10905655605,
+          "sha256": "3fd4f3246fa679de944c842d7255d9b60719170d6511e723d06a198a53b2d9a3"
+        }
+      ]
+    },
+    {
+      "id": "dataset-deepscaler",
+      "kind": "dataset",
+      "repo_id": "agentica-org/DeepScaleR-Preview-Dataset",
+      "revision": "b6ae8c60f5c1f2b594e2140b91c49c9ad0949e29",
+      "path": "finetune_files/datasets/deepscaler",
+      "file_count": 3,
+      "total_bytes": 21484365,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2513,
+          "sha256": "26e7ef642129b12464b468c5bcfe21a594631fd262fba7ae16f02e26ef2d5393"
+        },
+        {
+          "path": "README.md",
+          "size": 2478,
+          "sha256": "3d25c9216af860c090311270f05ac6f3a3d9e2570d535f312ed569c4ba54b144"
+        },
+        {
+          "path": "deepscaler.json",
+          "size": 21479374,
+          "sha256": "4e9e7b18248d982b4498a54a6bdb37b1bb653cf5f77bc309fa67a6c2533c8ba4"
+        }
+      ]
+    },
+    {
+      "id": "dataset-financeiq",
+      "kind": "dataset",
+      "repo_id": "Duxiaoman-DI/FinanceIQ",
+      "revision": "fca1d9ceb6925041264d211b9ddf7264e8145248",
+      "path": "finetune_files/datasets/financeiq",
+      "file_count": 12,
+      "total_bytes": 2267537,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2307,
+          "sha256": "f4e703ea6e44bbebe53aceed2a89c11e40b88b7ae130c480c89860ab805ffc8f"
+        },
+        {
+          "path": "README.md",
+          "size": 3954,
+          "sha256": "5231c44e00f5268cc6a1aaa8209fbec34b2ff3b00941b5c352390ac2001d5a58"
+        },
+        {
+          "path": "data/test/保险从业资格CICE.csv",
+          "size": 237844,
+          "sha256": "3e953594a14fa8ddb759bc2314e31a5ed00b90a9860d6d7232176a7ce35765d5"
+        },
+        {
+          "path": "data/test/基金从业资格.csv",
+          "size": 265256,
+          "sha256": "bae0fdf2202cc5fb3225342737e4879974829ca745c14a7eead35989aba964b1"
+        },
+        {
+          "path": "data/test/期货从业资格.csv",
+          "size": 108328,
+          "sha256": "084083117319ee9efa127bc0338225ca115a00e7cc79cc31cfd7c4d273837dc3"
+        },
+        {
+          "path": "data/test/注册会计师（CPA）.csv",
+          "size": 530348,
+          "sha256": "9d4075025961655df0ab7eb8a1fb472f6717ca7e21430447d6a6c452bbf66bf7"
+        },
+        {
+          "path": "data/test/理财规划师.csv",
+          "size": 61372,
+          "sha256": "3bb5064f9b4c781efa302f450cfb35241e65d001c41d9f709a6b217e43922254"
+        },
+        {
+          "path": "data/test/税务师.csv",
+          "size": 184457,
+          "sha256": "1ecd80f37af729244f2bee3d0441a2c7b4bffd8983ffa7a6f12573e4fdf7ed2b"
+        },
+        {
+          "path": "data/test/精算师-金融数学.csv",
+          "size": 13875,
+          "sha256": "f558728a939135dd7a12b262341ff2e5ccea9170ba0e35a9c8109f50debf1e01"
+        },
+        {
+          "path": "data/test/经济师.csv",
+          "size": 101124,
+          "sha256": "31ffc71c134badc6b7cf1041a7d04cdf032561d262369b285e3cd9e9184531e9"
+        },
+        {
+          "path": "data/test/证券从业资格.csv",
+          "size": 434091,
+          "sha256": "9cfe088a91c8ad44d8352ebed3355d55916a039a6f489d23e5fb15ec5c6211f7"
+        },
+        {
+          "path": "data/test/银行从业资格.csv",
+          "size": 324581,
+          "sha256": "8b2b292cf6b97d48d05c7a20fcf138b34de5ce08bdb3a7a93f3972232dcebc9c"
+        }
+      ]
+    },
+    {
+      "id": "dataset-tableinstruct",
+      "kind": "dataset",
+      "repo_id": "Multilingual-Multimodal-NLP/TableInstruct",
+      "revision": "41f6406234f22dee9323d4ce6aa5fdb33d9a2bd1",
+      "path": "finetune_files/datasets/tableinstruct",
+      "file_count": 3,
+      "total_bytes": 105815017,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2376,
+          "sha256": "2b2a794075cf16b0755bf87ff2c77bfc8baa492b59de3128c8b885110332db80"
+        },
+        {
+          "path": "README.md",
+          "size": 10400,
+          "sha256": "226fcf8413a14e7daae4301a5c973c9fda25f7694306f038509e19e0fb20d847"
+        },
+        {
+          "path": "TableInstruct_instructions.jsonl",
+          "size": 105802241,
+          "sha256": "fb6f61a7aecc7b1d11b9e9fb871b83a32e8b583356e3f9c05d96efad290abdef"
+        }
+      ]
+    },
+    {
+      "id": "dataset-bioprobench",
+      "kind": "dataset",
+      "repo_id": "bowenxian/BioProBench",
+      "revision": "c9ae37cac1b789eda6f3ffa62047fce92c286fbb",
+      "path": "finetune_files/datasets/bioprobench",
+      "file_count": 13,
+      "total_bytes": 543698198,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2807,
+          "sha256": "e646f43d760e035c080515b3912628e19e46f326e2a8bad9579398b81628bec5"
+        },
+        {
+          "path": "Bio-protocol.json",
+          "size": 89974831,
+          "sha256": "f67a78bd536e670a68d800950af3e9e2b2b0a0ffbe3d55c6534fa5c48af6e760"
+        },
+        {
+          "path": "ERR.json",
+          "size": 67944698,
+          "sha256": "bfcb48238212e88510853a241774a9721a461a7ae353a1fef5076d0084b0e78f"
+        },
+        {
+          "path": "ERR_test.json",
+          "size": 888046,
+          "sha256": "2bc923f4032ef55cf10ec5a294b1f763c1cb6a07a590a447e0055dfa96194255"
+        },
+        {
+          "path": "GEN.json",
+          "size": 205532810,
+          "sha256": "6c2212adc0938a1a79c20ee9784f85d0f9515bc56b9a259bf7b19ad495b85334"
+        },
+        {
+          "path": "GEN_test.json",
+          "size": 1338292,
+          "sha256": "b016406868ee17c018189ccfa0c09529094e3258b17c2a81cfc3f78140b8a816"
+        },
+        {
+          "path": "ORD.json",
+          "size": 60062804,
+          "sha256": "f9c442ec435253293bfa008925a13d5cb42be09d44b7ee2afe1b39fe9b118289"
+        },
+        {
+          "path": "ORD_test.json",
+          "size": 2778441,
+          "sha256": "939cdfeda3f7a9d0950d35a9299e7e425758b424b470e9bebfba42431dea5088"
+        },
+        {
+          "path": "PQA.json",
+          "size": 20500501,
+          "sha256": "766b32ba9b9422b4ded456c3b81ffc9c115cc0bb9a10894862d3083ee558729d"
+        },
+        {
+          "path": "PQA_test.json",
+          "size": 458859,
+          "sha256": "2d665008a96ebb17c7d206c36e1caf1b49942cd9a99db3d161a9e0f199ccf4f3"
+        },
+        {
+          "path": "Protocol-exchange.json",
+          "size": 18181032,
+          "sha256": "5ed3b7f1120af7442b06e50a14c4dc654dfe096fbb7db93e834433f2b43806e9"
+        },
+        {
+          "path": "Protocol-io.json",
+          "size": 76029646,
+          "sha256": "9f0e6cdeebce322a1282c29637399e5e5012b2a68e4bf88fda21d617ccef98a3"
+        },
+        {
+          "path": "README.md",
+          "size": 5431,
+          "sha256": "a49e7741c874d1d749fd4d51ee2cdd3cd88b0b78e47bf23bbf096c8e78dc2fff"
+        }
+      ]
+    },
+    {
+      "id": "benchmark-aime2025",
+      "kind": "dataset",
+      "repo_id": "opencompass/aime2025",
+      "revision": "a6ad95f611d72cf628a80b58bd0432ef6638f958",
+      "path": "finetune_files/benchmarks/pinned/aime2025",
+      "file_count": 5,
+      "total_bytes": 27007,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2461,
+          "sha256": "e7a120ab07b1bc5b486be249e9fc6c83d59448d0093e1dfebe95d1566d9cafc0"
+        },
+        {
+          "path": "README.md",
+          "size": 448,
+          "sha256": "43ac9ef26311be77671372031a242d031858ba836a6d79f323a1bac748e012ac"
+        },
+        {
+          "path": "aime2025-I.jsonl",
+          "size": 5764,
+          "sha256": "b91b3c96f05d9635d2a0692b124ebe023c1ff59cb19c074275e6c4b349d0659e"
+        },
+        {
+          "path": "aime2025-II.jsonl",
+          "size": 6285,
+          "sha256": "16a2dcfbbf9db1b11f8a69a3ba5e4cac73e3641b19a37e2307e9c12240bbed5e"
+        },
+        {
+          "path": "aime2025.jsonl",
+          "size": 12049,
+          "sha256": "dee94372847a43a5eb6b0a439047efa82f3804db221a55dc640053425315dd4b"
+        }
+      ],
+      "role": "benchmark",
+      "target": "benchmarks/pinned/aime2025",
+      "dataset_path": "aime2025.jsonl",
+      "benchmarks": [
+        "aime25"
+      ],
+      "postprocess": "combine_aime2025",
+      "allow_patterns": [
+        ".gitattributes",
+        "README.md",
+        "aime2025-I.jsonl",
+        "aime2025-II.jsonl"
+      ]
+    },
+    {
+      "id": "benchmark-panorama",
+      "kind": "dataset",
+      "repo_id": "LG-AI-Research/PANORAMA",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "path": "finetune_files/benchmarks/pinned/panorama",
+      "file_count": 5,
+      "total_bytes": 87691067,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2461,
+          "sha256": "e7a120ab07b1bc5b486be249e9fc6c83d59448d0093e1dfebe95d1566d9cafc0"
+        },
+        {
+          "path": "NOC4PC/test.parquet",
+          "size": 13402692,
+          "sha256": "a5fa8871bd7e62d4d73f1a7394e1c15015a890725c4786d53f0177d645047f16"
+        },
+        {
+          "path": "PAR4PC/test.parquet",
+          "size": 12198380,
+          "sha256": "f1f8e33d32bfd2a6a2a7f1e740e94a6512c5d79598fdfb6b431829b21b6565e3"
+        },
+        {
+          "path": "PI4PC/test.parquet",
+          "size": 62087505,
+          "sha256": "fb3b5928018a0a8016f6d9ac913a00fae30f28042cfe71a9354860fccc41e10c"
+        },
+        {
+          "path": "README.md",
+          "size": 29,
+          "sha256": "e8580c258f9d9fbbb6dae8010180739e42f592b4991175aae80cf3d7189888cd"
+        }
+      ],
+      "role": "benchmark",
+      "target": "benchmarks/pinned/panorama",
+      "dataset_path": ".",
+      "benchmarks": [
+        "panorama_par4pc",
+        "panorama_noc4pc",
+        "panorama_pi4pc"
+      ],
+      "allow_patterns": [
+        ".gitattributes",
+        "README.md",
+        "NOC4PC/test.parquet",
+        "PAR4PC/test.parquet",
+        "PI4PC/test.parquet"
+      ]
+    },
+    {
+      "id": "benchmark-chemcotbench",
+      "kind": "dataset",
+      "repo_id": "OpenMol/ChemCoTBench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "path": "finetune_files/benchmarks/pinned/chemcotbench",
+      "file_count": 21,
+      "total_bytes": 1369145,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2461,
+          "sha256": "e7a120ab07b1bc5b486be249e9fc6c83d59448d0093e1dfebe95d1566d9cafc0"
+        },
+        {
+          "path": "README.md",
+          "size": 2503,
+          "sha256": "fc6ddf91a45837eca48705fbd3d6fb36c5fc64aebc4857c63bdc8a498c174d3c"
+        },
+        {
+          "path": "chemcotbench/mol_edit/add.json",
+          "size": 15227,
+          "sha256": "62c1d59a36a14543bf9a6999418c140d3e9af811cb80b3724c60f757fae6cbd6"
+        },
+        {
+          "path": "chemcotbench/mol_edit/delete.json",
+          "size": 14854,
+          "sha256": "cef036b5a1407fa72bf0cfdf6d3bad3b2e9ca960bb639dd457f72e75d5dc389b"
+        },
+        {
+          "path": "chemcotbench/mol_edit/sub.json",
+          "size": 49401,
+          "sha256": "4d8d2552688becdea686938913b961fa122b364fa0dcf6275e3c19500a37e034"
+        },
+        {
+          "path": "chemcotbench/mol_opt/drd.json",
+          "size": 64272,
+          "sha256": "c8245ac9d9bddb7a99333179ce5f92a5fe9c06b994335b970bffb9be34889f9b"
+        },
+        {
+          "path": "chemcotbench/mol_opt/gsk.json",
+          "size": 65979,
+          "sha256": "f807426bf459f67873332f77188a54ad69dd31aded06b8aa9aa63bfb87a9fa3e"
+        },
+        {
+          "path": "chemcotbench/mol_opt/jnk.json",
+          "size": 64471,
+          "sha256": "cb3cbd8ba3cc1e86eef68df93e49a57c29ad3f0d7865fe92eff894ebfeb1af62"
+        },
+        {
+          "path": "chemcotbench/mol_opt/logp.json",
+          "size": 74489,
+          "sha256": "43e2fff5ea6aaa0b2013802ba28228591c00825babc5105e3346a54fe28d9927"
+        },
+        {
+          "path": "chemcotbench/mol_opt/qed.json",
+          "size": 62678,
+          "sha256": "ff73779b75b4723bbe18b91714cd47dd3e1214688e407b8827ae294bef762e38"
+        },
+        {
+          "path": "chemcotbench/mol_opt/solubility.json",
+          "size": 65622,
+          "sha256": "8cb9466ec7d27df4e6174291448878bb76c061a3fc97e32c2ea182d996754087"
+        },
+        {
+          "path": "chemcotbench/mol_und/Murcko_scaffold.json",
+          "size": 28095,
+          "sha256": "010fef383d1dc978ac6e12853aa8e56c6d48021bc8e2d27bccc247aacc804d7a"
+        },
+        {
+          "path": "chemcotbench/mol_und/equivalence.json",
+          "size": 58969,
+          "sha256": "2993e183f3c5de9118283362d89192a8eb31d4e70437092cfd44b3cb3d70aeef"
+        },
+        {
+          "path": "chemcotbench/mol_und/fg_count.json",
+          "size": 57895,
+          "sha256": "9300e81c9c40b90bcc0017cdb6947e3a9b8bd8e61794b2303a40aecb45687335"
+        },
+        {
+          "path": "chemcotbench/mol_und/ring_count.json",
+          "size": 9340,
+          "sha256": "98e8b0568eaa9a9b3e8071a732fffeeaf1f3ab7eaeee548057f5300872f19fcf"
+        },
+        {
+          "path": "chemcotbench/mol_und/ring_system_scaffold.json",
+          "size": 40375,
+          "sha256": "0558aa468fc14654eb0595845fb214d2b1986eb7083c102ef6dbdc81dfdd445e"
+        },
+        {
+          "path": "chemcotbench/reaction/fs.json",
+          "size": 141166,
+          "sha256": "a653b112674c542d0b45be628d7425f95dc88b95fbd64f93b05d8198f7ec7a76"
+        },
+        {
+          "path": "chemcotbench/reaction/mechsel.json",
+          "size": 226011,
+          "sha256": "7063f3a6fd973cfc8f41775b9ceebf4e8296fae0c1201eee515f474e0a87173e"
+        },
+        {
+          "path": "chemcotbench/reaction/nepp.json",
+          "size": 160453,
+          "sha256": "1a07884fcc105120bf03b3b00b5c29e9670222193d14ef161566c611b5224f87"
+        },
+        {
+          "path": "chemcotbench/reaction/rcr.json",
+          "size": 59343,
+          "sha256": "58332263419ee859acf5ba13fa26d28086d1b1d9f572e290f3e0f4ff24622139"
+        },
+        {
+          "path": "chemcotbench/reaction/retro.json",
+          "size": 105541,
+          "sha256": "4200098899f1c4af176da89ac1b6a4606d915edd81b00c9e3c1789a07353a0ad"
+        }
+      ],
+      "role": "benchmark",
+      "target": "benchmarks/pinned/chemcotbench",
+      "dataset_path": ".",
+      "benchmarks": [
+        "chemcotbench_mol_und",
+        "chemcotbench_mol_edit",
+        "chemcotbench_mol_opt",
+        "chemcotbench_reaction"
+      ],
+      "verified_git_mirror": {
+        "provider": "github-git",
+        "repository": "little1d/MolAct",
+        "revision": "7f39250c77bf6d3527f8bb433b685df22f2f0182",
+        "prefix": "ChemCoTBench_benchmark",
+        "files": {
+          ".gitattributes": "1ef325f1b111266a6b26e0196871bd78baa8c2f3",
+          "README.md": "33e7a4f3d190005c0637369077e4505389dea6e6",
+          "chemcotbench/mol_edit/add.json": "0272d2e7534eab4f4b21558ad98ab83819db7e76",
+          "chemcotbench/mol_edit/delete.json": "cbb6a4a0d309f67977514a901e8db9d96461aedd",
+          "chemcotbench/mol_edit/sub.json": "5c8693eb68632f3776de3a96ad165551cd7da4a8",
+          "chemcotbench/mol_opt/drd.json": "940b839903ae3ceb4f3263984ba3c97d04e0e9a3",
+          "chemcotbench/mol_opt/gsk.json": "3a447d220e1b843ae847be9c8600db5a9496dd10",
+          "chemcotbench/mol_opt/jnk.json": "ed0040cefe49c250789fef5201f21c09761b2598",
+          "chemcotbench/mol_opt/logp.json": "a6e5de2b2287da26d84717d6ef2db8e2fa30709b",
+          "chemcotbench/mol_opt/qed.json": "e5d03ce40bb70d07eac1d714921a3750bedb8c77",
+          "chemcotbench/mol_opt/solubility.json": "435f24c999dd67f360d7058eb5757056a074e7dd",
+          "chemcotbench/mol_und/Murcko_scaffold.json": "d829c3ba1c22808e8083e3adc828dfc4333fe813",
+          "chemcotbench/mol_und/equivalence.json": "8b7aac3e3d1c1c9208f498398636d9c4e8cf121b",
+          "chemcotbench/mol_und/fg_count.json": "aefee14f2bafdfddcfebdb597e6f031211517783",
+          "chemcotbench/mol_und/ring_count.json": "82c4753061083b4b73852da870ce6233a923a9f5",
+          "chemcotbench/mol_und/ring_system_scaffold.json": "f26a908164ca56f1a36e6f5417f2c0b10ca7a6aa",
+          "chemcotbench/reaction/fs.json": "fd402639abf1983f6202d6cc65191082cb24b597",
+          "chemcotbench/reaction/mechsel.json": "5d4b2753a03213e0242798ba6befb95055f6930b",
+          "chemcotbench/reaction/nepp.json": "50907ef85bd2d3c522823ba05afa505a9d007f8e",
+          "chemcotbench/reaction/rcr.json": "6c00bb61723dc76f331469de9b44098733772c07",
+          "chemcotbench/reaction/retro.json": "2bee44c48eecf6252b01f603f8eeb36d549d5697"
+        },
+        "source_oids": {
+          "chemcotbench/mol_opt/logp.json": "544d165142cc685db0e50cd040d9b7e096a78dee"
+        },
+        "append_final_newline": [
+          "chemcotbench/mol_opt/logp.json"
+        ]
+      }
+    },
+    {
+      "id": "benchmark-financeiq",
+      "kind": "dataset",
+      "repo_id": "Duxiaoman-DI/FinanceIQ",
+      "revision": "fca1d9ceb6925041264d211b9ddf7264e8145248",
+      "path": "finetune_files/benchmarks/pinned/financeiq",
+      "file_count": 22,
+      "total_bytes": 338724,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2307,
+          "sha256": "f4e703ea6e44bbebe53aceed2a89c11e40b88b7ae130c480c89860ab805ffc8f"
+        },
+        {
+          "path": "README.md",
+          "size": 33,
+          "sha256": "8739f354b75bf1aa6310a0ffac9b7dcafed012c42b771947e48b7f4da8b9d800"
+        },
+        {
+          "path": "dev/保险从业资格CICE.csv",
+          "size": 1325,
+          "sha256": "eae3cb3db2b6ebca63bdb35498f8b907bd21645c0d874f61936957b20fff84a6"
+        },
+        {
+          "path": "dev/基金从业资格.csv",
+          "size": 1690,
+          "sha256": "320f72b67df1ce3718409a78e2fb7a61e2a12edbad21bf97885d9031fea068d3"
+        },
+        {
+          "path": "dev/期货从业资格.csv",
+          "size": 1688,
+          "sha256": "22c8d38879ef4a31c85434edc71406c3570757341e5c9762e9b4472f43b71513"
+        },
+        {
+          "path": "dev/注册会计师（CPA）.csv",
+          "size": 2232,
+          "sha256": "794b83ec6fdd05ec5fc849d23aaeb08104033aef5501123f22500a50d1794ca6"
+        },
+        {
+          "path": "dev/理财规划师.csv",
+          "size": 1272,
+          "sha256": "4102a4ba5738eae9e5a2cfd9c574c63a6c989ae02f76251d49255da2ff20600d"
+        },
+        {
+          "path": "dev/税务师.csv",
+          "size": 3027,
+          "sha256": "bb6f76e080fbd618139cf6a34af4fa9557b2442a73622be0e0076cee613312e6"
+        },
+        {
+          "path": "dev/精算师-金融数学.csv",
+          "size": 1293,
+          "sha256": "51b73d5a77ba21da3ee04c6d9063e6f4757f8c9a0d742263ca044fb76ee42104"
+        },
+        {
+          "path": "dev/经济师.csv",
+          "size": 1178,
+          "sha256": "e744a9098ec7c3655e8276530f6eb2709ac7bd08b59614d8fb619143e7ec9b52"
+        },
+        {
+          "path": "dev/证券从业资格.csv",
+          "size": 1629,
+          "sha256": "a974e6a67b0095987c772b8263eec22de403890e433a3eb2ecaec874e938f60a"
+        },
+        {
+          "path": "dev/银行从业资格.csv",
+          "size": 1308,
+          "sha256": "ad7e02cabf7117b1852d3a353dbe560a52dfae85552c1dd0470a1ae97fc1f920"
+        },
+        {
+          "path": "test/保险从业资格CICE.csv",
+          "size": 32913,
+          "sha256": "b4ea698372254b9ff37b01b40b6c58775995615bc288db0a3ab9d4ee5df6be35"
+        },
+        {
+          "path": "test/基金从业资格.csv",
+          "size": 37733,
+          "sha256": "271858fba2a74f150d98c267acfa19762ca78c362503ed7f083429c03637e024"
+        },
+        {
+          "path": "test/期货从业资格.csv",
+          "size": 30353,
+          "sha256": "04792b466509c23e7796dceb3577a70cd6a7081fe9f6ca2844d7b0950e4b7548"
+        },
+        {
+          "path": "test/注册会计师（CPA）.csv",
+          "size": 34180,
+          "sha256": "60aaea2307c1d5e04bdec998ff5218eec09ba89873b22243cde4e2024c9f0156"
+        },
+        {
+          "path": "test/理财规划师.csv",
+          "size": 27084,
+          "sha256": "ee66a7fb70793eafbed1289e1dfdd803df0aade827cf435ff387b6bed66c7166"
+        },
+        {
+          "path": "test/税务师.csv",
+          "size": 52393,
+          "sha256": "05020e043e763d8c0faa028be22caefa2789859a59e4028369012d8e4aea1e45"
+        },
+        {
+          "path": "test/精算师-金融数学.csv",
+          "size": 15546,
+          "sha256": "cbabaae2b72e857748d2f2c1871be34e7596c808aad5bb8e2f4a0a2b4032c9f4"
+        },
+        {
+          "path": "test/经济师.csv",
+          "size": 24374,
+          "sha256": "d21715cfc6cecdae8a4743117c9590733f694dc8bcecc6993e157e848d4f4fbc"
+        },
+        {
+          "path": "test/证券从业资格.csv",
+          "size": 38502,
+          "sha256": "1607d3b99d0346284e30ac2ffc9653c1d891b03229c81c2c6bb1eacea12635a6"
+        },
+        {
+          "path": "test/银行从业资格.csv",
+          "size": 26664,
+          "sha256": "41565ce6fc40e81e3406720f31dc7d3d40c5366d65017c808ba089abd2049001"
+        }
+      ],
+      "role": "benchmark",
+      "target": "benchmarks/pinned/financeiq",
+      "dataset_path": ".",
+      "benchmarks": [
+        "FinanceIQ_gen"
+      ],
+      "postprocess": "financeiq_eval"
+    },
+    {
+      "id": "benchmark-tablebench",
+      "kind": "dataset",
+      "repo_id": "Multilingual-Multimodal-NLP/TableBench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "path": "finetune_files/benchmarks/pinned/tablebench",
+      "file_count": 7,
+      "total_bytes": 15779981,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 2307,
+          "sha256": "f4e703ea6e44bbebe53aceed2a89c11e40b88b7ae130c480c89860ab805ffc8f"
+        },
+        {
+          "path": "README.md",
+          "size": 8310,
+          "sha256": "0df109159efaa4c63b974ce36dff900a45d0e5a2ece13b1859a81915a06ae519"
+        },
+        {
+          "path": "TableBench.jsonl",
+          "size": 1425254,
+          "sha256": "ebcc6fcea565c9c0a51ecf1c72be58b3b7db7e9466a6a9581d0dc882cc72279e"
+        },
+        {
+          "path": "TableBench_DP.jsonl",
+          "size": 3253999,
+          "sha256": "aa0418b973536f61066bae29535b5ff61cb5f56b25c7e08847c59bf3a5834fca"
+        },
+        {
+          "path": "TableBench_PoT.jsonl",
+          "size": 4009757,
+          "sha256": "53c855c7ad70605cc45ca4ebb4f0cf9a31f207afbbeb2f5b09e195fb9dd4bc1d"
+        },
+        {
+          "path": "TableBench_SCoT.jsonl",
+          "size": 3825469,
+          "sha256": "46d56b6345b19ae1d742caff83dc404b21bf1c18b380a719c31bf5565181a696"
+        },
+        {
+          "path": "TableBench_TCoT.jsonl",
+          "size": 3254885,
+          "sha256": "8c5ee3e4e61009ebb006321a83c06e987d0d338739bedc775185341971621637"
+        }
+      ],
+      "role": "benchmark",
+      "target": "benchmarks/pinned/tablebench",
+      "dataset_path": ".",
+      "benchmarks": [
+        "tablebench_data_analysis",
+        "tablebench_fact_checking",
+        "tablebench_numerical_reasoning",
+        "tablebench_visualization"
+      ]
+    },
+    {
+      "id": "model-qwen2.5-7b-instruct",
+      "kind": "model",
+      "repo_id": "Qwen/Qwen2.5-7B-Instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "path": "finetune_files/models/Qwen/Qwen2.5-7B-Instruct",
+      "file_count": 14,
+      "total_bytes": 15242807270,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        {
+          "path": "LICENSE",
+          "size": 11343,
+          "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e"
+        },
+        {
+          "path": "README.md",
+          "size": 6240,
+          "sha256": "f366f33bbf6bcadbb7d87f0a21a7b65584a56b8d58b0743c77c88bee625b93a6"
+        },
+        {
+          "path": "config.json",
+          "size": 663,
+          "sha256": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 243,
+          "sha256": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f"
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        {
+          "path": "model-00001-of-00004.safetensors",
+          "size": 3945441440,
+          "sha256": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7"
+        },
+        {
+          "path": "model-00002-of-00004.safetensors",
+          "size": 3864726352,
+          "sha256": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185"
+        },
+        {
+          "path": "model-00003-of-00004.safetensors",
+          "size": 3864726424,
+          "sha256": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5"
+        },
+        {
+          "path": "model-00004-of-00004.safetensors",
+          "size": 3556377672,
+          "sha256": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 27752,
+          "sha256": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 7305,
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ]
+    },
+    {
+      "id": "model-qwen2.5-3b-instruct",
+      "kind": "model",
+      "repo_id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "path": "finetune_files/models/Qwen/Qwen2.5-3B-Instruct",
+      "file_count": 12,
+      "total_bytes": 6183464935,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "size": 1519,
+          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+        },
+        {
+          "path": "LICENSE",
+          "size": 7388,
+          "sha256": "ef52482bb785733093dc9a2e8edd8e764c77d12d8e9d8f10a80c9b547d32d0f9"
+        },
+        {
+          "path": "README.md",
+          "size": 4930,
+          "sha256": "2c74693e6ae36ba878124d465195b4dad0f71035b54ece1c9fd1553cc497ef8c"
+        },
+        {
+          "path": "config.json",
+          "size": 661,
+          "sha256": "eed00b17e22553979d090fa492e587e92885e328914c8e0b0b78f0a0d3576b3b"
+        },
+        {
+          "path": "generation_config.json",
+          "size": 242,
+          "sha256": "ea35dfb6fc5051b01114f9b995820d55dab01ed33ee490f6378b442af82c09f9"
+        },
+        {
+          "path": "merges.txt",
+          "size": 1671839,
+          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+        },
+        {
+          "path": "model-00001-of-00002.safetensors",
+          "size": 3968658944,
+          "sha256": "67347b23fb4165b652eb6611f5e1f2a06dfcddba8e909df1b2b0b1857bee06c2"
+        },
+        {
+          "path": "model-00002-of-00002.safetensors",
+          "size": 2203268048,
+          "sha256": "a40d941d0e7e0b966ad8b62bb6d6b7c88cce1299197b599d9d0a4ce59aabfc1d"
+        },
+        {
+          "path": "model.safetensors.index.json",
+          "size": 35581,
+          "sha256": "bc8aaa0c87d4335177e01c765f1de0db81661c67c1a72fbfb0d521b09f5ddc56"
+        },
+        {
+          "path": "tokenizer.json",
+          "size": 7031645,
+          "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+        },
+        {
+          "path": "tokenizer_config.json",
+          "size": 7305,
+          "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+        },
+        {
+          "path": "vocab.json",
+          "size": 2776833,
+          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+        }
+      ]
+    }
+  ]
+}

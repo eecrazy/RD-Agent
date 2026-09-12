@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "paper": {
+    "title": "FT-Dojo: Towards Autonomous LLM Fine-Tuning with Language Agents",
+    "arxiv_id": "2603.01712",
+    "version": "v2",
+    "source_url": "https://arxiv.org/abs/2603.01712v2"
+  },
+  "notes": [
+    "Values retain the precision printed in the paper; comparison deltas therefore include publication rounding.",
+    "The focused tables reuse representative FT-Agent single runs but do not identify their run IDs, so the canonical three-run main-table aggregates are used for ft-agent-main."
+  ],
+  "results": [
+    {
+      "paper_group": "base-7b",
+      "benchmark": "aime25",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 0.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 0.0, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "panorama_par4pc",
+      "metric": "macro_f1",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 60.63, "std": null},
+        "test": {"source_table": "main-results", "mean": 57.78, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "panorama_noc4pc",
+      "metric": "macro_f1",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 27.4, "std": null},
+        "test": {"source_table": "main-results", "mean": 26.2, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "panorama_pi4pc",
+      "metric": "gold_hit_rate",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 29.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 34.0, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "tablebench_data_analysis",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 28.87, "std": null},
+        "test": {"source_table": "main-results", "mean": 32.78, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "tablebench_fact_checking",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 83.3, "std": null},
+        "test": {"source_table": "main-results", "mean": 75.0, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "tablebench_numerical_reasoning",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 40.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 32.0, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "tablebench_visualization",
+      "metric": "pass_at_1",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 8.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 4.0, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "FinanceIQ_gen",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 73.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 65.1, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_mol_und",
+      "metric": "mae",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 0.52, "std": null},
+        "test": {"source_table": "main-results", "mean": 0.53, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_mol_und",
+      "metric": "tanimoto_similarity",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 0.09, "std": null},
+        "test": {"source_table": "main-results", "mean": 0.09, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_mol_und",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 56.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 63.67, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_mol_edit",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 34.4, "std": null},
+        "test": {"source_table": "main-results", "mean": 22.2, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_mol_opt",
+      "metric": "success_rate",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 21.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 23.33, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_mol_opt",
+      "metric": "valid_smiles_rate",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 66.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 68.67, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_reaction",
+      "metric": "fingerprint_similarity",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 14.93, "std": null},
+        "test": {"source_table": "main-results", "mean": 15.59, "std": null}
+      }
+    },
+    {
+      "paper_group": "base-7b",
+      "benchmark": "chemcotbench_reaction",
+      "metric": "accuracy",
+      "published_n": 1,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 36.0, "std": null},
+        "test": {"source_table": "main-results", "mean": 30.0, "std": null}
+      }
+    },
+
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "aime25",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 13.32, "std": 6.67},
+        "test": {"source_table": "main-results", "mean": 11.11, "std": 3.82}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "panorama_par4pc",
+      "metric": "macro_f1",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 67.5, "std": 6.89},
+        "test": {"source_table": "main-results", "mean": 67.61, "std": 2.4}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "panorama_noc4pc",
+      "metric": "macro_f1",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 34.44, "std": 4.82},
+        "test": {"source_table": "main-results", "mean": 36.81, "std": 4.13}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "panorama_pi4pc",
+      "metric": "gold_hit_rate",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 38.67, "std": 2.31},
+        "test": {"source_table": "main-results", "mean": 49.0, "std": 4.36}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "tablebench_data_analysis",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 33.56, "std": 3.16},
+        "test": {"source_table": "main-results", "mean": 34.71, "std": 0.28}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "tablebench_fact_checking",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 82.64, "std": 4.82},
+        "test": {"source_table": "main-results", "mean": 81.25, "std": 2.08}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "tablebench_numerical_reasoning",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 46.67, "std": 4.62},
+        "test": {"source_table": "main-results", "mean": 45.33, "std": 1.15}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "tablebench_visualization",
+      "metric": "pass_at_1",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 16.0, "std": 4.0},
+        "test": {"source_table": "main-results", "mean": 29.33, "std": 6.11}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "FinanceIQ_gen",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 74.04, "std": 1.1},
+        "test": {"source_table": "main-results", "mean": 67.2, "std": 0.31}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_mol_und",
+      "metric": "mae",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 0.24, "std": 0.17},
+        "test": {"source_table": "main-results", "mean": 0.23, "std": 0.16}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_mol_und",
+      "metric": "tanimoto_similarity",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 0.26, "std": 0.08},
+        "test": {"source_table": "main-results", "mean": 0.36, "std": 0.06}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_mol_und",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 62.78, "std": 5.96},
+        "test": {"source_table": "main-results", "mean": 67.55, "std": 5.68}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_mol_edit",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 57.04, "std": 5.01},
+        "test": {"source_table": "main-results", "mean": 54.44, "std": 2.94}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_mol_opt",
+      "metric": "success_rate",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 36.22, "std": 2.36},
+        "test": {"source_table": "main-results", "mean": 34.44, "std": 2.17}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_mol_opt",
+      "metric": "valid_smiles_rate",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 88.78, "std": 6.38},
+        "test": {"source_table": "main-results", "mean": 90.0, "std": 4.41}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_reaction",
+      "metric": "fingerprint_similarity",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 30.64, "std": 11.93},
+        "test": {"source_table": "main-results", "mean": 30.92, "std": 11.22}
+      }
+    },
+    {
+      "paper_group": "ft-agent-main",
+      "benchmark": "chemcotbench_reaction",
+      "metric": "accuracy",
+      "published_n": 3,
+      "splits": {
+        "validation": {"source_table": "main-results-val", "mean": 39.33, "std": 3.06},
+        "test": {"source_table": "main-results", "mean": 35.33, "std": 3.06}
+      }
+    },
+
+    {"source_table": "ablation-val-test", "paper_group": "base-3b", "benchmark": "aime25", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 0.0, "std": null}, "test": {"mean": 0.0, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "base-3b", "benchmark": "panorama_pi4pc", "metric": "gold_hit_rate", "published_n": 1, "splits": {"validation": {"mean": 19.0, "std": null}, "test": {"mean": 21.0, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "base-3b", "benchmark": "FinanceIQ_gen", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 61.44, "std": null}, "test": {"mean": 56.98, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "base-3b", "benchmark": "chemcotbench_mol_edit", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 13.44, "std": null}, "test": {"mean": 14.44, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "base-3b", "benchmark": "tablebench_visualization", "metric": "pass_at_1", "published_n": 1, "splits": {"validation": {"mean": 0.0, "std": null}, "test": {"mean": 8.0, "std": null}}},
+
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-scale-5k", "benchmark": "aime25", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 6.67, "std": null}, "test": {"mean": 13.33, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-scale-5k", "benchmark": "panorama_pi4pc", "metric": "gold_hit_rate", "published_n": 1, "splits": {"validation": {"mean": 36.0, "std": null}, "test": {"mean": 48.0, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-scale-5k", "benchmark": "FinanceIQ_gen", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 75.55, "std": null}, "test": {"mean": 66.33, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-scale-5k", "benchmark": "chemcotbench_mol_edit", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 63.33, "std": null}, "test": {"mean": 58.89, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-scale-5k", "benchmark": "tablebench_visualization", "metric": "pass_at_1", "published_n": 1, "splits": {"validation": {"mean": 20.0, "std": null}, "test": {"mean": 28.0, "std": null}}},
+
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-planner-gpt-4o", "benchmark": "aime25", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 6.67, "std": null}, "test": {"mean": 13.33, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-planner-gpt-4o", "benchmark": "panorama_pi4pc", "metric": "gold_hit_rate", "published_n": 1, "splits": {"validation": {"mean": 38.0, "std": null}, "test": {"mean": 29.0, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-planner-gpt-4o", "benchmark": "FinanceIQ_gen", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 70.33, "std": null}, "test": {"mean": 70.95, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-planner-gpt-4o", "benchmark": "chemcotbench_mol_edit", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 62.22, "std": null}, "test": {"mean": 50.0, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-planner-gpt-4o", "benchmark": "tablebench_visualization", "metric": "pass_at_1", "published_n": 1, "splits": {"validation": {"mean": 24.0, "std": null}, "test": {"mean": 20.0, "std": null}}},
+
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-target-3b", "benchmark": "aime25", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 6.67, "std": null}, "test": {"mean": 0.0, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-target-3b", "benchmark": "panorama_pi4pc", "metric": "gold_hit_rate", "published_n": 1, "splits": {"validation": {"mean": 31.0, "std": null}, "test": {"mean": 34.0, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-target-3b", "benchmark": "FinanceIQ_gen", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 60.73, "std": null}, "test": {"mean": 58.47, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-target-3b", "benchmark": "chemcotbench_mol_edit", "metric": "accuracy", "published_n": 1, "splits": {"validation": {"mean": 53.93, "std": null}, "test": {"mean": 54.55, "std": null}}},
+    {"source_table": "ablation-val-test", "paper_group": "ft-agent-target-3b", "benchmark": "tablebench_visualization", "metric": "pass_at_1", "published_n": 1, "splits": {"validation": {"mean": 8.0, "std": null}, "test": {"mean": 24.0, "std": null}}},
+
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-deepseek-v3.2", "benchmark": "aime25", "metric": "accuracy", "published_n": 1, "splits": {"test": {"mean": 6.67, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-deepseek-v3.2", "benchmark": "panorama_pi4pc", "metric": "gold_hit_rate", "published_n": 1, "splits": {"test": {"mean": 45.0, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-deepseek-v3.2", "benchmark": "chemcotbench_mol_edit", "metric": "accuracy", "published_n": 1, "splits": {"test": {"mean": 50.0, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-deepseek-v3.2", "benchmark": "FinanceIQ_gen", "metric": "accuracy", "published_n": 1, "splits": {"test": {"mean": 65.47, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-deepseek-v3.2", "benchmark": "tablebench_visualization", "metric": "pass_at_1", "published_n": 1, "splits": {"test": {"mean": 12.0, "std": null}}},
+
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-qwen3.5-397b-a17b", "benchmark": "aime25", "metric": "accuracy", "published_n": 1, "splits": {"test": {"mean": 6.67, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-qwen3.5-397b-a17b", "benchmark": "panorama_pi4pc", "metric": "gold_hit_rate", "published_n": 1, "splits": {"test": {"mean": 24.0, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-qwen3.5-397b-a17b", "benchmark": "chemcotbench_mol_edit", "metric": "accuracy", "published_n": 1, "splits": {"test": {"mean": 34.0, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-qwen3.5-397b-a17b", "benchmark": "FinanceIQ_gen", "metric": "accuracy", "published_n": 1, "splits": {"test": {"mean": 67.16, "std": null}}},
+    {"source_table": "frontier-agent-baselines", "paper_group": "ft-agent-planner-qwen3.5-397b-a17b", "benchmark": "tablebench_visualization", "metric": "pass_at_1", "published_n": 1, "splits": {"test": {"mean": 28.0, "std": null}}}
+  ]
+}

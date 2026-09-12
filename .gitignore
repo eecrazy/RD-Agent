@@ -156,8 +156,6 @@ reports/
 /finetune_files/
 /git_ignore_folder/
 /reproduction/paper/
-/reproduction/ft_agent/paper_results.json
-/uv.lock
 
 # Generated datasets, model checkpoints, archives, and experiment outputs
 *.arrow
@@ -186,6 +184,36 @@ events.out.tfevents.*
 **/checkpoints/
 **/lightning_logs/
 **/wandb/
+
+# Reproducibility metadata and curated, compact formal experiment results.
+# The rest of finetune_files remains local because it contains datasets,
+# model weights, caches, checkpoints, and multi-GB intermediate runs.
+!/uv.lock
+!/reproduction/ft_agent/paper_results.json
+!/finetune_files/
+/finetune_files/*
+!/finetune_files/asset-lock.json
+!/finetune_files/environment-locks/
+!/finetune_files/environment-locks/**
+!/finetune_files/logs/
+/finetune_files/logs/*
+!/finetune_files/logs/paper-base/
+/finetune_files/logs/paper-base/*
+!/finetune_files/logs/paper-base/h20-gpt56-base-v1/
+!/finetune_files/logs/paper-base/h20-gpt56-base-v1/**
+!/finetune_files/logs/paper-matrix/
+/finetune_files/logs/paper-matrix/*
+!/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/
+!/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/**
+!/finetune_files/logs/paper-report/
+/finetune_files/logs/paper-report/*
+!/finetune_files/logs/paper-report/h20-gpt56-paper-2k-v2-complete/
+!/finetune_files/logs/paper-report/h20-gpt56-paper-2k-v2-complete/**
+!/finetune_files/logs/orchestration/
+!/finetune_files/logs/orchestration/**
+
+# These links target local model checkpoints that are intentionally excluded.
+/finetune_files/logs/**/selected_model
 
 #cache
 *cache*/

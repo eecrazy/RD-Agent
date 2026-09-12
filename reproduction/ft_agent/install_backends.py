@@ -966,9 +966,9 @@ def write_locks(
     (LOCK_ROOT / f"{name}.conda.txt").write_text(conda_explicit, encoding="utf-8")
     metadata = {
         "created_at": datetime.now(UTC).isoformat(),
-        "prefix": str(prefix),
+        "prefix": prefix.resolve().relative_to(ROOT.resolve()).as_posix(),
         "python": PYTHON_VERSION,
-        "requirements": str(requirements.relative_to(ROOT)),
+        "requirements": requirements.relative_to(ROOT).as_posix(),
         "requirements_sha256": sha256(requirements),
     }
     (LOCK_ROOT / f"{name}.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")

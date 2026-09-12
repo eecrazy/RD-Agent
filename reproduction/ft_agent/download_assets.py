@@ -278,7 +278,7 @@ def write_marker(asset: dict[str, str], output: Path) -> dict[str, Any]:
         "kind": asset["kind"],
         "repo_id": asset["repo_id"],
         "revision": asset["revision"],
-        "path": str(output),
+        "path": output.resolve().relative_to(ROOT.resolve()).as_posix(),
         "file_count": len(files),
         "total_bytes": sum(item["size"] for item in files),
         "files": files,
@@ -428,7 +428,11 @@ def main() -> int:
             marker = matching_marker(asset, target_path(asset))
             if marker is not None:
                 prepared.append(marker)
-        lock = {"schema_version": 1, "manifest": str(MANIFEST_PATH), "assets": prepared}
+        lock = {
+            "schema_version": 1,
+            "manifest": MANIFEST_PATH.relative_to(ROOT).as_posix(),
+            "assets": prepared,
+        }
         FT_ROOT.mkdir(parents=True, exist_ok=True)
         LOCK_PATH.write_text(json.dumps(lock, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return 1 if failures else 0
