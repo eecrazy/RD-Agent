@@ -152,8 +152,40 @@ dmypy.json
 # reports
 reports/
 
-# git_ignore_folder
-git_ignore_folder/
+# Local fine-tuning and reproduction artifacts
+/finetune_files/
+/git_ignore_folder/
+/reproduction/paper/
+/reproduction/ft_agent/paper_results.json
+/uv.lock
+
+# Generated datasets, model checkpoints, archives, and experiment outputs
+*.arrow
+*.csv
+*.feather
+*.jsonl
+*.npy
+*.npz
+*.parquet
+*.pickle
+*.safetensors
+*.ckpt
+*.pt
+*.bin
+*.gguf
+*.onnx
+*.hdf5
+*.sqlite
+*.sqlite3
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+events.out.tfevents.*
+**/checkpoints/
+**/lightning_logs/
+**/wandb/
 
 #cache
 *cache*/
