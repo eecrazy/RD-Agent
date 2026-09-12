@@ -15,15 +15,12 @@ FT_JUDGE_API_BASE="https://api.openai.com/v1"
 
 import json
 import os
-import random
-import shutil
-import subprocess
-from pathlib import Path
-from typing import Any, Dict, List, Optional
+from numbers import Real
+from pathlib import Path, PurePosixPath
+from typing import Any
 
 import pandas as pd
 import yaml
-
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.components.coder.finetune.conf import (
     FT_MODEL_PATH,
@@ -47,6 +44,18 @@ from rdagent.scenarios.finetune.benchmark.merge.merge import (
 from rdagent.utils.agent.tpl import T
 
 
+def completed_benchmark_result_dirs(results_base: Path) -> list[Path]:
+    """Return timestamped OpenCompass runs that contain a summary CSV."""
+    return sorted(
+        (
+            directory
+            for directory in results_base.glob("202*_*")
+            if directory.is_dir() and any((directory / "summary").rglob("*.csv"))
+        ),
+        reverse=True,
+    )
+
+
 def get_model_inference_config(base_model_name: str, gpu_count: int) -> dict:
     """
     Load model inference configuration from YAML file.
@@ -59,7 +68,7 @@ def get_model_inference_config(base_model_name: str, gpu_count: int) -> dict:
         dict: Merged configuration (model-specific overrides default)
               Uses exact match first, then longest prefix match, finally default only.
     """
-    config_data = yaml.safe_load(open(Path(__file__).parent / "configs" / "models.yaml", "r"))
+    config_data = yaml.safe_load(open(Path(__file__).parent / "configs" / "models.yaml"))
 
     default_config = config_data.get("default", {})
     models_config = config_data.get("models", {})
@@ -113,18 +122,117 @@ def detect_model_type(model_path: str) -> bool:
     return False
 
 
+VLLM_SUPPORTED_LORA_RANKS = (1, 8, 16, 32, 64, 128, 256, 320, 512)
+
+
+def get_lora_max_rank(model_path: str | Path) -> int:
+    """Return the smallest vLLM capacity that accommodates the adapter rank."""
+    config_path = Path(model_path) / "adapter_config.json"
+    try:
+        config = json.loads(config_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        message = f"Unable to read LoRA adapter configuration: {config_path}"
+        raise ValueError(message) from error
+
+    declared_ranks = [config.get("r")]
+    rank_pattern = config.get("rank_pattern", {})
+    if not isinstance(rank_pattern, dict):
+        message = f"Invalid LoRA rank_pattern in: {config_path}"
+        raise TypeError(message)
+    declared_ranks.extend(rank_pattern.values())
+
+    if any(isinstance(rank, bool) or not isinstance(rank, int) or rank <= 0 for rank in declared_ranks):
+        message = f"Invalid LoRA rank in: {config_path}"
+        raise ValueError(message)
+
+    adapter_rank = max(declared_ranks)
+    try:
+        return next(rank for rank in VLLM_SUPPORTED_LORA_RANKS if rank >= adapter_rank)
+    except StopIteration as error:
+        supported = ", ".join(str(rank) for rank in VLLM_SUPPORTED_LORA_RANKS)
+        message = (
+            f"LoRA rank {adapter_rank} exceeds vLLM's supported maximum; supported max_lora_rank values: {supported}"
+        )
+        raise ValueError(message) from error
+
+
+def get_pinned_dataset_path(workspace_prefix: str) -> str | None:
+    """Translate a benchmark-relative pinned asset path into the active environment."""
+    configured = os.environ.get("FT_BENCHMARK_DATASET_PATH")
+    if not configured:
+        return None
+    relative = PurePosixPath(configured)
+    if relative.is_absolute() or ".." in relative.parts:
+        message = "FT_BENCHMARK_DATASET_PATH must be relative to finetune_files/benchmarks"
+        raise ValueError(message)
+    workspace_root = PurePosixPath(workspace_prefix)
+    if workspace_root.is_absolute():
+        return str(workspace_root / "benchmarks" / relative)
+
+    host_benchmarks = Path(FT_RD_SETTING.file_path) / "benchmarks"
+    return str((host_benchmarks.joinpath(*relative.parts)).resolve())
+
+
+def _has_usable_metric(value: Any) -> bool:
+    """Return whether an OpenCompass summary cell is a real numeric score."""
+    if isinstance(value, Real) and not isinstance(value, bool):
+        return bool(pd.notna(value))
+    if not isinstance(value, str):
+        return False
+    normalized = value.strip().lower()
+    if normalized in {"", "-", "n/a", "na", "nan", "none", "null"}:
+        return False
+    try:
+        return bool(pd.notna(float(normalized)))
+    except ValueError:
+        return False
+
+
+def validate_accuracy_summary(benchmark_name: str, accuracy_summary: dict[str, dict[str, Any]]) -> None:
+    """Fail closed when OpenCompass emitted rows but its worker tasks failed."""
+    if not accuracy_summary:
+        raise RuntimeError(f"Benchmark {benchmark_name!r} produced no result rows")
+
+    unusable = [
+        dataset
+        for dataset, metrics in accuracy_summary.items()
+        if not metrics or not any(_has_usable_metric(value) for value in metrics.values())
+    ]
+    if unusable:
+        joined = ", ".join(sorted(unusable))
+        raise RuntimeError(
+            "OpenCompass produced no usable numeric metric for: " + joined,
+        )
+
+    if benchmark_name == "chemcotbench_mol_und":
+        required = {
+            f"chemcotbench_mol_und_{subtask}"
+            for subtask in (
+                "fg_count",
+                "ring_count",
+                "Murcko_scaffold",
+                "ring_system_scaffold",
+                "equivalence",
+            )
+        }
+        missing = required.difference(accuracy_summary)
+        if missing:
+            joined = ", ".join(sorted(missing))
+            raise RuntimeError("ChemCoT molecule-understanding results are missing: " + joined)
+
+
 def run_benchmark(
     workspace_path: str,
     model_path: str,
     model_name: str,
     benchmark_name: str,
     gpu_count: int,
-    test_range: Optional[str] = "[:100]",
+    test_range: str | None = "[:100]",
     num_runs: int = 1,
-    pass_k: Optional[List[int]] = None,
+    pass_k: list[int] | None = None,
     max_error_samples: int = 10,
     result_subdir: str = "",
-) -> Dict[str, Any]:
+) -> dict[str, Any]:
     """
     Run benchmark evaluation on a fine-tuned model.
 
@@ -151,7 +259,7 @@ def run_benchmark(
     dataset_imports = benchmark_cfg.dataset
 
     # Auto download dependent data if configured on this benchmark
-    if benchmark_cfg.download is not None:
+    if benchmark_cfg.download is not None and not os.environ.get("FT_BENCHMARK_DATASET_PATH"):
         benchmark_cfg.download()
 
     model_is_lora = detect_model_type(model_path)
@@ -162,6 +270,7 @@ def run_benchmark(
     env = get_benchmark_env()
     ws_prefix = get_workspace_prefix(env)
     is_docker = is_docker_env(env)
+    pinned_dataset_path = get_pinned_dataset_path(ws_prefix)
 
     # Determine model paths based on environment type
     model_rel_path = Path(model_path).relative_to(workspace_path)
@@ -207,12 +316,15 @@ def run_benchmark(
         "model_path": model_path_in_env,
         "is_lora": model_is_lora,
         "lora_path": lora_path_in_env,
+        "max_lora_rank": get_lora_max_rank(model_path) if model_is_lora else 64,
         # Dataset configuration
         "dataset_imports": [dataset_imports],
         "test_range": test_range,
         "num_runs": num_runs,
         "pass_k": pass_k,
         "work_dir": adapter_path_in_env,
+        "dataset_path_literal": repr(pinned_dataset_path),
+        "test_range_literal": repr(test_range),
         # Merge all inference parameters from models.yaml (default + model-specific)
         **inference_config,
     }
@@ -254,7 +366,7 @@ def run_benchmark(
     results_base = workspace_path / "benchmark_results"
     if result_subdir:
         results_base = results_base / result_subdir
-    timestamped_dirs = sorted([d for d in results_base.glob("202*_*") if d.is_dir()], reverse=True)
+    timestamped_dirs = completed_benchmark_result_dirs(results_base)
 
     if timestamped_dirs:
         logger.info(f"Found existing results in {timestamped_dirs[0].name}, skipping benchmark execution")
@@ -287,7 +399,11 @@ def run_benchmark(
             raise RuntimeError(f"Benchmark execution failed (exit_code={result.exit_code})\n{error_msg}")
 
         # Re-scan for timestamped directories after execution
-        timestamped_dirs = sorted([d for d in results_base.glob("202*_*") if d.is_dir()], reverse=True)
+        timestamped_dirs = completed_benchmark_result_dirs(results_base)
+
+    if not timestamped_dirs:
+        message = f"Benchmark produced no completed result with a summary CSV under {results_base}"
+        raise RuntimeError(message)
 
     # OpenCompass stores results in results/<model_name>/<dataset>.json
     results_subdir = timestamped_dirs[0] / "summary"
@@ -303,6 +419,7 @@ def run_benchmark(
     pivoted = df.pivot_table(index="dataset", columns="metric", values=score_col, aggfunc="first").to_dict("index")
     # Filter out NaN values (different datasets have different metrics)
     accuracy_summary = {ds: {k: v for k, v in metrics.items() if pd.notna(v)} for ds, metrics in pivoted.items()}
+    validate_accuracy_summary(benchmark_name, accuracy_summary)
 
     # Extract error samples for feedback
     error_samples = extract_error_samples(
@@ -361,7 +478,7 @@ if __name__ == "__main__":
     print(f"Judge API Base: {FT_RD_SETTING.judge_api_base or 'Not Set'}")
 
     if not Path(LORA_ADAPTER_PATH).exists():
-        print(f"\nPlease set LORA_ADAPTER_PATH to a valid checkpoint directory")
+        print("\nPlease set LORA_ADAPTER_PATH to a valid checkpoint directory")
         print(f"Current path does not exist: {LORA_ADAPTER_PATH}")
         exit(1)
 

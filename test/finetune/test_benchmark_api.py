@@ -19,7 +19,6 @@ _project_root = Path(__file__).resolve().parents[2]
 os.environ["FT_file_path"] = str(_project_root / "git_ignore_folder" / "finetune_files")
 
 import pandas as pd
-
 from rdagent.components.coder.finetune.conf import get_benchmark_env
 from rdagent.scenarios.finetune.benchmark.benchmark import get_benchmark_ranges
 from rdagent.scenarios.finetune.benchmark.data.adaptor import BENCHMARK_CONFIG_DICT

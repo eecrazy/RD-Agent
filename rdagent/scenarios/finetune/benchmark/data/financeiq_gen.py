@@ -5,7 +5,7 @@ import random
 import shutil
 import subprocess
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 from rdagent.app.finetune.llm.conf import FT_RD_SETTING
 from rdagent.log import rdagent_logger as logger
@@ -36,7 +36,7 @@ def download_financeiq_dataset() -> None:
             "clone",
             "https://huggingface.co/datasets/Duxiaoman-DI/FinanceIQ",
             str(target_dir),
-        ]
+        ],
     )
 
     # Move dev and test folders to upper level (opencompass_data/data/FinanceIQ)
@@ -52,7 +52,7 @@ def download_financeiq_dataset() -> None:
     split_financeiq_dataset(str(target_dir), split="test")
 
 
-def extract_error_samples(results_base: Path, max_samples: int = 10) -> List[Dict[str, Any]]:
+def extract_error_samples(results_base: Path, max_samples: int = 10) -> list[dict[str, Any]]:
     """
     (Deprecated, processed by unified logic now)
     Extract error samples specifically for FinanceIQ_gen benchmark.
@@ -87,7 +87,7 @@ def extract_error_samples(results_base: Path, max_samples: int = 10) -> List[Dic
         - gold: The expected/ground truth answer (references)
         - model_output: The model's actual output (predictions)
     """
-    error_samples: List[Dict[str, Any]] = []
+    error_samples: list[dict[str, Any]] = []
     results_dir = results_base / "results" / "ft-FinanceIQ_gen"
 
     if not results_dir.exists():
@@ -133,7 +133,7 @@ def extract_error_samples(results_base: Path, max_samples: int = 10) -> List[Dic
                     "question": question,
                     "gold": str(gold),
                     "model_output": str(pred),
-                }
+                },
             )
 
     if not error_samples:

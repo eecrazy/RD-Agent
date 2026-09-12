@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 import random
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 from rdagent.log import rdagent_logger as logger
 
@@ -35,7 +35,7 @@ def _to_bool(value: Any) -> bool:
     return bool(value)
 
 
-def _is_correct(sample: Dict) -> bool:
+def _is_correct(sample: dict) -> bool:
     """
     Unified correctness check - returns True if sample is correct (should be skipped).
 
@@ -127,14 +127,13 @@ def _extract_tag_content(prompt: Any, tag_name: str) -> str:
     if start != -1 and end > start:
         content = prompt_str[start + len(start_tag) : end].strip()
         # Clean up formatting artifacts
-        if content.startswith(": \\n"):
-            content = content[4:]
+        content = content.removeprefix(": \\n")
         return content.strip()
 
     return "N/A"
 
 
-def _get_question(sample: Dict, pred_entry: Dict) -> str:
+def _get_question(sample: dict, pred_entry: dict) -> str:
     """Extract question - prioritize predictions for complete content."""
     # 1. Priority: predictions directory origin_prompt
     if pred_entry.get("origin_prompt"):
@@ -142,7 +141,7 @@ def _get_question(sample: Dict, pred_entry: Dict) -> str:
 
     # 2. Results directory direct fields
     for field in ["origin_prompt", "prompt", "source"]:
-        if field in sample and sample[field]:
+        if sample.get(field):
             return _format_prompt(sample[field])
 
     # 3. Nested llm_evaluation (extract from <Original Question> tag)
@@ -157,7 +156,7 @@ def _get_question(sample: Dict, pred_entry: Dict) -> str:
     return sample.get("example_abbr", "N/A")
 
 
-def _get_gold(sample: Dict, pred_entry: Dict) -> str:
+def _get_gold(sample: dict, pred_entry: dict) -> str:
     """Extract gold/reference answer - prioritize predictions."""
     # 1. Priority: predictions directory
     if pred_entry.get("gold") is not None:
@@ -179,7 +178,7 @@ def _get_gold(sample: Dict, pred_entry: Dict) -> str:
     return "N/A"
 
 
-def _get_prediction(sample: Dict, pred_entry: Dict) -> str:
+def _get_prediction(sample: dict, pred_entry: dict) -> str:
     """Extract model prediction/output - prioritize predictions."""
     # 1. Priority: predictions directory
     if pred_entry.get("prediction") is not None:
@@ -208,7 +207,7 @@ def _get_prediction(sample: Dict, pred_entry: Dict) -> str:
 def extract_error_samples(
     results_base: Path,
     max_samples: int = 10,
-) -> List[Dict[str, Any]]:
+) -> list[dict[str, Any]]:
     """
     Extract error samples from OpenCompass benchmark results.
 
@@ -228,7 +227,7 @@ def extract_error_samples(
         - silver_answers (optional): For PANORAMA evaluator
         - custom_score (optional): For PANORAMA evaluator
     """
-    errors: List[Dict[str, Any]] = []
+    errors: list[dict[str, Any]] = []
     results_dir = results_base / "results"
     predictions_dir = results_base / "predictions"
 
@@ -243,7 +242,7 @@ def extract_error_samples(
         # Load corresponding predictions file
         rel_path = result_file.relative_to(results_dir)
         pred_file = predictions_dir / rel_path
-        predictions: Dict[str, Any] = {}
+        predictions: dict[str, Any] = {}
         if pred_file.exists():
             with open(pred_file) as f:
                 predictions = json.load(f)

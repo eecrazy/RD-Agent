@@ -14,22 +14,38 @@ template: |-
     # Aggregate all dataset variables
     datasets = sum([v for k, v in locals().items() if (k == 'datasets' or k.endswith('_datasets')) and isinstance(v, list)], [])
 
+    pinned_dataset_path = {{ dataset_path_literal }}
+    test_range_override = {{ test_range_literal }}
+
+    def sync_nested_dataset_cfgs(value):
+        if isinstance(value, dict):
+            dataset_cfg = value.get('dataset_cfg')
+            if isinstance(dataset_cfg, dict):
+                if pinned_dataset_path is not None and 'path' in dataset_cfg:
+                    dataset_cfg['path'] = pinned_dataset_path
+                if test_range_override is not None:
+                    if 'reader_cfg' not in dataset_cfg:
+                        dataset_cfg['reader_cfg'] = {}
+                    dataset_cfg['reader_cfg']['test_range'] = test_range_override
+            for nested in value.values():
+                sync_nested_dataset_cfgs(nested)
+        elif isinstance(value, (list, tuple)):
+            for nested in value:
+                sync_nested_dataset_cfgs(nested)
+
     # Apply dataset modifications
     for ds in datasets:
-    {% if test_range %}
-        # Apply dataset range (e.g., "[:100]" for validation, "[-100:]" for test)
-        if 'reader_cfg' not in ds:
-            ds['reader_cfg'] = {}
-        ds['reader_cfg']['test_range'] = '{{ test_range }}'
+        if pinned_dataset_path is not None:
+            ds['path'] = pinned_dataset_path
 
-        # Sync to evaluator's dataset_cfg
-        if 'eval_cfg' in ds and 'evaluator' in ds['eval_cfg']:
-            evaluator = ds['eval_cfg']['evaluator']
-            if isinstance(evaluator, dict) and 'dataset_cfg' in evaluator:
-                if 'reader_cfg' not in evaluator['dataset_cfg']:
-                    evaluator['dataset_cfg']['reader_cfg'] = {}
-                evaluator['dataset_cfg']['reader_cfg']['test_range'] = '{{ test_range }}'
-    {% endif %}
+        # Apply dataset range (e.g., "[:100]" for validation, "[-100:]" for test)
+        if test_range_override is not None:
+            if 'reader_cfg' not in ds:
+                ds['reader_cfg'] = {}
+            ds['reader_cfg']['test_range'] = test_range_override
+
+        # Cascade evaluators can nest GenericLLMEvaluator dataset_cfg objects.
+        sync_nested_dataset_cfgs(ds.get('eval_cfg', {}))
     {% if num_runs and num_runs > 1 %}
         # Multiple runs (repeat each sample n times for averaging or pass@k)
         ds['n'] = {{ num_runs }}
@@ -39,6 +55,11 @@ template: |-
         ds['k'] = {{ pass_k }}
     {% endif %}
         pass
+
+    # mmengine treats every remaining top-level name as config data.  Keeping a
+    # local helper here makes OpenCompass dump ``<function ...>`` into its
+    # resolved config, which is not valid Python when it reloads that file.
+    del sync_nested_dataset_cfgs
 
     # ==================== Model Configuration ====================
     models = [
@@ -54,7 +75,10 @@ template: |-
                 max_model_len={{ max_seq_len }},
     {% if is_lora %}
                 enable_lora=True,
-                max_lora_rank=64,
+                # Older in-flight workers do not provide max_lora_rank.  The
+                # fallback keeps their generated configs compatible with the
+                # largest LoRA rank allowed by the training prompt.
+                max_lora_rank={{ max_lora_rank | default(512) }},
                 max_cpu_loras=1,
     {% endif %}
             ),

@@ -8,8 +8,8 @@ This module centralizes:
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Callable, Dict, Optional
 
 from rdagent.scenarios.finetune.benchmark.data import financeiq_gen
 
@@ -27,11 +27,11 @@ class BenchmarkConfig:
     """
 
     dataset: str
-    download: Optional[DownloadFunc] = None
+    download: DownloadFunc | None = None
 
 
 # Mapping from benchmark_name -> benchmark configuration.
-BENCHMARK_CONFIG_DICT: Dict[str, BenchmarkConfig] = {
+BENCHMARK_CONFIG_DICT: dict[str, BenchmarkConfig] = {
     # Math Reasoning Benchmarks
     "aime24": BenchmarkConfig(
         dataset="opencompass.configs.datasets.aime2024.aime2024_gen_17d799",
