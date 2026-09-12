@@ -1,5 +1,7 @@
 """Regression tests for durable FT model checkpointing."""
 
+# ruff: noqa: PLR2004, SLF001
+
 from __future__ import annotations
 
 import json
