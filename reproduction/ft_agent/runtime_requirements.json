@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "captured_on": "2026-08-27",
+  "operating_system": {
+    "distribution": "Ubuntu 22.04.4 LTS",
+    "kernel": "5.4.119-19-0009.56"
+  },
+  "project_environment": {
+    "python": "3.11.16",
+    "installer": "uv 0.9.4",
+    "lock": "uv.lock"
+  },
+  "backend_environments": {
+    "python": "3.10",
+    "locks": "finetune_files/environment-locks"
+  },
+  "accelerator": {
+    "model": "NVIDIA H20",
+    "count": 8,
+    "memory_mib_each": 97871,
+    "compute_capability": "9.0",
+    "driver": "580.159.03",
+    "nvidia_smi_cuda_compatibility": "13.0",
+    "pytorch": "2.9.0+cu128",
+    "pytorch_cuda_runtime": "12.8",
+    "cudnn": "91002"
+  },
+  "provider": {
+    "api": "OpenAI-compatible Responses API",
+    "example_base_url": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "fidelity": "model-adapted"
+  },
+  "hugging_face": {
+    "public_assets_require_token": false,
+    "gated_training_asset": "IDEA-AI4S/ChemCoTDataset",
+    "gated_asset_requires_approved_access": true,
+    "credential_environment_variable": "HF_TOKEN"
+  }
+}

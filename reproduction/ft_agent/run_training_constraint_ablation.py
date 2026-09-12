@@ -247,6 +247,7 @@ def load_template(path: Path) -> dict[str, Any]:
 
 def rendered_config(spec: RunSpec, *, seed: int | None = None) -> dict[str, Any]:
     config = load_template(spec.template)
+    config["model_name_or_path"] = str(MODEL_ROOT.resolve())
     if spec.method in PAIR_METHODS:
         config["finetuning_type"] = "lora"
         config[METHOD_FIELD] = spec.method == "rslora"

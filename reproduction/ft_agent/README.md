@@ -6,10 +6,40 @@ the authors released enough implementation detail, and keeps the remaining
 jobs visible as explicit publication blockers. Unreleased baselines are not
 silently dropped or labeled as reproduced.
 
-The checkout used for this reproduction is pinned to RD-Agent commit
-`6762f84f9bc0f5c6486c50a00e128a57ac6c3683`. The downloaded datasets, target
-models, OpenCompass fork, and Python packages are pinned or recorded as
-described below.
+The implementation started from upstream RD-Agent commit
+`6762f84f9bc0f5c6486c50a00e128a57ac6c3683`; that hash is historical provenance,
+not the checkout to use. Reproduce this published snapshot from tag
+`ft-dojo-reproduction-2026-09-13`. Downloaded datasets, target models, the
+OpenCompass fork, and Python packages are pinned or recorded as described
+below.
+
+## Bootstrap from a clean clone
+
+Install `uv 0.9.4` or a compatible newer version, then run:
+
+```bash
+git clone https://github.com/eecrazy/RD-Agent.git
+cd RD-Agent
+git checkout ft-dojo-reproduction-2026-09-13
+./reproduction/ft_agent/bootstrap.sh
+cp reproduction/ft_agent/reproduction.env.example .env
+```
+
+`bootstrap.sh` runs `uv sync --frozen --python 3.11 --extra test --extra lint`.
+It refuses to update `uv.lock`; a dependency mismatch therefore fails instead
+of silently resolving newer packages. The root requirements are also pinned,
+including Python-version markers where Python 3.10 and 3.11 need different
+releases. The training and evaluation backends use the separately committed
+locks under `finetune_files/environment-locks/`.
+
+Git contains all source, configuration, lock metadata, reference values, and
+curated MB-scale formal result records. It intentionally excludes model
+weights, datasets, caches, checkpoints, and GB-scale intermediate runs. Those
+assets are reconstructed and verified from `assets.json` and
+`asset-lock.json`; the gated ChemCoT training asset additionally needs approved
+Hugging Face access. API service availability and GPU hardware are external
+requirements. The 43 unpublished baseline jobs listed below still cannot be
+reproduced exactly from any public checkout.
 
 ## Reproduction scope
 
@@ -195,12 +225,16 @@ configuration's MD5 `aa18cd5d2e2de246c5397f5eb1e61004`.
 
 The asset downloader records an inventory with the size and SHA-256 hash of
 every file. The backend installer records both `pip freeze --all` and
-`conda list --explicit` after successful validation.
+`conda list --explicit` after successful validation. Committed lock paths are
+repository-relative; absolute paths inside immutable run evidence record where
+the original execution occurred and are not bootstrap inputs.
 
 ## Required API configuration
 
-The FT-Agent loop requires an OpenAI-compatible provider. This checkout uses a
-local Responses-only endpoint through `responses_adapter.py`:
+The FT-Agent loop requires an OpenAI-compatible provider. Copy
+`reproduction.env.example` to the repository-root `.env` and keep real
+credentials out of Git. This checkout used a local Responses-only endpoint
+through `responses_adapter.py`:
 
 ```dotenv
 OPENAI_API_KEY=local-no-key-required
@@ -226,9 +260,10 @@ model-provider reproductions of the paper. For a native Chat Completions
 provider, omit `FT_API_PROTOCOL` and `FT_RESPONSES_MODEL`; that provider must
 recognize the logical model strings itself.
 
-`HF_TOKEN` is optional for public assets. Approved access to the canonical
-`IDEA-AI4S/ChemCoTDataset` repository is required only when downloading the
-gated ChemCoT training data. The scripts read a token from the environment and
+`HF_TOKEN` is optional for public assets. Approved, license-compliant access to
+the canonical `IDEA-AI4S/ChemCoTDataset` repository is mandatory when
+downloading the gated ChemCoT training data; possessing a token without repo
+approval is insufficient. The scripts read the token from the environment and
 never need it on the command line.
 
 ## Preparation status on 2026-08-27
@@ -281,8 +316,8 @@ git rev-parse HEAD
   test/finetune/test_runner_preflight.py
 ```
 
-The expected Git revision is
-`6762f84f9bc0f5c6486c50a00e128a57ac6c3683`.
+The expected Git ref is `ft-dojo-reproduction-2026-09-13`. The exact commit is
+the commit referenced by that tag; `6762f84...` is only the upstream baseline.
 
 ## 2. Download and verify assets
 
@@ -745,6 +780,10 @@ audit succeeds; the presence of a partial report directory is not sufficient.
 
 The paper used one NVIDIA B200 with 178 GB per experiment. This machine has
 eight NVIDIA H20 GPUs, each reporting 97,871 MiB and compute capability 9.0.
+The recorded host used NVIDIA driver 580.159.03 (`nvidia-smi` CUDA
+compatibility 13.0), PyTorch 2.9.0+cu128 with CUDA runtime 12.8, and cuDNN
+91002. The exact machine-readable contract, including Ubuntu, kernel, Python,
+provider, and authorization requirements, is in `runtime_requirements.json`.
 An H20 is not a hardware-equivalent substitute for a B200. The scheduler
 therefore preserves the paper's training-method and optimization constraints,
 not its physical one-GPU topology: LoRA remains one task on one H20, while Full

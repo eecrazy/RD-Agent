@@ -68,6 +68,14 @@ def test_seed_override_changes_both_training_and_data_seed() -> None:
     assert config["data_seed"] == 47
 
 
+def test_rendered_model_path_is_resolved_from_current_checkout() -> None:
+    spec = ablation.build_specs([str(index) for index in range(8)])[1]
+
+    config = ablation.rendered_config(spec)
+
+    assert config["model_name_or_path"] == str(ablation.MODEL_ROOT.resolve())
+
+
 def test_pair_contract_rejects_hidden_hyperparameter_drift() -> None:
     ordinary = {"finetuning_type": "lora", "use_rslora": False, "learning_rate": 1e-5}
     scaled = {"finetuning_type": "lora", "use_rslora": True, "learning_rate": 2e-5}
