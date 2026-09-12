@@ -1,0 +1,556 @@
+{
+    "mae": 0.02,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CNc1ncnc(-c2cccnc2Oc2cc(C(=O)Nc3cccc(C(F)(F)F)c3)ccc2C)n1, Fragment Name: side-chain aldehydes or ketones.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: C(=O)Nc3cccc(C(F)(F)F)c3 (side-chain aldehyde or ketone group)\nMatching analysis: The input molecule contains one C(=O) group attached to a benzene ring (Nc3cccc(C(F)(F)F)c3), confirming a side-chain aldehyde or ketone fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: C(=O)Nc3cccc(C(F)(F)F)c3 (side-chain aldehyde or ketone group)\nMatching analysis: The input molecule contains one C(=O) group attached to a benzene ring (Nc3cccc(C(F)(F)F)c3), confirming a side-chain aldehyde or ketone fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC(=O)c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1, Fragment Name: carbonyl methyl ester.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Carbonyl methyl ester (COC(=O)) consists of a carbonyl group (C=O) attached to a methyl group (CH3).\nMatching analysis: The input molecule contains one COC(=O) group directly bonded to the pyrimidine ring, confirming a single carbonyl methyl ester fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Carbonyl methyl ester (COC(=O)) consists of a carbonyl group (C=O) attached to a methyl group (CH3).\nMatching analysis: The input molecule contains one COC(=O) group directly bonded to the pyrimidine ring, confirming a single carbonyl methyl ester fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC(=O)c1cccc(-c2cccc(OCC(O)CN3CCc4ccccc4C3)c2)c1, Fragment Name: carbonyl methyl ester.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Carbonyl methyl ester (COC(=O)) consists of a carbonyl group (C=O) attached to a methyl group (CH3).\nMatching analysis: The input molecule contains one COC(=O) group directly bonded to the benzene ring, confirming a single carbonyl methyl ester fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Carbonyl methyl ester (COC(=O)) consists of a carbonyl group (C=O) attached to a methyl group (CH3).\nMatching analysis: The input molecule contains one COC(=O) group directly bonded to the benzene ring, confirming a single carbonyl methyl ester fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCCCCNc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1, Fragment Name: halogens.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Cl (chlorine atoms)\nMatching analysis: The input molecule contains two chlorine atoms attached to the same benzene ring in the substituent group -c3c(Cl)cccc3Cl.\n{\"count\":\"2\"}",
+            "predictions": "Fragment structure: Cl (chlorine atoms)\nMatching analysis: The input molecule contains two chlorine atoms attached to the same benzene ring in the substituent group -c3c(Cl)cccc3Cl.\n{\"count\":\"2\"}",
+            "references": "2"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCC1OC(C(C)=CC(C)C=CC2C(C)C2C=CC2OC(CC(C)=O)CC(O)C2O)CC=C1C, Fragment Name: terminal aldehyde.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Aldehyde group (CHO) with a terminal carbon bonded to hydrogen and oxygen.\nMatching analysis: The input molecule contains one terminal aldehyde group (CC(C)=O) attached to a carbon chain, confirmed by the SMILES substring 'CC(C)=O' in the structure.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Aldehyde group (CHO) with a terminal carbon bonded to hydrogen and oxygen.\nMatching analysis: The input molecule contains one terminal aldehyde group (CC(C)=O) attached to a carbon chain, confirmed by the SMILES substring 'CC(C)=O' in the structure.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1ccccc1-c1ccc(CC(NC(=O)Cn2cnnn2)C(=O)O)cc1, Fragment Name: methoxy.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methoxy group (-OCH3)\nMatching analysis: The input molecule contains one methoxy group (-OCH3) attached to the first benzene ring (COc1...).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methoxy group (-OCH3)\nMatching analysis: The input molecule contains one methoxy group (-OCH3) attached to the first benzene ring (COc1...).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C, Fragment Name: cyclopropyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: C3CC3 (cyclopropane ring)\nMatching analysis: The input molecule contains a C3CC3 group attached to the furan ring (o2 in SMILES).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: C3CC3 (cyclopropane ring)\nMatching analysis: The input molecule contains a C3CC3 group attached to the furan ring (o2 in SMILES).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1, Fragment Name: primary amines.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Primary amines (NH) are identified as terminal -NH2 groups or -NH- groups not part of an aromatic ring.\nMatching analysis: The input molecule contains a non-aromatic -NH2 group in the substituent chain (C3CCC3) and an aromatic -NH- in the pyrazole ring (part of the fused heterocycle). Only the non-aromatic -NH2 is a primary amine.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Primary amines (NH) are identified as terminal -NH2 groups or -NH- groups not part of an aromatic ring.\nMatching analysis: The input molecule contains a non-aromatic -NH2 group in the substituent chain (C3CCC3) and an aromatic -NH- in the pyrazole ring (part of the fused heterocycle). Only the non-aromatic -NH2 is a primary amine.\n{\"count\":\"1\"}",
+            "references": "2"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1, Fragment Name: nitro.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Nitro group ([N+](=O)[O-])\nMatching analysis: The input molecule contains one nitro group ([N+](=O)[O-]) attached to a benzene ring.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Nitro group ([N+](=O)[O-])\nMatching analysis: The input molecule contains one nitro group ([N+](=O)[O-]) attached to a benzene ring.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#Cc1ccc(Oc2ccc(NC(=O)CC(CC(=O)O)c3ccccc3)cc2)cc1, Fragment Name: carboxylic acids.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Carboxylic acids (R-COOH) are represented by the SMILES pattern CC(=O)O in the fragment.\nMatching analysis: The input molecule contains one instance of CC(=O)O (propanoic acid) attached to the benzene ring via a CC chain.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Carboxylic acids (R-COOH) are represented by the SMILES pattern CC(=O)O in the fragment.\nMatching analysis: The input molecule contains one instance of CC(=O)O (propanoic acid) attached to the benzene ring via a CC chain.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)CC1, Fragment Name: carboxylic acids.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Carboxylic acids contain the -COOH group (C(=O)O in SMILES). The fragment matches any C(=O)O group not part of an ester/amide.\nMatching analysis: The input molecule contains one C(=O)O group (carboxylic acid) attached to the benzene ring in the structure c2c(F)cc3c(=O)c(C(=O)O)...\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Carboxylic acids contain the -COOH group (C(=O)O in SMILES). The fragment matches any C(=O)O group not part of an ester/amide.\nMatching analysis: The input molecule contains one C(=O)O group (carboxylic acid) attached to the benzene ring in the structure c2c(F)cc3c(=O)c(C(=O)O)...\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOC(=O)c1cc2cc(C3(Cc4ccccc4)CCNC3)ccc2[nH]1, Fragment Name: ethoxy.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Ethoxy group (C2H5O) consists of an ethyl chain attached to an oxygen atom.\nMatching analysis: The input molecule contains a single ethoxy group (CCO) at the beginning of the SMILES string. No other O-containing groups are present that match the ethoxy fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Ethoxy group (C2H5O) consists of an ethyl chain attached to an oxygen atom.\nMatching analysis: The input molecule contains a single ethoxy group (CCO) at the beginning of the SMILES string. No other O-containing groups are present that match the ethoxy fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C#Cc1cc(Oc2cnc(NCC(C)O)nc2N)c(C(C)C)cc1OC, Fragment Name: acetylenes.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: C#C (acetylene group)\nMatching analysis: The input molecule contains one C#C group attached to the aromatic ring.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: C#C (acetylene group)\nMatching analysis: The input molecule contains one C#C group attached to the aromatic ring.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C[C@H](NC(=O)NCCC[S@](C)=O)c1ccc(Cl)s1, Fragment Name: methyl sulfinyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methyl sulfinyl group is S(=O) connected to a methyl group (CH3).\nMatching analysis: The input molecule contains a sulfur atom bonded to an oxygen (S=O) and a methyl group (C), matching the methyl sulfinyl fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methyl sulfinyl group is S(=O) connected to a methyl group (CH3).\nMatching analysis: The input molecule contains a sulfur atom bonded to an oxygen (S=O) and a methyl group (C), matching the methyl sulfinyl fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=S1(=O)C[C@@H](Nc2ccccc2)[C@@H](S(=O)(=O)[O-])C1, Fragment Name: sulfonic acid.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Sulfonic acid group (-S(=O)(=O)[O-])\nMatching analysis: The input molecule contains one sulfonic acid group attached to the cyclohexane ring via a sulfur atom.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Sulfonic acid group (-S(=O)(=O)[O-])\nMatching analysis: The input molecule contains one sulfonic acid group attached to the cyclohexane ring via a sulfur atom.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COCCNC1CCC(Nc2cc(-c3nc(NCC4CCOCC4)ccc3Cl)c(Cl)cn2)CC1, Fragment Name: methoxy.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methoxy group (-OCH3) consists of an oxygen atom bonded to a methyl group.\nMatching analysis: The input molecule contains a 4-methoxyphenyl group (c3nc(NCC4CCOCC4)ccc3Cl), where the methoxy group (-OCH3) is attached to the benzene ring. The oxygen in the NCC4CCOCC4 (tetrahydrofuran-like ring) is part of the ring structure, not a methoxy group.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methoxy group (-OCH3) consists of an oxygen atom bonded to a methyl group.\nMatching analysis: The input molecule contains a 4-methoxyphenyl group (c3nc(NCC4CCOCC4)ccc3Cl), where the methoxy group (-OCH3) is attached to the benzene ring. The oxygen in the NCC4CCOCC4 (tetrahydrofuran-like ring) is part of the ring structure, not a methoxy group.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#[N+]c1[nH]nc2nnc(-c3ccccc3)c(-c3ccccc3)c12, Fragment Name: diazo.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Diazo group (N#[N+]) consists of two nitrogen atoms connected by a double bond with a positive charge.\nMatching analysis: The input molecule contains one diazo group (N#[N+]) at the beginning of the structure.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Diazo group (N#[N+]) consists of two nitrogen atoms connected by a double bond with a positive charge.\nMatching analysis: The input molecule contains one diazo group (N#[N+]) at the beginning of the structure.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#Cc1cc2cnc(NCc3ccccc3)nc2n(C2CCCC2)c1=O, Fragment Name: nitriles.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Nitrile group (-C≡N) identified as 'N#' in SMILES\nMatching analysis: The input molecule contains one 'N#' group attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Nitrile group (-C≡N) identified as 'N#' in SMILES\nMatching analysis: The input molecule contains one 'N#' group attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1c(N2CCCC(N)C2)c(F)c(N)c2c(=O)c(C(=O)O)cn(C3CC3)c12, Fragment Name: cyclopropyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: C3CC3 (cyclopropane ring)\nMatching analysis: The input molecule contains one cyclopropane ring (C3CC3) attached to the benzene core.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: C3CC3 (cyclopropane ring)\nMatching analysis: The input molecule contains one cyclopropane ring (C3CC3) attached to the benzene core.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1, Fragment Name: ester.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Ester group (R-O-C(=O)-R')\nMatching analysis: The molecule contains a C(=O)OCC group attached to the benzene ring, forming a single ester fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Ester group (R-O-C(=O)-R')\nMatching analysis: The molecule contains a C(=O)OCC group attached to the benzene ring, forming a single ester fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "20": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCCC(F)(F)C4)n3)C2)cc1, Fragment Name: carbonyl methyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Carbonyl methyl (CH2-C=O) group\nMatching analysis: The input molecule contains one CC(=O) group attached to a nitrogen atom (amide), not a carbonyl methyl (CH2-C=O) as the fragment specifies. The fragment does not match the molecule's structure.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Carbonyl methyl (CH2-C=O) group\nMatching analysis: The input molecule contains one CC(=O) group attached to a nitrogen atom (amide), not a carbonyl methyl (CH2-C=O) as the fragment specifies. The fragment does not match the molecule's structure.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "21": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(S(C)(=O)=O)c2cn1)c1ccccc1, Fragment Name: methyl sulfonyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methyl sulfonyl group (S(=O)2CH3)\nMatching analysis: The input molecule contains one S(=O)2CH3 group attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methyl sulfonyl group (S(=O)2CH3)\nMatching analysis: The input molecule contains one S(=O)2CH3 group attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "22": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1nn(C(C)C)cc1S(=O)(=O)Cl, Fragment Name: sulfonyl chloride.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: S(=O)(=O)Cl (sulfonyl chloride group)\nMatching analysis: The input molecule contains one S(=O)(=O)Cl group attached to the benzene ring.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: S(=O)(=O)Cl (sulfonyl chloride group)\nMatching analysis: The input molecule contains one S(=O)(=O)Cl group attached to the benzene ring.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "23": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1, Fragment Name: primary sulfonamide.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Primary sulfonamide (R-SO₂-NH₂) contains a sulfonamide group (SO₂-NH₂) attached to an aromatic ring.\nMatching analysis: The input molecule contains a sulfonamide group (NS(=O)(=O)) directly attached to the benzene ring (c1ccc...cc1). The sulfonyl group (S(=O)₂) is a modification of the sulfonamide, but the core SO₂-NH₂ structure is present. The substituents on the sulfonamide (e.g., -NH₂, -CH₂C(=O)N...) are part of the fragment's definition.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Primary sulfonamide (R-SO₂-NH₂) contains a sulfonamide group (SO₂-NH₂) attached to an aromatic ring.\nMatching analysis: The input molecule contains a sulfonamide group (NS(=O)(=O)) directly attached to the benzene ring (c1ccc...cc1). The sulfonyl group (S(=O)₂) is a modification of the sulfonamide, but the core SO₂-NH₂ structure is present. The substituents on the sulfonamide (e.g., -NH₂, -CH₂C(=O)N...) are part of the fragment's definition.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "24": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCC(C(=O)NC(C#N)CC(N)=O)N(Cc1ccc(-c2cccc(F)c2F)cc1)S(C)(=O)=O, Fragment Name: nitriles.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: C#N (nitrile group)\nMatching analysis: The input molecule contains one C#N group attached to the central carbon chain.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: C#N (nitrile group)\nMatching analysis: The input molecule contains one C#N group attached to the central carbon chain.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "25": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOc1cc(NC(=O)c2ccccc2)c(OCC)cc1[N+]#N, Fragment Name: diazo.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Diazo group is N2 (two adjacent nitrogen atoms with a bond order of 3).\nMatching analysis: The input molecule contains a terminal [N+]#N group attached to the aromatic ring, where the two nitrogens are bonded with a triple bond (diazo).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Diazo group is N2 (two adjacent nitrogen atoms with a bond order of 3).\nMatching analysis: The input molecule contains a terminal [N+]#N group attached to the aromatic ring, where the two nitrogens are bonded with a triple bond (diazo).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "26": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(CCCCCCc1ccccc1)c1ncc(-c2cc([N+](=O)[O-])ccn2)o1, Fragment Name: oximes.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Oximes contain the group R-C(=O)-N. The fragment matches any structure with a carbonyl bonded to a carbon and a nitrogen.\nMatching analysis: The input molecule contains one oxime group (C(=O)-N) in the substituent chain (CCCCCCc1ccccc1), where the carbonyl is attached to a carbon and the nitrogen of the phenyl ring. Other carbonyl groups (e.g., ester, ketone) do not qualify as oximes.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Oximes contain the group R-C(=O)-N. The fragment matches any structure with a carbonyl bonded to a carbon and a nitrogen.\nMatching analysis: The input molecule contains one oxime group (C(=O)-N) in the substituent chain (CCCCCCc1ccccc1), where the carbonyl is attached to a carbon and the nitrogen of the phenyl ring. Other carbonyl groups (e.g., ester, ketone) do not qualify as oximes.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "27": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOCn1oc(=O)c(-c2ccc(F)cc2)c1-c1ccnc(Oc2ccccc2O)n1, Fragment Name: ethoxy.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Ethoxy group (-OCH2CH3)\nMatching analysis: The input molecule contains one ethoxy group (CCO) attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Ethoxy group (-OCH2CH3)\nMatching analysis: The input molecule contains one ethoxy group (CCO) attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "28": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OCc3ccccc3)c2)[nH]1, Fragment Name: methylthio.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methylthio group (-S-CH3)\nMatching analysis: The input molecule contains one S atom bonded to a CH3 group (C-S-CH3) in the 5-membered ring, confirming a single methylthio fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methylthio group (-S-CH3)\nMatching analysis: The input molecule contains one S atom bonded to a CH3 group (C-S-CH3) in the 5-membered ring, confirming a single methylthio fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "29": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C[C@@H]1CCC/C(=N/[NH+]=C(/[S-])NCc2ccccc2)C1, Fragment Name: thiols.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Thiols (-SH) are represented by sulfur atoms bonded to a single carbon (C-S). The fragment SMILES is S.\nMatching analysis: The input molecule contains a sulfur atom in a sulfide (S bonded to two carbons) and a sulfur in a sulfonamide-like group ([S-] bonded to a carbon and a nitrogen). Neither matches the thiols fragment (C-S).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Thiols (-SH) are represented by sulfur atoms bonded to a single carbon (C-S). The fragment SMILES is S.\nMatching analysis: The input molecule contains a sulfur atom in a sulfide (S bonded to two carbons) and a sulfur in a sulfonamide-like group ([S-] bonded to a carbon and a nitrogen). Neither matches the thiols fragment (C-S).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "30": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(NC(=S)NC(=O)c2cccc([N+](=O)[O-])c2)cc1, Fragment Name: thiocarbonyls.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Thiocarbonyl group (C(=S)) present in NC(=S)N\nMatching analysis: The input molecule contains one NC(=S)N group (thiocarbonyl) attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Thiocarbonyl group (C(=S)) present in NC(=S)N\nMatching analysis: The input molecule contains one NC(=S)N group (thiocarbonyl) attached to the aromatic ring system.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "31": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1cc(=O)oc2cc(NC(=O)Cc3ccc(Br)cc3)ccc12, Fragment Name: halogens.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Br (bromine atom)\nMatching analysis: The input molecule contains one bromine atom attached to a benzene ring in the substituent NC(=O)Cc3ccc(Br)cc3.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Br (bromine atom)\nMatching analysis: The input molecule contains one bromine atom attached to a benzene ring in the substituent NC(=O)Cc3ccc(Br)cc3.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "32": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21, Fragment Name: nitriles.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: C#N (nitrile group)\nMatching analysis: The input molecule contains two C#N groups attached to the aromatic ring system.\n{\"count\":\"2\"}",
+            "predictions": "Fragment structure: C#N (nitrile group)\nMatching analysis: The input molecule contains two C#N groups attached to the aromatic ring system.\n{\"count\":\"2\"}",
+            "references": "2"
+        },
+        "33": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1cc(C#N)cc(C(=O)c2c(C(C)C)c(=O)[nH]c(=O)n2Cc2cc(N)nc(F)c2F)c1, Fragment Name: primary amines.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Primary amines (NH) are identified as terminal -NH2 groups or -NH- groups bonded to a carbon.\nMatching analysis: The input molecule contains a terminal -NH2 group (C(=O)c2c(C(C)C)c(=O)[nH]c(=O)n2Cc2cc(N)nc(F)c2F) attached to the carbonyl, confirming a primary amine. No other terminal -NH2 or -NH- groups are present.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Primary amines (NH) are identified as terminal -NH2 groups or -NH- groups bonded to a carbon.\nMatching analysis: The input molecule contains a terminal -NH2 group (C(=O)c2c(C(C)C)c(=O)[nH]c(=O)n2Cc2cc(N)nc(F)c2F) attached to the carbonyl, confirming a primary amine. No other terminal -NH2 or -NH- groups are present.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "34": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)N1c2ccc(S(=O)(=O)N3CCC(C(=O)Nc4ncccc4C)CC3)cc2CC1C, Fragment Name: terminal aldehyde.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Terminal aldehyde (R-CHO) is represented by a C(=O) group attached to a terminal carbon with no other substituents except hydrogen.\nMatching analysis: The input molecule contains one C(=O) group (C(=O)Nc4ncccc4C) attached to a terminal carbon (c4ncccc4), confirming a terminal aldehyde fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Terminal aldehyde (R-CHO) is represented by a C(=O) group attached to a terminal carbon with no other substituents except hydrogen.\nMatching analysis: The input molecule contains one C(=O) group (C(=O)Nc4ncccc4C) attached to a terminal carbon (c4ncccc4), confirming a terminal aldehyde fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "35": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1, Fragment Name: methyl amide.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methyl amide (R-C(=O)-N) consists of a carbonyl group bonded to a methyl group and an amide nitrogen.\nMatching analysis: The input molecule contains a CC(=O)N group attached to a carbon (NC(C)), which matches the methyl amide fragment (CH3-C(=O)-N).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methyl amide (R-C(=O)-N) consists of a carbonyl group bonded to a methyl group and an amide nitrogen.\nMatching analysis: The input molecule contains a CC(=O)N group attached to a carbon (NC(C)), which matches the methyl amide fragment (CH3-C(=O)-N).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "36": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(NC(Cc1ccccc1)c1nc2ccccc2[nH]1)c1cccc([N+](=O)[O-])c1, Fragment Name: nitro.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Nitro group ([N+](=O)[O-])\nMatching analysis: The input molecule contains one nitro group attached to the benzene ring (c1cccc([N+](=O)[O-])c1).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Nitro group ([N+](=O)[O-])\nMatching analysis: The input molecule contains one nitro group attached to the benzene ring (c1cccc([N+](=O)[O-])c1).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "37": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1ncc(C(=O)Nc2ccc(C)c(Cl)c2)c(-c2ccccc2)n1, Fragment Name: methylthio.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methylthio group (-S-CH3)\nMatching analysis: The input molecule contains a single methylthio group (-S-CH3) attached to the pyrimidine ring (CSc1...).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methylthio group (-S-CH3)\nMatching analysis: The input molecule contains a single methylthio group (-S-CH3) attached to the pyrimidine ring (CSc1...).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "38": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(NC(=O)CN2CCN(c3ccccc3)CC2)cc1, Fragment Name: primary sulfonamide.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Primary sulfonamide (R-SO2-NH2) contains a sulfonamide group (SO2-NH) attached to a benzene ring.\nMatching analysis: The input molecule contains a sulfonamide group (NS(=O)(=O)) directly attached to the benzene ring (c1ccc...cc1), confirming a primary sulfonamide.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Primary sulfonamide (R-SO2-NH2) contains a sulfonamide group (SO2-NH) attached to a benzene ring.\nMatching analysis: The input molecule contains a sulfonamide group (NS(=O)(=O)) directly attached to the benzene ring (c1ccc...cc1), confirming a primary sulfonamide.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "39": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC1(C)[C@H]2CC[C@]1(C)C(=O)[C@@H]2N=C=S, Fragment Name: isothiocyanate.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Isothiocyanate (R-N=C=S) contains a sulfur atom bonded to a carbon and a nitrogen, with a terminal C=N group.\nMatching analysis: The input molecule contains a terminal C(=O)[C@@H]2N=C=S group. The C=N and S atoms are present, confirming one isothiocyanate fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Isothiocyanate (R-N=C=S) contains a sulfur atom bonded to a carbon and a nitrogen, with a terminal C=N group.\nMatching analysis: The input molecule contains a terminal C(=O)[C@@H]2N=C=S group. The C=N and S atoms are present, confirming one isothiocyanate fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "40": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(C(=O)Nc1ncc(SCc2ncc(C(C)(C)C)o2)s1)c1ccccc1, Fragment Name: t-butyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: T-butyl group (C(C)(C)C) is a tert-butyl substituent.\nMatching analysis: The input molecule contains one C(C)(C)C group attached to the thiophene ring.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: T-butyl group (C(C)(C)C) is a tert-butyl substituent.\nMatching analysis: The input molecule contains one C(C)(C)C group attached to the thiophene ring.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "41": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc2ncnc(Nc3ccc(C(F)(F)F)cc3)c2c(OC)c1OC, Fragment Name: trifluoromethyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Trifluoromethyl (CF3) group\nMatching analysis: The input molecule contains one C(F)(F)F group attached to the benzene ring (Nc3ccc(C(F)(F)F)cc3), confirming a single CF3 fragment.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Trifluoromethyl (CF3) group\nMatching analysis: The input molecule contains one C(F)(F)F group attached to the benzene ring (Nc3ccc(C(F)(F)F)cc3), confirming a single CF3 fragment.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "42": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C=CCn1c(SCc2nnc([S-])n2-c2ccccc2)nnc1-c1ccccc1, Fragment Name: thiols.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Thiols (-SH) are represented by sulfur atoms bonded to a single carbon (C-S-).\nMatching analysis: The input molecule contains one sulfur atom (S) in the SCc2... group, forming a thiol group. Other sulfur atoms are part of sulfonamide or sulfonate groups.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Thiols (-SH) are represented by sulfur atoms bonded to a single carbon (C-S-).\nMatching analysis: The input molecule contains one sulfur atom (S) in the SCc2... group, forming a thiol group. Other sulfur atoms are part of sulfonamide or sulfonate groups.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "43": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOC(=O)C1(C(=O)NC(Cc2ccc(-c3ccccc3OC)cc2)C(=O)O)CCCO1, Fragment Name: ethoxy.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Ethoxy group (-OCH2CH3)\nMatching analysis: The input molecule contains one ethoxy group (CCO) attached to the cyclohexane ring.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Ethoxy group (-OCH2CH3)\nMatching analysis: The input molecule contains one ethoxy group (CCO) attached to the cyclohexane ring.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "44": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1, Fragment Name: trifluoromethyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Trifluoromethyl group (-CF3) consists of a central carbon bonded to three fluorine atoms.\nMatching analysis: The input molecule contains one -CF3 group attached to the pyrimidine ring (C(F)(F)F in SMILES).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Trifluoromethyl group (-CF3) consists of a central carbon bonded to three fluorine atoms.\nMatching analysis: The input molecule contains one -CF3 group attached to the pyrimidine ring (C(F)(F)F in SMILES).\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "45": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COS(=O)(=O)[C@@H]1C(=O)[C@]2(C)CC[C@H]1C2(C)C, Fragment Name: methyl ester sulfonyl.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methyl ester sulfonyl group is R-SO2-O-C(=O)-R'. In this case, R is a methyl group and R' is a carbon atom bonded to the carbonyl.\nMatching analysis: The input molecule contains a sulfonyl group (S(=O)(=O)) attached to a carbon that forms part of a cyclic ester (lactone). The carbonyl (C=O) is part of the ring structure, not a separate ester group. No additional methyl ester sulfonyl fragments are present outside the cyclic structure.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methyl ester sulfonyl group is R-SO2-O-C(=O)-R'. In this case, R is a methyl group and R' is a carbon atom bonded to the carbonyl.\nMatching analysis: The input molecule contains a sulfonyl group (S(=O)(=O)) attached to a carbon that forms part of a cyclic ester (lactone). The carbonyl (C=O) is part of the ring structure, not a separate ester group. No additional methyl ester sulfonyl fragments are present outside the cyclic structure.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "46": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC12CCN(C(=O)C3CCC(C(=O)O)CC3)C(Cc3c(O)cccc31)C2(C)C, Fragment Name: carboxylic acids.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Carboxylic acids (R-COO) contain a terminal -COOH group.\nMatching analysis: The input molecule contains one -C(=O)O group attached to a cyclohexane ring (C3CCC(C(=O)O)CC3), confirming a carboxylic acid functional group.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Carboxylic acids (R-COO) contain a terminal -COOH group.\nMatching analysis: The input molecule contains one -C(=O)O group attached to a cyclohexane ring (C3CCC(C(=O)O)CC3), confirming a carboxylic acid functional group.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "47": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCc1n[nH]c2c([O-])nc(-c3cc(S(=O)(=O)Cl)ccc3OCC)nc12, Fragment Name: sulfonyl chloride.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: S(=O)(=O)Cl (sulfonyl chloride group)\nMatching analysis: The input molecule contains one S(=O)(=O)Cl group attached to the benzene ring via a single bond.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: S(=O)(=O)Cl (sulfonyl chloride group)\nMatching analysis: The input molecule contains one S(=O)(=O)Cl group attached to the benzene ring via a single bond.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "48": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1, Fragment Name: ester.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Ester group (R-O-C(=O)-R')\nMatching analysis: The molecule contains one ester group (CCC-O-C(=O)) attached to the benzene ring.\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Ester group (R-O-C(=O)-R')\nMatching analysis: The molecule contains one ester group (CCC-O-C(=O)) attached to the benzene ring.\n{\"count\":\"1\"}",
+            "references": "1"
+        },
+        "49": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCNC(C)C, Fragment Name: methoxy.\n"
+                }
+            ],
+            "origin_prediction": "Fragment structure: Methoxy group (-OCH3)\nMatching analysis: The input molecule contains one methoxy group (-OCH3) attached to the benzene ring (OCCNC(C)C).\n{\"count\":\"1\"}",
+            "predictions": "Fragment structure: Methoxy group (-OCH3)\nMatching analysis: The input molecule contains one methoxy group (-OCH3) attached to the benzene ring (OCCNC(C)C).\n{\"count\":\"1\"}",
+            "references": "1"
+        }
+    }
+}

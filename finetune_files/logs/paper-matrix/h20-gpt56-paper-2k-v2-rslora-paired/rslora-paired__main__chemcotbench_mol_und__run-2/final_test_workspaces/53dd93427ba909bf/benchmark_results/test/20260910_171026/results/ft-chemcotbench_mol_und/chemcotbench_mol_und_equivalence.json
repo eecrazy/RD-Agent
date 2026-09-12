@@ -1,0 +1,556 @@
+{
+    "accuracy": 60.0,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(O)CCCC1C2CCCN3CCCC(CN1CCO)C23, Molecule B: C(CO)N1CC2C3C(CCCN3CCC2)C1NCCC(=O)O.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a hydroxymethyl group and a piperazine substituent.\n- The piperazine nitrogen is bonded to the same ethyl ester and the same 2-hydroxyethyl group.\n- Ring connectivity, bond orders, charges, and stereochemistry are identical; no specified stereochemistry is present.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a hydroxymethyl group and a piperazine substituent.\n- The piperazine nitrogen is bonded to the same ethyl ester and the same 2-hydroxyethyl group.\n- Ring connectivity, bond orders, charges, and stereochemistry are identical; no specified stereochemistry is present.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCC(C)CNc1ncc(C#Cc2ccc(CC(C)NC(C)=O)cc2)cn1, Molecule B: c1(cnc(nc1)NCC(C)CC)C#Cc1ccc(cc1)CC(C)NC(=O)F.\n"
+                }
+            ],
+            "origin_prediction": "Molecule A contains a dimethylamino group, `N–CH3–CH3`, attached to the fused heteroaromatic ring. Molecule B instead contains a monomethylamino group, `N–CH3–CH2–CH2–F`, with an additional fluorine atom. Their atom counts and connectivity therefore differ.\n{\"output\":\"No\"}",
+            "predictions": "Molecule A contains a dimethylamino group, `N–CH3–CH3`, attached to the fused heteroaromatic ring. Molecule B instead contains a monomethylamino group, `N–CH3–CH2–CH2–F`, with an additional fluorine atom. Their atom counts and connectivity therefore differ.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1, Molecule B: O=C(OCCN1CCC(C(=O)N)CC1)c1c(OC)cc(c(c1)Cl)N.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-chlorophenyl group.\n- The phenyl ring is substituted with a hydroxymethyl group, –CH₂OH.\n- The same amide-containing side chain connects the phenyl ring to a piperidine ring.\n- The piperidine nitrogen is bonded to the same carbonyl group in both structures.\n- The piperidine nitrogen bears the same methylcarbamoyl substituent, –C(=O)NMe.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-chlorophenyl group.\n- The phenyl ring is substituted with a hydroxymethyl group, –CH₂OH.\n- The same amide-containing side chain connects the phenyl ring to a piperidine ring.\n- The piperidine nitrogen is bonded to the same carbonyl group in both structures.\n- The piperidine nitrogen bears the same methylcarbamoyl substituent, –C(=O)NMe.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1ccc(-c2csc3ncnc(Nc4ccc(C(=O)O)cc4)c23)cc1, Molecule B: c1(c2c(Nc3ccc(cc3)CO)ncnc2sc1)-c1ccc(cc1)C.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted thiophene ring bearing a methyl group and a pyrimidin-2-ylmethyl group.\n- The pyrimidin-2-ylmethyl group is attached to the same nitrogen in the fused bicyclic heteroaromatic scaffold.\n- The fused scaffold has identical connectivity and bond orders in both SMILES.\n- The carboxylic acid substituent is written as `C(=O)O` in Molecule A and `CO` in Molecule B; both represent the same carboxylate group.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted thiophene ring bearing a methyl group and a pyrimidin-2-ylmethyl group.\n- The pyrimidin-2-ylmethyl group is attached to the same nitrogen in the fused bicyclic heteroaromatic scaffold.\n- The fused scaffold has identical connectivity and bond orders in both SMILES.\n- The carboxylic acid substituent is written as `C(=O)O` in Molecule A and `CO` in Molecule B; both represent the same carboxylate group.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCn1ncc(C2=NOC(C(=O)Nc3cccc(C(C)=O)c3)C2)c1C, Molecule B: O1C(C(=O)Nc2cc(C(=O)C)ccc2)CC(c2c(n(CC)nc2)C)=N1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2-pyridone ring bearing a methyl group and a hydroxyimino group, `C–N–C(=O)–O`.\n- The pyridone is attached to the same N-methylated fused bicyclic heteroaromatic scaffold.\n- The fused ring connectivity, methyl substituent positions, and ring carbonyl/imine connectivity are identical.\n- No differing stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2-pyridone ring bearing a methyl group and a hydroxyimino group, `C–N–C(=O)–O`.\n- The pyridone is attached to the same N-methylated fused bicyclic heteroaromatic scaffold.\n- The fused ring connectivity, methyl substituent positions, and ring carbonyl/imine connectivity are identical.\n- No differing stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1c(-c2ccc(Cl)cc2)nsc1NC(=O)C1CC1C, Molecule B: c1cc(ccc1Cl)-c1c(C)c(NC(C2CC2)=O)sn1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a methyl group and a chloro-substituted phenyl group.\n- The phenyl ring is attached to the same nitrogen-containing heterocycle.\n- The heterocycle has the same N-methyl lactam connectivity: `N–C(=O)–C1CC1C`.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a methyl group and a chloro-substituted phenyl group.\n- The phenyl ring is attached to the same nitrogen-containing heterocycle.\n- The heterocycle has the same N-methyl lactam connectivity: `N–C(=O)–C1CC1C`.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1, Molecule B: c1c(ccc(c1)Cl)C(=O)c1ccc(OC(C(OCc2c(C)oc(o2)=O)=O)(C)C)cc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a methyl ester and a 2-hydroxyethyl ester.\n- The phenyl ring has identical methyl and chloro substituent positions.\n- The ring connectivity, bond orders, charges, and specified stereochemistry are equivalent.\n- No differing stereochemical specifications are present.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a methyl ester and a 2-hydroxyethyl ester.\n- The phenyl ring has identical methyl and chloro substituent positions.\n- The ring connectivity, bond orders, charges, and specified stereochemistry are equivalent.\n- No differing stereochemical specifications are present.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(-c2nnc(SCC#N)o2)cc1, Molecule B: O(c1ccc(cc1)-c1oc(nn1)SCCN)C.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a para-disubstituted phenyl ring bearing a methoxy group and a hydroxy-substituted five-membered aromatic ring.\n- The heteroaromatic ring has identical connectivity: a methylene–nitrogen–methylene–nitrogen sequence.\n- The methyl-substituted nitrile nitrogen is written as `SCC#N` in one SMILES and `SCCN` in the other; both specify the same connectivity.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a para-disubstituted phenyl ring bearing a methoxy group and a hydroxy-substituted five-membered aromatic ring.\n- The heteroaromatic ring has identical connectivity: a methylene–nitrogen–methylene–nitrogen sequence.\n- The methyl-substituted nitrile nitrogen is written as `SCC#N` in one SMILES and `SCCN` in the other; both specify the same connectivity.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc(Cc2cnc(N)nc2N)cc(OC)c1OCc1ccc(C)cc1, Molecule B: c1(c(cc(cc1OC)Cc1c(N)nc(nc1)N)OC)OCc1ccc(cc1)C.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan bearing methoxy and hydroxy groups.\n- The same 2,5-disubstituted furan ring connects through an ethylene linker to the same 2,6-dimethylpyridine.\n- Both pyridines have identical N-methyl substitution and connectivity.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan bearing methoxy and hydroxy groups.\n- The same 2,5-disubstituted furan ring connects through an ethylene linker to the same 2,6-dimethylpyridine.\n- Both pyridines have identical N-methyl substitution and connectivity.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCN(CC)CCNC(=O)c1cc(Cl)c(N)cc1O, Molecule B: N(C(c1c(cc(c(c1)Cl)N)O)=O)CCN(C)CC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a hydroxyl group and a dimethylamino group.\n- The amino group is bonded to the same tertiary amide carbon.\n- The amide carbonyl is bonded to the same nitrogen.\n- The methyl substituent on the nitrogen is written in opposite SMILES branches.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a hydroxyl group and a dimethylamino group.\n- The amino group is bonded to the same tertiary amide carbon.\n- The amide carbonyl is bonded to the same nitrogen.\n- The methyl substituent on the nitrogen is written in opposite SMILES branches.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCN(CC)CCCNC1c2cc(OC)ccc2OCc2ncccc21, Molecule B: c12COc3c(C(NCCCN(C)CC)c2cccn1)cc(OC)cc3.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring.\n- The substituents are identical: a hydroxyethyl group and a 2-hydroxy-5-(2-pyrrolidin-1-ylethoxy)phenyl group.\n- The pyrrolidine ring has the same connectivity and charges.\n- No stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring.\n- The substituents are identical: a hydroxyethyl group and a 2-hydroxy-5-(2-pyrrolidin-1-ylethoxy)phenyl group.\n- The pyrrolidine ring has the same connectivity and charges.\n- No stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=S(=O)(NCCCCCO)c1ccc(-c2ccc(O)cc2)cc1, Molecule B: O=S(NCCCCCO)(c1ccc(-c2ccc(cc2)O)cc1)=O.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same structure:\n\n- A thiocarbonyl group, \\( \\mathrm{S(=O)_2} \\), bonded to nitrogen.\n- The nitrogen is connected through a five-carbon chain to a hydroxyl group, \\( \\mathrm{-CH_2-CH_2-CH_2-CH_2-OH} \\).\n- The same phenyl ring bears a hydroxyl group at the para position.\n- Bond orders, charges, connectivity, and stereochemistry are identical; only the SMILES traversal differs.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same structure:\n\n- A thiocarbonyl group, \\( \\mathrm{S(=O)_2} \\), bonded to nitrogen.\n- The nitrogen is connected through a five-carbon chain to a hydroxyl group, \\( \\mathrm{-CH_2-CH_2-CH_2-CH_2-OH} \\).\n- The same phenyl ring bears a hydroxyl group at the para position.\n- Bond orders, charges, connectivity, and stereochemistry are identical; only the SMILES traversal differs.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CN1C(=O)C(Cc2ccc(-c3ccccc3[N+](=O)[O-])cc2)NC(=O)c2cc(Cl)ccc21, Molecule B: c1(c(cccc1)-c1ccc(CC2NC(c3cc(Cl)ccc3N(C2=O)C)=O)cc1)[N+]([O-])=O.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4,5-dimethoxy-1,3-oxazole ring.\n- The oxazole is attached to the same para-chloro-substituted phenyl ring.\n- That phenyl ring bears the same para-nitrophenyl substituent.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4,5-dimethoxy-1,3-oxazole ring.\n- The oxazole is attached to the same para-chloro-substituted phenyl ring.\n- That phenyl ring bears the same para-nitrophenyl substituent.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc2ncnc(N3CCN(C(=O)NCc4ccc(Br)cc4)CC3)c2cc1OC, Molecule B: N1(CCN(CC1)CNCc1ccc(Br)cc1)c1ncnc2cc(c(cc12)OC)OC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains the same 2,5-disubstituted furan ring.\n- The substituents are identical: a hydroxy group and a 2,5-disubstituted furan.\n- The fused heteroaromatic scaffold has identical connectivity.\n- The amino-linked piperazine and benzyl groups have the same connectivity.\n- The bromine and amide substituents are in equivalent positions.\n- Charges, bond orders, and stereochemistry are identical; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains the same 2,5-disubstituted furan ring.\n- The substituents are identical: a hydroxy group and a 2,5-disubstituted furan.\n- The fused heteroaromatic scaffold has identical connectivity.\n- The amino-linked piperazine and benzyl groups have the same connectivity.\n- The bromine and amide substituents are in equivalent positions.\n- Charges, bond orders, and stereochemistry are identical; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(O)CCSc1ccc2ccccc2n1, Molecule B: C(=O)CCSc1ccc2ccccc2n1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same structure:\n\n- The same carboxylic acid group, `O=C(O)–`, is attached to the sulfur.\n- The sulfur is bonded to the same phenyl–thiophene ring.\n- Bond orders, charges, and connectivity match.\n- No stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same structure:\n\n- The same carboxylic acid group, `O=C(O)–`, is attached to the sulfur.\n- The sulfur is bonded to the same phenyl–thiophene ring.\n- Bond orders, charges, and connectivity match.\n- No stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCOC(=O)CC(NC(=O)C1CCCN1)C1OC2OC(C)(C)OC2C1OC, Molecule B: C1(C(NC(C2CCCN2)=O)CC(OCC)=O)OC2OC(OC2C1OC)(C)C.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring.\n- One substituent is the same ethyl ester, `CCOC(=O)`.\n- The other is the same N-acetyl piperidine, `NC(=O)C1CCCN1`.\n- The fused oxygen-containing scaffold is identical; the differing traversal order preserves the same connectivity.\n- Charges, bond orders, and stereochemistry are equivalent.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring.\n- One substituent is the same ethyl ester, `CCOC(=O)`.\n- The other is the same N-acetyl piperidine, `NC(=O)C1CCCN1`.\n- The fused oxygen-containing scaffold is identical; the differing traversal order preserves the same connectivity.\n- Charges, bond orders, and stereochemistry are equivalent.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: NC(=O)c1c(NC(=O)Nc2ccc(Cl)cc2)sc2c1CCCC2, Molecule B: c12c(sc(NCNc3ccc(cc3)Cl)c2C(=O)N)CCCC1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-pyridone ring bearing a methylcarbamoyl group, `C(=O)N`.\n- The carbamate nitrogen is connected through an NH bond to a pyrrolidine ring.\n- The pyrrolidine is attached to the same chlorinated phenyl ring.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-pyridone ring bearing a methylcarbamoyl group, `C(=O)N`.\n- The carbamate nitrogen is connected through an NH bond to a pyrrolidine ring.\n- The pyrrolidine is attached to the same chlorinated phenyl ring.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COC(=O)CSc1nc(-c2ccc(F)cc2)c(-c2ccncc2)[nH]1, Molecule B: c1(-c2ccncc2)c(nc([nH]1)SCC(OC)=O)-c1ccc(cc1)F.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-fluorophenyl group and a pyridyl group connected through an S–CH₂ linker.\n- The pyridyl nitrogen is bonded to the same –CH(OH)–C(=O)–CH₂–S chain.\n- Atom charges, bond orders, and connectivity match; neither specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-fluorophenyl group and a pyridyl group connected through an S–CH₂ linker.\n- The pyridyl nitrogen is bonded to the same –CH(OH)–C(=O)–CH₂–S chain.\n- Atom charges, bond orders, and connectivity match; neither specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)CC1, Molecule B: Oc1c2n(C3CC3)cc(c(c2cc(c1N1CCN(CC)CC1)F)=O)C(O)=O.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4,5-dimethoxy-1H-pyrazole ring.\n- The pyrazole is attached to the same 2,5-disubstituted furan ring.\n- Both contain the same methyl-substituted piperazine ring.\n- The furan substituents are identical: –CH₂–N–CH₂–CH(OH)–C(=O)–O– and –CH₂–N–CH₂–C(=O)–O–.\n- The fluorine and carbonyl groups are in the same positions.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4,5-dimethoxy-1H-pyrazole ring.\n- The pyrazole is attached to the same 2,5-disubstituted furan ring.\n- Both contain the same methyl-substituted piperazine ring.\n- The furan substituents are identical: –CH₂–N–CH₂–CH(OH)–C(=O)–O– and –CH₂–N–CH₂–C(=O)–O–.\n- The fluorine and carbonyl groups are in the same positions.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=c1cc(-c2ccccc2Cl)oc2c1ccc1ccccc12, Molecule B: c1(-c2c(Cl)cccc2)cc(=O)c2c(c3c(cc2)cccc3)o1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same fused tricyclic scaffold:\n\n- Each contains a central five-membered lactone ring.\n- The same chlorine-substituted phenyl ring is attached to the lactone carbon.\n- The fused aromatic rings have identical connectivity.\n- Charges, bond orders, and specified stereochemistry are equivalent.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same fused tricyclic scaffold:\n\n- Each contains a central five-membered lactone ring.\n- The same chlorine-substituted phenyl ring is attached to the lactone carbon.\n- The fused aromatic rings have identical connectivity.\n- Charges, bond orders, and specified stereochemistry are equivalent.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "20": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CNCc1cc(C(=O)N2CCCN(C3CC3)CC2)ccc1Oc1ccccc1C#N, Molecule B: N1(C(=O)c2cc(c(Oc3c(cccc3)C#N)cc2)CNC)CCCN(C2CC2)CC1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-methoxyphenyl group.\n- The phenyl ring is attached to the same amide carbonyl.\n- The amide nitrogen is bonded to the same piperazine ring.\n- The piperazine nitrogen is bonded to the same 1,3-dimethylisobenzofuran ring.\n- Atom connectivity, bond orders, charges, and stereochemistry match.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-methoxyphenyl group.\n- The phenyl ring is attached to the same amide carbonyl.\n- The amide nitrogen is bonded to the same piperazine ring.\n- The piperazine nitrogen is bonded to the same 1,3-dimethylisobenzofuran ring.\n- Atom connectivity, bond orders, charges, and stereochemistry match.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "21": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCc1ccc(OC(C)=O)c(C(=O)c2ccc(C)cc2)c1, Molecule B: c1(ccc(CC)cc1C(c1ccc(cc1)C)=O)OC=O.\n"
+                }
+            ],
+            "origin_prediction": "Molecule A contains a carboxylic acid substituent, **–C(=O)OH**, on the phenyl ring. Molecule B instead contains an **–O–CH₂–C(=O)–** group and lacks that hydroxyl oxygen. Their atom counts and connectivity therefore differ.\n{\"output\":\"No\"}",
+            "predictions": "Molecule A contains a carboxylic acid substituent, **–C(=O)OH**, on the phenyl ring. Molecule B instead contains an **–O–CH₂–C(=O)–** group and lacks that hydroxyl oxygen. Their atom counts and connectivity therefore differ.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "22": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(-n2c(=O)cnc3cnc(Oc4cccc(Cl)c4)nc32)cc1, Molecule B: c1cccc(c1)Oc1ncc2ncc(=O)n(c2n1)-c1ccc(cc1)OC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a para-disubstituted phenyl group bearing an ethoxy and a hydroxy substituent.\n- The phenyl is connected through a methylene to a pyridine ring.\n- The pyridine bears a 2-pyridone substituent at the para position.\n- The pyridone substituent also bears a pyridine ring.\n- Charges, bond orders, and connectivity match; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a para-disubstituted phenyl group bearing an ethoxy and a hydroxy substituent.\n- The phenyl is connected through a methylene to a pyridine ring.\n- The pyridine bears a 2-pyridone substituent at the para position.\n- The pyridone substituent also bears a pyridine ring.\n- Charges, bond orders, and connectivity match; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "23": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O, Molecule B: C(NC(Cc1ccccc1)C(=O)O)(=O)C(Cc1ccccc1)NC(=O)C=Cc1occc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains the same 2,5-disubstituted furan ring.\n- The ring is attached through the same alkene carbon to the same tertiary amide nitrogen.\n- The amide nitrogen is bonded to the same ethyl group and the same urea-like chain.\n- The urea carbonyl is bonded to the same methyl-substituted benzyl group and the same hydroxyethyl-substituted benzyl group.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains the same 2,5-disubstituted furan ring.\n- The ring is attached through the same alkene carbon to the same tertiary amide nitrogen.\n- The amide nitrogen is bonded to the same ethyl group and the same urea-like chain.\n- The urea carbonyl is bonded to the same methyl-substituted benzyl group and the same hydroxyethyl-substituted benzyl group.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "24": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Fc1ccc(-c2nc3cc[nH]cc-3n2)cc1, Molecule B: c1[nH]ccc2-c1nc(n2)-c1ccc(cc1)F.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same fused bicyclic scaffold:\n\n- Each contains a fluorinated benzene ring fused to a pyridine ring.\n- The pyridine bears a –NH–CH₂– group attached to the same nitrogen-containing bicyclic system.\n- The bicyclic system has identical ring connectivity and bond orders.\n- The `[nH]` and `n` notation specifies the same neutral pyridine nitrogen.\n- No differing charges or specified stereochemistry are present.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same fused bicyclic scaffold:\n\n- Each contains a fluorinated benzene ring fused to a pyridine ring.\n- The pyridine bears a –NH–CH₂– group attached to the same nitrogen-containing bicyclic system.\n- The bicyclic system has identical ring connectivity and bond orders.\n- The `[nH]` and `n` notation specifies the same neutral pyridine nitrogen.\n- No differing charges or specified stereochemistry are present.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "25": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCCCCSc1nc(O)c2cnn(-c3ccc(F)cc3)c2n1, Molecule B: C(CSc1nc(c2c(n(-c3ccccc3)nc2)n1)O)CCC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 5-methyl-1,3,4-oxadiazole ring.\n- The oxadiazole is attached through nitrogen to the same fused bicyclic heteroaromatic scaffold.\n- The scaffold has identical ring connectivity, including the fluorine substituent on the fused aromatic ring.\n- The methyl groups, bond orders, charges, and specified stereochemistry are equivalent.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 5-methyl-1,3,4-oxadiazole ring.\n- The oxadiazole is attached through nitrogen to the same fused bicyclic heteroaromatic scaffold.\n- The scaffold has identical ring connectivity, including the fluorine substituent on the fused aromatic ring.\n- The methyl groups, bond orders, charges, and specified stereochemistry are equivalent.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "26": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCCC(O)C3)nc21, Molecule B: c1nc(N2CC(CC=C2)O)nc2n(C)c(=O)c(Oc3ccc(cc3F)F)cc12.\n"
+                }
+            ],
+            "origin_prediction": "Molecule A contains a fully saturated N-methyl piperidine ring, `N3CCCC(O)C3`, with an implicit methyl substituent. Molecule B instead contains a C=C double bond in the corresponding ring, `N2CC(CC=C2)O`, and lacks that methyl carbon. Thus, their atom counts and ring connectivity differ.\n{\"output\":\"No\"}",
+            "predictions": "Molecule A contains a fully saturated N-methyl piperidine ring, `N3CCCC(O)C3`, with an implicit methyl substituent. Molecule B instead contains a C=C double bond in the corresponding ring, `N2CC(CC=C2)O`, and lacks that methyl carbon. Thus, their atom counts and ring connectivity differ.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "27": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: C=CCn1c(=O)c2[nH]c(Cc3ccc(N)cc3)nc2n(CCCC)c1=O, Molecule B: c1(n(c(c2c(n1CCCC)nc([nH]2)Cc1ccc(N)cc1)=O)CN=C)=O.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same fused bicyclic scaffold:\n\n- Each contains a five-membered imidazole ring fused to a six-membered diazine ring.\n- The imidazole has the same methyl, exocyclic carbonyl, and N-methyl substituent.\n- The diazine has identical methyl, exocyclic carbonyl, and N-methyl substituents.\n- The fused benzene ring has the same N-methyl aniline substituent in the same position.\n- The ring carbonyl and imine connectivity are identical; the difference is only the traversal order.\n- Charges, bond orders, and specified stereochemistry also match.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same fused bicyclic scaffold:\n\n- Each contains a five-membered imidazole ring fused to a six-membered diazine ring.\n- The imidazole has the same methyl, exocyclic carbonyl, and N-methyl substituent.\n- The diazine has identical methyl, exocyclic carbonyl, and N-methyl substituents.\n- The fused benzene ring has the same N-methyl aniline substituent in the same position.\n- The ring carbonyl and imine connectivity are identical; the difference is only the traversal order.\n- Charges, bond orders, and specified stereochemistry also match.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "28": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCc1cc(OC)cc2nc(-c3cccnc3N3CCC(C(=O)O)CC3)oc(=O)c12, Molecule B: c1c(c2c(nc(-c3c(nccc3)N3CCC(CC3)C(O)=O)oc2=O)cc1O)CC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a methoxy group and a 2-pyridylmethyl substituent.\n- The pyridylmethyl group has identical connectivity: pyridine linked through a single bond to the nitrogen of a pyrrolidine ring.\n- The pyrrolidine ring has the same methyl ester substituent (`N–CH2–C(=O)O`) at the same ring position.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a methoxy group and a 2-pyridylmethyl substituent.\n- The pyridylmethyl group has identical connectivity: pyridine linked through a single bond to the nitrogen of a pyrrolidine ring.\n- The pyrrolidine ring has the same methyl ester substituent (`N–CH2–C(=O)O`) at the same ring position.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "29": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12, Molecule B: C(C)(CC)Nc1c2c(cnc(c2)NCc2cnccc2)ncc1C#N.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains the same 2,5-disubstituted pyridine ring with methyl and cyano groups.\n- The pyridine is connected through nitrogen to the same 2-(pyridin-2-yl)ethyl group.\n- The ethyl chain has identical methyl substituents in both SMILES.\n- The fused bicyclic heteroaromatic scaffold and bond orders match.\n- No stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains the same 2,5-disubstituted pyridine ring with methyl and cyano groups.\n- The pyridine is connected through nitrogen to the same 2-(pyridin-2-yl)ethyl group.\n- The ethyl chain has identical methyl substituents in both SMILES.\n- The fused bicyclic heteroaromatic scaffold and bond orders match.\n- No stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "30": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl, Molecule B: c1ccc(Cl)c(COc2c(cc(cc2)C=C(c2ccccn2)C#N)OC)c1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-methoxy-3,5-dichlorophenyl group.\n- The phenyl ring is connected through an ether oxygen to the same substituted 2-pyrone ring.\n- The pyrone bears the same ethenyl group and pyridyl substituent.\n- Bond orders, charges, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 4-methoxy-3,5-dichlorophenyl group.\n- The phenyl ring is connected through an ether oxygen to the same substituted 2-pyrone ring.\n- The pyrone bears the same ethenyl group and pyridyl substituent.\n- Bond orders, charges, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "31": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc2c(cc1OC)CC(N1CCOCC1)C2, Molecule B: COc1c(cc2c(CC(N3CCOCC3)C2)c1)OC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing methoxy and hydroxy groups.\n- The ring connectivity, bond orders, and oxygen positions are identical.\n- The same N-methyl tetrahydrofuran substituent is attached at the same ring position.\n- No differing stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing methoxy and hydroxy groups.\n- The ring connectivity, bond orders, and oxygen positions are identical.\n- The same N-methyl tetrahydrofuran substituent is attached at the same ring position.\n- No differing stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "32": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(Nc1ccc(Cl)cc1)Nc1ccc(C(F)(F)F)cc1Cl, Molecule B: c1c(ccc(NCNc2ccc(cc2)Cl)c1Cl)C(F)(F)F.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a chlorinated benzene ring bearing a urea group, \\( \\mathrm{Ar–NH–C(=O)–NH–Ar} \\).\n- The second aromatic ring is identical in both structures; it is just traversed in the opposite direction.\n- Both rings have the same chloro- and trifluoromethyl-substituted positions.\n- The urea carbonyl is written as \\( \\mathrm{C(=O)} \\) in both SMILES.\n- No differing stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a chlorinated benzene ring bearing a urea group, \\( \\mathrm{Ar–NH–C(=O)–NH–Ar} \\).\n- The second aromatic ring is identical in both structures; it is just traversed in the opposite direction.\n- Both rings have the same chloro- and trifluoromethyl-substituted positions.\n- The urea carbonyl is written as \\( \\mathrm{C(=O)} \\) in both SMILES.\n- No differing stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "33": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC1CN(c2c(F)c(N)c3c(=O)c(C(=O)O)cn(C4CC4)c3c2F)C(C)CN1, Molecule B: CC1NCC(N(c2c(F)c(N)c3c(=O)c(cn(C4CC4)c3c2F)C(O)=O)C1)C.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- The same 2,5-difluoropyridine ring is attached through nitrogen.\n- The pyridine nitrogen is bonded to the same piperazine ring.\n- The piperazine carbon adjacent to the pyridine nitrogen bears the same carboxylic acid group.\n- The fused bicyclic amine scaffold, including the N-methyl group, has identical connectivity.\n- Charges, bond orders, and stereochemistry are equivalent; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- The same 2,5-difluoropyridine ring is attached through nitrogen.\n- The pyridine nitrogen is bonded to the same piperazine ring.\n- The piperazine carbon adjacent to the pyridine nitrogen bears the same carboxylic acid group.\n- The fused bicyclic amine scaffold, including the N-methyl group, has identical connectivity.\n- Charges, bond orders, and stereochemistry are equivalent; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "34": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(S(=O)(=O)Nc2ccc(-n3cccc3)cc2)cc1, Molecule B: O(C)c1ccc(S(=O)Nc2ccc(-n3cccc3)cc2)cc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- The same para-disubstituted phenyl group bears an ethoxy group and a sulfonamide linkage.\n- The sulfonamide has the same connectivity: phenyl–S(=O)₂–NH–.\n- The phenyl–NH linkage connects to the same para-substituted phenyl ring bearing a 2-nitrophenyl substituent.\n- Charges, bond orders, and stereochemistry are identical; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- The same para-disubstituted phenyl group bears an ethoxy group and a sulfonamide linkage.\n- The sulfonamide has the same connectivity: phenyl–S(=O)₂–NH–.\n- The phenyl–NH linkage connects to the same para-substituted phenyl ring bearing a 2-nitrophenyl substituent.\n- Charges, bond orders, and stereochemistry are identical; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "35": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(NC(Cc1ccccc1)c1nc2ccccc2[nH]1)c1cccc([N+](=O)[O-])c1, Molecule B: C(C(c1nc2c([nH]1)cccc2)NC(=O)c1cc(ccc1)[N+]([O-])=O)c1ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- The same amide connects a benzyl group to a 2-aminopyridine ring.\n- The pyridine has identical methyl, phenyl, and nitro-substituents.\n- The ring `[nH]` and neutral `[N+]` notation are equivalent; the nitro oxygen is written as `[N+](=O)[O-]` in one SMILES and `=[N+]([O-])` in the other.\n- Charges, bond orders, connectivity, and stereochemistry match.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- The same amide connects a benzyl group to a 2-aminopyridine ring.\n- The pyridine has identical methyl, phenyl, and nitro-substituents.\n- The ring `[nH]` and neutral `[N+]` notation are equivalent; the nitro oxygen is written as `[N+](=O)[O-]` in one SMILES and `=[N+]([O-])` in the other.\n- Charges, bond orders, connectivity, and stereochemistry match.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "36": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cccc(C(=O)OCC(C)C2CCC3C(O)CCCC23C)c1, Molecule B: C1(C(COC(c2cc(ccc2)OC)=O)C)C2(C)CCCC(O)C2CC1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted phenyl ring.\n- One substituent is the same ethyl ester, `C(=O)OCC(C)C`.\n- The other is the same 2,3,4,5-tetramethyl-1-cyclohexanol group.\n- Atom connectivity, bond orders, charges, and stereochemistry match.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted phenyl ring.\n- One substituent is the same ethyl ester, `C(=O)OCC(C)C`.\n- The other is the same 2,3,4,5-tetramethyl-1-cyclohexanol group.\n- Atom connectivity, bond orders, charges, and stereochemistry match.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "37": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21, Molecule B: c1cccc2c1nc(s2)-c1c(N)n(CCCN(C)C)c2c1nc(C#N)c(n2)C#N.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains the same fused bicyclic heteroaromatic scaffold.\n- The fused ring has the same N–CH₂–CH₂–N connectivity.\n- The same exocyclic amino group, dimethylamino group, and two nitrile groups are attached at equivalent positions.\n- Bond orders, charges, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains the same fused bicyclic heteroaromatic scaffold.\n- The fused ring has the same N–CH₂–CH₂–N connectivity.\n- The same exocyclic amino group, dimethylamino group, and two nitrile groups are attached at equivalent positions.\n- Bond orders, charges, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "38": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCCCCSc1nc(O)c2cnn(-c3ccc(F)cc3)c2n1, Molecule B: Oc1nc(nc2n(ncc12)-c1ccc(cc1)F)SCCCCC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 5-methylthiopentalyl substituent, `CCCCCS`.\n- The same fused bicyclic heteroaromatic scaffold is present.\n- The ring bears the same hydroxy, amino, and 2-fluorophenyl substituents at equivalent positions.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 5-methylthiopentalyl substituent, `CCCCCS`.\n- The same fused bicyclic heteroaromatic scaffold is present.\n- The ring bears the same hydroxy, amino, and 2-fluorophenyl substituents at equivalent positions.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "39": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=c1cc(-c2ccccc2Cl)oc2c1ccc1ccccc12, Molecule B: c12c(ccc3c2oc(cc3=O)-c2c(cccc2)N)cccc1.\n"
+                }
+            ],
+            "origin_prediction": "Molecule A contains a chlorinated phenyl ring, whereas Molecule B contains an unsubstituted phenyl ring. This changes the atom composition and molecular graph, so they are not equivalent.\n{\"output\":\"No\"}",
+            "predictions": "Molecule A contains a chlorinated phenyl ring, whereas Molecule B contains an unsubstituted phenyl ring. This changes the atom composition and molecular graph, so they are not equivalent.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "40": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Nc1cccc(-n2nncc2-c2ccccc2)c1, Molecule B: c1ccccc1-c1cnnn1-c1cc(N)ccc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES describe the same fused bicyclic heteroaromatic scaffold. In each:\n\n- The same ring bears a methyl substituent and a –NH– group.\n- The –NH– connects the same fused aromatic ring to the same phenyl ring.\n- Atom connectivity, bond orders, charges, and ring fusion topology match.\n- Neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES describe the same fused bicyclic heteroaromatic scaffold. In each:\n\n- The same ring bears a methyl substituent and a –NH– group.\n- The –NH– connects the same fused aromatic ring to the same phenyl ring.\n- Atom connectivity, bond orders, charges, and ring fusion topology match.\n- Neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "41": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC(C(=O)NCc1ccc(C(F)(F)F)nc1OCc1ccc(F)cc1)c1ccc(NS(C)(=O)=O)c(F)c1, Molecule B: c1c(c(NS(=O)(=O)C)ccc1C(C)C(NCc1ccc(C(F)(F)F)nc1OCc1ccc(cc1)F)=O)F.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-difluorophenyl group and a 2,6-difluorophenyl group.\n- The central scaffold is identical: a benzene ring bearing a methyl ester, a urea-linked fluorophenyl, and a sulfonamide-linked fluorophenyl.\n- The methyl ester is written as `C(=O)NC` in Molecule A and `C(C)C(NCc1...)` in Molecule B; both specify the same ethyl ester.\n- The sulfonamide is written as `NS(C)(=O)=O` in Molecule A and `NS(=O)(=O)C` in Molecule B; both specify the same sulfonyl group.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-difluorophenyl group and a 2,6-difluorophenyl group.\n- The central scaffold is identical: a benzene ring bearing a methyl ester, a urea-linked fluorophenyl, and a sulfonamide-linked fluorophenyl.\n- The methyl ester is written as `C(=O)NC` in Molecule A and `C(C)C(NCc1...)` in Molecule B; both specify the same ethyl ester.\n- The sulfonamide is written as `NS(C)(=O)=O` in Molecule A and `NS(=O)(=O)C` in Molecule B; both specify the same sulfonyl group.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "42": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(Nc1ccccc1C(=O)N1CCOCC1)c1ccc(CSc2ccccc2)cc1, Molecule B: c1cccc(SCc2ccc(C(=O)Nc3ccccc3CN3CCOCC3)cc2)c1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a benzamide group, `Ar–C(=O)–NH–`, attached to the same phenyl ring.\n- The amide nitrogen is bonded to the same 2-(hydroxyethyl)pyridine ring.\n- The phenyl ring bearing the thioether is identical in both structures.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a benzamide group, `Ar–C(=O)–NH–`, attached to the same phenyl ring.\n- The amide nitrogen is bonded to the same 2-(hydroxyethyl)pyridine ring.\n- The phenyl ring bearing the thioether is identical in both structures.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "43": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(Oc1ccccc1C(=O)Oc1ccccc1)c1cccnc1, Molecule B: n1cc(C(=O)Oc2ccccc2C(=O)Oc2ccccc2)ccc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a carboxylic acid group, `O=C(O–)`, attached to a benzene ring.\n- The benzene is connected through an amide carbonyl to a second benzene.\n- The second benzene is connected through a second carboxylic acid group to a third benzene.\n- The three benzene rings are identical and have the same connectivity.\n- The `n` in the second SMILES specifies the same ring nitrogen as the corresponding `c` in the first SMILES; the difference is only the traversal order.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a carboxylic acid group, `O=C(O–)`, attached to a benzene ring.\n- The benzene is connected through an amide carbonyl to a second benzene.\n- The second benzene is connected through a second carboxylic acid group to a third benzene.\n- The three benzene rings are identical and have the same connectivity.\n- The `n` in the second SMILES specifies the same ring nitrogen as the corresponding `c` in the first SMILES; the difference is only the traversal order.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "44": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: OC(CN1C2CCC1CC(c1ccccc1)C2)c1ccccc1, Molecule B: c1(C(O)CN2C3CCC2CC(C3)c2ccccc2)ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a para-disubstituted phenyl ring bearing a hydroxymethyl group and a piperidine substituent.\n- The piperidine has the same connectivity: a methylene linked to a pyrrolidine ring.\n- The pyrrolidine ring has identical methyl and phenyl substituent positions.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a para-disubstituted phenyl ring bearing a hydroxymethyl group and a piperidine substituent.\n- The piperidine has the same connectivity: a methylene linked to a pyrrolidine ring.\n- The pyrrolidine ring has identical methyl and phenyl substituent positions.\n- Charges, bond orders, and stereochemistry are equivalent; neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "45": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCC(c1ccc(O)cc1)C(CCI)c1ccc(O)cc1, Molecule B: c1(ccc(O)cc1)C(C(c1ccc(cc1)O)CC)C=CI.\n"
+                }
+            ],
+            "origin_prediction": "Molecule A contains a chloromethyl group, –CH₂Cl, attached to the central carbon. Molecule B instead contains a chloromethylene group, –C(=CH)Cl, with a double bond to carbon and no chlorine–hydrogen bond. Thus, their atom counts and connectivity differ.\n{\"output\":\"No\"}",
+            "predictions": "Molecule A contains a chloromethyl group, –CH₂Cl, attached to the central carbon. Molecule B instead contains a chloromethylene group, –C(=CH)Cl, with a double bond to carbon and no chlorine–hydrogen bond. Thus, their atom counts and connectivity differ.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "46": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(CC2NCCc3c2[nH]c2ccc(SC)cc32)cc1OC, Molecule B: c1c(OC)c(OC)ccc1CC1NCCc2c3c([nH]c21)ccc(SC)c3.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing methoxy and hydroxy groups.\n- The same N-methylated bridged bicyclic amine is attached to the furan carbon.\n- The fused bicyclic scaffold and its `[nH]` atom are identical.\n- The `SC` substituent is written from different starting atoms but specifies the same thiophenyl group.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing methoxy and hydroxy groups.\n- The same N-methylated bridged bicyclic amine is attached to the furan carbon.\n- The fused bicyclic scaffold and its `[nH]` atom are identical.\n- The `SC` substituent is written from different starting atoms but specifies the same thiophenyl group.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "47": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CSc1ncc(C(=O)Nc2ccc(C)c(Cl)c2)c(-c2ccccc2)n1, Molecule B: c1ccc(-c2nc(S)ncc2C(=O)Nc2ccc(C)c(c2)Cl)cc1.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted thiophene ring bearing a methylthio group and a urea linkage.\n- The urea connects the thiophene to the same 2,5-dichloro-phenyl group.\n- Atom connectivity, bond orders, charges, and substitution positions match.\n- Neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted thiophene ring bearing a methylthio group and a urea linkage.\n- The urea connects the thiophene to the same 2,5-dichloro-phenyl group.\n- Atom connectivity, bond orders, charges, and substitution positions match.\n- Neither SMILES specifies stereochemistry.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "48": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCS(=O)(=O)NC1CCC(Nc2cc(-c3cccc(NCc4cccc(F)c4)n3)c(Cl)cn2)CC1, Molecule B: C(c1cc(ccc1)F)Nc1nc(ccc1)-c1nc(ncc1Cl)NC1CCC(CC1)NS(=O)(=O)CC.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 1,3,4-oxadiazole ring bearing a methylamino group and a 2-chloro-6-fluorophenyl substituent.\n- The phenyl ring has identical methyl, chlorine, and fluorine positions.\n- Both contain the same sulfonamide-linked cyclohexane scaffold.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 1,3,4-oxadiazole ring bearing a methylamino group and a 2-chloro-6-fluorophenyl substituent.\n- The phenyl ring has identical methyl, chlorine, and fluorine positions.\n- Both contain the same sulfonamide-linked cyclohexane scaffold.\n- Charges, bond orders, and connectivity match; no stereochemistry is specified.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "49": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCC(CO)Oc1cc(NCc2ccccc2)c2ncn(C(C)C)c2c1, Molecule B: c1c(cc2c(c1NCc1ccccc1)ncn2C(C)C)OC(CC)CO.\n"
+                }
+            ],
+            "origin_prediction": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a dimethylamino group and a methyl group.\n- The furan is attached to the same N-methyl pyridine ring.\n- The pyridine is substituted with the same ethyl ester, `CCC(=O)O–`.\n- Atom connectivity, bond orders, charges, and stereochemistry are identical.\n{\"output\":\"Yes\"}",
+            "predictions": "Both SMILES encode the same molecular graph:\n\n- Each contains a 2,5-disubstituted furan ring bearing a dimethylamino group and a methyl group.\n- The furan is attached to the same N-methyl pyridine ring.\n- The pyridine is substituted with the same ethyl ester, `CCC(=O)O–`.\n- Atom connectivity, bond orders, charges, and stereochemistry are identical.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        }
+    }
+}

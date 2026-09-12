@@ -1,0 +1,271 @@
+{
+  "suite": "base-7b",
+  "task_timeout": "12h",
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:33967/v1"
+  },
+  "tasks": [
+    {
+      "experiment_id": "base/7b/aime25",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "aime25",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/panorama_par4pc",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "panorama_par4pc",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/panorama_noc4pc",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "panorama_noc4pc",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/panorama_pi4pc",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "panorama_pi4pc",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/chemcotbench_mol_und",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "chemcotbench_mol_und",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/chemcotbench_mol_edit",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "chemcotbench_mol_edit",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/chemcotbench_mol_opt",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "chemcotbench_mol_opt",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/chemcotbench_reaction",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "chemcotbench_reaction",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/FinanceIQ_gen",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "FinanceIQ_gen",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/tablebench_data_analysis",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "tablebench_data_analysis",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/tablebench_fact_checking",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "tablebench_fact_checking",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/tablebench_numerical_reasoning",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "tablebench_numerical_reasoning",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    },
+    {
+      "experiment_id": "base/7b/tablebench_visualization",
+      "paper_group": "base-7b",
+      "method": "Base Model",
+      "benchmark": "tablebench_visualization",
+      "target_model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": null,
+      "data_limit": null,
+      "timeout": null,
+      "run_index": 1,
+      "runner": "run_base_eval.py",
+      "artifact_status": "reconstructed-from-released-evaluator",
+      "source": "main-results"
+    }
+  ],
+  "benchmark_assets": {
+    "FinanceIQ_gen": {
+      "id": "benchmark-financeiq",
+      "revision": "fca1d9ceb6925041264d211b9ddf7264e8145248",
+      "dataset_path": "pinned/financeiq"
+    },
+    "aime25": {
+      "id": "benchmark-aime2025",
+      "revision": "a6ad95f611d72cf628a80b58bd0432ef6638f958",
+      "dataset_path": "pinned/aime2025/aime2025.jsonl"
+    },
+    "chemcotbench_mol_edit": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "chemcotbench_mol_opt": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "chemcotbench_mol_und": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "chemcotbench_reaction": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "panorama_noc4pc": {
+      "id": "benchmark-panorama",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "dataset_path": "pinned/panorama"
+    },
+    "panorama_par4pc": {
+      "id": "benchmark-panorama",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "dataset_path": "pinned/panorama"
+    },
+    "panorama_pi4pc": {
+      "id": "benchmark-panorama",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "dataset_path": "pinned/panorama"
+    },
+    "tablebench_data_analysis": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    },
+    "tablebench_fact_checking": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    },
+    "tablebench_numerical_reasoning": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    },
+    "tablebench_visualization": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    }
+  },
+  "model_assets": {
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "id": "model-qwen2.5-7b-instruct",
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+    }
+  }
+}

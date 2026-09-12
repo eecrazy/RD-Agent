@@ -1,0 +1,54 @@
+{
+  "baseline_only": false,
+  "benchmark": "chemcotbench_reaction",
+  "candidate_count": 1,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_output__rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb__8aefd1aff367",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-1/validation_sweep/candidates/durable_output__rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb__8aefd1aff367/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "ed677d2b3bad12ce399da61904311da795c386d0929aa6e6a873a42e19668d3d",
+  "completed_count": 1,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-1",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "ed677d2b3bad12ce399da61904311da795c386d0929aa6e6a873a42e19668d3d",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "66a9fc6e7cf86f4fd75dd58726eb0fbe734159e8f4e4cfc5d973af409bdfe9a6",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb__8aefd1aff367",
+    "formal_training_evidence_signature": "bed904586fdef8e8211aeb2c6fe1c88ec8c59315acce0a46e293091a432725d2",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-1/workspace/.ft_model_checkpoints/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb/output",
+    "selection_metrics": [
+      {
+        "formula": "mean Morgan fingerprint similarity of fs, retro, and nepp",
+        "higher_is_better": true,
+        "label": "FTS",
+        "metric": "fingerprint_similarity",
+        "unit": "percent",
+        "value": 1.95
+      },
+      {
+        "formula": "mechanism-selection accuracy",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 58.0
+      }
+    ],
+    "selection_signature": "8630e8098e2ff99759907ded9ba90acf8cca5f98bcfcaa2257a7baf787fb4ba8"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:16:39.380709+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

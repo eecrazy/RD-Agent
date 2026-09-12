@@ -1,0 +1,166 @@
+{
+  "candidate_id": "durable_checkpoint__rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33__step-500__26c50a0ec9ef",
+  "source": "durable_checkpoint",
+  "workspace_id": "rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33",
+  "checkpoint_step": 500,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33/output/checkpoint-500",
+  "selection_signature": "afae89c6c81022241a3f2302e740e7e802d296f4f5e833d5a2352111c63e49cb",
+  "formal_training_evidence_signature": "9ff3831063992cef2f6650ae79778c72ef5b8b15bc2687875604a0978a0f34e0",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+  "benchmark": "chemcotbench_mol_edit",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "ed67f45e1487d030c9143e9efbfa4b7f523ae4dc3ba93b1753689977eb5d2363",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:31:49.949820+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:34:58.882168+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_mol_edit_add": {
+        "correct_count": 7.0,
+        "correct_rate": 70.0,
+        "tanimoto_similarity": 48.59,
+        "total_count": 10.0,
+        "valid_count": 8.0,
+        "valid_rate": 80.0
+      },
+      "chemcotbench_mol_edit_delete": {
+        "correct_count": 9.0,
+        "correct_rate": 90.0,
+        "tanimoto_similarity": 77.79,
+        "total_count": 10.0,
+        "valid_count": 9.0,
+        "valid_rate": 90.0
+      },
+      "chemcotbench_mol_edit_sub": {
+        "correct_count": 14.0,
+        "correct_rate": 46.67,
+        "tanimoto_similarity": 56.44,
+        "total_count": 30.0,
+        "valid_count": 22.0,
+        "valid_rate": 73.33
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "Cc1cccc(NC2CCN(C(=O)CC3([N+](=O)[O-])CCCC3)CC2)c1",
+        "model_output": "1. Molecule analysis: The input molecule contains a benzene ring with a methyl group (Cc1...), an amine-linked piperazine derivative (NC2CCN...), and a tertiary amine (C(=O)CC3(O)CCCC3) attached to a cyclohexane ring with a hydroxyl group (O) on one of its carbons.\n2. Functional group identification: The hydroxyl group (-OH) is located on the cyclohexane ring at position C3 (SMILES segment: CC3(O)CCCC3). The tertiary amine (N) and amide (C=O) groups are part of the piperazine-derived side chain.\n3. Delete strategy: The hydroxyl group on the cyclohexane ring is removed by deleting the oxygen atom (O) and adjusting the ring’s connectivity to maintain six carbons. The modified cyclohexane segment becomes CC3CCCC3.\n4. Add strategy: A nitro group (-NO2) is added to the same carbon on the cyclohexane ring where the hydroxyl was removed (C3). This replaces the deleted -OH with a -NO2 group, leveraging the ring’s stability and steric accessibility.\n5. Feasibility analysis: Replacing a hydroxyl with a nitro group on a cyclohexane ring is chemically plausible under nitration conditions (e.g., nitric acid/sulfuric acid). The tertiary carbon’s structure allows for nitration without significant steric hindrance. The absence of competing reactive sites (e.g., aromatic rings with directing groups) supports this modification.\n\n{\"output\":\"Cc1cccc(NC2CCN(C(=O)CC3(O)CCCC3)CC2)c1\"}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Cc1cccc(NC2CCN(C(=O)CC3(O)CCCC3)CC2)c1, Functional Group to delete: hydroxyl, Functional Group to add: nitro\n"
+      },
+      {
+        "gold": "CC(C)c1ccc(OCc2nnc(O)n2C)cc1",
+        "model_output": "1. Molecule analysis: The input molecule (CC(C)c1ccc(OCc2nnc(S)n2C)cc1) contains a tert-butyl group (CC(C)), a benzene ring (c1ccc...cc1), an ether group (OC), and a 1,2,4-thiadiazole ring (c2nnc(S)n2C) with a thiol (-SH) substituent on the carbon adjacent to the nitrogen atoms.\n2. Functional group identification: The thiol group (-SH) is located on the carbon atom within the 1,2,4-thiadiazole ring (position: c2nnc(S)n2C). The sulfur atom in the thiol is bonded to this carbon.\n3. Delete strategy: To delete the thiol group, the sulfur atom (S) and its associated hydrogen (implicit in SMILES) must be removed. This converts the thiol-bearing carbon (C-S) to a standard carbon (C) in the thiadiazole ring, resulting in a modified ring structure (c2nncc2C).\n4. Add strategy: To add a hydroxyl (-OH) group, the carbon atom in the thiadiazole ring previously bonded to sulfur (now a standard C after thiol deletion) is substituted with a hydroxyl group. This replaces the carbon's hydrogen with an -OH, forming a secondary alcohol (C-OH) at that position.\n5. Feasibility analysis: Replacing the thiol with a hydroxyl is chemically viable. The carbon previously bonded to sulfur becomes a secondary alcohol, which is stable and synthetically accessible via hydrolysis or substitution reactions.\n\n{\"output\":\"CC(C)c1ccc(OCc2nncc2C)cc1\"}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CC(C)c1ccc(OCc2nnc(S)n2C)cc1, Functional Group to delete: thiol, Functional Group to add: hydroxyl\n"
+      },
+      {
+        "gold": "C=CC(=O)N(C(=O)C=C)[C@H](C#N)C(=O)[O-]",
+        "model_output": "1. Molecule analysis: The input molecule contains an α,β-unsaturated carbonyl system (C=CC(=O)), two amide groups (N(C(=O)...)), a secondary alcohol ([C@H](CS)), and a carboxylate group (C(=O)[O-]). The thiol (-SH) group is part of the cysteine-like side chain (CS).\n2. Functional group identification: The thiol group is located in the [C@H](CS) segment, where the carbon atom has a hydrogen, a thiol substituent (CS), and is part of the molecule's backbone.\n3. Delete strategy: The thiol group (-SH) is removed by replacing the CS substituent (thiol) with a hydrogen atom on the [C@H] carbon. This converts the thiol-bearing carbon ([C@H](CS)) to a simple CH2 group ([C@H](C)).\n4. Add strategy: The nitrile (-C#N) group is added to the same [C@H] carbon where the thiol was removed. This replaces the hydrogen atom on the [C@H] carbon with a nitrile group, forming [C@H](C)C#N.\n5. Feasibility analysis: Replacing a thiol with a hydrogen is straightforward. Adding a nitrile to the carbon’s substituent is chemically viable, as nitriles are stable and commonly introduced via substitution or cyanation reactions. Steric and electronic effects are manageable due to the molecule’s flexibility.\n\n{\"output\":\"C=CC(=O)N(C(=O)C=C)[C@H](C)C#N,C(=O)[O-]\"}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: C=CC(=O)N(C(=O)C=C)[C@H](CS)C(=O)[O-], Functional Group to delete: thiol, Functional Group to add: nitrile\n"
+      },
+      {
+        "gold": "Oc1ccc(OCc2ccn(-c3ccccc3)n2)cc1",
+        "model_output": "1. Molecule analysis: The input molecule contains a benzene ring with a ketone group (O=C) at position 1 and an ether-linked pyridine ring at position 4. The pyridine ring has a benzyl substituent. The ketone is the only aldehyde group present. The molecule also contains aromatic systems and alkyl/ether linkages.\n2. Functional group identification: The aldehyde group is identified as the terminal ketone (O=C) attached to the benzene ring at position 1. The pyridine and benzyl groups are part of the ether side chain.\n3. Delete strategy: The ketone group (O=C) at position 1 of the benzene ring is removed, converting the aldehyde into a methylene group (CH2). This leaves a CH2 group at position 1, maintaining aromaticity.\n4. Add strategy: A hydroxyl group (-OH) is added to the benzene ring at position 2 (adjacent to the CH2 group at position 1). This substitution follows aromatic electrophilic addition logic, where the CH2 group activates the ring for para/ortho substitution, but steric and directing effects favor para addition relative to itself.\n5. Feasibility analysis: Deleting the aldehyde is chemically viable as it simplifies the aromatic system. Adding a hydroxyl group at position 2 is feasible via aromatic substitution (e.g., nucleophilic hydroxylation or directed ortho-metalation), though the exact method depends on synthetic conditions. The proposed structure maintains aromatic stability and avoids steric clashes.\n\n{\"output\":\"Oc1cc(OCc2ccn(-c3ccccc3)n2)c(C)c1\"}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=Cc1ccc(OCc2ccn(-c3ccccc3)n2)cc1, Functional Group to delete: aldehyde, Functional Group to add: hydroxyl\n"
+      },
+      {
+        "gold": "Cc1ccc(NC(=O)c2ccc(NC(=O)c3ccc(o3)C(=O)O)cc2)cc1[N+](=O)[O-]",
+        "model_output": "1. Molecule analysis: The input molecule contains a central benzene ring substituted with a methyl group (Cc1...), a nitro group ([N+](=O)[O-]), and an amide-linked benzene ring (NC(=O)c2...). The second benzene ring (c2) is further substituted with another amide group connected to a furan ring (c3ccco3). The existing functional groups include aromatic rings, nitro, amide, and nitroso groups.\n2. Function group introduce strategy: The carboxyl group (-COOH) is best added to the furan ring (c3ccco3) as it allows substitution without disrupting aromaticity. The oxygen in the furan ring creates a feasible site for carboxylation at a non-adjacent carbon (to avoid steric hindrance), preserving the ring's stability.\n3. Feasibility analysis: Adding a carboxyl group to the furan ring is chemically viable. Furan derivatives can undergo electrophilic substitution or oxidation to introduce -COOH groups. The proposed position avoids steric clashes and maintains the ring's conjugated structure, making the modification plausible under standard synthetic conditions.\n\n{\"output\":\"Cc1ccc(NC(=O)c2ccc(NC(=O)c3cc(C(=O)O)o3)cc2)cc1[N+](=O)[O-]\"}",
+        "question": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: Cc1ccc(NC(=O)c2ccc(NC(=O)c3ccco3)cc2)cc1[N+](=O)[O-], Functional Group to add: carboxyl.\n"
+      },
+      {
+        "gold": "O=C(COc1ccc2nc3n(c(=O)c2c1)CCCCC3)NCCc1ccc(C#N)cc1",
+        "model_output": "{\n    \"output\": \"N#Cc1ccc(F)cc1O=C(COc2ccc3nc4n(c(=O)c3c2)CCCCC4)NCCc2ccc(F)cc2\"\n}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(COc1ccc2nc3n(c(=O)c2c1)CCCCC3)NCCc1ccc(F)cc1, Functional Group to delete: halo, Functional Group to add: nitrile\n"
+      },
+      {
+        "gold": "CCCc1cc(=O)[nH]c(OC[C@H](C=O)C(C)(C)C)n1",
+        "model_output": "1. Molecule analysis: The input molecule contains a pyrimidine-like heterocyclic ring (c1cc(=O)[nH]c(...)n1) with a ketone (=O) and an NH group. Attached to the ring is a propyl chain (CCC) and a sulfide group (SC[C@H](CS)C(C)(C)C). The sulfide connects to a tertiary carbon with a methyl group (C(C)(C)C) and a thiol (-SH) group (CS).\n2. Functional group identification: The thiol (-SH) is located on the tertiary carbon in the SC[C@H](CS)C(C)(C)C substituent. The aldehyde (-CHO) must be added to a position that allows stable bonding, such as a terminal carbon.\n3. Delete strategy: Remove the thiol (-SH) group by deleting the CS (sulfide + thiol) substituent on the tertiary carbon, leaving only the methyl group (C(C)(C)C).\n4. Add strategy: Add an aldehyde (-CHO) to the terminal carbon of the propyl chain (CCC). Replace the terminal CH3 group with CHO, converting CCC to C(CC=O).\n5. Feasibility analysis: Deleting the thiol is chemically viable as it simplifies the substituent. Adding an aldehyde to the propyl chain is feasible via oxidation or substitution, though steric effects from the bulky tertiary carbon may require adjustments.\n\n{\"output\":\"CC(=O)C(CSC(C)(C)C)c1[nH]c(=O)cc1CCC\"}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CCCc1cc(=O)[nH]c(SC[C@H](CS)C(C)(C)C)n1, Functional Group to delete: thiol, Functional Group to add: aldehyde\n"
+      },
+      {
+        "gold": "CC(C)n1cnnc1[S@@](=O)Cc1ccc([N+](=O)[O-])cc1Cl",
+        "model_output": "1. Molecule analysis: The input molecule contains a triazole ring (n1cnnc1), a sulfonamide group ([S@@](=O)), a benzene ring substituted with two chlorine atoms (halo groups), and a methyl branch (CC(C)). The benzene ring is connected to the sulfonamide via a methylene group (C).\n2. Functional group identification: The two chlorine atoms (halo groups) are located on the benzene ring at positions 4 and 5 (SMILES indices: c1ccc(Cl)cc1Cl). The sulfonamide and triazole are non-reactive sites for direct functional group modifications.\n3. Delete strategy: One chlorine atom (halo group) is removed from the benzene ring to satisfy the 'delete halo' request. The remaining chlorine at position 5 (SMILES index: cc1Cl) is retained, as partial deletion (removing only one chlorine) is chemically plausible.\n4. Add strategy: A nitro group (-NO₂) is added to the benzene ring at the vacated position (formerly occupied by the deleted chlorine). Nitro groups are meta-directing and can be introduced via electrophilic aromatic substitution, replacing the chlorine atom.\n5. Feasibility analysis: Replacing a chlorine atom with a nitro group is chemically viable under nitration conditions (e.g., HNO₃/H₂SO₄). The retained chlorine at position 5 may slightly deactivate the ring but does not preclude nitration. The sulfonamide and triazole groups remain unaffected.\n\n{\"output\":\"CC(C)n1cnnc1[S@@](=O)Cc1ccc(NO)cc1Cl\"}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CC(C)n1cnnc1[S@@](=O)Cc1ccc(Cl)cc1Cl, Functional Group to delete: halo, Functional Group to add: nitro\n"
+      },
+      {
+        "gold": "CC[C@@H](C)[C@H]1CSCC(C)(C)C1C=O",
+        "model_output": "1. Molecule analysis: The input molecule contains a bicyclic structure with a hydroxyl (-OH) group attached to a carbon in the ring, a thioether (S-C), and multiple methyl/tert-butyl substituents. The hydroxyl is part of the ring system (position marked by (O) in the SMILES).\n2. Functional group identification: The hydroxyl group is located on the carbon atom within the ring (explicitly written as (O) in the SMILES string). This is the only hydroxyl group in the molecule.\n3. Delete strategy: The hydroxyl group is removed by deleting the (O) substituent from the ring carbon. This converts the ring structure from a 1(O)CSC... to a 1CSC..., preserving the ring connectivity and valence.\n4. Add strategy: The aldehyde group (-CHO) is added to the tertiary carbon adjacent to the ring. This position allows stable bonding without disrupting the ring or existing substituents. The aldehyde is introduced as a -CH=O group, replacing one hydrogen on the tertiary carbon.\n5. Feasibility analysis: Deleting the hydroxyl is chemically viable as it simplifies the ring structure. Adding an aldehyde to a tertiary carbon is feasible via oxidation or substitution, though steric hindrance may require specific conditions. The proposed modifications maintain valence and structural integrity.\n\n{\"output\":\"CC(=O)[C@@]1CSCC(C)(C)C[C@H]1C\"}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CC[C@@H](C)[C@@]1(O)CSCC(C)(C)C1, Functional Group to delete: hydroxyl, Functional Group to add: aldehyde\n"
+      },
+      {
+        "gold": "Cc1ccccc1OCC(=O)NCC(CS)C(=O)[O-]",
+        "model_output": "1. Molecule analysis: The input molecule contains a toluene group (Cc1ccccc1), an ester linkage (OCC(=O)), an amide (NCCC(=O)), and a carboxylate anion ([O-]). The ester oxygen is connected to a methylene group (CH2) that bridges the aromatic ring and the amide nitrogen.\n2. Function group introduce strategy: The thiol (-SH) group is best added to the methylene carbon adjacent to the ester oxygen. This carbon is part of the original CH2 group (OCC(=O)), and substituting one hydrogen with -SH retains structural stability while avoiding steric clashes or electronic conflicts.\n3. Feasibility analysis: This modification is chemically viable. The target carbon transitions from a CH2 group to a CSH group, which is a stable configuration. Esters and amides are unaffected, and the carboxylate anion remains intact, ensuring no reactive intermediates or unstable intermediates are introduced.\n\n{\"output\":\"Cc1ccccc1OCC(=O)NCCC(=O)[O-]CS\"}",
+        "question": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: Cc1ccccc1OCC(=O)NCCC(=O)[O-], Functional Group to add: thiol.\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_mol_edit_add": {
+      "correct_count": 7.0,
+      "correct_rate": 70.0,
+      "tanimoto_similarity": 48.59,
+      "total_count": 10.0,
+      "valid_count": 8.0,
+      "valid_rate": 80.0
+    },
+    "chemcotbench_mol_edit_delete": {
+      "correct_count": 9.0,
+      "correct_rate": 90.0,
+      "tanimoto_similarity": 77.79,
+      "total_count": 10.0,
+      "valid_count": 9.0,
+      "valid_rate": 90.0
+    },
+    "chemcotbench_mol_edit_sub": {
+      "correct_count": 14.0,
+      "correct_rate": 46.67,
+      "tanimoto_similarity": 56.44,
+      "total_count": 30.0,
+      "valid_count": 22.0,
+      "valid_rate": 73.33
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 68.89,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "unweighted mean correct_rate across add, delete, and substitute",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_edit_add",
+          "metric": "correct_rate",
+          "value": 70.0
+        },
+        {
+          "dataset": "chemcotbench_mol_edit_delete",
+          "metric": "correct_rate",
+          "value": 90.0
+        },
+        {
+          "dataset": "chemcotbench_mol_edit_sub",
+          "metric": "correct_rate",
+          "value": 46.67
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/validation_sweep/candidates/durable_checkpoint__rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33__step-500__26c50a0ec9ef/workspace"
+}

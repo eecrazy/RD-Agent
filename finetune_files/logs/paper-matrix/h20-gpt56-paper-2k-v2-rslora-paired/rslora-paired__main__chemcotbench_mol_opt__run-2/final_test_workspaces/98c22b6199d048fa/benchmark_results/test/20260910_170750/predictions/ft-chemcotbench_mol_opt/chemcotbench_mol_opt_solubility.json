@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(c1ccccc1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperidine ring (N1CCCC1) with two aromatic substituents (benzyl groups) attached via amide linkages. The molecule also has a secondary amine (NC(Cc1ccccc1)) and a carbamate group (CNC(C)C(=O)).\",\n    \"Property Analysis\": \"The solubility of the source molecule is likely limited due to the presence of two large hydrophobic benzyl groups and a partially hydrophobic piperidine ring. The amide and carbamate groups provide some polarity but may not be sufficient for good aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The two benzyl groups (Cc1ccccc1) are highly hydrophobic and reduce water solubility. The piperidine ring, while containing a basic nitrogen, is not sufficiently polar to compensate for the hydrophobicity of the aromatic groups.\",\n    \"Optimization for Source Molecule\": \"To improve solubility, one benzyl group can be removed to reduce hydrophobicity. The remaining aromatic group can be retained to maintain some structural features while enhancing water solubility by decreasing overall hydrophobicity.\",\n    \"Final Target Molecule\": \"CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NCc1ccccc1\"\n}\n{\"output\":\"CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NCc1ccccc1\"}",
+        "gold": "CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(c1ccccc1)c1ccccc1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: N#Cc1cc(S(=O)(=O)Nc2nccs2)ccc1Oc1ccc(Cl)cc1-c1ccnn1CC(F)(F)F.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitrile group (N#C), a sulfonamide (S(=O)(=O)N), a thiazole ring (c2nccs2), an ether linkage (Oc1ccc(Cl)), and a trifluoromethylpyrazole group (-c1ccnn1CC(F)(F)F). The presence of hydrophobic groups like the trifluoromethylpyrazole and the nitrile limits water solubility.\",\n    \"Property Analysis\": \"The molecule has moderate solubility due to the sulfonamide and ether groups, but the hydrophobic trifluoromethylpyrazole and nitrile groups reduce overall solubility. The thiazole and pyrazole rings contribute to aromaticity but may hinder solvation.\",\n    \"Limitation in Source Molecule for Property\": \"The trifluoromethylpyrazole group (-CC(F)(F)F) is highly hydrophobic and sterically bulky, reducing water solubility. The nitrile group (N#C) also contributes to poor solubility due to its non-polar nature.\",\n    \"Optimization for Source Molecule\": \"Replace the trifluoromethylpyrazole group (-CC(F)(F)F) with a smaller, less hydrophobic group like a methyl (-CH3) to reduce hydrophobicity and steric hindrance. Retain the sulfonamide and ether groups to maintain solubility.\",\n    \"Final Target Molecule\": \"N#Cc1cc(S(=O)(=O)Nc2nccs2)ccc1Oc1ccc(Cl)cc1-c1ccccc1C\"\n}\n{\"output\":\"N#Cc1cc(S(=O)(=O)Nc2nccs2)ccc1Oc1ccc(Cl)cc1-c1ccccc1C\"}",
+        "gold": "N#Cc1cc(S(=O)(=O)Nc2nccs2)ccc1Oc1ccc(Cl)cc1-c1ccnn1CC(F)(F)F"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CN1CCCCC1)Nc1ccccc1Oc1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperidine ring (C1CCNCC1), a carbonyl group (C=O), an amide linkage (C=O-N), and two phenyl rings connected by an oxygen atom (ether linkage). The piperidine ring is non-polar, and the phenyl rings contribute to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the piperidine and phenyl rings. The amide group provides some polarity, but the overall solubility in water is limited by the hydrophobic regions.\",\n    \"Limitation in Source Molecule for Property\": \"The piperidine ring and the biphenyl ether moiety reduce water solubility. The amide group is the primary polar feature, but it is insufficient to counteract the hydrophobic effects of the rest of the molecule.\",\n    \"Optimization for Source Molecule\": \"Replace the piperidine ring with a more polar and flexible chain containing a secondary amide (e.g., -CH(NH2)-). This introduces a stronger hydrogen-bond donor/acceptor while maintaining some flexibility. The phenyl rings are retained but their impact on solubility is partially offset by the increased polarity of the linker.\",\n    \"Final Target Molecule\": \"NC(=O)Nc1ccccc1Oc1ccccc1\"\n}\n{\"output\":\"NC(=O)Nc1ccccc1Oc1ccccc1\"}",
+        "gold": "O=C(CN1CCCCC1)Nc1ccccc1Oc1ccccc1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)CCC2CCCC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected via an amide linkage to another benzene ring with a ureido group (NC(=O)COC(=O)CCC2CCCC2). The ureido group includes a piperidine ring (C2CCCC2) esterified with a carbonyl group.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the aromatic rings and the piperidine moiety. The amide and ester groups provide some polarity but may not be sufficient for high water solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The piperidine ring (C2CCCC2) is hydrophobic and may reduce water solubility. The ester linkage (COC(=O)) and the long aliphatic chain (CCC2CCCC2) further decrease polarity.\",\n    \"Optimization for Source Molecule\": \"Replace the hydrophobic piperidine-containing side chain (CCC2CCCC2) with a more polar and flexible glycerol-like moiety (CCOCOC) to enhance hydrophilicity. This modification introduces hydroxyl groups capable of hydrogen bonding with water.\",\n    \"Final Target Molecule\": \"COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)CCOCOC)cc1\"\n}\n{\"output\":\"COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)CCOCOC)cc1\"}",
+        "gold": "COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)CCC2CCCC2)cc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCNc1ccc(NC(=O)c2c(-c3c(Cl)cccc3Cl)noc2C)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (NC=O) linked to a dichlorophenyl ring and an isoxazole ring (noc). The amine (NH) is part of an ethylamine (CCN-) side chain attached to a benzene ring. The molecule has limited polar groups and significant hydrophobic character due to aromatic rings and chlorines.\",\n    \"Property Analysis\": \"The primary property to optimize is water solubility. The current molecule has low solubility due to its hydrophobic aromatic rings, chlorines, and lack of strongly polar or ionizable groups.\",\n    \"Limitation in Source Molecule for Property\": \"1) Ethylamine (CCN-) is a weakly basic tertiary amine with limited protonation potential. 2) No ionizable groups (e.g., carboxylic acid, tertiary amine) to enhance solubility. 3) High hydrophobic character from aromatic rings and chlorines.\",\n    \"Optimization for Source Molecule\": \"1) Replace ethylamine (CCN-) with a more polar, ionizable group like a secondary amine (CN) to increase basicity and potential for salt formation. 2) Introduce a hydroxyl group (-OH) on the benzene ring to add hydrogen bonding capability. 3) Retain the dichlorophenyl and isoxazole moieties as they may be essential for activity.\",\n    \"Final Target Molecule\": \"CNc1cccc(CNc2ccc(NC(=O)c3c(-c4c(Cl)cccc4Cl)noc3C)cc2)c1\"\n}\n{\"output\":\"CNc1cccc(CNc2ccc(NC(=O)c3c(-c4c(Cl)cccc4Cl)noc3C)cc2)c1\"}",
+        "gold": "CCNc1ccc(NC(=O)c2c(-c3c(Cl)cccc3Cl)noc2C)cc1"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: N#Cc1ncc(F)c(N(Cc2ccc(Cl)cc2)Cc2ccc3c(c2)OCO3)n1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitrile group (N#C), a fluorinated pyrimidine ring, a piperazine-like N-substituted benzyl group (N(Cc2ccc(Cl)cc2)), and a benzodioxole moiety (OCO3 attached to a benzene ring). The presence of halogenated aromatic rings (Cl-substituted benzene) and the nitrile group contributes to its hydrophobicity.\",\n    \"Property Analysis\": \"The solubility of the source molecule is limited due to its hydrophobic aromatic rings (chlorobenzene, fluoropyrimidine) and the nitrile group. The benzodioxole moiety provides some polarity but is insufficient for good aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The chlorine atom on the benzene ring and the nitrile group reduce water solubility. The fluoropyrimidine ring, while polar, is not sufficiently compensatory to offset the hydrophobicity.\",\n    \"Optimization for Source Molecule\": \"Replace the chlorine atom on the benzene ring with a hydroxyl group (-OH) to increase hydrophilicity. Retain the nitrile group and fluoropyrimidine for target binding but introduce the -OH group to enhance solubility. The benzodioxole moiety is retained for its balanced polarity.\",\n    \"Final Target Molecule\": \"N#Cc1ncc(F)c(N(Cc2ccc(O)cc2)Cc2ccc3c(c2)OCO3)n1\"\n}\n{\"output\":\"N#Cc1ncc(F)c(N(Cc2ccc(O)cc2)Cc2ccc3c(c2)OCO3)n1\"}",
+        "gold": "N#Cc1ncc(F)c(N(Cc2ccc(Cl)cc2)Cc2ccc3c(c2)OCO3)n1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1c(Sc2cccc(Cl)c2)n(COCCO)c(=O)[nH]c1=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole core (c1c(Sc2cccc(Cl)c2)n(...)c(=O)[nH]c1=O) with a methyl group (Cc1), a dichlorophenyl ring (Sc2cccc(Cl)c2), a morpholine-like ether chain (COCCO), and two carbonyl groups (=O). The presence of a chlorine atom and hydrophobic aromatic systems reduces water solubility.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings and a methyl group, which limit its water solubility. The morpholine-like chain (COCCO) provides some polarity but is insufficient for high solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The dichlorophenyl ring (Sc2cccc(Cl)c2) and methyl group (Cc1) are hydrophobic, reducing solubility. The thiazole core, while polar, is buried under hydrophobic groups.\",\n    \"Optimization for Source Molecule\": \"1. Remove the methyl group (Cc1) to reduce hydrophobicity. 2. Replace the dichlorophenyl ring (Sc2cccc(Cl)c2) with a more polar heterocycle (e.g., pyridine) to enhance water solubility. 3. Retain the morpholine-like chain (COCCO) for polarity. 4. Simplify the core to expose the carbonyl groups (=O) for hydrogen bonding.\",\n    \"Final Target Molecule\": \"O=c1[nH]c(COCCO)nc2ccccn1c1cc(Cl)c(Cl)c1S\"\n}\n{\"output\":\"O=c1[nH]c(COCCO)nc2ccccn1c1cc(Cl)c(Cl)c1S\"}",
+        "gold": "Cc1c(Sc2cccc(Cl)c2)n(COCCO)c(=O)[nH]c1=O"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCSc1nnc(NC(=O)C(NC(=O)c2ccccc2F)C(C)C)s1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole ring (Sc1nnc...s1) with a methylthio group (CCS), a urea linker (NC(=O)), and a fluorinated phenyl ring (c2ccccc2F). The side chain includes a branched alkyl group (C(C)C).\",\n    \"Property Analysis\": \"The thioether (CCS) and hydrophobic alkyl groups reduce water solubility. The fluorinated phenyl ring adds lipophilicity, further decreasing solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The methylthio group (CCS) and branched alkyl chain (C(C)C) are hydrophobic, limiting water solubility. The thiazole ring, while polar, is not sufficiently hydrophilic to counteract these effects.\",\n    \"Optimization for Source Molecule\": \"Replace the thioether (CCS) with a more hydrophilic group. Remove the hydrophobic branched alkyl chain (C(C)C) to reduce lipophilicity. Retain the urea linker and fluorophenyl group for target binding but introduce a polar substituent (e.g., OH or NH2) to improve solubility.\",\n    \"Final Target Molecule\": \"NC(=O)C(NC(=O)c1ccccc1F)Cn1sc(C(C)C)s1\"\n}\n{\"output\":\"NC(=O)C(NC(=O)c1ccccc1F)Cn1sc(C(C)C)s1\"}",
+        "gold": "CCSc1nnc(NC(=O)C(NC(=O)c2ccccc2F)C(C)C)s1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(-c2nc3ccc(C)cn3c2Cc2ccsc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiophene ring (ccsc2), a methyl-substituted benzene (Cc1ccc), and a methyl-substituted imidazole-like core (c2nc3ccc(C)cn3c2). The thiophene and methyl groups contribute to hydrophobicity.\",\n    \"Property Analysis\": \"Low water solubility due to hydrophobic thiophene and methyl groups. The molecule lacks polar or ionizable groups that enhance solubility in water.\",\n    \"Limitation in Source Molecule for Property\": \"The thiophene ring (ccsc2) is highly hydrophobic, and the methyl substituents (C) on the benzene and imidazole-like core do not contribute to water solubility. The molecule has no hydrogen bond donors or acceptors beyond the limited aromatic systems.\",\n    \"Optimization for Source Molecule\": \"Replace the thiophene ring (ccsc2) with a pyridine ring (ccncc2) to introduce a nitrogen atom, which can act as a hydrogen bond acceptor. This increases polarity and water solubility while maintaining aromaticity.\",\n    \"Final Target Molecule\": \"Cc1ccc(-c2nc3ccc(C)cn3c2ccncc2)cc1\"\n}\n{\"output\":\"Cc1ccc(-c2nc3ccc(C)cn3c2ccncc2)cc1\"}",
+        "gold": "Cc1ccc(-c2nc3ccc(C)cn3c2Cc2ccsc2)cc1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1COCC2)c1ccc(C#N)cc1Cl.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperidine ring (C1CCNCC1) connected to a substituted benzene ring with a chloro, cyano, and carbonyl group. The piperidine is part of a larger fused ring system with an amide linkage (NC(=O)) and an ether-containing ring (COCC2).\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the presence of aromatic rings, chloro substituent, and aliphatic chains (CCC). The piperidine nitrogen may offer limited hydrogen bonding potential.\",\n    \"Limitation in Source Molecule for Property\": \"The chloro substituent and extended aliphatic chains (CCC) reduce water solubility. The piperidine ring, while capable of protonation, is not optimally positioned to enhance solubility.\",\n    \"Optimization for Source Molecule\": \"1) Replace chloro with a polar heterocycle (e.g., oxazole) to increase hydrogen bonding. 2) Retain the piperidine for protonation potential but reposition it. 3) Maintain the cyano group for polarity. 4) Keep the amide and ether linkages for hydrogen bonding.\",\n    \"Final Target Molecule\": \"C#Cc1ccc(C(=O)N2CCCC2C)n2c1OCC2\"\n}\n{\"output\":\"C#Cc1ccc(C(=O)N2CCCC2C)n2c1OCC2\"}",
+        "gold": "CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1COCC2)c1ccc(C#N)cc1Cl"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=c1cc(N2CCOCC2)oc2cc(OCc3ccc(Cl)cc3)ccc12.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzofuran core (O=c1cc...oc2cc...ccc12) with a morpholine substituent (N2CCOCC2) and a chlorophenyl ether group (OCc3ccc(Cl)cc3). The morpholine group is a six-membered ring with one oxygen and one nitrogen atom, contributing to moderate polarity but limited hydrogen bonding capacity.\",\n    \"Property Analysis\": \"The solubility of the source molecule is likely limited by the morpholine group, which, while polar, lacks strong hydrogen bond donors. The chlorophenyl ether group adds hydrophobicity, further reducing water solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The morpholine group provides only one hydrogen bond acceptor (the oxygen) and no hydrogen bond donors, limiting interactions with water molecules. Its rigid six-membered ring may also restrict conformational flexibility for better solvation.\",\n    \"Optimization for Source Molecule\": \"Replace the morpholine group (N2CCOCC2) with a primary amine (NH2) to introduce a strong hydrogen bond donor. This increases polarity and hydrogen bonding capacity without significantly altering the molecular weight or aromatic framework.\",\n    \"Final Target Molecule\": \"Nc1cc(=O)oc2cc(OCc3ccc(Cl)cc3)ccc12\"\n}\n{\"output\":\"Nc1cc(=O)oc2cc(OCc3ccc(Cl)cc3)ccc12\"}",
+        "gold": "O=c1cc(N2CCOCC2)oc2cc(OCc3ccc(Cl)cc3)ccc12"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Brc1ccc(OCCCCN2CCCCC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bromine-substituted benzene ring connected to a butoxy chain (OCCCC) terminating in a piperidine ring (N2CCCCC2). The piperidine is a saturated six-membered ring with one nitrogen atom.\",\n    \"Property Analysis\": \"Piperidine is moderately hydrophobic, and the butoxy chain adds flexibility but increases lipophilicity. The bromine atom contributes to lipophilicity and potential metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"The butoxy chain and piperidine ring reduce water solubility. The bromine atom may hinder solubility due to its size and lipophilic nature.\",\n    \"Optimization for Source Molecule\": \"Replace the piperidine ring with a more hydrophilic group. Replace the butoxy chain with a shorter, more polar substituent (e.g., ethoxy, OCC). Introduce a secondary amine (NH) to the benzene ring to enhance hydrogen bonding potential.\",\n    \"Final Target Molecule\": \"OCCN1CCC(c2ccc(Br)cc2)CC1\"\n}\n{\"output\":\"OCCN1CCC(c2ccc(Br)cc2)CC1\"}",
+        "gold": "Brc1ccc(OCCCCN2CCCCC2)cc1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(Oc2c(Cl)cnn(-c3cccc(Cl)c3)c2=O)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy group (COc1ccc...), a dichlorophenyl ring connected via an oxygen (Oc2c(Cl)...), a lactone (=O), and a pyrazole-like fragment (cnn(-c3cccc(Cl)c3)). The presence of two chlorine atoms and aromatic rings contributes to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings and chlorines, limiting its water solubility. The methoxy group and lactone offer some polarity but are insufficient for high solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The dual chlorine substituents and extensive aromatic systems reduce hydrophilicity. The pyrazole-like fragment (-c3cccc(Cl)c3) is particularly hydrophobic.\",\n    \"Optimization for Source Molecule\": \"Replace the hydrophobic dichlorophenyl-pyrazole moiety (-c3cccc(Cl)c3) with a more polar and flexible group. Introduce a cyclohexyl-acetamide (NCC3CCCC3=O) to enhance polarity, hydrogen bonding capacity, and water solubility.\",\n    \"Final Target Molecule\": \"COc1ccc(Oc2c(Cl)cnn(NCC3CCCC3=O)c2=O)cc1\"\n}\n{\"output\":\"COc1ccc(Oc2c(Cl)cnn(NCC3CCCC3=O)c2=O)cc1\"}",
+        "gold": "COc1ccc(Oc2c(Cl)cnn(-c3cccc(Cl)c3)c2=O)cc1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cccc(-c2nnc(SCc3ccc(C#N)cc3)n2Cc2ccco2)c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected to a triazole ring, which is further linked via a thioether (-S-CH2-) group to a second benzene ring with a cyano substituent. The triazole and thioether groups are polar but the cyano group (C#N) on the second benzene is highly hydrophobic.\",\n    \"Property Analysis\": \"The molecule has moderate solubility due to the polar triazole and methoxy groups, but the cyano group reduces overall hydrophilicity. The thioether (-S-CH2-) group contributes to lipophilicity.\",\n    \"Limitation in Source Molecule for Property\": \"The cyano group (C#N) is a strong electron-withdrawing group that increases the hydrophobicity of the aromatic ring, limiting water solubility. The thioether group also adds to the lipophilicity.\",\n    \"Optimization for Source Molecule\": \"Replace the cyano group (C#N) with a more hydrophilic substituent, such as a hydroxyl group (-OH), to enhance hydrogen bonding with water. The thioether could be retained or modified to a more polar group if needed, but in this case, it is kept unchanged.\",\n    \"Final Target Molecule\": \"COc1cccc(-c2nnc(SCc3ccc(O)cc3)n2Cc2ccco2)c1\"\n}\n{\"output\":\"COc1cccc(-c2nnc(SCc3ccc(O)cc3)n2Cc2ccco2)c1\"}",
+        "gold": "COc1cccc(-c2nnc(SCc3ccc(C#N)cc3)n2Cc2ccco2)c1"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cccc(C(=O)OCC(C)C2CCC3C(O)CCCC23C)c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected to a carbonyl group (C=O), which is further linked to an ethyl chain (OCC(C)C) and a bicyclic tertiary alcohol (C2CCC3C(O)CCCC23C). The bicyclic system includes a bridged cyclohexane and cyclopentane structure with a hydroxyl group.\",\n    \"Property Analysis\": \"The solubility of the source molecule is likely limited by the hydrophobic bicyclic tertiary alcohol (C2CCC3C(O)CCCC23C) and the ethyl ester group (C(=O)OCC(C)). The presence of a tertiary alcohol and ester reduces polarity and hydrogen-bonding capacity.\",\n    \"Limitation in Source Molecule for Property\": \"The ethyl ester group (C(=O)OCC(C)) is less polar and more hydrophobic compared to a free carboxylic acid. The bicyclic tertiary alcohol (C2CCC3C(O)CCCC23C) lacks sufficient hydrogen-bond donors/acceptors to enhance water solubility.\",\n    \"Optimization for Source Molecule\": \"1. Hydrolyze the ester (OCC(C)) to a carboxylic acid (C(=O)OH) to increase polarity and hydrogen-bonding capacity. 2. Replace the bicyclic tertiary alcohol with a more polar heterocycle (e.g., tetrahydrofuran-like structure) to retain ring rigidity while improving solubility. 3. Retain the methoxy group (COc1cccc) for moderate lipophilicity balance.\",\n    \"Final Target Molecule\": \"COC1CCC2C(O)CCCC2C1C(=O)OCC(C)c1cccc(CO)c1\"\n}\n{\"output\":\"COC1CCC2C(O)CCCC2C1C(=O)OCC(C)c1cccc(CO)c1\"}",
+        "gold": "COc1cccc(C(=O)OCC(C)C2CCC3C(O)CCCC23C)c1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)C(NC(=O)c1ccccc1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains two phenyl rings connected via an amide linkage, with an ethyl ester (CCOC(=O)) and an N-ethyl carbamate (NC(=O)) group. The ester is hydrophobic, and the amide groups provide some polarity but are buried between aromatic rings.\",\n    \"Property Analysis\": \"The ester group (CCOC(=O)) is less polar and more hydrophobic than a carboxylic acid, reducing water solubility. The amide groups (C(=O)) and aromatic rings contribute to moderate polarity but are insufficient for high solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The ethyl ester (CCOC(=O)) is the primary limitation due to its hydrophobic character. The N-ethyl carbamate (NC(=O)) could also be modified to a more polar group like a primary amide (CONH) to enhance solubility.\",\n    \"Optimization for Source Molecule\": \"1. Replace the ethyl ester (CCOC(=O)) with a carboxylic acid (C(=O)O) to increase polarity and hydrogen bonding potential. 2. Retain the amide linkage (NC(=O)) but ensure it is not further substituted to maintain structural integrity. 3. Keep the aromatic rings as they may be essential for activity.\",\n    \"Final Target Molecule\": \"C(=O)Nc1ccccc1C(=O)NCc1ccccc1\"\n}\n{\"output\":\"C(=O)Nc1ccccc1C(=O)NCc1ccccc1\"}",
+        "gold": "CCOC(=O)C(NC(=O)c1ccccc1)c1ccccc1"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)(C)Cc1nc2cc(S(=O)(=O)CC3CCNCC3)ccc2n1CC1CC1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tert-butyl group (CC(C)(C)C), a bicyclic heteroaromatic core (imidazo[1,2-a]pyrimidine), a sulfonamide-linked piperidine (S(=O)(=O)CC3CCNCC3), and a cyclopropane ring (CC1CC1). The bulky tert-butyl group and the hydrophobic bicyclic core likely reduce water solubility.\",\n    \"Property Analysis\": \"The key property to optimize is water solubility. The molecule has limited solubility due to its large hydrophobic regions (tert-butyl, bicyclic core, cyclopropane) and only one moderately polar group (sulfonamide).\",\n    \"Limitation in Source Molecule for Property\": \"The tert-butyl group is highly hydrophobic and sterically bulky, hindering solvation. The bicyclic core lacks polar substituents, and the cyclopropane contributes to rigidity without enhancing solubility.\",\n    \"Optimization for Source Molecule\": \"1. Remove the tert-butyl group to reduce hydrophobicity. 2. Retain the sulfonamide-piperidine moiety for polarity. 3. Keep the bicyclic core but simplify the substituents to balance lipophilicity. 4. Retain the cyclopropane but ensure it doesn't interfere with solvation.\",\n    \"Final Target Molecule\": \"O=S(=O)(N1CCC1)c1ccc2c(c1)nc(NCC3CC3)cc2n1\"\n}\n{\"output\":\"O=S(=O)(N1CCC1)c1ccc2c(c1)nc(NCC3CC3)cc2n1\"}",
+        "gold": "CC(C)(C)Cc1nc2cc(S(=O)(=O)CC3CCNCC3)ccc2n1CC1CC1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1ccc(Nc2ncnc3ccc(-c4cncs4)cc23)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with an amino group (-NH2) linked to a purine-like heterocyclic system (ncnc). The purine analog is further substituted with a thiophene-containing aromatic ring (-c4cncs4). The molecule has limited polar groups and significant hydrophobic character due to aromatic rings and the thiophene moiety.\",\n    \"Property Analysis\": \"The primary property to optimize is water solubility. The current molecule has low solubility due to its predominantly hydrophobic structure (aromatic rings, thiophene) and limited polar/ionizable groups (only one -NH2).\",\n    \"Limitation in Source Molecule for Property\": \"1) High hydrophobicity from aromatic systems and thiophene. 2) Only one primary amine (-NH2) for potential protonation. 3) Lack of ionizable or highly polar substituents to enhance aqueous solubility.\",\n    \"Optimization for Source Molecule\": \"1) Replace the thiophene (-c4cncs4) with a more polar heterocycle (e.g., pyridine). 2) Introduce a secondary amine (-NH-) to increase protonatable nitrogen sites. 3) Add a polar substituent (e.g., -OH or -COOH) to the pyridine ring to enhance solubility. 4) Maintain the purine core as it may be pharmacologically important.\",\n    \"Final Target Molecule\": \"Cc1cc(Nc2ncnc3ccc(-c4nccn4)cc23)cc1\"\n}\n{\"output\":\"Cc1cc(Nc2ncnc3ccc(-c4nccn4)cc23)cc1\"}",
+        "gold": "c1ccc(Nc2ncnc3ccc(-c4cncs4)cc23)cc1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1ccccc1NC(=O)N1CCCC(C(=O)c2ccc3c(c2)OCO3)C1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thioether group (C-S-C), a benzamide (NC(=O)C6H5), a piperidine ring (N1CCCCC1), and a benzodioxole moiety (OCO3 fused to benzene). The sulfur atom in the thioether and the hydrophobic benzene rings contribute to low water solubility.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings and the thioether group. The piperidine nitrogen may offer limited hydrogen bonding potential.\",\n    \"Limitation in Source Molecule for Property\": \"The thioether group (C-S-C) is hydrophobic and does not participate in hydrogen bonding. The benzene rings and lack of polar/ionizable groups beyond the amide limit water solubility.\",\n    \"Optimization for Source Molecule\": \"Replace the thioether sulfur with a more polar/ hydrogen-bonding group (e.g., -OH or -NH2). Introduce a polar substituent (e.g., -OH) on the benzene ring to enhance hydrophilicity while retaining aromaticity.\",\n    \"Final Target Molecule\": \"O=C(NC1CCCC(C(=O)c2ccc3c(c2)OCO3)C1)c1ccc(O)cc1\"\n}\n{\"output\":\"O=C(NC1CCCC(C(=O)c2ccc3c(c2)OCO3)C1)c1ccc(O)cc1\"}",
+        "gold": "CSc1ccccc1NC(=O)N1CCCC(C(=O)c2ccc3c(c2)OCO3)C1"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: FC(F)(F)c1ccccc1-c1nccc(NCc2ccccc2)n1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a trifluoromethyl group (CF3) attached to a benzene ring, which is connected to a pyrimidine ring substituted with an aniline group via an ethylamine linker. The CF3 group is highly hydrophobic, and the pyrimidine ring, while somewhat polar, is not sufficiently hydrophilic to counteract the CF3's lipophilicity.\",\n    \"Property Analysis\": \"The primary property to optimize is water solubility. The CF3 group significantly reduces solubility due to its strong hydrophobic character. The aniline group (NH-linked benzene) provides some polarity but is insufficient to enhance solubility substantially.\",\n    \"Limitation in Source Molecule for Property\": \"The trifluoromethyl group (CF3) is the primary limitation for water solubility, as it is highly lipophilic and does not contribute to hydrogen bonding or polarity.\",\n    \"Optimization for Source Molecule\": \"Replace the CF3 group with a carboxylic acid (-COOH) group. The carboxylic acid is highly polar, can form hydrogen bonds, and will significantly improve water solubility. The rest of the structure (pyrimidine and aniline) is retained to maintain target binding interactions.\",\n    \"Final Target Molecule\": \"O=C(O)c1ccccc1-c1nccc(NCc2ccccc2)n1\"\n}\n{\"output\":\"O=C(O)c1ccccc1-c1nccc(NCc2ccccc2)n1\"}",
+        "gold": "FC(F)(F)c1ccccc1-c1nccc(NCc2ccccc2)n1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cnc(Oc2ccccc2-c2ccc(-c3cnc(N)cn3)c(F)c2)nc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring (c1cnc...nc1) substituted with a methoxy group (COc1), a fluorophenyl group (-c2ccc(-c3cnc(N)cn3)c(F)c2), and an ether-linked phenyl group (Oc2ccccc2). The pyrimidine ring and fluorophenyl group contribute to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings and fluorine substitution. The methoxy group provides limited polarity, and the pyrimidine nitrogen atoms offer weak hydrogen bonding potential.\",\n    \"Limitation in Source Molecule for Property\": \"1) Pyrimidine ring (c1cnc...nc1) lacks strong polar substituents. 2) Methoxy group (COc1) is a weak hydrogen bond acceptor. 3) Fluorine substitution increases lipophilicity without compensating polarity.\",\n    \"Optimization for Source Molecule\": \"1) Replace pyrimidine with a piperazine ring (C1CNCCN1) to introduce two tertiary amines for enhanced hydrogen bonding and solubility. 2) Retain fluorophenyl and ether-linked phenyl groups for target affinity while improving solubility via the piperazine core. 3) Convert methoxy to a primary amine (NH) to increase polarity and hydrogen bonding capacity.\",\n    \"Final Target Molecule\": \"NCC1CNCC1c1ccc(-c2ccccc2O)cc1-c1ccc(-c2cnc(N)cn2)c(F)c1\"\n}\n{\"output\":\"NCC1CNCC1c1ccc(-c2ccccc2O)cc1-c1ccc(-c2cnc(N)cn2)c(F)c1\"}",
+        "gold": "COc1cnc(Oc2ccccc2-c2ccc(-c3cnc(N)cn3)c(F)c2)nc1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C(=O)NCc1ccc(C(F)(F)F)nc1SC1CCCCC1)c1ccc(NS(C)(=O)=O)c(F)c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a trifluoromethyl group (C(F)(F)F), a thioether-linked cyclohexyl ring (SC1CCCCC1), a sulfonamide group (NS(C)(=O)=O), and a central pyrimidine ring substituted with an amide and a fluorinated benzene. The presence of hydrophobic groups (cyclohexyl, trifluoromethyl) and limited polar/ionizable groups reduces water solubility.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings and aliphatic chains, but its solubility is hindered by the non-polar cyclohexyl group and the trifluoromethyl moiety. The sulfonamide and amide groups provide some polarity but are insufficient for high aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The primary limitation is the non-polar cyclohexyl group (SC1CCCCC1) attached to the sulfur atom, which significantly reduces water solubility. The trifluoromethyl group further decreases solubility due to its hydrophobic nature.\",\n    \"Optimization for Source Molecule\": \"Replace the cyclohexyl group (SC1CCCCC1) with a more polar and water-soluble substituent. Introducing a piperidine ring (N1CCCC1) via the sulfur atom increases polarity and hydrogen-bonding capacity, improving solubility while maintaining structural similarity.\",\n    \"Final Target Molecule\": \"CC(C(=O)NCc1ccc(C(F)(F)F)nc1SNC1CCCC1)c1ccc(NS(C)(=O)=O)c(F)c1\"\n}\n{\"output\":\"CC(C(=O)NCc1ccc(C(F)(F)F)nc1SNC1CCCC1)c1ccc(NS(C)(=O)=O)c(F)c1\"}",
+        "gold": "CC(C(=O)NCc1ccc(C(F)(F)F)nc1SC1CCCCC1)c1ccc(NS(C)(=O)=O)c(F)c1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCNc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (c1nc(-c2ccccc2)nc2c1nnn2) linked to a fluorophenyl group (Cc1ccccc1F) via a methylene bridge. The pyrimidine is substituted with a phenyl group (-c2ccccc2) and a fused triazole ring (nnn2). The terminal ethyl group (CCCN) contributes to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings (phenyl, triazole) and a fluorophenyl group. The ethyl and butyl chains (CCCN) further reduce water solubility. The pyrimidine core has limited hydrogen-bonding capacity.\",\n    \"Limitation in Source Molecule for Property\": \"High hydrophobicity from aromatic systems and aliphatic chains (CCCN, CCC) limits water solubility. The fluorophenyl group adds hydrophobicity without compensating hydrogen-bond donors.\",\n    \"Optimization for Source Molecule\": \"1. Replace the ethyl group (CCCN) with a polar, hydrogen-bond-donating group (e.g., -OH). 2. Retain the fluorophenyl group for potential interactions. 3. Keep the pyrimidine core but adjust substituents for balanced hydrophobicity.\",\n    \"Final Target Molecule\": \"Nc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F\"\n}\n{\"output\":\"Nc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F\"}",
+        "gold": "CCCNc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1c(=O)n(CCOc2ccc(Cl)cc2Cl)c2ccccc21.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzimidazole core (Cn1c(=O)n...c2ccccc21) with a substituted piperazine-like group (CCOc2ccc(Cl)cc2Cl). The piperazine-like group is modified with two chlorine-substituted phenyl rings connected via an ethylene oxide bridge (CCO).\",\n    \"Property Analysis\": \"The presence of two chlorine atoms and a bulky ethylene oxide-bridged diphenyl group likely reduces water solubility due to increased hydrophobicity and steric hindrance.\",\n    \"Limitation in Source Molecule for Property\": \"The chlorine atoms and the ethylene oxide linker increase lipophilicity, while the rigid diphenyl group limits conformational flexibility and hydrogen bonding potential.\",\n    \"Optimization for Source Molecule\": \"Replace the ethylene oxide-bridged diphenyl group (CCOc2ccc(Cl)cc2Cl) with a more hydrophilic and flexible substituent. Introduce a hydroxyl group (-OH) on a cyclohexane ring (OC1CCC...), which enhances hydrogen bonding and reduces steric bulk.\",\n    \"Final Target Molecule\": \"Cn1c(=O)n(OC2CCC...C2)c2ccccc21\"\n}\n{\"output\":\"Cn1c(=O)n(OC2CCC...C2)c2ccccc21\"}",
+        "gold": "Cn1c(=O)n(CCOc2ccc(Cl)cc2Cl)c2ccccc21"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C(=Cc1ccccc1)CSc1nnc(-c2cccnc2)o1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole ring (CSc1nnc(-c2cccnc2)o1) connected to a styrene-like fragment (C(=Cc1ccccc1)). The thiazole ring has a pyridine substituent (-c2cccnc2), and the main chain includes a sulfur atom (S) and an ethynyl (C#C) group.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the styrene (C1=CC=CC=C1) and pyridine moieties. The thiazole ring and sulfur atom provide some polarity, but the overall solubility in water is limited by the hydrophobic styrene and aromatic systems.\",\n    \"Limitation in Source Molecule for Property\": \"The styrene (C1=CC=CC=C1) group is highly hydrophobic and reduces water solubility. The ethynyl (C#C) linker and large aromatic systems further decrease polarity.\",\n    \"Optimization for Source Molecule\": \"Replace the hydrophobic styrene group (C1=CC=CC=C1) with a more polar and flexible ethoxy group (CCO). This introduces an oxygen atom to enhance hydrogen bonding with water while maintaining a compact size. The ethoxy group improves solubility without significantly altering the molecular weight or steric bulk.\",\n    \"Final Target Molecule\": \"CCOCCSc1nnc(-c2cccnc2)o1\"\n}\n{\"output\":\"CCOCCSc1nnc(-c2cccnc2)o1\"}",
+        "gold": "C(=Cc1ccccc1)CSc1nnc(-c2cccnc2)o1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCC1(C(=O)Nc2ccc(C#N)c(C(F)(F)F)c2)CC(C(F)(F)F)=NN1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperidine ring (C1CCNCC1) with two bulky substituents: a trifluoromethyl group (C(F)(F)F) and a nitrile group (C#N). The piperidine nitrogen is substituted with a carbonyl-linked aniline group (C(=O)Nc2ccc(C#N)c(C(F)(F)F)c2).\",\n    \"Property Analysis\": \"The trifluoromethyl group (C(F)(F)F) is highly hydrophobic and electron-withdrawing, reducing water solubility. The nitrile group (C#N) is moderately polar but insufficient to counteract the hydrophobicity.\",\n    \"Limitation in Source Molecule for Property\": \"The trifluoromethyl group (C(F)(F)F) significantly decreases water solubility due to its strong hydrophobic character. The piperidine ring and nitrile group further reduce solubility by introducing non-polar regions.\",\n    \"Optimization for Source Molecule\": \"Replace the trifluoromethyl group (C(F)(F)F) with a smaller, less hydrophobic substituent (e.g., methyl, C) to reduce hydrophobicity while retaining some steric bulk. This maintains the aniline's aromatic interactions without overly compromising solubility.\",\n    \"Final Target Molecule\": \"CCCC1(C(=O)Nc2ccc(C#N)c(C)cc2)CC(C(F)(F)F)=NN1\"\n}\n{\"output\":\"CCCC1(C(=O)Nc2ccc(C#N)c(C)cc2)CC(C(F)(F)F)=NN1\"}",
+        "gold": "CCCC1(C(=O)Nc2ccc(C#N)c(C(F)(F)F)c2)CC(C(F)(F)F)=NN1"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CS1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central 1,2,5-oxadiazole ring (dioxole derivative) with substituents: a difluorophenyl group (C2(c3ccc(F)cc3F)), a chlorophenyl ether (COC(c3ccc(Cl)cc3)), and a methylthio group (CS1). The presence of halogens (F, Cl) and the methylthio group contributes to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings (fluorophenyl, chlorophenyl) and the methylthio group. The oxadiazole ring and ether oxygen provide limited polarity, resulting in suboptimal water solubility.\",\n    \"Limitation in Source Molecule for Property\": \"High hydrophobicity from halogenated aromatic groups and the methylthio group reduces water solubility. The oxadiazole ring's polarity is insufficient to counterbalance the hydrophobic substituents.\",\n    \"Optimization for Source Molecule\": \"Replace the chlorophenyl ether (COC(c3ccc(Cl)cc3)) with a more polar heterocycle (e.g., 2,3-dihydro-1,4-oxazine) to introduce hydrogen-bonding capability and reduce hydrophobicity. Retain the difluorophenyl group for target engagement while improving solubility.\",\n    \"Final Target Molecule\": \"NC1=NC2(c3ccc(F)cc3F)C(c3ccc(Cl)cc3)CC2S1\"\n}\n{\"output\":\"NC1=NC2(c3ccc(F)cc3F)C(c3ccc(Cl)cc3)CC2S1\"}",
+        "gold": "NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CS1"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1)c1ccc([N+](=O)[O-])cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C-N) linked to a brominated phenyl ring via a conjugated double bond (C=C), a nitro-substituted phenyl ring via another amide group, and a morpholine ring (N1CCOCC1). The nitro group ([N+](=O)[O-]) is electron-withdrawing and may reduce solubility.\",\n    \"Property Analysis\": \"The nitro group contributes to high lipophilicity and potential metabolic instability, while the morpholine ring (though polar) is partially masked by the adjacent carbonyl group. The bromine atom adds steric bulk but contributes moderately to solubility via halogen bonding.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group is a key limitation for water solubility and safety. The conjugated system (C=C and amide bonds) may also reduce flexibility, limiting solvation.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group (-NO2) with a primary amine (-NH2) to enhance hydrogen bonding and reduce lipophilicity. Retain the morpholine and brominated phenyl groups to maintain structural integrity while improving solubility.\",\n    \"Final Target Molecule\": \"NCC(=O)NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1\"\n}\n{\"output\":\"NCC(=O)NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1\"}",
+        "gold": "O=C(NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1)c1ccc([N+](=O)[O-])cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)N3Cc4ccccc4C3)cc2)c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide linkage (NC(=O)) connecting two aromatic rings. One ring has methoxy substituents (OC), and the other is linked to a piperidine ring (C3Cc4ccccc4C3) via an amide. The piperidine introduces hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate solubility due to the amide groups but is limited by the hydrophobic piperidine and aromatic rings. The methoxy groups provide some polarity but are insufficient for high aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The piperidine ring (C3Cc4ccccc4C3) is a significant hydrophobic moiety that reduces water solubility. The aromatic rings and lack of additional polar/ionizable groups further limit solubility.\",\n    \"Optimization for Source Molecule\": \"Replace the hydrophobic piperidine-containing side chain (C3Cc4ccccc4C3) with a more polar and shorter chain (e.g., ethyl group: CC). This reduces hydrophobicity while maintaining structural simplicity and introducing a potential hydrogen bond acceptor.\",\n    \"Final Target Molecule\": \"COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)CC)cc2)c1\"\n}\n{\"output\":\"COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)CC)cc2)c1\"}",
+        "gold": "COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)N3Cc4ccccc4C3)cc2)c1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1ccc(Oc2ncccc2C(=NO)NCc2ccncc2)cc1C.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thioether group (C-S-C), a methoxy-linked pyridine ring, a nitrosoimine group (C(=NO)), and a piperazine moiety. The thioether and aromatic systems contribute to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings and thioether, limiting its water solubility. The piperazine group offers some polarity but is offset by adjacent hydrophobic regions.\",\n    \"Limitation in Source Molecule for Property\": \"The thioether (C-S-C) and extended aromatic systems reduce solubility. The methoxy group (Oc2ncccc2) adds minimal polarity.\",\n    \"Optimization for Source Molecule\": \"Replace the thioether (C-S-C) with a more polar amide (C(=O)N) to enhance hydrogen bonding. Retain the piperazine for basicity but reposition it to avoid hydrophobic interference.\",\n    \"Final Target Molecule\": \"CC(=O)Nc1cc(Oc2ncccc2C(=NO)NCc2ccncc2)ccc1C\"\n}\n{\"output\":\"CC(=O)Nc1cc(Oc2ncccc2C(=NO)NCc2ccncc2)ccc1C\"}",
+        "gold": "CSc1ccc(Oc2ncccc2C(=NO)NCc2ccncc2)cc1C"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)CCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a dimethylamine group (N(CH3)2), a fluorinated benzene ring, and a fused bicyclic system with a pyrimidine-like ring (ncnc) containing an amino group. The dimethylamine group is hydrophobic, and the fused bicyclic system may reduce solubility due to rigidity and aromaticity.\",\n    \"Property Analysis\": \"The primary property to optimize is water solubility. The current molecule has limited solubility due to the hydrophobic dimethylamine group and the fused aromatic system.\",\n    \"Limitation in Source Molecule for Property\": \"The dimethylamine group (N(CH3)2) is non-polar and reduces water solubility. The fused bicyclic system also contributes to low solubility by increasing hydrophobicity and molecular rigidity.\",\n    \"Optimization for Source Molecule\": \"Replace the dimethylamine group (N(CH3)2) with a more hydrophilic group, such as a primary amine (NH2), to enhance hydrogen bonding with water. Retain the fluorinated benzene and fused bicyclic system (ncnc) as they may be pharmacologically relevant.\",\n    \"Final Target Molecule\": \"NCCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1\"\n}\n{\"output\":\"NCCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1\"}",
+        "gold": "CN(C)CCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1noc(C)c1C(=O)N1CCC2CC(c3ccncn3)OC2C1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl-substituted oxazole ring (Cc1noc(C)c1), a carbonyl group (C=O), a piperidine ring (N1CCC2CC...), and a fused pyrrole-like ring (c3ccncn3). The oxazole ring has methyl groups at positions 1 and 4, which may hinder solubility.\",\n    \"Property Analysis\": \"The presence of hydrophobic methyl groups on the oxazole ring reduces water solubility. The oxazole ring itself is moderately polar but the methyl substituents decrease overall hydrophilicity.\",\n    \"Limitation in Source Molecule for Property\": \"The methyl groups on the oxazole ring increase lipophilicity, limiting aqueous solubility. The fused pyrrole-like ring (c3ccncn3) is also hydrophobic but less impactful than the oxazole methyl substituents.\",\n    \"Optimization for Source Molecule\": \"Remove the methyl groups from the oxazole ring to reduce hydrophobicity while retaining the polar oxazole and carbonyl groups. The piperidine and pyrrole-like rings are already reasonably polar and contribute to solubility.\",\n    \"Final Target Molecule\": \"Cc1noc)c1C(=O)N1CCC2CC(c3ccncn3)OC2C1\"\n}\n{\"output\":\"Cc1noc)c1C(=O)N1CCC2CC(c3ccncn3)OC2C1\"}",
+        "gold": "Cc1noc(C)c1C(=O)N1CCC2CC(c3ccncn3)OC2C1"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CN(C)C)Oc1cc(Oc2ccc(S(C)(=O)=O)cc2)cc(C(=O)Nc2nccs2)c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central aromatic ring substituted with an ether-linked benzyloxy group, a sulfonamide-linked phenyl group, and an amide-linked thiazole ring. The tertiary amine (N(CH3)2) and hydrophobic isopropyl group may limit solubility.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the isopropyl group and aromatic rings. The sulfonamide and amide groups provide some polarity but are insufficient for high aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The tertiary amine (N(CH3)2) and hydrophobic isopropyl group reduce water solubility. The ether-linked benzyloxy group adds bulk without enhancing solubility.\",\n    \"Optimization for Source Molecule\": \"1) Replace the tertiary amine (N(CH3)2) with a secondary amine (NHCH3) to increase hydrogen bonding potential. 2) Remove the hydrophobic isopropyl group. 3) Simplify the benzyloxy group to a direct ether linkage to reduce hydrophobicity.\",\n    \"Final Target Molecule\": \"CSCc1ncc(C(=O)Nc2cc(Oc3ccc(S(C)(=O)=O)cc3)cc2)c1\"\n}\n{\"output\":\"CSCc1ncc(C(=O)Nc2cc(Oc3ccc(S(C)(=O)=O)cc3)cc2)c1\"}",
+        "gold": "CC(CN(C)C)Oc1cc(Oc2ccc(S(C)(=O)=O)cc2)cc(C(=O)Nc2nccs2)c1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCCOC(=O)Cc1ccc2c(c1)C(=O)c1ccccc1CO2.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pentyl chain (CCCCC), an ester group (OC=O), a benzodioxole core (two fused benzene rings with oxygen atoms at positions 1 and 2), and a ketone group. The pentyl chain is hydrophobic, and the ester/ketone groups provide limited polarity.\",\n    \"Property Analysis\": \"The primary property to optimize is water solubility. The current molecule has low solubility due to the long hydrophobic pentyl chain and limited polar groups.\",\n    \"Limitation in Source Molecule for Property\": \"The pentyl chain (CCCCC) is highly hydrophobic, reducing water solubility. The ester and ketone groups are insufficient to counteract the chain's lipophilicity.\",\n    \"Optimization for Source Molecule\": \"Replace the pentyl chain with a shorter, more polar propyl chain (CCC) to reduce hydrophobicity while retaining synthetic feasibility. Introduce a hydroxyl group (OH) on the terminal carbon to enhance hydrogen bonding and water solubility.\",\n    \"Final Target Molecule\": \"CCC(O)c1ccc2c(c1)C(=O)c1ccccc1CO2\"\n}\n{\"output\":\"CCC(O)c1ccc2c(c1)C(=O)c1ccccc1CO2\"}",
+        "gold": "CCCCCOC(=O)Cc1ccc2c(c1)C(=O)c1ccccc1CO2"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C)cc2C)c(OC)c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitrile group (C#N), an ester group (COC(=O)), ether linkages (OCC(=O)), and a substituted benzene ring with methoxy groups. The nitrile and ester groups are polar but the molecule has significant hydrophobic character due to the aromatic rings and alkyl chains.\",\n    \"Property Analysis\": \"The molecule has moderate solubility due to the polar nitrile and ester groups, but its overall hydrophobicity limits water solubility. The presence of multiple aromatic rings and alkyl substituents reduces solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The main limitations are the hydrophobic aromatic rings and alkyl chains, which outweigh the polarity of the nitrile and ester groups. The molecule lacks strongly hydrophilic groups (e.g., -OH, -NH2, -COOH) to enhance water solubility.\",\n    \"Optimization for Source Molecule\": \"To improve solubility, introduce a hydrophilic group such as a primary amine (-NH2) on the benzene ring. This increases hydrogen bonding potential and overall polarity without drastically altering the molecule's core structure or activity.\",\n    \"Final Target Molecule\": \"CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C(N)=O)cc2C)c(OC)c1\"\n}\n{\"output\":\"CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C(N)=O)cc2C)c(OC)c1\"}",
+        "gold": "CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C)cc2C)c(OC)c1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1c(F)cccc1Cl.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a cyclohexane ring with substituents: two carbonyl groups (C=O), a hydroxyl group (OH), a methyl group (CH3), and a chlorinated phenyl ring. The hydroxyl group and carbonyl groups provide some polarity, but the overall structure is hindered by the bulky chlorophenyl group and the methyl substituent.\",\n    \"Property Analysis\": \"The solubility in water is limited due to the presence of the hydrophobic chlorophenyl group and the methyl substituent on the cyclohexane ring. The hydroxyl and carbonyl groups offer some hydrophilicity, but their effect is offset by the large hydrophobic regions.\",\n    \"Limitation in Source Molecule for Property\": \"The chlorophenyl group is a significant hydrophobic moiety that reduces water solubility. The methyl group on the cyclohexane ring also contributes to the hydrophobicity. The molecule lacks sufficient polar or ionizable groups to overcome these hydrophobic regions.\",\n    \"Optimization for Source Molecule\": \"To improve water solubility, the chlorophenyl group can be replaced with a more hydrophilic substituent. Introducing a piperidine ring (C1CCNCC1) in place of the chlorophenyl group increases polarity and provides a basic nitrogen, which can be protonated to enhance solubility in acidic conditions. The hydroxyl and carbonyl groups are retained to maintain some inherent hydrophilicity.\",\n    \"Final Target Molecule\": \"CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1CCN1CCCC1\"\n}\n{\"output\":\"CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1CCN1CCCC1\"}",
+        "gold": "CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1c(F)cccc1Cl"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: FC(F)(F)c1ccc2c(c1)nc1n2CCOc2ccccc2-1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a trifluoromethyl group (CF3) attached to a benzene ring, fused to a pyrrole-like heterocycle (nc1n2), and linked via an ethylene glycol spacer (CCO) to a benzene ring. The CF3 group is highly hydrophobic, and the overall structure has limited polar functionality.\",\n    \"Property Analysis\": \"The primary property to optimize is water solubility. The trifluoromethyl group significantly reduces solubility due to its strong hydrophobic character. The molecule lacks ionizable groups or strong hydrogen bond donors/acceptors beyond the ether oxygen and pyrrole nitrogen.\",\n    \"Limitation in Source Molecule for Property\": \"The trifluoromethyl group (CF3) is the major limitation for solubility. Its strong electron-withdrawing nature and hydrophobicity dominate the molecule's properties, overshadowing the modest polarity contributions from the ether and pyrrole groups.\",\n    \"Optimization for Source Molecule\": \"Replace the trifluoromethyl group (CF3) with a fluorine atom (F). Fluorine is less hydrophobic than CF3 and maintains some electronegativity while reducing overall hydrophobicity. This modification retains the steric and electronic effects but improves water solubility.\",\n    \"Final Target Molecule\": \"Fc1ccc2c(c1)nc1n2CCOc2ccccc2-1\"\n}\n{\"output\":\"Fc1ccc2c(c1)nc1n2CCOc2ccccc2-1\"}",
+        "gold": "FC(F)(F)c1ccc2c(c1)nc1n2CCOc2ccccc2-1"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCOc1ccccc1NC(=O)NC1CC2CCC(C1)N2C.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a butyl ether-linked benzene ring (CCCCOc1ccccc1) connected to a urea group (NC(=O)N), which is further attached to a bicyclic amine system (C1CC2CCC(C1)N2C). The bicyclic amine consists of a bridged piperidine-like structure with a fused cyclohexane ring.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the butyl chain and aromatic ring. The urea group provides some polarity, but the overall solubility in water is limited by the hydrophobic bicyclic amine and butyl ether moiety.\",\n    \"Limitation in Source Molecule for Property\": \"The butyl ether (CCCCO-) is highly hydrophobic, reducing water solubility. The bicyclic amine system, while containing nitrogen atoms, is largely non-polar and contributes to poor solubility.\",\n    \"Optimization for Source Molecule\": \"Replace the butyl ether (O-CH2CH2CH2CH2) with a more polar and shorter linker (e.g., methylene, -CH2-). This reduces hydrophobicity and maintains structural integrity. Retain the urea group and bicyclic amine as they are pharmacologically relevant.\",\n    \"Final Target Molecule\": \"CC(=O)Nc1ccccc1NC(=O)NC1CC2CCC(C1)N2C\"\n}\n{\"output\":\"CC(=O)Nc1ccccc1NC(=O)NC1CC2CCC(C1)N2C\"}",
+        "gold": "CCCCOc1ccccc1NC(=O)NC1CC2CCC(C1)N2C"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(NC(=O)Nc2nnc(N3CCCC3)s2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected via an amide linker to a thiazole ring. The thiazole ring is substituted with a piperidine group (N3CCCC3). The presence of the piperidine ring introduces hydrophobicity, which may limit water solubility.\",\n    \"Property Analysis\": \"The molecule's solubility is influenced by the balance between its hydrophobic (piperidine, aromatic rings) and hydrophilic (amide, ether) groups. The piperidine ring, being a non-polar saturated heterocycle, reduces overall solubility in water.\",\n    \"Limitation in Source Molecule for Property\": \"The piperidine group (N3CCCC3) is a significant contributor to the molecule's hydrophobicity, reducing its water solubility. Replacing this group with a more polar or charged moiety could enhance solubility.\",\n    \"Optimization for Source Molecule\": \"Replace the piperidine group (N3CCCC3) with a carboxamide group (NC(=O)C3CCC3). The carboxamide introduces a polar amide group and a cyclic ketone, increasing hydrogen bonding potential and overall hydrophilicity while maintaining some structural similarity.\",\n    \"Final Target Molecule\": \"COc1ccc(NC(=O)Nc2nnc(NC(=O)C3CCC3)s2)cc1\"\n}\n{\"output\":\"COc1ccc(NC(=O)Nc2nnc(NC(=O)C3CCC3)s2)cc1\"}",
+        "gold": "COc1ccc(NC(=O)Nc2nnc(N3CCCC3)s2)cc1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1ccc(NC(=O)NC2CCN(Cc3ccccc3)CC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thioether group (C-S-C), a urea linker (NC(=O)N), and a piperazine ring (N1CCNCC1) substituted with a benzyl group (Cc2ccccc2). The thioether and aromatic systems contribute to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to aromatic rings and the thioether group. The piperazine ring can be protonated, enhancing solubility in acidic conditions, but the overall balance favors low water solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The thioether group (C-S-C) is highly hydrophobic, and the benzyl substituent on the piperazine further increases lipophilicity. The molecule lacks strongly polar or ionizable groups to enhance aqueous solubility.\",\n    \"Optimization for Source Molecule\": \"1. Replace the thioether (C-S-C) with a more polar morpholine ring (N4CCOCC4) to introduce oxygen for hydrogen bonding. 2. Retain the piperazine core but replace the benzyl group with a smaller, more polar substituent (e.g., methyl). 3. Keep the urea linker intact as it provides hydrogen bonding potential.\",\n    \"Final Target Molecule\": \"CC1Cc2ccccc2N1CCN1C(=O)N(Cc2ccccc2)CC1\"\n}\n{\"output\":\"CC1Cc2ccccc2N1CCN1C(=O)N(Cc2ccccc2)CC1\"}",
+        "gold": "CSc1ccc(NC(=O)NC2CCN(Cc3ccccc3)CC2)cc1"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CCc1ccc(-c2ccc(C#N)cc2)cc1)(C(=O)NO)S(C)(=O)=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (S(=O)(=O)N), a nitro group (NO₂), a thioether (S-C), a tertiary carbon chain (CC(CC...)), and a biphenyl system with a cyano substituent (-C#N). The presence of hydrophobic groups (e.g., aromatic rings, alkyl chains) and the sulfonamide/nitro groups provides some polarity.\",\n    \"Property Analysis\": \"The solubility in water is likely limited due to the predominance of hydrophobic groups (aromatic rings, alkyl chains) and the thiophene-like sulfur atom, which reduces overall hydrophilicity. The sulfonamide and nitro groups offer some polarity but are insufficient for high aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The thioether (S-C) and tertiary carbon chain (CC(CC...)) are highly hydrophobic, reducing water solubility. The biphenyl system also contributes to low solubility due to its aromaticity and planar structure.\",\n    \"Optimization for Source Molecule\": \"Replace the thioether (S-C) with a more polar group (e.g., ether or hydroxyl). Introduce a polar substituent (e.g., hydroxyl, amine, or carboxylate) on the biphenyl system. Reduce the hydrophobic character of the tertiary carbon chain by replacing it with a more polar group (e.g., hydroxyl or amine).\",\n    \"Final Target Molecule\": \"O=C(O)NCC(CCc1ccc(-c2ccc(C#N)cc2)cc1)C(=O)NO\"\n}\n{\"output\":\"O=C(O)NCC(CCc1ccc(-c2ccc(C#N)cc2)cc1)C(=O)NO\"}",
+        "gold": "CC(CCc1ccc(-c2ccc(C#N)cc2)cc1)(C(=O)NO)S(C)(=O)=O"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thioether group (S-CH3), a ribose-like sugar moiety (C1OC...C1O), and a fluorinated purine-like heterocycle (n2cnc3c(N)nc(F)nc32). The thioether group is hydrophobic, and the ribose-like sugar moiety has limited hydrogen-bonding capacity.\",\n    \"Property Analysis\": \"The molecule has moderate solubility due to the polar ribose-like sugar moiety and the fluorinated heterocycle. However, the thioether group (S-CH3) reduces water solubility due to its hydrophobic nature.\",\n    \"Limitation in Source Molecule for Property\": \"The thioether group (S-CH3) is a significant limitation for water solubility. Additionally, the methyl group on the ribose-like sugar (C1OC...C1O) reduces hydrogen-bonding potential.\",\n    \"Optimization for Source Molecule\": \"Replace the thioether group (S-CH3) with a primary amine (NH2) to enhance hydrogen-bonding capacity and overall polarity. Retain the fluorinated heterocycle and ribose-like sugar moiety, which contribute to target binding affinity.\",\n    \"Final Target Molecule\": \"NCC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O\"\n}\n{\"output\":\"NCC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O\"}",
+        "gold": "CSC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: N#Cc1cc(S(=O)(=O)Nc2ccc(F)cn2)ccc1Oc1ccccc1F.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitrile group (N#C), a sulfonamide (S(=O)(=O)N), a fluorinated phenyl ring, and an ether-linked fluorophenyl group. The nitrile and sulfonamide are hydrophobic, while the fluorinated aromatic rings contribute to lipophilicity.\",\n    \"Property Analysis\": \"The molecule has moderate solubility due to the sulfonamide and ether groups, but the nitrile and fluorinated aromatic rings reduce water solubility. The overall logP is likely high due to hydrophobic groups.\",\n    \"Limitation in Source Molecule for Property\": \"The nitrile group and fluorinated aromatic rings are highly hydrophobic, limiting water solubility. The sulfonamide, while polar, is not sufficient to counterbalance the lipophilicity.\",\n    \"Optimization for Source Molecule\": \"Replace the nitrile group (N#C) with a more polar and water-soluble group like a sulfonamide (S(=O)(=O)N). This increases hydrogen bonding potential and overall polarity. Retain the fluorinated aromatic rings for target activity but improve solubility through the central modification.\",\n    \"Final Target Molecule\": \"O=S(=O)(Nc1ccc(F)cn1)c1ccc(S(=O)(=O)Nc2ccccc2F)cc1Oc1ccccc1F\"\n}\n{\"output\":\"O=S(=O)(Nc1ccc(F)cn1)c1ccc(S(=O)(=O)Nc2ccccc2F)cc1Oc1ccccc1F\"}",
+        "gold": "N#Cc1cc(S(=O)(=O)Nc2ccc(F)cn2)ccc1Oc1ccccc1F"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCNc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (S(=O)(=O)) linking two aromatic rings. The left ring has an ethylamino substituent (CCN-), and the right ring has an amino group (-NH2). The ethylamino group introduces hydrophobicity.\",\n    \"Property Analysis\": \"The molecule's solubility is hindered by the ethyl group in the ethylamino substituent (CCN-), which adds hydrophobic character. The sulfonamide and amino groups contribute to polarity but are insufficient to overcome the ethyl group's hydrophobicity.\",\n    \"Limitation in Source Molecule for Property\": \"The ethyl group in the ethylamino substituent reduces water solubility due to its lipophilic nature. Replacing it with a smaller, more polar or charged group could enhance solubility.\",\n    \"Optimization for Source Molecule\": \"Replace the ethylamino group (CCN-) with a simpler amino group (-NH2) to reduce hydrophobicity and eliminate the ethyl's steric hindrance to solvation. This modification retains the sulfonamide's polar character while improving overall polarity.\",\n    \"Final Target Molecule\": \"Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1\"\n}\n{\"output\":\"Nc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1\"}",
+        "gold": "CCNc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCN(CC)c1n[n+]([O-])c2ccccc2[n+]1[O-].\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a diethylamino group (CCN(CC)), a nitro group ([O-]), and a benzimidazole core with two nitro groups. The nitro groups and aromatic system contribute to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has low water solubility due to its hydrophobic aromatic rings and the diethylamino group. The nitro groups provide some polarity but are insufficient for good aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The diethylamino group (CCN(CC)) is hydrophobic, and the benzimidazole core with aromatic rings reduces solubility. The nitro groups are the only significant polar groups, which are buried in the structure.\",\n    \"Optimization for Source Molecule\": \"Replace the diethylamino group (CCN(CC)) with a more polar and water-soluble group, such as a morpholine ring (N2CCOCC2), which contains an oxygen atom to enhance hydrophilicity. The morpholine ring is a common solubilizing moiety due to its ability to form hydrogen bonds.\",\n    \"Final Target Molecule\": \"c1n[n+]([O-])c2ccccc2[n+]1OCC1CCOCC1\"\n}\n{\"output\":\"c1n[n+]([O-])c2ccccc2[n+]1OCC1CCOCC1\"}",
+        "gold": "CCN(CC)c1n[n+]([O-])c2ccccc2[n+]1[O-]"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCNC(=O)Nc1nc2cc(-c3cccnc3)cc(-c3cccnc3)n2n1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring (c1nc2cc...n2n1) with two pyrrole substituents (-c3cccnc3) at positions 4 and 5. It also has an ethylurea group (CCNC(=O)N-) attached to the pyrimidine nitrogen.\",\n    \"Property Analysis\": \"The pyrrole groups are hydrophobic, reducing water solubility. The ethylurea group is polar but its hydrophobic alkyl chain (CCN-) limits solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The main limitations are the hydrophobic pyrrole substituents and the ethylurea's alkyl portion (CCN-), which counteract the polar urea moiety.\",\n    \"Optimization for Source Molecule\": \"Replace the ethylurea group (CCNC(=O)N-) with a more hydrophilic group. Introduce a sulfonamide (NS(=O)(=O)C-) to enhance polarity and hydrogen bonding capacity while removing the hydrophobic ethyl chain.\",\n    \"Final Target Molecule\": \"NS(=O)(=O)Cn1cc(-c2cccnc2)cc(-c2cccnc2)nc11\"\n}\n{\"output\":\"NS(=O)(=O)Cn1cc(-c2cccnc2)cc(-c2cccnc2)nc11\"}",
+        "gold": "CCNC(=O)Nc1nc2cc(-c3cccnc3)cc(-c3cccnc3)n2n1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)NO)cc1NC(=O)c1ccccc1Cl.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected to a nitroso-oxime group (C(=O)NO) and an amide-linked chlorobenzene. The nitroso-oxime group is polar but may contribute to poor solubility due to its bulky nature. The amide linkage (NC(=O)) enhances polarity but is offset by the hydrophobic chlorobenzene.\",\n    \"Property Analysis\": \"The molecule has moderate polarity from the amide and nitroso-oxime groups but is limited by its hydrophobic components (methoxybenzene and chlorobenzene). The nitroso-oxime group may also introduce metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"The nitroso-oxime group (C(=O)NO) is a key limitation for solubility and stability. Its bulkiness and potential metabolic lability reduce the molecule's overall suitability for aqueous environments.\",\n    \"Optimization for Source Molecule\": \"Replace the nitroso-oxime group (C(=O)NO) with a more compact and stable polar group, such as a carboxylic acid ester (COOEt), to improve solubility and metabolic stability while maintaining polarity.\",\n    \"Final Target Molecule\": \"COc1ccc(COOEt)cc1NC(=O)c1ccccc1Cl\"\n}\n{\"output\":\"COc1ccc(COOEt)cc1NC(=O)c1ccccc1Cl\"}",
+        "gold": "COc1ccc(C(=O)NO)cc1NC(=O)c1ccccc1Cl"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)N3CCCC3)ccc21.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperidine ring (N3CCCC3) attached to a sulfonyl group (S(=O)(=O)), a bicyclic system with a lactam (C(=O)N), and an aliphatic chain (CCC). The piperidine is non-polar and may hinder water solubility.\",\n    \"Property Analysis\": \"The sulfonyl group is polar and can enhance solubility, but the non-polar piperidine and aliphatic chain reduce overall hydrophilicity. The molecule has moderate solubility due to the balance between polar (sulfonyl, lactam) and non-polar regions.\",\n    \"Limitation in Source Molecule for Property\": \"The piperidine ring (N3CCCC3) is a significant limitation for water solubility due to its hydrophobic nature. Replacing it with a more polar or charged group could improve solubility.\",\n    \"Optimization for Source Molecule\": \"Replace the piperidine (N3CCCC3) with a carboxamide (NC(=O)) to introduce a polar, hydrogen-bonding group. This modification increases hydrophilicity while maintaining the sulfonyl group's solubility contribution.\",\n    \"Final Target Molecule\": \"CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)NC(=O))ccc21\"\n}\n{\"output\":\"CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)NC(=O))ccc21\"}",
+        "gold": "CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)N3CCCC3)ccc21"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)(C)OC(=O)NC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tert-butyl ester group (CC(C)(C)OC(=O)), a piperidine ring (C1CCC...CC1), and a fused bicyclic system with pyrrole and imidazole-like rings (n2cnc3cnc4[nH]ccc4c32). The ester group is hydrophobic, and the fused aromatic system may limit solubility.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the tert-butyl group and fused aromatic rings. The ester group provides some polarity but is insufficient for good water solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The tert-butyl ester group is highly hydrophobic and reduces water solubility. The fused aromatic system also contributes to low solubility due to its planar, hydrophobic nature.\",\n    \"Optimization for Source Molecule\": \"Replace the tert-butyl ester (CC(C)(C)OC(=O)) with a more hydrophilic group. Introduce a sulfonyl group (S(=O)(=O)) attached to a cyclohexyl ring (C1CCCCC1) to increase polarity and hydrogen-bonding capacity while maintaining steric bulk.\",\n    \"Final Target Molecule\": \"CS(=O)(=O)C1CCCCC1NC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1\"\n}\n{\"output\":\"CS(=O)(=O)C1CCCCC1NC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1\"}",
+        "gold": "CC(C)(C)OC(=O)NC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CC2C=C(c3cncc(Oc4ccccc4)c3)CC(C2)C1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperidine ring (C1CCNCC1), a fused bicyclic system (piperidine fused to a pyrrole-like ring), and a methoxy-substituted benzene ring attached to the pyrrole. The presence of the piperidine ring and the fused bicyclic system contributes to hydrophobicity.\",\n    \"Property Analysis\": \"The molecule has moderate hydrophobicity due to the piperidine ring and the fused bicyclic system. The methoxy group on the benzene ring provides some polarity but is insufficient for high water solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The piperidine ring and the fused bicyclic system are highly hydrophobic, limiting water solubility. The methoxy group's polarity is offset by the large hydrophobic surface area.\",\n    \"Optimization for Source Molecule\": \"Replace the piperidine ring with a more polar and flexible chain (e.g., add a hydroxyl group to increase hydrophilicity). Retain the methoxy-substituted benzene ring but introduce a polar linker (e.g., ether or amine) to improve solubility. Simplify the fused bicyclic system to reduce hydrophobicity while maintaining the core structure.\",\n    \"Final Target Molecule\": \"COc1cc(C2=C(C3CCN(C)CC3)C=C2N1)c1\"\n}\n{\"output\":\"COc1cc(C2=C(C3CCN(C)CC3)C=C2N1)c1\"}",
+        "gold": "CN1CC2C=C(c3cncc(Oc4ccccc4)c3)CC(C2)C1"
+    }
+}

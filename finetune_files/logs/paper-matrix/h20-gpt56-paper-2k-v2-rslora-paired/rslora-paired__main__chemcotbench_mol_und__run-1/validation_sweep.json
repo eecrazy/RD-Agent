@@ -1,0 +1,62 @@
+{
+  "baseline_only": false,
+  "benchmark": "chemcotbench_mol_und",
+  "candidate_count": 1,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_output__rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38__2ff6b83edb05",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-1/validation_sweep/candidates/durable_output__rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38__2ff6b83edb05/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "e9898bd670a39ba9c9f7d04db9b3326961abb11acc9058d61638fd72493fba27",
+  "completed_count": 1,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-1",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "e9898bd670a39ba9c9f7d04db9b3326961abb11acc9058d61638fd72493fba27",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "0813d2b9a4d1a7b8acd3373108600fc8ca2bd37b908e17cfc68927e5d4c3d22c",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38__2ff6b83edb05",
+    "formal_training_evidence_signature": "9d439cdac6dfb16a041ce660b9a67c8dcd109870ecdf90c308d5f4fadeee9e73",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-1/workspace/.ft_model_checkpoints/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38/output",
+    "selection_metrics": [
+      {
+        "formula": "mean MAE of fg_count and ring_count",
+        "higher_is_better": false,
+        "label": "MAE",
+        "metric": "mae",
+        "unit": "absolute",
+        "value": 1.27
+      },
+      {
+        "formula": "Murcko scaffold Tanimoto similarity",
+        "higher_is_better": true,
+        "label": "TMS",
+        "metric": "tanimoto_similarity",
+        "unit": "ratio",
+        "value": 0.25
+      },
+      {
+        "formula": "mean accuracy of equivalence and ring_system_scaffold",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 59.335
+      }
+    ],
+    "selection_signature": "925900459802f3f57a08ffcd84fb139bb58fa72b96f579d5c51f76bed4d5e170"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:16:38.127686+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

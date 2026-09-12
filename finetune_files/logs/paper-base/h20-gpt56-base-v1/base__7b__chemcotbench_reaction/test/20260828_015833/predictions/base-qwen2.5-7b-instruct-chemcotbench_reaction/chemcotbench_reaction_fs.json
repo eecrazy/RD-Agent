@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)OC(=O)OC(C)(C)C.NCCN\nReagents: ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(C)(C)OC(=O)OC(=O)OC(C)(C)C.ClCCl\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "CC(C)(C)OC(=O)NCCN"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)C(=O)c1ccccc1.C=CC[Si](C)(C)C\nReagents: Cl[Sn](Cl)(Cl)Cl.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCOC(=O)c1ccccc1.C=CCl\",\n    \"Byproduct(s)\": \"Cl[Sn](Cl)(Cl)COC(=O)C(=O)c1ccccc1\"\n}",
+        "gold": "C=CCC(O)(C(=O)OCC)c1ccccc1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Br.CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OC1CCCCC1\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)N[C@H](C=O)CC1CCC1.[C-]#[N+]C1CC1.CC(=O)O\nReagents: CCOC(C)=O.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(C)(C)OC(=O)N[C@H](C=O)CC1CCC1.CC(=O)O.ClCCl\",\n    \"Byproduct(s)\": \"CC(C)(C)OC(=O)N[C@H](C=O)CC1CCC1.CC(=O)O\"\n}",
+        "gold": "CC(=O)OC(C(=O)NC1CC1)[C@H](CC1CCC1)NC(=O)OC(C)(C)C"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)Cc1cncnc1Cl.C#C[Si](CC)(CC)CC\nReagents: c1ccc(P(c2ccccc2)c2ccccc2)cc1.CCN(CC)CC.CN(C)C=O.N#N\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCOC(=O)c1cccnc1Cl\",\n    \"Byproduct(s)\": \"CC(=O)NCCc1ccc(P(c2ccccc2)cc2ccccc2)cc1\"\n}",
+        "gold": "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(=O)Nc1ccc(C=O)cc1.N#CCC#N\nReagents: CCO.C1CCNCC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(=O)Nc1ccc(C=O)cc1C(=O)O\",\n    \"Byproduct(s)\": \"COC1CCNCC1\"\n}",
+        "gold": "CC(=O)Nc1ccc(C=C(C#N)C#N)cc1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O.Clc1cccc(CBr)c1Cl\nReagents: O.CN(C)C=O.[NaH]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O.Cl\",\n    \"Byproduct(s)\": \"Clc1cccc(CBr)c1Cl\"\n}",
+        "gold": "CN1C(=O)C(C)(Cc2ccccc2)N(C)C(=O)C1Cc1cccc(Cl)c1Cl"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1.COC(=O)CCCCCCC=O\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCCCCCC[N+](=O)(c1ccccc1)(c1ccccc1)c1ccccc1\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "CCCCCC=CCCCCCCC(=O)OC"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13.Brc1ccccc1\nReagents: O=C(C=Cc1ccccc1)C=Cc1ccccc1.O=C(C=Cc1ccccc1)C=Cc1ccccc1.O=C(C=Cc1ccccc1)C=Cc1ccccc1.CC(C)(C)P(C(C)(C)C)C(C)(C)C.Cc1ccccc1C.CC(C)(C)O[Na].[Pd].[Pd]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13\",\n    \"Byproduct(s)\": \"Brc1ccccc1\"\n}",
+        "gold": "CC1(C)c2ccccc2-c2cc3c4cc(-c5ccc6c(c5)c5cc7c(cc5n6-c5ccccc5)oc5ccccc57)ccc4n(-c4ccccc4)c3cc21"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: O.C=CC#N.C=C(C)C\nReagents: COC.O=S(=O)(O)O.Oc1ccc(O)cc1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"O.C=CC#N.C=C(C)COC(=O)O\",\n    \"Byproduct(s)\": \"Oc1ccc(O)cc1\"\n}",
+        "gold": "C=CC(=O)NC(C)(C)C"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1ccc(-n2nc(C(C)(C)C)cc2N)cc1.O=C(Cl)OCC(Cl)(Cl)Cl\nReagents: c1ccncc1.O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Cc1ccc(-n2nc(C(C)(C)C)cc2N)cc1C(=O)Cl\",\n    \"Byproduct(s)\": \"OCC(Cl)(Cl)Cl\"\n}",
+        "gold": "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21.O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(=O)N1CCC(F)C1C(=O)Oc2ccccc2\",\n    \"Byproduct(s)\": \"O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1\"\n}",
+        "gold": "O=C1CCC(C(=O)N2CCC(F)C2)n2c1nn(Cc1ccc(C(F)(F)F)nc1)c2=O"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCC(C)(C)C(=O)O.CNOC\nReagents: Cl.CCN=C=NCCCN(C)C.CN1CCOCC1.On1nnc2ccccc21.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCCC(C)(C)C(=O)N1CCOCC1.ClCCl\",\n    \"Byproduct(s)\": \"CN1CCOCC1.On1nnc2ccccc21\"\n}",
+        "gold": "CCCC(C)(C)C(=O)N(C)OC"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1cccc([N+](=O)[O-])c1C.O=C1CCC(=O)N1Br\nReagents: CC(C)(C)OO\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"COc1cccc([N+](=O)[O-])c1CNC(=O)C(C)(C)C\",\n    \"Byproduct(s)\": \"O=C1CCC(=O)N1Br\"\n}",
+        "gold": "COc1cccc([N+](=O)[O-])c1CBr"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: O=C(Cl)OCc1ccccc1.OCC1Cc2ccccc2CN1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"O=C(Cl)OC1=C(CCN(C(=O)OCC1)C)C\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "O=C(OCc1ccccc1)N1Cc2ccccc2CC1CO"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CON(C)C(=O)Cc1ccc(Cl)cc1Cl.C[Mg]Br\nReagents: Cc1ccccc1.C1CCOC1.C1CCOC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(=O)Cl\",\n    \"Byproduct(s)\": \"ClMgBr, C1CCOC1, C1CCOC1\"\n}",
+        "gold": "CC(=O)Cc1ccc(Cl)cc1Cl"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1.CC(=O)N(C)C1CCNCC1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(CBr)(C(Cl)C(=O)O)N(C)C1CCNCC1\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "COC(=O)C(C)(CCN1CCC(N(C)C(C)=O)CC1)c1ccc(Cl)c(Cl)c1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1=O.C1CNC1\nReagents: CC(=O)O[BH-](OC(C)=O)OC(C)=O.ClCCCl.O.[Na+]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"C1CNC(=O)OC(C)(C)C1.C1CN(C(=O)OC(C)(C)C)CCC1=O\",\n    \"Byproduct(s)\": \"ClCCCl\"\n}",
+        "gold": "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1N1CCC1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1cccc2c1Sc1ccccc1CC2\nReagents: O.Cl.c1ccncc1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"COc1cccc2c1Sc1ccccc1CC2.Cl\",\n    \"Byproduct(s)\": \"Oc1ccccc1\"\n}",
+        "gold": "Oc1cccc2c1Sc1ccccc1CC2"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C.COc1ncnc(OC)c1I\nReagents: C1=CC([Fe]C2(P(c3ccccc3)c3ccccc3)C=CC=C2)(P(c2ccccc2)c2ccccc2)C=C1.C1COCCO1.CC(=O)O[K].Cl[Pd]Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C.C1=CC([Fe]C2(P(c3ccccc3)c3ccccc3)C=CC=C2)(P(c2ccccc2)c2ccccc2)C=C1\",\n    \"Byproduct(s)\": \"C1COCCO1.CC(=O)O[K].Cl[Pd]Cl\"\n}",
+        "gold": "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(O)C1CCNC1.CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CO)cc32)CC1.O=S(Cl)Cl\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(C)(O)C1CCNC1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CO)cc32)CC1O\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CN4CCC(C(C)(C)O)C4)cc32)CC1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Ic1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1.CC1(C)c2ccccc2Oc2c(B(O)O)cccc21\nReagents: c1ccc([P](c2ccccc2)(c2ccccc2)[Pd]([P](c2ccccc2)(c2ccccc2)c2ccccc2)([P](c2ccccc2)(c2ccccc2)c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)cc1.Cc1ccccc1.O=C(O[K])O[K].CCO.O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Ic1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1C(=O)O[K]\",\n    \"Byproduct(s)\": \"Cc1ccccc1.O=C(O[K])O[K]\"\n}",
+        "gold": "CC1(C)c2ccccc2Oc2c(-c3cc(-n4c5ccccc5c5ccccc54)cc4c3Oc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)=O.COc1ccc(C=O)cc1\nReagents: O=[Zn]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(C)=OCC(=O)c1ccc(C=O)cc1\",\n    \"Byproduct(s)\": \"ZnO\"\n}",
+        "gold": "COc1ccc(C=CC(C)=O)cc1"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Nc1c(C(=O)O)ccc(Br)c1F.O=C1CCC(=O)N1Cl\nReagents: CN(C)C=O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Nc1c(C(=O)O)ccc(Br)c1FOC(=O)NC(=O)Cl\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "Nc1c(C(=O)O)cc(Cl)c(Br)c1F"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCC1\nReagents: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCO1\",\n    \"Byproduct(s)\": \"O1CC(=O)OC(C)=OCC(=O)O1\"\n}",
+        "gold": "COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CC=O)c2c1OC1CCCC1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Fc1ccc(Br)cc1\nReagents: [Mg]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Fc1ccc(Br)cc1Mg\",\n    \"Byproduct(s)\": \"MgBr2\"\n}",
+        "gold": "Fc1ccc([Mg]Br)cc1"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12\nReagents: [Na+].CO.[Li]Cl.[BH4-]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"COC(=O)c1ccc2c(OC(=O)C(C)(C)C(c3nc(Cl)cs3)c3[nH]c(-c4ccccc4)c3c(=O)n(C)c(=O)n(C)c23)\",\n    \"Byproduct(s)\": \"[Na+].[Li]Cl.[BH4-]\"\n}",
+        "gold": "Cn1c(=O)c2c(-c3ccccc3)[nH]c(C(c3nc(Cl)cs3)C(C)(C)CO)c2n(C)c1=O"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C.NNC(=O)OCc1ccccc1\nReagents: CCN=C=NCCCN(C)C.On1nnc2ccccc21.CCN(C(C)C)C(C)C.CN(C)C=O.Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C\",\n    \"Byproduct(s)\": \"CCN=C(NCCCN(C)C)N=C(N1NCCCN(C)C1)N\"\n}",
+        "gold": "CC(C)(C)OC(=O)COc1ccc(C(=O)NNC(=O)OCc2ccccc2)cc1OCC(=O)OC(C)(C)C"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCSC(SCCC)=C(C#N)C#N.C1CCNC1\nReagents: CCCSC(=C(C#N)C#N)N1CCOCC1.CCO\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCCSC(CCCCN1CCOCC1)=C(C#N)C#N\",\n    \"Byproduct(s)\": \"CCS(C#N)N1CCOCC1\"\n}",
+        "gold": "CCCSC(=C(C#N)C#N)N1CCCC1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)CC(O)(CCCC(C)(C)O)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4.O=S(Cl)Cl\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"O=C1COC2=C(C=C(C(=C2N3CCCN3C4CC4)O)O)C(=O)C1O\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "COC(=O)CC(O)(CCCC(C)(C)Cl)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)N1CCC(C=O)C1.C[Mg]I\nReagents: C1CCOC1.[C-]#[O+]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(C)(C)OC(=O)N1CCC(C=O)C1C1CCOC1\",\n    \"Byproduct(s)\": \"C[Mg]I.[C-]#[O+]\"\n}",
+        "gold": "CC(O)C1CCN(C(=O)OC(C)(C)C)C1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC.CO\nReagents: Nc1c(/N=N/c2ccc(-c3ccc(/N=N/c4cc(S(=O)(=O)O)c5ccccc5c4N)cc3)cc2)cc(S(=O)(=O)O)c2ccccc12.CCOCC.O[Na].Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC.COC(=O)Nc1c(/N=N/c2ccc(-c3ccc(/N=N/c4cc(S(=O)(=O)O)c5ccccc5c4N)cc3)cc2)cc(S(=O)(=O)O)c2ccccc12\",\n    \"Byproduct(s)\": \"CCOCC.O[Na].Cl\"\n}",
+        "gold": "COC(=N)N1CCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: [C-]#[N+]C1CCCCC1.CC(=O)Cl.CC=O.Nc1ncccn1\nReagents: O=Cl(=O)(=O)O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(=O)Nc1ncccn1.CCl2C(=O)O\",\n    \"Byproduct(s)\": \"O\"\n}",
+        "gold": "[Cl-]CC(=O)[n+]1c(C)c(NC2CCCCC2)n2cccnc21"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)Cl)ccc2N2CCCC2)cc2ccccc21.CNCCN1CCOCC1\nReagents: ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC(C)(C)OC(=O)n1c(-c2cc(Cl)ccc2N2CCCC2)cc2ccccc21.CNCCN1CCOCC1\",\n    \"Byproduct(s)\": \"ClCCl\"\n}",
+        "gold": "CN(CCN1CCOCC1)S(=O)(=O)c1ccc(N2CCCC2)c(-c2cc3ccccc3n2C(=O)OC(C)(C)C)c1"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CN(C)c1ccc(C=Cc2ccc(S(=O)(=O)CCCO)cc2)cc1.O=S(=O)(CCCOC1CCCOC1)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CN(C)c1ccc(C=Cc2ccc(S(=O)(=O)CCCO)cc2)cc1O\",\n    \"Byproduct(s)\": \"O=S(=O)(CCCOC1CCCOC1)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1\"\n}",
+        "gold": "O=S(=O)(CCCO)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCCCc1ccc(Br)cc1.C#CC(C)(C)O\nReagents: Cl[Pd](Cl)([P](c1ccccc1)(c1ccccc1)c1ccccc1)[P](c1ccccc1)(c1ccccc1)c1ccccc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1.CCN(CC)CC.[C-]#[O+].[Cu]I\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCCCCc1ccc(CCC(=O)NCC(C)(C)C)c1.Cl\",\n    \"Byproduct(s)\": \"C1CCCCC1.CCN(CC)CC\"\n}",
+        "gold": "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCO.Cc1ccc2c(C(=O)O)cccc2n1\nReagents: O=S(=O)(O)O.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Cc1ccc2c(C(=O)O)cccc2n1.CCl2\",\n    \"Byproduct(s)\": \"O\"\n}",
+        "gold": "CCOC(=O)c1cccc2nc(C)ccc12"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12\nReagents: O.O[Na].C1COCCO1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCOC(=O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn11C(=O)OCCO1\",\n    \"Byproduct(s)\": \"O[Na]\"\n}",
+        "gold": "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C.Cc1cc(-c2ccccc2)nc2cc(Cl)ccc12\nReagents: CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1.CC(=O)O[Pd]OC(C)=O.CC(=O)O[K].C1CCOC1.[Cl-]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC1(C)OB(Cc1cc(-c2ccccc2)nc2cc(Cl)ccc12)OC1(C)C\",\n    \"Byproduct(s)\": \"CC(=O)OCC(=O)O[Pd]OC(C)=O\"\n}",
+        "gold": "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. If no reagents information provided, just give one potential product. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O.CCCN\nReagents: CN(C)c1ccncc1.CCN(CC)CC.C1CCOC1.N#N\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O.CCN(CC)CC\",\n    \"Byproduct(s)\": \"CCOC\"\n}",
+        "gold": "CCCNC(=O)c1cc(C(=O)NC)c(=O)n(Cc2ccccc2)c1"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC.Clc1nccc2ccccc12\nReagents: c1ccc(P(c2ccccc2)c2ccc3ccccc3c2-c2c(P(c3ccccc3)c3ccccc3)ccc3ccccc23)cc1.CC(=O)O[Pd]OC(C)=O.Cc1ccccc1.O=C(O[Cs])O[Cs].N#N\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC.Clc1nccc2ccccc12\",\n    \"Byproduct(s)\": \"Cc1ccccc1.O=C(O[Cs])O[Cs]\"\n}",
+        "gold": "COc1ccc(-c2noc(C3CCN(C(=O)CNc4nccc5ccccc45)CC3)n2)cc1OC"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)CC(c1ccc(C)c(CO)c1)c1ccc2c(nnn2C)c1C.O=S1(=O)NCCOc2ccncc21\nReagents: O=C(N=NC(=O)N1CCCCC1)N1CCCCC1.CCCCP(CCCC)CCCC.C1CCOC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCOC(=O)c1ccc2c(nnn2C)c1C1CCOC1\",\n    \"Byproduct(s)\": \"O=C(N=NC(=O)N1CCCCC1)N1CCCCC1.CCCCP(CCCC)CCCC\"\n}",
+        "gold": "CCOC(=O)CC(c1ccc(C)c(CN2CCOc3ccncc3S2(=O)=O)c1)c1ccc2c(nnn2C)c1C"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CN1C(=O)C(N)N=C(c2ccccc2)c2ccccc21.O=C(O)C(Cc1ccc(Cl)c(Cl)c1)c1ccccc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CN1C(=O)C(N)N=C(c2ccccc2)c2cccc(Cl)c21\",\n    \"Byproduct(s)\": \"O=C(O)C(Cc1ccc(Cl)c(Cl)c1)c1ccccc1\"\n}",
+        "gold": "CN1C(=O)C(NC(=O)C(Cc2ccc(Cl)c(Cl)c2)c2ccccc2)N=C(c2ccccc2)c2ccccc21"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1ccc(C)c2c(C(C)C)cc(O)nc12.O=P(Cl)(Cl)Cl\nReagents: Cc1ccccc1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Cc1ccc(C)c2c(C(C)C)cc(O)nc12OC(=O)Cl\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C.CCCI\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C\",\n    \"Byproduct(s)\": \"\"\n}",
+        "gold": "CCCn1c2c(c(=O)n1-c1ccccc1F)C1CCC2(C)C1(C)C"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1cc(OCC(=O)O)cc(C)c1Cc1ccc(O)c(C(C)C)c1.CO.N\nReagents: O=S(=O)(O)O.ClCCl.CO.CO.O[Na]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Cc1cc(OCC(=O)O)cc(C)c1Cc1ccc(O)c(C(C)C)c1C(=O)O.ClCCl\",\n    \"Byproduct(s)\": \"O[Na]\"\n}",
+        "gold": "Cc1cc(OCC(N)=O)cc(C)c1Cc1ccc(O)c(C(C)C)c1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCCCCCCCCOC(C)c1ccc(C(=O)OCCCC)cc1\nReagents: O[Na].C1CCOC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCCCCCCCCCOC(C)c1ccc(C(=O)OCC1)cc1\",\n    \"Byproduct(s)\": \"O[Na].C1CCOC1\"\n}",
+        "gold": "CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)N=NC(=O)OCC.O=C1NC(=O)c2ccccc21.OC1CC2CCC1C2.c1ccc(P(c2ccccc2)c2ccccc2)cc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"CCOC(=O)N=NC(=O)c1ccccc1OCC\",\n    \"Byproduct(s)\": \"OC1CC2CCC1C2.c1ccc(P(c2ccccc2)c2ccccc2)cc1\"\n}",
+        "gold": "O=C1c2ccccc2C(=O)N1C1CC2CCC1C2"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(C=O)cnc12.NCC1CC1\nReagents: CC(=O)O[BH-](OC(C)=O)OC(C)=O.CN1CCCC1=O.CC(=O)O.O[Na].O.[Na+]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(C=O)cnc12OC(C)=O\",\n    \"Byproduct(s)\": \"CC(=O)O\"\n}",
+        "gold": "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CNCC3CC3)cnc12"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Oc1ccc(OCc2ccccc2)cc1.CC(C)C(=O)Cl\nReagents: c1ccncc1.c1ccncc1.CCOCC.O[K].O.Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "{\n    \"Major Product\": \"Oc1ccc(CCC(=O)Nc2ccccc2)cc1.Cl\",\n    \"Byproduct(s)\": \"c1ccncc1.CCOCC\"\n}",
+        "gold": "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+    }
+}

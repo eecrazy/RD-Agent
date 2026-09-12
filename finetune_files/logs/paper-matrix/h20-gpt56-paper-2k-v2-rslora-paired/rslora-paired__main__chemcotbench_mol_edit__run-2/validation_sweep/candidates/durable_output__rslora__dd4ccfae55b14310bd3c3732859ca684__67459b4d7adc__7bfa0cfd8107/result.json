@@ -1,0 +1,166 @@
+{
+  "candidate_id": "durable_output__rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc__7bfa0cfd8107",
+  "source": "durable_output",
+  "workspace_id": "rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc",
+  "checkpoint_step": null,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc/output",
+  "selection_signature": "997298ee896182bea63e65e39e10f5d05068055734ffd256351ac09427af8337",
+  "formal_training_evidence_signature": "73dde5578d535b811c759f8dbb5456349ab2a7c00b0f985ea81d734ad07a7b66",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+  "benchmark": "chemcotbench_mol_edit",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "ed67f45e1487d030c9143e9efbfa4b7f523ae4dc3ba93b1753689977eb5d2363",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:34:44.516955+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:37:39.369772+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_mol_edit_add": {
+        "correct_count": 8.0,
+        "correct_rate": 80.0,
+        "tanimoto_similarity": 59.04,
+        "total_count": 10.0,
+        "valid_count": 8.0,
+        "valid_rate": 80.0
+      },
+      "chemcotbench_mol_edit_delete": {
+        "correct_count": 3.0,
+        "correct_rate": 30.0,
+        "tanimoto_similarity": 46.59,
+        "total_count": 10.0,
+        "valid_count": 7.0,
+        "valid_rate": 70.0
+      },
+      "chemcotbench_mol_edit_sub": {
+        "correct_count": 9.0,
+        "correct_rate": 30.0,
+        "tanimoto_similarity": 53.39,
+        "total_count": 30.0,
+        "valid_count": 24.0,
+        "valid_rate": 80.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "Cc1cccc(NC2CCN(C(=O)CC3([N+](=O)[O-])CCCC3)CC2)c1",
+        "model_output": "{\n    \"output\": \"Cc1cccc(NC2CCN(C(=O)CC3(O)CCCC3)CC2)c1\"\n}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Cc1cccc(NC2CCN(C(=O)CC3(O)CCCC3)CC2)c1, Functional Group to delete: hydroxyl, Functional Group to add: nitro\n"
+      },
+      {
+        "gold": "CC(C)n1cnnc1[S@@](=O)Cc1ccc([N+](=O)[O-])cc1Cl",
+        "model_output": "{\n    \"output\": CC(C)n1cnnc1[S@@](=O)Cc1ccc(NO)cc1Cl\n}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CC(C)n1cnnc1[S@@](=O)Cc1ccc(Cl)cc1Cl, Functional Group to delete: halo, Functional Group to add: nitro\n"
+      },
+      {
+        "gold": "O=C([O-])CCCC(=O)Nc1ccccc1",
+        "model_output": "{\n    \"output\": \"O=C([O-])CCCC(=O)Nc1ccc([N+](=O)[O-])cc1\"\n}",
+        "question": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C([O-])CCCC(=O)Nc1ccc([N+](=O)[O-])cc1, Functional Group to delete: nitro.\n"
+      },
+      {
+        "gold": "Oc1ccc(OCc2ccn(-c3ccccc3)n2)cc1",
+        "model_output": "{\n    \"output\": \"OCc1ccn(-c2ccccc2)n1O\"\n}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=Cc1ccc(OCc2ccn(-c3ccccc3)n2)cc1, Functional Group to delete: aldehyde, Functional Group to add: hydroxyl\n"
+      },
+      {
+        "gold": "CS(=O)(=O)N1CCC(CNS(=O)(=O)c2ccccc2O)CC1",
+        "model_output": "{\n    \"output\": \"CS(=O)(=O)N1CCC(CNS(=O)(=O)c2ccccc2NO)CC1O\"\n}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CS(=O)(=O)N1CCC(CNS(=O)(=O)c2ccccc2[N+](=O)[O-])CC1, Functional Group to delete: nitro, Functional Group to add: hydroxyl\n"
+      },
+      {
+        "gold": "CC(=O)N.C[NH+]1CCC(C2CCOCC2)CC1",
+        "model_output": "{\n    \"output\": CC(=O)Nc1ccc(C[NH+]2CCC(C3CCOCC3)CC2)cc1\n}",
+        "question": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CC(=O)Nc1ccc(C[NH+]2CCC(C3CCOCC3)CC2)cc1, Functional Group to delete: benzene_ring.\n"
+      },
+      {
+        "gold": "Cc1cnc(=O)n(C[C@H](C=O)C(C)(C)C)c1",
+        "model_output": "{\n    \"output\": \"CC(=O)c1cnc(=O)n(C[C@H](CS)C(C)(C)C)c1\"\n}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Cc1cnc(=O)n(C[C@H](CS)C(C)(C)C)c1, Functional Group to delete: thiol, Functional Group to add: aldehyde\n"
+      },
+      {
+        "gold": "CCN(Cc1ccccn1)c1ccco1",
+        "model_output": "{\n    \"output\": \"CCN(Cc1ccccn1)c1ccc(=O)o1\"\n}",
+        "question": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: CCN(Cc1ccccn1)c1ccc(C=O)o1, Functional Group to delete: aldehyde.\n"
+      },
+      {
+        "gold": "Cc1ccccc1OCC(=O)NCC(CS)C(=O)[O-]",
+        "model_output": "{\n    \"output\": \"Cc1ccccc1OCC(=O)NCCC(=O)[O-]S\"\n}",
+        "question": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: Cc1ccccc1OCC(=O)NCCC(=O)[O-], Functional Group to add: thiol.\n"
+      },
+      {
+        "gold": "[O-][N+](=O)[C@H](CN1CCN(c2ccccc2F)CC1)Cn1nnnc1-c1ccccc1",
+        "model_output": "{\n    \"output\": \"ONC1CCN2FCN(n1)Cn1nnnc1-c1ccccc1\"\n}",
+        "question": "\"You are a chemical assistent. Given the SMILES structural formula of a molecule, help me ADD and DELETE specified functional groups and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Names. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O[C@H](CN1CCN(c2ccccc2F)CC1)Cn1nnnc1-c1ccccc1, Functional Group to delete: hydroxyl, Functional Group to add: nitro\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_mol_edit_add": {
+      "correct_count": 8.0,
+      "correct_rate": 80.0,
+      "tanimoto_similarity": 59.04,
+      "total_count": 10.0,
+      "valid_count": 8.0,
+      "valid_rate": 80.0
+    },
+    "chemcotbench_mol_edit_delete": {
+      "correct_count": 3.0,
+      "correct_rate": 30.0,
+      "tanimoto_similarity": 46.59,
+      "total_count": 10.0,
+      "valid_count": 7.0,
+      "valid_rate": 70.0
+    },
+    "chemcotbench_mol_edit_sub": {
+      "correct_count": 9.0,
+      "correct_rate": 30.0,
+      "tanimoto_similarity": 53.39,
+      "total_count": 30.0,
+      "valid_count": 24.0,
+      "valid_rate": 80.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 46.666666666666664,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "unweighted mean correct_rate across add, delete, and substitute",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_edit_add",
+          "metric": "correct_rate",
+          "value": 80.0
+        },
+        {
+          "dataset": "chemcotbench_mol_edit_delete",
+          "metric": "correct_rate",
+          "value": 30.0
+        },
+        {
+          "dataset": "chemcotbench_mol_edit_sub",
+          "metric": "correct_rate",
+          "value": 30.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/validation_sweep/candidates/durable_output__rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc__7bfa0cfd8107/workspace"
+}

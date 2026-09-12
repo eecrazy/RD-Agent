@@ -1,0 +1,165 @@
+TABLEBENCH_HF_PATH='Multilingual-Multimodal-NLP/TableBench'
+datasets=[
+    dict(abbr='tablebench_numerical',
+        eval_cfg=dict(
+            evaluator=dict(
+                metric='exact_match_with_final_answer',
+                type='opencompass.datasets.tablebench.TableBenchEvaluator')),
+        infer_cfg=dict(
+            inferencer=dict(
+                max_out_len=4096,
+                type='opencompass.openicl.icl_inferencer.GenInferencer'),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='{instruction}\n\nTable:\n{table}\n\nQuestion: {question}\n\nPlease analyze the table and provide the numerical answer. End your response with "Final Answer: <your numerical answer>".\n\nAnswer:',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            retriever=dict(
+                type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+        instruction_type='TCoT',
+        path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench',
+        qtype='NumericalReasoning',
+        reader_cfg=dict(
+            input_columns=[
+                'table',
+                'question',
+                'instruction',
+                ],
+            output_column='answer',
+            test_range='[-min(100, len(index_list)//2):]'),
+        type='opencompass.datasets.tablebench.TableBenchDataset'),
+    ]
+ds=dict(
+    abbr='tablebench_numerical',
+    eval_cfg=dict(
+        evaluator=dict(
+            metric='exact_match_with_final_answer',
+            type='opencompass.datasets.tablebench.TableBenchEvaluator')),
+    infer_cfg=dict(
+        inferencer=dict(
+            max_out_len=4096,
+            type='opencompass.openicl.icl_inferencer.GenInferencer'),
+        prompt_template=dict(
+            template=dict(
+                round=[
+                    dict(prompt='{instruction}\n\nTable:\n{table}\n\nQuestion: {question}\n\nPlease analyze the table and provide the numerical answer. End your response with "Final Answer: <your numerical answer>".\n\nAnswer:',
+                        role='HUMAN'),
+                    ]),
+            type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+        retriever=dict(
+            type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+    instruction_type='TCoT',
+    path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench',
+    qtype='NumericalReasoning',
+    reader_cfg=dict(
+        input_columns=[
+            'table',
+            'question',
+            'instruction',
+            ],
+        output_column='answer',
+        test_range='[-min(100, len(index_list)//2):]'),
+    type='opencompass.datasets.tablebench.TableBenchDataset')
+eval=dict(
+    partitioner=dict(
+        type='NaivePartitioner'),
+    runner=dict(
+        max_num_workers=16,
+        task=dict(
+            dump_details=True,
+            type='OpenICLEvalTask'),
+        type='LocalRunner'))
+infer=dict(
+    partitioner=dict(
+        type='NaivePartitioner'),
+    runner=dict(
+        max_num_workers=16,
+        task=dict(
+            type='OpenICLInferTask'),
+        type='LocalRunner'))
+models=[
+    dict(abbr='ft-tablebench_numerical_reasoning',
+        batch_size=16,
+        generation_kwargs=dict(
+            temperature=0.0,
+            top_k=1,
+            top_p=1.0),
+        lora_path='selected_model',
+        max_out_len=8192,
+        max_seq_len=32768,
+        model_kwargs=dict(
+            dtype='bfloat16',
+            enable_lora=True,
+            gpu_memory_utilization=0.9,
+            max_cpu_loras=1,
+            max_lora_rank=64,
+            max_model_len=32768,
+            tensor_parallel_size=1,
+            trust_remote_code=True),
+        path='/data/github/RD-Agent/finetune_files/models/Qwen/Qwen2.5-7B-Instruct',
+        run_cfg=dict(
+            num_gpus=1,
+            num_procs=1),
+        type='opencompass.models.VLLMwithChatTemplate'),
+    ]
+pinned_dataset_path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench'
+tablebench_base_reader_cfg=dict(
+    input_columns=[
+        'table',
+        'question',
+        'instruction',
+        ],
+    output_column='answer')
+tablebench_numerical_datasets=[
+    dict(abbr='tablebench_numerical',
+        eval_cfg=dict(
+            evaluator=dict(
+                metric='exact_match_with_final_answer',
+                type='opencompass.datasets.tablebench.TableBenchEvaluator')),
+        infer_cfg=dict(
+            inferencer=dict(
+                max_out_len=4096,
+                type='opencompass.openicl.icl_inferencer.GenInferencer'),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='{instruction}\n\nTable:\n{table}\n\nQuestion: {question}\n\nPlease analyze the table and provide the numerical answer. End your response with "Final Answer: <your numerical answer>".\n\nAnswer:',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            retriever=dict(
+                type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+        instruction_type='TCoT',
+        path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench',
+        qtype='NumericalReasoning',
+        reader_cfg=dict(
+            input_columns=[
+                'table',
+                'question',
+                'instruction',
+                ],
+            output_column='answer',
+            test_range='[-min(100, len(index_list)//2):]'),
+        type='opencompass.datasets.tablebench.TableBenchDataset'),
+    ]
+tablebench_numerical_eval_cfg=dict(
+    evaluator=dict(
+        metric='exact_match_with_final_answer',
+        type='opencompass.datasets.tablebench.TableBenchEvaluator'))
+tablebench_numerical_infer_cfg=dict(
+    inferencer=dict(
+        max_out_len=4096,
+        type='opencompass.openicl.icl_inferencer.GenInferencer'),
+    prompt_template=dict(
+        template=dict(
+            round=[
+                dict(prompt='{instruction}\n\nTable:\n{table}\n\nQuestion: {question}\n\nPlease analyze the table and provide the numerical answer. End your response with "Final Answer: <your numerical answer>".\n\nAnswer:',
+                    role='HUMAN'),
+                ]),
+        type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+    retriever=dict(
+        type='opencompass.openicl.icl_retriever.ZeroRetriever'))
+test_range_override='[-min(100, len(index_list)//2):]'
+work_dir='./benchmark_results/test/20260910_172646'

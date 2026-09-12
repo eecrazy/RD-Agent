@@ -1,0 +1,225 @@
+{
+  "candidate_id": "durable_output__rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb__8aefd1aff367",
+  "source": "durable_output",
+  "workspace_id": "rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb",
+  "checkpoint_step": null,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-1/workspace/.ft_model_checkpoints/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb/output",
+  "selection_signature": "8630e8098e2ff99759907ded9ba90acf8cca5f98bcfcaa2257a7baf787fb4ba8",
+  "formal_training_evidence_signature": "bed904586fdef8e8211aeb2c6fe1c88ec8c59315acce0a46e293091a432725d2",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-1",
+  "benchmark": "chemcotbench_reaction",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "66a9fc6e7cf86f4fd75dd58726eb0fbe734159e8f4e4cfc5d973af409bdfe9a6",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:43:01.435378+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:48:41.370600+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_reaction_fs": {
+        "bleu": 0.0,
+        "exact_match": 2.0,
+        "exact_match_count": 1.0,
+        "levenshtein": 0.2,
+        "maccs_sims": 3.86,
+        "morgan_sims": 3.34,
+        "rdk_sims": 3.66,
+        "total_count": 50.0,
+        "valid_count": 2.0,
+        "validity": 4.0
+      },
+      "chemcotbench_reaction_mechsel": {
+        "accuracy": 58.0,
+        "correct_count": 29.0,
+        "total_count": 50.0
+      },
+      "chemcotbench_reaction_nepp": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 42.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      },
+      "chemcotbench_reaction_rcr": {
+        "exact_count": 0.0,
+        "exact_match": 0.0,
+        "total_count": 45.0
+      },
+      "chemcotbench_reaction_retro": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.76,
+        "maccs_sims": 2.7,
+        "morgan_sims": 2.51,
+        "rdk_sims": 3.34,
+        "total_count": 50.0,
+        "valid_count": 11.0,
+        "validity": 22.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "CCO",
+        "model_output": "The reaction is a reduction of a nitro group to an amine. The reactant is 2-(4-nitrophenyl)imidazo[1,2-a]pyridine, and the product is 2-(4-aminophenyl)imidazo[1,2-a]pyridine. This transformation is typically achieved using a metal (e.g., iron, zinc) in the presence of a reducing agent (e.g., hydrogen gas, ammonium formate, or formic acid). The solvent system is crucial for the reaction to proceed efficiently. A polar protic solvent is often preferred for this type of reduction. Water is a common choice, often used in combination with a co-solvent like methanol or ethanol to facilitate the reaction. This solvent system is effective for dissolving the starting material and the metal catalyst, and it is compatible with the reducing agents commonly used for this transformation. Therefore, the most recommended solvent is water.\n{\"SMILES\":\"O\"}",
+        "question": "Given the following reaction under the type of Reduction:\nO=C(Nc1nnn[nH]1)c1cccc([N+](=O)[O-])c1>>Nc1cccc(C(=O)Nc2nnn[nH]2)c1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "A",
+        "model_output": "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Miyaura boration', a variant of the Miyaura boration, which is a type of Suzuki-Miyaura cross-coupling. The goal is to form a C-B bond by coupling an aryl/vinyl halide with a diboron reagent. Step-2, Analyze Reagents Condition, The reagents are specified as '[O][Pd;+0][O]' and '[N;+0]-[C;!H0]'. The first SMARTS represents a Pd(0) species with two oxygen-based ligands, likely from a Pd(II) precatalyst reduction (e.g., Pd(OAc)2). The second SMARTS '[N;+0]-[C;!H0]' represents an amine agent, which is a common additive in palladium-catalyzed cross-coupling reactions, often used to facilitate the catalytic cycle. The reaction condition 'Reaction with Pd(OR)2 and amine agent' implies the use of a Pd(II) precatalyst like Pd(OAc)2, which must be reduced in situ to the active Pd(0) catalyst. The amine acts as a base and a ligand. Step-3, Recall Mechanism Basics, The standard catalytic cycle for Suzuki-Miyaura type reactions involves: 1. Oxidative addition of the aryl/vinyl halide to the Pd(0) catalyst. 2. Transmetalation, where the organic group from the diboron reagent is transferred to the palladium center. 3. Reductive elimination, where the two organic groups on the palladium couple to form the final product, regenerating the Pd(0) catalyst. The amine agent typically serves as a base to deprotonate the boronic acid/ester, facilitating the transmetalation step. Step-4, Evaluate Each Option, Let's evaluate the choices based on the standard mechanism, starting from a Pd(II) precatalyst and the role of the amine.\n* **A:** Includes 'Amine coordination' and 'Imine formation', which is not a standard step in this mechanism. It also includes 'PdX+ formation' and 'PdX2 formation', which is confusing. It correctly lists 'Oxidative addition', 'Halide leaving', 'Borate formation', 'Deprotonation of borate', 'Transmetalation', 'Neutralization', and 'Reductive elimination'. However, the initial steps are mechanistically questionable.\n* **B:** Starts with 'Oxidative addition', which is the first step of the catalytic cycle, but it omits the crucial initial reduction of the Pd(II) precatalyst to the active Pd(0) species. It also includes 'Borate formation' and 'Deprotonation of borate' before oxidative addition, which is incorrect. The sequence is mechanistically flawed.\n* **C:** This option includes many pre-catalytic steps like 'PdX+ formation', 'PdX2 formation', 'Hydroxide ion preparation', 'Hydroxide-Phosphine reaction', 'Palladium reduction', and 'Ligand dissociation - reductive elimination type'. While the reduction of Pd(II) to Pd(0) is necessary, the initial steps described are overly complex and not universally applicable. It also includes 'Borate formation' and 'Deprotonation of borate' before oxidative addition, which is incorrect.\n* **D:** This option is similar to C but adds more detail about ligand formation and reduction. It still incorrectly places 'Borate formation' and 'Deprotonation of borate' before oxidative addition.\n* **E:** This option includes 'Palladium-ligand formation', 'Hydroxide-cyclooctadiene reaction', 'Beta-H elimination', and 'Ligand dissociation - reductive elimination type'. These steps are not standard for a general Pd(II)/amine system. It also incorrectly places the pre-catalytic steps before the main cycle.\n* **F:** This option starts with 'First Pd-P ligand formation' and 'Second Pd-P ligand formation', which is plausible for a Pd(0) complex. It then correctly lists the core catalytic cycle: 'Oxidative addition', 'Halide leaving', 'Borate formation' (this step is unusual in the standard mechanism, but the option includes it), 'Deprotonation of borate' (this step is also unusual but included), 'Transmetalation', 'Neutralization', and 'Reductive elimination'. The inclusion of 'Borate formation' and 'Deprotonation of borate' before oxidative addition is mechanistically incorrect for a standard Suzuki cycle, but the rest of the sequence,",
+        "question": "For reaction class: 'Bromo Miyaura boration', under the condition of 'Reaction with Pd(OR)2 and amine agent' and given reagents (writtin in SMARTS format) '[O][Pd;+0][O].[N;+0]-[C;!H0]', which following description is the correct elementary reaction stages description, considering the mechanism of this type of reaction?\n\nChoices:\nA: Amine coordination | Imine formation | Reductive elimination | Oxidative addition | Halide leaving | Borate formation | Deprotonation of borate | Transmetalation | Neutralization | Reductive elimination\nB: Oxidative addition | Halide leaving | Borate formation | Deprotonation of borate | Transmetalation | Neutralization | Reductive elimination\nC: PdX+ formation | PdX2 formation | Hydroxide ion preparation | Hydroxide-Phosphine reaction | Deprotonation | Palladium reduction | Ligand dissociation - reductive elimination type | Oxidative addition | Halide leaving | Borate formation | Deprotonation of borate | Transmetalation | Neutralization | Reductive elimination\nD: Palladium-ligand dissociation | Palladium-ligand formation | Hydroxide ion preparation | Hydroxide-Phosphine reaction | Deprotonation | Palladium reduction | Ligand dissociation - reductive elimination type | First Pd-P ligand formation | Second Pd-P ligand formation | Oxidative addition | Halide leaving | Borate formation | Deprotonation of borate | Transmetalation | Neutralization | Reductive elimination\nE: Palladium-ligand formation | Hydroxide ion preparation | Hydroxide-cyclooctadiene reaction | Beta-H elimination | Ligand dissociation - reductive elimination type | Oxidative addition | Halide leaving | Borate formation | Deprotonation of borate | Transmetalation | Neutralization | Reductive elimination\nF: First Pd-P ligand formation | Second Pd-P ligand formation | Oxidative addition | Halide leaving | Borate formation | Deprotonation of borate | Transmetalation | Neutralization | Reductive elimination\nG: Ligand leaving | Ligand leaving | Oxidative addition | Halide leaving | Borate formation | Deprotonation of borate | Transmetalation | Neutralization | Reductive elimination\n\nReturn the choice (capital letter) in JSON format:\n{\n    \"choice\": str # (e.g. 'A'/'B')\n}\n"
+      },
+      {
+        "gold": "ClN=C(N)c1ccc2cc(OC(=O)c3ccc(CNC(=O)Cc4ccc(C(=O)O)cc4)o3)ccc2c1",
+        "model_output": "Step 1: Parse Reactants/Reagents: Reactant 1: `Cl` (interpreted as HCl, hydrochloric acid, a common reagent for deprotection). Reactant 2: `Cl` (interpreted as HCl, hydrochloric acid). Reactant 3: `CC(C)(C)OC(=O)c1ccc(CC(=O)NCc2ccc(C(=O)Oc3ccc4cc(C(=N)N)ccc4c3)o2)cc1` (a complex molecule containing a tert-butyl ester, a piperidine ring, a carboxylic acid, and a pyrimidine ring). Reagent: `O` (interpreted as water, H2O, a common reagent for hydrolysis). Reagent: `CC(=O)O` (interpreted as acetic acid, CH3COOH, a common reagent for hydrolysis).\nStep 2: Identify Functional Groups: Reactant 3 contains: tert-butyl ester (`-C(=O)OC(C)(C)C`), carboxylic acid (`-C(=O)O`), piperidine ring, pyrimidine ring, and a primary amide (`-C(=N)N`). Reagents `O` (water) and `CC(=O)O` (acetic acid) are strong nucleophiles and catalysts for hydrolysis.\nStep 3: Predict Reaction Type: The reaction is predicted to be a hydrolysis of the tert-butyl ester. Tert-butyl esters are known to be labile and can be hydrolyzed by water (with or without an acid catalyst like acetic acid) to form a carboxylic acid and tert-butanol. The primary amide is expected to be stable under these conditions.\nStep 4: Construct Product Structure: The tert-butyl ester group (`-C(=O)OC(C)(C)C`) on the piperidine ring of `CC(C)(C)OC(=O)c1ccc(CC(=O)NCc2ccc(C(=O)Oc3ccc4cc(C(=N)N)ccc4c3)o2)cc1` is hydrolyzed to a carboxylic acid group (`-C(=O)O`). The rest of the molecule remains unchanged. The product is `CC(C)(C)OC(=O)c1ccc(CC(=O)NCc2ccc(C(=O)O)Oc3ccc4cc(C(=N)N)ccc4c3)o2)cc1`.\n{\"Major Product\": \"CC(C)(C)OC(=O)c1ccc(CC(=O)NCc2ccc(C(=O)O)Oc3ccc4cc(C(=N)N)ccc4c3)o2)cc1\", \"Byproduct(s)\": \"CC(C)(C)O\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cl.Cl.CC(C)(C)OC(=O)c1ccc(CC(=O)NCc2ccc(C(=O)Oc3ccc4cc(C(=N)N)ccc4c3)o2)cc1\nReagents: O.CC(=O)O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "C[C@H](CO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C)C(=O)N=[N+]=[N-]",
+        "model_output": "Step-1, Deconstruct Product, The product, C[C@H](CO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C)N=C=O, is an N-tert-butyldiphenylsilyl (TBDPS) protected amino acid derivative. The core structure is a 2-amino-3-(tert-butyldiphenylsilyl)propanoic acid moiety, where the amino group is protected with a TBDPS group. Step-2, Analyze Reagent Role, The formation of the product involves the creation of a new carbon-nitrogen bond. This points towards a nucleophilic substitution reaction, specifically a reductive amination. One reactant will act as a nucleophile (an amine), and the other will act as an electrophile (an aldehyde). Step-3, Strategic Bond Cleavage, The most logical disconnection is the C-N bond between the alpha-carbon and the nitrogen atom. This is a standard retrosynthetic step for amines, leading back to an amine and an imine (or an aldehyde). Step-4, Select Optimal Pathway, The optimal pathway is the reductive amination of 2-(tert-butyldiphenylsilyl)propanoic acid with formaldehyde. The amine part of the product, C[C@H](CO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C), is disconnected to 2-(tert-butyldiphenylsilyl)propanoic acid. The other part, -C(=O)NH2, is disconnected to formaldehyde (C=O). The reaction is typically catalyzed by enzymes (like yeast alcohol dehydrogenase) or metal complexes (like Pd/C) in the presence of a reducing agent (like formic acid or sodium cyanoborohydride). Step-5, Verify Logic, The proposed reaction, the reductive amination of 2-(tert-butyldiphenylsilyl)propanoic acid with formaldehyde, is a well-established and reliable method for synthesizing N-protected amino acids. The TBDPS protecting group is stable under the conditions required for this reaction. Therefore, this retrosynthetic analysis is chemically sound and represents a plausible synthetic route.\n{\"Reactants\": \"C[C@H](CO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C)C=O.C=O\"}",
+        "question": "Given the product SMILES and reagents SMILES, your task is to predict the reactants SMILES using your experienced chemical Retrosynthesis knowledge.\n\nInput:\nProduct SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nReactants SMILES separated by '.'\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes only the reactants SMILES:\n\nQuestion:\nProducts: C[C@H](CO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C)N=C=O\nReagents: Cc1ccccc1.N#N\n\nAnswer:\n{\n    \"Reactants\": ...\n}\n\n"
+      },
+      {
+        "gold": "CN(C)C=O",
+        "model_output": "This reaction is a protection of a primary alcohol to a tert-butoxycarbonyl (Boc) group. The reactants are a primary alcohol (CC(C)(C)CO) and a carboxylic acid (O=C(O)c1ccnc(Cl)c1). The Boc protecting group is a common choice for primary alcohols, especially when they are reactive or need to be isolated. The reaction typically proceeds via a nucleophilic acyl substitution mechanism, where the alcohol acts as a nucleophile and attacks the carbonyl carbon of the Boc anhydride. The Boc anhydride is a common reagent for this transformation. The SMILES for the Boc anhydride is O=C(OC(C)(C)C)OC(=O)O. While a base is often used to deprotonate the alcohol, the specific catalyst or reagent for the alcohol itself is the Boc anhydride. Therefore, the most recommended catalyst for this reaction is the Boc anhydride.\n{\"SMILES\": \"O=C(OC(C)(C)C)OC(=O)O\"}",
+        "question": "Given the following reaction under the type of Protection:\nCC(C)(C)CO.O=C(O)c1ccnc(Cl)c1>>CC(C)(C)COC(=O)c1ccnc(Cl)c1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "I[Cu]I",
+        "model_output": "The reaction is a Buchwald-Hartwig amination, a palladium-catalyzed cross-coupling reaction for the formation of carbon-nitrogen bonds. The key reactants are an aryl iodide (4-methyl-1,2,3,4-tetrahydro-isoquinoline-3-carbonyl iodide) and an amine (N-(4-methyl-1,2,3,4-tetrahydro-isoquinolin-3-yl)glycine). The most common and effective catalyst for this type of reaction is a palladium complex, typically a Pd(0) species. A common and highly effective Pd(0) source is Pd(PPh3)4, where PPh3 is triphenylphosphine. This ligand is often used in combination with a base (e.g., K2CO3, Cs2CO3) and a suitable solvent (e.g., dioxane, DMF, or a mixture with water). The triphenylphosphine ligand is known for its stability and effectiveness in promoting the catalytic cycle for Buchwald-Hartwig aminations.\n{\"SMILES\": \"O=P(c1ccc(P(c2ccccc2)c2ccccc2)ccc1)OCC\"}",
+        "question": "Given the following reaction under the type of Heteroatom Alkylation and Arylation:\nCC1CNC(=O)N1c1ccc2ncsc2c1.Cc1ccncc1I>>Cc1ccncc1N1CC(C)N(c2ccc3ncsc3c2)C1=O,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "[Pd]",
+        "model_output": "This reaction is a deprotection of a tert-butoxycarbonyl (Boc) group from a nitrogen atom. The Boc group is a common protecting group for amine functionalities. The deprotection is typically achieved by cleavage of the tert-butoxycarbonyl-oxygen bond. This can be accomplished through various methods, including acidolysis, hydrolysis, or using specific reagents like piperidine.\n\n1. **Acidolysis**: This method involves treating the Boc-protected amine with an acid, such as trifluoroacetic acid (TFA) or hydrochloric acid (HCl). TFA is a very common and effective reagent for Boc deprotection. It cleaves the Boc group cleanly, releasing the free amine, carbon dioxide (CO2), and tert-butanol (TBA). This method is generally mild enough not to affect other functional groups like the ester or the imine in the molecule.\n2. **Hydrolysis**: This method involves treating the Boc-protected amine with water, often under acidic or basic conditions. Acidic hydrolysis (e.g., with HCl) is a common approach for Boc deprotection. This method is generally more harsh than acidolysis and may require higher temperatures or longer reaction times.\n3. **Piperidine**: Piperidine is a mild reagent used for Boc deprotection. It reacts with the Boc group to form a stable piperidinyl carbamate intermediate, which can then be hydrolyzed under neutral or slightly basic conditions to yield the free amine. This method is often preferred for its mildness and selectivity.\n4. **Other Reagents**: Other reagents like 1,2-dimethoxyethane (DME) or 1,2-dimethoxypropane (DMP) can also be used for Boc deprotection, often in combination with a base like triethylamine (TEA) or pyridine. These methods are generally considered less common than TFA or piperidine for this specific transformation.\n\nGiven the options, the most commonly recommended and effective catalyst for Boc deprotection is **trifluoroacetic acid (TFA)**. It is a highly effective reagent for this type of transformation and is widely used in both laboratory and industrial settings. It is generally compatible with other functional groups present in the molecule, such as the ester and the imine, under controlled conditions.\n\n{\"SMILES\": \"O=C([O-])C(F)(F)F\"}",
+        "question": "Given the following reaction under the type of Deprotection:\nCCOC(=O)C1CCN(CCn2cccc(-c3ccc(C(=O)OCc4ccccc4)cc3)c2=O)CC1>>CCOC(=O)C1CCN(CCn2cccc(-c3ccc(C(=O)O)cc3)c2=O)CC1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "CCCCCCC(=O)C(=O)OC",
+        "model_output": "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)C(=O)OC (Ethyl methyl malonate). Reactant 2: CCCCCC[Mg]Br (Hexylmagnesium bromide). Reagent: C1CCOC1 (Cyclopropylmethanol).\nStep 2: Identify Functional Groups: Ethyl methyl malonate: Contains a methyl ester group (-COOCH3) and a malonate group (-C(=O)C(=O)O). Hexylmagnesium bromide: A Grignard reagent, where the hexyl group (CCCCCC-) is a strong nucleophile. Cyclopropylmethanol: Contains a primary alcohol group (-OH).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The Grignard reagent (hexylmagnesium bromide) will react with the ester group of ethyl methyl malonate. The methyl ester group is more reactive towards Grignard reagents than the malonate group. The hexyl group will act as a nucleophile, attacking the electrophilic carbonyl carbon of the ester. This will lead to the formation of a ketone. The magnesium bromide will act as a counterion.\nStep 4: Construct Product Structure: The hexyl group (CCCCCC-) from hexylmagnesium bromide will replace the -OCH3 group of the ethyl methyl malonate. The ethyl group (COC-) and the malonate group (C(=O)C(=O)O) will remain unchanged. The product will be ethyl 2-(hexyl)-3-oxopropanoate.\n{\"Major Product\": COC(=O)C(=O)C(CCCCCC)C}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C(=O)OC.CCCCCC[Mg]Br\nReagents: C1CCOC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "[H][H]",
+        "model_output": "Step-1, Identify Reaction Type Goal, The reaction is a deprotection of a tert-butyldimethylsilyl (TBDMS) ether. The goal is to cleave the C-O bond between the ether oxygen and the silyl group, releasing the free alcohol. Step-2, Analyze Substrate, The substrate is a complex molecule containing a TBDMS-protected alcohol. The core structure is a substituted benzene ring attached to a cyclohexyl group, which is further attached to a 2,6-dimethylphenyl group. The key functional group for this reaction is the TBDMS ether (-O-Si(CH3)2-tBu). Step-3, Determine Optimal Pathway, The most common and effective method for cleaving a TBDMS ether is through fluoride-mediated cleavage. This pathway is selective and typically does not affect other sensitive functional groups like esters, amides, or aromatic rings under mild conditions. Step-4, Select Reagent, The reagent required for this transformation is a source of fluoride ions. Tetrabutylammonium fluoride (TBAF) is a highly effective and standard reagent for this purpose. It is a stable, non-hydrolyzing source of fluoride that efficiently cleaves the TBDMS ether. Step-5, Verify Logic, The reaction of a TBDMS ether with TBAF is a well-established and reliable chemical transformation. The TBDMS group is known to be labile to fluoride, leading to the cleavage of the C-O bond and the formation of the free alcohol and dimethylsilyl fluoride. This reagent is chosen for its high efficiency and selectivity for this specific deprotection.\n{\"SMILES\":\"[Si](C)(C)C[Si](C)(C)C[O-]#[N+](C)(C)C\"}",
+        "question": "Given the following reaction under the type of Functional Group Interconversion:\nCOC(=O)c1ccc2c(c1)CCC(Oc1ccnc(Cl)c1)C2>>COC(=O)c1ccc2c(c1)CCC(Oc1ccncc1)C2,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "Cc1n[nH]c(=S)[nH]c1=O",
+        "model_output": "Step 1: Parse Reactants/Reagents: Reactant 1: CC(=NNC(N)=S)C(=O)O (N-(2-(methylsulfonyl)ethyl)-2-(methylsulfonyl)acetamide). Reagent 1: O (Water). Reagent 2: O=C(O[Na])O[Na] (Sodium carbonate).\nStep 2: Identify Functional Groups: Reactant 1 contains a primary amide (-CONH2) group, a sulfonamide (-NHSO2-) group, and a carboxylic acid (-COOH) group. Reagent 1 (Water) is a protic solvent. Reagent 2 (Sodium carbonate) is a base.\nStep 3: Predict Reaction Type: The reaction is predicted to be a base-catalyzed hydrolysis of the primary amide (saponification). The carboxylic acid group is expected to be less reactive under these conditions compared to the primary amide. The sulfonamide group is generally stable to hydrolysis under these conditions.\nStep 4: Construct Product Structure: The primary amide group (-CONH2) in the reactant CC(=NNC(N)=S)C(=O)O is converted to a carboxylate salt. The nitrogen atom of the primary amide becomes a carboxylate anion ([O-]C(=O)O[Na]). The rest of the molecule, including the sulfonamide and the carboxylic acid, remains unchanged. The product is sodium 2-(methylsulfonyl)acetate and the corresponding carboxylate anion.\n{\"Major Product\": CC(=NNC(N)=S)C(=O)[O-].O=C(O)O[Na]{\"Byproduct(s)\": \"O\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(=NNC(N)=S)C(=O)O\nReagents: O.O=C(O[Na])O[Na]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_reaction_fs": {
+      "bleu": 0.0,
+      "exact_match": 2.0,
+      "exact_match_count": 1.0,
+      "levenshtein": 0.2,
+      "maccs_sims": 3.86,
+      "morgan_sims": 3.34,
+      "rdk_sims": 3.66,
+      "total_count": 50.0,
+      "valid_count": 2.0,
+      "validity": 4.0
+    },
+    "chemcotbench_reaction_mechsel": {
+      "accuracy": 58.0,
+      "correct_count": 29.0,
+      "total_count": 50.0
+    },
+    "chemcotbench_reaction_nepp": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.0,
+      "maccs_sims": 0.0,
+      "morgan_sims": 0.0,
+      "rdk_sims": 0.0,
+      "total_count": 42.0,
+      "valid_count": 0.0,
+      "validity": 0.0
+    },
+    "chemcotbench_reaction_rcr": {
+      "exact_count": 0.0,
+      "exact_match": 0.0,
+      "total_count": 45.0
+    },
+    "chemcotbench_reaction_retro": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.76,
+      "maccs_sims": 2.7,
+      "morgan_sims": 2.51,
+      "rdk_sims": 3.34,
+      "total_count": 50.0,
+      "valid_count": 11.0,
+      "validity": 22.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "fingerprint_similarity",
+      "label": "FTS",
+      "value": 1.95,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mean Morgan fingerprint similarity of fs, retro, and nepp",
+      "components": [
+        {
+          "dataset": "chemcotbench_reaction_fs",
+          "metric": "morgan_sims",
+          "value": 3.34
+        },
+        {
+          "dataset": "chemcotbench_reaction_nepp",
+          "metric": "morgan_sims",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_reaction_retro",
+          "metric": "morgan_sims",
+          "value": 2.51
+        }
+      ]
+    },
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 58.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mechanism-selection accuracy",
+      "components": [
+        {
+          "dataset": "chemcotbench_reaction_mechsel",
+          "metric": "accuracy",
+          "value": 58.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-1/validation_sweep/candidates/durable_output__rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb__8aefd1aff367/workspace"
+}

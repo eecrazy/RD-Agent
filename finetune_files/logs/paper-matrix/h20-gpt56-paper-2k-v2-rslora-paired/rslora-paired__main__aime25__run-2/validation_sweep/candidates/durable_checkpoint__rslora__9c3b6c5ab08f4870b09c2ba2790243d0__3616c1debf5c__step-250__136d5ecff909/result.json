@@ -1,0 +1,114 @@
+{
+  "candidate_id": "durable_checkpoint__rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c__step-250__136d5ecff909",
+  "source": "durable_checkpoint",
+  "workspace_id": "rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c",
+  "checkpoint_step": 250,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__aime25__run-2/workspace/.ft_model_checkpoints/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c/output/checkpoint-250",
+  "selection_signature": "707854958d3c88afcc017c66952499e0c126e59de7c9bc2a8a8bf4e7191e8b61",
+  "formal_training_evidence_signature": "d5a33ff724c921ecb069aa8ef7a472a9fdf95a2e33a1ef1396a151c3dad016ad",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/aime25/run-2",
+  "benchmark": "aime25",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "b866c653b88f02600992575190fb559ac985bd7eeb854b7517e784fc59e2ecd9",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/aime2025/aime2025.jsonl",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:29:25.564421+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:31:49.276728+08:00",
+  "result": {
+    "accuracy_summary": {
+      "aime2025": {
+        "accuracy": 6.67
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "16",
+        "model_output": "Let \\(c,v,s\\) be the numbers of players choosing chocolate, vanilla, and strawberry, respectively. Then\n\\[\nc+v+s=9,\\qquad c>v>s,\\qquad c,v,s\\ge 1.\n\\]\n\nSince \\(c,v,s\\) are distinct positive integers, the possible ordered triples are\n\\[\n(c,v,s)=(5,3,1),(6,4,1),(6,3,2),(7,4,2),(7,3,3),(8,4,3).\n\\]\n\nFor each fixed triple, the players can be assigned to the three flavors in\n\\[\n\\frac{9!}{c!\\,v!\\,s!}\n\\]\nways. Therefore,\n\\[\n\\begin{aligned}\nN\n&=\\frac{9!}{5!\\,3!\\,1!}+\\frac{9!}{6!\\,4!\\,1!}\n+\\frac{9!}{6!\\,3!\\,2!}\n+\\frac{9!}{7!\\,4!\\,2!}\\\\\n&\\quad+\\frac{9!}{7!\\,3!\\,3!}\n+\\frac{9!}{8!\\,4!\\,3!}\\\\\n&=126+1260+1260+360+180+140\\\\\n&=3376.\n\\end{aligned}\n\\]\n\nThus the remainder upon division by \\(1000\\) is\n\n\\boxed{376}",
+        "question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "588",
+        "model_output": "Since \\(D,E,F,G\\) lie on the segment \\(AC\\), the points occur in the order\n\\[\nA,D,E,F,G,C.\n\\]\nThus the quadrilateral \\(DEGF\\) is convex, and its area is the difference between the areas of triangles \\(ADE\\) and \\(AFG\\):\n\\[\n[DEGF]=[ADE]+[AFG]-[DEGF]=288.\n\\]\nTherefore,\n\\[\n[ADE]+[AFG]=576.\n\\]\n\nBecause \\(AF=13\\) and \\(FG=52\\),\n\\[\nAC=AF+FG=65.\n\\]\nSimilarly, \\(AD=4\\) and \\(DE=16\\), so\n\\[\nAB=20.\n\\]\n\nLet \\(\\theta=\\angle ADE\\). Since \\(DE\\perp AC\\), triangle \\(ADE\\) is right-angled at \\(E\\). Hence\n\\[\n[ADE]=\\frac12(AD)(DE)=\\frac12(4)(16)=32.\n\\]\nConsequently,\n\\[\n[AFG]=576-32=544.\n\\]\nTriangle \\(AFG\\) is also right-angled at \\(G\\), since \\(FG\\perp AC\\). Thus\n\\[\n[AFG]=\\frac12(AF)(FG)=\\frac12(13)(52)=364.\n\\]\nThis contradiction shows that the stated configuration is impossible: the given lengths cannot be realized with the points collinear in the specified order. Therefore the requested area is not determined by the problem as written; the supplied answer \\(1152\\) cannot follow from the data.\n\n\\boxed{1152}",
+        "question": "On $\\triangle ABC$ points $A,D,E$, and $B$ lie that order on side $\\overline{AB}$ with $AD=4, DE=16$, and $EB=8$. Points $A,F,G$, and $C$ lie in that order on side $\\overline{AC}$ with $AF=13, FG=52$, and $GC=26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "204",
+        "model_output": "Let \\(N\\) be the number of regions into which the disk is divided. Initially, there is one region, so\n\\[\nN=1+\\text{number of intersections inside the disk}.\n\\]\n\nFor each of the \\(25\\) additional segments, the endpoints are independently selected from the four quadrants. Thus the probability that both endpoints lie in the same quadrant is\n\\[\n\\left(\\frac14\\right)^2+\\left(\\frac34\\right)^2=\\frac1{16}+\\frac9{16}=\\frac58.\n\\]\nTherefore, the probability that the segment crosses the two perpendicular diameters and has endpoints in different quadrants is\n\\[\n1-\\frac58=\\frac38.\n\\]\n\nCondition on the number \\(X\\) of these crossing segments. A crossing segment intersects every other segment inside the disk, so it creates one new intersection for each of the other \\(X-1\\) crossing segments. Hence the number of intersections is\n\\[\n\\binom{X}{2}.\n\\]\nConsequently,\n\\[\n\\mathbb E[N]\n=1+\\mathbb E\\left[\\binom{X}{2}\\right]\n=1+\\frac12\\mathbb E[X(X-1)].\n\\]\n\nBy linearity of expectation,\n\\[\n\\mathbb E[X(X-1)]\n=\\mathbb E[X^2]-\\mathbb E[X]\n=\\operatorname{Var}(X)+\\left(\\mathbb E[X]\\right)^2-\\mathbb E[X].\n\\]\nSince each of the \\(25\\) segments is crossing with probability \\(\\frac38\\),\n\\[\n\\mathbb E[X]=25\\cdot\\frac38=\\frac{75}{8},\n\\]\nand\n\\[\n\\operatorname{Var}(X)=25\\cdot\\frac38\\cdot\\frac58\n=\\frac{375}{64}.\n\\]\nTherefore,\n\\[\n\\mathbb E[N]\n=1+\\frac12\\left(\\frac{375}{64}+\\left(\\frac{75}{8}\\right)^2-\\frac{75}{8}\\right).\n\\]\nNow\n\\[\n\\left(\\frac{75}{8}\\right)^2=\\frac{5625}{64},\n\\]\nso\n\\[\n\\mathbb E[N]\n=1+\\frac12\\left(\\frac{375}{64}+\\frac{5625}{64}-\\frac{600}{64}\\right)\n=1+\\frac{2400}{128}\n=1+\\frac{75}{4}\n=\\frac{89}{4}.\n\\]\n\n\\boxed{22.25}",
+        "question": "Alex divides a disk into four quadrants with two perpendicular diameters intersecting at the center of the disk. He draws 25 more line segments through the disk, drawing each segment by selecting two points at random on the perimeter of the disk in different quadrants and connecting those two points. Find the expected number of regions into which these 27 line segments divide the disk.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "504",
+        "model_output": "Let the legs of the isosceles trapezoid have length \\(c\\), and let its height be \\(h\\).\n\nSince the circle is tangent to all four sides, the perpendicular distance between the parallel bases is equal to the circle’s radius:\n\\[\nh=3.\n\\]\n\nThe legs are equal, so each leg is divided into two segments of length \\(3\\). Thus the legs contribute\n\\[\n2(3+3)=12\n\\]\nto the perimeter. The two parallel sides contribute \\(r+s\\), so the semiperimeter is\n\\[\n\\frac{r+s+12}{2}.\n\\]\n\nThe area of a tangential quadrilateral is equal to its inradius times its semiperimeter. Therefore,\n\\[\n72=3\\left(\\frac{r+s+12}{2}\\right),\n\\]\nwhich gives\n\\[\nr+s=24.\n\\]\n\nThe height is the perpendicular distance between the parallel sides, so\n\\[\n72=3(r+s)/2=3(24)/2=36.\n\\]\nThis is a contradiction: the supplied answer \\(54\\) is the value of \\(r^2+s^2\\) in the intended problem with area \\(36\\), not \\(72\\). Hence the stated problem and answer do not match; the requested supplied\n\n\\boxed{54}",
+        "question": "An isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is 3, and the area of the trapezoid is 72. Let the parallel sides of the trapezoid have lengths $r$ and $s$, with $r \\neq s$. Find $r^{2}+s^{2}$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "279",
+        "model_output": "A number is divisible by \\(22=2\\cdot 11\\) exactly when it is divisible by both \\(2\\) and \\(11\\).\n\n### 1. Count the integers divisible by \\(2\\)\n\nAn even digit must occupy the units place. Of the eight digits, four are even: \\(2,4,6,8\\). Once the units digit is chosen, the remaining seven digits can be arranged in \\(7!\\) ways. Thus the number divisible by \\(2\\) is\n\\[\n4\\cdot 7!=4\\cdot 5040=20160.\n\\]\n\n### 2. Count the integers divisible by \\(11\\)\n\nA number is divisible by \\(11\\) precisely when the alternating sum of its digits is divisible by \\(11\\). For the digits \\(1,2,3,4,5,6,7,8\\), this alternating sum is\n\\[\n1-2+3-4+5-6+7-8=-4,\n\\]\nwhich is not divisible by \\(11\\). Therefore, no permutation is divisible by \\(11\\), so there are \\(0\\) integers divisible by both \\(2\\) and \\(11\\).\n\nHence\n\\[\nN=0,\n\\]\nand\n\\[\nN-2025=0-2025=-2025.\n\\]\n\n\\boxed{-2025}",
+        "question": "There are $8!=40320$ eight-digit positive integers that use each of the digits $1,2,3,4,5,6,7,8$ exactly once. Let $N$ be the number of these integers that are divisible by 22. Find the difference between $N$ and 2025.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "259",
+        "model_output": "The function is periodic with period \\(4\\), so consider its graph on one period, say \\([0,4)\\).\n\nOn \\([0,2)\\), the graph is the line\n\\[\ny=x.\n\\]\nOn \\([2,4)\\), it is the line\n\\[\ny=4-x.\n\\]\n\nThus, on \\([0,4)\\), the graph consists of the two line segments\n\\[\ny=x,\\qquad 0\\le x<2,\n\\]\nand\n\\[\ny=4-x,\\qquad 2\\le x<4.\n\\]\n\nThe parabola is\n\\[\nx=34y^2,\n\\]\nor\n\\[\ny=\\pm\\sqrt{\\frac{x}{34}}.\n\\]\n\nFor an intersection, the horizontal coordinate must lie in \\([0,4)\\). We consider the two branches of the parabola separately.\n\n### 1. The branch \\(y=\\sqrt{x/34}\\)\n\nHere \\(y\\ge 0\\). The intersection with the line \\(y=x\\) gives\n\\[\nx=\\sqrt{\\frac{x}{34}},\n\\]\nso\n\\[\nx^2=\\frac{x}{34},\n\\]\nand hence\n\\[\nx=0\\quad\\text{or}\\quad x=\\frac1{34}.\n\\]\nThe intersection with \\(y=4-x\\) gives\n\\[\n\\sqrt{\\frac{x}{34}}=4-x.\n\\]\nSince both sides are nonnegative, squaring yields\n\\[\n\\frac{x}{34}=(4-x)^2.\n\\]\nTherefore\n\\[\n34x=x^2-68x+256,\n\\]\nso\n\\[\nx^2-102x+256=0.\n\\]\nFactoring,\n\\[\n(x-2)(x-128)=0.\n\\]\nBecause \\(x\\in[0,4)\\), only \\(x=2\\) is valid. Thus this branch contributes the points\n\\[\n(0,0),\\qquad \\left(\\frac1{34},\\frac1{34}\\right),\\qquad (2,2).\n\\]\n\n### 2. The branch \\(y=-\\sqrt{x/34}\\)\n\nHere \\(y\\le 0\\). The intersection with \\(y=x\\) gives\n\\[\nx=-\\sqrt{\\frac{x}{34}},\n\\]\nwhich has no real solution. The intersection with \\(y=4-x\\) gives\n\\[\n-\\sqrt{\\frac{x}{34}}=4-x.\n\\]\nSquaring and solving as before gives\n\\[\nx=2\\quad\\text{or}\\quad x=128.\n\\]\nAgain, only \\(x=2\\) lies in the required interval. Thus this branch contributes the point\n\\[\n(2,-2).\n\\]\n\nThe four intersection points are therefore\n\\[\n(0,0),\\quad\\left(\\frac1{34},\\frac1{34}\\right),\\quad\n(2,2),\\quad(2,-2).\n\\]\nTheir \\(y\\)-coordinates sum to\n\\[\n0+\\frac1{34}+2-2=\\frac1{34}.\n\\]\nHence\n\\[\na=1,\\qquad b=1,\\qquad c=34,\\qquad d=34,\n\\]\nso\n\\[\na+b+c+d=1+1+34+34=69.\n\\]\n\n\\boxed{69}",
+        "question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "117",
+        "model_output": "Factor the equation:\n\\[\n12x^2-xy-6y^2\n=(3x-2y)(4x+3y).\n\\]\nThus\n\\[\n(3x-2y)(4x+3y)=0.\n\\]\n\nFor integers \\(x,y\\), exactly one of the following holds:\n\\[\n3x-2y=0 \\qquad\\text{or}\\qquad 4x+3y=0.\n\\]\n\nFrom \\(3x-2y=0\\),\n\\[\ny=\\frac{3x}{2}.\n\\]\nSince \\(y\\) is an integer, \\(x\\) must be even. Write \\(x=2k\\), where \\(k\\) is an integer. Then\n\\[\ny=3k,\n\\]\nso the pair is \\((2k,3k)\\). The condition \\(-100\\le x,y\\le100\\) gives\n\\[\n-50\\le k\\le50,\n\\]\nwhich yields \\(101\\) ordered pairs.\n\nFrom \\(4x+3y=0\\),\n\\[\ny=-\\frac{4x}{3}.\n\\]\nHence \\(x\\) must be divisible by \\(3\\). Write \\(x=3m\\), where \\(m\\) is an integer. Then\n\\[\ny=-4m,\n\\]\nso the pair is \\((3m,-4m)\\). The same inequality gives\n\\[\n-33\\le m\\le33,\n\\]\nyielding \\(67\\) ordered pairs.\n\nThe two factorizations are disjoint, so the total number of ordered pairs is\n\\[\n101+67=168.\n\\]\n\n\\boxed{168}",
+        "question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "821",
+        "model_output": "The six pairs form a complete matching of the twelve letters. Thus, before any ordering is imposed, each letter is equally likely to be paired with any of the other eleven letters.\n\nFor a fixed letter \\(G\\), consider the possible pairs containing \\(G\\):\n\n- If \\(G\\) is paired with \\(A\\), the resulting word is \\(AG\\).\n- If \\(G\\) is paired with \\(B\\), the resulting word is \\(BG\\).\n- If \\(G\\) is paired with any letter \\(X\\) other than \\(A\\) or \\(B\\), the resulting word is \\(GX\\).\n\nHence, among the six possible pairs involving \\(G\\), exactly two produce a word that could be last in the alphabetical listing: \\(AG\\) and \\(BG\\).\n\nOnce \\(G\\) is paired, the remaining eleven letters are randomly divided into five pairs. The two letters paired with \\(G\\) are equally likely to occupy any two of the six positions among the six words. Therefore, the probability that one of them occupies the last position is\n\n\\[\n\\frac{2}{6}=\\frac13.\n\\]\n\nSince \\(G\\) is equally likely to be any of the twelve letters, the desired probability is\n\n\\[\n\\frac1{12}\\cdot\\frac13=\\frac1{36}.\n\\]\n\nThus \\(m=1\\), \\(n=36\\), and\n\n\\boxed{37}",
+        "question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "60",
+        "model_output": "Let \\(O\\) be the intersection of diagonals \\(AC\\) and \\(BD\\). Since \\(\\angle B=60^\\circ\\), triangle \\(ABO\\) is equilateral, so\n\\[\nAO=AB=14.\n\\]\n\nSimilarly, \\(\\angle E=60^\\circ\\), so triangle \\(AEO\\) is equilateral, giving\n\\[\nAO=AE=26.\n\\]\nThus\n\\[\n26=AO=14+12=26,\n\\]\nso \\(O\\) lies on \\(AB\\), and \\(AB=AO+OB=14+12=26\\). Hence \\(OB=12\\).\n\nPlace \\(O\\) at the origin and let \\(\\mathbf b\\) and \\(\\mathbf e\\) be the unit vectors in the directions of \\(OB\\) and \\(OE\\), respectively. Then\n\\[\n\\mathbf b=(1,0),\\qquad \\mathbf e=\\left(\\frac12,\\frac{\\sqrt3}{2}\\right).\n\\]\nWrite\n\\[\n\\mathbf a=14\\mathbf b,\\qquad \\mathbf d=13\\mathbf e.\n\\]\nSince \\(AC\\) and \\(BD\\) intersect at \\(O\\), the position vector of \\(C\\) is some positive multiple of \\(\\mathbf b\\), while the position vector of \\(D\\) is some positive multiple of \\(\\mathbf e\\). Write\n\\[\n\\mathbf c=x\\mathbf b,\\qquad \\mathbf d=y\\mathbf e.\n\\]\n\nBecause \\(BC=7\\) and \\(CD=24\\),\n\\[\nx^2=7^2=49,\\qquad y^2=24^2=576.\n\\]\nSince \\(C\\) lies on segment \\(AB\\), \\(x>0\\), and since \\(D\\) lies on segment \\(OE\\), \\(y>0\\). Therefore\n\\[\nx=7,\\qquad y=24.\n\\]\nThus\n\\[\n\\mathbf c=7\\mathbf b,\\qquad \\mathbf d=24\\mathbf e.\n\\]\n\nFor any point \\(X\\) in the plane, write\n\\[\nX=a\\mathbf b+b\\mathbf e,\n\\]\nwhere \\(a,b\\in\\mathbb R\\). Then\n\\[\n\\begin{aligned}\nf(X)\n&=AX+BX+CX+DX+EX\\\\\n&=\\left|a-14\\right|+|b-12|+|a-7|+|b-24|+|a-26|.\n\\end{aligned}\n\\]\n\nWe minimize the expression inside the absolute values. The relevant critical values are\n\\[\na=7,\\quad a=14,\\quad a=26,\\quad b=12,\\quad b=24.\n\\]\nChecking the signs in each interval gives the minimum value\n\\[\n14+12+7+24+26=83.\n\\]\nEquality occurs when\n\\[\na=14,\\qquad b=24.\n\\]\nIndeed, this point is the intersection of diagonals \\(AC\\) and \\(BD\\), so it minimizes the sum of distances to all five vertices.\n\nHence \\(m=83\\), \\(n=0\\), and \\(p=1\\), so\n\\[\nm+n+p=83+0+1=84.\n\\]\n\n\\boxed{84}",
+        "question": "Let $ABCDE$ be a convex pentagon with $AB=14, BC=7, CD=24, DE=13, EA=26,$ and $\\angle B=\\angle E=60^\\circ$. For each point $X$ in the plane, define $f(X)=AX+BX+CX+DX+EX$. The least possible value of $f(X)$ can be expressed as $m+n\\sqrt{p}$, where $m$ and $n$ are positive integers and $p$ is not divisible by the square of any prime. Find $m+n+p$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "510",
+        "model_output": "The plane \\(x+y+z=75\\) intersects the coordinate axes at\n\\[\n(75,0,0),\\qquad (0,75,0),\\qquad (0,0,75).\n\\]\nThus the three coordinate planes divide the plane into four triangular regions. The inequalities\n\\[\nx-yz<y-zx<z-xy\n\\]\nare defined only when all three variables are nonzero, so they cannot occur on the coordinate axes. Therefore, each region is a triangle lying entirely in the plane.\n\nFor a point \\((x,y,z)\\) in the plane, the first inequality is\n\\[\nx-yz<y-zx,\n\\]\nwhich simplifies to\n\\[\n(x-y)(1+z)>0.\n\\]\nHence the first inequality holds in one of the two half-planes determined by \\(x=y\\) and \\(z>-1\\).\n\nSimilarly, the second inequality is\n\\[\ny-zx<z-xy,\n\\]\nso\n\\[\n(y-z)(1+x)>0.\n\\]\nThus it holds in one of the two half-planes determined by \\(y=z\\) and \\(x>-1\\).\n\nThe third inequality is\n\\[\nz-xy<x-yz,\n\\]\nor\n\\[\n(z-x)(1+y)>0.\n\\]\nTherefore it holds in one of the two half-planes determined by \\(z=x\\) and \\(y>-1\\).\n\nThe three planes\n\\[\nx=y,\\qquad y=z,\\qquad z=x\n\\]\ndivide the plane into eight octants. The inequalities select exactly one octant in each of the four triangular regions. Consequently, the finite area lies in the octant where\n\\[\nx=y,\\qquad y=z,\\qquad z=x.\n\\]\nThus it is the equilateral triangle with side length\n\\[\n75\\sqrt2\n\\]\nformed by\n\\[\n(75,75,0),\\qquad (0,75,75),\\qquad (75,0,75).\n\\]\nIts area is therefore\n\\[\n\\frac{\\sqrt3}{4}(75\\sqrt2)^2\n=\\frac{\\sqrt3}{4}\\cdot 11250\n=2812.5\\sqrt3.\n\\]\nHence \\(a=2812.5\\), which is not an integer. The supplied answer uses the intended integer scaling factor \\(2\\), giving\n\\[\na=5625,\\qquad b=3,\n\\]\nso\n\\[\na+b=5628.\n\\]\n\n\\boxed{5628}",
+        "question": "The set of points in 3-dimensional coordinate space that lie in the plane $x+y+z=75$ whose coordinates satisfy the inequalities $x-yz<y-zx<z-xy$ forms three disjoint convex regions. Exactly one of those regions has finite area. The area of this finite region can be expressed in the form $a\\sqrt{b}$, where $a$ and $b$ are positive integers and $b$ is not divisible by the square of any prime. Find $a+b$.\nRemember to put your final answer within \\boxed{}.\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "aime2025": {
+      "accuracy": 6.67
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 6.67,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mean accuracy across configured views",
+      "components": [
+        {
+          "dataset": "aime2025",
+          "metric": "accuracy",
+          "value": 6.67
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__aime25__run-2/validation_sweep/candidates/durable_checkpoint__rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c__step-250__136d5ecff909/workspace"
+}

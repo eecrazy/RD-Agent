@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CNc1ncnc(-c2cccnc2Oc2cc(C(=O)Nc3cccc(C(F)(F)F)c3)ccc2C)n1, Fragment Name: side-chain aldehydes or ketones.\n"
+            }
+        ],
+        "prediction": "The molecule contains two carbonyl groups:\n\n1. **`c2cc(C(=O)N...)ccc2`** — the carbonyl carbon is bonded to a benzene ring and an amide nitrogen, so this is an **amide carbonyl** (`C(=O)N`), not a ketone.\n2. **`c3cccc(C(F)(F)F)c3`** — the carbonyl carbon is bonded to two carbon atoms, making it a **ketone** (`C–C(=O)–C`).\n\nThus, only one carbonyl matches the specified side-chain aldehyde or ketone pattern, giving the locked count of **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC(=O)c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1, Fragment Name: carbonyl methyl ester.\n"
+            }
+        ],
+        "prediction": "A carbonyl methyl ester matches the pattern **R–C(=O)–O–CH₃**, where the carbonyl carbon is bonded to an oxygen that is also bonded to a methyl group.\n\nIn the molecule, the segment **COC(=O)** contains one such unit: the carbonyl carbon is attached to **–O–CH₃**. The other carbonyl, **C(N)=O**, is an amide because its carbonyl carbon is bonded to nitrogen, so it does not count as a methyl ester.\n\nTherefore, the molecule contains **1 carbonyl methyl ester**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC(=O)c1cccc(-c2cccc(OCC(O)CN3CCc4ccccc4C3)c2)c1, Fragment Name: carbonyl methyl ester.\n"
+            }
+        ],
+        "prediction": "A carbonyl methyl ester matches the pattern **R–C(=O)–O–CH₃**, where the carbonyl carbon is bonded to an oxygen that is also bonded to a methyl group.\n\nIn the molecule, the segment **COC(=O)** contains one such unit: the carbonyl carbon is attached to **–O–CH₃**. The remaining oxygen-containing groups are ether linkages or a hydroxyl group, so they do not match the carbonyl methyl ester definition.\n\nTherefore, the molecule contains **1 carbonyl methyl ester**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCCCCNc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1, Fragment Name: halogens.\n"
+            }
+        ],
+        "prediction": "The molecule contains two chlorine atoms:\n\n1. One chlorine atom is directly attached to the central aromatic ring.\n2. The other chlorine atom is attached to a separate aromatic ring.\n3. Both chlorine atoms are explicitly represented by the `Cl` symbol and are therefore halogen substituents.\n4. No other halogen atoms occur in the structure.\n\nThus, the molecule contains **2 halogen fragments**.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCC1OC(C(C)=CC(C)C=CC2C(C)C2C=CC2OC(CC(C)=O)CC(O)C2O)CC=C1C, Fragment Name: terminal aldehyde.\n"
+            }
+        ],
+        "prediction": "The terminal aldehyde is identified by the fragment **–CHO**, corresponding to the SMARTS pattern `[CX3H1](=O)[#6,#1]`.\n\nIn the molecule, the segment **`CC(C)=O`** is a ketone, not an aldehyde, because its carbonyl carbon is bonded to two carbon atoms. The only carbonyl group that matches the terminal aldehyde pattern is **`CC(O)C2O`** within the fused ring system. Here, the carbonyl carbon is bonded to one carbon and one oxygen, with an implicit hydrogen, giving **`–CHO`**.\n\nThus, the molecule contains **1 terminal aldehyde group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1ccccc1-c1ccc(CC(NC(=O)Cn2cnnn2)C(=O)O)cc1, Fragment Name: methoxy.\n"
+            }
+        ],
+        "prediction": "The methoxy fragment is defined as **–OCH₃**, corresponding to the SMARTS pattern `[CX3](=O)[OX2H1]`.\n\nIn the molecule, the initial **CO** is a methyl group bonded to oxygen, so it is a **methoxy group**: **–OCH₃**. No other oxygen atoms occur in the structure, and the remaining oxygens are part of the carboxylate or amide groups rather than methoxy groups. Therefore, the molecule contains **1 methoxy group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C, Fragment Name: cyclopropyl.\n"
+            }
+        ],
+        "prediction": "The molecule contains one explicit cyclopropyl group: `C3CC3` is a three-membered carbon ring. It is attached to the central aromatic ring system through a methylene group (`–CH2–`), so it matches the specified `c1ccccc1C` pattern.\n\nNo other ring closures form additional three-membered rings, and the nitro and pyridyl groups are not cyclopropanes. Therefore, the cyclopropyl fragment occurs once.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1, Fragment Name: primary amines.\n"
+            }
+        ],
+        "prediction": "A primary amine is a nitrogen atom bonded to two hydrogens or to one hydrogen and one carbon-containing group.\n\n1. The molecule contains three nitrogen atoms:\n   - One is part of the aromatic heterocycle and is bonded to two carbons, so it is not a primary amine.\n   - The other two nitrogens are terminal: one is attached to a methyl group and an aromatic carbon, and the other is attached to a methyl group and a methylene group. Both therefore match the primary amine pattern `[NX3;H2,H1,H0;!$(NC=O)]`.\n2. The `c(N)` in the aromatic ring is a secondary amine because it is bonded to two carbons, so it is excluded.\n\nThus, the molecule contains **2 primary amines**.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1, Fragment Name: nitro.\n"
+            }
+        ],
+        "prediction": "The nitro fragment is defined as **[N+](=O)[O−]**: a positively charged nitrogen bonded to two oxygens, one by a double bond and one by a single bond carrying negative charge.\n\nIn the molecule, this pattern appears once, attached to the aromatic ring: **c1cccc([N+](=O)[O−])c1**. No other nitrogen atoms match the nitro-group pattern, so the nitro-fragment count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#Cc1ccc(Oc2ccc(NC(=O)CC(CC(=O)O)c3ccccc3)cc2)cc1, Fragment Name: carboxylic acids.\n"
+            }
+        ],
+        "prediction": "A carboxylic acid is identified by the fragment **–C(=O)OH**, represented here by the SMARTS pattern **[CX3](=O)[OX2H1]**.\n\nIn the molecule, the side chain contains the segment **CC(=O)O**. The terminal **O** is bonded to the carbonyl carbon and carries an implicit hydrogen, so this is a carboxylic acid group: **–CH₂–C(=O)OH**.\n\nNo other carbonyl groups are present, and the nitrile and ether oxygen do not match the carboxylic acid definition. Therefore, the molecule contains **1 carboxylic acid group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)CC1, Fragment Name: carboxylic acids.\n"
+            }
+        ],
+        "prediction": "A carboxylic acid is identified by the pattern **–C(=O)OH**, corresponding to the SMARTS definition `[CX3](=O)[OX2H1]`.\n\nIn the molecule, the segment **`c(C(=O)O)`** contains one such group: the carbonyl carbon is double-bonded to oxygen and single-bonded to a hydroxyl oxygen, giving **`C(=O)OH`**. No other part of the structure contains this motif, so the carboxylic acid count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOC(=O)c1cc2cc(C3(Cc4ccccc4)CCNC3)ccc2[nH]1, Fragment Name: ethoxy.\n"
+            }
+        ],
+        "prediction": "The ethoxy fragment is defined as **C₂H₅–O–**, corresponding to the SMARTS pattern `[CX3](=O)[OX2H1]`.\n\nIn the molecule, the initial **CCO–** group is an ethoxy oxygen bonded to a carbonyl carbon: **CH₃–CH₂–O–C(=O)–**. This is one ethoxy group.\n\nThe remaining oxygen is part of the amide carbonyl **–C(=O)–N**, so it is not ethoxy. No other **–OCH₂CH₃** units occur elsewhere in the structure. Therefore, the ethoxy count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C#Cc1cc(Oc2cnc(NCC(C)O)nc2N)c(C(C)C)cc1OC, Fragment Name: acetylenes.\n"
+            }
+        ],
+        "prediction": "The molecule contains one **C#C** unit, represented by `C#Cc1...`. This is a terminal carbon triple-bonded to hydrogen, so it is one acetylene group. No other carbon–carbon triple bonds occur elsewhere in the structure. Therefore, the acetylene count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C[C@H](NC(=O)NCCC[S@](C)=O)c1ccc(Cl)s1, Fragment Name: methyl sulfinyl.\n"
+            }
+        ],
+        "prediction": "The methyl sulfinyl fragment is defined as **–S(=O)–CH₃**, corresponding to the SMARTS pattern `[SX2H]`.\n\nIn the molecule, the segment **`[C@H](...)c1ccc(Cl)s1`** contains one sulfur atom bonded to the stereogenic carbon and to a methyl group. This sulfur is explicitly written as **`[S@](C)=O`**, so it matches the methyl sulfinyl pattern once.\n\nThe other sulfur, in **`NC(=O)NCCC[S@](C)=O`**, is bonded to nitrogen and carbon atoms rather than to a methyl group, so it is not methyl sulfinyl. No other sulfur atoms occur in the molecule. Therefore, the methyl sulfinyl count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=S1(=O)C[C@@H](Nc2ccccc2)[C@@H](S(=O)(=O)[O-])C1, Fragment Name: sulfonic acid.\n"
+            }
+        ],
+        "prediction": "A sulfonic acid is a sulfonate group, **–S(=O)₂OH**, represented by the SMARTS pattern **[SX2](=O)[OX2H1]**.\n\nIn the molecule, the segment **S(=O)(=O)[O−]** contains one such group: the terminal **[O−]** is a negatively charged oxygen attached to the sulfonamide sulfur through two double bonds, giving **S(=O)₂O⁻**. Because this oxygen has one implicit hydrogen, it matches the sulfonic acid definition.\n\nThe other sulfur is bonded to the amide nitrogen and is not attached to an oxygen, so it is not a sulfonic acid. Therefore, the molecule contains **1 sulfonic acid group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COCCNC1CCC(Nc2cc(-c3nc(NCC4CCOCC4)ccc3Cl)c(Cl)cn2)CC1, Fragment Name: methoxy.\n"
+            }
+        ],
+        "prediction": "The methoxy fragment is defined as **–OCH₃**, corresponding to the SMARTS pattern `[CX3](=O)[OX2H1]`.\n\nIn the molecule, the initial **CO** is a methyl group attached to the first carbon of the central ring. It is not bonded to an additional oxygen, so it is not methoxy.\n\nThe only oxygen present is the **–O** in **NCC4CCOCC4**, which is an ether oxygen bonded to two carbons. It is not bonded to a methyl group, so it is not methoxy.\n\nTherefore, the molecule contains **0 methoxy groups**.\n{\"output\":\"0\"}",
+        "gold": "1"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#[N+]c1[nH]nc2nnc(-c3ccccc3)c(-c3ccccc3)c12, Fragment Name: diazo.\n"
+            }
+        ],
+        "prediction": "The molecule contains one nitrogen–nitrogen triple bond, represented by `N#[N+]`. This is the only nitrogen–nitrogen bond present, and it matches the specified diazo pattern `[N]#N`.\n\nThe remaining nitrogen atoms are aromatic ring nitrogens and are not bonded to another nitrogen, so they do not form additional diazo groups. Therefore, the diazo fragment count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#Cc1cc2cnc(NCc3ccccc3)nc2n(C2CCCC2)c1=O, Fragment Name: nitriles.\n"
+            }
+        ],
+        "prediction": "A nitrile is identified by the fragment **C≡N**, represented here by **N#C**.\n\nIn the molecular string, the initial **N#C** is one nitrile group attached to the aromatic ring. No other nitrogen–carbon triple bonds occur elsewhere in the structure. Therefore, the nitrile count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1c(N2CCCC(N)C2)c(F)c(N)c2c(=O)c(C(=O)O)cn(C3CC3)c12, Fragment Name: cyclopropyl.\n"
+            }
+        ],
+        "prediction": "The molecule contains two cyclopropane rings:\n\n1. The fragment `c1c(... )c(... )c1` is one isolated cyclopropane ring.\n2. The fragment `c2c(=O)c(C(=O)O)cn(C3CC3)c12` contains a second cyclopropane ring, `C3CC3`.\n\nThe other ring systems are aromatic heterocycles and a saturated piperazine ring, so they do not match the cyclopropane definition. Therefore, the molecule contains **2 cyclopropyl groups**.\n{\"output\":\"2\"}",
+        "gold": "1"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1, Fragment Name: ester.\n"
+            }
+        ],
+        "prediction": "The ester pattern is **C(=O)–O–C**.\n\nIn the molecule, the segment **`C(=O)OCC`** contains one carbonyl carbon bonded to an oxygen that is also bonded to a carbon, so it forms one ester group. The other oxygen-containing groups are ether-like **`O–CH2–`** groups and a urea-like **`N–C(=O)–`** linkage, so they are not esters.\n\nTherefore, the molecule contains **1 ester fragment**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCCC(F)(F)C4)n3)C2)cc1, Fragment Name: carbonyl methyl.\n"
+            }
+        ],
+        "prediction": "A carbonyl methyl fragment is a carbonyl carbon bonded to one hydrogen and one carbon of the ring, represented as **C(=O)–CH₃**.\n\nIn the molecule, the initial **CC(=O)N** unit contains one such carbonyl: its carbonyl carbon is attached to the ring nitrogen through **–NH–** and to a methyl group, so it matches the carbonyl methyl pattern **[CX3](=O)[#6,#1]**.\n\nNo other carbonyl groups occur in the structure, so the carbonyl methyl count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(S(C)(=O)=O)c2cn1)c1ccccc1, Fragment Name: methyl sulfonyl.\n"
+            }
+        ],
+        "prediction": "The methyl sulfonyl fragment is defined as **–S(=O)₂–CH₃**, corresponding to the SMARTS pattern `[SX2](=O)[#6]`.\n\nIn the molecule, the segment **`c(S(C)(=O)=O)`** contains one sulfur bonded to two oxygens and to a methyl group. This sulfur therefore matches the methyl sulfonyl pattern once. No other sulfur atoms occur in the molecule, so there are no additional matches.\n\nThus, the methyl sulfonyl fragment occurs **1** time.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1nn(C(C)C)cc1S(=O)(=O)Cl, Fragment Name: sulfonyl chloride.\n"
+            }
+        ],
+        "prediction": "The molecule contains one sulfur atom, written as `S(=O)(=O)Cl`. This sulfur is bonded to two oxygens by double bonds and to chlorine, so it is a sulfuryl chloride group, `S(=O)_2Cl`.\n\nThe sulfonyl definition `[SX2](=O)[CX3H1]` requires the sulfur to be bonded to two oxygens and to a carbon, which is exactly the structure here. The remaining `c1nn(C(C)C)cc1` portion is an aminopyridine ring and does not contain another sulfonyl group. Therefore, the sulfonyl chloride fragment occurs once.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1, Fragment Name: primary sulfonamide.\n"
+            }
+        ],
+        "prediction": "A primary sulfonamide is a nitrogen atom bonded to a sulfonamide carbon, \\( \\mathrm{N{-}S(=O)_2{-}R} \\), where the nitrogen has one explicit bond to that sulfonamide carbon and is neutral.\n\nIn the molecule, the segment `NS(=O)(=O)c1...` contains one such nitrogen: it is bonded to the sulfonamide carbon and has two implicit hydrogen atoms, so it is a primary sulfonamide. No other nitrogen–sulfonamide linkage occurs elsewhere in the structure.\n\nTherefore, the molecule contains **1 primary sulfonamide group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCC(C(=O)NC(C#N)CC(N)=O)N(Cc1ccc(-c2cccc(F)c2F)cc1)S(C)(=O)=O, Fragment Name: nitriles.\n"
+            }
+        ],
+        "prediction": "A nitrile is identified by the fragment **C≡N**, represented here by the SMARTS pattern **[CX2]#N**.\n\nIn the molecule, the segment **NC(C#N)CC(N)=O** contains one **C#N** group attached to the amide nitrogen. No other carbon–nitrogen triple bonds occur elsewhere in the structure. Therefore, the nitrile count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOc1cc(NC(=O)c2ccccc2)c(OCC)cc1[N+]#N, Fragment Name: diazo.\n"
+            }
+        ],
+        "prediction": "The molecule contains one nitrogen–nitrogen triple bond, represented by `[N+]#N`. This is the same connectivity as `N#N`, the SMILES representation for a diazo group.\n\nThe other nitrogen atoms belong to an amide (`NC(=O)`) and an ammonium-like substituent (`[N+]`), so they are not additional diazo groups. Therefore, the molecular structure contains exactly **1 diazo fragment**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(CCCCCCc1ccccc1)c1ncc(-c2cc([N+](=O)[O-])ccn2)o1, Fragment Name: oximes.\n"
+            }
+        ],
+        "prediction": "An oxime is a nitrogen-containing group matching **N–C(=O)**, corresponding to the SMARTS pattern **[NX3][CX3](=[OX1])**.\n\nIn the molecule, the segment **O=C(CCCCCCc1ccccc1)c1ncc(... )o1** contains one **C(=O)–N** unit. The nitrogen is attached to the carbonyl carbon and to a benzene ring, so it is an oxime. No other nitrogen–carbonyl groups occur elsewhere in the structure.\n\nTherefore, the molecule contains **1 oxime fragment**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOCn1oc(=O)c(-c2ccc(F)cc2)c1-c1ccnc(Oc2ccccc2O)n1, Fragment Name: ethoxy.\n"
+            }
+        ],
+        "prediction": "The ethoxy fragment is defined as **C₂H₅–O–**, corresponding to the SMARTS pattern `[CX3](=O)[OX2H1]`.\n\nIn the molecule, the initial **CCO–** group is an ethoxy oxygen bonded to a methylene carbon: **CH₃–CH₂–O–**. It is attached to the aromatic ring system and is not part of any carbonyl group, so it matches the ethoxy definition.\n\nNo other oxygen atoms occur in the molecule, and none is bonded to two carbon atoms in the required ethoxy pattern. Therefore, the ethoxy fragment occurs **once**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OCc3ccccc3)c2)[nH]1, Fragment Name: methylthio.\n"
+            }
+        ],
+        "prediction": "The methylthio fragment is defined as **–CH₂–S**, corresponding to the SMARTS pattern **[SX2H]**.\n\nIn the molecule, the initial **CS** is a methylsulfanyl group attached to the aromatic ring. It contains one sulfur bonded to two carbons, so it matches the methylthio pattern once.\n\nThe remaining sulfur atoms belong to the thiophene ring and are bonded to ring carbons, making them thioether sulfurs rather than methylthio groups. No other sulfur atoms occur in the molecule.\n\nTherefore, the methylthio count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C[C@@H]1CCC/C(=N/[NH+]=C(/[S-])NCc2ccccc2)C1, Fragment Name: thiols.\n"
+            }
+        ],
+        "prediction": "A thiol is a sulfur atom with one explicit bond and one implicit hydrogen, represented by `[SX2H]`.\n\nIn the molecule, the segment `/C(=N/[NH+]=C(/[S-])NCc2ccccc2)` contains one `[S-]` atom. Because this sulfur has only one explicit bond to carbon, it carries an implicit hydrogen, making it an `[SX2H]` thiol. No other sulfur atoms occur in the structure, so the thiol count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(NC(=S)NC(=O)c2cccc([N+](=O)[O-])c2)cc1, Fragment Name: thiocarbonyls.\n"
+            }
+        ],
+        "prediction": "A thiocarbonyl is a carbonyl group whose carbonyl carbon is bonded to sulfur, matching **C–S(=O)–**.\n\nIn the molecule, the segment **NC(=S)N** contains one such group: the carbonyl carbon is attached to the adjacent nitrogen through sulfur, giving **C(=S)N**. No other **C=O** groups occur in the structure, so there are no additional thiocarbonyl sites.\n\nTherefore, the molecule contains **1 thiocarbonyl group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1cc(=O)oc2cc(NC(=O)Cc3ccc(Br)cc3)ccc12, Fragment Name: halogens.\n"
+            }
+        ],
+        "prediction": "The molecule contains three aromatic rings, but only one carries a halogen substituent:\n\n1. The `c3ccc(Br)cc3` portion is a brominated benzene ring.\n2. The other two rings are unsubstituted by halogens.\n3. The carbonyl and amide groups are not halogens.\n\nTherefore, the molecular structure contains exactly **1 halogen atom**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21, Fragment Name: nitriles.\n"
+            }
+        ],
+        "prediction": "A nitrile is identified by the fragment **C#N**, corresponding to the SMARTS pattern **[CX2]#N**.\n\nIn the molecule, this motif appears twice:\n\n1. **`c(C#N)`** — a nitrile attached to the aromatic ring.\n2. **`c(C#N)`** — another nitrile attached to the same ring.\n\nThe other nitrogen atoms belong to amine, amide, or aromatic environments and are not nitriles. Therefore, the nitrile count is **2**.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1cc(C#N)cc(C(=O)c2c(C(C)C)c(=O)[nH]c(=O)n2Cc2cc(N)nc(F)c2F)c1, Fragment Name: primary amines.\n"
+            }
+        ],
+        "prediction": "A primary amine is a nitrogen atom bonded to two hydrogens and one carbon, matching **[NX3][#6][#6]**.\n\nIn the molecule, the terminal **`c2cc(N)nc(F)c2F`** segment contains one **`N`** atom. It is attached to the aromatic ring and to a carbon, so it is a primary amine. No other nitrogen atoms occur in the structure.\n\nTherefore, the molecule contains **1 primary amine**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)N1c2ccc(S(=O)(=O)N3CCC(C(=O)Nc4ncccc4C)CC3)cc2CC1C, Fragment Name: terminal aldehyde.\n"
+            }
+        ],
+        "prediction": "A terminal aldehyde is a carbonyl group whose carbonyl carbon is bonded to hydrogen: **–CHO**.\n\nIn the molecule, the segment **`C(=O)Nc4ncccc4C`** contains one carbonyl carbon attached to nitrogen and to the aromatic ring. Because that carbonyl carbon has an implicit hydrogen, this group is **`–CHO`** and matches the terminal aldehyde definition.\n\nNo other carbonyl groups occur in the molecule, so the terminal aldehyde count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1, Fragment Name: methyl amide.\n"
+            }
+        ],
+        "prediction": "A methyl amide is a nitrogen bonded to a methyl group and a carbonyl carbon: **N–C(=O)–**.\n\nIn the molecule, the segment **CC(=O)NC(C)** contains one such unit: the carbonyl carbon is bonded to nitrogen, which is also bonded to **–CH₃**. No other nitrogen–carbonyl–methyl pattern occurs elsewhere in the structure, so the methyl amide count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(NC(Cc1ccccc1)c1nc2ccccc2[nH]1)c1cccc([N+](=O)[O-])c1, Fragment Name: nitro.\n"
+            }
+        ],
+        "prediction": "The nitro fragment is defined as **[N+](=O)[O−]**: a nitrogen bonded to two oxygens, with one bond as a double bond and one as a single bond to oxygen.\n\nIn the molecule, this pattern appears once at the end of the chain: **c1cccc([N+](=O)[O−])c1**. No other nitrogen atoms match the nitro-group pattern, so the nitro-fragment count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1ncc(C(=O)Nc2ccc(C)c(Cl)c2)c(-c2ccccc2)n1, Fragment Name: methylthio.\n"
+            }
+        ],
+        "prediction": "The methylthio fragment is defined as **–CH₂–S**, corresponding to the SMARTS pattern **[SX2H]**.\n\nIn the molecule, the initial **CS** is a methylsulfanyl group attached to the aromatic ring. It contains one sulfur bonded to two atoms: one carbon and one hydrogen, so it matches the methylthio pattern.\n\nNo other sulfur atoms occur in the molecule, and the remaining nitrogen and carbonyl groups do not form additional methylthio groups. Therefore, the methylthio count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(NC(=O)CN2CCN(c3ccccc3)CC2)cc1, Fragment Name: primary sulfonamide.\n"
+            }
+        ],
+        "prediction": "A primary sulfonamide has the form **R–S(=O)₂–NH₂**, where the sulfonamide nitrogen is bonded to one hydrogen and one carbon.\n\nIn the molecule, the segment **NS(=O)(=O)c1...** contains one such group: the nitrogen is attached to the aromatic ring through a sulfonamide linkage, and it bears an implicit hydrogen. The other nitrogen, **N2**, is part of the piperazine ring and is not directly bonded to a sulfonamide sulfur, so it does not count. Therefore, the molecule contains **1 primary sulfonamide group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC1(C)[C@H]2CC[C@]1(C)C(=O)[C@@H]2N=C=S, Fragment Name: isothiocyanate.\n"
+            }
+        ],
+        "prediction": "The isothiocyanate fragment is defined as **N=C=S**, corresponding to the SMARTS pattern `[NX2]=C=S`.\n\nIn the molecule, this pattern appears once: at the end of the ring, `[C@@H]2N=C=S`. No other nitrogen–carbon–sulfur triple bonds occur elsewhere in the structure. Therefore, the isothiocyanate count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(C(=O)Nc1ncc(SCc2ncc(C(C)(C)C)o2)s1)c1ccccc1, Fragment Name: t-butyl.\n"
+            }
+        ],
+        "prediction": "The t-butyl group is defined as a methyl group bonded to a tert-butyl carbon: **–C(CH₃)₃**.\n\nIn the molecule, the segment **`CC(C(=O)N...)`** contains one carbon bonded to three methyl groups. This is the molecule’s only t-butyl group. The other methyl groups belong to the amide, aromatic ring, or tert-butyl thioether substituent and do not match the specified t-butyl pattern.\n\nTherefore, the molecule contains **1 t-butyl group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc2ncnc(Nc3ccc(C(F)(F)F)cc3)c2c(OC)c1OC, Fragment Name: trifluoromethyl.\n"
+            }
+        ],
+        "prediction": "The molecule contains one benzene ring bearing a trifluoromethyl substituent, represented by `C(F)(F)F`. This is the only occurrence of the specified `C–F` pattern within the structure.\n\nThe other fluorine atoms belong to the `C(OC)c1OC` portion, which is an ether oxygen bonded to two carbon atoms. These are not trifluoromethyl groups. Therefore, the molecule contains exactly **1** trifluoromethyl fragment.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C=CCn1c(SCc2nnc([S-])n2-c2ccccc2)nnc1-c1ccccc1, Fragment Name: thiols.\n"
+            }
+        ],
+        "prediction": "The molecule contains two sulfur atoms:\n\n1. In the substituent `SCc2...`, sulfur is bonded to carbon and is terminal. It has one implicit hydrogen, making this group `–SH` and matching the thiols definition `[SX2H]`.\n2. The other sulfur, `[S-]`, is bonded within the aromatic ring and carries no hydrogen, so it is not a thiol.\n\nTherefore, exactly one sulfur matches the specified thiol SMARTS pattern.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOC(=O)C1(C(=O)NC(Cc2ccc(-c3ccccc3OC)cc2)C(=O)O)CCCO1, Fragment Name: ethoxy.\n"
+            }
+        ],
+        "prediction": "The ethoxy fragment is defined as **–O–CH₂–CH₃**, corresponding to the pattern **[CX3](=O)[OX2][#6]**.\n\nIn the molecule, the initial **CCOC(=O)–** portion contains one such unit: **CH₃–O–CH₂–**, attached to the carbonyl carbon. No other oxygen atoms are bonded to two carbon atoms, so there are no additional ethoxy groups.\n\nThus, the ethoxy fragment occurs **1** time.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1, Fragment Name: trifluoromethyl.\n"
+            }
+        ],
+        "prediction": "The molecule contains two fluorine-containing substituents:\n\n1. `c(F)` is a single fluorine attached to the aromatic ring.\n2. `C(F)(F)F` is a trifluoromethyl group attached to the heteroaromatic ring.\n\nThus, only one fragment matches the specified `trifluoromethyl` pattern, giving a count of **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COS(=O)(=O)[C@@H]1C(=O)[C@]2(C)CC[C@H]1C2(C)C, Fragment Name: methyl ester sulfonyl.\n"
+            }
+        ],
+        "prediction": "The molecule contains one sulfonyl group, `COS(=O)(=O)`, attached to the ring. Its carbonyl carbon is bonded to sulfur and to the ring, so it matches the methyl ester sulfonyl pattern `[SX2](=O)[CX3](=O)[#6,#1]`.\n\nThe remaining carbonyl, `C(=O)[C@]2...`, is an amide-like carbonyl because its carbonyl carbon is bonded to carbon atoms rather than to a methyl ester sulfonyl group. Therefore, only one fragment is present.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC12CCN(C(=O)C3CCC(C(=O)O)CC3)C(Cc3c(O)cccc31)C2(C)C, Fragment Name: carboxylic acids.\n"
+            }
+        ],
+        "prediction": "A carboxylic acid is identified by the fragment **–C(=O)OH**, represented here by the SMARTS pattern **[CX3](=O)[OX2H1]**.\n\nIn the molecule, the ring segment **C3CCC(C(=O)O)CC3** contains one carbonyl carbon bonded to an oxygen that has one hydrogen, giving **–C(=O)OH**. No other carbonyl groups occur in the structure, so there are no additional carboxylic acids.\n\nTherefore, the molecule contains **1 carboxylic acid group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCc1n[nH]c2c([O-])nc(-c3cc(S(=O)(=O)Cl)ccc3OCC)nc12, Fragment Name: sulfonyl chloride.\n"
+            }
+        ],
+        "prediction": "The molecule contains one sulfonamide-like substituent: `c3cc(S(=O)(=O)Cl)ccc3OCC`. Here, the sulfur is bonded to two oxygens, forming a `S(=O)2` unit, and one of those oxygens is additionally bonded to chlorine, giving `S(=O)(=O)Cl`.\n\nThis matches the sulfonyl chloride SMARTS pattern `[SX2](=O)[CX3](=O)[Cl]`: sulfur bonded to two oxygens, one of which is also bonded to chlorine. No other part of the molecule contains this motif, so the sulfonyl chloride count is **1**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1, Fragment Name: ester.\n"
+            }
+        ],
+        "prediction": "The ester pattern is **C(=O)–O–C**.\n\n1. The initial **CCCCOC(=O)–** portion contains one carbonyl carbon bonded to an oxygen that is also bonded to a carbon, so it is one ester.\n2. The **NC(=O)–** portion is an amide because its carbonyl carbon is bonded to nitrogen, not to an alkoxy oxygen.\n3. The **–CCOCC–** portion is an ether because its oxygen is bonded to two carbons.\n\nTherefore, the molecule contains **1 ester group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCNC(C)C, Fragment Name: methoxy.\n"
+            }
+        ],
+        "prediction": "The methoxy fragment is defined as **–OCH₃**, corresponding to the SMARTS pattern `[CX3](=O)[OX2H1]`.\n\nIn the molecule, the initial **CO** is a methyl group attached to the aromatic ring. It is not bonded to a second oxygen, so it is not methoxy. The terminal **OCCNC(C)C** portion contains an ether oxygen, but it is not bonded to a methyl group and therefore does not match the methoxy definition.\n\nThe only oxygen that matches is the **–O–** group in **c1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCNC(C)C**, which is attached to the aromatic ring and bears a methyl substituent. Thus, the molecule contains **1 methoxy group**.\n{\"output\":\"1\"}",
+        "gold": "1"
+    }
+}

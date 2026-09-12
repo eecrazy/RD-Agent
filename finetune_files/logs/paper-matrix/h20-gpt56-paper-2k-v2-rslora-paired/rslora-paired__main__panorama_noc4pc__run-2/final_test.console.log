@@ -1,0 +1,89 @@
+2026-09-10 17:16:10.347 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:350 - Running benchmark 'panorama_noc4pc' on model: /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_noc4pc__run-2/final_test_workspaces/625eac0623019ecc/selected_model
+2026-09-10 17:16:10.348 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:351 - Base model: Qwen/Qwen2.5-7B-Instruct, LoRA?: True
+2026-09-10 17:16:10.348 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:352 - Workspace: /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_noc4pc__run-2/final_test_workspaces/625eac0623019ecc
+2026-09-10 17:16:10.348 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:353 - Benchmark work_dir: ./benchmark_results/test
+2026-09-10 17:16:10.349 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:355 - Dataset range: [-min(100, len(index_list)//2):]
+───────────────────────────── LocalEnv Logs Begin ──────────────────────────────
+                                    Run Info                                    
+┌────────────┬─────────────────────────────────────────────────────────────────┐
+│ Entry      │ /bin/sh -c 'timeout --kill-after=10 10800 opencompass           │
+│            │ ./config.py --work-dir ./benchmark_results/test;                │
+│            │ entry_exit_code=$?; exit $entry_exit_code'                      │
+│ Local Path │ /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt… │
+│ Env        │ COMPASS_DATA_CACHE:./benchmarks/opencompass_data                │
+│            │ OC_JUDGE_MODEL:gpt-5                                            │
+│            │ OC_JUDGE_API_KEY:local-no-key-required                          │
+│            │ OC_JUDGE_API_BASE:http://127.0.0.1:36711/v1                     │
+│            │ OC_JUDGE_RETRY:10                                               │
+│            │ CUDA_VISIBLE_DEVICES:7                                          │
+│            │ PATH:/usr/local/lib/node_modules/@openai/codex/node_modules/@o… │
+│ Volumes    │ /data/github/RD-Agent/finetune_files/benchmarks:                │
+│            │   /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-g… │
+│            │ /tmp/full:                                                      │
+│            │   /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-g… │
+└────────────┴─────────────────────────────────────────────────────────────────┘
+Waiting for any GPU lease (requested=7; pool=7,0,1,2,3,4,5,6)
+Acquired GPU lease: 0 (requested=7)
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-
+packages/transformers/utils/hub.py:110: FutureWarning: Using 
+`TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. 
+Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-
+packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an 
+API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The 
+pkg_resources package is slated for removal as early as 2025-11-30. Refrain from
+using this package or pin to Setuptools<81.
+  import pkg_resources
+09/10 17:16:18 - OpenCompass - INFO - Current exp folder: 
+./benchmark_results/test/20260910_171618
+09/10 17:16:18 - OpenCompass - WARNING - SlurmRunner is not used, so the 
+partition argument is ignored.
+09/10 17:16:18 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                       0%|          | 0/1 [00:00<?, ?it/s]launch OpenICLInfer[ft-panorama_noc4pc/panorama_noc4pc] on GPU 0
+100%|██████████| 1/1 [04:25<00:00, 265.48s/it]100%|██████████| 1/1 [04:25<00:00, 265.48s/it]
+09/10 17:20:43 - OpenCompass - WARNING - Default to dump eval details, it might 
+take extraspace to save all the evaluation details. Set --dump-eval-details 
+False to skip the details dump
+09/10 17:20:43 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                       0%|          | 0/1 [00:00<?, ?it/s]launch OpenICLEval[ft-panorama_noc4pc/panorama_noc4pc] on CPU 
+100%|██████████| 1/1 [00:09<00:00,  9.27s/it]100%|██████████| 1/1 [00:09<00:00,  9.27s/it]
+dataset          version    metric       mode      ft-panorama_noc4pc
+---------------  ---------  -----------  ------  --------------------
+panorama_noc4pc  3cfa92     accuracy     gen                    50.00
+panorama_noc4pc  3cfa92     macro_f1     gen                    45.71
+panorama_noc4pc  3cfa92     valid_count  gen                   100.00
+panorama_noc4pc  3cfa92     total_count  gen                   100.00
+09/10 17:20:53 - OpenCompass - INFO - write summary to 
+/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rsl
+ora-paired/rslora-paired__main__panorama_noc4pc__run-2/final_test_workspaces/625
+eac0623019ecc/benchmark_results/test/20260910_171618/summary/summary_20260910_17
+1618.txt
+09/10 17:20:53 - OpenCompass - INFO - write csv to 
+/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rsl
+ora-paired/rslora-paired__main__panorama_noc4pc__run-2/final_test_workspaces/625
+eac0623019ecc/benchmark_results/test/20260910_171618/summary/summary_20260910_17
+1618.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | ft-panorama_noc4pc |
+|----- | ----- | ----- | ----- | -----|
+| panorama_noc4pc | 3cfa92 | accuracy | gen | 50.00 |
+| panorama_noc4pc | 3cfa92 | macro_f1 | gen | 45.71 |
+| panorama_noc4pc | 3cfa92 | valid_count | gen | 100.00 |
+| panorama_noc4pc | 3cfa92 | total_count | gen | 100.00 |
+
+09/10 17:20:53 - OpenCompass - INFO - write markdown summary to 
+/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rsl
+ora-paired/rslora-paired__main__panorama_noc4pc__run-2/final_test_workspaces/625
+eac0623019ecc/benchmark_results/test/20260910_171618/summary/summary_20260910_17
+1618.md
+────────────────────────────── LocalEnv Logs End ───────────────────────────────
+2026-09-10 17:20:55.149 | INFO     | rdagent.utils.env:__run_with_retry:340 - Running time: 284.7996907234192 seconds
+2026-09-10 17:20:55.158 | INFO     | rdagent.oai.backend.litellm:__init__:55 - backend='rdagent.oai.backend.LiteLLMAPIBackend' chat_model='openai/gpt-5.2' embedding_model='text-embedding-3-small' reasoning_effort=None enable_response_schema=True reasoning_think_rm=False log_llm_chat_content=True use_azure=False chat_use_azure=False embedding_use_azure=False chat_use_azure_token_provider=False embedding_use_azure_token_provider=False managed_identity_client_id=None max_retry=10 retry_wait_seconds=1 dump_chat_cache=False use_chat_cache=False dump_embedding_cache=False use_embedding_cache=False prompt_cache_path='/data/github/RD-Agent/prompt_cache.db' max_past_message_include=10 timeout_fail_limit=10 violation_fail_limit=1 use_auto_chat_cache_seed_gen=False init_chat_cache_seed=42 openai_api_key='local-no-key-required' openai_api_base='http://127.0.0.1:36711/v1' chat_openai_api_key=None chat_openai_base_url=None chat_azure_api_base='' chat_azure_api_version='' chat_max_tokens=None chat_temperature=1.0 chat_stream=True chat_seed=None chat_frequency_penalty=0.0 chat_presence_penalty=0.0 chat_token_limit=100000 default_system_prompt="You are an AI assistant who helps to answer user's questions." system_prompt_role='system' embedding_openai_api_key='' embedding_openai_base_url='' embedding_azure_api_base='' embedding_azure_api_version='' embedding_max_str_num=50 embedding_max_length=8192 use_llama2=False llama2_ckpt_dir='Llama-2-7b-chat' llama2_tokenizer_path='Llama-2-7b-chat/tokenizer.model' llams2_max_batch_size=8 use_gcr_endpoint=False gcr_endpoint_type='llama2_70b' llama2_70b_endpoint='' llama2_70b_endpoint_key='' llama2_70b_endpoint_deployment='' llama3_70b_endpoint='' llama3_70b_endpoint_key='' llama3_70b_endpoint_deployment='' phi2_endpoint='' phi2_endpoint_key='' phi2_endpoint_deployment='' phi3_4k_endpoint='' phi3_4k_endpoint_key='' phi3_4k_endpoint_deployment='' phi3_128k_endpoint='' phi3_128k_endpoint_key='' phi3_128k_endpoint_deployment='' gcr_endpoint_temperature=0.7 gcr_endpoint_top_p=0.9 gcr_endpoint_do_sample=False gcr_endpoint_max_token=100 chat_use_azure_deepseek=False chat_azure_deepseek_endpoint='' chat_azure_deepseek_key='' chat_model_map={}
+2026-09-10 17:20:55.160 | INFO     | rdagent.oai.backend.litellm:_calculate_token_from_messages:68 - [96mToken count: [0m 1482
+2026-09-10 17:20:55.167 | INFO     | rdagent.oai.backend.litellm:_calculate_token_from_messages:68 - [96mToken count: [0m 1301
+2026-09-10 17:20:55.168 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:412 - Detailed results CSV: 20260910_171618/summary/summary_20260910_171618.csv
+2026-09-10 17:20:55.197 | INFO     | rdagent.scenarios.finetune.benchmark.data.default:extract_error_samples:290 - Extracted 10 error samples from benchmark results

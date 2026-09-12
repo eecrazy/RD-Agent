@@ -1,0 +1,51 @@
+{
+  "baseline_only": false,
+  "benchmark": "chemcotbench_mol_edit",
+  "candidate_count": 2,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_checkpoint__rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea__step-189__16989ba05cf7",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-1/validation_sweep/candidates/durable_checkpoint__rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea__step-189__16989ba05cf7/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea__517b8a7b126a",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-1/validation_sweep/candidates/durable_output__rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea__517b8a7b126a/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "fc0920113ac6d4324ba5a377963669a5ac80dd6dcef6b1f5c71254f685d89ce8",
+  "completed_count": 2,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-1",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "fc0920113ac6d4324ba5a377963669a5ac80dd6dcef6b1f5c71254f685d89ce8",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "4613c140da3b1997d19c7e5992e23e7b5d7e04e405818f127a381daeecfec548",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea__517b8a7b126a",
+    "formal_training_evidence_signature": "596447d946b85446a31c59f4cb2e5d9dcb8b08425ba9428814965cd3c69d4e50",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-1/workspace/.ft_model_checkpoints/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea/output",
+    "selection_metrics": [
+      {
+        "formula": "unweighted mean correct_rate across add, delete, and substitute",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 63.333333333333336
+      }
+    ],
+    "selection_signature": "c72f58ad5d70bcb7788f116f9cf43e8950af9feb4cf26eb251ac9b995c5c5f9f"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:16:34.981540+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

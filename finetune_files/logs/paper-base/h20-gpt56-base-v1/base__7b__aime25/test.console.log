@@ -1,0 +1,27 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 01:49:31 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/test/20260828_014931
+08/28 01:49:31 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 01:49:31 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-aime25/aime2025] on GPU 0
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:39<00:00, 39.32s/it]100%|██████████| 1/1 [00:39<00:00, 39.32s/it]
+08/28 01:50:10 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 01:50:10 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-aime25/aime2025] on CPU 
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:17<00:00, 17.89s/it]100%|██████████| 1/1 [00:17<00:00, 17.89s/it]
+dataset    version    metric    mode      base-qwen2.5-7b-instruct-aime25
+---------  ---------  --------  ------  ---------------------------------
+aime2025   5e9f4f     accuracy  gen                                  0.00
+08/28 01:50:28 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/test/20260828_014931/summary/summary_20260828_014931.txt
+08/28 01:50:28 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/test/20260828_014931/summary/summary_20260828_014931.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-aime25 |
+|----- | ----- | ----- | ----- | -----|
+| aime2025 | 5e9f4f | accuracy | gen | 0.00 |
+
+08/28 01:50:28 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/test/20260828_014931/summary/summary_20260828_014931.md

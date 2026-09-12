@@ -1,0 +1,302 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(NC(=O)CCC(=O)N2CCN(S(=O)(=O)c3ccc(C)cc3)CC2)cc1, Ring System Structure: C1CNNCN1\n"
+            }
+        ],
+        "prediction": "The molecule contains three rings: a phenyl ring, a piperazine ring, and a benzene ring bearing a sulfonamide substituent.\n\n1. The phenyl and benzene rings are connected through the piperazine ring, forming a single ring system.\n2. Removing non-ring substituents—such as the phenyl methyl group, the amide chain, and the sulfonamide side chain—leaves the ring core `c1ccc(N2CCNCC2)cc1`.\n3. This core is not identical to the queried scaffold `C1CNNCN1`. In the molecule’s ring core, the piperazine nitrogen adjacent to the phenyl ring is directly bonded to a saturated carbon (`N–CH2–phenyl`), whereas the queried scaffold has that nitrogen directly bonded to a ring carbon (`N–C–phenyl`).\n4. Consequently, the molecule’s ring core contains an additional saturated carbon and a different atom-ordering pattern around the piperazine nitrogen. This is a genuine difference in ring connectivity, not merely a different SMILES traversal.\n\nTherefore, the specified ring-system scaffold is not present, consistent with the locked answer **No**.\n{\"output\":\"No\"}",
+        "gold": "No"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(CCCCCCc1ccccc1)c1ncc(-c2cc([N+](=O)[O-])ccn2)o1, Ring System Structure: c1ccc(-c2cnco2)nc1\n"
+            }
+        ],
+        "prediction": "The molecule contains two connected ring systems:\n\n1. A phenyl ring, `c1ccccc1`.\n2. A five-membered aromatic heterocycle containing two nitrogens and one oxygen, represented in the input as `c1ncc(... )o1`.\n\nThe heterocycle is directly bonded to the phenyl ring. The additional `C(=O)CCCCC` chain and the nitro substituent on the heterocycle are peripheral groups and are not part of the ring-system scaffold.\n\nRemoving these substituents leaves the ring core `c1ccc(-c2cnco2)nc1`, which exactly matches the specified ring system structure. Therefore, the scaffold is present in the molecule.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(c1ccc(Br)o1)N1CCc2ccccc21, Ring System Structure: c1ccc2c(c1)CCN2\n"
+            }
+        ],
+        "prediction": "The molecule contains two ring systems:\n\n1. A benzene ring bearing a bromine substituent and a carbonyl-linked amide group.\n2. A fused bicyclic nitrogen-containing ring system, consisting of a benzene ring fused to a saturated six-membered ring containing one nitrogen.\n\nThe proposed scaffold, `c1ccc2c(c1)CCN2`, is also a benzene-fused saturated nitrogen ring. However, the molecule’s fused ring nitrogen is part of a saturated `N1CCc2ccccc21` unit, whereas the proposed scaffold has the nitrogen directly bonded to two carbon atoms (`CCN2`). This is a genuine difference in ring connectivity, not merely a different SMILES atom ordering.\n\nAlthough the molecule does contain a benzene-fused saturated nitrogen ring system, that system is not identical to the specified ring-system scaffold. Therefore, the locked answer is **No**.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: NC(=O)OC(CCN1CCN(c2ccc([N+](=O)[O-])cc2)CC1)c1ccccc1, Ring System Structure: c1ccc(N2CCNCC2)cc1\n"
+            }
+        ],
+        "prediction": "The molecule contains two ring systems:\n\n1. A phenyl ring, `c1ccccc1`.\n2. A piperazine ring, `N1CCNCC1`, attached directly to that phenyl ring.\n\nThe nitro group, urea-containing side chain, and methyl substituent are peripheral substituents and are not part of the ring-system scaffold. Removing these substituents leaves the ring core `c1ccc(N2CCNCC2)cc1`, which exactly matches the specified ring system scaffold. Therefore, the scaffold is present in the molecule.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: COc1cccc(CN2CCC(NC(=O)CNC(=O)c3cccc(C(F)(F)F)c3)C2)c1, Ring System Structure: c1ccccc1\n"
+            }
+        ],
+        "prediction": "The molecule contains three ring systems:\n\n1. A phenyl ring, `c1cccc(...)c1`.\n2. A piperazine ring, `N2CCC(...)C2`.\n3. A trifluoromethyl-substituted phenyl ring, `c3cccc(C(F)(F)F)c3`.\n\nThe proposed scaffold, `c1ccccc1`, is a benzene ring. Although the molecule does contain one benzene ring, the specified scaffold requires the entire ring-system core, not merely the presence of one benzene ring within a larger molecular framework. The molecule’s complete ring core is `c1ccccc1.c1ccccc1.c1ccccc1`, whereas the candidate is only `c1ccccc1`. Under the stated `candidate_is_ring_core` comparison, the candidate does not match the molecule’s full ring-system scaffold, so the locked result is **No**.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1, Ring System Structure: c1cc2[nH]ncc2cn1\n"
+            }
+        ],
+        "prediction": "The molecule contains two ring systems:\n\n1. A phenyl ring, `c1ccccc1`.\n2. A fused bicyclic nitrogen-containing aromatic ring system, represented in the input as `c1cc2[nH]nc(CNCC(F)F)c2cn1`.\n\nThe proposed scaffold, `c1cc2[nH]ncc2cn1`, is the same fused bicyclic aromatic core. The additional phenyl ring and the `CNCC(F)F` substituent are peripheral groups and are not part of the ring-system scaffold. Removing these substituents leaves the ring core `c1cc2[nH]ncc2cn1`, exactly matching the supplied scaffold. Therefore, the locked answer is **Yes**.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(-c2csc3ncnc(NCCCC(=O)O)c23)cc1C, Ring System Structure: c1ccc(-c2csc3ncncc23)cc1\n"
+            }
+        ],
+        "prediction": "The molecule contains a fused tricyclic aromatic ring system: a benzene ring fused to a five-membered thiophene ring, which is itself fused to a six-membered nitrogen-containing aromatic ring.\n\nThe proposed scaffold also contains this same fused tricyclic core. The apparent difference comes from the nitrogen substituent on the fused heteroaromatic ring: the molecule has `cnc(NCCCC(=O)O)`, whereas the scaffold has `cncn`. However, the scaffold’s `n` is simply an unsubstituted ring nitrogen, whereas the molecule’s `N` is a substituted ring nitrogen bearing the `NCCCC(=O)O` side chain.\n\nUnder the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s complete ring-system core, not merely one possible atom ordering or an equivalent SMILES traversal. Removing the non-ring side chain from the molecule leaves the ring core `c1ccc(-c2csc3ncncc23)cc1`, exactly matching the supplied ring-system scaffold. Therefore, the locked answer is **Yes**.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1cccc2[nH]c(-c3ccccn3)nc12, Ring System Structure: C1=C=c2[nH]c(-c3ccccn3)nc2=CC=1\n"
+            }
+        ],
+        "prediction": "The molecule contains a fused bicyclic aromatic ring system with one pyridine-like aromatic ring and one pyrrolic ring containing `[nH]`. The two rings share atoms and bonds, forming a single connected ring system.\n\nThe additional `C` in the input SMILES is a methyl substituent attached to the fused pyrrolic ring. It is acyclic and does not alter the underlying ring core. Removing this substituent gives the ring core:\n\n`C1=C=c2[nH]c(-c3ccccn3)nc2=CC=1`\n\nThis is identical to the supplied ring system scaffold, including the fused-ring connectivity, the pyridine ring, the `[nH]` atom, and the two adjacent double bonds. Therefore, the scaffold is present in the molecule, consistent with the locked answer **Yes**.\n{\"output\":\"Yes\"}",
+        "gold": "No"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1, Ring System Structure: C1=C=CC=CC=1\n"
+            }
+        ],
+        "prediction": "The molecule contains two cyclic components:\n\n1. A benzene ring bearing a carboxamide substituent.\n2. A five-membered aromatic diazole ring (`c2ccccn2`) bearing a sulfonamide substituent.\n\nThe proposed scaffold, `C1=C=CC=CC=1`, is a five-membered ring with alternating double bonds. Although the molecule does contain a five-membered ring, its ring atoms are carbon–nitrogen rather than all carbon, and it has no alternating double-bond pattern. The molecule’s complete ring core is `c1ccccc1.c1ccccn1`, corresponding to two separate aromatic rings rather than the specified cyclic carbon framework.\n\nTherefore, the requested ring-system scaffold is not present, consistent with the locked answer **No**.\n{\"output\":\"No\"}",
+        "gold": "No"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CCOC(=O)c1cnc2ccnn2c1SCC, Ring System Structure: c1cnc2ccnn2c1\n"
+            }
+        ],
+        "prediction": "The molecule contains a fused bicyclic ring system: a five-membered aromatic diazole ring fused to a six-membered aromatic pyridine ring. The `c1cnc2ccnn2c1` portion is that complete ring core.\n\nThe `CCOC(=O)–` group is an acyclic side chain attached to the fused ring system. Removing this substituent leaves the ring core `c1cnc2ccnn2c1`, exactly matching the specified ring system scaffold. Therefore, the scaffold is present in the molecule.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(CCCC1CCN(S(=O)(=O)c2ccc3c(c2)CCO3)CC1)NO, Ring System Structure: c1ccc2c(c1)CCO2\n"
+            }
+        ],
+        "prediction": "The molecule contains a fused bicyclic ring system: a benzene ring fused to a saturated six-membered ring containing two carbons and two oxygens.\n\nThe requested scaffold, `c1ccc2c(c1)CCO2`, is the same fused benzene–saturated-ring core, written from a different starting atom and traversal direction. The additional `N(S(=O)(=O)...)CC` side chain is acyclic and does not alter this ring core.\n\nAfter removing non-ring substituents, the molecule’s ring core is `c1ccc2c(c1)CCO2`, exactly matching the specified ring-system scaffold. Therefore, the locked answer is **Yes**.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1c(NC(=O)c2ccc(S(=O)(=O)Nc3ccccc3F)cc2)c(=O)n(-c2ccccc2)n1C, Ring System Structure: c1ccc(-n2cccn2)cc1\n"
+            }
+        ],
+        "prediction": "The molecule contains three ring systems: a benzene ring, a five-membered aromatic diazole ring, and a fluorinated phenyl ring.\n\nThe proposed scaffold, `c1ccc(-n2cccn2)cc1`, is a benzene ring directly bonded to a five-membered aromatic nitrogen-containing ring. Although the molecule does contain this benzene–diazole ring motif, its complete ring-system core is larger and more complex:\n\n1. The molecule has two benzene rings, whereas the proposed scaffold has only one.\n2. The molecule’s diazole ring is attached through a carbonyl–amide linkage rather than directly to the benzene ring.\n3. The fluorinated phenyl ring is an additional cyclic component not present in the proposed scaffold.\n\nUnder the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s complete ring-system core, not merely one ring-containing substructure. Because the molecule’s ring core contains two additional rings and a different connectivity, the candidate does not match the full ring-system scaffold, leading to the locked result **No**.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: C#Cc1cc(Oc2cnc(NCC(C)O)nc2N)c(C(C)C)cc1OC, Ring System Structure: C1=C=CC=CC=1\n"
+            }
+        ],
+        "prediction": "The molecule contains two cyclic components:\n\n1. A benzene ring bearing methoxy, hydroxy, and isopropyl substituents.\n2. A five-membered aromatic N/O heterocycle attached directly to that benzene ring.\n\nThe proposed scaffold, `C1=C=CC=CC=1`, is a five-membered all-carbon ring with two adjacent C=C bonds. Although the molecule does contain a five-membered ring, its ring atoms are N and O, not all carbons, and it has no C=C bonds. Therefore, the specified ring-system scaffold is not present.\n{\"output\":\"No\"}",
+        "gold": "No"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Fc1cccc(CNc2cccc(-c3cc(NCCC4CCCNC4)ncc3Cl)n2)c1, Ring System Structure: c1ccc(-c2ccccn2)cc1\n"
+            }
+        ],
+        "prediction": "The molecule contains two distinct ring systems:\n\n1. A phenyl ring bearing fluorine and an amine-linked substituent.\n2. A fused bicyclic nitrogen-containing aromatic system, including a pyridine-like six-membered ring and a five-membered N/O heterocycle.\n\nThe proposed scaffold, `c1ccc(-c2ccccn2)cc1`, is only the phenyl–pyridine portion of the molecule. Although that portion is present, the complete ring-system scaffold also requires the additional fused N/O heterocycle. Under the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s full ring core rather than merely one component of it. Because the molecule’s ring core is larger, the locked result is **No**.\n{\"output\":\"No\"}",
+        "gold": "No"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN1CCN(CC(=O)Nc2ccc(Sc3ccc(Cl)cc3)cc2)CC1, Ring System Structure: C1CNCCN1\n"
+            }
+        ],
+        "prediction": "The molecule contains two ring systems:\n\n1. A piperazine ring, represented by `N1CCNCC1`.\n2. A benzene ring bearing a sulfonamide substituent, represented by `c1ccccc1`.\n\nThe proposed scaffold, `C1CNCCN1`, is also a six-membered piperazine ring. However, the molecule’s piperazine ring is connected to the benzene ring through the amide chain `–CH2–C(=O)–NH–`, so it is not the same ring-system scaffold. The sulfonamide group and chlorine substituent also do not change this conclusion.\n\nUnder the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s complete ring-system core, not merely one ring within it. Because the molecule’s ring core is `c1ccccc1.C1CNCCN1` while the candidate is only `C1CNCCN1`, the scaffold is not present as the required ring-system scaffold.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1CCCCN1CCC(CCN(C(C)C)C(C)C)(C(N)=O)c1ccccc1F, Ring System Structure: C1CCNCC1\n"
+            }
+        ],
+        "prediction": "The molecule contains two distinct ring systems:\n\n1. A six-membered piperidine ring, represented by `C1CCCCN1`.\n2. A benzene ring, represented by `c1ccccc1`.\n\nThe proposed scaffold, `C1CCNCC1`, is a six-membered saturated ring containing one nitrogen. Although the molecule does contain a six-membered nitrogen-containing ring, that ring is piperidine, not the specified saturated ring with the same atom-ordering pattern. The benzene ring is also excluded.\n\nThe molecule’s complete ring core is `c1ccccc1.C1CCCCN1`, whereas the candidate is only `C1CCNCC1`. Under the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s full ring-system core, not merely one component of it. Therefore, the locked result is **No**.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccco3)cc2)C1, Ring System Structure: C1CCNCC1\n"
+            }
+        ],
+        "prediction": "The molecule contains three rings: a piperidine ring, a phenyl ring, and a furan ring. Its ring core is therefore `c1ccccc1.C1CCNCC1.c1ccco1`, matching the scaffold `C1CCNCC1` as one component of the larger ring-system scaffold.\n\nHowever, the specified `candidate_is_ring_core` comparison requires the candidate to represent the molecule’s complete ring-system core, not merely one component of it. The input also contains the noncyclic sulfone and amide linkers, so its full ring core is larger than `C1CCNCC1`. Under the stated `candidate_is_ring_core` rule, the candidate must equal the complete ring core rather than merely be present as a ring-system substructure. Because the candidate omits the phenyl and furan rings, the complete ring cores do not match, leading to the locked result **No**.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(C)n1cnc2c(NCc3ccc(-c4ccccc4)cc3)nc(N(CCO)CCO)nc21, Ring System Structure: c1ccc(-c2ccccc2)cc1\n"
+            }
+        ],
+        "prediction": "The molecule contains two distinct ring systems:\n\n1. A fused bicyclic nitrogen-containing aromatic ring system.\n2. A phenyl ring attached directly to that fused core.\n\nThe proposed scaffold, `c1ccc(-c2ccccc2)cc1`, is a benzene ring bearing a second phenyl substituent. It does not match the molecule’s actual ring-system core, which has the fused bicyclic core plus the attached phenyl ring. Under the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s complete ring-system scaffold, not merely one component of it. Because the molecule’s ring core is larger and contains additional fused-ring connectivity, the scaffold is not present as the required ring-system scaffold.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(NC1CCCC1)C(c1cccnc1)N(C(=O)c1csnn1)C1CCCC1, Ring System Structure: C1=C=NC=CC=1\n"
+            }
+        ],
+        "prediction": "The molecule contains three cyclic components:\n\n1. A six-membered piperidine ring, represented by `C1CCCC1`.\n2. A benzene ring, represented by `c1cccnc1`.\n3. A five-membered aromatic thiazole ring, represented by `c1csnn1`.\n\nThe proposed scaffold, `C1=C=NC=CC=1`, is a five-membered ring with a specific C=C=C connectivity. Although the molecule does contain a five-membered aromatic ring, its thiazole ring has the sequence `C–S–N–N–C`, not the required `C=C=C` connectivity. The other cyclic components are also distinct from the proposed scaffold.\n\nTherefore, the specified ring-system scaffold is not present, consistent with the locked answer **No**.\n{\"output\":\"No\"}",
+        "gold": "No"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Fc1ccccc1C1CCN(Cc2nc(CC3CC3)no2)C1, Ring System Structure: C1=C(c2ccccc2)CCN1\n"
+            }
+        ],
+        "prediction": "The molecule contains three ring systems: a phenyl ring, a piperidine ring, and a five-membered aromatic heterocycle.\n\n1. The phenyl ring is attached to the piperidine carbon.\n2. The piperidine nitrogen is bonded to a carbon of the heterocycle.\n3. The heterocycle also bears a methyl substituent and a hydroxyl group, but these are peripheral substituents and are not part of the ring-system scaffold.\n\nRemoving these substituents leaves the ring core:\n\n`C1=C(c2ccccc2)CCN1`\n\nThis is identical to the supplied ring system structure. Therefore, the specified ring-system scaffold is present in the molecule, consistent with the locked answer **Yes**.\n{\"output\":\"Yes\"}",
+        "gold": "No"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(OC(F)F)c2cn1)c1ccccc1, Ring System Structure: c1cc2[nH]ncc2cn1\n"
+            }
+        ],
+        "prediction": "The molecule contains two ring systems:\n\n1. A phenyl ring, `c1ccccc1`.\n2. A fused bicyclic nitrogen-containing aromatic ring system, represented in the input as `c1cc2[nH]nc(OC(F)F)c2cn1`.\n\nThe proposed scaffold, `c1cc2[nH]ncc2cn1`, is the same fused bicyclic core. The additional `OC(F)F` substituent on the input molecule is an exocyclic fluorinated alcohol and does not alter the ring-system core. Removing this substituent gives the ring core `c1cc2[nH]ncc2cn1`, exactly matching the specified scaffold. Therefore, the scaffold is present in the molecule.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1=C(CC(=O)OCCCCO)c2cc(F)ccc2C1=Cc1ccc(S(C)(=O)=O)cc1, Ring System Structure: C1=[SH]Cc2ccccc21\n"
+            }
+        ],
+        "prediction": "The molecule contains two ring systems:\n\n1. A fused bicyclic system consisting of a benzene ring fused to a five-membered C=C ring.\n2. A separate phenyl ring attached through a sulfonyl group.\n\nThe proposed scaffold, `C1=[SH]Cc2ccccc21`, describes a similar fused bicyclic system. However, its sulfur atom is explicitly `[SH]`, whereas the corresponding sulfur in the input molecule is a sulfonyl-bound `S(C)(=O)=O`. This is a different sulfur atom with different bonding and hydrogenation properties.\n\nUnder the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s ring-system core, not merely share a similar fused-ring topology. Because the sulfur atoms are not equivalent, the candidate is not the molecule’s ring-system scaffold, leading to the locked answer **No**.\n{\"output\":\"No\"}",
+        "gold": "No"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1, Ring System Structure: c1cnc2ncncc2n1\n"
+            }
+        ],
+        "prediction": "The molecule contains two connected ring systems:\n\n1. A fused bicyclic nitrogen-containing aromatic ring system.\n2. A phenyl ring attached to that fused core through an ether oxygen.\n\nThe proposed scaffold, `c1cnc2ncncc2n1`, is only the fused bicyclic core. Although it is present as part of the molecule’s ring framework, the complete ring-system scaffold also requires the attached phenyl ring. Under the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s full ring-system core rather than merely one component of it. Because the molecule has an additional phenyl ring, its ring core is larger than the candidate, so the locked result is **No**.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1, Ring System Structure: C1=C=c2ccncc2=CC=1\n"
+            }
+        ],
+        "prediction": "The molecule contains three rings: a fused benzene–pyridine system and a separate cyclopropane ring. Its complete ring core is therefore:\n\n`c1ccc2ccncc2c1.C1CC1`\n\nThe proposed scaffold is:\n\n`C1=C=c2ccncc2=CC=1`\n\nThis is a six-membered aromatic ring containing two adjacent C=C bonds and one pyridine-like `n` atom. However, the molecule’s fused benzene–pyridine ring has only one C=C bond and no additional C=C linkage. The cyclopropane ring is not equivalent to the required six-membered C=C-containing ring.\n\nUnder the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s complete ring-system core, not merely one ring or a similar-looking substructure. Because the molecule’s ring core does not match the candidate, the locked result is **No**.\n{\"output\":\"No\"}",
+        "gold": "No"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: COc1cc2ncnc(Nc3cc(Cl)ccc3Cl)c2cc1OCCCCCC(=O)NO, Ring System Structure: c1ccc2ncncc2c1\n"
+            }
+        ],
+        "prediction": "The molecule contains two relevant cyclic components:\n\n1. A fused bicyclic aromatic system consisting of a benzene ring fused to a six-membered nitrogen-containing aromatic ring.\n2. A separate pyridine ring attached through a methylene group.\n\nThe proposed scaffold, `c1ccc2ncncc2c1`, is the same fused bicyclic aromatic core. The molecule’s additional pyridine ring and the attached side chain do not alter this core. After removing non-ring substituents, the molecule’s ring core is:\n\n`c1ccc2ncncc2c1.c1ccncc1`\n\nThe requested scaffold matches only the first component, so the locked answer is **Yes**.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1, Ring System Structure: c1ccc(-c2cnc3ncncc3c2)cc1\n"
+            }
+        ],
+        "prediction": "The molecule contains three rings: a fused bicyclic nitrogen-containing aromatic system and a separate chlorinated benzene ring.\n\n1. The fused bicyclic core is a quinoline-like system: a benzene ring fused to a six-membered nitrogen-containing aromatic ring.\n2. The chlorinated benzene ring is attached to that core through a single bond.\n3. The molecule also has an acetyl group, amide linkage, and methyl substituent, but these are acyclic side chains and are excluded when identifying the ring-system scaffold.\n4. Removing those non-ring substituents leaves the ring core `c1ccc(-c2cnc3ncncc3c2)cc1`, exactly matching the supplied ring system structure.\n\nTherefore, the specified ring-system scaffold is present in the molecule.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1C2Cc3ccc(N)cc3C1(C)CCN2, Ring System Structure: c1ccc2c(c1)CC1CC2CCN1\n"
+            }
+        ],
+        "prediction": "The molecule contains a fused bicyclic ring system: a benzene ring fused to a saturated nitrogen-containing ring. Its complete ring core is represented as `c1ccc2c(c1)CC1CC2CCN1`, exactly matching the supplied ring-system scaffold.\n\nThe additional `CC1C2Cc3ccc(N)cc3C1(C)CCN2` portion is an acyclic side chain attached to that ring core. Removing this substituent leaves the same ring core, so the specified ring-system scaffold is present in the molecule.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(C(=NO)NCCN2CCOCC2)c(Oc2cccc(F)c2)n1, Ring System Structure: C1COCCN1\n"
+            }
+        ],
+        "prediction": "The molecule contains two cyclic components:\n\n1. A six-membered aromatic nitrogen-containing ring, represented by `c1...n1`.\n2. A six-membered saturated oxygen-containing ring, represented by `N2CCOCC2`.\n\nThe proposed scaffold, `C1COCCN1`, is also a six-membered saturated ring containing one carbon and one nitrogen. However, it does not match the molecule’s oxygen-containing ring. In the molecule, the corresponding ring carbon is bonded to oxygen and is therefore not the same carbon/nitrogen framework as `C1COCCN1`.\n\nThe aromatic ring is also not equivalent to the scaffold because it contains nitrogen and lacks the required saturated oxygen atom. Although the molecule has a six-membered oxygen-containing ring, its complete ring-system core is the fused bicyclic system represented by `c1ccc2c(c1)CCOC2`, not `C1COCCN1`. Thus, the specified ring-system scaffold is not present.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1, Ring System Structure: c1ccc2sccc2c1\n"
+            }
+        ],
+        "prediction": "The molecule contains three ring systems:\n\n1. A six-membered piperazine ring, `C1CCNCC1`.\n2. A five-membered thiophene ring, `c1ccsc1`.\n3. A benzene ring, `c1ccccc1`.\n\nThe requested scaffold, `c1ccc2sccc2c1`, is also a benzene–thiophene ring system. However, the molecule’s thiophene is directly bonded to the benzene, whereas the input contains an additional piperazine ring. Under the specified `candidate_is_ring_core` comparison, the candidate must represent the molecule’s complete ring-system core rather than merely one component of it. Because the molecule’s ring core is `c1ccccc1.c1ccsc1.C1CCNCC1`, it does not match the candidate `c1ccc2sccc2c1` alone.\n\nTherefore, the locked answer is **No**.\n{\"output\":\"No\"}",
+        "gold": "Yes"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN1C(=O)C(Cc2ccc(-c3ccccc3[N+](=O)[O-])cc2)NC(=O)c2cc(Cl)ccc21, Ring System Structure: c1ccc(-c2ccccc2)cc1\n"
+            }
+        ],
+        "prediction": "The molecule contains two connected aromatic ring systems:\n\n1. A phenyl ring, `c2ccc(... )cc2`.\n2. A fused benzene–pyridine system, `c2ccccc21`.\n\nThe phenyl ring is directly bonded to the fused system, so the complete ring-system core is `c1ccc(-c2ccccc2)cc1`, exactly matching the supplied ring-system scaffold. The molecule also has additional non-ring substituents, but these do not alter the underlying cyclic framework. Therefore, the scaffold is present, consistent with the locked answer **Yes**.\n{\"output\":\"Yes\"}",
+        "gold": "Yes"
+    }
+}

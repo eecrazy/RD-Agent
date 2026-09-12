@@ -1,0 +1,728 @@
+{
+    "exact_match": 68.75,
+    "accuracy": 68.75,
+    "correct_count": 33.0,
+    "total_count": 48.0,
+    "details": [
+        {
+            "example_abbr": "tablebench_fact_checking_48",
+            "pred": [
+                "1. Locate the row for the Olympic Games.\n2. The athlete’s best position in that row was 11th (sf).\n3. The year listed in that row was 2012.\nFinal Answer: 2012"
+            ],
+            "pred_extracted": [
+                "2012"
+            ],
+            "answer": [
+                "2012"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_49",
+            "pred": [
+                "1. Locate the row with the Heptathlon event at the South American Championships in Peru.\n2. That row lists the year as 2008 and the points score as 5578.\nFinal Answer: 2008, 5578"
+            ],
+            "pred_extracted": [
+                "2008, 5578"
+            ],
+            "answer": [
+                "2009, 5578 pts"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_50",
+            "pred": [
+                "1. Locate the row for 2005.\n2. Read the value in the “indians admitted” column: 22141.\nFinal Answer: 22141"
+            ],
+            "pred_extracted": [
+                "22141"
+            ],
+            "answer": [
+                "22141"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_51",
+            "pred": [
+                "1. Locate the row with Year = 2005, Position = 4th, and Competition = World Half Marathon Championships.\n2. That row lists Event = Half marathon and Venue = Edmonton, Canada.\nFinal Answer: Half marath"
+            ],
+            "pred_extracted": [
+                "Half marathon, Edmonton, Canada"
+            ],
+            "answer": [
+                "Half marathon, Edmonton, Canada"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_52",
+            "pred": [
+                "1. Filter the table to schools located in Belfast.\n2. Among those schools, compare their “Outright Titles” values.\n3. The highest value is 35, recorded by Methodist College Belfast.\nFinal Answer: Meth"
+            ],
+            "pred_extracted": [
+                "Methodist College Belfast"
+            ],
+            "answer": [
+                "Methodist College Belfast"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_53",
+            "pred": [
+                "1. The United States won in 2013, 2011, 2009, 2007, and 2005, for a total of 5 victories.\n2. Fred Couples captained the team in 2013, 2011, and 2009, for a total of 3 victories.\n3. Therefore, Fred Cou"
+            ],
+            "pred_extracted": [
+                "fred couples"
+            ],
+            "answer": [
+                "3"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_54",
+            "pred": [
+                "1. Locate the row with 13 points.\n2. That row also shows a goal difference of 17.\n3. The team listed is corinthians.\nFinal Answer: corinthians"
+            ],
+            "pred_extracted": [
+                "corinthians"
+            ],
+            "answer": [
+                "corinthians"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_55",
+            "pred": [
+                "1. In 2001, the team played five matches in Nicosia, Cyprus, and won four of them, the most in the table.\n2. Their first win in Nicosia was on 16 May, with a score of 3 - 0.\nFinal Answer: nicosia (cyp"
+            ],
+            "pred_extracted": [
+                "nicosia (cyp), 3 - 0"
+            ],
+            "answer": [
+                "nicosia (cyp), 3 - 0"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_56",
+            "pred": [
+                "1. Locate the row with the status “champion, defeated rafael nadal.”\n2. That row lists the player as “novak djokovic” and shows 2,000 points won.\nFinal Answer: novak djokovic, 2000"
+            ],
+            "pred_extracted": [
+                "novak djokovic, 2000"
+            ],
+            "answer": [
+                "novak djokovic, 2000"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_57",
+            "pred": [
+                "1. The Telugu movie released in 1955 is “Ardhangi.”\n2. Its director, P. Pullaiah, also directed the Tamil movie “Pennin Perumai” in 1956.\nFinal Answer: Ardhangi"
+            ],
+            "pred_extracted": [
+                "Ardhangi"
+            ],
+            "answer": [
+                "Ardhangi"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_58",
+            "pred": [
+                "1. The highest number of titles is 5, won by New York Cosmos.\n2. Their first title was in 1982, and the winning coach was Giorgio Chinaglia.\nFinal Answer: new york cosmos, giorgio chinaglia"
+            ],
+            "pred_extracted": [
+                "new york cosmos, giorgio chinaglia"
+            ],
+            "answer": [
+                "new york cosmos, gordon bradley"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_59",
+            "pred": [
+                "1. Locate the row for “Black.”\n2. Read the value in the “1960” column: 68.\n3. The table provides no percentage or validation requiring a Yes/No response.\nFinal Answer: 68"
+            ],
+            "pred_extracted": [
+                "68"
+            ],
+            "answer": [
+                "68"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_60",
+            "pred": [
+                "1. Locate the row with the event “100 m” and the position “1st.”\n2. That row lists the year as 2007.\nFinal Answer: 2007"
+            ],
+            "pred_extracted": [
+                "2007"
+            ],
+            "answer": [
+                "2007"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_61",
+            "pred": [
+                "1. Filter to players with at least one men’s singles title and at least two mixed doubles titles in the same year.\n2. The qualifying players are:\n   - Jeliazko Valkov: 1985, 1986, 1988, 1989\n   - Stan"
+            ],
+            "pred_extracted": [
+                "mihail popov"
+            ],
+            "answer": [
+                "jeliazko valkov, stilian makarski"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_62",
+            "pred": [
+                "1. In 2013, the athlete placed 4th in the Asian Championships.\n2. In 2014, the athlete placed 3rd in the Asian Indoor Championships and 2nd in the Asian Junior Championships.\n3. In 2014, the athlete a"
+            ],
+            "pred_extracted": [
+                "2014"
+            ],
+            "answer": [
+                "2013"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_63",
+            "pred": [
+                "1. Locate the row for “llanhilleth rfc.”\n2. Read the value in the “points” column: 37.\nFinal Answer: 37"
+            ],
+            "pred_extracted": [
+                "37"
+            ],
+            "answer": [
+                "37"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_64",
+            "pred": [
+                "1. Locate the row with 4 gold medals.\n2. That row also shows a rank of 4.\n3. The nation listed is Chile.\nFinal Answer: Chile"
+            ],
+            "pred_extracted": [
+                "Chile"
+            ],
+            "answer": [
+                "Chile"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_65",
+            "pred": [
+                "1. Locate the row for “Leavin' Eyes.”\n2. Its artist is Glen Campbell, its year is 1984, and its role is Writer, producer.\n3. The row for “Cruisin'” also lists Glen Campbell as the artist, 1986 as the "
+            ],
+            "pred_extracted": [
+                "2"
+            ],
+            "answer": [
+                "1"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_66",
+            "pred": [
+                "1. Locate the row where the “bello” column has the value 66.\n2. That row lists the ward as “rideau - vanier.”\nFinal Answer: rideau - vanier"
+            ],
+            "pred_extracted": [
+                "rideau - vanier"
+            ],
+            "answer": [
+                "rideau - vanier"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_67",
+            "pred": [
+                "1. Locate the row for **alpha ambrose kargbo**.\n2. Read the value in the **3 - points** column: **15**.\nFinal Answer: 15"
+            ],
+            "pred_extracted": [
+                "15"
+            ],
+            "answer": [
+                "15"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_68",
+            "pred": [
+                "1. Locate the row for George McLean.\n2. Read the value in the “league goals” column: 43.\nFinal Answer: 43"
+            ],
+            "pred_extracted": [
+                "43"
+            ],
+            "answer": [
+                "43"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_69",
+            "pred": [
+                "1. Locate the row for 2005.\n2. The Winners column shows Offaly.\n3. The Runners-up column shows Carlow.\nFinal Answer: Offaly, Carlow"
+            ],
+            "pred_extracted": [
+                "Offaly, Carlow"
+            ],
+            "answer": [
+                "Offaly, Carlow"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_70",
+            "pred": [
+                "1. Filter to rows where the Category is “Best Actor” and the Year is 2017 or earlier.\n2. The qualifying films are:\n   - Cock and Bull: 2 wins\n   - Feather Flies to the Sky: 2 wins\n   - Operation Red S"
+            ],
+            "pred_extracted": [
+                "Cock and Bull, Feather Flies to the Sky"
+            ],
+            "answer": [
+                "Cock and Bull"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_71",
+            "pred": [
+                "1. Locate the row for the 2005 season.\n2. Read the value in the “races” column: 16.\nFinal Answer: 16"
+            ],
+            "pred_extracted": [
+                "16"
+            ],
+            "answer": [
+                "16"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_72",
+            "pred": [
+                "1. Locate the row for 2001.\n2. Read the value in the “Naturalisation by marriage” column: 710.\nFinal Answer: 710"
+            ],
+            "pred_extracted": [
+                "710"
+            ],
+            "answer": [
+                "710"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_73",
+            "pred": [
+                "1. Filter to years with crowd above 40,000: 1979, 1980, 1981, 1983, and 1986.\n2. Their margins are 28, 3, 24, 34, and 30.\n3. The highest margin is 34, recorded in 1983.\nFinal Answer: carlton"
+            ],
+            "pred_extracted": [
+                "carlton"
+            ],
+            "answer": [
+                "essendon"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_74",
+            "pred": [
+                "1. Locate the row for 2003.\n2. Find the row where the individual won an award for “Road to Perdition.”\n3. That row lists the award as “Young Artist Award.”\nFinal Answer: Young Artist Award"
+            ],
+            "pred_extracted": [
+                "Young Artist Award"
+            ],
+            "answer": [
+                "Young Artist Award"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_75",
+            "pred": [
+                "1. Filter the table to delegates whose hometown is listed as “manila , metro manila.”\n2. The matching delegates are:\n   - Sharmaine Rama Gutierrez\n   - Anna Maria Gonzalez\n   - Michelle Cueva Reyes\n  "
+            ],
+            "pred_extracted": [
+                "7"
+            ],
+            "answer": [
+                "2"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_76",
+            "pred": [
+                "1. Between 1975 and 1982, the men’s singles titles are:\n   - Victor Yusim: 4\n   - Michael Schneidman: 1\n   - Yitzhak Serrouya: 1\n   - Andrew Downes: 1\n2. The men’s doubles titles are:\n   - Victor Yusi"
+            ],
+            "pred_extracted": [
+                "victor yusim"
+            ],
+            "answer": [
+                "victor yusim"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_77",
+            "pred": [
+                "1. Locate the row with 18 gold medals.\n2. That row lists the nation as Great Britain.\nFinal Answer: great britain"
+            ],
+            "pred_extracted": [
+                "great britain"
+            ],
+            "answer": [
+                "great britain"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_78",
+            "pred": [
+                "1. The athlete won two gold medals in 1966, two in 1969, two in 1971, two in 1975, and one in 1983.\n2. The highest total was two in 1969, when the athlete won both the shot put and discus throw.\nFinal"
+            ],
+            "pred_extracted": [
+                "1969"
+            ],
+            "answer": [
+                "1969, 1971, 1975"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_79",
+            "pred": [
+                "1. Locate the row with a total of 57 medals.\n2. That row lists Puerto Rico.\nFinal Answer: Puerto Rico"
+            ],
+            "pred_extracted": [
+                "Puerto Rico"
+            ],
+            "answer": [
+                "Puerto Rico"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_80",
+            "pred": [
+                "1. Filter the table for rows where the narrator is Katherine Kellgren.\n2. Of those rows, the authors are Eoin Colfer, Cornelia Funke, Elizabeth Fama, Daniel Kraus, G Neri, Gary D Schmidt, Maggie Stief"
+            ],
+            "pred_extracted": [
+                "john green"
+            ],
+            "answer": [
+                "elizabeth fama"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_81",
+            "pred": [
+                "1. Compare the values in the **points** column.\n2. The lowest value is **15**.\n3. Two teams have 15 points: **estudiantes de mãrida fc** and **monagas sc**.\nFinal Answer: estudiantes de mãrida fc, mon"
+            ],
+            "pred_extracted": [
+                "estudiantes de mãrida fc, monagas sc"
+            ],
+            "answer": [
+                "estudiantes de mãrida fc, monagas sc"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_82",
+            "pred": [
+                "1. Locate the row where the “bello” column has the value 51.\n2. That row lists the ward as “orlãans.”\nFinal Answer: orlãans"
+            ],
+            "pred_extracted": [
+                "orlãans"
+            ],
+            "answer": [
+                "orlãans"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_83",
+            "pred": [
+                "1. Locate the row for Texas.\n2. Read the value in the “average” column: 9.266.\nFinal Answer: 9.266"
+            ],
+            "pred_extracted": [
+                "9.266"
+            ],
+            "answer": [
+                "9.266"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_84",
+            "pred": [
+                "1. Locate the row for “four of a kind, 2-4.”\n2. Read the value in the “3 credits” column: 300.\nFinal Answer: 300"
+            ],
+            "pred_extracted": [
+                "300"
+            ],
+            "answer": [
+                "300"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_85",
+            "pred": [
+                "1. Locate the row with the category “Outstanding Performance by an Actress in a Series.”\n2. That row lists the year as 1961.\nFinal Answer: 1961"
+            ],
+            "pred_extracted": [
+                "1961"
+            ],
+            "answer": [
+                "1961"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_86",
+            "pred": [
+                "1. Locate the row with position **37th** in the **20 km walk** event.\n2. That row lists the competition as **World Race Walking Cup**.\nFinal Answer: World Race Walking Cup"
+            ],
+            "pred_extracted": [
+                "World Race Walking Cup"
+            ],
+            "answer": [
+                "World Race Walking Cup"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_87",
+            "pred": [
+                "1. Locate the row with rank 3.\n2. That row lists Jamaica with 5 gold, 3 silver, and 5 bronze medals.\nFinal Answer: jamaica"
+            ],
+            "pred_extracted": [
+                "jamaica"
+            ],
+            "answer": [
+                "jamaica"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_88",
+            "pred": [
+                "1. Locate the row for the World Championships.\n2. The athlete’s best position was 4th in 2005.\nFinal Answer: 2005"
+            ],
+            "pred_extracted": [
+                "2005"
+            ],
+            "answer": [
+                "2013"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_89",
+            "pred": [
+                "1. Check the nations with 1 gold medal.\n2. Among those nations, only Canada has 0 silver and 0 bronze medals.\n3. Therefore, Canada is the nation that won 1 gold medal and no silver or bronze medals.\nF"
+            ],
+            "pred_extracted": [
+                "canada"
+            ],
+            "answer": [
+                "benin, quebec, cape verde, ivory coast"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_90",
+            "pred": [
+                "1. Locate the row for Lionel Palairet.\n2. Read the value in the “highest score” column: 100.\nFinal Answer: 100"
+            ],
+            "pred_extracted": [
+                "100"
+            ],
+            "answer": [
+                "100"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_91",
+            "pred": [
+                "1. Filter to winners with a winning time of less than 2:02 minutes.\n2. The qualifying trainers are Kenneth G Mcpeek, Dale L Romans, Shug McGaughey, Jeff Mullins, and William I Mott.\n3. Count their win"
+            ],
+            "pred_extracted": [
+                "william i mott"
+            ],
+            "answer": [
+                "william i mott"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_92",
+            "pred": [
+                "1. Locate the row for “switzerland.”\n2. Read the value in the “total” column: 6.\nFinal Answer: 6"
+            ],
+            "pred_extracted": [
+                "6"
+            ],
+            "answer": [
+                "6"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_93",
+            "pred": [
+                "1. Check each year for a player who won both men’s singles and men’s doubles.\n2. The only matching entry is Przemysław Wacha in 2002.\n3. He won men’s singles and men’s doubles in the same year.\nFinal "
+            ],
+            "pred_extracted": [
+                "przemysław wacha, 2002"
+            ],
+            "answer": [
+                "henrik sörensen, 1994"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_94",
+            "pred": [
+                "1. Locate the row for the Irish National Marathon Championship with a personal best (PB) time.\n2. That row lists the year as 1984 and the venue as Wexford.\nFinal Answer: 1984, Wexford"
+            ],
+            "pred_extracted": [
+                "1984, Wexford"
+            ],
+            "answer": [
+                "1982,Limerick"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_fact_checking_95",
+            "pred": [
+                "1. Locate the row with 30 silver medals.\n2. That row lists Great Britain.\nFinal Answer: Great Britain"
+            ],
+            "pred_extracted": [
+                "Great Britain"
+            ],
+            "answer": [
+                "Great Britain"
+            ],
+            "correct": [
+                true
+            ]
+        }
+    ]
+}

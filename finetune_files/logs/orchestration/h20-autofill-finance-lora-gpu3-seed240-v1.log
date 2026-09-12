@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T05:17:36.119908+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-finance-lora-gpu3-seed240-v1",
+  "selected_run_ids": [
+    "FinanceIQ_gen__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "FinanceIQ_gen__lora": {
+      "state": "succeeded",
+      "run_id": "FinanceIQ_gen__lora",
+      "benchmark": "FinanceIQ_gen",
+      "method": "lora",
+      "gpus": [
+        "3"
+      ],
+      "config_sha256": "deb6affb5e6a1b2b441daacd2d909ac05fb68267b3c87ec7ac55e6935b777526",
+      "seed": 240,
+      "data_seed": 240,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__FinanceIQ_gen__run-1/workspace/7c293cc65d0548609b4854eb07492be6/data.json",
+        "sha256": "7667370351e96ca22c8554c9caa8c9df9b15ed20a11139c117e9d0f43276ec02",
+        "records": 2000
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__FinanceIQ_gen__run-1/workspace/7c293cc65d0548609b4854eb07492be6/internal_validation_alpaca.json",
+        "sha256": "3fe0e3a28aa8883870ea045e7e09284079bb228b46ce1ac9d5709f0543a236ff",
+        "records": 112
+      },
+      "prepared_at": "2026-09-09T05:07:01.353196+00:00",
+      "started_at": "2026-09-09T05:07:01.353339+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T05:17:36.116539+00:00",
+      "duration_seconds": 634.7624112265185,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 2.8229286670684814,
+        "eval_runtime": 3.145,
+        "eval_samples_per_second": 3.18,
+        "eval_steps_per_second": 3.18,
+        "total_flos": 2.899904877821952e+16,
+        "train_loss": 1.408018415624445,
+        "train_runtime": 291.093,
+        "train_samples_per_second": 1.134,
+        "train_steps_per_second": 0.038,
+        "global_step": 11,
+        "max_steps": 11,
+        "best_metric": 2.8229284286499023,
+        "last_eval_loss": 2.8229284286499023,
+        "min_eval_loss": 2.8229284286499023
+      },
+      "gpu": {
+        "3": {
+          "samples": 275,
+          "peak_memory_mib": 26343.0,
+          "peak_utilization_percent": 99.0,
+          "mean_utilization_percent": 88.98545454545454,
+          "mean_power_watts": 310.5101454545453
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-finance-lora-gpu3-seed240-v1/FinanceIQ_gen__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 32,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}

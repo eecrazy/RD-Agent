@@ -1,0 +1,170 @@
+{
+  "experiment_id": "base/7b/panorama_pi4pc",
+  "paper_group": "base-7b",
+  "method": "Base Model",
+  "benchmark": "panorama_pi4pc",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": null,
+  "data_limit": null,
+  "timeout": null,
+  "run_index": 1,
+  "runner": "run_base_eval.py",
+  "artifact_status": "reconstructed-from-released-evaluator",
+  "source": "main-results",
+  "gpu": "6",
+  "state": "succeeded",
+  "started_at": "2026-08-28T01:46:19.041949+08:00",
+  "benchmark_asset": "benchmark-panorama",
+  "benchmark_dataset_path": "pinned/panorama",
+  "model_asset": "model-qwen2.5-7b-instruct",
+  "task_timeout": 43200,
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:44123/v1"
+  },
+  "splits": {
+    "validation": {
+      "state": "succeeded",
+      "range": "[:min(100, len(index_list)//2)]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/configs/validation.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/configs/validation.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/validation"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/validation/20260828_014627",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/validation/20260828_014627/summary/summary_20260828_014627.csv",
+        "rows": [
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "51.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "gold_hit_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "51.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "custom_score",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "51.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "gold_hits",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "51.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "silver_hits",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "0.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "100.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "100.00"
+          }
+        ]
+      }
+    },
+    "test": {
+      "state": "succeeded",
+      "range": "[-min(100, len(index_list)//2):]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/configs/test.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/configs/test.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/test"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/test/20260828_015013",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__panorama_pi4pc/test/20260828_015013/summary/summary_20260828_015013.csv",
+        "rows": [
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "43.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "gold_hit_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "43.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "custom_score",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "43.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "gold_hits",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "43.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "silver_hits",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "0.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "100.00"
+          },
+          {
+            "dataset": "panorama_pi4pc",
+            "version": "3cfa92",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-panorama_pi4pc": "100.00"
+          }
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-08-28T01:54:02.187306+08:00"
+}

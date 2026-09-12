@@ -1,0 +1,1057 @@
+{
+    "accuracy": 44.0,
+    "correct_count": 22.0,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_50",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Negishi coupling, a palladium-catalyzed cross-coupling reaction between an organozinc compound and an organohalide. The goal is to form a new carbon-carbon bond. Step-2, Analyze Reagents Condition, The reagent is a palladium complex with 3 or 4 ligands, represented by the SMARTS string '[Pd;D3,D4;...;+0]'. This is a common pre-catalyst form, often Pd(PPh3)4 or Pd(PPh3)Cl2. The condition implies that the active catalytic species is formed in "
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_51",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an ester hydrolysis, specifically a saponification, which is the base-catalyzed cleavage of an ester to a carboxylate salt and an alcohol. The key functional groups are the ester ([O]=[C]-[O]-[C]) and a hydroxide ion ([O;H1]). Step-2, Analyze Reagents Condition, The reagent is hydroxide ion (OH-). This is a strong nucleophile and a strong base. The condition 'Deprotection with OH-' implies the hydroxide will act as the primary reactive species"
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_52",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Fischer-Speier esterification, but the reagents provided are for a different type of reaction. The reagents are a carboxylic acid ([#8]=[#6]-[#8]), an alcohol ([#6]-[#8]), and thionyl chloride ([Cl]-[S](=[O])-[Cl]). This combination is characteristic of a reaction to convert a carboxylic acid into an acyl chloride, which is a key step in many acylation reactions, including esterification with a nucleophile like an alcohol. Step-2, Analyze Re"
+            ],
+            "pred_extracted": [
+                "H"
+            ],
+            "pred_normalized": [
+                "H"
+            ],
+            "gold": [
+                "H"
+            ],
+            "gold_normalized": [
+                "H"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_53",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a deprotection of a methyl ester ('CO2H-Me') using a base ('OH-'). The goal is to cleave the C-O bond of the ester to form a carboxylic acid. Step-2, Analyze Reagents Condition, The reagents are water ('[O;H1]') and a base, hydroxide ('[O]=[C]-[O]-[C]'), which is represented as a generic alkoxide. The condition 'Deprotection with OH-' indicates a base-catalyzed hydrolysis, specifically saponification. Step-3, Recall Mechanism Basics, Saponific"
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "C"
+            ],
+            "gold_normalized": [
+                "C"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_54",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Tosyloxy Suzuki coupling', a variant of the Suzuki cross-coupling. The key transformation is the coupling of an organotin compound with an organotosylate, catalyzed by a palladium complex. Step-2, Analyze Reagents Condition, The reagents are a Palladium(II) salt (PdX2) and 1,5-cyclooctadiene (COD). This suggests a pre-catalyst system where the Pd(II) source must be reduced to the active Pd(0) catalyst. The presence of COD is typical for sta"
+            ],
+            "pred_extracted": [
+                "H"
+            ],
+            "pred_normalized": [
+                "H"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_55",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Stille reaction', a specific type of Stille coupling. The goal is to form a new carbon-carbon bond between an organotin compound (organostannane) and an organohalide (in this case, an organobromide). The key steps are oxidative addition, transmetalation, and reductive elimination. Step-2, Analyze Reagents Condition, The reagent is a Palladium(0) complex, specifically '[!Cl;!Br;!I;!O][Pd;D2;+0][!Cl;!Br;!I;!O]'. This SMARTS string repre"
+            ],
+            "pred_extracted": [
+                "I"
+            ],
+            "pred_normalized": [
+                "I"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_56",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation between a carboxylic ester and an amine to form an amide. The key functional groups are the ester (-COOEt) and the amine (-NH2). Step-2, Analyze Reagents Condition, The condition is 'Condensation using BOP'. BOP is a peptide coupling reagent, specifically (Benzotriazol-1-yloxy)tris(dimethylamino)phosphonium hexafluorophosphate. It is used to activate the carboxylic ester for nucleophilic attack by the amine. Step-3, Recall Mecha"
+            ],
+            "pred_extracted": [
+                "E"
+            ],
+            "pred_normalized": [
+                "E"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_57",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Chloro Stille coupling, a type of Stille cross-coupling. The goal is to form a new carbon-carbon bond between an organotin compound and an organohalide, catalyzed by a palladium complex. Step-2, Analyze Reagents Condition, The reagents are a Palladium(II) halide (PdX2), a phosphine ligand (PPh3), and water. The presence of PdX2 suggests it's the active catalyst precursor that needs to be reduced to the active Pd(0) species. PPh3 is a common "
+            ],
+            "pred_extracted": [
+                "H"
+            ],
+            "pred_normalized": [
+                "H"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_58",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation between a carboxylic acid and an amidine, catalyzed by a protic solvent like methanol. The goal is to form an N-acyl amidine. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid and methanol. Methanol acts as both a solvent and a protic nucleophile. The amidine is not explicitly listed, but its nitrogen atom will act as a nucleophile. The reaction is a condensation, implying the formation of a water molecule a"
+            ],
+            "pred_extracted": [
+                "N"
+            ],
+            "pred_normalized": [
+                "N"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_59",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a nitration, specifically the electrophilic aromatic substitution of a benzene ring by a nitro group. The key functional groups involved are the aromatic ring ([c;H1]) and the nitronium ion ([N+]([O-])(=[O])[O;H0,H1;+0,-1]). Step-2, Analyze Reagents Condition, The reagents are nitric acid ([N+]([O-])(=[O])[O;H0,H1;+0,-1]) and sulfuric acid ([S](=[O])(=[O])([OH])[OH]). Sulfuric acid is a strong acid and a dehydrating agent. Its role is to proto"
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_60",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Chloro Sonogashira coupling, a specific type of Sonogashira coupling. The goal is to form a carbon-carbon bond between a terminal alkyne and an aryl or vinyl halide. The key functional groups are the aryl/vinyl chloride and the terminal alkyne. Step-2, Analyze Reagents Condition, The reagents are a Pd(II) source, PdX2, and 1,5-cyclooctadiene (COD). This suggests a Pd(II) precatalyst. The standard Sonogashira cycle involves a Pd(0) species. T"
+            ],
+            "pred_extracted": [
+                "D"
+            ],
+            "pred_normalized": [
+                "D"
+            ],
+            "gold": [
+                "F"
+            ],
+            "gold_normalized": [
+                "F"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_61",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Weinreb amide synthesis, a specific type of amide coupling. The goal is to form an amide bond between a carboxylic acid and a Weinreb amide (an N-methoxy-N-methylamide). Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid ([#8]=[#6]-[#8]), an amine ([#7]), and a coupling agent, HATU/HBTU ([#7;+1]=[#6](-[*])-[#7]). HATU/HBTU are uronium-based coupling agents used to activate the carboxylic acid for nucleophilic attack by th"
+            ],
+            "pred_extracted": [
+                "K"
+            ],
+            "pred_normalized": [
+                "K"
+            ],
+            "gold": [
+                "C"
+            ],
+            "gold_normalized": [
+                "C"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_62",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Buchwald-Hartwig amination, a palladium-catalyzed cross-coupling reaction forming a C-N bond between an aryl halide and an amine. The key functional groups are the aryl iodide (R-I) and an amine (R'-NH2). Step-2, Analyze Reagents Condition, The reagents are a Pd(II) source, specifically a Pd(II) complex like PdCl2, and 1,5-cyclooctadiene (COD). This suggests a pre-catalyst that needs to be reduced to the active Pd(0) species. The Buchwald-Ha"
+            ],
+            "pred_extracted": [
+                "G"
+            ],
+            "pred_normalized": [
+                "G"
+            ],
+            "gold": [
+                "B"
+            ],
+            "gold_normalized": [
+                "B"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_63",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Chloro Miyaura boration, a variant of the Miyaura boration, which is a type of Suzuki-Miyaura cross-coupling. The goal is to form a C-B bond by coupling an aryl/vinyl halide with a diboron reagent. Step-2, Analyze Reagents Condition, The reagent is a Palladium(0) complex, specified as having 3 or 4 ligands ('[Pd;D3,D4;...]'). This indicates the catalyst is likely a Pd(0) species like Pd(PPh3)4 or Pd(PPh3)2Cl2, which is a common precatalyst. "
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_64",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a bromination of an aromatic ring, specifically benzene. The goal is to form a monobrominated benzene derivative. Step-2, Analyze Reagents Condition, The reagents are 'BrBr' (elemental bromine) and '[c;H1]' (a benzene ring). The condition 'Bromination on benzene' implies a direct electrophilic aromatic substitution. Elemental bromine (Br2) is a source of electrophilic bromine (Br+). Step-3, Recall Mechanism Basics, Electrophilic Aromatic Subst"
+            ],
+            "pred_extracted": [
+                "B"
+            ],
+            "pred_normalized": [
+                "B"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_65",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an amide bond formation, specifically a condensation between a carboxylic acid and an amine, facilitated by a coupling agent. The reagents provided, '[CH3]-[OH]' (methanol) and '[O]=[C]-[O]' (a carboxylic acid), suggest a direct condensation pathway, likely under basic conditions. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid and methanol. Methanol is a protic solvent and can act as a nucleophile. The reaction is descr"
+            ],
+            "pred_extracted": [
+                "O"
+            ],
+            "pred_normalized": [
+                "O"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_66",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a hydroxy to chloro conversion, specifically the conversion of an alcohol or phenol to a chloro compound using SOCl2 or POCl3. The key functional group transformation is R-OH -> R-Cl. Step-2, Analyze Reagents Condition, The reagents are 'O=[S,P](-[Cl])-[Cl].[O]', which represents an alcohol (R-OH) and 'SOCl2' (sulfur dioxide dichloride). The condition 'SOCl2 or POCl3' indicates the use of a chlorinating agent. SOCl2 is a common reagent for thi"
+            ],
+            "pred_extracted": [
+                "C"
+            ],
+            "pred_normalized": [
+                "C"
+            ],
+            "gold": [
+                "C"
+            ],
+            "gold_normalized": [
+                "C"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_67",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation to form a carbamoyl group from a carboxy ester. This implies the conversion of a carboxylic acid derivative (ester) into an amide. The key functional groups are a carboxylic acid ester (R-COOR') and an amine (R-NH2). Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid ester, an amine, a coupling agent (DCC), and a base (HOBt). DCC is a carbodiimide, a common coupling agent for forming amides. HOBt is a hindere"
+            ],
+            "pred_extracted": [
+                "G"
+            ],
+            "pred_normalized": [
+                "G"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_68",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Stille reaction', a specific type of Stille coupling. The goal is to form a new carbon-carbon bond between an organotin compound (organostannane) and an organohalide (in this case, an organobromide). The key functional groups are the organostannane (R-SnR'3) and the organobromide (R'-Br). Step-2, Analyze Reagents Condition, The reagent provided is '[Pd;D0;+0]', which represents elemental Palladium(0). This is the active catalyst for t"
+            ],
+            "pred_extracted": [
+                "I"
+            ],
+            "pred_normalized": [
+                "I"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_69",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an esterification, specifically the conversion of a carboxylic acid to an ester using thionyl chloride. The goal is to form an acyl chloride intermediate, which is then typically attacked by an alcohol to form an ester. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid ([#6]-[#8]), an alcohol ([#8]=[#6]-[#8]), and thionyl chloride ([Cl]-[S](=[O])-[Cl]). Thionyl chloride is a common reagent used to convert carboxylic acids "
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_70",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Buchwald-Hartwig amination, a palladium-catalyzed cross-coupling reaction forming a C-N bond between an aryl halide and an amine. The key functional groups are the aryl bromide (represented by '[O][Pd;+0][O]') and the amine ('[N;+0]-[C;!H0]'). Step-2, Analyze Reagents Condition, The reagents are a Pd(0) source (like Pd(PPh3)4, represented by '[O][Pd;+0][O]') and an amine. The SMARTS '[N;+0]-[C;!H0]' represents an amine, where the nitrogen is"
+            ],
+            "pred_extracted": [
+                "C"
+            ],
+            "pred_normalized": [
+                "C"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_71",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Negishi coupling, a palladium-catalyzed cross-coupling reaction between an organozinc compound and an organohalide. The goal is to form a new carbon-carbon bond. Step-2, Analyze Reagents Condition, The reagent is a Palladium(0) complex with two ligands, represented by '[!Cl;!Br;!I;!O][Pd;D2;+0][!Cl;!Br;!I;!O]'. This is the active catalytic species, Pd(0)L2, which is the starting point for the catalytic cycle. The condition 'Reaction with Pd "
+            ],
+            "pred_extracted": [
+                "H"
+            ],
+            "pred_normalized": [
+                "H"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_72",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an 'Iodo Sonogashira coupling', a well-known cross-coupling reaction. The key transformation is the formation of a carbon-carbon bond between an aryl/vinyl iodide and a terminal alkyne. The provided reagents, '[O][Pd;+0][O]' and '[N;+0]-[C;!H0]', suggest a palladium catalyst and an amine agent, respectively. The amine is likely used to modify the catalyst or as a base. Step-2, Analyze Reagents Condition, The reagents are a Pd(0) source ('[O][P"
+            ],
+            "pred_extracted": [
+                "E"
+            ],
+            "pred_normalized": [
+                "E"
+            ],
+            "gold": [
+                "C"
+            ],
+            "gold_normalized": [
+                "C"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_73",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Suzuki coupling', a palladium-catalyzed cross-coupling reaction. The goal is to form a C-C bond between an aryl/vinyl halide (in this case, a bromide) and an organoboron compound. Step-2, Analyze Reagents Condition, The reagents are specified as 'PdX2' (a Pd(II) precatalyst, likely PdCl2 or PdBr2), 'PPh3' (triphenylphosphine, a ligand), and 'water'. The SMARTS '[Cl,Br,I,O][Pd;+0][Cl,Br,I,O].[P].[O;H1,H2]' represents a Pd(II) species, "
+            ],
+            "pred_extracted": [
+                "F"
+            ],
+            "pred_normalized": [
+                "F"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_74",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation to form a carbamoyl group from a carboxy ester. This implies the conversion of a carboxylic acid derivative (ester) into a peptide bond (amide). The key functional groups are a carboxylic acid derivative and an amine. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid derivative ([#8]=[#6]-[#8]), an amine ([#7]), and a coupling agent, HATU/HBTU ([#7;+1]=[#6](-[*])-[#7]). HATU/HBTU are uronium-based coupling a"
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_75",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an 'Iodo Miyaura boration', a variant of the Miyaura boration, which is a type of Suzuki-Miyaura cross-coupling. The goal is to couple an aryl/vinyl iodide with a diboron reagent (like B2pin2) to form an aryl/vinyl boronate ester. Step-2, Analyze Reagents Condition, The reagents are specified as '[Pd;+2]', indicating a Pd(II) source, and '[Cl,Br,I,O,-1]' which represents halide or oxygen-based ligands. '[P]' is phosphine, a common ligand for p"
+            ],
+            "pred_extracted": [
+                "B"
+            ],
+            "pred_normalized": [
+                "B"
+            ],
+            "gold": [
+                "B"
+            ],
+            "gold_normalized": [
+                "B"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_76",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Chloro Stille reaction, a specific type of Stille coupling. The goal is to form a new carbon-carbon bond between an organotin compound and an organohalide, catalyzed by a palladium complex. Step-2, Analyze Reagents Condition, The reagent is a palladium complex with 3 or 4 ligands, specifically '[Pd;D3,D4;$([Pd](-[*])(-[*])-[*]),$([Pd](-[*])(-[*])(-[*])-[*]);!$([Pd]([Cl,Br,I,O])[Cl,Br,I,O]);+0]'. This SMARTS string describes a neutral Pd(0) c"
+            ],
+            "pred_extracted": [
+                "G"
+            ],
+            "pred_normalized": [
+                "G"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_77",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is the deprotection of an ethyl ester ('CO2H-Et') to form a carboxylic acid ('CO2H'). The key functional group is the ethyl ester, specifically the C-OEt bond. Step-2, Analyze Reagents Condition, The reagent is Trimethylsilyl iodide (TMSI), represented by '[Si]-[I]'. TMSI is a common reagent for ester deprotection, especially for ethyl esters. It acts as a source of a good leaving group (iodide) and a nucleophile (silyl group). Step-3, Recall Mec"
+            ],
+            "pred_extracted": [
+                "C"
+            ],
+            "pred_normalized": [
+                "C"
+            ],
+            "gold": [
+                "C"
+            ],
+            "gold_normalized": [
+                "C"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_78",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an 'Azido to amino' conversion, which is a type of reduction. The goal is to convert a nitrogen atom from a nitride (azide) to a nitrogen atom in an amine. Step-2, Analyze Reagents Condition, The reagents are '[#6]-[N]=[N;+1]=[N;-1]', which represents an azide anion ([N3-]), and '[B,Al;H1,H2,H3,H4;-1]', which represents a borohydride or aluminohydride source, likely borane (B2H6) or a similar hydride source. The condition is 'Hydride reduction"
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_79",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Chloro Miyaura boration, a variant of the Miyaura boration, a type of Suzuki-Miyaura cross-coupling. The goal is to couple an aryl/vinyl halide (in this case, a chloro-substituted substrate) with a boron-containing reagent (like a boronic acid or ester) to form a new carbon-boron bond. Step-2, Analyze Reagents Condition, The reagents are a Palladium(II) halide complex, specifically PdX2, and 1,5-cyclooctadiene (COD). This suggests a pre-cata"
+            ],
+            "pred_extracted": [
+                "G"
+            ],
+            "pred_normalized": [
+                "G"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_80",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Buchwald-Hartwig amination, a palladium-catalyzed cross-coupling reaction forming a C-N bond between an aryl halide and an amine. The key functional groups are the aryl iodide (Ar-I) and an amine (R2NH). Step-2, Analyze Reagents Condition, The reagents are specified as '[Pd;+2]', '[Cl,Br,I,O,-1]', '[P]', and '[O;H1,H2]'. This indicates a Pd(II) source, a phosphine ligand (P), and a base (O;H1,H2, likely hydroxide or water). The condition 'Re"
+            ],
+            "pred_extracted": [
+                "E"
+            ],
+            "pred_normalized": [
+                "E"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_81",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation between a carboxylic acid and a thiol, forming a thioester. The key functional groups are the carboxylic acid (-COOH) and the thiol (-SH). Step-2, Analyze Reagents Condition, The condition is 'Condensation using CDI'. CDI stands for Carbonyldiimidazole, a common coupling agent used to activate carboxylic acids for amide or ester formation. The reagents are a carboxylic acid, a nucleophile (thiol in this case, but the mechanism i"
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_82",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is the deprotection of a tert-butyl ester ('CO2H-tBu') to a carboxylic acid ('CO2H'). The condition is 'Deprotection with water', and the reagent is '[O;H2]', which represents water (H2O). Step-2, Analyze Reagents Condition, The reagent is water, and the condition is 'Deprotection with water'. This implies a hydrolysis reaction, specifically saponification. Water acts as a nucleophile and a proton source. Step-3, Recall Mechanism Basics, The stan"
+            ],
+            "pred_extracted": [
+                "A"
+            ],
+            "pred_normalized": [
+                "A"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_83",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is described as 'Carboxylic acid + amide reaction', but the reagents provided are '[Cl,Br,I,S&$([S](=O)(-O))]-[C].[#7,#16,#8]'. This suggests a nucleophilic substitution reaction, not an amide bond formation. The first SMARTS string represents a halogen or sulfonate ester on a carbon, and the second represents a nucleophile (nitrogen, sulfur, or oxygen). The condition 'Williamson ether synthesis type' further points towards a nucleophilic substit"
+            ],
+            "pred_extracted": [
+                "F"
+            ],
+            "pred_normalized": [
+                "F"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_84",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Palladium Kumada coupling, a type of cross-coupling reaction. The goal is to form a carbon-carbon bond between an organotin compound (organostannane) and an organohalide, catalyzed by a palladium complex. Step-2, Analyze Reagents Condition, The reagent is a Palladium(0) complex with two ligands, represented by '[!Cl;!Br;!I;!O][Pd;D2;+0][!Cl;!Br;!I;!O]'. This is a common starting point for a catalytic cycle. The condition 'Reaction with Pd co"
+            ],
+            "pred_extracted": [
+                "B"
+            ],
+            "pred_normalized": [
+                "B"
+            ],
+            "gold": [
+                "D"
+            ],
+            "gold_normalized": [
+                "D"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_85",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Triflyloxy Suzuki coupling, a variant of the Suzuki cross-coupling. The goal is to form a C-C bond between an aryl/vinyl triflate and an organoboron compound. Step-2, Analyze Reagents Condition, The reagents are a Palladium(II) halide (PdX2), a phosphine ligand (PPh3), and water. This suggests a pre-catalytic activation phase is required to generate the active Pd(0) catalyst. Water likely acts as a source for hydroxide ions, which are crucia"
+            ],
+            "pred_extracted": [
+                "B"
+            ],
+            "pred_normalized": [
+                "B"
+            ],
+            "gold": [
+                "C"
+            ],
+            "gold_normalized": [
+                "C"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_86",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation between a carboxylic acid and an amidine to form an amide. The key functional groups are the carboxylic acid (-COOH) and the amidine (-C(=NH)NHR). The goal is to form an amide bond. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid, an amidine, DCC (dicyclohexylcarbodiimide), and HOBt (1-hydroxybenzotriazole). DCC is a dehydrating agent used to activate the carboxylic acid. HOBt is a coupling agent used to s"
+            ],
+            "pred_extracted": [
+                "H"
+            ],
+            "pred_normalized": [
+                "H"
+            ],
+            "gold": [
+                "H"
+            ],
+            "gold_normalized": [
+                "H"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_87",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Steglich esterification', a specific type of esterification. The key functional groups are a carboxylic acid and an alcohol. The goal is to form an ester. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid ([#7,#16,#8] represents a heteroatom, likely oxygen, and a carbon, forming a C=O group, which is a carboxylic acid) and a halide ([Cl,Br,I,S&$([S](=O)(-O))]-[C] represents a carbon atom bonded to a halogen or a sulfona"
+            ],
+            "pred_extracted": [
+                "D"
+            ],
+            "pred_normalized": [
+                "D"
+            ],
+            "gold": [
+                "A"
+            ],
+            "gold_normalized": [
+                "A"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_88",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Suzuki coupling', a type of Suzuki-Miyaura cross-coupling. The goal is to form a C-C bond between an aryl/vinyl halide (bromo-substrate) and an organoboron compound. The key catalytic cycle involves oxidative addition, transmetalation, and reductive elimination. Step-2, Analyze Reagents Condition, The reagents are specified as '[Pd;+2]', '[Cl,Br,I,O,-1]', '[P]', and '[O;H1,H2]'. This indicates a Pd(II) precatalyst, a phosphine ligand,"
+            ],
+            "pred_extracted": [
+                "B"
+            ],
+            "pred_normalized": [
+                "B"
+            ],
+            "gold": [
+                "F"
+            ],
+            "gold_normalized": [
+                "F"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_89",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Sonogashira coupling', a well-known cross-coupling reaction between a terminal alkyne and an aryl or vinyl halide. The key transformation is the formation of a C(sp)-C(sp2) bond. Step-2, Analyze Reagents Condition, The reagents are specified as 'PdX2' and '1,5-cyclooctadiene' (COD). This indicates a Pd(II) precatalyst. The Sonogashira coupling typically involves a Pd(0) species. Therefore, an in-situ reduction of the Pd(II) precatalys"
+            ],
+            "pred_extracted": [
+                "I"
+            ],
+            "pred_normalized": [
+                "I"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_90",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Chloro Buchwald-Hartwig amination, a palladium-catalyzed cross-coupling reaction forming a C-N bond between an aryl halide (chloro-substrate) and an amine. The key functional groups are the aryl chloride and the amine. Step-2, Analyze Reagents Condition, The reagent is '[Pd;D0;+0]', which represents elemental Palladium(0). This is the active catalytic species that initiates the catalytic cycle. The reaction is a Buchwald-Hartwig amination, w"
+            ],
+            "pred_extracted": [
+                "C"
+            ],
+            "pred_normalized": [
+                "C"
+            ],
+            "gold": [
+                "F"
+            ],
+            "gold_normalized": [
+                "F"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_91",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation between a carboxylic acid and a thioamide, facilitated by DCC and HOBt. The goal is to form an amide bond. Step-2, Analyze Reagents Condition, The key reagents are a carboxylic acid, a thioamide (which acts as a nucleophile), DCC (dicyclohexylcarbodiimide), and HOBt (1-hydroxybenzotriazole). DCC is a dehydrating agent that activates the carboxylic acid. HOBt is an additive used to suppress side reactions and improve yield by for"
+            ],
+            "pred_extracted": [
+                "B"
+            ],
+            "pred_normalized": [
+                "B"
+            ],
+            "gold": [
+                "B"
+            ],
+            "gold_normalized": [
+                "B"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_92",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Miyaura boration', a variant of the Miyaura boration, which is a type of Suzuki-Miyaura cross-coupling. The goal is to form a C-B bond by coupling an aryl/vinyl halide (in this case, a bromide) with a diboron reagent. Step-2, Analyze Reagents Condition, The reagents are specified as '[Pd;+2]', indicating a Pd(II) source, '[Cl,Br,I,O,-1]', which represents halide or oxygen-based ligands, '[P]', a phosphine ligand, and '[O;H1,H2]', repr"
+            ],
+            "pred_extracted": [
+                "C"
+            ],
+            "pred_normalized": [
+                "C"
+            ],
+            "gold": [
+                "B"
+            ],
+            "gold_normalized": [
+                "B"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_93",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Weinreb amide synthesis, which involves the reaction of a carboxylic acid with a Weinreb amide (an activated form of an alcohol, specifically an N-methoxy-N-methylamide). The goal is to form an amide bond. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid ([O]=[C]-[O]) and methanol ([CH3]-[OH]). Methanol is a protic solvent and can act as a nucleophile. The reaction is typically acid-catalyzed, but the presence of methan"
+            ],
+            "pred_extracted": [
+                "G"
+            ],
+            "pred_normalized": [
+                "G"
+            ],
+            "gold": [
+                "G"
+            ],
+            "gold_normalized": [
+                "G"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_94",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation between a carboxylic acid and a thioamide, catalyzed by thionyl chloride (SOCl2). The goal is to form an acyl chloride intermediate from the carboxylic acid, which is then attacked by the thioamide. Step-2, Analyze Reagents Condition, The key reagent is thionyl chloride (SOCl2). It is a common reagent used to convert carboxylic acids into acyl chlorides, which are highly reactive acylating agents. The reaction involves the carbo"
+            ],
+            "pred_extracted": [
+                "E"
+            ],
+            "pred_normalized": [
+                "E"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_95",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an 'Iodo Sonogashira coupling', a well-known palladium-catalyzed cross-coupling reaction. The goal is to form a carbon-carbon bond between a terminal alkyne and an aryl or vinyl halide. Step-2, Analyze Reagents Condition, The reagent is a palladium complex with 3 or 4 ligands, specifically '[Pd;D3,D4;$([Pd](-[*])(-[*])-[*]),$([Pd](-[*])(-[*])(-[*])-[*]);!$([Pd]([Cl,Br,I,O])[Cl,Br,I,O]);+0]'. This SMARTS string describes a neutral Pd(0) complex"
+            ],
+            "pred_extracted": [
+                "E"
+            ],
+            "pred_normalized": [
+                "E"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_96",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a Chloro Suzuki coupling, a type of Suzuki-Miyaura cross-coupling. The goal is to form a C-C bond between an aryl/vinyl halide (in this case, a chloro-substituted substrate) and an organoboron compound. Step-2, Analyze Reagents Condition, The reagents are a Palladium(II) halide complex, specifically PdX2, and 1,5-cyclooctadiene (COD). This suggests a pre-catalyst system. The standard Suzuki cycle involves: 1. Oxidative addition of the aryl hal"
+            ],
+            "pred_extracted": [
+                "D"
+            ],
+            "pred_normalized": [
+                "D"
+            ],
+            "gold": [
+                "E"
+            ],
+            "gold_normalized": [
+                "E"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_97",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a 'Bromo Sonogashira coupling', a well-known palladium-catalyzed cross-coupling reaction. The goal is to form a carbon-carbon bond between a terminal alkyne and an aryl or vinyl halide. Step-2, Analyze Reagents Condition, The reagents are specified as '[Pd;D0;+0]' and '[P]', which represent elemental Palladium(0) and a phosphine ligand. This indicates the starting point is the active Pd(0) catalyst, likely formed in situ from a Pd(II) precatal"
+            ],
+            "pred_extracted": [
+                "D"
+            ],
+            "pred_normalized": [
+                "D"
+            ],
+            "gold": [
+                "H"
+            ],
+            "gold_normalized": [
+                "H"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_98",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is an 'Iodo Stille reaction', a specific type of Stille coupling. The goal is to form a new carbon-carbon bond between an organotin compound and an organo(iodo)carbon. The key functional groups are an organotin (R-SnR'3) and an organo(iodo)carbon (R'-I). Step-2, Analyze Reagents Condition, The reagents are specified as '[Pd;+2]', '[Cl,Br,I,O,-1]', '[P]', and '[O;H1,H2]'. This indicates a Pd(II) source, a phosphine ligand, and a base (like hydroxi"
+            ],
+            "pred_extracted": [
+                "R"
+            ],
+            "pred_normalized": [
+                "R"
+            ],
+            "gold": [
+                "D"
+            ],
+            "gold_normalized": [
+                "D"
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_mechsel_99",
+            "pred_raw": [
+                "Step-1, Identify Reaction Type Goal, The reaction is a condensation between a carboxylic acid and an imine, likely forming an amide. The key functional groups are the carboxylic acid (-COOH) and the imine (-C=N-R). The condition specifies 'Condensation using BOP', indicating BOP reagent (Benzotriazol-1-yl-oxy-tris(dimethylamino)phosphonium hexafluorophosphate) is used as a coupling agent. Step-2, Analyze Reagents Condition, The reagents are a carboxylic acid ([#8]=[#6]-[#8]), an amine ([#7]), an"
+            ],
+            "pred_extracted": [
+                "F"
+            ],
+            "pred_normalized": [
+                "F"
+            ],
+            "gold": [
+                "F"
+            ],
+            "gold_normalized": [
+                "F"
+            ],
+            "correct": [
+                true
+            ]
+        }
+    ]
+}

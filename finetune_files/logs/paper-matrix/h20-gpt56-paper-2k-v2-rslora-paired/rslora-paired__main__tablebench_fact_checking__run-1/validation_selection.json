@@ -1,0 +1,103 @@
+{
+  "artifact_signature": "f48aede9ee094814697e17842f371f3c66b0e0b00cef73b40076d62298061862",
+  "benchmark": "tablebench_fact_checking",
+  "benchmark_dataset_path": "pinned/tablebench",
+  "candidate_count": 1,
+  "candidate_discovery": {
+    "candidate_filter": null,
+    "include_baseline": false,
+    "include_final_outputs": true
+  },
+  "candidate_set_signature": "65859305bd1af44f240397f960d330ac5cf873f3fd9a55e75e55a0a1be34b94e",
+  "candidates": [
+    {
+      "accuracy_summary": {
+        "tablebench_fact_checking": {
+          "accuracy": 77.08,
+          "correct_count": 37.0,
+          "exact_match": 77.08,
+          "total_count": 48.0
+        }
+      },
+      "candidate_id": "durable_output__rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056__a137bd94bc4e",
+      "checkpoint_step": null,
+      "formal_training_evidence_signature": "be018d5c973db4a8f4e99eb2014996aa195ccac1937c18c9ad5f79ebe5286698",
+      "mean_ordinal_rank": 1.0,
+      "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_fact_checking__run-1/workspace/.ft_model_checkpoints/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056/output",
+      "model_relocation": null,
+      "ordinal_ranks": {
+        "accuracy": 1.0
+      },
+      "selection_metrics": [
+        {
+          "formula": "unweighted mean accuracy across released dataset views",
+          "higher_is_better": true,
+          "label": "Acc",
+          "metric": "accuracy",
+          "unit": "percent",
+          "value": 77.08
+        }
+      ],
+      "selection_rank": 1,
+      "selection_signature": "7c1bf44694bd0c70300ee09b3c8dc5429cde15a1b5906d7f2cb1ef6353bafb54",
+      "source": "durable_output",
+      "workspace_id": "rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056",
+      "worst_ordinal_rank": 1.0
+    }
+  ],
+  "created_at": "2026-09-10T17:49:59.623579+08:00",
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/tablebench_fact_checking/run-1",
+  "held_out_test_used": false,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "99a81c464df8600e8877e6396842b7dc3101127640def46fe82e89a5f7ced924",
+  "schema_version": 1,
+  "search": {
+    "finished_at": "2026-09-10T15:20:23.597164+08:00",
+    "started_at": "2026-09-09T20:31:08.542447+08:00",
+    "state": "succeeded"
+  },
+  "selection": {
+    "accuracy_summary": {
+      "tablebench_fact_checking": {
+        "accuracy": 77.08,
+        "correct_count": 37.0,
+        "exact_match": 77.08,
+        "total_count": 48.0
+      }
+    },
+    "candidate_id": "durable_output__rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056__a137bd94bc4e",
+    "checkpoint_step": null,
+    "formal_training_evidence_signature": "be018d5c973db4a8f4e99eb2014996aa195ccac1937c18c9ad5f79ebe5286698",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_fact_checking__run-1/workspace/.ft_model_checkpoints/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056/output",
+    "model_relocation": null,
+    "ordinal_ranks": {
+      "accuracy": 1.0
+    },
+    "selection_metrics": [
+      {
+        "formula": "unweighted mean accuracy across released dataset views",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 77.08
+      }
+    ],
+    "selection_signature": "7c1bf44694bd0c70300ee09b3c8dc5429cde15a1b5906d7f2cb1ef6353bafb54",
+    "source": "durable_output",
+    "workspace_id": "rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056",
+    "worst_ordinal_rank": 1.0
+  },
+  "selection_profile": "main",
+  "selection_rule": {
+    "name": "direction-aware mean average ordinal rank",
+    "primary_metrics": [
+      "accuracy"
+    ],
+    "tie_break": "lowest worst ordinal rank, then stable candidate_id"
+  },
+  "state": "succeeded",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a dimethylamino group (CN(C)), a piperazine ring (C1CCNCC1), and a thiazole ring (c2c(COc3ccccc3CO)sc3ccccc23) connected via a methylene linker. The thiazole ring is substituted with a benzodioxole group (COc3ccccc3CO).\nProperty Analysis: DRD2 activity is influenced by the basicity and steric/electronic properties of the amine group. The dimethylamino group (CN(C)) is less basic than a primary or secondary amine, which may reduce receptor binding affinity.\nOptimization for Source Molecule: Replace the dimethylamino group (CN(C)) with a primary amine (NH2) to increase basicity and hydrogen-bonding potential, enhancing DRD2 binding. The piperazine and thiazole core are retained for structural stability.\n{\"Final Target Molecule\": \"Nc1nccc2c1c(COc3ccccc3CO)sc1ccccc21\"}",
+        "gold": "CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CC2CCN(C(=S)C(C)C)CC2)CC1OC.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a methoxy group (COc1), an amino group (N), and a chlorine atom (Cl). It also features a carbonyl-linked piperazine ring (C(=O)NC1CCN...CC1OC) and a thiazole-like group (C(=S)C(C)C) attached to a secondary amine in a piperidine ring (CCN(C(=S)C(C)C)CC2).\nProperty Analysis: The thiazole group (C(=S)C(C)C) in the piperidine ring may reduce DRD2 activity due to its electron-withdrawing nature and potential steric/electronic mismatch with the receptor's binding pocket. The secondary amine in the piperidine ring (N) may also limit conformational flexibility and hydrogen bonding potential.\nOptimization for Source Molecule: Replace the thiazole group (C(=S)C(C)C) with a pyrrole ring (C1=CC=CN1) to enhance aromatic stacking and hydrogen bonding with DRD2. Convert the secondary amine (N) in the piperidine ring to a tertiary amine (N(C)C) to improve conformational rigidity and reduce steric hindrance.\n{\"Final Target Molecule\": \"COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CC2CCN(C(=O)C1=CC=CN1)CC2)CC1OC.\"}",
+        "gold": "COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CC2CCN(C(=S)C(C)C)CC2)CC1OC"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOc1ccccc1-c1nc(CN2CCN(C)CC2)co1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a biphenyl core with a methoxy group (CCO) on one phenyl ring and a pyrimidine-like heterocycle (c1nc(CN2CCN(C)CC2)co1) on the other. The heterocycle includes a piperazine ring (CN2CCN(C)CC2) substituted with a methyl group.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. Piperazine derivatives often enhance DRD2 binding due to their basicity and conformational flexibility.\nOptimization for Source Molecule: To improve DRD2 activity, the methyl-substituted piperazine (CN2CCN(C)CC2) can be replaced with a piperidine (CN2CCC(N)CC2) to reduce steric bulk while retaining hydrogen bonding capability. The pyrimidine heterocycle can be retained but modified to include a hydroxyl group (CO) to enhance solubility and receptor interaction.\n{\"Final Target Molecule\": \"CCOc1ccccc1-c1nc(CN2CCC(N)CC2)co1\"}",
+        "gold": "CCOc1ccccc1-c1nc(CN2CCN(C)CC2)co1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Fc1cccc(CNc2cccc(-c3cc(NCCC4CCCNC4)ncc3Cl)n2)c1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a fluorine atom and a piperazine-linked chloropyridine group. The piperazine (C1CNCCN1) is connected via a methylene bridge to a chlorinated pyridine ring. The pyridine ring is further substituted with a morpholine-ethylamine group (NCCC4CCCNC4).\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the amine group. Piperazine and morpholine are both basic amines, but their ring sizes and substituents affect their receptor binding. The morpholine-ethylamine group (NCCC4CCCNC4) may reduce basicity due to the oxygen atom in the morpholine ring, potentially weakening DRD2 binding.\nOptimization for Source Molecule: To improve DRD2 activity, the morpholine-ethylamine group can be replaced with a piperidine-ethylamine (NCC4CCCC4). Piperidine enhances basicity due to its larger, less polarizable nitrogen ring, while maintaining conformational flexibility. This modification should increase receptor affinity and activity.\n{\"Final Target Molecule\": \"Fc1cccc(CNc2cccc(-c3cc(NCC4CCCC4)ncc3Cl)n2)c1\"}",
+        "gold": "Fc1cccc(CNc2cccc(-c3cc(NCCC4CCCNC4)ncc3Cl)n2)c1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1C2CCC1CC(Oc1ccc(C(F)(F)F)cc1)(c1ccccc1)C2.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a piperidine ring (C1CCNCC1) fused to a cyclohexane ring, with a trifluoromethylphenyl ether group (Oc1ccc(C(F)(F)F)cc1) and a benzyl group (c1ccccc1). The piperidine nitrogen is methylated (CN1C2...).\nProperty Analysis: DRD2 activity is influenced by steric bulk, hydrogen bonding, and lipophilicity. The trifluoromethyl group (CF3) is highly electron-withdrawing and bulky, potentially reducing receptor binding affinity.\nOptimization for Source Molecule: Replace the CF3 group with a smaller, less bulky electron-donating group (e.g., -NH2) to enhance hydrogen bonding and reduce steric hindrance while maintaining lipophilicity.\n{\"Final Target Molecule\": \"CN1C2CCC1CC(Oc1ccc(N)cc1)(c1ccccc1)C2\"}",
+        "gold": "CN1C2CCC1CC(Oc1ccc(C(F)(F)F)cc1)(c1ccccc1)C2"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC(=O)C1C(c2ccc(C#CCCCCO)cc2)CC2CCC1N2C.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1C...CC2CCC1N2C) with a substituted phenyl group (c2ccc(C#CCCCCO)cc2) and a methyl ester (COC(=O)). The phenyl group has a propargyl ether (C#CCCCCO) substituent, which introduces rigidity and potential metabolic instability.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The propargyl ether group (C#CCCCCO) may reduce bioavailability due to metabolic susceptibility and limit conformational flexibility, potentially weakening receptor binding.\nOptimization for Source Molecule: Replace the propargyl ether (C#CCCCCO) with a more stable and flexible substituent, such as a cyclopropane (C1CC1), to enhance metabolic stability, reduce steric hindrance, and improve conformational adaptability for DRD2 binding.\n{\"Final Target Molecule\": \"COC(=O)C1C(c2ccc(C1CC1)cc2)CC2CCC1N2C\"}",
+        "gold": "COC(=O)C1C(c2ccc(C#CCCCCO)cc2)CC2CCC1N2C"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCc1ccccc1)c1ccccc1O.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central carbonyl group (O=C) connected to two phenyl rings. One phenyl ring is substituted with a propyl group (CCc1ccccc1), and the other is unsubstituted (c1ccccc1O). The presence of the carbonyl group and the unsubstituted phenyl ring may limit DRD2 activity due to steric and electronic effects.\nProperty Analysis: DRD2 activity often benefits from hydrophobic interactions and optimal steric fit. The unsubstituted phenyl ring in the source molecule may reduce binding affinity due to lack of hydrophobic interactions or steric complementarity with the DRD2 receptor.\nOptimization for Source Molecule: To improve DRD2 activity, the unsubstituted phenyl ring can be substituted with a hydrophobic group, such as a trifluoromethyl (-CF3) group. This modification enhances hydrophobic interactions and steric complementarity with the DRD2 receptor while maintaining the core structure.\n{\"Final Target Molecule\": \"O=C(CCc1ccccc1)c1cc(C(F)(F)F)ccc1O.\"}",
+        "gold": "O=C(CCc1ccccc1)c1ccccc1O"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccccc1N1CCN(CCCCNC(=O)C2CC3CCCC3C2)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a methoxy-substituted benzene ring connected to a piperazine ring. The piperazine is substituted with a butyl chain bearing a urea group linked to a bridged bicyclic system (decalin-like structure).\nProperty Analysis: The urea group (NC(=O)) in the side chain may reduce DRD2 activity due to its polarity and hydrogen-bonding potential, which could hinder membrane permeability or receptor binding.\nOptimization for Source Molecule: Replace the urea group (NC(=O)) with a less polar amide group (NC=O) to improve lipophilicity and reduce hydrogen-bond donor capacity while retaining the amide's potential for dipole interactions.\n{\"Final Target Molecule\": \"COc1ccccc1N1CCN(CCCCNC(=O)C2CC3CCCC3C2)CC1\"}",
+        "gold": "COc1ccccc1N1CCN(CCCCNC(=O)C2CC3CCCC3C2)CC1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NCCCCc1c[nH]c2ccc(F)cc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a benzene ring with a fluorine substituent. The pyrrole nitrogen is connected to a butylamine chain (NCCCC). The fluorine atom is a weak electron-withdrawing group, and the butylamine chain may limit conformational rigidity.\nProperty Analysis: DRD2 activity often benefits from aromatic/hydrophobic interactions and optimal steric fit. The fluorine substituent may reduce binding affinity due to its small size and weak electronic effects. The butylamine chain could introduce excessive flexibility, potentially reducing receptor-ligand complementarity.\nOptimization for Source Molecule: Replace the fluorine atom with a chlorine atom to enhance hydrophobic/electrostatic interactions. Shorten the butylamine chain to a propylamine (NCCC) to reduce flexibility while maintaining solubility. Introduce a cyclopropane ring (N1CCC1) to enforce rigidity and improve binding pocket compatibility.\n{\"Final Target Molecule\": \"N1CCC1CCc2c[nH]c3ccc(Cl)cc23\"}",
+        "gold": "NCCCCc1c[nH]c2ccc(F)cc12"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)c1ccccc1OCCN1CCC(N(CC2CC2)S(=O)(=O)c2cnn(C)c2)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) substituted with an ethoxy group (OCCN) and a morpholine-derived side chain (N(CC2CC2)S(=O)(=O)c2cnn(C)c2). The morpholine subunit includes a sulfonamide group (S(=O)(=O)) attached to a pyrazole ring (cnn(C)c2).\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The morpholine and sulfonamide groups may enhance solubility and target engagement, while the pyrazole and piperidine rings contribute to conformational flexibility.\nOptimization for Source Molecule: To improve DRD2 activity, the pyrazole ring (cnn(C)c2) can be replaced with a more rigid and lipophilic heterocycle, such as a pyridine ring (ccncc2), to enhance receptor binding and reduce metabolic instability. The sulfonamide group is retained for its polar interactions.\n{\"Final Target Molecule\": \"CC(C)c1ccccc1OCCN1CCC(N(CC2CC2)S(=O)(=O)ccncc2)CC1.\"}",
+        "gold": "CC(C)c1ccccc1OCCN1CCC(N(CC2CC2)S(=O)(=O)c2cnn(C)c2)CC1"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCS(=O)(=O)N(C)C(C)c1cncc(-c2cnc3c(c2)CCCN3C(N)=O)c1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a sulfonamide group (CCS(=O)(=O)N) attached to a tertiary carbon, a pyridine ring (c1cncc), and a piperidine ring (CCCN3C(N)=O) with an amide group. The piperidine ring is a six-membered saturated ring with one nitrogen atom.\nProperty Analysis: The sulfonamide group is highly polar and may reduce blood-brain barrier permeability. The tertiary carbon and pyridine ring may contribute to steric hindrance, potentially limiting receptor binding. The amide group (C(N)=O) in the piperidine ring could introduce metabolic instability.\nOptimization for Source Molecule: 1. Replace the sulfonamide (CCS(=O)(=O)N) with a less polar amine (CCN) to improve BBB penetration. 2. Simplify the tertiary carbon and pyridine ring to a piperidine ring (six-membered saturated ring with one nitrogen) to reduce steric bulk. 3. Retain the amide group (C(N)=O) for hydrogen bonding potential but consider replacing it with a more stable group if necessary.\n{\"Final Target Molecule\": \"CCN1CCCN(c2cnc3c(c2)CCCN3C(N)=O)C1\"}",
+        "gold": "CCS(=O)(=O)N(C)C(C)c1cncc(-c2cnc3c(c2)CCCN3C(N)=O)c1"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Brc1ccc(OCC2CCN(CC3CC3)CC2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a brominated benzene ring connected to an ethoxy group, which is attached to a piperidine ring (C1CCNCC1). The piperidine is substituted with a cyclopropane (C3CC3) at the nitrogen atom. The bromine and cyclopropane groups are potential sites for modification to enhance DRD2 activity.\nProperty Analysis: DRD2 activity is influenced by the ability of the molecule to interact with the dopamine D2 receptor. The bromine atom may contribute to steric/electronic hindrance, while the cyclopropane could limit conformational flexibility. Both groups may reduce binding affinity or selectivity for DRD2.\nOptimization for Source Molecule: 1. Replace the bromine atom with a hydrogen to reduce steric bulk. 2. Remove the cyclopropane substituent to restore conformational flexibility. 3. Retain the piperidine core for DRD2 binding. 4. Maintain the ethoxy linker for optimal spatial orientation.\n{\"Final Target Molecule\": \"OCC1CCN(CC2CC2)CC1\"}",
+        "gold": "Brc1ccc(OCC2CCN(CC3CC3)CC2)cc1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)c1cc2cc(C3(Cc4ccccc4)CCNC3)ccc2[nH]1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a benzene ring, an ethyl ester group (CCOC=O), and a piperazine ring (C3(Cc4ccccc4)CCNC3) substituted with a benzyl group (Cc4ccccc4). The piperazine (1,4-diazacyclohexane) is a key structural feature.\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the piperazine ring. The benzyl substituent on the piperazine may reduce basicity due to electron-withdrawing effects, potentially weakening receptor binding.\nOptimization for Source Molecule: Replace the benzyl group (Cc4ccccc4) on the piperazine with a cyclohexyl group (C4CCCC4). This substitution increases steric bulk and reduces electron-withdrawing effects, enhancing piperazine basicity and improving DRD2 binding affinity.\n{\"Final Target Molecule\": \"CCOC(=O)c1cc2cc(C3(C4CCCC4)CCNC3)ccc2[nH]1\"}",
+        "gold": "CCOC(=O)c1cc2cc(C3(Cc4ccccc4)CCNC3)ccc2[nH]1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCN(CC)CCCNC1c2cc(OC)ccc2OCc2ncccc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperazine ring (1,4-diazacyclohexane) connected to a substituted benzofuran moiety and a pyrrole ring. The piperazine is substituted with a diethyl group and a propyl chain terminating in an amine.\nProperty Analysis: Piperazine derivatives can modulate DRD2 activity, but steric bulk and conformational flexibility may reduce receptor binding. The diethyl group on the piperazine introduces steric hindrance, potentially limiting DRD2 affinity.\nOptimization for Source Molecule: Replace the diethyl group on the piperazine with a smaller, less bulky substituent (e.g., methyl) to enhance conformational flexibility and reduce steric hindrance while retaining the critical amine and benzofuran-pyrrole pharmacophore.\n{\"Final Target Molecule\": \"CN(C)CCNC1c2cc(OC)ccc2OCc2ncccc21\"}",
+        "gold": "CCN(CC)CCCNC1c2cc(OC)ccc2OCc2ncccc21"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a methoxy group (COc1), an amino group (N), and a chlorine atom (Cl). A carbonyl group (C=O) is attached to the benzene ring via an ether linkage (OCCN1), which connects to a piperidine ring (CCC(C(N)=O)CC1) with an amide group (C(N)=O).\nProperty Analysis: The amide group (C(N)=O) in the piperidine ring may reduce DRD2 activity due to its polarity and hydrogen-bonding potential, which could interfere with receptor binding. The piperidine ring itself is a common scaffold for DRD2 ligands, but the amide substituent may limit optimal interactions with the receptor.\nOptimization for Source Molecule: To improve DRD2 activity, the amide group (C(N)=O) can be replaced with a less polar, more lipophilic substituent. A pyrrole ring (c2ccncc2) is a suitable replacement as it introduces aromaticity, reduces polarity, and maintains steric compatibility with the DRD2 binding pocket while enhancing lipophilicity.\n{\"Final Target Molecule\": \"COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(c2ccncc2)CC1\"}",
+        "gold": "COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C1CC(CN2CCN(Cc3ccccc3)CC2)Oc2ccccc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central carbonyl group (O=C) connected to a piperazine ring (CN2CCN(Cc3ccccc3)CC2) and a benzodioxole moiety (Oc2ccccc21). The piperazine is substituted with a benzyl group (Cc3ccccc3). The benzodioxole contributes aromaticity and potential metabolic stability.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. Piperazine derivatives often enhance DRD2 binding due to their basicity and conformational flexibility, but substituents on the piperazine can modulate activity.\nOptimization for Source Molecule: To improve DRD2 activity, the benzyl group (Cc3ccccc3) on the piperazine can be replaced with a more polar or hydrogen-bonding group. Introducing a pyridine ring (c3ccncc3) increases polarity and hydrogen-bonding capacity, which may enhance receptor interaction while maintaining aromaticity.\n{\"Final Target Molecule\": \"O=C1CC(CN2CCN(c3ccncc3)CC2)Oc2ccccc21.\"}",
+        "gold": "O=C1CC(CN2CCN(Cc3ccccc3)CC2)Oc2ccccc21"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)NC(C)c2nccs2)cc1OC1CCN(C(C)C)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with two methoxy groups (OC), a central carbon connected to a carbonyl group (C=O) and an aniline derivative (NC(C)), and a thiazole ring (c2nccs2) attached to the central carbon. The aniline group is further substituted with a tert-butylamine (OC1CCN(C(C)C)CC1).\nProperty Analysis: The thiazole ring (c2nccs2) may contribute to DRD2 activity due to its aromatic nature and potential hydrogen bonding interactions. The tert-butylamine group (OC1CCN(C(C)C)CC1) is a tertiary amine, which can modulate receptor binding but may introduce steric hindrance.\nOptimization for Source Molecule: Replace the thiazole ring (c2nccs2) with a pyridine ring (c2ccncc2) to enhance aromatic stacking and hydrogen bonding potential. Retain the tert-butylamine group (OC1CCN(C(C)C)CC1) to maintain solubility and DRD2 binding affinity.\n{\"Final Target Molecule\": \"COc1ccc(C(=O)NC(C)c2ccncc2)cc1OC1CCN(C(C)C)CC1\"}",
+        "gold": "COc1ccc(C(=O)NC(C)c2nccs2)cc1OC1CCN(C(C)C)CC1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(N)c(Cl)cc1C(=O)NC1CCNCC1OC.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a methoxy group (COc1), an amino group (N), a chlorine atom (Cl), and a carbonyl-linked piperazine derivative (C(=O)NC1CCNCC1OC). The piperazine ring (C1CNCCN1) is further substituted with an ethoxy group (OC).\nProperty Analysis: The piperazine ring in the source molecule may exhibit moderate DRD2 activity due to its basicity and hydrogen-bonding potential. However, the ethoxy group (OC) on the piperazine may reduce conformational rigidity and hinder optimal receptor interactions.\nOptimization for Source Molecule: To improve DRD2 activity, the ethoxy group (OC) on the piperazine can be replaced with a more rigid and electron-withdrawing group, such as a trifluoromethyl (CF3) group. This modification enhances steric complementarity with the DRD2 binding pocket and improves electron-withdrawing effects, potentially strengthening receptor-ligand interactions.\n{\"Final Target Molecule\": \"COc1cc(N)c(Cl)cc1C(=O)NC1CCN(C(F)(F)F)CC1\"}",
+        "gold": "COc1cc(N)c(Cl)cc1C(=O)NC1CCNCC1OC"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1ccc(CNc2ccnc(NC3CCN(Cc4ccccc4)CC3)n2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyridine ring (c2ccnc(NC3CCN(Cc4ccccc4)CC3)n2) substituted with a piperazine group (NC3CCN(Cc4ccccc4)CC3) and a benzyl group (Cc4ccccc4). The piperazine is a 1,4-diazacyclohexane ring, which is a common scaffold for bioactive molecules due to its ability to form hydrogen bonds and its conformational flexibility.\nProperty Analysis: The piperazine group in the source molecule may contribute to moderate DRD2 activity due to its basicity and hydrogen-bonding potential. However, the benzyl group (Cc4ccccc4) attached to the piperazine may limit DRD2 binding due to steric bulk and lack of optimal electronic properties.\nOptimization for Source Molecule: To improve DRD2 activity, the benzyl group can be replaced with a smaller, more polar substituent such as a pyridine ring (c4ccncc4). This modification reduces steric hindrance while maintaining aromaticity and introducing a hydrogen-bond-accepting nitrogen atom, which may enhance receptor interactions.\n{\"Final Target Molecule\": \"c1ccc(CNc2ccnc(NC3CCN(c4ccncc4)CC3)n2)cc1\"}",
+        "gold": "c1ccc(CNc2ccnc(NC3CCN(Cc4ccccc4)CC3)n2)cc1"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCc1c(C(=O)Nc2cc(O)ccc2C)cnn1-c1ccccc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyrazole ring (c1cnn1) connected to a substituted benzene ring (c1ccccc1) and a side chain (CCCc1c(C(=O)Nc2cc(O)ccc2C)cnn1). The side chain includes a carbonyl group (C=O) linked to a para-hydroxyphenyl ring (c2cc(O)ccc2C).\nProperty Analysis: The hydroxyl group (-OH) on the phenyl ring (c2cc(O)ccc2C) may contribute to high polarity, potentially reducing blood-brain barrier permeability and limiting CNS activity. The carbonyl group (C=O) could also introduce metabolic instability.\nOptimization for Source Molecule: Replace the para-hydroxyphenyl ring (c2cc(O)ccc2C) with a para-methoxyphenyl ring (c2cc(C)ccc2C) to reduce polarity and improve CNS penetration. Retain the pyrazole core (c1cnn1) and benzene ring (c1ccccc1) for structural stability.\n{\"Final Target Molecule\": \"CCCc1c(C(=O)Nc2cc(C)ccc2C)cnn1-c1ccccc1.\"}",
+        "gold": "CCCc1c(C(=O)Nc2cc(O)ccc2C)cnn1-c1ccccc1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2F)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central urea group (O=C-N) connecting two aromatic systems. The left side has a biphenyl-like structure (two benzene rings connected by a single bond), while the right side has a piperazine ring (N1CCNCC1) substituted with a fluorinated benzene ring (-c2ccccc2F).\nProperty Analysis: The piperazine ring (N1CCNCC1) in the source molecule is a 1,4-diazacyclohexane, which is a common scaffold for DRD2 ligands due to its conformational flexibility and hydrogen-bonding potential. However, the fluorinated benzene substituent may reduce basicity and hinder optimal receptor interactions.\nOptimization for Source Molecule: To improve DRD2 activity, the piperazine ring can be retained but the fluorinated benzene substituent can be replaced with a piperidine ring (N1CCNCC1). Piperidine is a saturated 1,4-diazacyclohexane derivative with improved lipophilicity and potential for better receptor binding. The urea linker and biphenyl core are preserved to maintain structural rigidity.\n{\"Final Target Molecule\": \"O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccnc2)CC1.\"}",
+        "gold": "O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2F)CC1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)S(=O)(=O)CCc1ccc(NC(=O)c2ncc(C#N)[nH]2)c(C2=CCCCC2)c1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a sulfonamide group (S(=O)(=O)N) attached to a dimethylamine (CN(C)), a central benzene ring substituted with a urea-linked pyrrole (NC(=O)c2ncc(C#N)[nH]2), and a cyclohexyl group (C2=CCCCC2). The pyrrole ring (c2ncc(C#N)[nH]2) is a key structural feature with a nitrile (C#N) and an NH group.\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric compatibility. The nitrile group (C#N) in the pyrrole ring may reduce DRD2 binding due to its strong electron-withdrawing nature, which destabilizes aromatic systems and reduces hydrogen-bonding potential.\nOptimization for Source Molecule: Replace the nitrile (C#N) with a cyano group (C#N) to enhance aromatic stability while retaining hydrogen-bonding capability. The cyano group improves electron-donating effects, stabilizes the pyrrole ring, and maintains DRD2 binding affinity.\n{\"Final Target Molecule\": \"CN(C)S(=O)(=O)CCc1ccc(NC(=O)c2ncc(C(C#N)[nH]2)c(C2=CCCCC2)c1.\"}",
+        "gold": "CN(C)S(=O)(=O)CCc1ccc(NC(=O)c2ncc(C#N)[nH]2)c(C2=CCCCC2)c1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cccc(CNC(=O)c2nc3cccc(-c4ccccc4)c3c(=O)[nH]2)c1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyrrole ring (C1=CC=CN1) fused to a benzene ring, with a methoxy-substituted benzene ring (COc1cccc) attached via a methylene group. The pyrrole ring is substituted with a carbonyl-linked aniline group (-c4ccccc4) and a ketone group (C=O). The aniline group is a key structural feature for potential DRD2 activity.\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric compatibility. The aniline group (-c4ccccc4) in the source molecule may lack optimal substituents for strong DRD2 binding, such as halogen atoms (e.g., Cl) that enhance hydrophobic interactions and halogen bonding.\nOptimization for Source Molecule: To improve DRD2 activity, the aniline group (-c4ccccc4) can be replaced with a chlorinated aniline (-c4ccc(Cl)cc4). Chlorine enhances hydrophobicity and halogen bonding, while maintaining aromaticity. This modification preserves the basicity of the nitrogen, which is important for receptor interactions.\n{\"Final Target Molecule\": \"COc1cccc(CNC(=O)c2nc3cccc(-c4ccc(Cl)cc4)c3c(=O)[nH]2)c1\"}",
+        "gold": "COc1cccc(CNC(=O)c2nc3cccc(-c4ccccc4)c3c(=O)[nH]2)c1"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Fc1ccccc1C1CCN(Cc2nc(CC3CC3)no2)C1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a fluorinated benzene ring connected to a piperazine ring (C1CCNCCN1) substituted with a pyrrole-derived group (Cc2nc(CC3CC3)no2). The pyrrole (azole) is further substituted with a cyclopropane (CC3CC3) and a methyl group.\nProperty Analysis: The fluorinated benzene and piperazine may contribute to moderate DRD2 activity, but the pyrrole-cyclopropane-methyl group substitution on the pyrrole limits optimal receptor binding due to steric bulk and lack of hydrogen-bonding capability.\nOptimization for Source Molecule: Replace the pyrrole-cyclopropane-methyl group with a pyridine (aromatic heterocycle with nitrogen) to enhance hydrogen-bonding potential and reduce steric hindrance. Introduce a fluorine atom on the pyridine to improve metabolic stability and DRD2 affinity.\n{\"Final Target Molecule\": \"Fc1ccccc1C1CCN(Cc2nc(-c3ccncc3)no2)C1\"}",
+        "gold": "Fc1ccccc1C1CCN(Cc2nc(CC3CC3)no2)C1"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCN(CC)CCNC(=O)c1cc(Cl)c(N)cc1O.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central amide group (NC=O) connected to a diethylamine (CCN(CC)), a benzyl group (c1cc(Cl)c(N)cc1O), and a hydroxyl group (O). The diethylamine and hydroxyl groups are potential sites for modification to enhance DRD2 activity.\nProperty Analysis: DRD2 activity is influenced by the basicity and steric/electronic properties of the amine group. The hydroxyl group may contribute to hydrogen bonding but could reduce membrane permeability. The benzyl group with a chlorine and hydroxyl substituent provides moderate lipophilicity and hydrogen-bonding capacity.\nOptimization for Source Molecule: 1. Replace the diethylamine (CCN(CC)) with a piperazine (C1CNCCN1) to increase basicity and hydrogen-bonding capacity. 2. Retain the amide (NC=O) for hydrogen bonding. 3. Keep the benzyl group with a chlorine and hydroxyl substituent for balanced lipophilicity. 4. Remove the hydroxyl group (O) to improve membrane permeability.\n{\"Final Target Molecule\": \"O=C(Nc1cc(Cl)c(N)cc1O)C1CNCCN1\"}",
+        "gold": "CCN(CC)CCNC(=O)c1cc(Cl)c(N)cc1O"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCNC(C)C.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyrimidine ring (ncnc) with a substituted aniline (Nc3ccc(F)c(Cl)c3) and a methoxy group (COc1cc2...). The side chain includes a hydroxyl group (OCCNC(C)C) connected to a tert-butyl group (NC(C)C).\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric compatibility. The hydroxyl group (OCCNC(C)C) may reduce lipophilicity and hinder receptor binding due to excessive polarity.\nOptimization for Source Molecule: Replace the hydroxyl group (OCCNC(C)C) with a more lipophilic and conformationally flexible side chain (OCCCN(C)C) to enhance DRD2 binding. The additional methylene (CCCN) improves hydrophobicity and reduces steric hindrance while maintaining hydrogen bonding capability via the amine (N(C)C).\n{\"Final Target Molecule\": \"COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN(C)C.\"}",
+        "gold": "COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCNC(C)C"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: OC(CN1C=COC=C1)c1cc(-c2ccc(F)cc2)nc2cc(F)ccc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyridine ring (c1cc(-c2ccc(F)cc2)nc2cc(F)ccc12) with a fluorinated phenyl group (-c2ccc(F)cc2) attached to the nitrogen. The pyridine ring is substituted with a fluorinated phenyl group (nc2cc(F)ccc12) and an ether-linked morpholine derivative (OC(CN1C=COC=C1)).\nProperty Analysis: The fluorinated phenyl groups and the morpholine derivative may contribute to DRD2 activity, but the ether linkage (OC) and the morpholine's oxygen atom could limit hydrogen bonding or steric compatibility with the receptor.\nOptimization for Source Molecule: Replace the morpholine (OC(CN1C=COC=C1)) with a piperazine derivative (N1CCN(C)CC1) to enhance hydrogen bonding and solubility. The piperazine's nitrogen can form stronger hydrogen bonds with DRD2, and the methyl group on the piperazine nitrogen improves lipophilicity.\n{\"Final Target Molecule\": \"CN1CCN(c2cc(-c3ccc(F)cc3)nc3cc(F)ccc23)CC1\"}",
+        "gold": "OC(CN1C=COC=C1)c1cc(-c2ccc(F)cc2)nc2cc(F)ccc12"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)c1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with an acetophenone group and a piperazine ring. The piperazine is further substituted with a hydroxyl group connected to a fluorinated pyridine ring (Cn3cncn3) and a difluorophenyl group.\nProperty Analysis: The acetophenone group (CC(=O)) may reduce bioavailability due to its hydrophobic nature and potential metabolic instability. The piperazine ring (N2CCN...CC2) provides a basic scaffold for receptor interaction, but the hydroxyl group (CC(O)) may limit optimal solubility.\nOptimization for Source Molecule: Replace the acetophenone (CC(=O)) with a more bioavailable and stable group, such as a carboxylic acid (CC(=O)O), to enhance solubility and reduce hydrophobicity. Retain the piperazine core for DRD2 binding while optimizing the substituents for improved activity.\n{\"Final Target Molecule\": \"CC(=O)Oc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1\"}",
+        "gold": "CC(=O)c1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NCCCN1CCOCC1)c1ccc2c(=O)n(Cc3ccc(Cl)cc3)c(=O)[nH]c2c1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring fused to a pyrrole ring (azole) with a piperazine ring (1,4-diazacyclohexane) attached via a carbonyl group. The piperazine (1,4-diazacyclohexane) is a six-membered ring with two nitrogen atoms at positions 1 and 4. The molecule also features a chlorophenyl group and a carbonyl group.\nProperty Analysis: The piperazine ring in the source molecule may contribute to moderate DRD2 activity due to its basicity and hydrogen-bonding potential. However, the six-membered piperazine ring may limit conformational flexibility and optimal receptor interactions.\nOptimization for Source Molecule: To improve DRD2 activity, the piperazine ring can be replaced with a piperidine ring (azinane), which is a six-membered ring with one nitrogen atom. This modification reduces basicity, enhances lipophilicity, and improves conformational flexibility, potentially leading to better receptor binding.\n{\"Final Target Molecule\": \"O=C(NCCCN1CCNCC1)c1ccc2c(=O)n(Cc3ccc(Cl)cc3)c(=O)[nH]c2c1\"}",
+        "gold": "O=C(NCCCN1CCOCC1)c1ccc2c(=O)n(Cc3ccc(Cl)cc3)c(=O)[nH]c2c1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC(=O)C1CCN(CCCN2CCN(c3ccc(F)cc3)CC2)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (C1CNCCN1) connected to a carbonyl group (C=O) and a substituted piperidine ring (C1CCNCC1). The piperidine is further substituted with a fluorophenyl group (c3ccc(F)cc3) via a methylene linker (CC).\nProperty Analysis: The fluorophenyl group (c3ccc(F)cc3) is a strong electron-withdrawing group that may reduce the basicity of the piperazine ring, potentially weakening its interaction with the DRD2 receptor. The piperazine's high polarity and hydrogen-bonding capacity may also limit membrane permeability.\nOptimization for Source Molecule: Replace the fluorophenyl group (c3ccc(F)cc3) with a pyridine ring (c3ccncc3) to introduce a hydrogen-bond acceptor (N) while maintaining aromaticity. This modification enhances electron-donating effects, improves receptor binding, and retains favorable lipophilicity.\n{\"Final Target Molecule\": \"COC(=O)C1CCN(CCCN2CCN(c3ccncc3)CC2)CC1\"}",
+        "gold": "COC(=O)C1CCN(CCCN2CCN(c3ccc(F)cc3)CC2)CC1"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CCN(CC(=O)Nc2ccc(Sc3ccc(Cl)cc3)cc2)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) connected to a carbonyl group, which is linked to a substituted benzene ring. The benzene ring has a thioether (S) group attached to another substituted benzene ring with a chlorine atom.\nProperty Analysis: Piperazine derivatives can modulate dopamine D2 receptor activity, but the thioether group (S) and chlorine substituent may reduce bioavailability or introduce unfavorable pharmacokinetics.\nOptimization for Source Molecule: Replace the thioether (S) with a more bioavailable linker (e.g., methylene, CH2) and remove the chlorine atom to reduce steric/electronic hindrance. Retain the piperazine core and carbonyl group for receptor binding.\n{\"Final Target Molecule\": \"CN1CCN(CC(=O)Nc2ccc(Cc3ccc(Cl)cc3)cc2)CC1\"}",
+        "gold": "CN1CCN(CC(=O)Nc2ccc(Sc3ccc(Cl)cc3)cc2)CC1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc2c(cc1OC)CC(N1CCOCC1)C2.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central carbon atom connected to a dimethoxybenzene ring, a piperazine ring (N1CCOCC1), and a morpholine ring (N1CCOCC1). The morpholine ring (1-oxa-4-azacyclohexane) is a six-membered ring with one oxygen and one nitrogen atom.\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the amine-containing ring. Morpholine, with its oxygen atom, has lower basicity and reduced conformational flexibility compared to piperazine, which has two nitrogen atoms.\nOptimization for Source Molecule: To improve DRD2 activity, the morpholine ring can be replaced with a piperazine ring (1,4-diazacyclohexane). Piperazine enhances basicity and conformational flexibility, which are favorable for receptor binding. The dimethoxybenzene and central carbon scaffold can remain unchanged.\n{\"Final Target Molecule\": \"COc1cc2c(cc1OC)CC(N1CCNCC1)C2\"}",
+        "gold": "COc1cc2c(cc1OC)CC(N1CCOCC1)C2"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC1CCCCN1CCC(CCN(C(C)C)C(C)C)(C(N)=O)c1ccccc1F.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a piperidine ring (C1CCCCN1) connected to a cyclohexane ring, a fluorophenyl group, and a tertiary amine (CCN(C(C)C)C(C)C) with two isopropyl substituents. The amide group (C(N)=O) is present on the cyclohexane ring.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The tertiary amine (tertiary butyl group) may reduce solubility and introduce excessive steric bulk, potentially limiting receptor binding.\nOptimization for Source Molecule: Replace the tertiary amine (CCN(C(C)C)C(C)C) with a secondary amine (CCN(CC)C(C)C) to reduce steric bulk while maintaining lipophilicity. This modification enhances hydrogen bonding potential and improves solubility, likely improving DRD2 activity.\n{\"Final Target Molecule\": \"CC1CCCCN1CCC(CCN(CC)C(C)C)(C(N)=O)c1ccccc1F.\"}",
+        "gold": "CC1CCCCN1CCC(CCN(C(C)C)C(C)C)(C(N)=O)c1ccccc1F"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(=O)NCCCCN1CCN(c2ccccc2OC)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) substituted with a benzyl group (c2ccccc2OC) and a carbonyl-linked propyl chain (CCC(=O)N). The benzyl group has an ether-linked phenyl ring (OC).\nProperty Analysis: Piperazine derivatives often exhibit dopamine D2 receptor (DRD2) activity due to their conformational flexibility and hydrogen-bonding potential. The carbonyl group (CCC(=O)) may reduce basicity, potentially weakening receptor interactions.\nOptimization for Source Molecule: Replace the carbonyl group (CCC(=O)) with a secondary amine (CCCN) to enhance basicity and hydrogen-bonding capacity. This modification retains the propyl linker while improving DRD2 affinity.\n{\"Final Target Molecule\": \"CCCNCCN1CCN(c2ccccc2OC)CC1\"}",
+        "gold": "CCC(=O)NCCCCN1CCN(c2ccccc2OC)CC1"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2=O)cc1OC.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) connected to a substituted benzene ring with methoxy groups (OC). The piperidine is substituted with a tertiary amine (N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2=O) and a butyl chain. The benzene ring has two methoxy groups, and a ketone (C=O) is present in the fused ring system.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The tertiary amine (N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2=O) may reduce basicity and hydrogen bonding potential, potentially weakening DRD2 binding.\nOptimization for Source Molecule: Replace the tertiary amine (N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2=O) with a secondary amine (NCCCN2CCc3cc(OC)c(OC)cc3CC2=O) to increase basicity and hydrogen bonding capacity. This modification retains the piperidine scaffold while enhancing DRD2 affinity.\n{\"Final Target Molecule\": \"COc1ccc(N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2CN)cc1OC.\"}",
+        "gold": "COc1ccc(N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2=O)cc1OC"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: OC(COc1ccc(-n2cncn2)cc1)CN1CCc2ccccc2C1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) connected to a benzyl group (CN1CCc2ccccc2C1) and a glycerol-derived chain (OC(COc1ccc(-n2cncn2)cc1). The pyrimidine-like heterocycle (-n2cncn2) is a key structural feature.\nProperty Analysis: DRD2 activity is influenced by aromatic/hydrophobic interactions and hydrogen bonding. The glycerol chain (hydrophilic) may reduce membrane permeability, while the pyrimidine heterocycle (aromatic) may enhance receptor binding.\nOptimization for Source Molecule: 1. Replace the glycerol chain with a more hydrophobic linker (e.g., propyl). 2. Introduce a fluorine atom (electron-withdrawing) on the benzyl ring to improve metabolic stability. 3. Retain the pyrimidine heterocycle for DRD2 binding.\n{\"Final Target Molecule\": \"Oc1ccc(-n2cncn2)cc1CN1CCc2ccccc2C1\"}",
+        "gold": "OC(COc1ccc(-n2cncn2)cc1)CN1CCc2ccccc2C1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)N1N=C(c2cc(F)ccc2F)CC1c1ccccc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central hydantoin-like core (N1N=C...CC1) with a fluorinated biphenyl group (c2cc(F)ccc2F) and a benzyl group (c1ccccc1). The carbonyl group (CC(=O)) is attached to the hydantoin nitrogen.\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric compatibility. The fluorinated biphenyl group may enhance lipophilicity and target binding, while the benzyl group provides a flexible hydrophobic moiety.\nOptimization for Source Molecule: To improve DRD2 activity, the benzyl group (c1ccccc1) can be replaced with a pyridine ring (c1ccncc1) to introduce aromatic stacking potential and hydrogen-bonding capability. This modification retains hydrophobicity while enhancing receptor interactions.\n{\"Final Target Molecule\": \"CC(=O)N1N=C(c2cc(F)ccc2F)CC1c1ccncc1\"}",
+        "gold": "CC(=O)N1N=C(c2cc(F)ccc2F)CC1c1ccccc1"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)CCCC1C2CCCN3CCCC(CN1CCO)C23.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1C2CCCN3CCCC(CN1CCO)C23) with a hydroxyl group (OH) attached to a nitrogen in a piperazine-like side chain (CN1CCO). The side chain includes a morpholine ring (CCO) and a carboxylic acid group (O=C(O)) connected via a four-carbon chain (CCCC).\nProperty Analysis: The hydroxyl group (OH) in the side chain (CN1CCO) may reduce DRD2 activity due to increased polarity and potential hydrogen bonding, which could disrupt receptor-ligand interactions. The morpholine ring (CCO) and carboxylic acid group (O=C(O)) are also polar and may hinder optimal binding to the dopamine D2 receptor.\nOptimization for Source Molecule: To improve DRD2 activity, the hydroxyl group (OH) can be replaced with a methyl group (CH3) to reduce polarity and enhance lipophilicity. The morpholine ring (CCO) can be retained for its potential pharmacophoric role, but the carboxylic acid group (O=C(O)) can be replaced with a less polar group (e.g., amide or alkyl) to balance solubility and receptor binding.\n{\"Final Target Molecule\": \"CC(=O)NCC1C2CCCN3CCCC(CN1CCO)C23.\"}",
+        "gold": "O=C(O)CCCC1C2CCCN3CCCC(CN1CCO)C23"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCn1c(=O)cc(N2CCN(Cc3ccccc3)CC2)[nH]c1=O.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) with two carbonyl groups (C=O) and a piperazine ring (N2CCN(Cc3ccccc3)CC2) substituted with a benzyl group (Cc3ccccc3). The piperazine is a 1,4-diazacyclohexane, which is a common scaffold for bioactive molecules due to its ability to form hydrogen bonds and its conformational flexibility.\nProperty Analysis: The DRD2 activity of the source molecule is likely influenced by the piperazine's ability to interact with the receptor's binding pocket. However, the benzyl group (Cc3ccccc3) on the piperazine may sterically hinder optimal binding due to its size and lack of polar functionality.\nOptimization for Source Molecule: To improve DRD2 activity, the benzyl group can be replaced with a smaller, more polar substituent. Introducing a hydroxyl group (CO) on the benzene ring (Cc3ccc(CO)cc3) can enhance hydrogen bonding potential and reduce steric bulk while maintaining aromaticity. This modification balances lipophilicity and polarity, potentially improving receptor-ligand interactions.\n{\"Final Target Molecule\": \"CCn1c(=O)cc(N2CCN(Cc3ccc(CO)cc3)CC2)[nH]c1=O.\"}",
+        "gold": "CCn1c(=O)cc(N2CCN(Cc3ccccc3)CC2)[nH]c1=O"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)c1cccc2c(S(=O)(=O)Nc3ccc(C#N)nn3)cccc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a dimethylamino group (CN(C)), a fused bicyclic aromatic system (benzene fused to a naphthyridine-like structure), and a sulfonamide group (S(=O)(=O)N) linked to a cyanophenyl ring (C#N-substituted phenyl). The dimethylamino group is a tertiary amine, and the naphthyridine core is electron-rich.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The dimethylamino group may reduce basicity and hydrogen bonding potential compared to a primary or secondary amine. The naphthyridine core may provide moderate hydrophobic interactions but lacks strong electron-withdrawing or halogen-mediated effects.\nOptimization for Source Molecule: Replace the dimethylamino group (CN(C)) with a primary amine (NH2) to enhance hydrogen bonding and reduce steric bulk. Introduce a fluorine atom (F) on the naphthyridine ring to improve lipophilicity and metabolic stability. Retain the sulfonamide and cyanophenyl groups for their favorable electronic and steric properties.\n{\"Final Target Molecule\": \"Nc1ccc(F)c(Nc2cccc3c(S(=O)(=O)Nc4ccc(C#N)nn4)cccc23)n1\"}",
+        "gold": "CN(C)c1cccc2c(S(=O)(=O)Nc3ccc(C#N)nn3)cccc12"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(CNC(=O)c1ccccc1Br)N1CCc2ccccc2C1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (N1CCc2ccccc2C1) connected to a benzyl group (c2ccccc2) and a side chain (CNC(=O)c1ccccc1Br) with a brominated phenyl ring (c1ccccc1Br) and an amide linkage (NC(=O)).\nProperty Analysis: The brominated phenyl ring (c1ccccc1Br) may reduce DRD2 activity due to steric bulk and potential metabolic instability. The amide group (NC(=O)) could also limit activity due to hydrogen bonding or conformational rigidity.\nOptimization for Source Molecule: Replace the brominated phenyl ring (c1ccccc1Br) with a non-brominated phenyl ring (c1ccccc1) to reduce steric hindrance and improve metabolic stability. Retain the amide linkage (NC(=O)) for hydrogen bonding potential but consider adding a flexible spacer (e.g., ethylene glycol) to enhance receptor interaction.\n{\"Final Target Molecule\": \"CCC(CNC(=O)c1ccccc1)N1CCc2ccccc2C1\"}",
+        "gold": "CCC(CNC(=O)c1ccccc1Br)N1CCc2ccccc2C1"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: N#CCCNCCCN1CCCCC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a nitrile group (N#C) connected to a piperazine ring (NCCCN1CCCCC1) via a methylene bridge (CCCN). The piperazine is a six-membered ring with two nitrogen atoms, and the cyclohexane ring (CCCCC1) is a six-membered saturated ring.\nProperty Analysis: The nitrile group (N#C) is electron-withdrawing and may reduce basicity, potentially weakening interactions with the DRD2 receptor. The piperazine ring is a known pharmacophore for DRD2, but the nitrile substituent may hinder optimal binding.\nOptimization for Source Molecule: Replace the nitrile group (N#C) with a dimethylamine group (N(C)C) to increase basicity and enhance hydrogen bonding with DRD2. This modification retains the piperazine core while improving receptor interactions.\n{\"Final Target Molecule\": \"CN(C)CCCN1CCCCC1\"}",
+        "gold": "N#CCCNCCCN1CCCCC1"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=c1cc(-c2ccccc2)oc2cc(OCCN3CCOCC3)cc(O)c12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzofuranone core (O=c1cc(-c2ccccc2)oc2cc...cc12) with a phenyl substituent (-c2ccccc2) and a side chain (OCCN3CCOCC3) terminating in a morpholine ring (N3CCOCC3). The morpholine (1,4-oxazinane) is a six-membered ring with one oxygen and one nitrogen atom.\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the amine group. Morpholine, while moderately basic, has limited protonation potential compared to piperazine (two nitrogen atoms) and may restrict optimal receptor interactions due to its smaller ring size and reduced basicity.\nOptimization for Source Molecule: Replace the morpholine ring (N3CCOCC3) with a piperazine ring (N3CCN(C)CC3). Piperazine introduces a second nitrogen atom, enhancing basicity and hydrogen-bonding capacity, which can improve DRD2 binding affinity. The N-methyl group on the piperazine increases lipophilicity and steric bulk, potentially improving CNS penetration and receptor selectivity.\n{\"Final Target Molecule\": \"O=c1cc(-c2ccccc2)oc2cc(OCCN3CCN(C)CC3)cc(O)c12\"}",
+        "gold": "O=c1cc(-c2ccccc2)oc2cc(OCCN3CCOCC3)cc(O)c12"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCc1ccc2c(ccn2S(=O)(=O)c2ccccc2)c1)NO.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a nitro group (NO), a carbonyl group (C=O), a thioamide (S(=O)(=O)), a piperazine-like ring (ccn2), and a benzodioxole-like scaffold (c1ccc2c(ccn2S(=O)(=O)c2ccccc2)c1). The nitro group and carbonyl group may contribute to metabolic instability or suboptimal receptor binding.\nProperty Analysis: DRD2 activity is influenced by hydrogen bonding, steric fit, and aromatic interactions. The nitro group (electron-withdrawing) may reduce basicity of the amine, while the carbonyl group (polar) may hinder optimal receptor binding.\nOptimization for Source Molecule: Replace the nitro group (NO) with a hydroxyl group (OH) to enhance hydrogen bonding potential. Remove the carbonyl group (C=O) to reduce polarity and improve lipophilicity. Retain the thioamide (S(=O)(=O)) and benzodioxole-like scaffold for receptor binding.\n{\"Final Target Molecule\": \"Oc1ccc2c(ccn2S(=O)(=O)c2ccccc2)c1\"}",
+        "gold": "O=C(CCc1ccc2c(ccn2S(=O)(=O)c2ccccc2)c1)NO"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCN1CCN(c2cccc(Cl)c2)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) substituted with a chlorophenyl group. The piperazine core is a six-membered ring with two nitrogen atoms at positions 1 and 4, while the chlorophenyl group is attached to the nitrogen at position 1.\nProperty Analysis: Piperazine derivatives can exhibit moderate DRD2 activity due to their basicity and hydrogen-bonding potential. However, the chlorophenyl group may reduce lipophilicity and hinder optimal receptor interactions due to its polar nature and potential steric clashes.\nOptimization for Source Molecule: To improve DRD2 activity, the chlorophenyl group can be replaced with a more lipophilic and conformationally flexible substituent. Introducing a cyclohexyl group (C1CCNCC1) via a methylene linker (CH2) enhances lipophilicity, reduces polarity, and allows for better spatial alignment with the DRD2 binding pocket.\nFinal Target Molecule: CCN1CCN(Cc2ccccc2)CC1.\n{\n    \"Final Target Molecule\": \"CCN1CCN(Cc2ccccc2)CC1\"\n}",
+        "gold": "CCN1CCN(c2cccc(Cl)c2)CC1"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC(=O)c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyridine core (c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1) with a methyl ester (COC(=O)), a substituted benzene ring (Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2), and a pyrrole ring (cn1). The benzene ring has a fluorophenyl group (-c4ccc(F)cc4) and a carbamoyl group (C(N)=O).\nProperty Analysis: The fluorophenyl group (-c4ccc(F)cc4) is electron-withdrawing and may reduce electron density in the aromatic system, potentially weakening DRD2 binding. The carbamoyl group (C(N)=O) is polar and may hinder optimal receptor interactions.\nOptimization for Source Molecule: Replace the fluorophenyl group (-c4ccc(F)cc4) with a phenyl group (-c4ccccc4) to increase electron density and aromatic stacking potential. Retain the carbamoyl group (C(N)=O) for hydrogen bonding but consider replacing the amide (C(N)=O) with a less polar group (e.g., amine) if further optimization is needed.\n{\"Final Target Molecule\": \"COC(=O)c1cn(Cc2ccc3c(-c4ccccc4)cc(C(N)=O)nc3c2)cn1.\"}",
+        "gold": "COC(=O)c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1cc(OCCCN2CCCCC2)ccc1CN1CCCCC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a hydroxyl group (O), an ethoxy chain (OCCCN), and a piperidine ring (N1CCCCC1). The piperidine ring is a saturated 6-membered ring with one nitrogen atom.\nProperty Analysis: DRD2 activity is influenced by the basicity and steric compatibility of the amine group in the piperidine ring. Piperidine's saturated structure and basic nitrogen may limit optimal receptor interactions due to conformational flexibility and suboptimal steric fit.\nOptimization for Source Molecule: Replace the piperidine ring (N1CCCCC1) with a piperazine ring (N1CCNCC1). Piperazine introduces an additional nitrogen atom, increasing basicity and hydrogen-bonding potential. The fused 6- and 5-membered ring system in piperazine enhances rigidity and steric complementarity with DRD2.\n{\"Final Target Molecule\": \"c1cc(OCCCN2CCCCC2)ccc1CN1CCNCC1\"}",
+        "gold": "c1cc(OCCCN2CCCCC2)ccc1CN1CCCCC1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CCN(CC(=O)N(C)c2ccc(Sc3ccccc3)cc2)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) connected to a carbonyl group, a tertiary amine, and a thioether-substituted benzene ring. The piperazine (1,4-diazacyclohexane) is a flexible, basic nitrogen-containing heterocycle, while the thioether (S) and carbonyl (C=O) groups contribute to polarity and hydrogen bonding potential.\nProperty Analysis: Piperazine derivatives can exhibit moderate DRD2 activity due to their basicity and conformational flexibility, but the thioether (S) and carbonyl (C=O) groups may reduce lipophilicity and hinder optimal receptor interactions. The tertiary amine (N(C)) and aromatic systems (benzene, thiophene) are favorable for DRD2 binding.\nOptimization for Source Molecule: Replace the piperazine ring with a piperidine (azinane) to reduce basicity and rigidity, improving receptor fit. Retain the thioether (S) and carbonyl (C=O) groups for hydrogen bonding, but optimize the aromatic system by replacing the thiophene (c2ccc(Sc3ccccc3)cc2) with a benzene ring to enhance lipophilicity and π-π stacking.\n{\"Final Target Molecule\": \"CC(=O)N(C)c1ccc(Sc2ccccc2)cc1\"}",
+        "gold": "CN1CCN(CC(=O)N(C)c2ccc(Sc3ccccc3)cc2)CC1"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1nc2ccccc2n1Cc1ccc(Cl)cc1)c1ccco1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central urea group (O=C(N-)) linking two aromatic systems. The left side has a pyrimidine-like core (c1nc2ccccc2n1) with a benzyl substituent (Cc1ccc(Cl)cc1), and the right side has a benzofuran moiety (c1ccco1). The pyrimidine core and benzofuran are critical for structural stability.\nProperty Analysis: DRD2 activity often benefits from aromatic/hydrophobic interactions and hydrogen bonding. The benzofuran (electron-rich oxygen heterocycle) may enhance receptor binding via π-π stacking and hydrogen bonding. The benzyl group (with Cl) provides hydrophobicity but lacks optimal electronic or steric complementarity for DRD2.\nOptimization for Source Molecule: Replace the benzyl group (Cc1ccc(Cl)cc1) with a pyridine ring (c1ccncc1) to introduce a hydrogen bond-accepting nitrogen atom. Pyridine also enhances aromaticity and π-π stacking while maintaining moderate hydrophobicity. This modification improves DRD2 affinity by mimicking endogenous dopamine's aromatic interactions.\n{\"Final Target Molecule\": \"O=C(Nc1nc2ccccc2n1c1ccncc1)c1ccco1.\"}",
+        "gold": "O=C(Nc1nc2ccccc2n1Cc1ccc(Cl)cc1)c1ccco1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CON=C(CCN1CCN(c2ccccn2)CC1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central guanidine group (N1CCN(c2ccccn2)CC1) connected to a carbonyl group (CON=C) and a benzene ring (c1ccccc1). The guanidine group is a strong base and may reduce blood-brain barrier penetration. The benzene ring provides hydrophobicity but lacks polar interactions.\nProperty Analysis: DRD2 activity requires balanced lipophilicity, hydrogen bonding, and steric compatibility. The guanidine group (high basicity) may hinder CNS penetration, while the benzene ring (hydrophobic) lacks polar interactions for receptor binding.\nOptimization for Source Molecule: Replace the guanidine group (N1CCN(c2ccccn2)CC1) with a piperazine ring (N1CCNCC1) to reduce basicity while retaining hydrogen bonding. Introduce a polar side chain (CCCN) to enhance solubility and receptor interaction. Replace the benzene ring with a pyridine ring (c1ccncc1) to improve hydrogen bonding and reduce steric bulk.\n{\"Final Target Molecule\": \"CCCN1CCN(c2ccncc2)CC1CON=Cc1ccncc1\"}",
+        "gold": "CON=C(CCN1CCN(c2ccccn2)CC1)c1ccccc1"
+    }
+}

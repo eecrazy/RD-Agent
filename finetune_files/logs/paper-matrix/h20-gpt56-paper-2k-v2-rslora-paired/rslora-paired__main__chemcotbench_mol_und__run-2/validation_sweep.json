@@ -1,0 +1,77 @@
+{
+  "baseline_only": false,
+  "benchmark": "chemcotbench_mol_und",
+  "candidate_count": 4,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_checkpoint__rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060__step-66__7d1cd4152917",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/candidates/durable_checkpoint__rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060__step-66__7d1cd4152917/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_checkpoint__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__step-28__86924c8f9685",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/candidates/durable_checkpoint__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__step-28__86924c8f9685/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060__1afae0eca7c2",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/candidates/durable_output__rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060__1afae0eca7c2/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/candidates/durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "666ef7af9630a31412b38578f87faf23c0f5644405c7a453c9917ebab794eccd",
+  "completed_count": 4,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-2",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "666ef7af9630a31412b38578f87faf23c0f5644405c7a453c9917ebab794eccd",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "573d4564cfcbf06ea73f8433f3c7765fc265be60bb28438b69468c8ed2407079",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4",
+    "formal_training_evidence_signature": "9f6cc406e2dc80aa2568ae4a7adedd775f3efbb8f8cbbedeba58844603414de6",
+    "mean_ordinal_rank": 1.3333333333333333,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/workspace/.ft_model_checkpoints/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539/output",
+    "selection_metrics": [
+      {
+        "formula": "mean MAE of fg_count and ring_count",
+        "higher_is_better": false,
+        "label": "MAE",
+        "metric": "mae",
+        "unit": "absolute",
+        "value": 0.28
+      },
+      {
+        "formula": "Murcko scaffold Tanimoto similarity",
+        "higher_is_better": true,
+        "label": "TMS",
+        "metric": "tanimoto_similarity",
+        "unit": "ratio",
+        "value": 0.24
+      },
+      {
+        "formula": "mean accuracy of equivalence and ring_system_scaffold",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 61.0
+      }
+    ],
+    "selection_signature": "53dd93427ba909bf3f6f90261deccf015abc5cff09e36c295dd9295f416064f9"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:16:38.538359+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

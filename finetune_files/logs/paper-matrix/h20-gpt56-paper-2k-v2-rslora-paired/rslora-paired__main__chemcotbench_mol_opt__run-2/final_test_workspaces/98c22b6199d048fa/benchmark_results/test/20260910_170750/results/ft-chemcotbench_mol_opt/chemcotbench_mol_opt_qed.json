@@ -1,0 +1,1662 @@
+{
+    "mean_improvement": 0.2194297170531997,
+    "success_rate": 78.0,
+    "best_rate": 44.0,
+    "valid_smiles_rate": 92.0,
+    "valid_score_rate": 92.0,
+    "scaffold_hard": 32.0,
+    "scaffold_soft": 61.55605044560295,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_50",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperazine ring (N2CCN...CC2) linked to a substituted benzene ring (Nc1ccc...cc1) with a chloroacetyl group (O=C(CCl)) and a fluorinated benzene ring (c3ccc(F)cc3F). The piperazine is further substituted with a hydroxyl group (CC(O)) and a cyanoguanidine-like group (Cn3cncn3).\",\n    \"Property Analysis\": \"The hydroxyl group (CC(O)) and the cyanoguanidine-like group (Cn3cncn3) may contribute to high polarity an"
+            ],
+            "pred_smiles": [
+                "O=C(CCl)Nc1ccc(N2CCN(CC(O)(C(C)(C)C)c3ccc(F)cc3F)CC2)cc1"
+            ],
+            "source_smiles": [
+                "O=C(CCl)Nc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4717024629125444
+            ],
+            "tgt_property": [
+                0.627763628793826
+            ],
+            "improvement": [
+                0.15606116588128155
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.41304347826086957
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_51",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole ring (Sc1ncccn1) linked to a carbonyl group (C=O) and an aniline derivative (Nc1ncc...s1). The aromatic system includes a fused benzene ring (Cc2cccc3ccccc23).\",\n    \"Property Analysis\": \"The thiazole ring (Sc1ncccn1) may contribute to higher lipophilicity (logP) and metabolic instability, both detrimental to QED. The molecule also has multiple hydrogen bond acceptors (N, O, S), which could exceed optimal dr"
+            ],
+            "pred_smiles": [
+                "CC1CCN(C(=O)Nc2ncc(Cc3cccc4ccccc34)s2)CC1"
+            ],
+            "source_smiles": [
+                "CC(Sc1ncccn1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3680563030716797
+            ],
+            "tgt_property": [
+                0.6974190897957432
+            ],
+            "improvement": [
+                0.3293627867240635
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6140350877192983
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_52",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzene ring substituted with a nitroso group (C=NO) and an amide-linked bicyclic system (N2C(=O)C3CC=C(Cl)CC3C2=O). The bicyclic system includes a chlorine-substituted cyclohexene ring fused to a diketopiperazine-like scaffold.\",\n    \"Property Analysis\": \"The nitroso group (C=NO) is a potential liability for QED due to its metabolic instability and potential toxicity. The molecule also has moderate lipophilicity (lo"
+            ],
+            "pred_smiles": [
+                "COc1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1"
+            ],
+            "source_smiles": [
+                "CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3943260005978332
+            ],
+            "tgt_property": [
+                0.7872173161295484
+            ],
+            "improvement": [
+                0.3928913155317152
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_53",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (NS(=O)(=O)) attached to a benzene ring, which is connected via an amino linker (Nc2nccc...) to a second benzene ring substituted with a thiophene-containing side chain (NC(=O)Cc4cccs4). The structure includes a pyrimidine ring (Nc2nccc...) and a thiophene (cccs4).\",\n    \"Property Analysis\": \"The sulfonamide group contributes to high polarity and hydrogen bond acceptor count, potentially reducing me"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1nccc(-c2ccc(NC(=O)Cc3cccs3)cc2)n1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.38118725224136335
+            ],
+            "tgt_property": [
+                0.48145000357820866
+            ],
+            "improvement": [
+                0.10026275133684531
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7818181818181819
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_54",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group ([N+](=O)[O-]) on the benzene ring connected to the central core. The core has a methyl group, a ketone, an ester, and a substituted phenyl ring. The nitro group is electron-withdrawing and may contribute to poor solubility and metabolic instability.\",\n    \"Property Analysis\": \"Nitro groups are associated with reduced drug-likeness (QED) due to potential toxicity, metabolic instability, and high molecular"
+            ],
+            "pred_smiles": [
+                "Cc1c(COC2CCO2)c(=O)oc2cc(OC(=O)N(C)C)ccc12"
+            ],
+            "source_smiles": [
+                "Cc1c(Cc2cccc([N+](=O)[O-])c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.38750753079966294
+            ],
+            "tgt_property": [
+                0.799764044939282
+            ],
+            "improvement": [
+                0.41225651413961906
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_55",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an ethoxy group (CCO-), a benzene ring with a sulfonamide group (NS(=O)(=O)), and a substituted phenyl ring linked to a pyrrole (c2cnc(...)o2) via a methylene bridge. The pyrrole is fused to a cyclopropane ring (C3CC3).\",\n    \"Property Analysis\": \"The sulfonamide and aromatic systems contribute to high hydrophobicity (logP), while the ethoxy group may reduce metabolic stability. The fused pyrrole-cyclopropane system in"
+            ],
+            "pred_smiles": [
+                "Cc1cc(CS(=O)(=O)Nc2ccccc2)ccc1-c1cnc(-c2ccc(C)cc2)o1"
+            ],
+            "source_smiles": [
+                "CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.6223108545050016
+            ],
+            "tgt_property": [
+                0.4444174583604434
+            ],
+            "improvement": [
+                -0.17789339614455818
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_56",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tertiary amine (CC(N)C...), a nitrooxy group (C(=O)NO), and a propargyl-substituted benzene ring (C#Cc2ccccc2). The tertiary amine and nitrooxy group may contribute to poor drug-likeness.\",\n    \"Property Analysis\": \"QED is hindered by the nitrooxy group (high desolvation penalty, metabolic instability) and the tertiary amine (potential for high basicity and off-target interactions).\",\n    \"Limitation in Source Molecu"
+            ],
+            "pred_smiles": [
+                "O=C(O)CNc1ccc(C#Cc2ccccc2)cc1"
+            ],
+            "source_smiles": [
+                "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3799816784593949
+            ],
+            "tgt_property": [
+                0.8242477869917701
+            ],
+            "improvement": [
+                0.44426610853237525
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_57",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C(N)) linked to a fluorinated pyridine ring (c1ccnc(F)c1) and a substituted benzene ring. The benzene ring is further substituted with a trifluoromethyl-oxadiazole group (-c2noc(C(F)(F)F)n2). The oxadiazole ring introduces rigidity and polar N atoms.\",\n    \"Property Analysis\": \"The trifluoromethyl-oxadiazole group contributes to high molecular weight (MW = 369.3 g/mol), increased logP (predicte"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ccnc(F)c1)c1ccc(Cl)cc1"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5759671040649871
+            ],
+            "tgt_property": [
+                0.8323582336946546
+            ],
+            "improvement": [
+                0.2563911296296675
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5384615384615384
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_58",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzopyran-2-one core (chromone) with a methoxy group (OCH3) and a bromoethylthio group (CSCCBr) at the meta position of the aromatic ring. The bromine atom and sulfur-containing group (ethylthio) may contribute to unfavorable physicochemical properties.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The bromine atom increases molecular"
+            ],
+            "pred_smiles": [
+                "COc1ccc2c(C)cc(=O)oc2c1"
+            ],
+            "source_smiles": [
+                "COc1ccc2c(CSCCBr)cc(=O)oc2c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4786181471793328
+            ],
+            "tgt_property": [
+                0.6463218796802398
+            ],
+            "improvement": [
+                0.16770373250090698
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_59",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide backbone with two benzyl groups (Cc1ccccc1), a propenyl group (C=C) linked to a benzofuran (c1ccco1), and a terminal carboxylic acid (C(=O)O). The structure is highly polar due to multiple amide and carboxylic acid groups.\",\n    \"Property Analysis\": \"The carboxylic acid group (C(=O)O) contributes to high polarity, poor membrane permeability, and low QED. The molecule also has a high topological polar su"
+            ],
+            "pred_smiles": [
+                "O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)Cc1ccc(Cl)cc1"
+            ],
+            "source_smiles": [
+                "O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4270804845280786
+            ],
+            "tgt_property": [
+                0.2552563292714465
+            ],
+            "improvement": [
+                -0.17182415525663214
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7755102040816326
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_60",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group ([N+](=O)[O-]) attached to an aromatic ring, a conjugated alkene (C=C), and a substituted benzene ring with three methoxy groups (OC). The nitro group is a strong electron-withdrawing substituent.\",\n    \"Property Analysis\": \"Nitro groups are associated with poor drug-likeness (QED) due to potential toxicity, metabolic instability, and high molecular weight. They also increase the number of hydrogen bond a"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1c1ccccc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.29303935742928267
+            ],
+            "tgt_property": [
+                0.34824162864877944
+            ],
+            "improvement": [
+                0.05520227121949678
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_61",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a methoxy group (COc1ccc...), a carbonyl-linked aniline group (C(=O)Nc2...), and a benzoyl-fused furan moiety (OC(=O)c3ccco3). The aniline and benzoyl-fused furan groups contribute to planar rigidity and potential hydrogen bonding.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The benzoyl-fused fur"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C(=O)Nc2cccc(O=C(O))c2)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(C(=O)Nc2cccc(OC(=O)c3ccco3)c2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_62",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central sulfonamide group (S(=O)(=O)N) linking two aromatic rings. One ring has a nitro group ([N+](=O)[O-]), and the other has an amide group (O=C(N)). The nitro group introduces high polarity and potential metabolic instability.\",\n    \"Property Analysis\": \"The nitro group contributes to poor QED due to its high molecular weight, strong electron-withdrawing nature, and association with toxicity. The amide and sulfon"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C(=O)Nc2ccc(S(=O)(=O)Nc3ccccn3)cc2)cc1"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4845240185003669
+            ],
+            "tgt_property": [
+                0.7229321077780563
+            ],
+            "improvement": [
+                0.23840808927768936
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_63",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C-N) linked to a 1,3-oxazolidin-2-one ring (NCC1CCCO1), a conjugated double bond system (C=C), a nitro-substituted benzene ring (c1cccc([N+](=O)[O-])c1), and a benzamide group (NC(=O)c1ccccc1). The nitro group ([N+](=O)[O-]) is a strong electron-withdrawing group on the aromatic ring.\",\n    \"Property Analysis\": \"The nitro group contributes to poor drug-likeness (QED) due to its high molecular w"
+            ],
+            "pred_smiles": [
+                "Cc1cccc(C=C(C(=O)NCC2CCCO2)NC(=O)c2ccccc2)c1"
+            ],
+            "source_smiles": [
+                "O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4253861025940572
+            ],
+            "tgt_property": [
+                0.7743733511430081
+            ],
+            "improvement": [
+                0.3489872485489509
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_64",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a sulfonyl group (S(=O)(=O)) attached to a benzene ring, an amide linkage, and an ester group (COC(=O)) connected to a phenyl ring. The structure includes a branched alkyl chain (CCC1(CC)) and a polar amide/sulfonamide moiety.\",\n    \"Property Analysis\": \"The ester group (COC(=O)) and the branched alkyl chain may contribute to higher lipophilicity (logP), reducing QED. The sulfonyl group is polar bu"
+            ],
+            "pred_smiles": [
+                "CCS(=O)(=O)c1ccccc1NC(=O)C1(CC)CCC1=O"
+            ],
+            "source_smiles": [
+                "CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5254923735329184
+            ],
+            "tgt_property": [
+                0.8453659830629975
+            ],
+            "improvement": [
+                0.31987360953007904
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.22641509433962265
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_65",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazolidinone core (N1C(=O)SC(=C)C1=O) with a carboxylic acid group (O=C(O)) and a substituted phenyl ring (c2cccc([N+](=O)[O-])c2) linked via a propenyl group (C=C). The nitro group ([N+](=O)[O-]) on the phenyl ring introduces polarity and potential metabolic instability.\",\n    \"Property Analysis\": \"The nitro group contributes to high molecular weight, increased topological polar surface area (TPSA), and potential "
+            ],
+            "pred_smiles": [
+                "O=C(O)CN1C(=O)SC(=Cc2cccc(C)c2)C1=O"
+            ],
+            "source_smiles": [
+                "O=C(O)CN1C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5107249240816254
+            ],
+            "tgt_property": [
+                0.8564397113834774
+            ],
+            "improvement": [
+                0.345714787301852
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_66",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a methoxy group (COc1...), an amino group (N...), and a nitro group ([N+](=O)[O-]). A conjugated ene (C=C) connects to a second benzene ring with three methoxy groups (OC).\",\n    \"Property Analysis\": \"The nitro group ([N+](=O)[O-]) negatively impacts QED due to its high desolvation penalty, metabolic instability, and association with toxicity. The molecule also has moderate hydro"
+            ],
+            "pred_smiles": [
+                "Cc1ccccc1C=Cc1cc(OC)c(OC)c(OC)c1"
+            ],
+            "source_smiles": [
+                "COc1cc(N)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3490084546782039
+            ],
+            "tgt_property": [
+                0.7704372046833925
+            ],
+            "improvement": [
+                0.4214287500051886
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_67",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyridone core (c(=O)[nH]c1=O) with a methyl-substituted benzene ring (Cc1...), a piperazine-like bridged ring system (C2CC...O2), and a carboxylic acid group (NC(=O)CC(=O)O). The pyridone and methyl groups dominate the aromatic region.\",\n    \"Property Analysis\": \"The carboxylic acid (CC(=O)O) contributes to high polarity, poor membrane permeability, and metabolic instability, reducing QED. The pyridone and methyl gro"
+            ],
+            "pred_smiles": [
+                "Cc1cn(C2CC(Nc3ccc(Cl)cc3)C(CO)O2)c(=O)[nH]c1=O"
+            ],
+            "source_smiles": [
+                "Cc1cn(C2CC(NC(=O)CC(=O)O)C(CO)O2)c(=O)[nH]c1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.46036037345406755
+            ],
+            "tgt_property": [
+                0.7702723950183266
+            ],
+            "improvement": [
+                0.309912021564259
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_68",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (Nc1cnc...cn1) linked to a fluorophenyl group (-c2ccc(F)cc2) and a thioether-substituted benzimidazole (-CSc3ccncn3). The thioether (C-S-C) and benzimidazole (aromatic heterocycle) may contribute to metabolic instability and high lipophilicity.\",\n    \"Property Analysis\": \"QED is limited by high molecular weight (due to benzimidazole and thioether), elevated logP (from hydrophobic groups like benzimida"
+            ],
+            "pred_smiles": [
+                "Nc1ncc(-c2ccc(Nc3nccnc3)cc2F)c1"
+            ],
+            "source_smiles": [
+                "Nc1cnc(-c2ccc(-c3ccccc3CSc3ccncn3)cc2F)cn1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_69",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central tertiary amine (N) connected to: (1) a methyl group, (2) a carbonyl-linked aniline derivative with a sulfonamide group (S(N)(=O)=O), and (3) a guanidine group (C(=N)N). The sulfonamide and guanidine groups contribute to high polarity and hydrogen bonding.\",\n    \"Property Analysis\": \"QED is limited by high hydrogen bond donors (NH groups: guanidine and sulfonamide NH) and high polarity from the sulfonamide and"
+            ],
+            "pred_smiles": [
+                "O=C(O)CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)"
+            ],
+            "source_smiles": [
+                "CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)C(=N)N"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.41850069803330164
+            ],
+            "tgt_property": [
+                0.5261156761735893
+            ],
+            "improvement": [
+                0.1076149781402877
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_70",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a urea core (O=C-N-C=O) with two aromatic rings (one substituted with Cl and linked via a urea) and a benzyloxycarbonyl group. The structure is highly lipophilic due to the two aromatic rings and the chlorine substituent.\",\n    \"Property Analysis\": \"The QED is likely low due to high molecular weight (369.4 g/mol), elevated logP (predicted ~3.5), and presence of multiple aromatic rings. The urea groups may contribute to"
+            ],
+            "pred_smiles": [
+                "CC(=O)NS(Cc1ccc(Cl)cc1C(=O)c1ccccc1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "O=C(COC(=O)c1ccccc1)Nc1ccc(Cl)cc1C(=O)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.49835921370945113
+            ],
+            "tgt_property": [
+                0.44421631768912634
+            ],
+            "improvement": [
+                -0.05414289602032479
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3695652173913043
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_71",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The molecule contains a sulfonamide group (S(=O)(=O)), two aromatic rings with chlorine substituents, and a flexible ethyl-alkylamine chain (CC(CCCN...)). The chain introduces conformational flexibility and increases lipophilicity.\",\n    \"Property Analysis\": \"QED penalizes high molecular weight, excessive flexibility, and elevated logP. The ethyl-alkylamine chain contributes to elevated logP and molecular weight while reducing rigidity.\",\n    \"Lim"
+            ],
+            "pred_smiles": [
+                "CC1CCCCN1C(=O)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1"
+            ],
+            "source_smiles": [
+                "CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.34207910150694293
+            ],
+            "tgt_property": [
+                0.7237410517084174
+            ],
+            "improvement": [
+                0.3816619502014745
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3137254901960784
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_72",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The molecule contains a coumarin core (benzopyrone: Cc1cc2c(c(=O)o1)C=C1O2) with a substituted cyclohexane ring and a thiazole-linked side chain (C(C)CSc3ncccn3). The thiazole (Sc3ncccn3) introduces a sulfur atom and a pyrrole-like aromatic system.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The thiazole group increases molecular weight, logP, and may reduce solub"
+            ],
+            "pred_smiles": [
+                "Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CCN3CCCC3)CC1O2"
+            ],
+            "source_smiles": [
+                "Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3ncccn3)CC1O2"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5959814030750068
+            ],
+            "tgt_property": [
+                0.8281648415162164
+            ],
+            "improvement": [
+                0.2321834384412096
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5873015873015873
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_73",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tertiary amine (CC(N)C...), a nitrooxy group (C(=O)NO), and a propargyl-substituted benzene ring (C#Cc2ccccc2). The tertiary amine and nitrooxy group may contribute to poor drug-likeness.\",\n    \"Property Analysis\": \"QED is hindered by the nitrooxy group (high desolvation penalty, metabolic instability) and the tertiary amine (potential for high basicity and off-target interactions).\",\n    \"Limitation in Source Molecu"
+            ],
+            "pred_smiles": [
+                "O=C(O)CNc1ccc(C#Cc2ccccc2)cc1"
+            ],
+            "source_smiles": [
+                "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3799816784593949
+            ],
+            "tgt_property": [
+                0.8242477869917701
+            ],
+            "improvement": [
+                0.44426610853237525
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_74",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with an amino group (-NH2), a hydroxyl group (-OH), and a propenoyl chain linked to a para-chlorinated aniline moiety. The amino group introduces hydrogen bond donors (HBDs) and polar character.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, HBDs, hydrogen bond acceptors (HBAs), and polar surface area. The amino group (-NH2) increases HBD count (2 total: -NH2"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O"
+            ],
+            "source_smiles": [
+                "Nc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.46077854129205814
+            ],
+            "tgt_property": [
+                0.8382249328494579
+            ],
+            "improvement": [
+                0.37744639155739973
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_75",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with two methoxy groups (OCH3), a vinyl group (C=C), a cyano group (C#N), and a chlorophenyl ether moiety (OCc1ccccc1Cl). The nitrile group (C#N) and aromatic systems contribute to its hydrophobicity.\",\n    \"Property Analysis\": \"The cyano group (C#N) increases molecular weight and contributes to higher logP (poor solubility) and potential metabolic instability. The chlorophenyl ether "
+            ],
+            "pred_smiles": [
+                "COc1cc(C=C(c2cccc(O)c2)O)ccc1OCc1ccccc1Cl"
+            ],
+            "source_smiles": [
+                "COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5412628010642295
+            ],
+            "tgt_property": [
+                0.42445460914716826
+            ],
+            "improvement": [
+                -0.11680819191706127
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7272727272727273
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_76",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (C(=O)N) linking two methoxy-substituted benzene rings. The substituent on the second benzene ring is a bicyclic system (pyrrole fused to a benzene ring), with a pyrrole (azole) as the smaller ring and a benzene as the larger ring.\",\n    \"Property Analysis\": \"The pyrrole-benzene substituent introduces aromaticity and planar geometry, which may reduce solubility and increase logP, negatively impact"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C(=O)Nc2ccc(N3CCCC3)cc2)cc1OC"
+            ],
+            "source_smiles": [
+                "COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5530818982768774
+            ],
+            "tgt_property": [
+                0.9126671134792369
+            ],
+            "improvement": [
+                0.35958521520235953
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.38461538461538464
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_77",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl-substituted oxazole ring (Cc1oc(=O)oc1), an ethyl ester linker (COC(=O)), a branched alcohol group (C(C)(C)O), and a substituted benzene ring with a chlorophenyl ester (C(=O)c2ccc(Cl)cc2). The oxazole ring and ester groups contribute to polarity and hydrogen bonding.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The oxazole ring"
+            ],
+            "pred_smiles": [
+                "O=C(C(C)(C)O)c1ccc(C(=O)c2ccc(Cl)cc2)cc1O"
+            ],
+            "source_smiles": [
+                "Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.40630735517189487
+            ],
+            "tgt_property": [
+                0.8487021202058791
+            ],
+            "improvement": [
+                0.4423947650339842
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3333333333333333
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_78",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thiazolidinedione-like scaffold (C2=O, N2C(=O), S) with a methyl-substituted benzene ring (Cc1ccc), a thiophene-linked ketone (SC(=Cc3ccc)), and a chlorinated benzene carboxylic acid (-c4ccc(Cl)c(C(=O)O)c4). The thiophene (c3ccc) and methyl group (Cc1) are key structural features.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. T"
+            ],
+            "pred_smiles": [
+                "NC(=O)CN1C(=O)SC(=Cc2ccc(-c3ccc(Cl)c(C(=O)O)c3)o2)C1=O"
+            ],
+            "source_smiles": [
+                "Cc1ccc(NC(=O)CN2C(=O)SC(=Cc3ccc(-c4ccc(Cl)c(C(=O)O)c4)o3)C2=O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.44554387632301645
+            ],
+            "tgt_property": [
+                0.729485620438626
+            ],
+            "improvement": [
+                0.2839417441156095
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4642857142857143
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_79",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a dimethylamine side chain (CN(C)CCC), a thiazole ring substituted with a phenyl group (-c2nc3ccccc3s2), and two cyanomethyl (-C#N) groups attached to the bicyclic system. The dimethylamine chain is flexible and non-aromatic.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and aromaticity. The dimethylamine chain increases molecular weight an"
+            ],
+            "pred_smiles": [
+                "Nc1nc(Nc2ccnc3[nH]ccnc23)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21"
+            ],
+            "source_smiles": [
+                "CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_80",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with (1) an ester group (CCC(=O)O-) at position 1, (2) an amide-linked benzene ring (NC(=O)) at position 4, and (3) a sulfonamide group (S(=O)(=O)N3CCCC3) at position 3. The piperidine ring (N3CCCC3) is part of the sulfonamide substituent.\",\n    \"Property Analysis\": \"The sulfonamide group (S(=O)(=O)N3CCCC3) contributes to high polarity and hydrogen bond acceptor count (HBA = 6), which"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)c1ccc(NC(=O)c2ccc(C(=O)O)cc2)cc1"
+            ],
+            "source_smiles": [
+                "CCC(=O)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5921746186415295
+            ],
+            "tgt_property": [
+                0.9015582957848992
+            ],
+            "improvement": [
+                0.3093836771433697
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5277777777777778
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_81",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group (-NO), a 7-carbon aliphatic chain, and a benzamide group. The nitro group is electron-withdrawing and may contribute to metabolic instability. The long aliphatic chain increases hydrophobicity (logP), potentially reducing solubility.\",\n    \"Property Analysis\": \"Nitro groups are associated with poor drug-likeness (QED) due to toxicity risks and high hydrogen bond acceptor count. The long chain increases lo"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C(=O)CCCCCC(=O)Nc2ccccc2)cc1"
+            ],
+            "source_smiles": [
+                "O=C(CCCCCCC(=O)Nc1ccccc1)NO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3832200999836573
+            ],
+            "tgt_property": [
+                0.5638725128223031
+            ],
+            "improvement": [
+                0.1806524128386458
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.10344827586206896
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_82",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperazine ring (C1CNCCN1) connected to a fluorinated aromatic system with a ketone, carboxylic acid, and a nitro-substituted pyrrole ring. The nitro group ([N+](=O)[O-]) on the pyrrole is a strong electron-withdrawing group.\",\n    \"Property Analysis\": \"The nitro group contributes to high molecular weight, increases topological polar surface area (TPSA), and introduces potential metabolic instability, all of which ne"
+            ],
+            "pred_smiles": [
+                "CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccccc2)CC1"
+            ],
+            "source_smiles": [
+                "CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cc([N+](=O)[O-])cn2C)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4971014865545319
+            ],
+            "tgt_property": [
+                0.7555026607723393
+            ],
+            "improvement": [
+                0.2584011742178074
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7021276595744681
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_83",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a terminal alkyne group (C#C), a pentyl chain, a ketone (=O), a substituted benzene ring with a tert-butyl group (C(C)(C)C), and an oxygen-containing heterocycle (OCC2). The alkyne group is non-drug-like and may reduce QED due to poor solubility and metabolic instability.\",\n    \"Property Analysis\": \"QED penalizes alkynes for poor solubility, metabolic instability, and non-compliance with Lipinski’s rules. The pentyl ch"
+            ],
+            "pred_smiles": [
+                "C=CCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2"
+            ],
+            "source_smiles": [
+                "C#CCCCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4709273843380251
+            ],
+            "tgt_property": [
+                0.5986340538840556
+            ],
+            "improvement": [
+                0.12770666954603044
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_84",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (Nc1cnc...cn1) linked to a substituted phenyl ring. Key features include: (1) a cyclopropyl group (C3CCC3) on the phenyl ring, (2) a fluorine substituent, (3) an ether-linked side chain with a secondary amine (OCC(O)CN...). The side chain terminates in a 2-aminopyrimidine group (Nc3cc(N)ncn3).\",\n    \"Property Analysis\": \"QED is limited by: (1) High hydrogen bond donors (HBD=3: pyrimidine NH, side chai"
+            ],
+            "pred_smiles": [
+                "Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNCc3ccnc3)c2F)cn1"
+            ],
+            "source_smiles": [
+                "Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_85",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperazine ring (N1CCNCC1) substituted with a benzyl group (Cc2ccc(C=Cc3ccccc3)cc2) and an amide-linked phenyl ring (O=C(Nc1ccccc1)N). The benzyl group includes a conjugated enone system (C=Cc3ccccc3).\",\n    \"Property Analysis\": \"The conjugated enone (C=Cc3ccccc3) introduces high planarity, increases molecular weight, and may reduce metabolic stability. The enone's ketone group could contribute to poor solubi"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ccccc1)N1CCN(Cc2ccc(CCC(C)=C)cc2)CC1"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ccccc1)N1CCN(Cc2ccc(C=Cc3ccccc3)cc2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.6002876502820416
+            ],
+            "tgt_property": [
+                0.7646800452925204
+            ],
+            "improvement": [
+                0.16439239501047886
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.775
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_86",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group ([N+](=O)[O-]) attached to a benzyl group (Cc2ccc([N+](=O)[O-])cc2) and a conjugated ketone system (O=C(O)C=C). The core structure includes a bicyclic aromatic system (c1cn...c2ccccc12).\",\n    \"Property Analysis\": \"The nitro group contributes to high molecular weight, poor solubility (high logP), and potential toxicity, all of which negatively impact QED (drug-likeness). The conjugated ketone may increase"
+            ],
+            "pred_smiles": [
+                "O=C(O)C=Cc1cn(Cc2ccccc2)c2ccccc12"
+            ],
+            "source_smiles": [
+                "O=C(O)C=Cc1cn(Cc2ccc([N+](=O)[O-])cc2)c2ccccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4407687240655867
+            ],
+            "tgt_property": [
+                0.7371989936345474
+            ],
+            "improvement": [
+                0.29643026956896074
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_87",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a morpholine ring (C1CN(C(=O)O1) with an acetyl group (CC(=O)N) and a substituted benzene ring (c2ccc(C(C)=NO)cc2) attached via a methylene linker. The benzene substituent includes a methyl-oxime group (C(C)=NO).\",\n    \"Property Analysis\": \"The oxime group (C(C)=NO) introduces potential metabolic instability and polarity mismatches, which may reduce QED. The methyl-oxime may also increase molecular weight and hinder dr"
+            ],
+            "pred_smiles": [
+                "CC(=O)NCC1CN(c2ccc(N3CCCC3)cc2)C(=O)O1"
+            ],
+            "source_smiles": [
+                "CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.4973906842054208
+            ],
+            "tgt_property": [
+                0.9202731286587659
+            ],
+            "improvement": [
+                0.42288244445334505
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6451612903225806
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_88",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine ring with substituents: methoxy (OCH3), a morpholine ring (N2CCOCC2), and an O-linked ethyl group with a nitrosoimine moiety (OCC(=N)NO. The morpholine and pyrimidine core are drug-like, but the OCC(=N)NO group introduces instability and poor QED properties.\",\n    \"Property Analysis\": \"The nitrosoimine group (OCC(=N)NO) increases molecular weight, adds excessive hydrogen bond acceptors (HBA = 8), and intro"
+            ],
+            "pred_smiles": [
+                "COc1nc(C2CCNCC2)nc(N2CCOCC2)n1"
+            ],
+            "source_smiles": [
+                "COc1nc(OCC(=N)NO)nc(N2CCOCC2)n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.35617590057310133
+            ],
+            "tgt_property": [
+                0.8460371089298095
+            ],
+            "improvement": [
+                0.4898612083567082
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.46153846153846156
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_89",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central bicyclic urea core (two fused carbonyl groups) with a benzyl-substituted nitrogen and a propenylamine chain (C=CCN) terminating in a carbamate group (NC(=O)O). The structure includes two aromatic benzyl rings and multiple hydrogen bond acceptors/donors.\",\n    \"Property Analysis\": \"QED is limited by high molecular weight (due to two benzyl rings), elevated logP (from hydrophobic benzyl groups and propenyl chai"
+            ],
+            "pred_smiles": [
+                "CC(NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O)c1ccccc1"
+            ],
+            "source_smiles": [
+                "C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5113439766264558
+            ],
+            "tgt_property": [
+                0.6085120570586842
+            ],
+            "improvement": [
+                0.09716808043222835
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3409090909090909
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_90",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C-N) linked to a thioether (C-S) and a pyrrole ring (Sc1ncccn1). The other side of the amide is connected to a sulfonamide-substituted benzene ring (N2CCCCC2, likely piperidine, is the sulfonamide's nitrogen).\",\n    \"Property Analysis\": \"The pyrrole ring (Sc1ncccn1) contributes to high aromaticity and potential metabolic instability. The thioether (C-S) may increase lipophilicity (logP), reduci"
+            ],
+            "pred_smiles": [
+                "O=C(NCCN1CCNCC1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1"
+            ],
+            "source_smiles": [
+                "O=C(CSc1ncccn1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5993642127958028
+            ],
+            "tgt_property": [
+                0.6650956817217475
+            ],
+            "improvement": [
+                0.06573146892594472
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4666666666666667
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_91",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (S(=O)(=O)) attached to a benzene ring, a methyl group (CN) on the sulfonamide nitrogen, and a propenoyl chain (C=CC(=O)) terminating in a nitrooxy group (NO). The nitrooxy group is a potential liability due to metabolic instability and poor drug-likeness.\",\n    \"Property Analysis\": \"The nitrooxy group (NO) contributes to high molecular weight, increases hydrogen bond acceptors (HBA = 6), and may re"
+            ],
+            "pred_smiles": [
+                "CN(c1ccc(C=CC(=O)O)cc1)S(=O)(=O)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CN(c1ccc(C=CC(=O)NO)cc1)S(=O)(=O)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.49819319056799355
+            ],
+            "tgt_property": [
+                0.8602367842653698
+            ],
+            "improvement": [
+                0.3620435936973762
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_92",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring with two methoxy groups (OCH3) and a carbonyl-linked aniline group. The aniline is attached to a bicyclic system: a pyrrole ring (C1=CC=CN1) fused to a benzene ring. The pyrrole nitrogen has an NH group.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The pyrrole NH and aniline NH contribute to high hydrogen bonding,"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C(=O)Nc2ccccc2)cc1OC"
+            ],
+            "source_smiles": [
+                "COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3[nH]2)cc1OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5530818982768774
+            ],
+            "tgt_property": [
+                0.9156095373023166
+            ],
+            "improvement": [
+                0.3625276390254393
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.35555555555555557
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_93",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole ring (CSc1nccc...n1) linked to a propargyl group (C#C) and a substituted benzene ring. The benzene ring has an ethyl side chain with a secondary amide (NC(C)=O) and an isopropyl group.\",\n    \"Property Analysis\": \"The secondary amide (NC(C)=O) contributes to hydrogen bond donors (HBD=1) and may increase polarity, potentially reducing membrane permeability. The thiazole ring and propargyl group introduce rigid"
+            ],
+            "pred_smiles": [
+                "CSc1nccc(C#Cc2ccc(CC(C)CC(C)C)cc2)n1"
+            ],
+            "source_smiles": [
+                "CSc1nccc(C#Cc2ccc(CC(C)NC(C)=O)cc2)n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5333484076347671
+            ],
+            "tgt_property": [
+                0.44771532478142717
+            ],
+            "improvement": [
+                -0.08563308285333993
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_94",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thioamide group (-NC(=S)N-) linking two aromatic rings. One ring is a benzofuran (from SMILES 'c1ccco1'), and the other is a nitro-substituted benzene ring ([N+](=O)[O-]).\",\n    \"Property Analysis\": \"The nitro group ([N+](=O)[O-]) introduces high polarity, metabolic instability, and potential toxicity, which negatively impacts QED (drug-likeness). Nitro groups are generally undesirable in drug candidates due "
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C(=O)NC(=S)NCc2ccco2)cc1"
+            ],
+            "source_smiles": [
+                "O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5091443000183308
+            ],
+            "tgt_property": [
+                0.843875355077391
+            ],
+            "improvement": [
+                0.3347310550590602
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_95",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a methyl group, a urea-linked propenyl chain, and a nitro-substituted benzene ring. The urea groups (NC(=O)) and conjugated carbonyl system (C=O) contribute to polarity and hydrogen bonding.\",\n    \"Property Analysis\": \"The nitro group ([N+](=O)[O-]) introduces high polarity, metabolic instability, and potential toxicity, negatively impacting QED. The molecule has moderate hydroph"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(NC(=O)C(=O)Nc2ccccc2)cc1"
+            ],
+            "source_smiles": [
+                "Cc1ccc(NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)NC(=O)c2ccccc2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3649416710043509
+            ],
+            "tgt_property": [
+                0.8091258010174158
+            ],
+            "improvement": [
+                0.44418413001306495
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.48484848484848486
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_96",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring (c1nc(C#Cc2cnc(...)cs1) with a methyl group, a thioether-linked tert-butyl group (S-C(C)(C)C), and an alkyne-linked pyrimidine-thiol substituent. The structure is planar with potential rigidity from the alkyne and aromatic rings.\",\n    \"Property Analysis\": \"QED is limited by high molecular weight (due to the bulky tert-butyl group), elevated logP (from hydrophobic tert-butyl and alkyne), and l"
+            ],
+            "pred_smiles": [
+                "CC(Nc1nccc(C#Cc2cnc(SC(C)(C)C)nc2)n1)c1ccncc1"
+            ],
+            "source_smiles": [
+                "Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.45717437998645283
+            ],
+            "tgt_property": [
+                0.40772642885365906
+            ],
+            "improvement": [
+                -0.049447951132793766
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3695652173913043
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_97",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central carbon chain with two nitrooxy (O-NO) groups and a hexyl linker connecting to a bicyclic indole-like system (two fused pyrrole rings). The structure has high aromaticity and polar nitrooxy groups.\",\n    \"Property Analysis\": \"The nitrooxy groups contribute to poor QED due to high polarity, metabolic instability, and potential toxicity. The long aliphatic chain (hexyl) increases logP, reducing solubility.\",\n   "
+            ],
+            "pred_smiles": [
+                "CCCCCN1CCCCC1c1c[nH]c2ccccc12"
+            ],
+            "source_smiles": [
+                "O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.19301864298402924
+            ],
+            "tgt_property": [
+                0.7667454500849686
+            ],
+            "improvement": [
+                0.5737268071009394
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.40540540540540543
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_98",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with an ester group (CCCCOC(=O)) and an amide-linked side chain (NC(=O)C2(c3cccs3)CCOCC2). The side chain includes a thiophene ring (c3cccs3) and a morpholine-like oxygen-containing ring (CCOCC2).\",\n    \"Property Analysis\": \"The thiophene ring (c3cccs3) contributes to high lipophilicity (logP), which negatively impacts QED. The morpholine-like ring (CCOCC2) introduces a polar oxygen a"
+            ],
+            "pred_smiles": [
+                "CCCCOC(=O)c1ccc(NC(=O)C2(Cc3ccccc3F)CCOCC2)cc1"
+            ],
+            "source_smiles": [
+                "CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.5651607423762082
+            ],
+            "tgt_property": [
+                0.5005675552818896
+            ],
+            "improvement": [
+                -0.0645931870943186
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5106382978723404
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_qed_99",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group (-NO), a conjugated α,β-unsaturated ketone (O=C-C=C), and a benzannulated aromatic system (naphthalene-like core with a pyrrole ring). The nitro group and conjugated ketone may contribute to poor drug-likeness.\",\n    \"Property Analysis\": \"The nitro group (-NO) is a known liability for QED due to potential toxicity and metabolic instability. The conjugated α,β-unsaturated ketone could also reduce QED by in"
+            ],
+            "pred_smiles": [
+                "CSCCC(=O)c1ccc(C(=O)c2ccc3ccccc3n2)cc1"
+            ],
+            "source_smiles": [
+                "O=C(C=Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1)NO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.3353547564164938
+            ],
+            "tgt_property": [
+                0.6264118047472226
+            ],
+            "improvement": [
+                0.29105704833072876
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        }
+    ]
+}

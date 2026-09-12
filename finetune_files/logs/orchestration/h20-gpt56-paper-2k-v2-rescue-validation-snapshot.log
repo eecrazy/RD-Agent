@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_validation_sweep.py", line 1671, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_validation_sweep.py", line 1595, in main
+    candidates = {
+                 ^
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_validation_sweep.py", line 1597, in <dictcomp>
+    discover_candidates(
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_validation_sweep.py", line 522, in discover_candidates
+    formal_records = _formal_training_records(target)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_validation_sweep.py", line 426, in _formal_training_records
+    raise RuntimeError(f"{target.experiment_id}: task status does not match the formal method lock")
+RuntimeError: main/tablebench_data_analysis/run-1: task status does not match the formal method lock

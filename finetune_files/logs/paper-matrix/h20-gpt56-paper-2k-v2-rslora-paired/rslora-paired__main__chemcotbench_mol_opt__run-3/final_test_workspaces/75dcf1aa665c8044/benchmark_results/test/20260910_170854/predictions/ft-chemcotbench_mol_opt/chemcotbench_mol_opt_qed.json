@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCl)Nc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diaryl urea, a difluorophenyl ring, a tertiary piperazine, and a hydroxyethyl substituent bearing a nitrogen-linked diazole. The urea, piperazine, and alcohol provide hydrogen-bonding capacity, while the fluorinated aryl group contributes lipophilicity.\n\n2. The demonstrated modification replaces the N-linked diazole with a methyl group, converting the hydroxyethyl side chain into a methoxyethyl side chain. The urea, piperazine, difluorophenyl ring, and central diaryl scaffold are retained.\n\n3. Removing the diazole reduces heteroatom count, molecular weight, and polar surface area. The methoxy group preserves one hydrogen-bond acceptor and may alter lipophilicity and metabolic susceptibility, although the net effect on lipophilicity is not unambiguous from structure alone.\n\n4. This substitution could produce a more balanced QED-relevant property profile by lowering heteroatom burden and increasing side-chain flexibility, but improved QED or biological activity cannot be concluded without calculated or experimental data.\n}\n{\"Final Target Molecule\":\"COCCN1CCN(CC(=O)Nc2ccc(N3CCN(CC(C)Cl)cc3)cc2)CC1\"}",
+        "gold": "O=C(CCl)Nc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(Sc1ncccn1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a thioether-linked amide, a sulfur-containing five-membered heteroaromatic ring, and a fused benzyl-substituted diazine; it does not contain a piperazine ring.\n\n2. The amide and heteroaromatic nitrogens provide hydrogen-bonding capacity, while the thioether and fused aromatic system contribute hydrophobic character. The sulfur-containing heteroaromatic ring may also present a potential electrophilic or metabolic liability.\n\n3. The demonstrated modification replaces the sulfur-containing five-membered heteroaromatic ring with a sulfur-containing six-membered thiazole while retaining the thioether-linked amide and fused benzyl-diazine portions.\n\n4. This substitution changes ring size, heteroatom placement, polarity, and aromatic electronics. It could improve the balance of lipophilicity, hydrogen bonding, and structural-alert burden relevant to QED, although improved QED or biological activity cannot be inferred without calculation and testing.\n}\n{\"Final Target Molecule\":\"CC(Sc1ncs1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1.\"}",
+        "gold": "CC(Sc1ncccn1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a para-substituted phenyl ring, a chlorinated fused lactam-containing bicyclic group, and an N-linked acetyl oxime. The oxime contributes hydrogen-bond donors and acceptors and may introduce metabolic or configurational liabilities.\n\n2. The demonstrated modification replaces the aryl acetyl oxime with a methyl ester while retaining the phenyl ring and chlorinated bicyclic lactam framework.\n\n3. This change removes the oxime N–O functionality and reduces hydrogen-bond donor count, which could lower polarity and improve the balance of lipophilicity and molecular complexity relevant to QED.\n\n4. The methyl ester remains susceptible to hydrolysis and may introduce ester-specific metabolic pathways, so improved QED or biological activity cannot be assumed without calculation and experimental testing.\n{\"Final Target Molecule\": \"CCOC(=O)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1.\"}",
+        "gold": "CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a para-disubstituted aniline bearing a sulfonamide and a diazine ring, plus a para-cyanophenyl substituent with a thiophene-linked amide. The sulfonamide, amide, and ring nitrogens provide hydrogen-bonding capacity, while the aromatic rings and thiophene contribute hydrophobic character.\n\n2. The demonstrated modification replaces the thiophene-containing amide substituent with a directly attached pyridyl ring. This removes the amide carbonyl and methylene spacer, changes the attachment geometry, and introduces a pyridine nitrogen as a hydrogen-bond acceptor.\n\n3. Removing the amide eliminates one carbonyl and one hydrogen-bond donor, which may reduce polarity and alter permeability-related properties. The pyridyl group retains a heteroaromatic nitrogen and preserves an aromatic surface, although its effect on lipophilicity, solubility, and overall QED would require calculation or experimental assessment.\n\n4. The sulfonamide, diazine, and cyano-substituted aniline framework is retained; therefore, the proposed structure does not actually replace the sulfonamide with a pyridine or remove the cyano group. The substitution is chemically plausible as a way to simplify the amide region, but improved QED or biological activity cannot be inferred without calculated or measured data.\n}\n{\"Final Target Molecule\":\"N#Cc1ccc(-c2ccnc(Nc3ccc(S(N)(=O)=O)cc3)n2)cc1\"}",
+        "gold": "NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1c(Cc2cccc([N+](=O)[O-])c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused oxygen-containing aromatic core, a methyl substituent, a nitro-substituted benzyl group, and an N-methyl carboxamide. The nitro group adds molecular weight, polarity, and potential metabolic or toxicological liability.\n\n2. The demonstrated modification replaces the benzyl-ring nitro substituent with a hydroxyl group while retaining the remaining scaffold and substitution pattern.\n\n3. This exchange removes the nitro functionality and lowers molecular weight, while the hydroxyl preserves hydrogen-bonding capacity and may improve aqueous compatibility. It also changes the substituent’s electronics and lipophilicity.\n\n4. These changes are chemically plausible for improving the balance of QED-relevant descriptors, although the net QED effect, metabolic stability, and biological activity would require calculation or experimental confirmation.\n{\"Final Target Molecule\": \"Cc1c(Cc2cccc(O)c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12.\"}",
+        "gold": "Cc1c(Cc2cccc([N+](=O)[O-])c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C.\n"
+            }
+        ],
+        "prediction": "1. The source contains a para-disubstituted phenyl ring bearing an ethoxy group, a sulfonamide, and a methyl-substituted diazole; the heteroaromatic ring is pyridine-like rather than pyrrole.\n\n2. The sulfonamide contributes two hydrogen-bond donors and two strong acceptors, increasing polarity and hydrogen-bonding capacity. The ethoxy group adds one donor and one acceptor, while the methyl-diazole contributes aromatic character and limited polarity.\n\n3. The demonstrated modification replaces the sulfonamide with a primary amine while retaining the ethoxyphenyl, sulfonamide-linked phenyl, and methyl-diazole framework.\n\n4. Removing the sulfonamide eliminates two strong hydrogen-bond acceptors and reduces polar surface area, which could favor permeability and overall QED balance. However, the primary amine remains polar and may be protonated, so improved QED or activity cannot be assumed without calculation or testing.\n}\n{\"Final Target Molecule\":\"CCOc1ccccc1Nc1cc(-c2cnc(C3CC3)o2)ccc1C.\"}",
+        "gold": "CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO.\n"
+            }
+        ],
+        "prediction": "1. The source contains a substituted piperidine bearing an N-methyl group, an amide-linked phenyl ring, and a terminal alkynyl phenyl group. Its amide and hydroxamic acid-like C(=O)NO functionality contribute multiple hydrogen-bonding sites and substantial polarity.\n\n2. The demonstrated modification replaces the N-methyl substituent with a para-methoxyphenyl group while retaining the piperidine, amide, and terminal alkynyl phenyl features. This increases aromatic surface area and removes the N-methyl contribution to lipophilicity and hydrogen bonding.\n\n3. The added aryl ring may improve hydrophobicity and aromatic character, but it also increases molecular size and rigidity. The methoxy group adds one hydrogen-bond acceptor and may moderate the added lipophilicity, although its effect on QED cannot be inferred independently of the full molecular descriptor balance.\n\n4. The modification is chemically plausible as a strategy to rebalance polarity and hydrophobicity, but the retained amide and C(=O)NO functionality remain important contributors to molecular weight, hydrogen bonding, and overall drug-likeness. Any QED improvement would require explicit calculation rather than being assumed.\n}",
+        "gold": "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diaryl amide scaffold with fluorinated pyridine and trifluoromethyl isoxazole rings. The amide, pyridine nitrogen, and isoxazole oxygens provide hydrogen-bonding functionality, while the fluorinated aromatic groups contribute lipophilicity.\n\n2. The trifluoromethyl substituent adds substantial hydrophobic surface area and may increase lipophilicity, which can be unfavorable for solubility-related components of QED. However, the isoxazole oxygen partially offsets this effect through hydrogen-bond acceptance.\n\n3. The demonstrated modification replaces the trifluoromethyl group with a methyl group while retaining the amide, fluoropyridine, and isoxazole framework. This lowers molecular weight and removes the CF3-associated lipophilicity burden without eliminating the isoxazole oxygen.\n\n4. The change is chemically plausible as a QED-oriented simplification, but improved QED or biological activity cannot be inferred without calculated descriptors and experimental testing.\n}\n{\"Final Target Molecule\":\"CC1c(-c2noc(NC(=O)c3cccnc3F)nn2)ccn1\"}",
+        "gold": "O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc2c(CSCCBr)cc(=O)oc2c1.\n"
+            }
+        ],
+        "prediction": "1. The source is a methyl-substituted coumarin-like fused lactone bearing a brominated thioether side chain, –CH₂–S–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH₂–CH",
+        "gold": "COc1ccc2c(CSCCBr)cc(=O)oc2c1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a conjugated enone-like alkene, two phenyl rings, and a carboxylic acid. Its multiple aromatic rings and alkene create a relatively rigid, hydrophobic scaffold, while the acid may limit passive permeability.\n\n2. The demonstrated modification replaces the terminal phenyl ring of the carboxamide side chain with a methoxy-substituted pyridine, leaving the remaining scaffold unchanged.\n\n3. This substitution removes one phenyl ring and introduces a ring nitrogen plus an ether oxygen, increasing heteroatom content and potentially improving aqueous compatibility. The pyridine nitrogen may also provide a weakly basic center, although protonation will depend on its actual basicity and the ionization state of the carboxylic acid.\n\n4. The change is chemically plausible as a QED-oriented design because it reduces aromatic hydrophobic surface and increases polarity. However, the conjugated alkene remains, and any net QED or biological benefit would require explicit calculation and experimental validation.\n}\n{\"Final Target Molecule\":\"COc1ccncc1NC(=O)C(Cc1ccccc1)C(=O)NC(C=CC(=O)O)C(=O)O\"}",
+        "gold": "O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-].\n"
+            }
+        ],
+        "prediction": "1. The source is a nitro-substituted, trimethoxybenzoyl alkene bearing a para-methoxyphenyl group. Its multiple aromatic rings and nitro group create a relatively rigid, hydrophobic scaffold with several hydrogen-bond acceptors.\n\n2. The demonstrated modification replaces the para-methoxyphenyl ring with a pyridyl ring while retaining the nitro, trimethoxybenzoyl, and alkene-containing core.\n\n3. Introducing pyridine adds a ring nitrogen hydrogen-bond acceptor and increases the heteroaromatic character of the substituent. This may improve polarity and reduce the dominance of the aromatic surface, although the pyridine nitrogen is not expected to be strongly basic.\n\n4. The change is chemically plausible as a QED-oriented adjustment because it reduces aromatic rigidity and increases heteroatom content. However, the nitro group and three methoxy groups remain, and any QED or biological benefit would require explicit calculation and experimental validation.\n}\n{\"Final Target Molecule\":\"COc1ccc(C=C(C)C(=O)c2cc(-c3ccncc3)c(OC)c(OC)c2)cc1[N+](=O)[O-].\"}",
+        "gold": "COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2cccc(OC(=O)c3ccco3)c2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxyphenyl amide linked to a substituted anilide, with a furan-2-carboxylate substituent on the second phenyl ring.\n\n2. The furan carboxylate adds a carbonyl, an ether oxygen, and a furan oxygen, increasing hydrogen-bond-acceptor count and polar surface area. It may also introduce a hydrolytically or metabolically labile ester, although this is not established by the supplied evidence.\n\n3. The demonstrated modification replaces the furan carboxylate with a methyl group while retaining the amide linkage and the methoxyphenyl–anilide core.\n\n4. This change lowers molecular weight and polarity and removes the ester liability, which could favor QED-related descriptors. However, it also removes potential polar interactions and may increase lipophilicity, so improved drug-likeness or activity cannot be assumed without calculated or experimental data.\n{\"Final Target Molecule\": \"COc1ccc(C(=O)Nc2cccc(C)c2)cc1.\"}",
+        "gold": "COc1ccc(C(=O)Nc2cccc(OC(=O)c3ccco3)c2)cc1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diaryl amide, a sulfonamide, and a nitro substituent. The nitro group adds molecular weight, polarity, and hydrogen-bond-acceptor capacity and may introduce metabolic or toxicological liabilities.\n\n2. The demonstrated modification replaces the aryl nitro group with a hydroxyl group while retaining the amide, sulfonamide, and overall aromatic scaffold.\n\n3. This substitution lowers molecular weight and polarity and removes the nitro-associated structural alert. The phenol remains a hydrogen-bond donor and acceptor and may support conjugation-dependent metabolism.\n\n4. The change is chemically plausible as a QED-oriented adjustment, although its net effect on lipophilicity, solubility, metabolism, and overall drug-likeness would require calculation or experimental assessment.\n{\"Final Target Molecule\": \"O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc(O)c1.\"}",
+        "gold": "O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitro-substituted benzamide linked through an acetamide to a tetrahydrofuran-containing side chain. The nitro group adds polarity and is a potential structural-alert site, while the amide groups provide hydrogen-bonding capacity.\n\n2. The demonstrated modification replaces the aromatic nitro substituent with a hydroxyl group while retaining the benzamide, acetamide, and tetrahydrofuran framework.\n\n3. This exchange removes the nitro functionality and lowers molecular weight, while the phenol preserves hydrogen-bond donation and may improve aqueous compatibility. It also changes the ring from electron-poor to electron-rich, which could affect lipophilicity and metabolic behavior.\n\n4. The change is chemically plausible as a QED-oriented design choice, but improved QED, solubility, metabolic stability, or biological activity cannot be inferred without calculated or experimental data.\n}\n{\"Final Target Molecule\":\"O=C(NCC1CCCO1)C(=Cc1cccc(O)c1)NC(=O)c1ccccc1.\"}",
+        "gold": "O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methyl-substituted cyclohexanecarboxamide, a benzyl ester, and a benzylsulfone; it does not contain a piperidine ring. The amide, ester, and sulfone provide multiple hydrogen-bonding sites and substantial polarity.\n\n2. The demonstrated modification replaces the methylcyclohexanecarboxamide region with a methyl-substituted pyrrolidine carboxamide while retaining the benzyl ester and benzylsulfone motifs.\n\n3. This change reduces saturated-ring size and introduces a pyrrolidine nitrogen that can be protonated under physiological conditions. It may therefore alter ionization, lipophilicity, hydrogen-bonding balance, and overall molecular complexity in a direction potentially favorable to QED.\n\n4. The modification is chemically plausible, but QED is a composite metric; improved drug-likeness, solubility, permeability, or activity cannot be inferred without calculated or experimental property data.\n{\"Final Target Molecule\": \"CN1CC(C(=O)N(COC(=O)c2ccccc2)C2S(=O)(=O)c2ccccc2)C1\"}",
+        "gold": "CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)CN1C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a cyclic imide-like core bearing a carboxymethyl group and a nitro-substituted phenyl ring. The nitro group adds two hydrogen-bond acceptors and substantial polarity, which can affect permeability and the balance of QED descriptors.\n\n2. The demonstrated modification replaces the aryl nitro substituent with a hydroxyl group while retaining the core scaffold, carboxymethyl group, and phenyl attachment.\n\n3. This substitution removes the nitro functionality and lowers molecular weight and polar surface area, while preserving a hydrogen-bond donor and a relatively polar aryl substituent. It may also avoid liabilities commonly associated with aromatic nitro compounds.\n\n4. The change is chemically plausible as a QED-oriented design choice, but improved QED, metabolic stability, safety, or biological activity cannot be concluded without calculated or experimental data.\n}\n{\"Final Target Molecule\":\"O=C(O)CN1C(=O)SC(=Cc2cccc(O)c2)C1=O.\"}",
+        "gold": "O=C(O)CN1C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(N)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-].\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitro-substituted aniline linked through an exocyclic alkene to a tetra-O-methylphenyl ring. Its multiple aromatic rings and methoxy groups create a relatively lipophilic, electron-deficient scaffold.\n\n2. The demonstrated modification replaces the aryl nitro substituent with a hydroxyl group while retaining the aniline, alkene, and tetra-O-methylphenyl framework.\n\n3. This exchange removes the nitro functionality and lowers molecular weight, while the phenol adds a hydrogen-bond donor and may improve aqueous compatibility. It also changes the ring’s electronic character and polarizability, which can affect permeability and overall QED balance.\n\n4. The modification is chemically plausible as a scaffold simplification, but improved QED or biological activity cannot be inferred without calculated descriptors and experimental testing.\n}\n{\"Final Target Molecule\":\"COc1cc(O)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1\"}",
+        "gold": "COc1cc(N)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cn(C2CC(NC(=O)CC(=O)O)C(CO)O2)c(=O)[nH]c1=O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methyl-substituted pyrimidinedione core linked to a hydroxylated five-membered cyclic amide, with a carboxylic acid substituent on the ring nitrogen.\n\n2. The carboxylic acid adds a hydrogen-bond donor/acceptor, polarity, and ionization potential, which can affect permeability and the balance of physicochemical descriptors contributing to QED.\n\n3. The demonstrated modification replaces the cyclic carboxamide substituent with a methyl group while retaining the pyrimidinedione core and hydroxylated cyclic amide framework.\n\n4. Removing the carboxylic acid may reduce ionization and polarity and improve the QED descriptor balance, although the actual QED change, permeability, and biological activity would require calculation or experimental assessment.\n}\n{\"Final Target Molecule\":\"Cc1cn(C)C(=O)[nH]c1=O\"}",
+        "gold": "Cc1cn(C2CC(NC(=O)CC(=O)O)C(CO)O2)c(=O)[nH]c1=O"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1cnc(-c2ccc(-c3ccccc3CSc3ccncn3)cc2F)cn1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fluorophenyl–thioether–pyridine core bearing a pyridylamino substituent. The sulfur-containing side chain is a thioether-linked pyridine, not a thiazole.\n\n2. The pyridylamino group adds a hydrogen-bond acceptor and a rotatable bond, increasing polarity and conformational flexibility. These features can influence permeability and the balance of descriptors contributing to QED, although their net effect cannot be inferred from structure alone.\n\n3. The demonstrated modification replaces the pyridylamino substituent with a directly attached pyridyl ring, removing the exocyclic amine and the intervening methylene–sulfur linkage while retaining the fluorophenyl–thioether core.\n\n4. This change plausibly reduces flexibility and removes an amine hydrogen-bond donor, while preserving a heteroaromatic nitrogen acceptor. It may also alter lipophilicity, ionization, and metabolic behavior, but improved QED or biological activity would require calculation and experimental validation.\n}\n{\"Final Target Molecule\":\"Fc1ccc(SCc2ccncn2)cc1-c1cccs1\"}",
+        "gold": "Nc1cnc(-c2ccc(-c3ccccc3CSc3ccncn3)cc2F)cn1"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)C(=N)N.\n"
+            }
+        ],
+        "prediction": "1. The source contains a tertiary amide, a para-sulfonamide phenyl ring, and a guanidine-like substituent on the central carbon. The guanidine group is strongly basic and highly polar, while the sulfonamide adds two hydrogen-bond acceptors and substantial polarity.\n\n2. The demonstrated modification replaces the guanidine-like substituent with a methyl group, converting the tertiary amide into a secondary amide. The aryl sulfonamide and amide linkage are retained; no sulfonamide-to-sulfone substitution is present in the optimized structure.\n\n3. Removing the guanidine eliminates a strongly basic, highly polar functionality and reduces hydrogen-bond donor/acceptor burden. This may improve the balance of polarity, lipophilicity, and molecular complexity relevant to QED, although the resulting amide remains polar.\n\n4. The change is chemically plausible as a drug-likeness-oriented simplification, but improved QED or biological activity cannot be inferred without calculated descriptors and experimental testing.\n}\n{\"Final Target Molecule\":\"CS(=O)(=O)Nc1ccc(C(=O)NC(C)C)cc1\"}",
+        "gold": "CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)C(=N)N"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(COC(=O)c1ccccc1)Nc1ccc(Cl)cc1C(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diaryl amide bearing a chlorophenyl group and a benzoyl substituent, with a benzoate ester attached through a methylene group. The ester and amide provide hydrogen-bonding capacity, while the aromatic rings and chlorine contribute hydrophobic character.\n\n2. The demonstrated modification removes the entire benzoate ester substituent, including its methylene linkage, and replaces it with a methyl group. The diaryl amide and chlorophenyl benzamide framework are retained.\n\n3. Removing the ester eliminates one carbonyl and two oxygen atoms, lowers molecular weight and hydrogen-bonding capacity, and reduces the number of potentially labile or hydrolysis-prone ester functionalities. These changes could favor permeability and overall QED balance, although the effect on lipophilicity is not unambiguous.\n\n4. The modification is chemically plausible as a simplification strategy, but it also removes a potentially useful ester-derived functionality. Any QED improvement should therefore be calculated rather than assumed, and the retained diaryl amide and chlorophenyl group may still influence solubility, metabolism, and safety.\n}\n{\"Final Target Molecule\":\"Cc1ccc(C(=O)Nc2ccc(Cl)cc2C(=O)c2ccccc2)cc1\"}",
+        "gold": "O=C(COC(=O)c1ccccc1)Nc1ccc(Cl)cc1C(=O)c1ccccc1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a tertiary amine linked through a propyl chain to a phenyl ring, plus a chlorophenyl sulfone and a chlorophenoxy substituent. The tertiary amine may be protonated under physiological conditions, while the sulfone and ether provide hydrogen-bond acceptors.\n\n2. The demonstrated modification replaces the chlorophenoxy group with a directly attached chlorophenyl group, removing the ether oxygen and shortening the linker from two methylene units to one. The amine, propyl chain, sulfone, and original chlorophenyl region are retained.\n\n3. Removing the ether oxygen reduces hydrogen-bond-acceptor capacity and polarity, which could favor passive membrane permeability. However, it also removes a potentially useful polar interaction site, and the shorter linker may alter conformational flexibility.\n\n4. This substitution is chemically plausible as a QED-oriented trade-off between lipophilicity, polarity, and molecular size, but improved QED or biological activity cannot be inferred without calculated descriptors and experimental testing.\n}\n{\"Final Target Molecule\":\"CC(CCCNc1ccccc1)N(c1cc(Cl)ccccc1S(=O)(=O)c1ccc(Cl)cc1)\"}",
+        "gold": "CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3ncccn3)CC1O2.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused oxygen-containing aromatic ketone scaffold, a hydroxyl group, a branched alkyl substituent, and a thioether-linked diazine ring.\n\n2. The diazine nitrogen is aromatic and therefore not expected to be strongly basic. Its contribution to QED is more likely through polarity, hydrogen-bond-acceptor capacity, and molecular weight rather than through a readily protonated center.\n\n3. The demonstrated modification replaces the thioether-linked diazine with a thioether-linked pyrrolidine, while retaining the remaining scaffold and substituents.\n\n4. This change removes one aromatic ring and introduces a saturated, potentially protonatable amine. It could improve aqueous compatibility and reduce aromaticity-related liabilities, but the added basicity, molecular size, and sulfur-containing side chain may offset those benefits, so improved QED is chemically plausible but not established.\n{\"Final Target Molecule\": \"Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3cccn3)CC1O2.\"}",
+        "gold": "Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3ncccn3)CC1O2"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO.\n"
+            }
+        ],
+        "prediction": "1. The source contains a substituted piperidine bearing an N-methyl group, an amide-linked phenyl ring, and a terminal alkynyl phenyl group. Its amide and hydroxamic acid-like C(=O)NO functionality contribute multiple hydrogen-bonding sites and substantial polarity.\n\n2. The demonstrated modification replaces the N-methyl substituent with a para-methoxyphenyl group while retaining the piperidine, amide, and terminal alkynyl phenyl features. This increases aromatic surface area and removes the N-methyl contribution to lipophilicity and hydrogen bonding.\n\n3. The added aryl ring may improve hydrophobicity and aromatic character, but it also increases molecular size and rigidity. These changes could shift the balance of polarity, lipophilicity, flexibility, and molecular weight in a direction compatible with QED, although the net QED effect cannot be inferred without calculation.\n\n4. The terminal alkynyl phenyl group remains a potential electrophilic and metabolic liability. The modification is chemically plausible as an N-aryl substitution, but improved drug-likeness or activity is not established by the supplied evidence.\n}\n{\"Final Target Molecule\":\"COc1ccc(N2CCC(NC(=O)c3ccc(C#Cc4ccccc4)cc3)C2)cc1\"}",
+        "gold": "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a para-aminophenyl group linked through an exocyclic alkene to an amide, with a chlorophenyl ring as the amide’s other substituent.\n\n2. The amide and ring nitrogens provide hydrogen-bonding capacity, while the aromatic rings and chlorine contribute hydrophobic character. The alkene adds a potential site of oxidative metabolism.\n\n3. The demonstrated modification replaces the para-aminophenyl group with a pyridyl ring, retaining the exocyclic alkene–amide linkage and chlorophenyl substituent.\n\n4. Introducing pyridine nitrogen changes the ring’s hydrogen-bond-acceptor pattern and may alter ionization, polarity, and metabolic susceptibility. This is chemically plausible as a QED-oriented change, although improved QED or biological activity cannot be inferred without calculation or testing.\n}\n{\"Final Target Molecule\":\"O=C(C=Cc1ccccn1)Nc1cccc(Cl)c1\"}",
+        "gold": "Nc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl.\n"
+            }
+        ],
+        "prediction": "1. The source contains a dimethoxy-substituted phenyl ring linked through an exocyclic alkene to a pyridine ring, with a terminal nitrile and a chlorophenyl substituent on the terminal ring.\n\n2. The nitrile and chlorophenyl group contribute substantial aromatic and hydrophobic character, while the pyridine nitrogen provides a hydrogen-bond acceptor but no hydrogen-bond donor. The methoxy groups add polarity and hydrogen-bond-accepting capacity.\n\n3. The demonstrated modification replaces the pyridine nitrile with a primary amino group and changes the chlorine substituent from para to meta relative to the exocyclic alkene attachment. The remaining methoxy groups, alkene linker, and chlorophenyl group are retained.\n\n4. This substitution removes the nitrile-associated formal charge separation and introduces a hydrogen-bond donor, potentially improving polarity and aqueous behavior. However, the added amino group may also increase ionization and reduce passive permeability, so an overall QED improvement is chemically plausible but cannot be inferred without calculated or measured property data.\n}\n{\"Final Target Molecule\":\"COc1cc(C=C(CN)c2ccccn2)ccc1OCc1ccccc1Cl.\"}",
+        "gold": "COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC.\n"
+            }
+        ],
+        "prediction": "1. The source contains a dimethoxyphenyl benzamide linked to a second phenyl ring bearing a fused nitrogen-rich bicyclic heteroaromatic system.\n\n2. The fused heterocycle contributes multiple hydrogen-bond donors and acceptors, substantial polarity, and a rigid, planar aromatic framework. These features may limit aqueous solubility and increase the likelihood of nonspecific interactions.\n\n3. The demonstrated modification replaces the fused heteroaromatic substituent with a smaller, flexible amino alcohol side chain while retaining the dimethoxyphenyl benzamide and central phenyl scaffold.\n\n4. This substitution plausibly lowers aromatic planarity and hydrogen-bonding burden while adding a hydroxyl group that can support hydration. It may therefore favor QED-related descriptors such as polarity, flexibility, and molecular complexity, although improved QED or biological activity cannot be inferred without calculation or testing.\n}\n{\"Final Target Molecule\":\"COc1ccc(C(=O)Nc2ccc(C(CO)N)cc2)cc1OC.\"}",
+        "gold": "COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methyl-substituted oxygen-containing aromatic ring linked through an ether to a branched alcohol-bearing side chain. Its other aromatic ring is chlorophenyl and bears a ketone substituent.\n\n2. The ketone, chlorophenyl group, and branched alcohol contribute molecular weight, lipophilicity, and hydrogen-bond acceptor burden. These features can influence QED through their combined effect on molecular complexity and physicochemical properties.\n\n3. The demonstrated modification replaces the chlorophenyl ketone substituent with a directly attached pyridyl ring, while retaining the remaining scaffold unchanged.\n\n4. This substitution removes the ketone and chlorine, reduces substituent size, and introduces a ring nitrogen that may act as a hydrogen-bond acceptor. It is chemically plausible as a QED-oriented change, although the net QED effect and biological activity would require calculation and experimental validation.\n}\n{\"Final Target Molecule\":\"Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(-c2ccncc2)cc1.\"}",
+        "gold": "Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(NC(=O)CN2C(=O)SC(=Cc3ccc(-c4ccc(Cl)c(C(=O)O)c4)o3)C2=O)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methylphenyl amide, a cyclic sulfone imide, and a chlorophenyl ketone. Its multiple carbonyl and sulfonyl oxygens create a high hydrogen-bond-acceptor burden, while the aromatic rings and methyl group contribute lipophilicity.\n\n2. The demonstrated modification replaces the methylphenyl amide substituent with a cyclohexylmethyl group, removing one aromatic ring and the amide while retaining a secondary amine. The chlorophenyl ketone and cyclic sulfone imide framework are otherwise retained.\n\n3. Removing the aromatic ring may reduce hydrophobic surface area and molecular rigidity, while the secondary amine adds a hydrogen-bond donor and may improve aqueous compatibility. However, the added saturated ring also increases size and conformational flexibility.\n\n4. This change is chemically plausible as a QED-oriented trade-off, but the net effect on lipophilicity, polarity, solubility, and overall drug-likeness cannot be established without calculated or measured properties.\n{\"Final Target Molecule\": \"O=C1NC(=O)C(=Cc2ccc(-c3ccc(Cl)c(C(=O)O)c3)o2)S1CN1CCCCC1}",
+        "gold": "Cc1ccc(NC(=O)CN2C(=O)SC(=Cc3ccc(-c4ccc(Cl)c(C(=O)O)c4)o3)C2=O)cc1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing two cyanomethyl groups, a dimethylaminoethyl substituent, and a benzothiazolyl group. The heteroaromatic nitrogens, dimethylamino group, and cyanomethyl groups provide several hydrogen-bonding sites.\n\n2. The benzothiazolyl substituent adds aromatic surface area and a sulfur-containing heteroaromatic ring. This may increase lipophilicity and reduce aqueous solubility, although the actual effect on QED cannot be inferred from structure alone.\n\n3. The demonstrated modification replaces the benzothiazolyl group with a pyridyl group while retaining the fused core, dimethylaminoethyl chain, and both cyanomethyl substituents. This removes sulfur and changes the heteroaromatic ring geometry and electronics.\n\n4. A pyridyl group could provide a more conventional aromatic substituent and alter polarity and solubility in a direction that may favor QED. However, the change also removes sulfur-associated hydrogen-bond acceptors, so improved drug-likeness or activity is chemically plausible but not established by the supplied evidence.\n}\n{\"Final Target Molecule\":\"CN(C)CCCn1c(N)c(-c2ccncc2)c2nc(C#N)c(C#N)nc21.\"}",
+        "gold": "CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(=O)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a benzoic acid ring linked through an anilide to a second phenyl ring bearing a sulfonamide and a pyrrolidinyl group.\n\n2. The benzoic acid contributes two hydrogen-bond donors and a strong carboxylic acid, increasing polarity and potentially limiting passive membrane permeability. The sulfonamide and amide also provide substantial polarity and hydrogen-bonding capacity.\n\n3. The demonstrated modification replaces the benzoic acid substituent with a methyl group while retaining the anilide, diaryl sulfonamide, and pyrrolidine framework.\n\n4. Removing the carboxylic acid should reduce ionization and polarity and may improve the balance of QED-relevant descriptors. However, the remaining sulfonamide and amide groups still contribute hydrogen bonding, so improved QED or activity cannot be assumed without calculation or testing.\n{\"Final Target Molecule\": \"CS(=O)(=O)Nc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1}",
+        "gold": "CCC(=O)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCCCCCC(=O)Nc1ccccc1)NO.\n"
+            }
+        ],
+        "prediction": "1. The source contains a terminal hydroxamic acid motif, not a nitro group, attached to a phenyl ring through a two-carbon linker. This functionality adds hydrogen-bonding capacity and polarity and may introduce metabolic or metal-binding liabilities.\n\n2. The demonstrated modification replaces the phenyl-linked hydroxamic acid side chain with a three-carbon chain terminating in a primary amine, while retaining the phenyl ring and central linker.\n\n3. Removing the hydroxamic acid reduces heteroatom count and hydrogen-bonding complexity, which could favor permeability and overall QED balance. However, the primary amine remains polar and may be protonated under physiological conditions.\n\n4. The change is chemically plausible as a side-chain simplification, but improved QED or biological activity cannot be inferred without calculated descriptors and experimental testing.\n}\n{\"Final Target Molecule\":\"NCCCNCCc1ccccc1\"}",
+        "gold": "O=C(CCCCCCC(=O)Nc1ccccc1)NO"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cc([N+](=O)[O-])cn2C)CC1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-containing aromatic core, a carboxylic acid, a fluorine substituent, and a dimethylaminoethyl side chain. The carboxylic acid and basic tertiary amine create ionization potential, while the aromatic and heteroaromatic regions contribute lipophilicity and hydrogen-bonding capacity.\n\n2. The demonstrated modification replaces the dimethylaminoethyl substituent with a cyclopentyl group. This removes the basic tertiary amine and one methylene unit, lowers side-chain flexibility, and changes the balance of hydrophobic surface area and ionization.\n\n3. Removing the amine may reduce protonation and improve passive membrane permeability, although the carboxylic acid remains ionizable. The cyclopentyl group also increases hydrophobic character, so the net effect on lipophilicity is not unambiguous from structure alone.\n\n4. This substitution is chemically plausible as a QED-oriented change because it simplifies the side chain and reduces conformational flexibility, but improved QED or biological activity cannot be concluded without calculated descriptors and experimental testing.\n}\n{\"Final Target Molecule\":\"O=C(O)c1cnc2c(c1F)cc(-c1ccnc1C)c1ccn12\"}",
+        "gold": "CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cc([N+](=O)[O-])cn2C)CC1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C#CCCCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused oxygen-containing aromatic core bearing a tert-butyl group and an aryl ketone linked to a flexible terminal alkynyl chain.\n\n2. The alkynyl chain adds hydrophobicity and conformational flexibility, while the terminal alkyne may present a potential metabolic or reactivity liability. These features can influence QED through lipophilicity, molecular size, flexibility, and structural-alert components.\n\n3. The demonstrated modification replaces the terminal alkynyl chain with a methoxy-substituted phenyl ring, retaining the ketone and tert-butyl group while adding a second aromatic ring and an ether oxygen.\n\n4. This change plausibly increases aromatic character and hydrogen-bond-acceptor capacity, although the added phenyl ring also increases molecular size and hydrophobic surface area. Any net QED benefit therefore requires calculation rather than being assumed.\n{\"Final Target Molecule\": \"COc1ccccc1C(=O)c1cc2c(c(C(C)(C)C)c1)OCC2.\"}",
+        "gold": "C#CCCCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitrogen-rich five-membered heteroaromatic ring linked to a fluorophenyl group, a cyclopropyl substituent, and a hydroxylated amide side chain. The heteroaromatic nitrogens and amide provide hydrogen-bonding capacity, while the fluorophenyl ring contributes hydrophobic character.\n\n2. The demonstrated modification replaces the fluorine substituent on the phenyl ring with a methoxy group. The heteroaromatic core, cyclopropyl group, and hydroxylated amide side chain are retained; no piperidine replacement is present in the optimized structure.\n\n3. Removing fluorine may reduce local steric demand and alter the phenyl ring’s electronic and lipophilic properties. Methoxy can provide a different balance of hydrogen-bond acceptance and hydrophobic surface area, although it is not a direct fluorine-to-methoxy substitution.\n\n4. This change is chemically plausible as a QED-oriented adjustment because it preserves the overall scaffold while modifying a peripheral substituent. However, the net QED effect cannot be inferred without calculation, and methoxy does not inherently ensure improved metabolic stability or activity.\n}\n{\"Final Target Molecule\":\"COc1ccc(-c2cnc(NC(=O)COCNc3cc(N)ncn3)n2)cc1\"}",
+        "gold": "Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccccc1)N1CCN(Cc2ccc(C=Cc3ccccc3)cc2)CC1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a benzyl-substituted piperazine linked to a phenyl ring bearing a para-alkenyl biphenyl group. Its piperazine nitrogens are tertiary, so the molecule has no hydrogen-bond donor.\n\n2. The alkene-containing biphenyl region adds molecular size, aromatic surface area, and conformational flexibility, which can adversely affect the balance of polarity, lipophilicity, and structural complexity relevant to QED.\n\n3. The demonstrated modification removes the para-alkenyl biphenyl substituent and replaces it with a methyl group, while retaining the benzyl-piperazine–phenyl scaffold. This substantially reduces molecular size and aromatic complexity.\n\n4. The change is chemically plausible as a QED-oriented simplification, although the resulting methylphenyl group may increase lipophilicity and the piperazine remains nonionizable. Any net QED or biological benefit would require calculation and experimental validation.\n}\n{\"Final Target Molecule\":\"Cc1ccc(N2CCN(Cc3ccccc3)CC2)cc1\"}",
+        "gold": "O=C(Nc1ccccc1)N1CCN(Cc2ccc(C=Cc3ccccc3)cc2)CC1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)C=Cc1cn(Cc2ccc([N+](=O)[O-])cc2)c2ccccc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitro-substituted benzyl group attached to a fused benzothiazole-like heteroaromatic system, plus a conjugated carboxylate side chain.\n\n2. The nitro group adds two hydrogen-bond acceptors, polarity, and a potential structural-alert liability. These features can influence QED through molecular-weight, lipophilicity, and structural-alert components.\n\n3. The demonstrated modification replaces the benzyl-ring nitro substituent with a hydroxyl group while retaining the remaining scaffold and conjugated carboxylate side chain.\n\n4. This substitution removes the nitro functionality and lowers molecular weight and acceptor count while preserving a hydrogen-bond donor. It is chemically plausible as a QED-oriented change, although improved QED, safety, permeability, or activity would require calculation or experimental confirmation.\n}\n{\"Final Target Molecule\":\"O=C(O)C=Cc1cn(Cc2ccc(O)cc2)c2ccccc12.\"}",
+        "gold": "O=C(O)C=Cc1cn(Cc2ccc([N+](=O)[O-])cc2)c2ccccc12"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a cyclic carbamate-like core bearing a methyl ketoxime side chain and a para-methyl ketoxime substituent on the phenyl ring.\n\n2. The oxime-containing side chain adds molecular weight, hydrogen-bonding capacity, and polar functionality, which can influence permeability and the balance of physicochemical descriptors contributing to QED.\n\n3. The demonstrated modification replaces the para-methyl ketoxime substituent with a methyl group while retaining the core scaffold and para-methyl group.\n\n4. This simplification plausibly lowers molecular weight and polarity and removes the oxime-associated structural liability, although improved QED or biological activity cannot be concluded without calculated or experimental data.\n}\n{\"Final Target Molecule\":\"CC(=O)NCC1CN(c2ccc(C)cc2)C(=O)O1.\"}",
+        "gold": "CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1nc(OCC(=N)NO)nc(N2CCOCC2)n1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxy-substituted diazine core bearing an O-linked N-hydroxyformamidine-like substituent and a morpholine group.\n\n2. The N-hydroxyformamidine contributes multiple hydrogen-bonding sites and may introduce tautomeric or metabolic liabilities, while the morpholine nitrogen adds polarity and basicity.\n\n3. The demonstrated modification replaces the O-linked N-hydroxyformamidine with a directly attached N-methyl-N-(2-hydroxyethyl)amino group, removing the carbonyl and N-hydroxy functionality while retaining a terminal alcohol.\n\n4. This change plausibly reduces hydrogen-bond donor burden and polar surface area and removes a potentially reactive functionality, although the added alkyl chain may increase lipophilicity. These shifts could favor QED-related descriptors, but improved QED or biological activity is not established without calculation and testing.\n}\n{\"Final Target Molecule\":\"COc1nc(N(C)CCO)nc(N2CCOCC2)n1\"}",
+        "gold": "COc1nc(OCC(=N)NO)nc(N2CCOCC2)n1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a conjugated allylamino group, two amide carbonyls, a cyclic imide-like core, and two phenyl rings. Its extended conjugation and multiple carbonyl groups may influence polarity, flexibility, and metabolic behavior.\n\n2. The demonstrated modification replaces the allyl substituent with a methyl group while retaining the amino-amide linkage, cyclic core, and both phenyl rings.\n\n3. Removing the allyl group reduces unsaturation and eliminates a potential site for oxidative metabolism. The methyl group also changes steric profile, lipophilicity, and local electronic character, although it does not inherently increase solubility.\n\n4. This substitution is chemically plausible as a conservative simplification and may provide a more balanced QED-relevant property profile. However, improved QED, metabolic stability, safety, or activity cannot be concluded without calculated or experimental data.\n{\"Final Target Molecule\": \"Cc1ccccc1NC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O.\"}",
+        "gold": "C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CSc1ncccn1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a benzamide linked through a methylene thioether to a diazine ring, together with a sulfonamide bearing a cyclohexyl group. The amide, thioether, ring nitrogens, and sulfonamide provide several hydrogen-bonding sites.\n\n2. The demonstrated modification replaces the thioether-linked diazine with a directly attached pyridine ring, while retaining the benzamide and cyclohexylsulfonamide portions of the molecule.\n\n3. Removing the thioether eliminates a potential sulfur oxidation site and changes the substituent’s polarity, lipophilicity, and conformational preferences. The pyridine nitrogen preserves a hydrogen-bond acceptor and may alter the amide’s electronic environment.\n\n4. This substitution is chemically plausible as a QED-oriented change because it simplifies the side chain and removes the thioether, but improved QED, solubility, metabolic stability, or biological activity cannot be inferred without calculated or experimental data.\n}\n{\"Final Target Molecule\":\"O=C(Nc1ccc(-c2ccncc2)cc1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1.\"}",
+        "gold": "O=C(CSc1ncccn1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(c1ccc(C=CC(=O)NO)cc1)S(=O)(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diaryl sulfonamide bearing a methylamino group and a conjugated hydroxamic acid side chain. The sulfonamide and hydroxamic acid provide multiple hydrogen-bonding sites, while the aromatic rings and alkene contribute hydrophobic character.\n\n2. The conjugated hydroxamic acid may introduce electrophilic or metabolic liabilities and is not a conventional nitrooxy group. Its effect on QED cannot be inferred from polarity alone because QED integrates lipophilicity, hydrogen bonding, molecular size, flexibility, and structural alerts.\n\n3. The demonstrated modification replaces the entire conjugated hydroxamic acid side chain with a branched alkylamino substituent, while retaining the diaryl sulfonamide and methylamino groups. This removes the alkene and hydroxamic acid functionality and changes the side-chain geometry and hydrogen-bonding pattern.\n\n4. Removing the conjugated carbonyl and hydroxamic acid could reduce potential electrophilic liability and simplify the side chain. However, the added alkyl branching may increase hydrophobicity, and the new tertiary amine may alter ionization and solubility. Therefore, improved QED or biological activity is chemically plausible but cannot be concluded without calculated or experimental property data.\n}",
+        "gold": "CN(c1ccc(C=CC(=O)NO)cc1)S(=O)(=O)c1ccccc1"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3[nH]2)cc1OC.\n"
+            }
+        ],
+        "prediction": "1. The source contains a dimethoxyphenyl benzamide linked to a fused nitrogen-containing bicyclic heteroaromatic system, including an [nH] donor.\n\n2. The fused heterocycle adds molecular size, aromatic surface area, and hydrogen-bonding capacity, which can influence polarity, lipophilicity, and permeability. These changes may also affect the balance of descriptors contributing to QED.\n\n3. The demonstrated modification replaces the fused heterocycle with a smaller, nitrogen-rich five-membered aromatic heterocycle while retaining the dimethoxyphenyl benzamide framework.\n\n4. This substitution plausibly lowers molecular size and hydrophobic surface area while preserving heteroatom-based interactions. It may therefore favor QED-related property balance, although improved QED or biological activity cannot be concluded without calculation and testing.\n}\n{\"Final Target Molecule\":\"COc1ccc(C(=O)Nc2ccccc2-c2c[nH]nc2N)cc1OC.\"}",
+        "gold": "COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3[nH]2)cc1OC"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1nccc(C#Cc2ccc(CC(C)NC(C)=O)cc2)n1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diazine-like aromatic core bearing a methylthio group and an ethynyl-linked phenyl ring. Its phenyl substituent is an N-linked acetyl-protected amino group, not a piperidine ring.\n\n2. The acetyl group adds molecular weight, lipophilicity, and a potentially hydrolysis-prone ester. The amino group may support aqueous solubility, but the overall balance of polarity, lipophilicity, and structural complexity can affect QED.\n\n3. The demonstrated modification removes the acetyl-protected amino substituent and installs a primary carboxamide directly on the phenyl ring, while retaining the remaining scaffold unchanged.\n\n4. This change lowers molecular size and removes the ester liability, but the added amide carbonyl increases hydrogen-bond-acceptor character and may reduce passive permeability. It is chemically plausible as a QED-oriented adjustment, although improved QED or activity cannot be inferred without calculation or testing.\n}\n{\"Final Target Molecule\":\"CSc1nccc(C#Cc2ccc(NC(=O)C)cc2)n1\"}",
+        "gold": "CSc1nccc(C#Cc2ccc(CC(C)NC(C)=O)cc2)n1"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitro-substituted benzamide linked through a thioamide to a furfuryl group. The nitro group adds polarity and is a potential structural-alert liability, while the amide and thioamide provide hydrogen-bonding functionality.\n\n2. The demonstrated modification replaces the aryl nitro substituent with a hydroxyl group while retaining the benzamide, thioamide, and furan-containing side chain.\n\n3. This exchange removes the nitro functionality and lowers molecular weight, while the phenol preserves hydrogen-bond donation and may improve aqueous compatibility. It also changes the ring from electron-poor to electron-rich, which could affect lipophilicity and metabolic behavior.\n\n4. The substitution is chemically plausible as a QED-oriented change, but improved QED, solubility, metabolic stability, or biological activity cannot be inferred without calculated or experimental data.\n}\n{\"Final Target Molecule\":\"O=C(NC(=S)NCc1ccco1)c1ccc(O)cc1.\"}",
+        "gold": "O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)NC(=O)c2ccccc2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diaryl amide framework with a nitro-substituted benzoyl ring and an N-linked ethyl ketone. The nitro group adds molecular weight, polarity, and potential metabolic or toxicological liability.\n\n2. The demonstrated modification replaces the aryl nitro substituent with a hydroxyl group while retaining the diaryl amide and ethyl ketone motifs.\n\n3. This substitution lowers molecular weight and replaces the nitro group with a hydrogen-bond donor/acceptor. It may also reduce nitro-associated liabilities, although the phenol can introduce conjugative metabolism and is not necessarily less lipophilic.\n\n4. The change is chemically plausible as a QED-oriented adjustment, but improved QED, solubility, metabolic stability, or biological activity cannot be inferred without calculated or experimental data.\n{\"Final Target Molecule\": \"Cc1ccc(NC(=O)C(=Cc2ccc(O)cc2)NC(=O)c2ccccc2)cc1.\"}",
+        "gold": "Cc1ccc(NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)NC(=O)c2ccccc2)cc1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methyl-substituted thiazole linked through an ethynyl group to a nitrogen-rich five-membered heteroaromatic ring bearing a tert-butylthio substituent.\n\n2. The tert-butylthio group adds molecular size, lipophilicity, and a potentially oxidizable sulfur center. These features can influence permeability and metabolic stability, although their net effect on QED cannot be inferred from structure alone.\n\n3. The demonstrated modification replaces the tert-butylthio substituent with a methyl group while retaining the remaining scaffold unchanged.\n\n4. This substitution lowers molecular weight and hydrophobic burden and removes the sulfur-containing thioether. It is chemically plausible as a QED-oriented change, but improved QED, solubility, metabolic stability, or biological activity would require calculation or experimental confirmation.\n}\n{\"Final Target Molecule\":\"Cc1nc(C#Cc2cnc(C)nc2)cs1\"}",
+        "gold": "Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused indole-like bicyclic system bearing two pyrrolic NH groups, a flexible alkyl linker, and a terminal N-hydroxyamide (hydroxamic acid), not a nitro group.\n\n2. The alkyl linker adds conformational flexibility and hydrophobic surface area, while the hydroxamic acid contributes multiple hydrogen-bonding sites and may introduce metabolic or metal-binding liabilities.\n\n3. The demonstrated modification replaces the entire alkyl-linked hydroxamic acid side chain with a directly attached carboxylic acid, while retaining the fused bicyclic core and both pyrrolic NH groups.\n\n4. This change reduces molecular size and flexibility and removes the N-hydroxy functionality, which could favor QED-related descriptors such as molecular weight, lipophilicity, and hydrogen-bonding balance. However, the carboxylic acid may increase ionization and aqueous polarity, so improved overall drug-likeness or activity cannot be assumed without calculation and testing.\n}\n{\"Final Target Molecule\":\"O=C(O)c1c[nH]c2ccccc12\"}",
+        "gold": "O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a butyl ester, a phenyl ring, a morpholine-substituted amide, and a thiophene ring. The amide and morpholine provide hydrogen-bonding capacity, while the butyl chain and aromatic rings contribute hydrophobic character.\n\n2. The butyl ester is a plausible hydrolytic liability and adds nonpolar surface area. The morpholine nitrogen is basic and may be protonated under physiological conditions, potentially affecting permeability and CNS exposure.\n\n3. The demonstrated modification replaces the butyl ester with a methyl ester and changes the amide substituent from a thiophene-containing side chain to a methyl-substituted pyrrolidine. The phenyl ring and morpholine amide are retained.\n\n4. Removing the butyl chain reduces hydrophobicity and eliminates the ester hydrolysis site, while the pyrrolidine introduces a more compact, conformationally constrained amide substituent. These changes could improve the balance of lipophilicity, polarity, and molecular size relevant to QED, although the added methyl group and altered basicity may offset some benefit.\n}\n{\"Final Target Molecule\":\"CCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1.\"}",
+        "gold": "CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(C=Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1)NO.\n"
+            }
+        ],
+        "prediction": "1. The source contains a conjugated α,β-unsaturated N-hydroxy amide (hydroxamic acid), not a nitro group, attached to a phenyl ring bearing a benzyl-linked fused aza-aromatic ring.\n\n2. The conjugated hydroxamic acid adds molecular weight, hydrogen-bonding capacity, and potential electrophilic or metabolic liability. These features can influence polarity, permeability, and QED-related descriptors, although their net effect cannot be inferred from structure alone.\n\n3. The demonstrated modification removes the entire unsaturated N-hydroxy amide side chain and replaces it with a methyl group, while retaining the phenyl–benzyl–fused aza-aromatic core.\n\n4. This truncation plausibly lowers molecular weight and polarity and removes the conjugated electrophilic functionality. It may therefore favor QED balance, but improved QED, stability, safety, or activity would require calculation and experimental confirmation.\n}\n{\"Final Target Molecule\":\"Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1\"}",
+        "gold": "O=C(C=Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1)NO"
+    }
+}

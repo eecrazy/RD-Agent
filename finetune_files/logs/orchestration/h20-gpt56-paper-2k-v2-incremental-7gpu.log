@@ -1,0 +1,69 @@
+Selected 22 tasks; GPUs=0,1,2,3,4,6,7; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2
+  main/aime25/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/panorama_par4pc/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/panorama_noc4pc/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/panorama_pi4pc/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_mol_und/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_mol_edit/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_mol_opt/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_reaction/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/FinanceIQ_gen/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/tablebench_data_analysis/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/tablebench_fact_checking/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/tablebench_numerical_reasoning/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/tablebench_visualization/run-1: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/aime25/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/panorama_par4pc/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/panorama_noc4pc/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_mol_edit/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_reaction/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/tablebench_data_analysis/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/tablebench_visualization/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/panorama_par4pc/run-3: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_mol_edit/run-3: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+Pipeline workers=14 (2 per GPU; GPU stages lease-serialized)
+START gpu=0 main/aime25/run-1
+START gpu=1 main/panorama_par4pc/run-1
+START gpu=2 main/panorama_noc4pc/run-1
+START gpu=3 main/panorama_pi4pc/run-1
+START gpu=4 main/chemcotbench_mol_und/run-1
+START gpu=6 main/chemcotbench_mol_edit/run-1
+START gpu=7 main/chemcotbench_mol_opt/run-1
+START gpu=0 main/chemcotbench_reaction/run-1
+START gpu=1 main/FinanceIQ_gen/run-1
+START gpu=2 main/tablebench_data_analysis/run-1
+START gpu=3 main/tablebench_fact_checking/run-1
+START gpu=4 main/tablebench_numerical_reasoning/run-1
+START gpu=6 main/tablebench_visualization/run-1
+START gpu=7 main/aime25/run-2
+FAIL  gpu=7 main/chemcotbench_mol_opt/run-1
+START gpu=7 main/panorama_par4pc/run-2
+FAIL  gpu=0 main/chemcotbench_reaction/run-1
+START gpu=0 main/panorama_noc4pc/run-2
+FAIL  gpu=3 main/tablebench_fact_checking/run-1
+START gpu=3 main/chemcotbench_mol_edit/run-2
+FAIL  gpu=6 main/chemcotbench_mol_edit/run-1
+START gpu=6 main/chemcotbench_reaction/run-2
+FAIL  gpu=4 main/tablebench_numerical_reasoning/run-1
+START gpu=4 main/tablebench_data_analysis/run-2
+FAIL  gpu=6 main/chemcotbench_reaction/run-2
+START gpu=6 main/tablebench_visualization/run-2
+FAIL  gpu=3 main/chemcotbench_mol_edit/run-2
+START gpu=3 main/panorama_par4pc/run-3
+FAIL  gpu=4 main/tablebench_data_analysis/run-2
+START gpu=4 main/chemcotbench_mol_edit/run-3
+FAIL  gpu=6 main/tablebench_visualization/run-2
+FAIL  gpu=3 main/panorama_par4pc/run-3
+FAIL  gpu=4 main/chemcotbench_mol_edit/run-3
+FAIL  gpu=3 main/panorama_pi4pc/run-1
+FAIL  gpu=2 main/tablebench_data_analysis/run-1
+FAIL  gpu=7 main/panorama_par4pc/run-2
+FAIL  gpu=6 main/tablebench_visualization/run-1
+FAIL  gpu=4 main/chemcotbench_mol_und/run-1
+FAIL  gpu=1 main/FinanceIQ_gen/run-1
+DONE  gpu=2 main/panorama_noc4pc/run-1
+DONE  gpu=7 main/aime25/run-2
+DONE  gpu=0 main/panorama_noc4pc/run-2
+DONE  gpu=0 main/aime25/run-1
+DONE  gpu=1 main/panorama_par4pc/run-1
+Report: /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/report (39 tasks)

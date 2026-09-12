@@ -1,0 +1,1964 @@
+{
+    "exact_match": 22.0,
+    "validity": 86.0,
+    "morgan_sims": 55.96004190015395,
+    "maccs_sims": 63.680954047146,
+    "rdk_sims": 58.256020066295875,
+    "bleu": 60.46295505795124,
+    "levenshtein": 8.8,
+    "exact_match_count": 11.0,
+    "valid_count": 43.0,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_reaction_fs_50",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)OC(=O)OC(C)(C)C (Di-tert-butyl dicarbonate, a source of an electrophilic acyl group). Reactant 2: NCCN (2-aminoethan-1-ol, a nucleophile). Reagent: ClCCl (Dichloromethane, a solvent).\nIdentify Functional Groups: Reactant 1 (Di-tert-butyl dicarbonate): Contains two tert-butoxycarbonyl (Boc) groups, each with an electrophilic carbonyl carbon. Reactant 2 (2-aminoethan-1-ol): Contains a primary alcohol (-OH) group, which is nucleophilic, and a prim"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)OC(=O)OCCN"
+            ],
+            "pred_canonical": [
+                "CC(C)(C)OC(=O)OCCN"
+            ],
+            "gold": [
+                "CC(C)(C)OC(=O)NCCN"
+            ],
+            "gold_canonical": [
+                "CC(C)(C)OC(=O)NCCN"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.5135135135135135
+            ],
+            "maccs_similarity": [
+                0.675
+            ],
+            "rdk_similarity": [
+                0.23214285714285715
+            ],
+            "levenshtein": [
+                1
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_51",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCOC(=O)C(=O)c1ccccc1 (Ethyl 2-cyanophenylacetate). Reactant 2: C=CC[Si](C)(C)C (Vinyltrimethylsilane). Reagent 1: Cl[Sn](Cl)(Cl)Cl (Tin(IV) chloride, Lewis acid catalyst). Reagent 2: ClCCl (Dichloromethane, solvent).\nIdentify Functional Groups: Reactant 1: Ester (-C(=O)O-), cyanophenyl group (Ar-C#N), ethyl group (-CH2CH3). Reactant 2: Vinyl group (C=C), trimethylsilyl group (-Si(CH3)3). Reagents: Tin(IV) chloride (Lewis acid), dichloromethane (polar aproti"
+            ],
+            "pred_smiles": [
+                "CC(=O)C(=O)c1ccccc1"
+            ],
+            "pred_canonical": [
+                "CC(=O)C(=O)c1ccccc1"
+            ],
+            "gold": [
+                "C=CCC(O)(C(=O)OCC)c1ccccc1"
+            ],
+            "gold_canonical": [
+                "C=CCC(O)(C(=O)OCC)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.32142857142857145
+            ],
+            "maccs_similarity": [
+                0.3333333333333333
+            ],
+            "rdk_similarity": [
+                0.22203389830508474
+            ],
+            "levenshtein": [
+                9
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_52",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Br (interpreted as HBr, hydrobromic acid, a strong acid and a common reagent for deprotection). Reactant 2: CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1 (a complex molecule containing a benzyloxycarbonyl (Cbz) protected amine).\nIdentify Functional Groups: Reactant 1 (HBr): Strong acid. Reactant 2: Contains a benzyloxycarbonyl (Cbz) group (-C(=O)OCc1ccccc1) protecting a nitrogen atom in a piperazine ring, a pyridine ring, and a p"
+            ],
+            "pred_smiles": [
+                "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)N"
+            ],
+            "pred_canonical": [
+                "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(N)=O"
+            ],
+            "gold": [
+                "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1"
+            ],
+            "gold_canonical": [
+                "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7857142857142857
+            ],
+            "maccs_similarity": [
+                0.8813559322033898
+            ],
+            "rdk_similarity": [
+                0.9597495527728086
+            ],
+            "levenshtein": [
+                6
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_53",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)N[C@H](C=O)CC1CCC1 (tert-butyl (1-oxo-4-phenylbutyl)carbamate). Reactant 2: [C-]#[N+]C1CC1 (cis-4-nitro-1,3-but-2-ene, a conjugate base of a weak acid). Reagent 1: CC(=O)O (acetic acid). Reagent 2: CCOC(C)=O (ethyl acetate).\nIdentify Functional Groups: Reactant 1: tert-butoxycarbonyl (Boc) group, ketone group, secondary amine (as part of the carbamate). Reactant 2: nitro group, alkene group. Reagent 1: carboxylic acid group. Reagent 2: ester gr"
+            ],
+            "pred_smiles": [
+                "CC(=O)OC(=O)N[C@H](C=O)CC1CCC1"
+            ],
+            "pred_canonical": [
+                "CC(=O)OC(=O)NC(C=O)CC1CCC1"
+            ],
+            "gold": [
+                "CC(=O)OC(C(=O)NC1CC1)[C@H](CC1CCC1)NC(=O)OC(C)(C)C"
+            ],
+            "gold_canonical": [
+                "CC(=O)OC(C(=O)NC1CC1)C(CC1CCC1)NC(=O)OC(C)(C)C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.358974358974359
+            ],
+            "maccs_similarity": [
+                0.6521739130434783
+            ],
+            "rdk_similarity": [
+                0.3198887343532684
+            ],
+            "levenshtein": [
+                23
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_54",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCOC(=O)Cc1cncnc1Cl (Ethyl 2-chloro-6-oxo-1,4-dihydropyridine-3-carboxylate). Reactant 2: C#C[Si](CC)(CC)CC (Ethynyltrimethylsilane). Reagent 1: c1ccc(P(c2ccccc2)c2ccccc2)cc1 (Triphenylphosphine, PPh3). Reagent 2: CCN(CC)CC (Diisopropylethylamine, DIPEA). Reagent 3: CN(C)C=O (N,N-Dimethylformamide, DMF). Reagent 4: N#N (Dess-Martin periodinane, DMP).\nIdentify Functional Groups: Reactant 1: Pyridine carboxylic acid ester (-COOEt), chloro group (-Cl) on a pyri"
+            ],
+            "pred_smiles": [
+                "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+            ],
+            "pred_canonical": [
+                "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+            ],
+            "gold": [
+                "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+            ],
+            "gold_canonical": [
+                "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_55",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(=O)Nc1ccc(C=O)cc1 (N-acetyl-4-formylbenzamide). Reactant 2: N#CCC#N (Cyanomethane). Reagent 1: CCO (Ethanol). Reagent 2: C1CCNCC1 (Piperidine).\nIdentify Functional Groups: Reactant 1: Acetyl group (CH3CO-), Formyl group (CHO), Benzamide moiety (-NHC(=O)Ar). Reactant 2: Cyanomethyl group (-CH2CN). Reagent 1: Alcohol (-OH). Reagent 2: Cyclic secondary amine (piperidine).\nPredict Reaction Type: Nucleophilic addition of an alcohol to a cyanomethyl group. The "
+            ],
+            "pred_smiles": [
+                "CC(=O)Nc1ccc(C(C)=O)cc1"
+            ],
+            "pred_canonical": [
+                "CC(=O)Nc1ccc(C(C)=O)cc1"
+            ],
+            "gold": [
+                "CC(=O)Nc1ccc(C=C(C#N)C#N)cc1"
+            ],
+            "gold_canonical": [
+                "CC(=O)Nc1ccc(C=C(C#N)C#N)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.46296296296296297
+            ],
+            "maccs_similarity": [
+                0.6
+            ],
+            "rdk_similarity": [
+                0.5060606060606061
+            ],
+            "levenshtein": [
+                7
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_56",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O (a molecule containing a urea-like structure and a ketone). Reactant 2: Clc1cccc(CBr)c1Cl (a bromo-chloro-substituted benzene derivative). Reagents: O (water), CN(C)C=O (DMF), [NaH] (sodium hydride).\nIdentify Functional Groups: Reactant 1: Ketone (C=O), Urea-like structure (contains two N-H groups, one of which is part of an amide-like C(=O)NH group), tertiary amine (N(C)C), benzylic carbon (C(C)(Cc2ccccc2)C1=O). Reactant 2: "
+            ],
+            "pred_smiles": [
+                "CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O.c1cccc(Cl)c1Br"
+            ],
+            "pred_canonical": [
+                "CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O.Clc1ccccc1Br"
+            ],
+            "gold": [
+                "CN1C(=O)C(C)(Cc2ccccc2)N(C)C(=O)C1Cc1cccc(Cl)c1Cl"
+            ],
+            "gold_canonical": [
+                "CN1C(=O)C(C)(Cc2ccccc2)N(C)C(=O)C1Cc1cccc(Cl)c1Cl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.5591397849462365
+            ],
+            "maccs_similarity": [
+                0.8653846153846154
+            ],
+            "rdk_similarity": [
+                0.8005018820577164
+            ],
+            "levenshtein": [
+                19
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_57",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1 (6-hexyloxytriphenylphosphonium cation). Reactant 2: COC(=O)CCCCCCC=O (methyl 8-carboxy-octanoate). No explicit reagents are provided.\nIdentify Functional Groups: Reactant 1: Phosphonium cation with a highly electrophilic phosphorus center, a hexyloxy group. Reactant 2: Carboxylic acid group (-COOH), methyl ester group (-COOCH3), alkyl chain (octyl).\nPredict Reaction Type: Nucleophilic Acyl Substitution. The carboxylic "
+            ],
+            "pred_smiles": [
+                "COC(=O)CCCCCCCOC(=O)CCCCCCC=O"
+            ],
+            "pred_canonical": [
+                "COC(=O)CCCCCCCOC(=O)CCCCCCC=O"
+            ],
+            "gold": [
+                "CCCCCC=CCCCCCCC(=O)OC"
+            ],
+            "gold_canonical": [
+                "CCCCCC=CCCCCCCC(=O)OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.4473684210526316
+            ],
+            "maccs_similarity": [
+                0.64
+            ],
+            "rdk_similarity": [
+                0.6129032258064516
+            ],
+            "levenshtein": [
+                14
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_58",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13 (a complex polycyclic molecule containing a pyrrole-like heterocycle). Reactant 2: Brc1ccccc1 (Bromobenzene). Reagents: O=C(C=Cc1ccccc1)C=Cc1ccccc1 (Bis(triphenylphosphine)palladium(II) chloride, PdCl2(PPh3)2), CC(C)(C)P(C(C)(C)C)C(C)(C)C (Tri-tert-butylphosphine, PPh3), Cc1ccccc1C (Toluene), CC(C)(C)O[Na] (Sodium tert-butoxide, NaOtBu), [Pd] (Palladium catalyst).\nIdentify"
+            ],
+            "pred_smiles": [
+                "CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13c1ccccc1Br"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC1(C)c2ccccc2-c2cc3c4cc(-c5ccc6c(c5)c5cc7c(cc5n6-c5ccccc5)oc5ccccc57)ccc4n(-c4ccccc4)c3cc21"
+            ],
+            "gold_canonical": [
+                "CC1(C)c2ccccc2-c2cc3c4cc(-c5ccc6c(c5)c5cc7c(cc5n6-c5ccccc5)oc5ccccc57)ccc4n(-c4ccccc4)c3cc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_59",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: O (Water). Reactant 2: C=CC#N (Acrylonitrile). Reactant 3: C=C(C)C (But-2-ene). Water acts as a reagent for hydrolysis.\nIdentify Functional Groups: Acrylonitrile: Nitrile group (-C≡N), alkene group (C=C). But-2-ene: Alkene group (C=C).\nPredict Reaction Type: Hydrolysis of the nitrile group. The nitrile carbon is electrophilic and reacts with water to form a carboxylic acid. This is a common deprotection step for nitriles.\nConstruct Product Structure: The nit"
+            ],
+            "pred_smiles": [
+                "C=CC(=O)O"
+            ],
+            "pred_canonical": [
+                "C=CC(=O)O"
+            ],
+            "gold": [
+                "C=CC(=O)NC(C)(C)C"
+            ],
+            "gold_canonical": [
+                "C=CC(=O)NC(C)(C)C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.2692307692307692
+            ],
+            "maccs_similarity": [
+                0.19047619047619047
+            ],
+            "rdk_similarity": [
+                0.15476190476190477
+            ],
+            "levenshtein": [
+                9
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_60",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Cc1ccc(-n2nc(C(C)(C)C)cc2N)cc1 (a substituted aniline derivative). Reactant 2: O=C(Cl)OCC(Cl)(Cl)Cl (trichloroacetyl chloride). No explicit reagents are given, but this combination suggests an acylation reaction.\nIdentify Functional Groups: Reactant 1: Aniline (-NH2 attached to a benzene ring), tert-butyl group, and a pyrazole ring. Reactant 2: Acyl chloride (-COCl) group.\nPredict Reaction Type: N-acylation. The nucleophilic nitrogen of the aniline derivativ"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "pred_canonical": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "gold": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "gold_canonical": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_61",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21 (Dess-Martin Periodinane, DMP). Reactant 2: O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1 (a complex organic molecule containing a secondary alcohol).\nIdentify Functional Groups: Reactant 1 (DMP): Hypervalent iodine(V) compound, oxidizing agent. Reactant 2: Secondary alcohol (-CH(OH)-), amide (-C(=O)NH-), tertiary amine, trifluoromethyl group (-CF3), pyrazole ring, pyridine ring.\nPredict Reaction Type: Ox"
+            ],
+            "pred_smiles": [
+                "O=C(C1CCC(=O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1"
+            ],
+            "pred_canonical": [
+                "O=C1CCC(C(=O)N2CCC(F)C2)n2c1nn(Cc1ccc(C(F)(F)F)nc1)c2=O"
+            ],
+            "gold": [
+                "O=C1CCC(C(=O)N2CCC(F)C2)n2c1nn(Cc1ccc(C(F)(F)F)nc1)c2=O"
+            ],
+            "gold_canonical": [
+                "O=C1CCC(C(=O)N2CCC(F)C2)n2c1nn(Cc1ccc(C(F)(F)F)nc1)c2=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_62",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCCC(C)(C)C(=O)O (tert-butyl acetate). Reactant 2: CNOC (methyl isocyanate). No explicit reagents are given, but reactions of this type often involve a base to neutralize the acid.\nIdentify Functional Groups: Reactant 1 (tert-butyl acetate): Acetic acid ester (-C(=O)O-), tert-butyl group (-C(CH3)3). Reactant 2 (methyl isocyanate): Isocyanate group (-N=C=O).\nPredict Reaction Type: Nucleophilic addition of the isocyanate group to the carbonyl carbon of the est"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)OC(=O)N"
+            ],
+            "pred_canonical": [
+                "CC(C)(C)OC(N)=O"
+            ],
+            "gold": [
+                "CCCC(C)(C)C(=O)N(C)OC"
+            ],
+            "gold_canonical": [
+                "CCCC(C)(C)C(=O)N(C)OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.2564102564102564
+            ],
+            "maccs_similarity": [
+                0.4
+            ],
+            "rdk_similarity": [
+                0.07279693486590039
+            ],
+            "levenshtein": [
+                10
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_63",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COc1cccc([N+](=O)[O-])c1C (4-methoxy-2-nitrobenzyl alcohol). Reactant 2: O=C1CCC(=O)N1Br (N-Bromosuccinimide, NBS). Reagent: CC(C)(C)OO (tert-butyl hydroperoxide, TBHP).\nIdentify Functional Groups: Reactant 1: Primary alcohol (-OH), methoxy group (-OCH3), nitro group (-NO2), aromatic ring. Reactant 2: N-Bromosuccinimide (source of electrophilic bromine, Br+). Reagent: Hydroperoxide (oxidizing agent).\nPredict Reaction Type: The reaction is predicted to be a s"
+            ],
+            "pred_smiles": [
+                "COc1cccc([N+](=O)[O-])c1C(=O)"
+            ],
+            "pred_canonical": [
+                "COc1cccc([N+](=O)[O-])c1C=O"
+            ],
+            "gold": [
+                "COc1cccc([N+](=O)[O-])c1CBr"
+            ],
+            "gold_canonical": [
+                "COc1cccc([N+](=O)[O-])c1CBr"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.5909090909090909
+            ],
+            "maccs_similarity": [
+                0.7954545454545454
+            ],
+            "rdk_similarity": [
+                0.6923076923076923
+            ],
+            "levenshtein": [
+                2
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_64",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: O=C(Cl)OCc1ccccc1 (Phthaloyl chloride). Reactant 2: OCC1Cc2ccccc2CN1 (a substituted pyrrolidine derivative). No explicit reagents provided.\nIdentify Functional Groups: Reactant 1 (Phthaloyl chloride): Contains an acyl chloride group (-COCl) and a phthaloyl (cyclic anhydride) moiety. Reactant 2 (Substituted pyrrolidine): Contains a secondary alcohol group (-OH) and a tertiary amine group within the pyrrolidine ring.\nPredict Reaction Type: Nucleophilic acyl su"
+            ],
+            "pred_smiles": [
+                "O=C(OCc1ccccc1)OCC1Cc2ccccc2CN1"
+            ],
+            "pred_canonical": [
+                "O=C(OCc1ccccc1)OCC1Cc2ccccc2CN1"
+            ],
+            "gold": [
+                "O=C(OCc1ccccc1)N1Cc2ccccc2CC1CO"
+            ],
+            "gold_canonical": [
+                "O=C(OCc1ccccc1)N1Cc2ccccc2CC1CO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.5925925925925926
+            ],
+            "maccs_similarity": [
+                0.717391304347826
+            ],
+            "rdk_similarity": [
+                0.5495608531994981
+            ],
+            "levenshtein": [
+                6
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_65",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CON(C)C(=O)Cc1ccc(Cl)cc1Cl (N-methoxy-N-methyl-2-(2,4-dichlorophenyl)acetamide, a Weinreb amide). Reactant 2: C[Mg]Br (Methylmagnesium bromide, a Grignard reagent).\nIdentify Functional Groups: Reactant 1: Weinreb amide (-C(=O)N(OCH3)CH3), aryl chloride (-Cl attached to a benzene ring). Reactant 2: Grignard reagent (CH3- nucleophile, MgBr leaving group).\nPredict Reaction Type: Nucleophilic acyl substitution. The Grignard reagent (CH3-) will act as a nucleophi"
+            ],
+            "pred_smiles": [
+                "CC(=O)Cc1ccc(Cl)cc1Cl"
+            ],
+            "pred_canonical": [
+                "CC(=O)Cc1ccc(Cl)cc1Cl"
+            ],
+            "gold": [
+                "CC(=O)Cc1ccc(Cl)cc1Cl"
+            ],
+            "gold_canonical": [
+                "CC(=O)Cc1ccc(Cl)cc1Cl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_66",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1 (a methyl ester with a bromoalkyl side chain attached to a dichlorophenyl ring). Reactant 2: CC(=O)N(C)C1CCNCC1 (N,N-dimethyl-1,2,3,6-tetrahydropyridine-4-carboxamide, a secondary amine).\nIdentify Functional Groups: Reactant 1: Methyl ester (-COOCH3), alkyl bromide (-CH2Br), dichlorophenyl group. Reactant 2: Secondary amine (-NH-), amide group (-C(=O)NH-).\nPredict Reaction Type: Nucleophilic substitution (bromide exchange). "
+            ],
+            "pred_smiles": [
+                "CC(=O)N(C)C1CCNCC1N(C)C(=O)c2ccc(CCN(C)C(=O)O)cc2Cl"
+            ],
+            "pred_canonical": [
+                "CC(=O)N(C)C1CCNCC1N(C)C(=O)c1ccc(CCN(C)C(=O)O)cc1Cl"
+            ],
+            "gold": [
+                "COC(=O)C(C)(CCN1CCC(N(C)C(C)=O)CC1)c1ccc(Cl)c(Cl)c1"
+            ],
+            "gold_canonical": [
+                "COC(=O)C(C)(CCN1CCC(N(C)C(C)=O)CC1)c1ccc(Cl)c(Cl)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.3017241379310345
+            ],
+            "maccs_similarity": [
+                0.765625
+            ],
+            "rdk_similarity": [
+                0.36312849162011174
+            ],
+            "levenshtein": [
+                25
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_67",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1=O (a molecule containing a methyl ester, a tertiary amine, and a tert-butyl ester). Reactant 2: C1CNC1 (1,2,3,6-tetrahydropyridine, a secondary amine). Reagents: CC(=O)O[BH-](OC(C)=O)OC(C)=O (triacetoxyborohydride anion, a reducing agent), ClCCCl (dichloromethane, a solvent), O (water, likely present as an impurity or formed during workup), [Na+] (sodium ion, likely from the workup).\nIdentify Functional Groups: Reactant 1: Met"
+            ],
+            "pred_smiles": [
+                "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1CO"
+            ],
+            "pred_canonical": [
+                "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1CO"
+            ],
+            "gold": [
+                "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1N1CCC1"
+            ],
+            "gold_canonical": [
+                "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1N1CCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.6307692307692307
+            ],
+            "maccs_similarity": [
+                0.7758620689655172
+            ],
+            "rdk_similarity": [
+                0.6473354231974922
+            ],
+            "levenshtein": [
+                5
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_68",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COc1cccc2c1Sc1ccccc1CC2 (a substituted benzofuran derivative). Reagent 1: O (Water). Reagent 2: Cl (Chloride ion, likely from HCl, acting as an acid catalyst). Reagent 3: c1ccncc1 (Pyridine, a base).\nIdentify Functional Groups: Reactant 1: Benzofuran core, methoxy group (-OCH3), thioether group (-S-), phenyl group. Reagent 1 (Water): Hydroxyl group (-OH). Reagent 2 (Chloride): Halide. Reagent 3 (Pyridine): Aromatic tertiary amine.\nPredict Reaction Type: The "
+            ],
+            "pred_smiles": [
+                "COc1cccc2c1S(=O)(=O)c1ccccc1CC2"
+            ],
+            "pred_canonical": [
+                "COc1cccc2c1S(=O)(=O)c1ccccc1CC2"
+            ],
+            "gold": [
+                "Oc1cccc2c1Sc1ccccc1CC2"
+            ],
+            "gold_canonical": [
+                "Oc1cccc2c1Sc1ccccc1CC2"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.463768115942029
+            ],
+            "maccs_similarity": [
+                0.5116279069767442
+            ],
+            "rdk_similarity": [
+                0.608
+            ],
+            "levenshtein": [
+                9
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_69",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C (Bis(pinacolato)diboron, B2pin2). Reactant 2: COc1ncnc(OC)c1I (a substituted pyridine derivative with an iodine atom). Reagents: C1=CC([Fe]C2(P(c3ccccc3)c3ccccc3)C=CC=C2)(P(c2ccccc2)c2ccccc2)C=C1 (Bis(triphenylphosphine)palladium(II) chloride, PdCl2(PPh3)2), C1COCCO1 (tetrahydrofuran, THF), CC(=O)O[K] (potassium acetate, KAc).\nIdentify Functional Groups: Reactant 1 (B2pin2): Diboron ester. Reactant 2 (COc1ncnc(OC)c1I): Ar"
+            ],
+            "pred_smiles": [
+                "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+            ],
+            "pred_canonical": [
+                "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+            ],
+            "gold": [
+                "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+            ],
+            "gold_canonical": [
+                "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_70",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(C)(O)C1CCNC1 (2,2-dimethyl-1,3-dioxan-4-ol). Reactant 2: CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CO)cc32)CC1 (a complex molecule containing a primary alcohol). Reagent: O=S(Cl)Cl (Thionyl chloride).\nIdentify Functional Groups: Reactant 1: Secondary alcohol (-CH(OH)-), cyclic ether (-C1CCNC1). Reactant 2: Primary alcohol (-CH2OH), tertiary amide (-NC(=O)-), aromatic fluorine, aromatic methoxy group. Reagent: Thionyl chloride (SOCl2).\nPredict Reac"
+            ],
+            "pred_smiles": [
+                "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CCl)cc32)CC1"
+            ],
+            "pred_canonical": [
+                "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CCl)cc32)CC1"
+            ],
+            "gold": [
+                "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CN4CCC(C(C)(C)O)C4)cc32)CC1"
+            ],
+            "gold_canonical": [
+                "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CN4CCC(C(C)(C)O)C4)cc32)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7333333333333333
+            ],
+            "maccs_similarity": [
+                0.8169014084507042
+            ],
+            "rdk_similarity": [
+                0.8530140379851362
+            ],
+            "levenshtein": [
+                16
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_71",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Ic1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1 (a complex molecule containing an aryl iodide, a diarylamine, and a tolyl group on a silicon atom). Reactant 2: CC1(C)c2ccccc2Oc2c(B(O)O)cccc21 (an arylboronic ester). Reagents: c1ccc([P](c2ccccc2)(c2ccccc2)[Pd]([P](c2ccccc2)(c2ccccc2)c2ccccc2)([P](c2ccccc2)(c2ccccc2)c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)cc1 (Palladium catalyst), Cc1ccccc1 (Benzyl ligand), O=C(O[K])O[K] (Potassium carbonate "
+            ],
+            "pred_smiles": [
+                "CC1(C)c2ccccc2Oc2c(Ic3cc(-n4c5ccccc5c5ccccc54)cc3c3Oc3ccccc3[Si]3(c3ccccc3)c3ccccc3)cccc21"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC1(C)c2ccccc2Oc2c(-c3cc(-n4c5ccccc5c5ccccc54)cc4c3Oc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21"
+            ],
+            "gold_canonical": [
+                "CC1(C)c2ccccc2Oc2c(-c3cc(-n4c5ccccc5c5ccccc54)cc4c3Oc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_72",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(C)=O (Acetone). Reactant 2: COc1ccc(C=O)cc1 (4-Methoxybenzaldehyde). Reagent: O=[Zn] (Zinc oxide).\nIdentify Functional Groups: Acetone: Ketone (C=O). 4-Methoxybenzaldehyde: Aldehyde (C=O), Methoxy group (-OCH3) on a benzene ring.\nPredict Reaction Type: The reaction is a Pinner reaction. This is a specific type of addition reaction where a ketone reacts with an aldehyde in the presence of a metal oxide (like zinc oxide) to form a β-hydroxy ketone (an aldol"
+            ],
+            "pred_smiles": [
+                "COc1ccc(CCO)cc1"
+            ],
+            "pred_canonical": [
+                "COc1ccc(CCO)cc1"
+            ],
+            "gold": [
+                "COc1ccc(C=CC(C)=O)cc1"
+            ],
+            "gold_canonical": [
+                "COc1ccc(C=CC(C)=O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.3958333333333333
+            ],
+            "maccs_similarity": [
+                0.52
+            ],
+            "rdk_similarity": [
+                0.44223107569721115
+            ],
+            "levenshtein": [
+                6
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_73",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Nc1c(C(=O)O)ccc(Br)c1F (a substituted aniline). Reactant 2: O=C1CCC(=O)N1Cl (N-(2-chloroacetyl)proline). Reagent: CN(C)C=O (Diethyl azodicarboxylate, DEAD).\nIdentify Functional Groups: Reactant 1: Aniline group (-NH2), Carboxylic acid group (-COOH), Aryl halide (bromine on a fluorine-substituted aromatic ring). Reactant 2: Secondary amide group (-CONH-), Chloroacetyl group (-C(=O)CH2Cl). Reagent: Azodicarboxylate group (-N=N-).\nPredict Reaction Type: Mitsuno"
+            ],
+            "pred_smiles": [
+                "Nc1c(C(=O)O)ccc(Br)c1F-C(=O)CNC(=O)Cl"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "Nc1c(C(=O)O)cc(Cl)c(Br)c1F"
+            ],
+            "gold_canonical": [
+                "Nc1c(C(=O)O)cc(Cl)c(Br)c1F"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_74",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCC1 (a complex molecule containing a Boc-protected alcohol, a methoxy group, a chloro-substituted pyridine, and a substituted pyrimidine). Reactant 2: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21 (Dess-Martin Periodinane, a hypervalent iodine compound used as an oxidizing agent).\nIdentify Functional Groups: Reactant 1: Secondary alcohol (-CH(OH)-), Boc-protected alcohol (-NHBoc), methoxy group (-OCH3), chloro-subs"
+            ],
+            "pred_smiles": [
+                "COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CC(=O)c2c1OC1CCCC1)c2c1"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CC=O)c2c1OC1CCCC1"
+            ],
+            "gold_canonical": [
+                "COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CC=O)c2c1OC1CCCC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_75",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant: Fc1ccc(Br)cc1 (1-bromo-4-fluorobenzene). Reagent: [Mg] (Methylmagnesium iodide).\nIdentify Functional Groups: Reactant: Aryl bromide (C-Br bond on a benzene ring), Aryl fluoride (C-F bond on a benzene ring). Reagent: Grignard reagent (source of nucleophilic methyl carbanion).\nPredict Reaction Type: Nucleophilic Aromatic Substitution (SNAr). The methyl group from methylmagnesium iodide will act as a nucleophile and attack the carbon atom bearing the bromine on t"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(F)cc1"
+            ],
+            "pred_canonical": [
+                "Cc1ccc(F)cc1"
+            ],
+            "gold": [
+                "Fc1ccc([Mg]Br)cc1"
+            ],
+            "gold_canonical": [
+                "Fc1cc[c]([Mg][Br])cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.5161290322580645
+            ],
+            "maccs_similarity": [
+                0.5384615384615384
+            ],
+            "rdk_similarity": [
+                0.28368794326241137
+            ],
+            "levenshtein": [
+                11
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_76",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COC(=O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12 (a complex molecule containing a methyl ester, a tertiary amine, a chloro-substituted thiophene, and a pyrimidine-like core with amide functionalities). Reagent 1: [Na+].CO.[Li]Cl.[BH4-] (representing sodium methoxide, lithium chloride, and borohydride, a common set of reagents for ester reduction).\nIdentify Functional Groups: Reactant 1: Methyl ester (-COOCH3), tertiary amine (-NH-), chlo"
+            ],
+            "pred_smiles": [
+                "OC(=O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12"
+            ],
+            "pred_canonical": [
+                "Cn1c(=O)c2c(-c3ccccc3)[nH]c(C(c3nc(Cl)cs3)C(C)(C)C(=O)O)c2n(C)c1=O"
+            ],
+            "gold": [
+                "Cn1c(=O)c2c(-c3ccccc3)[nH]c(C(c3nc(Cl)cs3)C(C)(C)CO)c2n(C)c1=O"
+            ],
+            "gold_canonical": [
+                "Cn1c(=O)c2c(-c3ccccc3)[nH]c(C(c3nc(Cl)cs3)C(C)(C)CO)c2n(C)c1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.8297872340425532
+            ],
+            "maccs_similarity": [
+                0.8857142857142857
+            ],
+            "rdk_similarity": [
+                0.9849124924562462
+            ],
+            "levenshtein": [
+                4
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_77",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C (a diester, specifically a tert-butyl ester and a methyl ester on a dihydroxybenzoic acid derivative). Reactant 2: NNC(=O)OCc1ccccc1 (N,N-dimethylformamide, DMF). Reagents: CCN=C=NCCCN(C)C (DIAD, a coupling agent), On1nnc2ccccc21 (a substituted pyrazole, likely a catalyst or additive), CCN(C(C)C)C(C)C (DIPEA, a non-nucleophilic base), CN(C)C=O (acetonitrile, a nucleophile).\nIdentify Functional Groups: Reactant"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C.O=C[N](C)C"
+            ],
+            "pred_canonical": [
+                "CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C.CN(C)C=O"
+            ],
+            "gold": [
+                "CC(C)(C)OC(=O)COc1ccc(C(=O)NNC(=O)OCc2ccccc2)cc1OCC(=O)OC(C)(C)C"
+            ],
+            "gold_canonical": [
+                "CC(C)(C)OC(=O)COc1ccc(C(=O)NNC(=O)OCc2ccccc2)cc1OCC(=O)OC(C)(C)C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.5630252100840336
+            ],
+            "maccs_similarity": [
+                0.5932203389830508
+            ],
+            "rdk_similarity": [
+                0.6213872832369942
+            ],
+            "levenshtein": [
+                25
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_78",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCCSC(SCCC)=C(C#N)C#N (an aryl nitrile with a thioether and alkene). Reactant 2: C1CCNC1 (pyrrolidine, an amine). No explicit reagents are given, implying a direct reaction between the two reactants.\nIdentify Functional Groups: Reactant 1: Thioether (-S-), alkene (C=C), nitrile (-C#N), cyano group (-C#N). Reactant 2: Primary amine (-NH2).\nPredict Reaction Type: Nucleophilic addition of the primary amine to the nitrile group. This is a characteristic reaction"
+            ],
+            "pred_smiles": [
+                "CCCSC(SCCC)=C(C#N)C#N.CCNC1CCN1"
+            ],
+            "pred_canonical": [
+                "CCCSC(SCCC)=C(C#N)C#N.CCNC1CCN1"
+            ],
+            "gold": [
+                "CCCSC(=C(C#N)C#N)N1CCCC1"
+            ],
+            "gold_canonical": [
+                "CCCSC(=C(C#N)C#N)N1CCCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.33783783783783783
+            ],
+            "maccs_similarity": [
+                0.5094339622641509
+            ],
+            "rdk_similarity": [
+                0.25245098039215685
+            ],
+            "levenshtein": [
+                11
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_79",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COC(=O)CC(O)(CCCC(C)(C)O)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4 (a complex molecule containing a carboxylic acid, a secondary alcohol, and a Boc-protected amine). Reagent 1: O=S(Cl)Cl (Thionyl chloride).\nIdentify Functional Groups: Reactant 1: Carboxylic acid (-COOH), secondary alcohol (-CH(OH)-), tert-butyl ester (-C(=O)OC(CH3)3), Boc-protected amine (-NHBoc). Reagent 1: Thionyl chloride (SOCl2).\nPredict Reaction Type: Conversion of carboxylic acid to "
+            ],
+            "pred_smiles": [
+                "COC(=O)CC(O)(CCCC(C)(C)O)C(=O)Cl.O=S(Cl)Cl"
+            ],
+            "pred_canonical": [
+                "COC(=O)CC(O)(CCCC(C)(C)O)C(=O)Cl.O=S(Cl)Cl"
+            ],
+            "gold": [
+                "COC(=O)CC(O)(CCCC(C)(C)Cl)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4"
+            ],
+            "gold_canonical": [
+                "COC(=O)CC(O)(CCCC(C)(C)Cl)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.2698412698412698
+            ],
+            "maccs_similarity": [
+                0.4444444444444444
+            ],
+            "rdk_similarity": [
+                0.19763828464885022
+            ],
+            "levenshtein": [
+                33
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_80",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)N1CCC(C=O)C1 (tert-butyl 4-oxo-1,3-dihydro-2H-indole-2-carboxylate). Reagent 1: C[Mg]I (methylmagnesium iodide). Reactant 2: C1CCOC1 (tetrahydrofuran, THF). Reagent 2: [C-]#[O+] (carbon monoxide, CO).\nIdentify Functional Groups: Reactant 1: Ketone (C=O), Indole moiety, Boc-protected amine. Reagent 1: Grignard reagent (CH3- nucleophile). Reactant 2: Ether (C-O-C). Reagent 2: Carbon monoxide (CO).\nPredict Reaction Type: The primary reaction is a "
+            ],
+            "pred_smiles": [
+                "CC(C)(C)OC(=O)N1CCC(C(O)C)C1"
+            ],
+            "pred_canonical": [
+                "CC(O)C1CCN(C(=O)OC(C)(C)C)C1"
+            ],
+            "gold": [
+                "CC(O)C1CCN(C(=O)OC(C)(C)C)C1"
+            ],
+            "gold_canonical": [
+                "CC(O)C1CCN(C(=O)OC(C)(C)C)C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_81",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC (a substituted pyridine derivative). Reactant 2: CO (methanol). Methanol acts as both a reactant and a reagent/solvent.\nIdentify Functional Groups: Reactant 1: Pyridine ring (heteroaromatic), N-methyl group, cyano group (-C#N) on a pyridine nitrogen, two methoxy groups (-OCH3) on a pyridine ring carbon. Reactant 2: Primary alcohol (-OH).\nPredict Reaction Type: Nucleophilic Aromatic Substitution (SNAr). The pyridine ring i"
+            ],
+            "pred_smiles": [
+                "COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC"
+            ],
+            "pred_canonical": [
+                "COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC"
+            ],
+            "gold": [
+                "COC(=N)N1CCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1"
+            ],
+            "gold_canonical": [
+                "COC(=N)N1CCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7088607594936709
+            ],
+            "maccs_similarity": [
+                0.8208955223880597
+            ],
+            "rdk_similarity": [
+                0.8902007083825265
+            ],
+            "levenshtein": [
+                30
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_82",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: [C-]#[N+]C1CCCCC1 (Cyclohexyl azide). Reactant 2: CC(=O)Cl (Acetyl chloride). Reactant 3: CC=O (Acetic acid). Reactant 4: Nc1ncccn1 (2-Amino-5-nitropyridine). Reagent: O=Cl(=O)(=O)O (Dichloroacetic acid, DCA).\nIdentify Functional Groups: Cyclohexyl azide: Contains an azide group (-N3) which is highly reactive. Acetyl chloride: Contains an acyl chloride group (-COCl), which is highly electrophilic. Acetic acid: Contains a carboxylic acid group (-COOH). 2-Amin"
+            ],
+            "pred_smiles": [
+                "CC(=O)C(=O)C(=O)C(=O)C(=O)[NH2+]"
+            ],
+            "pred_canonical": [
+                "CC(=O)C(=O)C(=O)C(=O)C([NH2+])=O"
+            ],
+            "gold": [
+                "[Cl-]CC(=O)[n+]1c(C)c(NC2CCCCC2)n2cccnc21"
+            ],
+            "gold_canonical": [
+                null
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_83",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)Cl)ccc2N2CCCC2)cc2ccccc21 (a Boc-protected pyrrolo[2,3-d]pyrimidine derivative with a sulfonyl chloride group). Reactant 2: CNCCN1CCOCC1 (N,N-dimethylpiperazine). Reagent: ClCCl (Dichloromethane, a solvent).\nIdentify Functional Groups: Reactant 1: Boc-protected amine (tert-butoxycarbonyl group), pyrrolo[2,3-d]pyrimidine heterocyclic system, sulfonyl chloride (-SO2Cl), phenyl group. Reactant 2: Secondary amines (piperazine nit"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)NCCCN4CCOCC4)ccc2N2CCCC2)cc2ccccc21"
+            ],
+            "pred_canonical": [
+                "CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)NCCCN3CCOCC3)ccc2N2CCCC2)cc2ccccc21"
+            ],
+            "gold": [
+                "CN(CCN1CCOCC1)S(=O)(=O)c1ccc(N2CCCC2)c(-c2cc3ccccc3n2C(=O)OC(C)(C)C)c1"
+            ],
+            "gold_canonical": [
+                "CN(CCN1CCOCC1)S(=O)(=O)c1ccc(N2CCCC2)c(-c2cc3ccccc3n2C(=O)OC(C)(C)C)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.816
+            ],
+            "maccs_similarity": [
+                0.8977272727272727
+            ],
+            "rdk_similarity": [
+                0.9351510685335298
+            ],
+            "levenshtein": [
+                53
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_84",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CN(C)c1ccc(C=Cc2ccc(S(=O)(=O)CCCO)cc2)cc1 (a substituted aniline derivative). Reactant 2: O=S(=O)(CCCOC1CCCOC1)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1 (a substituted phenol derivative). No explicit reagents are provided.\nIdentify Functional Groups: Reactant 1: Aniline moiety (phenylamine), N,N-dimethyl group, alkene group, sulfonic acid group (-S(=O)(=O)CH2CH2OH). Reactant 2: Phenol moiety (-OH), methanesulfonate group (mesylate, -S(=O)(=O)CH3), alkene group, spiro-cy"
+            ],
+            "pred_smiles": [
+                "O=S(=O)(CCCOC1CCCOC1)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+            ],
+            "pred_canonical": [
+                "O=S(=O)(CCCOC1CCCOC1)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+            ],
+            "gold": [
+                "O=S(=O)(CCCO)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+            ],
+            "gold_canonical": [
+                "O=S(=O)(CCCO)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.6979166666666666
+            ],
+            "maccs_similarity": [
+                0.8181818181818182
+            ],
+            "rdk_similarity": [
+                0.8533541341653667
+            ],
+            "levenshtein": [
+                8
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_85",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCCCCc1ccc(Br)cc1 (5-bromopentylbenzene). Reactant 2: C#CC(C)(C)O (tert-butyl acrylate). Reagent 1: Cl[Pd](Cl)([P](c1ccccc1)(c1ccccc1)c1ccccc1)[P](c1ccccc1)(c1ccccc1)c1ccccc1 (Bis(triphenylphosphine)palladium(II) dichloride). Reagent 2: c1ccc(P(c2ccccc2)c2ccccc2)cc1 (Triphenylphosphine). Reagent 3: CCN(CC)CC (Triethylamine). Reagent 4: [C-]#[O+] (Acrylate anion). Reagent 5: [Cu]I (Copper(I) iodide).\nIdentify Functional Groups: Reactant 1: Aryl halide (C-Br b"
+            ],
+            "pred_smiles": [
+                "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+            ],
+            "pred_canonical": [
+                "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+            ],
+            "gold": [
+                "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+            ],
+            "gold_canonical": [
+                "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_86",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCO (ethanol). Reactant 2: Cc1ccc2c(C(=O)O)cccc2n1 (a substituted pyridine derivative with a carboxylic acid group). Reagent 1: O=S(=O)(O)O (sulfuric acid). Reagent 2: ClCCl (dichloromethane).\nIdentify Functional Groups: Reactant 1 (ethanol): Primary alcohol (-OH). Reactant 2 (pyridine derivative): Carboxylic acid (-COOH), substituted pyridine ring. Reagent 1 (sulfuric acid): Strong acid. Reagent 2 (dichloromethane): Polar aprotic solvent.\nPredict Reaction T"
+            ],
+            "pred_smiles": [
+                "Cc1ccc2c(C(=O)OC)cccc2n1"
+            ],
+            "pred_canonical": [
+                "COC(=O)c1cccc2nc(C)ccc12"
+            ],
+            "gold": [
+                "CCOC(=O)c1cccc2nc(C)ccc12"
+            ],
+            "gold_canonical": [
+                "CCOC(=O)c1cccc2nc(C)ccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7755102040816326
+            ],
+            "maccs_similarity": [
+                0.8076923076923077
+            ],
+            "rdk_similarity": [
+                0.947565543071161
+            ],
+            "levenshtein": [
+                1
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_87",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCOC(=O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12 (a methyl ester). Reagent 1: O (water). Reagent 2: O[Na] (sodium hydroxide). Reagent 3: C1COCCO1 (tetrahydrofuran, THF).\nIdentify Functional Groups: Reactant 1: Methyl ester (-COOCH3), pyridine ring, methoxy group (-OCH3), difluoromethyl group (-CF2-). Reagent 1: Water (-OH). Reagent 2: Hydroxide ion (OH-). Reagent 3: Ether (-C-O-C-).\nPredict Reaction Type: The primary reaction is saponification (base-catalyzed"
+            ],
+            "pred_smiles": [
+                "O=C(O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12"
+            ],
+            "pred_canonical": [
+                "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F"
+            ],
+            "gold": [
+                "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F"
+            ],
+            "gold_canonical": [
+                "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_88",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C (Bis(pinacolato)diboron, B2pin2). Reactant 2: Cc1cc(-c2ccccc2)nc2cc(Cl)ccc12 (a substituted pyridine derivative). Reagents: CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1 (a phosphine ligand, specifically XPhos), CC(=O)O[Pd]OC(C)=O (Palladium(II) acetate, a palladium catalyst precursor), CC(=O)O[K] (Potassium acetate, a base), C1CCOC1 (tetrahydrofuran, a solvent), [Cl-] (chloride ion, likely from the palladium precursor o"
+            ],
+            "pred_smiles": [
+                "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+            ],
+            "pred_canonical": [
+                "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+            ],
+            "gold": [
+                "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+            ],
+            "gold_canonical": [
+                "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_89",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O (a molecule containing a primary amide, a carboxylic acid, and a dichlorophenyl group). Reactant 2: CCCN (propan-1-amine). No explicit reagents are given, implying a direct reaction between the two reactants.\nIdentify Functional Groups: Reactant 1: Primary amide (-CONH2), Carboxylic acid (-COOH), Aryl chloride (dichlorophenyl moiety). Reactant 2: Primary amine (-NH2).\nPredict Reaction Type: Nucleophilic "
+            ],
+            "pred_smiles": [
+                "CCNC(=N)NC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O"
+            ],
+            "pred_canonical": [
+                "CCNC(=N)NC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O"
+            ],
+            "gold": [
+                "CCCNC(=O)c1cc(C(=O)NC)c(=O)n(Cc2ccccc2)c1"
+            ],
+            "gold_canonical": [
+                "CCCNC(=O)c1cc(C(=O)NC)c(=O)n(Cc2ccccc2)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.49074074074074076
+            ],
+            "maccs_similarity": [
+                0.6461538461538462
+            ],
+            "rdk_similarity": [
+                0.6475770925110133
+            ],
+            "levenshtein": [
+                23
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_90",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC (a complex molecule containing a Boc-protected amine, a benzyl ether, and a substituted pyridine ring). Reactant 2: Clc1nccc2ccccc12 (2-chloro-5-phenylpyridine). Reagents: Bis(triphenylphosphine)palladium(II) dichloride (PdCl2(PPh3)2), Acetic acid palladium(II) (Pd(OAc)2), Toluene, Cesium carbonate (Cs2CO3), and Acetonitrile (CH3CN).\nIdentify Functional Groups: Reactant 1: Aryl ether (benzyl ether), Boc-protected ami"
+            ],
+            "pred_smiles": [
+                "COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC.Clc1nc(-c2ccc3ccccc2n2)ccccc12"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COc1ccc(-c2noc(C3CCN(C(=O)CNc4nccc5ccccc45)CC3)n2)cc1OC"
+            ],
+            "gold_canonical": [
+                "COc1ccc(-c2noc(C3CCN(C(=O)CNc4nccc5ccccc45)CC3)n2)cc1OC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_91",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCOC(=O)CC(c1ccc(C)c(CO)c1)c1ccc2c(nnn2C)c1C (a methyl ester with a primary alcohol, a phenyl group, and a substituted pyrazole ring). Reactant 2: O=S1(=O)NCCOc2ccncc21 (a cyclic sulfonamide, specifically a 1,3,4-thiadiazine-2,5-dione derivative). No explicit reagents are given, implying a direct reaction between the two reactants.\nIdentify Functional Groups: Reactant 1: Methyl ester (-COOCH3), primary alcohol (-CH2OH), phenyl group, pyrazole ring. Reactant "
+            ],
+            "pred_smiles": [
+                "CCOC(=O)CC(c1ccc(C)c(COS2(=O)NCCOc3ccncc32)c1)c1ccc2c(nnn2C)c1C"
+            ],
+            "pred_canonical": [
+                "CCOC(=O)CC(c1ccc(C)c(CO[SH]2(=O)NCCOc3ccncc32)c1)c1ccc2c(nnn2C)c1C"
+            ],
+            "gold": [
+                "CCOC(=O)CC(c1ccc(C)c(CN2CCOc3ccncc3S2(=O)=O)c1)c1ccc2c(nnn2C)c1C"
+            ],
+            "gold_canonical": [
+                "CCOC(=O)CC(c1ccc(C)c(CN2CCOc3ccncc3S2(=O)=O)c1)c1ccc2c(nnn2C)c1C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7
+            ],
+            "maccs_similarity": [
+                0.8829787234042553
+            ],
+            "rdk_similarity": [
+                0.7775700934579439
+            ],
+            "levenshtein": [
+                17
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_92",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CN1C(=O)C(N)N=C(c2ccccc2)c2ccccc21 (a molecule containing a urea-like structure and a diarylamine moiety). Reactant 2: O=C(O)C(Cc1ccc(Cl)c(Cl)c1)c1ccccc1 (an aromatic carboxylic acid). No explicit reagents are provided.\nIdentify Functional Groups: Reactant 1: Urea derivative (specifically, a carbamate-like urea where one nitrogen is substituted with a methyl group), diarylamine (C-N=C-Ar), aromatic rings. Reactant 2: Carboxylic acid (-COOH), aryl chloride (A"
+            ],
+            "pred_smiles": [
+                "CN1C(=O)C(N)NC(=O)C(Cc1ccc(Cl)c(Cl)c1)c1ccccc1"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CN1C(=O)C(NC(=O)C(Cc2ccc(Cl)c(Cl)c2)c2ccccc2)N=C(c2ccccc2)c2ccccc21"
+            ],
+            "gold_canonical": [
+                "CN1C(=O)C(NC(=O)C(Cc2ccc(Cl)c(Cl)c2)c2ccccc2)N=C(c2ccccc2)c2ccccc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_93",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Cc1ccc(C)c2c(C(C)C)cc(O)nc12 (a substituted pyridine derivative). Reagent 1: O=P(Cl)(Cl)Cl (Phosphorus oxychloride, POCl3). Reactant 2: Cc1ccccc1 (Benzene).\nIdentify Functional Groups: Reactant 1: Pyridine ring (heteroaromatic), methyl group, isopropyl group, hydroxyl group (-OH) attached to the pyridine ring (phenolic-like or enolic-like, activated by the ring nitrogen). Reagent 1: POCl3 (chlorinating agent). Reactant 2: Benzene ring (aromatic).\nPredict Rea"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "pred_canonical": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "gold": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "gold_canonical": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_94",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C (a complex polycyclic molecule containing a substituted pyrazole ring with a fluorophenyl substituent and a lactam group). Reactant 2: CCCI (iodoethane, an alkylating agent).\nIdentify Functional Groups: Reactant 1: Pyrazole ring (with an N-H group), lactam (cyclic amide), fluorophenyl group, alkene (C=C in the polycyclic structure). Reagent: Iodoethane (alkyl iodide).\nPredict Reaction Type: N-alkylation. The nitrogen "
+            ],
+            "pred_smiles": [
+                "CC(C)CC12CCC(c3c1[nC]n(-c1ccccc1F)c3=O)C2(C)C"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCn1c2c(c(=O)n1-c1ccccc1F)C1CCC2(C)C1(C)C"
+            ],
+            "gold_canonical": [
+                "CCCn1c2c(c(=O)n1-c1ccccc1F)C1CCC2(C)C1(C)C"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_95",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Cc1cc(OCC(=O)O)cc(C)c1Cc1ccc(O)c(C(C)C)c1 (a substituted phenol). Reactant 2: CO (methanol). Reagent: N (nitrogen nucleophile, likely from a reaction like the Gabriel synthesis or related to the formation of an N-alkylated amine from the phenol).\nIdentify Functional Groups: Reactant 1: Phenolic -OH, methyl ester (-COOCH3), alkyl groups. Reactant 2: Primary alcohol (-OH). Reagent: Nitrogen atom (nucleophilic).\nPredict Reaction Type: Nucleophilic substitution "
+            ],
+            "pred_smiles": [
+                "Cc1cc(OCC(=O)OC)cc(C)c1Cc1ccc(O)c(C(C)C)c1"
+            ],
+            "pred_canonical": [
+                "COC(=O)COc1cc(C)c(Cc2ccc(O)c(C(C)C)c2)c(C)c1"
+            ],
+            "gold": [
+                "Cc1cc(OCC(N)=O)cc(C)c1Cc1ccc(O)c(C(C)C)c1"
+            ],
+            "gold_canonical": [
+                "Cc1cc(OCC(N)=O)cc(C)c1Cc1ccc(O)c(C(C)C)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.821917808219178
+            ],
+            "maccs_similarity": [
+                0.6511627906976745
+            ],
+            "rdk_similarity": [
+                0.861271676300578
+            ],
+            "levenshtein": [
+                20
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_96",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCCCCCCCCCOC(C)c1ccc(C(=O)OCCCC)cc1 (a molecule containing a tert-butyl ester, a primary alcohol, and a substituted phenyl ring). Reagent 1: O[Na] (Sodium hydroxide). Reagent 2: C1CCOC1 (Ethyl acetate).\nIdentify Functional Groups: Reactant 1: Tert-butyl ester (-C(=O)OC(CH3)3), primary alcohol (-CH2OH), phenyl ring. Reagent 1: Hydroxide ion (OH-), a strong base and nucleophile. Reagent 2: Ethyl acetate (CH3COOCH2CH3), an ester.\nPredict Reaction Type: The prim"
+            ],
+            "pred_smiles": [
+                "CCCCCCCCCOC(C)c1ccc(C(=O)OCC)cc1"
+            ],
+            "pred_canonical": [
+                "CCCCCCCCCOC(C)c1ccc(C(=O)OCC)cc1"
+            ],
+            "gold": [
+                "CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1"
+            ],
+            "gold_canonical": [
+                "CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7638888888888888
+            ],
+            "maccs_similarity": [
+                0.8928571428571429
+            ],
+            "rdk_similarity": [
+                0.9429530201342282
+            ],
+            "levenshtein": [
+                3
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_97",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: CCOC(=O)N=NC(=O)OCC (Ethyl 2-isocyanato-2-oxoacetate). Reactant 2: O=C1NC(=O)c2ccccc21 (1-(1,2,3,4-tetrahydro-1H-benzo[d]azepin-5-yl)ethan-1-one). Reactant 3: OC1CC2CCC1C2 (1,3,5-trimethylpiperazine). Reagent: c1ccc(P(c2ccccc2)c2ccccc2)cc1 (Triphenylphosphine, PPh3).\nIdentify Functional Groups: Reactant 1: Isocyanate (-N=C=O), Ester (-COOEt). Reactant 2: Ketone (C=O), Amide (C=O within a ring). Reactant 3: Secondary amine (-NH-). Reagent: Triphenylphosphine "
+            ],
+            "pred_smiles": [
+                "CCOC(=O)NC(=O)Nc1ccccc1C1C(C)CCN1C1CC2CCC1C2"
+            ],
+            "pred_canonical": [
+                "CCOC(=O)NC(=O)Nc1ccccc1C1C(C)CCN1C1CC2CCC1C2"
+            ],
+            "gold": [
+                "O=C1c2ccccc2C(=O)N1C1CC2CCC1C2"
+            ],
+            "gold_canonical": [
+                "O=C1c2ccccc2C(=O)N1C1CC2CCC1C2"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.36082474226804123
+            ],
+            "maccs_similarity": [
+                0.5079365079365079
+            ],
+            "rdk_similarity": [
+                0.38632326820603907
+            ],
+            "levenshtein": [
+                20
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_98",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(C=O)cnc12 (a complex molecule containing a ketone, a urea, and a substituted phenyl ring). Reactant 2: NCC1CC1 (cyclobutylamine). Reagents: CC(=O)O[BH-](OC(C)=O)OC(C)=O (triacetoxyborohydride anion, a reducing agent), CN1CCCC1=O (cyanoborohydride anion, a reducing agent), CC(=O)O (acetic acid, a solvent), O[Na] (sodium hydroxide, a base), O (water, a solvent), [Na+] (sodium ion, an electrolyte).\nIdentify Functional Group"
+            ],
+            "pred_smiles": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(C(O)cnc12)NCC1CC1"
+            ],
+            "pred_canonical": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2c1N=CC(O)C(NCC1CC1)=C2"
+            ],
+            "gold": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CNCC3CC3)cnc12"
+            ],
+            "gold_canonical": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CNCC3CC3)cnc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.6440677966101694
+            ],
+            "maccs_similarity": [
+                0.803030303030303
+            ],
+            "rdk_similarity": [
+                0.5095492742551566
+            ],
+            "levenshtein": [
+                14
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_99",
+            "pred_raw": [
+                "Parse Reactants/Reagents: Reactant 1: Oc1ccc(OCc2ccccc2)cc1 (a substituted phenol). Reactant 2: CC(C)C(=O)Cl (isobutyl chloroformate). The reagents are c1ccncc1 (pyridine, a base), c1ccncc1 (another molecule of pyridine, likely a catalyst or additive), CCOCC (ethanol, a solvent), O[K] (potassium hydroxide, a base), O (water, a solvent), and Cl (chloride ion, likely from potassium chloride).\nIdentify Functional Groups: Reactant 1 (Oc1ccc(OCc2ccccc2)cc1) contains a phenolic hydroxyl group (-OH) an"
+            ],
+            "pred_smiles": [
+                "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+            ],
+            "pred_canonical": [
+                "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+            ],
+            "gold": [
+                "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+            ],
+            "gold_canonical": [
+                "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        }
+    ]
+}

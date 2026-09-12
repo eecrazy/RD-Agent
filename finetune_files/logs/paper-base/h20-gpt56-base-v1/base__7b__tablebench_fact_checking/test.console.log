@@ -1,0 +1,33 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 02:03:28 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/test/20260828_020328
+08/28 02:03:28 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 02:03:28 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-tablebench_fact_checking/tablebench_fact_checking] on GPU 4
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:44<00:00, 44.25s/it]100%|██████████| 1/1 [00:44<00:00, 44.25s/it]
+08/28 02:04:12 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 02:04:12 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-tablebench_fact_checking/tablebench_fact_checking] on CPU 
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:09<00:00,  9.80s/it]100%|██████████| 1/1 [00:09<00:00,  9.80s/it]
+dataset                   version    metric         mode      base-qwen2.5-7b-instruct-tablebench_fact_checking
+------------------------  ---------  -------------  ------  ---------------------------------------------------
+tablebench_fact_checking  ef7427     accuracy       gen                                                   77.08
+tablebench_fact_checking  ef7427     exact_match    gen                                                   77.08
+tablebench_fact_checking  ef7427     correct_count  gen                                                   37.00
+tablebench_fact_checking  ef7427     total_count    gen                                                   48.00
+08/28 02:04:22 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/test/20260828_020328/summary/summary_20260828_020328.txt
+08/28 02:04:22 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/test/20260828_020328/summary/summary_20260828_020328.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-tablebench_fact_checking |
+|----- | ----- | ----- | ----- | -----|
+| tablebench_fact_checking | ef7427 | accuracy | gen | 77.08 |
+| tablebench_fact_checking | ef7427 | exact_match | gen | 77.08 |
+| tablebench_fact_checking | ef7427 | correct_count | gen | 37.00 |
+| tablebench_fact_checking | ef7427 | total_count | gen | 48.00 |
+
+08/28 02:04:22 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/test/20260828_020328/summary/summary_20260828_020328.md

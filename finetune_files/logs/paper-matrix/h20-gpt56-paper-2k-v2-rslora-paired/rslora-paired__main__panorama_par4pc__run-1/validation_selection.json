@@ -1,0 +1,107 @@
+{
+  "artifact_signature": "1bff169348c381bf053500f32313afe3382cbdb345504f3fc0149724983bb50e",
+  "benchmark": "panorama_par4pc",
+  "benchmark_dataset_path": "pinned/panorama",
+  "candidate_count": 1,
+  "candidate_discovery": {
+    "candidate_filter": null,
+    "include_baseline": false,
+    "include_final_outputs": true
+  },
+  "candidate_set_signature": "3edc16a62d4ac35795cbb92be2b3720f6d4c5725b7900dde58e71b14f8e7fed2",
+  "candidates": [
+    {
+      "accuracy_summary": {
+        "panorama_par4pc": {
+          "custom_score": 61.0,
+          "exact_match": 49.0,
+          "macro_f1": 75.54,
+          "precision": 84.68,
+          "recall": 68.18,
+          "total_count": 100.0
+        }
+      },
+      "candidate_id": "durable_output__rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0__efa7b0ad62f4",
+      "checkpoint_step": null,
+      "formal_training_evidence_signature": "a5dd26df614c1601e7e2b49097f7bce492431c79b85f8cf2f35e2df49168db22",
+      "mean_ordinal_rank": 1.0,
+      "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_par4pc__run-1/workspace/.ft_model_checkpoints/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0/output",
+      "model_relocation": null,
+      "ordinal_ranks": {
+        "macro_f1": 1.0
+      },
+      "selection_metrics": [
+        {
+          "formula": "mean macro_f1 across configured views",
+          "higher_is_better": true,
+          "label": "F1",
+          "metric": "macro_f1",
+          "unit": "percent",
+          "value": 75.54
+        }
+      ],
+      "selection_rank": 1,
+      "selection_signature": "102bf72ca68474965df0fb4a3eb7f28dc540d9790e7943407ee1299ee3314c9b",
+      "source": "durable_output",
+      "workspace_id": "rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0",
+      "worst_ordinal_rank": 1.0
+    }
+  ],
+  "created_at": "2026-09-10T17:49:35.672983+08:00",
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/panorama_par4pc/run-1",
+  "held_out_test_used": false,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "dd4248934e632b43c1953dd476c7d5daf87f011bd2cdbeaebf0756e2064f4071",
+  "schema_version": 1,
+  "search": {
+    "finished_at": "2026-09-10T15:20:02.852910+08:00",
+    "started_at": "2026-09-09T20:31:08.541108+08:00",
+    "state": "succeeded"
+  },
+  "selection": {
+    "accuracy_summary": {
+      "panorama_par4pc": {
+        "custom_score": 61.0,
+        "exact_match": 49.0,
+        "macro_f1": 75.54,
+        "precision": 84.68,
+        "recall": 68.18,
+        "total_count": 100.0
+      }
+    },
+    "candidate_id": "durable_output__rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0__efa7b0ad62f4",
+    "checkpoint_step": null,
+    "formal_training_evidence_signature": "a5dd26df614c1601e7e2b49097f7bce492431c79b85f8cf2f35e2df49168db22",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_par4pc__run-1/workspace/.ft_model_checkpoints/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0/output",
+    "model_relocation": null,
+    "ordinal_ranks": {
+      "macro_f1": 1.0
+    },
+    "selection_metrics": [
+      {
+        "formula": "mean macro_f1 across configured views",
+        "higher_is_better": true,
+        "label": "F1",
+        "metric": "macro_f1",
+        "unit": "percent",
+        "value": 75.54
+      }
+    ],
+    "selection_signature": "102bf72ca68474965df0fb4a3eb7f28dc540d9790e7943407ee1299ee3314c9b",
+    "source": "durable_output",
+    "workspace_id": "rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0",
+    "worst_ordinal_rank": 1.0
+  },
+  "selection_profile": "main",
+  "selection_rule": {
+    "name": "direction-aware mean average ordinal rank",
+    "primary_metrics": [
+      "macro_f1"
+    ],
+    "tie_break": "lowest worst ordinal rank, then stable candidate_id"
+  },
+  "state": "succeeded",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

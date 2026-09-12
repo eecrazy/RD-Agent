@@ -1,0 +1,59 @@
+{
+  "baseline_only": false,
+  "benchmark": "chemcotbench_mol_opt",
+  "candidate_count": 2,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_checkpoint__rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61__step-252__f213f653db27",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-2/validation_sweep/candidates/durable_checkpoint__rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61__step-252__f213f653db27/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61__c0cf8fc6531e",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-2/validation_sweep/candidates/durable_output__rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61__c0cf8fc6531e/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "ee67b2d3f4d35d199a5986eae7448f6b8cf73a1aca8e61e598c69e543f4d9f47",
+  "completed_count": 2,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-2",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "ee67b2d3f4d35d199a5986eae7448f6b8cf73a1aca8e61e598c69e543f4d9f47",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "f27ef36d551230aa23704839e71de627c5a9fa80efcf5c94da27f04068056d12",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61__c0cf8fc6531e",
+    "formal_training_evidence_signature": "6c73704201c6e182e9a69bc3af399b4f966973a23291df3d2b2fe3e7a22dbb81",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-2/workspace/.ft_model_checkpoints/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61/output",
+    "selection_metrics": [
+      {
+        "formula": "unweighted mean success_rate across six optimization views",
+        "higher_is_better": true,
+        "label": "SR",
+        "metric": "success_rate",
+        "unit": "percent",
+        "value": 34.0
+      },
+      {
+        "formula": "unweighted mean valid_smiles_rate across six optimization views",
+        "higher_is_better": true,
+        "label": "VS",
+        "metric": "valid_smiles_rate",
+        "unit": "percent",
+        "value": 81.33333333333333
+      }
+    ],
+    "selection_signature": "98c22b6199d048fa6b1dc683b46bb9ece1580defe399216d16c527c0530bb727"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:16:37.290830+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

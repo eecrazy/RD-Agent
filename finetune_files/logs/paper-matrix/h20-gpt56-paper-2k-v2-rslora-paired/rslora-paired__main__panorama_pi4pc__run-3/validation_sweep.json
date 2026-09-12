@@ -1,0 +1,51 @@
+{
+  "baseline_only": false,
+  "benchmark": "panorama_pi4pc",
+  "candidate_count": 2,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_checkpoint__rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8__step-250__302e29276b07",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_pi4pc__run-3/validation_sweep/candidates/durable_checkpoint__rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8__step-250__302e29276b07/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8__d50a0e59f7d6",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_pi4pc__run-3/validation_sweep/candidates/durable_output__rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8__d50a0e59f7d6/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "029858719a2ecbf580d033a31069f119cac4a34aeb72d81e3819f6f9be610eaa",
+  "completed_count": 2,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/panorama_pi4pc/run-3",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "029858719a2ecbf580d033a31069f119cac4a34aeb72d81e3819f6f9be610eaa",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "dcec0c779e9f19089e2a09cb2a2558e9120d7d06090e000aab4b41d34ada68ce",
+  "provisional_selection": {
+    "candidate_id": "durable_checkpoint__rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8__step-250__302e29276b07",
+    "formal_training_evidence_signature": "8ff88a2575df2259cc20268688fea8342adf849d7f6ecf99d785459769fb9790",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_pi4pc__run-3/workspace/.ft_model_checkpoints/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8/output/checkpoint-250",
+    "selection_metrics": [
+      {
+        "formula": "mean gold_hit_rate across configured views",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "gold_hit_rate",
+        "unit": "percent",
+        "value": 60.0
+      }
+    ],
+    "selection_signature": "4186f9cd20f16bb05659dc086cea72626f363238acbd8cde14442ef71d0625c6"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:18:08.266509+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

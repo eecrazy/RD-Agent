@@ -1,0 +1,64 @@
+{
+  "baseline_only": false,
+  "benchmark": "chemcotbench_reaction",
+  "candidate_count": 3,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_checkpoint__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__step-24__7318579765de",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/validation_sweep/candidates/durable_checkpoint__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__step-24__7318579765de/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399__dbff625ef1db",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/validation_sweep/candidates/durable_output__rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399__dbff625ef1db/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__b28aa7d974b3",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/validation_sweep/candidates/durable_output__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__b28aa7d974b3/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "d6e22bbda67f90e0e06354a41e4860234627a26e23487406611a9dddbb8da25f",
+  "completed_count": 3,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-3",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "d6e22bbda67f90e0e06354a41e4860234627a26e23487406611a9dddbb8da25f",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "a4838bc86a66e79e906f705d463c46fd4632de7cc79b84049223ec6e668f8bd3",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__b28aa7d974b3",
+    "formal_training_evidence_signature": "a87cffb95be0c0dc4088e739ed0fc108d7bc03ffcfc85cf9b769b7b00b5e7478",
+    "mean_ordinal_rank": 1.75,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/workspace/.ft_model_checkpoints/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6/output",
+    "selection_metrics": [
+      {
+        "formula": "mean Morgan fingerprint similarity of fs, retro, and nepp",
+        "higher_is_better": true,
+        "label": "FTS",
+        "metric": "fingerprint_similarity",
+        "unit": "percent",
+        "value": 0.0
+      },
+      {
+        "formula": "mechanism-selection accuracy",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 70.0
+      }
+    ],
+    "selection_signature": "3b547e674a283b7aa9687d1fd6b618b98fd9d59385b978014e9e230f28c23ac8"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:16:41.200939+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

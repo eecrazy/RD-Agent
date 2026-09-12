@@ -1,0 +1,1662 @@
+{
+    "mean_improvement": 0.0,
+    "success_rate": 0.0,
+    "best_rate": 0.0,
+    "valid_smiles_rate": 74.0,
+    "valid_score_rate": 0.0,
+    "scaffold_hard": 22.0,
+    "scaffold_soft": 47.97134338211593,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_50",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a trifluoromethyl group (C(F)(F)F), a branched aliphatic chain (CC(C)CC), an amide linker (C(=O)N), and a nitrile group (C#N) attached to a second benzene ring via a para-substituted biphenyl system. The bulky tert-butyl group (CC(C)CC) and the trifluoromethyl group may hinder binding.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from planar aromatic systems fo"
+            ],
+            "pred_smiles": [
+                "CCCCC(c1ccc(-c2ccc(C#N)cc2)cc1)N(C(=O)NCC#N)c1ccc(Cl)cc1"
+            ],
+            "source_smiles": [
+                "CC(C)CC(NC(c1ccc(-c2ccc(C#N)cc2)cc1)C(F)(F)F)C(=O)NCC#N"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4090909090909091
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_51",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine-like bicyclic system. Key features include: (1) a urea linker (NC(=O)N) connecting the aromatic systems, (2) a hydroxyl group (-OH) and difluoromethyl (-CF2) substituents on the urea nitrogen, (3) a benzyl group (C6H5) attached to the pyrrole nitrogen, and (4) a flexible ethyl chain (CC) linking the urea to the benzyl group.\",\n    \"Property Analysis\": \"GSK3-beta inhibition o"
+            ],
+            "pred_smiles": [
+                "O=C(NCC(O)C(F)F)c1[nH]nc2cc(NC(=O)NCc3ccncc3)ccn12"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(C(=O)NCC(O)C(F)F)c2cn1)c1ccccc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_52",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyridine core (C1=CC=CN1) substituted with an amino group (-NH2) and a biphenyl ether moiety. The biphenyl ether includes a chlorinated phenyl ring connected via an oxygen atom. The structure lacks bulky substituents or hydrogen-bond donors/acceptors beyond the basic amine.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from (1) hydrogen-bond donors/acceptors to interact with the kinase hinge region,"
+            ],
+            "pred_smiles": [
+                "NC(=O)CNCc1ccc(Nc2ccnc(Nc3ccc(Cl)cc3)c2)cc1"
+            ],
+            "source_smiles": [
+                "Nc1ccnc(Nc2ccc(Oc3ccc(Cl)cc3)cc2)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4444444444444444
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_53",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine-like bicyclic system. Key substituents include a urea-linked piperazine group (C(=O)N3CC(=O)N(C)C3) and a benzyl group attached to a tertiary amine. The piperazine moiety introduces two hydrogen-bond acceptors (carbonyl groups) and a tertiary nitrogen.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from planar aromatic systems for target binding, hydrogen-bo"
+            ],
+            "pred_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(NCCO)c2cn1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(C(=O)N3CC(=O)N(C)C3)c2cn1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5079365079365079
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_54",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a benzimidazole core. A urea group (NC(=O)N) links a substituted benzene ring to the fused heterocycle. The side chain includes a hydrophilic ethylene glycol moiety (CCC(O)CO-).\",\n    \"Property Analysis\": \"The urea group likely acts as a hydrogen bond donor/acceptor for GSK3-beta binding. The pyrrole and benzimidazole may engage in π-π stacking. However, the hydrophilic ethylene glyc"
+            ],
+            "pred_smiles": [
+                "CC(C)Nc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "source_smiles": [
+                "CCC(O)COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_55",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thiazole ring (s1) with a substituted phenyl group (c1ccccc1), a carbonyl-linked aniline (C(=O)Nc1ncc...), and a tert-butyl group (C(C)(C)C) attached to an oxazole ring (Sc2ncc...). The sulfur atom (S) and bulky tert-butyl group may limit binding.\",\n    \"Property Analysis\": \"GSK3-beta inhibition requires strong hydrogen bonding (e.g., with hinge region residues) and optimal steric fit. The tert-butyl group in"
+            ],
+            "pred_smiles": [
+                "CC1(C)NC(=O)c2cc(C(=O)Nc3ncc(SCc4ncc(C(C)(C)C)o4)s3)ccc12"
+            ],
+            "source_smiles": [
+                "CC(C(=O)Nc1ncc(SCc2ncc(C(C)(C)C)o2)s1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5303030303030303
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_56",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiophene ring fused to a pyrimidine core, with a methyl group, a flexible ethoxypropylamine side chain (NCCCO), and a second methyl group. The ethoxypropylamine group introduces conformational flexibility and potential metabolic instability.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from rigid, planar heterocycles and hydrogen-bond donors/acceptors. The ethoxypropylamine group may reduce bindin"
+            ],
+            "pred_smiles": [
+                "Cc1sc2ncnc(NCCN3CCNCC3)c2c1C"
+            ],
+            "source_smiles": [
+                "Cc1sc2ncnc(NCCCO)c2c1C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.2765957446808511
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_57",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole core (CSc1n[nH]c2cc...ncc12) with a methyl ether sulfide group (COCSS-) attached to the thiazole nitrogen. The thiazole is substituted with a urea group (NC(=O)NC(C)c3ccccc3) linked to a para-methylphenyl ring.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require planar aromatic systems for ATP-binding pocket interaction and hydrogen-bonding groups (e.g., urea) for kinase hinge-binding. The thiazol"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(Nc2n[nH]c3cc(NC(=O)NCCc4ccccn4)ncc23)cc1"
+            ],
+            "source_smiles": [
+                "COCCSc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4090909090909091
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_58",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core (n1cnc2c...ncnc21) with a tert-butyl group (CC(C)) at position 3 and an aniline-substituted piperazine (NCC3ccccc3) at position 2. The piperazine group introduces flexibility and basicity.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from rigid aromatic/hydrophobic groups for binding and hydrogen-bonding motifs. The aniline (NH-linked benzene) on the piperazine may act as "
+            ],
+            "pred_smiles": [
+                "c1ccccc1-c1nc2c(Nc3ccccc3)ncnc2n1"
+            ],
+            "source_smiles": [
+                "CC(C)n1cnc2c(NCc3ccccc3)ncnc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_59",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with two methoxy groups, a benzyl-linked imidazole derivative (with NH and secondary amine), and a thiophene-containing ethyl chain. The imidazole and thiophene groups may contribute to binding, but the ethyl-thiophene moiety lacks strong hydrogen-bonding or charge interactions.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often requires hydrogen-bond donors/acceptors and planar a"
+            ],
+            "pred_smiles": [
+                "COc1cc(Cc2cnc(N)nc2N)ccc1OCc1ccc(NC2CCOCC2)cc1"
+            ],
+            "source_smiles": [
+                "COc1cc(Cc2cnc(N)nc2N)ccc1OCc1ccc(-c2csnn2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.45614035087719296
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_60",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected to a second benzene ring via a hydroxyl group. The hydroxyl group is further substituted with a 2-bromophenyl ring and a 1H-1,2,4-triazole-5-amine group (Cn2ccnc2). The triazole-amine group may contribute to hydrogen bonding but introduces steric bulk.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require planar aromatic systems for binding affinity and hydrogen-bon"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C(O)(Cn2ccncc2)c2ccc(Br)cc2)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(C(O)(Cn2ccnc2)c2ccc(Br)cc2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_61",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl carbonate group (COC(=O)), a thioether linker (CS), a fluorophenyl group (-c2ccc(F)cc2), and a pyridinyl group (-c2ccncc2) attached to a central thiazole ring (Sc1nc...nH1). The pyridinyl group is a 6-membered aromatic ring with one nitrogen atom.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require planar aromatic systems for ATP-binding pocket interaction and hydrogen-bonding groups for kinase hing"
+            ],
+            "pred_smiles": [
+                "COC(=O)CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(N)c2)[nH]1"
+            ],
+            "source_smiles": [
+                "COC(=O)CSc1nc(-c2ccc(F)cc2)c(-c2ccncc2)[nH]1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_62",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole core (CSc1n[nH]c2cc...ncc12) with a methyl ether sulfide group (COCCS-) attached to the thiazole nitrogen. The thiazole is substituted with a urea group (NC(=O)NC(C)c3ccccc3) linked to a benzyl moiety.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from planar aromatic systems for target binding and hydrogen-bonding groups (e.g., urea) for kinase affinity. The thiazole and benzyl groups may "
+            ],
+            "pred_smiles": [
+                "Cn1c(=O)c2cc(NC(=O)NC(C)c3ccccc3)ncc2n1"
+            ],
+            "source_smiles": [
+                "COCCSc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_63",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine core. Key substituents include a urea group (NC(=O)N), a benzyl group (c1ccccc1), and an ethoxy-linked thiazole group (OCc3cncs3). The thiazole and pyrrole rings may contribute to aromatic stacking, while the urea group provides hydrogen-bonding potential.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often requires optimal hydrogen bonding with the kinase hinge region (e"
+            ],
+            "pred_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(Nc3nccn3)c2cn1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(OCc3cncs3)c2cn1)c1ccccc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_64",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine core. A urea group (NC(=O)N) connects the pyrrole to a benzyl group (c1ccccc1). A morpholine-derived ether (OCC3CCCO3) is attached to the pyrrole via an oxygen atom.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heterocyclic motifs that engage the ATP-binding pocket. The morpholine ether (OCC3CCCO3) may reduc"
+            ],
+            "pred_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(N)c2cn1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(OCC3CCCO3)c2cn1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5076923076923077
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_65",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl-substituted benzene core linked to a 1,2,4-oxadiazole ring. The oxadiazole is substituted with a thioether (-S-CH2-Ph) group, where Ph is a phenyl ring. The benzene and oxadiazole moieties are further modified with a hydroxyl group (-OH).\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heterocyclic motifs that engage with the ATP-binding pocket. "
+            ],
+            "pred_smiles": [
+                "COc1nc(-c2ccc(CSc3nnc(SCc4ccccc4)o3)cc2)cs1"
+            ],
+            "source_smiles": [
+                "Cc1ccc(-c2nnc(SCc3ccccc3)o2)c(O)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5227272727272727
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_66",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with an acetamide group (CC(=O)N-), a dichlorophenyl substituent (-c3c(Cl)cccc3Cl), and a methyl-substituted ketone (C(=O)n(C)). The bicyclic system includes a pyrimidine-like ring fused to a pyrrole-like ring.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heteroaromatic motifs that engage with the kinase's ATP-binding pocket. The acetam"
+            ],
+            "pred_smiles": [
+                "CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n([N+](=O)[O-])c2n1"
+            ],
+            "source_smiles": [
+                "CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_67",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a carboxamide group (C(N)=O) and a benzyl-substituted piperazine-like fragment (NCc3ccccc3). The bicyclic system includes a fused pyrimidine ring (n1nc...ncc1) connected via a methylene bridge (-c2c1-).\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrophobic interactions, hydrogen bonding (via amides/ureas), and aromatic stacking. The carboxamide group may act as a hydrogen"
+            ],
+            "pred_smiles": [
+                "CC1C=C(c2c3c(c2Nc2nc(C(N)=O)n(C)c23)CC2)CCN1C"
+            ],
+            "source_smiles": [
+                "Cn1nc(C(N)=O)c2c1-c1nc(NCc3ccccc3)ncc1CC2"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_68",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a tert-butylamine group, a cyano substituent, and a pyridine-linked aniline moiety. The pyridine (C1=CC=CN1) and aniline (N-H) groups may contribute to hydrogen bonding, while the cyano group enhances electron-withdrawing properties.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often requires strong hydrogen bonding with the kinase hinge region (via heterocyclic cores) and hydrophobic interacti"
+            ],
+            "pred_smiles": [
+                "CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3sccc3S)cc12"
+            ],
+            "source_smiles": [
+                "CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_69",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl-substituted indole scaffold (Cc1cccc2[nH]c...) fused to a pyrrole ring and linked to a pyridine ring (-c3ccccn3). The methyl group (CH3) on the indole is a non-polar substituent.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrogen bond donors/acceptors and polar interactions with the ATP-binding pocket. The methyl group provides hydrophobicity but lacks hydrogen bonding capability.\",\n    \"L"
+            ],
+            "pred_smiles": [
+                "NC(=O)c1cccc2[nH]c(-c3ccccn3)nc12"
+            ],
+            "source_smiles": [
+                "Cc1cccc2[nH]c(-c3ccccn3)nc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_70",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a biphenyl scaffold with a methoxy group (-OCH3) on one phenyl ring and a substituent (-CH2-C(CO)C(NC(=O)Cn2cnnn2)C(=O)O) on the other. The substituent includes a hydroxyl group (-OH), a urea-like linker (NC(=O)), and a 1,2,3-triazole ring (n2cnnn2).\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from (1) hydrogen bond donors/acceptors (e.g., urea, hydroxyl), (2) aromatic/heteroaromatic groups for π-st"
+            ],
+            "pred_smiles": [
+                "COc1ccccc1-c1ccc(CC(NC(=O)Cc2cccnc2)C(=O)O)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccccc1-c1ccc(CC(NC(=O)Cn2cnnn2)C(=O)O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.54
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_71",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central cyclohexane ring substituted with two ethyl ester groups (CCOC(=O)O) and a carbamate-linked benzyl group. The benzyl group is further substituted with a para-methoxyphenyl ring (-c3ccccc3OC).\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require planar aromatic systems for ATP-binding pocket interaction and hydrogen-bond donors/acceptors. The ethyl ester groups may reduce metabolic stability, and the"
+            ],
+            "pred_smiles": [
+                "O=C(NC(Cc1ccc(-c2ccccc2OC)cc1)C1=CC=CN1)C1=CC=CC=C1"
+            ],
+            "source_smiles": [
+                "CCOC(=O)C1(C(=O)NC(Cc2ccc(-c3ccccc3OC)cc2)C(=O)O)CCCO1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3220338983050847
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_72",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central urea scaffold (O=C(N-)(N-)) with a thiazole ring (s1) and a piperidine ring (C1CCCCC1). The thiazole is substituted with a benzyl group (CCN) linked to a bicyclic system (ncnc3ccsc23) resembling a fused pyrimidine-thiazole core.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require planar aromatic systems for ATP-binding pocket interaction and substituents for hydrophobic/π-stacking interactions. The"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ncc(CCNc2nc[nH]cn2)s1)NC1CCCCC1"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ncc(CCNc2ncnc3ccsc23)s1)NC1CCCCC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_73",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a cyanoguanidine group (Cn2c(-c3ccccc3)nc3ccccc32). The cyanoguanidine consists of a cyanide (CN) linked to a bicyclic aromatic system (two benzene rings fused via a fused-triazine-like scaffold).\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and planar aromatic systems for target binding. The cyanide group may act as a hydrog"
+            ],
+            "pred_smiles": [
+                "c1ccc(Cn2c(N4CCN(C)CC4)nc3ccccc32)cc1"
+            ],
+            "source_smiles": [
+                "c1ccc(Cn2c(-c3ccccc3)nc3ccccc32)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5116279069767442
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_74",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected via an amine group to a bicyclic system (pyridine fused to a benzene ring). The bicyclic system is substituted with a pyrrole ring (-c3cccnc3).\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrogen bond donors/acceptors and aromatic/heteroaromatic groups for binding. The pyrrole group (azole) in the source molecule lacks strong hydrogen bond-accepting capac"
+            ],
+            "pred_smiles": [
+                "OCc1cccc(Nc2nc(-c3ccncc3)nc3ccccc23)c1"
+            ],
+            "source_smiles": [
+                "OCc1cccc(Nc2nc(-c3cccnc3)nc3ccccc23)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.717948717948718
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_75",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core substituted with a fluorophenyl group, a methoxy-linked phenyl group, and a methyl group. The fluorophenyl and methoxy-phenyl groups are attached to the pyrimidine via nitrogen atoms, while the methyl group is a substituent on the N1 position.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heteroaromatic motifs that engage with the ATP-"
+            ],
+            "pred_smiles": [
+                "CCOc1nccc(-c2c(-c3ccc(F)cc3)c(=O)n(C)c2Oc2ccccc2)n1"
+            ],
+            "source_smiles": [
+                "Cn1c(-c2ccnc(Oc3ccccc3)n2)c(-c2ccc(F)cc2)c(=O)n1C"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_76",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core with an isopropyl group (C(C)C), an iodine substituent, and a benzylamine side chain (NCH2C6H5). The iodine is positioned at a potential pharmacophore site, and the benzylamine provides lipophilic bulk.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrogen bond donors/acceptors and aromatic/hydrophobic groups for binding. The iodine may contribute to steric hindrance or sub"
+            ],
+            "pred_smiles": [
+                "CC(C)n1cnc2c(NCCc3ccnc3)nc(C=O)nc21"
+            ],
+            "source_smiles": [
+                "CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_77",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzamide scaffold with a substituted bicyclic aromatic system (naphthalene-like core) and a chloro-substituted aromatic ring. Key features include methoxy groups (OC), a urea linker (NC(=O)), and a chlorine atom (Cl) on the aromatic ring.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors (e.g., urea), aromatic stacking groups, and halogen interactions (Cl/Br)"
+            ],
+            "pred_smiles": [
+                "COc1ccc(NC(=O)Cc2c(C)n(C(=O)c3c(ccncc3)c4ccc(OC)cc42)c3ccc(OC)cc3)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(NC(=O)Cc2c(C)n(C(=O)c3ccc(Cl)cc3)c3ccc(OC)cc23)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_78",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine core. Key substituents include a urea-linked benzyl group with a fluorine substituent and a trifluoromethoxyethoxy side chain attached to the pyrrole nitrogen. The pyrrole (C1=CC=CN1) and pyrimidine (C1=NC=CN=C1) rings provide aromaticity and hydrogen-bonding potential.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from (1) hydrogen-bond donors/acceptors to"
+            ],
+            "pred_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(N)c2cn1)c1ccc(F)cc1"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(OCCOC(F)(F)F)c2cn1)c1ccc(F)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_79",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperazine core (1,4-diazacyclohexane) with substituents: a bicyclic fluorinated aromatic system (quinazolinone-like scaffold), a carboxylic acid group, and a cyclopropyl group attached to the piperazine nitrogen. The aromatic system includes two fluorine atoms and an amino group.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from planar aromatic systems for target binding, hydrogen bond donors/acce"
+            ],
+            "pred_smiles": [
+                "CC1CN(c2c(F)c(N)c3c(=O)c(C(=O)O)cn(-c4cccnc4)c3c2F)C(C)CN1"
+            ],
+            "source_smiles": [
+                "CC1CN(c2c(F)c(N)c3c(=O)c(C(=O)O)cn(C4CC4)c3c2F)C(C)CN1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5576923076923077
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_80",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrrole core (C1=CC=CN1) linked to a methoxyethoxy group (COCCO-), a urea-derived substituent (NC(=O)NC(C)c1ccccc1), and a fused bicyclic system. The pyrrole ring lacks substituents that could enhance binding affinity.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrophobic interactions and halogen bonding. The unsubstituted pyrrole in the source molecule limits opportunities for these intera"
+            ],
+            "pred_smiles": [
+                "COCCOc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "source_smiles": [
+                "COCCOc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_81",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzimidazole core (c1nc2ccccc2n1) linked to a pyrazole ring (Nc1nonc1) and a pyridine substituent (Cc1ccncc1). The pyridine group is a six-membered aromatic ring with one nitrogen atom.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrophobic interactions and hydrogen bonding with the kinase's ATP-binding pocket. The pyridine group (C1ccncc1) may lack optimal steric or electronic properties for str"
+            ],
+            "pred_smiles": [
+                "Nc1nonc1-c1nc2ccccc2n1Cc1ccnc(F)c1"
+            ],
+            "source_smiles": [
+                "Nc1nonc1-c1nc2ccccc2n1Cc1ccncc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_82",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central carbamate group (O=C(NR2)) linked to a substituted benzene ring (Cc1ccc(O)cc1), a brominated oxime-containing cyclohexane (C1CC(Br)=NO1), and a phenyl ether (OCc1ccccc1). The oxime group (C=O-N-O) and bromine substituent are potential pharmacophores.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heteroaromatic motifs. The oxime (C=O-N-O) may a"
+            ],
+            "pred_smiles": [
+                "O=C(NC(Cc1ccc(O)cc1)C(=O)Nc1nonc1)OCc1ccccc1"
+            ],
+            "source_smiles": [
+                "O=C(NC(Cc1ccc(O)cc1)C(=O)NCC1CC(Br)=NO1)OCc1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5333333333333333
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_83",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a dimethylaniline core linked via an amide to a benzyl group (NCc2ccccc2). The central amide connects to a secondary amine (NH) with no additional substituents for enhanced binding.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrophobic interactions and steric complementarity in the active site. The benzyl group (ccccc) provides basic hydrophobicity but lacks tailored substituents to optimize "
+            ],
+            "pred_smiles": [
+                "CN(C)c1ccc(C(=O)NCc2cccc(Br)c2)cc1"
+            ],
+            "source_smiles": [
+                "CN(C)c1ccc(C(=O)NCc2ccccc2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_84",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperazine ring (C1CNCCN1) connected to a chlorinated quinazoline core via a propyl linker. The piperazine introduces flexibility and basicity, while the quinazoline provides aromatic stacking potential. The dichlorophenyl group enhances hydrophobic interactions.\",\n    \"Property Analysis\": \"Piperazine's flexibility may reduce binding specificity, and its basicity could lead to off-target interactions or poor membrane"
+            ],
+            "pred_smiles": [
+                "Cc1c[nH]nc1CCCNc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1"
+            ],
+            "source_smiles": [
+                "CN1CCN(CCCNc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6031746031746031
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_85",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyridine moiety (indole-like system), a urea linker (NC(=O)N), a benzyl group (OCc3ccccc3), and a terminal phenyl group. The pyrrole and pyridine rings provide aromaticity and hydrogen-bonding potential.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often requires optimal hydrophobic interactions, hydrogen-bond donors/acceptors, and planar aromatic systems for binding. The urea link"
+            ],
+            "pred_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(CN3CCCCC3O)c2cn1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(OCc3ccccc3)c2cn1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6065573770491803
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_86",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (c1cnc...cn1) linked to a bicyclic substituent (-c2c[nH]c3ncnc(N4CCOCC4)c23). The substituent includes a pyrrole ring ([nH]) fused to a pyrimidine ring, with a morpholine group (N4CCOCC4) attached via an NH linker.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from (1) planar aromatic systems for target binding, (2) hydrogen-bond donors/acceptors for kinase hinge interaction, and (3)"
+            ],
+            "pred_smiles": [
+                "c1cnc(-c2c[nH]c3ncnc(N4CCCC4)c23)cn1"
+            ],
+            "source_smiles": [
+                "c1cnc(-c2c[nH]c3ncnc(N4CCOCC4)c23)cn1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.8181818181818182
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_87",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring (ncnc) linked to two methoxy-substituted benzene rings. The substituent at the meta-position of the pyrimidine is a secondary amine (NC(C)C) with a methyl group on the nitrogen.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrogen bond donors/acceptors and hydrophobic interactions. The secondary amine (NC(C)C) provides moderate hydrophobicity but lacks strong hydrogen bondin"
+            ],
+            "pred_smiles": [
+                "COc1cc2ncnc(N)c2cc1OC"
+            ],
+            "source_smiles": [
+                "COc1cc2ncnc(NC(C)C)c2cc1OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_88",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzothiazole core linked to a benzylthioacetamide group (NC(=O)CSc1ccccc1). The benzothiazole provides aromaticity and potential hydrogen-bonding via the sulfur atom, while the benzylthio group contributes hydrophobicity.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often requires hydrogen-bond donors/acceptors and balanced hydrophobicity. The benzylthio group (CSc1ccccc1) lacks hydrogen-bond"
+            ],
+            "pred_smiles": [
+                "COc1ccc2nc(NC(=O)C(Nc3ccccc3)C(N)=O)sc2c1"
+            ],
+            "source_smiles": [
+                "COc1ccc2nc(NC(=O)CSc3ccccc3)sc2c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6590909090909091
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_89",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperazine ring (1,4-diazacyclohexane) substituted with an ethyl group and a fluorinated aromatic system with ketone and carboxylic acid groups. The aromatic system includes a fused bicyclic structure with a pyrrole-like nitrogen (C1=CC=CN1) in the bridgehead position.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from planar aromatic systems for target binding and hydrogen-bonding groups (e.g., ket"
+            ],
+            "pred_smiles": [
+                "O=C(O)c1c(C2=CC=CN2)c(=O)c2cc(F)cc(OC)c2n1C"
+            ],
+            "source_smiles": [
+                "CCN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.11666666666666667
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_90",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (S(=O)(=O)N), a nitrooxy group (C(=O)NO), a ketone (cc1=O), and a fluorinated aromatic ring (-c2ccc(F)cc2) attached to a central piperazine-like scaffold (n1ccc...cc1). The nitrooxy group and sulfonamide are potential pharmacophores for GSK3-beta inhibition.\",\n    \"Property Analysis\": \"The nitrooxy group (C(=O)NO) may contribute to metabolic instability and suboptimal binding interactions. The sulfo"
+            ],
+            "pred_smiles": [
+                "CC(CCn1ccc(-c2ccc(F)cc2)cc1=O)(C(=O)c2ccc(Cl)cc2)S(C)(=O)=O"
+            ],
+            "source_smiles": [
+                "CC(CCn1ccc(-c2ccc(F)cc2)cc1=O)(C(=O)NO)S(C)(=O)=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.28888888888888886
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_91",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an aniline group (N-linked benzene), a central amide-linked benzene ring, and a cyanomethyl-substituted pyrrole ring (via -CN- linkage). The pyrrole (C1=CC=CN1) is a 5-membered aromatic heterocycle with one nitrogen atom.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from (1) hydrogen-bond donors/acceptors (e.g., amides), (2) aromatic stacking groups, and (3) basic nitrogen atoms for kinase binding. T"
+            ],
+            "pred_smiles": [
+                "Nc1ccccc1NC(=O)c1ccc(-c2ccncc2)cc1"
+            ],
+            "source_smiles": [
+                "Nc1ccccc1NC(=O)c1ccc(CNc2ncccn2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5365853658536586
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_92",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a fused bicyclic system with a pyridone ring and a substituted piperazine ring (N2CCCC(N)C2). Key features include methoxy (COc1), fluorine (F), amine (NH), carboxylic acid (C(=O)O), and a cyclopropyl group (C3CC3) attached to the nitrogen in the pyridone ring.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from aromatic/hydrophobic interactions, hydrogen bonding (e.g., with backbone NH of Val135), and"
+            ],
+            "pred_smiles": [
+                "COc1c(N2CCCC(N)C2)c(F)c(N)c2c(=O)c(C(=O)O)cn(Cc3ccccc3)c12"
+            ],
+            "source_smiles": [
+                "COc1c(N2CCCC(N)C2)c(F)c(N)c2c(=O)c(C(=O)O)cn(C3CC3)c12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5625
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_93",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core (ncnc fused to a benzene ring) with two methoxy (-OCH3) substituents. The substituent at the exocyclic amino group is a branched alkyl chain (tert-butyl).\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and planar aromatic systems for target binding. The tert-butyl group may introduce steric hindrance, reducing binding efficiency.\",\n    \"Li"
+            ],
+            "pred_smiles": [
+                "COc1cc2ncnc(NCC(C)CN)c2cc1OC"
+            ],
+            "source_smiles": [
+                "CCC(C)Nc1ncnc2cc(OC)c(OC)cc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_94",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a benzene ring, with a methoxy group (COc1), a urea linker (NC(=O)N), and a para-substituted benzyl group (C(C)c3ccccc3) attached to the urea. The pyrrole and benzene rings contribute aromaticity and planar geometry.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often requires hydrophobic interactions, hydrogen bonding (via urea), and optimal steric fit. The pyrrole's electron-ric"
+            ],
+            "pred_smiles": [
+                "COc1cc2[nH]nc(NC(=O)NC(C)c3ccccc3)c2cc1C"
+            ],
+            "source_smiles": [
+                "COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_95",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl ether group (COC(C)(C)CO-), a triazole ring (c1n[nH]c2), and a urea-linked benzyl group (NC(=O)NC(C)c3ccccc3). The triazole has a hydrogen-bond donor (n[nH]) and aromatic systems that may interact with GSK3-beta.\",\n    \"Property Analysis\": \"The urea group (NC(=O)N-) provides hydrogen-bonding capacity for kinase inhibition. The benzyl group (C(C)c3ccccc3) contributes hydrophobicity but lacks optimal spatial int"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1cc2[nH]c3cc(NC(=O)NC(C)c4ccccc4)ncc23)c1ccncc1"
+            ],
+            "source_smiles": [
+                "COC(C)(C)COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_96",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring substituted with two phenyl groups and linked to a benzene ring. The pyrrole's NH group may act as a hydrogen bond donor, while the phenyl groups provide hydrophobicity and structural rigidity.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrogen bond donors/acceptors, aromatic stacking groups, and basic nitrogen atoms for binding. The pyrrole NH and phenyl groups contribute to"
+            ],
+            "pred_smiles": [
+                "c1nc(-c2ccccc2)c(-c2ccccc2)[nH]1-c1ccncc1"
+            ],
+            "source_smiles": [
+                "c1ccc(-c2nc(-c3ccccc3)c(-c3ccccc3)[nH]2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_97",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine core. Key substituents include a trifluoromethyl-piperazine group (CNCC(F)(F)F) and a benzyl group attached to a secondary amine. The pyrrole and pyrimidine rings provide aromaticity and hydrogen-bonding potential.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often requires optimal hydrophobic interactions, hydrogen-bonding groups, and planar aromatic systems for binding"
+            ],
+            "pred_smiles": [
+                "NC(=O)c1cc2[nH]nc(CNCC(F)(F)F)c2cn1C(N)=O"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)(F)F)c2cn1)c1ccccc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_98",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzophenone scaffold with an acetyl group (CO) at position 1 and a substituted biphenyl system. The biphenyl system includes a morpholine-linked pyridine ring bearing a nitro group ([N+](=O)[O-]) at position 4. The nitro group is electron-withdrawing and may reduce binding affinity due to unfavorable electronic effects.\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrogen bond donors/accep"
+            ],
+            "pred_smiles": [
+                "CC(=O)c1ccc(-c2cccc(COC3COc4nc(O)cn4C3)c2)cc1"
+            ],
+            "source_smiles": [
+                "CC(=O)c1ccc(-c2cccc(COC3COc4nc([N+](=O)[O-])cn4C3)c2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_gsk_99",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrrole ring (C1=CCNCC1) linked to a substituted benzofuran moiety (CCc1[nH]c2ccc(OC)cc2c1). The pyrrole is a 5-membered aromatic ring with one nitrogen atom, while the benzofuran includes a hydroxymethyl group (OC).\",\n    \"Property Analysis\": \"GSK3-beta inhibitors often require hydrogen bond donors/acceptors and aromatic interactions. The pyrrole's NH group may act as a weak hydrogen bond donor, but its limited pola"
+            ],
+            "pred_smiles": [
+                "CCc1[nH]c2ccc(OC)cc2c1C1=CC=CN1"
+            ],
+            "source_smiles": [
+                "CCc1[nH]c2ccc(OC)cc2c1C1=CCNCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4473684210526316
+            ],
+            "correct": [
+                false
+            ]
+        }
+    ]
+}

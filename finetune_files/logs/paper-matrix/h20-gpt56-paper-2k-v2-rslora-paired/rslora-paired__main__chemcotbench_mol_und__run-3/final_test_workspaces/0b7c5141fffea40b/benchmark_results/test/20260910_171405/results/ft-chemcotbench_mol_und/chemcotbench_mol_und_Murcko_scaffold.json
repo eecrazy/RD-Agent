@@ -1,0 +1,226 @@
+{
+    "tanimoto_similarity_larger_means_better": 0.2596511119700844,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCC2)n1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCC2)n1\nCore ring identification: Indole (fused benzene and pyrrole rings) and pyrimidine rings\nScaffold analysis: Indole connected to pyrimidine via single bond (O=C(c1cc2ccccc2n1)nc1cccn2)\nMatching analysis: Scaffold matches stripped core rings (indole and pyrimidine) and connecting bonds, ignoring substituents (methyl, Cl, piperidine)\n{\"Output Scaffold\":\"O=C(c1cc2ccccc2n1)nc1cccn2\"}",
+            "predictions": "Input structure: Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCC2)n1\nCore ring identification: Indole (fused benzene and pyrrole rings) and pyrimidine rings\nScaffold analysis: Indole connected to pyrimidine via single bond (O=C(c1cc2ccccc2n1)nc1cccn2)\nMatching analysis: Scaffold matches stripped core rings (indole and pyrimidine) and connecting bonds, ignoring substituents (methyl, Cl, piperidine)\n{\"Output Scaffold\":\"O=C(c1cc2ccccc2n1)nc1cccn2\"}",
+            "references": "c1ccc2c(-c3ccnc(N4CCCC4)n3)c[nH]c2c1"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1\nCore ring identification: cyclohexane (C1CCCO1), benzene (c1cccccc1), benzamide (c1ccccc1)\nScaffold analysis: Murcko scaffold retains cyclohexane, benzene, benzamide rings and connecting bonds (C=C, N-C=O), excluding nitro group\nMatching analysis: Scaffold matches after removing nitro ([N+](=O)[O-]) side chain\n{\"Output Scaffold\":\"O=C(NCC1CCCO1)C(=Cc1cccccc1)NC(=O)c1ccccc1\"}",
+            "predictions": "Input structure: O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1\nCore ring identification: cyclohexane (C1CCCO1), benzene (c1cccccc1), benzamide (c1ccccc1)\nScaffold analysis: Murcko scaffold retains cyclohexane, benzene, benzamide rings and connecting bonds (C=C, N-C=O), excluding nitro group\nMatching analysis: Scaffold matches after removing nitro ([N+](=O)[O-]) side chain\n{\"Output Scaffold\":\"O=C(NCC1CCCO1)C(=Cc1cccccc1)NC(=O)c1ccccc1\"}",
+            "references": "O=C(NCC1CCCO1)C(=Cc1ccccc1)NC(=O)c1ccccc1"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCCC(O)C3)nc21.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCCC(O)C3)nc21\nCore ring identification: Identified fused benzene and pyrimidine rings (indazole core) with substituents (F, N-methyl, hydroxyl).\nScaffold analysis: Murcko scaffold is the indazole ring system (c1ccc2c(c1)Nc1ccnc21) after removing substituents.\nMatching analysis: The input molecule's core matches the provided Murcko scaffold structure.\n{\"Output Scaffold\":\"c1ccc2c(c1)Nc1ccnc21\"}",
+            "predictions": "Input structure: Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCCC(O)C3)nc21\nCore ring identification: Identified fused benzene and pyrimidine rings (indazole core) with substituents (F, N-methyl, hydroxyl).\nScaffold analysis: Murcko scaffold is the indazole ring system (c1ccc2c(c1)Nc1ccnc21) after removing substituents.\nMatching analysis: The input molecule's core matches the provided Murcko scaffold structure.\n{\"Output Scaffold\":\"c1ccc2c(c1)Nc1ccnc21\"}",
+            "references": "O=c1[nH]c2nc(N3CCCCC3)ncc2cc1Oc1ccccc1"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: COc1cc2nc(N3CCN(C(=O)C(F)=Cc4ccccc4)CC3)nc(N)c2cc1OC.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: COc1cc2nc(N3CCN(C(=O)C(F)=Cc4ccccc4)CC3)nc(N)c2cc1OC\nCore ring identification: pyrimidine (nc(N)c2cc1), piperazine (N3CCNCC3), benzene (c4ccccc4)\nScaffold analysis: pyrimidine linked to piperazine (via N) and benzene (via C=O bond), excluding methoxy groups\nMatching analysis: Scaffold matches after removing methoxy groups (OCH3) from input rings\n{\"Output Scaffold\": \"O=C(Cc1ccccc1)N1CCN(c2ccncn2)CC1\"}",
+            "predictions": "Input structure: COc1cc2nc(N3CCN(C(=O)C(F)=Cc4ccccc4)CC3)nc(N)c2cc1OC\nCore ring identification: pyrimidine (nc(N)c2cc1), piperazine (N3CCNCC3), benzene (c4ccccc4)\nScaffold analysis: pyrimidine linked to piperazine (via N) and benzene (via C=O bond), excluding methoxy groups\nMatching analysis: Scaffold matches after removing methoxy groups (OCH3) from input rings\n{\"Output Scaffold\": \"O=C(Cc1ccccc1)N1CCN(c2ccncn2)CC1\"}",
+            "references": "O=C(C=Cc1ccccc1)N1CCN(c2ncc3ccccc3n2)CC1"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1\nCore ring identification: Two benzene rings (c1ccccc1 and c2ccccc2) connected via ester (O=C(O)) and amide (C(=O)N) groups.\nScaffold analysis: Murcko scaffold retains benzene rings linked by ester and amide groups, excluding side chains (propyl, sulfonyl).\nMatching analysis: Scaffold matches after removing side chains (propyl, sulfonyl) and retaining core rings/connectors.\n{\"Output Scaffold\":\"O=C(O)c1ccccc1N(COCC(=O)c2ccccc2)C1\"}",
+            "predictions": "Input structure: CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1\nCore ring identification: Two benzene rings (c1ccccc1 and c2ccccc2) connected via ester (O=C(O)) and amide (C(=O)N) groups.\nScaffold analysis: Murcko scaffold retains benzene rings linked by ester and amide groups, excluding side chains (propyl, sulfonyl).\nMatching analysis: Scaffold matches after removing side chains (propyl, sulfonyl) and retaining core rings/connectors.\n{\"Output Scaffold\":\"O=C(O)c1ccccc1N(COCC(=O)c2ccccc2)C1\"}",
+            "references": "O=C(OCN1C(=O)CC1S(=O)(=O)c1ccccc1)c1ccccc1"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(O)Cc1ccc2c(c1)C(O)(C(F)(F)F)c1ccccc1-2.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: O=C(O)Cc1ccc2c(c1)C(O)(C(F)(F)F)c1ccccc1-2\nCore ring identification: Two benzene rings connected via a single bond (benzo[a]heptalen system) with a hydroxyl group and trifluoromethyl substituent.\nScaffold analysis: Murcko scaffold is the fused bicyclic system (benzo[a]heptalen) without substituents (hydroxyl, trifluoromethyl).\nMatching analysis: The input molecule's core matches the provided Murcko scaffold after removing side chains (hydroxyl, trifluoromethyl).\n{\"Output Scaffold\":\"c1ccc2c(c1)C1CCc3ccccc3-2\"}",
+            "predictions": "Input structure: O=C(O)Cc1ccc2c(c1)C(O)(C(F)(F)F)c1ccccc1-2\nCore ring identification: Two benzene rings connected via a single bond (benzo[a]heptalen system) with a hydroxyl group and trifluoromethyl substituent.\nScaffold analysis: Murcko scaffold is the fused bicyclic system (benzo[a]heptalen) without substituents (hydroxyl, trifluoromethyl).\nMatching analysis: The input molecule's core matches the provided Murcko scaffold after removing side chains (hydroxyl, trifluoromethyl).\n{\"Output Scaffold\":\"c1ccc2c(c1)C1CCc3ccccc3-2\"}",
+            "references": "c1ccc2c(c1)Cc1ccccc1-2"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1\nCore ring identification: 1,8-naphthyridine ring system (two fused rings: six-membered pyridine and five-membered oxygen-containing ring)\nScaffold analysis: O=C1CCN(c2ccc(C(C)=NO)cc2)C(=O)C1 (1,8-naphthyridine core with C(C)=NO substituent)\nMatching analysis: Scaffold matches the input molecule's core rings and connecting bonds after removing side chains (CC(=O)NCC group)\n{\"Output Scaffold\":\"O=C1CCN(c2ccc(C(C)=NO)cc2)C(=O)C1\"}",
+            "predictions": "Input structure: CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1\nCore ring identification: 1,8-naphthyridine ring system (two fused rings: six-membered pyridine and five-membered oxygen-containing ring)\nScaffold analysis: O=C1CCN(c2ccc(C(C)=NO)cc2)C(=O)C1 (1,8-naphthyridine core with C(C)=NO substituent)\nMatching analysis: Scaffold matches the input molecule's core rings and connecting bonds after removing side chains (CC(=O)NCC group)\n{\"Output Scaffold\":\"O=C1CCN(c2ccc(C(C)=NO)cc2)C(=O)C1\"}",
+            "references": "O=C1OCCN1c1ccccc1"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12\nCore ring identification: Identified fused quinazoline (two fused benzene rings with two nitrogens) and pyridine rings.\nScaffold analysis: Murcko scaffold retains fused quinazoline and pyridine rings connected via NCCN bridge, excluding side chains (propyl, cyano).\nMatching analysis: Provided scaffold matches the core rings and connecting bonds after removing side chains.\n{\"Output Scaffold\":\"O=C(NCc1cccnc1)Nc1ccnc2cnc1cc1ccccc12\"}",
+            "predictions": "Input structure: CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12\nCore ring identification: Identified fused quinazoline (two fused benzene rings with two nitrogens) and pyridine rings.\nScaffold analysis: Murcko scaffold retains fused quinazoline and pyridine rings connected via NCCN bridge, excluding side chains (propyl, cyano).\nMatching analysis: Provided scaffold matches the core rings and connecting bonds after removing side chains.\n{\"Output Scaffold\":\"O=C(NCc1cccnc1)Nc1ccnc2cnc1cc1ccccc12\"}",
+            "references": "c1cncc(CNc2cc3cccnc3cn2)c1"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2F)CC1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2F)CC1\nCore ring identification: benzene (c1ccc...cc1), piperazine (N1CCN...CC1), benzene (c2ccccc2)\nScaffold analysis: benzene linked to piperazine, which is connected to benzene (O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2)CC1)\nMatching analysis: scaffold matches after removing fluorine substituent from benzene in piperazine ring\n{\"Output Scaffold\":\"O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2)CC1\"}",
+            "predictions": "Input structure: O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2F)CC1\nCore ring identification: benzene (c1ccc...cc1), piperazine (N1CCN...CC1), benzene (c2ccccc2)\nScaffold analysis: benzene linked to piperazine, which is connected to benzene (O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2)CC1)\nMatching analysis: scaffold matches after removing fluorine substituent from benzene in piperazine ring\n{\"Output Scaffold\":\"O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2)CC1\"}",
+            "references": "O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2)CC1"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1ccnc(Oc2ccccc2-c2ccc(-c3cnc(N)nc3)c(F)c2)n1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: Cc1ccnc(Oc2ccccc2-c2ccc(-c3cnc(N)nc3)c(F)c2)n1\nCore ring identification: pyrimidine (n1ccncn1), benzene (c2ccccc2), pyrimidine (c3cncnc3)\nScaffold analysis: O=c1cc(-c2ccncn2-c2ccccc2)cc11-c1ccncn1 (benzene linked to two pyrimidine rings via single bonds)\nMatching analysis: Scaffold matches after removing methyl, fluorine, and amine substituents, retaining core rings and connecting bonds.\n{\"Output Scaffold\":\"O=c1cc(-c2ccncn2-c2ccccc2)cc11-c1ccncn1\"}",
+            "predictions": "Input structure: Cc1ccnc(Oc2ccccc2-c2ccc(-c3cnc(N)nc3)c(F)c2)n1\nCore ring identification: pyrimidine (n1ccncn1), benzene (c2ccccc2), pyrimidine (c3cncnc3)\nScaffold analysis: O=c1cc(-c2ccncn2-c2ccccc2)cc11-c1ccncn1 (benzene linked to two pyrimidine rings via single bonds)\nMatching analysis: Scaffold matches after removing methyl, fluorine, and amine substituents, retaining core rings and connecting bonds.\n{\"Output Scaffold\":\"O=c1cc(-c2ccncn2-c2ccccc2)cc11-c1ccncn1\"}",
+            "references": "c1cnc(Oc2ccccc2-c2ccc(-c3cncnc3)cc2)nc1"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)c1ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CC(NC(=O)Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)c1ccccc1\nCore ring identification: Pyrazolo[4,3-c]pyridine ring fused with pyridine and benzene rings\nScaffold analysis: Murcko scaffold retains pyrazolo-pyridine core linked to benzene via NC(C) and pyridine via N\nMatching analysis: Scaffold matches after removing ethyl side chain and retaining core rings/connectors\n{\"Output Scaffold\":\"O=C(NCc1ccccc1)Nc1cc2[nH]ncc2cn1\"}",
+            "predictions": "Input structure: CC(NC(=O)Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)c1ccccc1\nCore ring identification: Pyrazolo[4,3-c]pyridine ring fused with pyridine and benzene rings\nScaffold analysis: Murcko scaffold retains pyrazolo-pyridine core linked to benzene via NC(C) and pyridine via N\nMatching analysis: Scaffold matches after removing ethyl side chain and retaining core rings/connectors\n{\"Output Scaffold\":\"O=C(NCc1ccccc1)Nc1cc2[nH]ncc2cn1\"}",
+            "references": "O=C(NCc1ccccc1)Nc1cc2[nH]nc(NCc3ccccn3)c2cn1"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: COc1ccc(C(=O)NC(C)c2nccs2)cc1OC1CCN(C(C)C)CC1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: COc1ccc(C(=O)NC(C)c2nccs2)cc1OC1CCN(C(C)C)CC1\nCore ring identification: benzene ring (c1ccc...cc1) and thiazole ring (c2nccs2)\nScaffold analysis: benzene connected to thiazole via carbonyl (O=C(c1ccccc1)n1ccs1)\nMatching analysis: scaffold matches after removing methoxy, tert-butyl, and amide side chains\n{\"Output Scaffold\":\"O=C(c1ccccc1)n1ccs1\"}",
+            "predictions": "Input structure: COc1ccc(C(=O)NC(C)c2nccs2)cc1OC1CCN(C(C)C)CC1\nCore ring identification: benzene ring (c1ccc...cc1) and thiazole ring (c2nccs2)\nScaffold analysis: benzene connected to thiazole via carbonyl (O=C(c1ccccc1)n1ccs1)\nMatching analysis: scaffold matches after removing methoxy, tert-butyl, and amide side chains\n{\"Output Scaffold\":\"O=C(c1ccccc1)n1ccs1\"}",
+            "references": "O=C(NCc1nccs1)c1cccc(OC2CCNCC2)c1"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: C=Cc1ccc(C2CC3CCC(C2C(=O)OC)N3C)cc1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: C=Cc1ccc(C2CC3CCC(C2C(=O)OC)N3C)cc1\nCore ring identification: benzene ring (c1ccc...cc1), tricyclic system (C2CC3CCC...N3C)\nScaffold analysis: benzene connected to tricyclic system (c1ccc(C2CC3CCC(C2N3C)N3C)cc1)\nMatching analysis: scaffold matches after removing prop-2-enyl and acetic acid side chains\n{\"Output Scaffold\":\"c1ccc(C2CC3CCC(C2N3C)N3C)cc1\"}",
+            "predictions": "Input structure: C=Cc1ccc(C2CC3CCC(C2C(=O)OC)N3C)cc1\nCore ring identification: benzene ring (c1ccc...cc1), tricyclic system (C2CC3CCC...N3C)\nScaffold analysis: benzene connected to tricyclic system (c1ccc(C2CC3CCC(C2N3C)N3C)cc1)\nMatching analysis: scaffold matches after removing prop-2-enyl and acetic acid side chains\n{\"Output Scaffold\":\"c1ccc(C2CC3CCC(C2N3C)N3C)cc1\"}",
+            "references": "c1ccc(C2CC3CCC(C2)N3)cc1"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1\nCore ring identification: benzene ring (c1ccc...cc1), piperidine (C2CCN...C2), pyrimidine (c3nc...ncc3)\nScaffold analysis: benzene connected to piperidine linked to pyrimidine (c1ccc(OC2CCN(c3ncncc3)C2)cc1)\nMatching analysis: Source molecule's core rings (benzene, piperidine, pyrimidine) match the provided Murcko scaffold after removing side chains (acetamide, fluorine, etc.).\n{\"Output Scaffold\":\"c1ccc(OC2CCN(c3ncncc3)C2)cc1\"}",
+            "predictions": "Input structure: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1\nCore ring identification: benzene ring (c1ccc...cc1), piperidine (C2CCN...C2), pyrimidine (c3nc...ncc3)\nScaffold analysis: benzene connected to piperidine linked to pyrimidine (c1ccc(OC2CCN(c3ncncc3)C2)cc1)\nMatching analysis: Source molecule's core rings (benzene, piperidine, pyrimidine) match the provided Murcko scaffold after removing side chains (acetamide, fluorine, etc.).\n{\"Output Scaffold\":\"c1ccc(OC2CCN(c3ncncc3)C2)cc1\"}",
+            "references": "c1ccc(OC2CCN(c3ccnc(N4CCCC4)n3)C2)cc1"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(C)C(=O)NC1CCN(Cc2ccccc2)CC1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CC(C)C(=O)NC1CCN(Cc2ccccc2)CC1\nCore ring identification: piperidine ring (N1CCNCC1) and benzene ring (c2ccccc2)\nScaffold analysis: piperidine linked to benzene via methylene (N1CCN(Cc2ccccc2)CC1)\nMatching analysis: Source molecule contains the specified Murcko scaffold after removing side chains (isopropyl, carbonyl).\n{\"Output Scaffold\":\"N1CCN(Cc2ccccc2)CC1\"}",
+            "predictions": "Input structure: CC(C)C(=O)NC1CCN(Cc2ccccc2)CC1\nCore ring identification: piperidine ring (N1CCNCC1) and benzene ring (c2ccccc2)\nScaffold analysis: piperidine linked to benzene via methylene (N1CCN(Cc2ccccc2)CC1)\nMatching analysis: Source molecule contains the specified Murcko scaffold after removing side chains (isopropyl, carbonyl).\n{\"Output Scaffold\":\"N1CCN(Cc2ccccc2)CC1\"}",
+            "references": "c1ccc(CN2CCCCC2)cc1"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1c(-c2ccc(O)cc2)n(Cc2ccc(O)cc2)c2ccc(O)cc12.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: Cc1c(-c2ccc(O)cc2)n(Cc2ccc(O)cc2)c2ccc(O)cc12\nCore ring identification: Two benzene rings connected via a triazole ring (with methyl and hydroxyl substituents).\nScaffold analysis: Murcko scaffold retains the triazole ring and two benzene rings linked by single bonds, excluding substituents (methyl, hydroxyl).\nMatching analysis: Provided scaffold matches the core rings and connectivity after removing side chains.\n{\"Output Scaffold\":\"c1ccc(-c2cn(Cc3ccccc3)-c3ccccc3)cc1\"}",
+            "predictions": "Input structure: Cc1c(-c2ccc(O)cc2)n(Cc2ccc(O)cc2)c2ccc(O)cc12\nCore ring identification: Two benzene rings connected via a triazole ring (with methyl and hydroxyl substituents).\nScaffold analysis: Murcko scaffold retains the triazole ring and two benzene rings linked by single bonds, excluding substituents (methyl, hydroxyl).\nMatching analysis: Provided scaffold matches the core rings and connectivity after removing side chains.\n{\"Output Scaffold\":\"c1ccc(-c2cn(Cc3ccccc3)-c3ccccc3)cc1\"}",
+            "references": "c1ccc(Cn2c(-c3ccccc3)cc3ccccc32)cc1"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12\nCore ring identification: Identified fused quinoline (benzene fused to pyridine) and benzene rings connected via a single bond.\nScaffold analysis: Murcko scaffold retains fused quinoline and benzene rings (c1ccc2c(c1)ccc(-c3ccccc3)cc2) after removing hydroxyl groups.\nMatching analysis: Scaffold matches the core rings and connectivity in the input molecule after side chain removal.\n{\"Output Scaffold\":\"c1ccc2c(c1)ccc(-c3ccccc3)cc2\"}",
+            "predictions": "Input structure: O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12\nCore ring identification: Identified fused quinoline (benzene fused to pyridine) and benzene rings connected via a single bond.\nScaffold analysis: Murcko scaffold retains fused quinoline and benzene rings (c1ccc2c(c1)ccc(-c3ccccc3)cc2) after removing hydroxyl groups.\nMatching analysis: Scaffold matches the core rings and connectivity in the input molecule after side chain removal.\n{\"Output Scaffold\":\"c1ccc2c(c1)ccc(-c3ccccc3)cc2\"}",
+            "references": "O=c1cc(-c2ccccc2)oc2c1ccc1ccccc12"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1ccc(-c2nnc(SCc3ccccc3)o2)c(O)c1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: Cc1ccc(-c2nnc(SCc3ccccc3)o2)c(O)c1\nCore ring identification: benzene (c1ccc...c1), 1,3,4-oxadiazole (c2nnc...o2), benzene (c3ccccc3)\nScaffold analysis: benzene connected to 1,3,4-oxadiazole (via N) and benzyl (via S-CH2), excluding methyl and hydroxyl groups\nMatching analysis: scaffold matches after removing side chains (methyl, hydroxyl) and retaining core rings/connectors\n{\"Output Scaffold\":\"c1ccc(-c2nnc(SCc3ccccc3)o2)cc1\"}",
+            "predictions": "Input structure: Cc1ccc(-c2nnc(SCc3ccccc3)o2)c(O)c1\nCore ring identification: benzene (c1ccc...c1), 1,3,4-oxadiazole (c2nnc...o2), benzene (c3ccccc3)\nScaffold analysis: benzene connected to 1,3,4-oxadiazole (via N) and benzyl (via S-CH2), excluding methyl and hydroxyl groups\nMatching analysis: scaffold matches after removing side chains (methyl, hydroxyl) and retaining core rings/connectors\n{\"Output Scaffold\":\"c1ccc(-c2nnc(SCc3ccccc3)o2)cc1\"}",
+            "references": "c1ccc(CSc2nnc(-c3ccccc3)o2)cc1"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1\nCore ring identification: pyrimidine ring (ncc2c1) fused with benzene (c1ccc2), connected via carbonyl to cyclopropane (C3CC3)\nScaffold analysis: benzene fused to pyrimidine (c1ccc2ncc2c1) linked via carbonyl to cyclopropane (C3CC3)\nMatching analysis: Source molecule's core rings (benzene-pyrimidine-cyclopropane) match the provided Murcko scaffold after removing side chains (propargyl group).\n{\"Output Scaffold\":\"c1ccc2ncc2c1C(=O)C3CC3\"}",
+            "predictions": "Input structure: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1\nCore ring identification: pyrimidine ring (ncc2c1) fused with benzene (c1ccc2), connected via carbonyl to cyclopropane (C3CC3)\nScaffold analysis: benzene fused to pyrimidine (c1ccc2ncc2c1) linked via carbonyl to cyclopropane (C3CC3)\nMatching analysis: Source molecule's core rings (benzene-pyrimidine-cyclopropane) match the provided Murcko scaffold after removing side chains (propargyl group).\n{\"Output Scaffold\":\"c1ccc2ncc2c1C(=O)C3CC3\"}",
+            "references": "O=C(Nc1cc2ccccc2cn1)C1CC1"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CCc1ncnc(-c2ccc(C(=O)N3CCN(CCN)CC3)c(Cl)c2)c1C#Cc1ccc(N)nc1.\n"
+                }
+            ],
+            "origin_prediction": "Input structure: CCc1ncnc(-c2ccc(C(=O)N3CCN(CCN)CC3)c(Cl)c2)c1C#Cc1ccc(N)nc1\nCore ring identification: pyrimidine (ncnc), benzene (c2ccc), piperazine (N3CCNCC3)\nScaffold analysis: pyrimidine linked to benzene (via carbonyl) and piperazine (via methylene), excluding Cl and NH2 groups\nMatching analysis: Scaffold matches after removing side chains (Cl, NH2) and retaining core rings/connectors\n{\"Output Scaffold\":\"O=C(c1ccc(-c2ncncc2)cc1)N1CCN(CCCc2ccncn2)CC1\"}",
+            "predictions": "Input structure: CCc1ncnc(-c2ccc(C(=O)N3CCN(CCN)CC3)c(Cl)c2)c1C#Cc1ccc(N)nc1\nCore ring identification: pyrimidine (ncnc), benzene (c2ccc), piperazine (N3CCNCC3)\nScaffold analysis: pyrimidine linked to benzene (via carbonyl) and piperazine (via methylene), excluding Cl and NH2 groups\nMatching analysis: Scaffold matches after removing side chains (Cl, NH2) and retaining core rings/connectors\n{\"Output Scaffold\":\"O=C(c1ccc(-c2ncncc2)cc1)N1CCN(CCCc2ccncn2)CC1\"}",
+            "references": "O=C(c1ccc(-c2ncncc2C#Cc2cccnc2)cc1)N1CCNCC1"
+        }
+    }
+}

@@ -1,0 +1,128 @@
+{
+  "experiment_id": "base/7b/tablebench_fact_checking",
+  "paper_group": "base-7b",
+  "method": "Base Model",
+  "benchmark": "tablebench_fact_checking",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": null,
+  "data_limit": null,
+  "timeout": null,
+  "run_index": 1,
+  "runner": "run_base_eval.py",
+  "artifact_status": "reconstructed-from-released-evaluator",
+  "source": "main-results",
+  "gpu": "4",
+  "state": "succeeded",
+  "started_at": "2026-08-28T02:02:16.395041+08:00",
+  "benchmark_asset": "benchmark-tablebench",
+  "benchmark_dataset_path": "pinned/tablebench",
+  "model_asset": "model-qwen2.5-7b-instruct",
+  "task_timeout": 43200,
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:44123/v1"
+  },
+  "splits": {
+    "validation": {
+      "state": "succeeded",
+      "range": "[:min(100, len(index_list)//2)]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/configs/validation.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/configs/validation.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/validation"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/validation/20260828_020223",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/validation/20260828_020223/summary/summary_20260828_020223.csv",
+        "rows": [
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "81.25"
+          },
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "exact_match",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "81.25"
+          },
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "39.00"
+          },
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "48.00"
+          }
+        ]
+      }
+    },
+    "test": {
+      "state": "succeeded",
+      "range": "[-min(100, len(index_list)//2):]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/configs/test.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/configs/test.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/test"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/test/20260828_020328",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_fact_checking/test/20260828_020328/summary/summary_20260828_020328.csv",
+        "rows": [
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "77.08"
+          },
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "exact_match",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "77.08"
+          },
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "37.00"
+          },
+          {
+            "dataset": "tablebench_fact_checking",
+            "version": "ef7427",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_fact_checking": "48.00"
+          }
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-08-28T02:04:24.175043+08:00"
+}

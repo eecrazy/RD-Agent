@@ -1,0 +1,336 @@
+{
+    "accuracy": 60.0,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=S(=O)(NCCCCCO)c1ccc(-c2ccc(O)cc2)cc1, Ring System Structure: c1ccc(-c2ccccc2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(-c2nc3ccccc3c(=O)n2CCN)cc1, Ring System Structure: C1=C=C(c2ncc3ccccc3n2)C=CC=1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(O)CSc1nonc1-c1ccccc1, Ring System Structure: c1ccc(-c2cnon2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "Yes"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: COc1cc2ncnc(Nc3ccc(C(F)(F)F)cc3)c2c(OC)c1OC, Ring System Structure: c1ccc2ncncc2c1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CCC(=O)NCCCCN1CCN(c2ccccc2OC)CC1, Ring System Structure: c1ccc(N2CCNCC2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O, Ring System Structure: c1ccc(C2(c3ccccc3)CNCN2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Oc1ccc(Nc2ncnc3scc(-c4ccccc4)c23)cc1, Ring System Structure: c1ccc(-c2csc3ncncc23)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "Yes"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1c(F)ccc(C(=O)Nc2cc(C(=O)O)ccc2N2CCN(C)CC2)c1Cl, Ring System Structure: C1=CN(c2ccccc2)CCN1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "No"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN1CCN(c2ncnc3ccc(-c4ccccc4Cl)cc23)CC1, Ring System Structure: C1=C=CC(c2ccc3ncnc(N4CCNCC4)c3c2)=CC=1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: c1cc(Nc2ccon2)nc(Nc2ccc(N3CCOCC3)cc2)n1, Ring System Structure: c1ccc(N2CCOCC2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(C)c1ccccc1OCCN1CCC(NS(=O)(=O)c2ccccc2)CC1, Ring System Structure: C1=NCCCC1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(C(=O)NCc1ccc(C(F)(F)F)nc1OCc1ccc(F)cc1)c1ccc(NS(C)(=O)=O)c(F)c1, Ring System Structure: c1ccccc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: NC(=O)c1cncnc1Nc1cccc(C(F)(F)F)c1, Ring System Structure: c1ccncc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: c1ccc(Nc2ccc(Oc3nccnc3C3CCOC3)cc2)nc1, Ring System Structure: c1cnc(C2CCOC2)cn1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CCC(C(=O)NC(C#N)CC(N)=O)N(Cc1ccc(-c2cccc(F)c2F)cc1)S(C)(=O)=O, Ring System Structure: c1ccc(-c2ccccc2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(Nc1ccccc1C(=O)NC(Cc1ccccc1)C(=O)O)c1cnccn1, Ring System Structure: c1ccccc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CON=C(CCN1CCN(c2ccccn2)CC1)c1ccccc1, Ring System Structure: c1ccc(N2CCNCC2)nc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(C(=O)N1CCN(c2cccc(C(F)(F)F)c2)CC1)N1C(=O)CC(C)(C)C1=O, Ring System Structure: c1ccc(N2CCNCC2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: N=C(N)c1ccc(-c2c[nH]cn2)cc1, Ring System Structure: c1cncc(-c2c[nH]cn2)c1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1, Ring System Structure: C1=CNCCC1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "20": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(Nc1ccc(N2CCOCC2)cc1)c1cc(Cl)ccc1O, Ring System Structure: c1cncc(N2CCOCC2)c1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "21": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CCc1ccc(OC(C)=O)c(C(=O)c2ccc(C)cc2)c1, Ring System Structure: C1=C=CC=CC=1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "22": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(O)c1ccccc1Nc1ccnc(N2CCCCC2)n1, Ring System Structure: C1=CCN(c2ncccn2)CC1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "23": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CNC(=O)C(NC(=O)C(CC(C)C)C(C(=O)NO)C1CCCC1)C(C)(C)C, Ring System Structure: C1CCCC1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "24": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(OCc1ccccc1)C1COC(c2cccc(F)c2)=N1, Ring System Structure: c1ccc(C2=NCCO2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "Yes"
+        },
+        "25": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: FC(F)(F)c1ccccc1-c1nccc(NCc2ccccc2)n1, Ring System Structure: c1ccc(-c2ncccn2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "26": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Fc1ccc(-c2nc[nH]c2-c2ccncc2)cc1, Ring System Structure: c1ccc(-c2nc[nH]c2-c2ccncc2)cc1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "27": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(c1nc(C2CC2)no1)N1CCN(Cc2cccc(F)c2F)CC1, Ring System Structure: c1nc(C2CC2)no1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "28": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: N#CCC1(n2cc(C(N)=O)c(Nc3ccccc3)n2)CCN(C(=O)c2cccc(Cl)c2)CC1, Ring System Structure: C1=C(n2cccn2)CCNC1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "No"
+        },
+        "29": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CCC(O)COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12, Ring System Structure: c1cc2[nH]ncc2cn1\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        }
+    }
+}

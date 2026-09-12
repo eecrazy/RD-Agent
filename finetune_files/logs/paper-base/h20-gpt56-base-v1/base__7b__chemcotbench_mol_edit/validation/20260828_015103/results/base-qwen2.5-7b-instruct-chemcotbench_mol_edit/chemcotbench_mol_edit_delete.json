@@ -1,0 +1,310 @@
+{
+    "correct_rate": 40.0,
+    "valid_rate": 60.0,
+    "tanimoto_similarity": 26.9701754444543,
+    "correct_count": 4.0,
+    "valid_count": 6.0,
+    "total_count": 10.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_0",
+            "pred_raw": [
+                "{\n    \"output\": \"O=C([O-])CCCC(=O)Nc1ccc(ncc1)[O-]\"\n}"
+            ],
+            "pred_smiles": [
+                "O=C([O-])CCCC(=O)Nc1ccc(ncc1)[O-]"
+            ],
+            "source": [
+                "O=C([O-])CCCC(=O)Nc1ccc([N+](=O)[O-])cc1"
+            ],
+            "gold": [
+                "O=C([O-])CCCC(=O)Nc1ccccc1"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_1",
+            "pred_raw": [
+                "{\n    \"output\": \"O=C(NCCC(=O)N1CCN(S(=O)(=O)c2ccc(cc2)CC1)Nc1ccccc1)\"\n}"
+            ],
+            "pred_smiles": [
+                "O=C(NCCC(=O)N1CCN(S(=O)(=O)c2ccc(cc2)CC1)Nc1ccccc1)"
+            ],
+            "source": [
+                "O=C(NCCC(=O)N1CCN(S(=O)(=O)c2ccc(Cl)cc2)CC1)Nc1ccccc1"
+            ],
+            "gold": [
+                "O=C(NCCC(=O)N1CCN(S(=O)(=O)c2ccccc2)CC1)Nc1ccccc1"
+            ],
+            "group_a": [
+                "halo"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.35294117647058826
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_2",
+            "pred_raw": [
+                "{\n    \"output\": \"OCC(C(F)(F)F)C(=O)Oc1cc(Cl)c(Cl)c1F\"\n}"
+            ],
+            "pred_smiles": [
+                "OCC(C(F)(F)F)C(=O)Oc1cc(Cl)c(Cl)c1F"
+            ],
+            "source": [
+                "O=[N+]([O-])c1cc(C(F)(F)F)cc(Cl)c1F"
+            ],
+            "gold": [
+                "c1cc(C(F)(F)F)cc(Cl)c1F"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_3",
+            "pred_raw": [
+                "{\n    \"output\": \"CC(=O)Nc1ccc(C[NH+]CC(C3CCOCC3)C)cc1\"\n}"
+            ],
+            "pred_smiles": [
+                "CC(=O)Nc1ccc(C[NH+]CC(C3CCOCC3)C)cc1"
+            ],
+            "source": [
+                "CC(=O)Nc1ccc(C[NH+]2CCC(C3CCOCC3)CC2)cc1"
+            ],
+            "gold": [
+                "CC(=O)N.C[NH+]1CCC(C2CCOCC2)CC1"
+            ],
+            "group_a": [
+                "benzene_ring"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.24074074074074073
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_4",
+            "pred_raw": [
+                "{\n    \"output\": \"CCSCCOC(=O)/C=C/c1ccc(c1)C#N\"\n}"
+            ],
+            "pred_smiles": [
+                "CCSCCOC(=O)/C=C/c1ccc(c1)C#N"
+            ],
+            "source": [
+                "CCSCCOC(=O)/C=C/c1cccc(C#N)c1"
+            ],
+            "gold": [
+                "CCSCCOC(=O)/C=C/c1ccccc1"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_5",
+            "pred_raw": [
+                "{\n    \"output\": \"O=C(CC1(n2cccc2)CCCCC1)NCCO\"\n}"
+            ],
+            "pred_smiles": [
+                "O=C(CC1(n2cccc2)CCCCC1)NCCO"
+            ],
+            "source": [
+                "O=C(CC1(n2cccc2)CCCCC1)NCCO"
+            ],
+            "gold": [
+                "O=C(CC1(n2cccc2)CCCCC1)NCC"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.7105263157894737
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_6",
+            "pred_raw": [
+                "{\n    \"output\": \"CCNc2ncnc3sc(C(=O)[O-])c(C)c23OC\"\n}"
+            ],
+            "pred_smiles": [
+                "CCNc2ncnc3sc(C(=O)[O-])c(C)c23OC"
+            ],
+            "source": [
+                "COc1ccc(CCNc2ncnc3sc(C(=O)[O-])c(C)c23)cc1OC"
+            ],
+            "gold": [
+                "CCNc1ncnc2sc(C(=O)[O-])c(C)c12"
+            ],
+            "group_a": [
+                "benzene_ring"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_7",
+            "pred_raw": [
+                "{\n    \"output\": \"O=C(O)C2CCCN2C(=O)[C@H](NC(=O)c3ccccc3)O\"\n}"
+            ],
+            "pred_smiles": [
+                "O=C(O)C2CCCN2C(=O)[C@H](NC(=O)c3ccccc3)O"
+            ],
+            "source": [
+                "O=C(O)C2CCCN2C(=O)[C@H](NC(=O)c3ccccc3)C(=O)O"
+            ],
+            "gold": [
+                "C2CCCN2C(=O)[C@H](NC(=O)c3ccccc3)C(=O)O"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.46808510638297873
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_8",
+            "pred_raw": [
+                "{\n    \"output\": \"CC[C@@H](NC[C@@H]1ccc2ccccc2O1)c1nc2ccccc2[nH]1\"\n}"
+            ],
+            "pred_smiles": [
+                "CC[C@@H](NC[C@@H]1ccc2ccccc2O1)c1nc2ccccc2[nH]1"
+            ],
+            "source": [
+                "CC[C@@H](NC(=O)[C@@H]1Cc2cc(C)c(C)cc2O1)c1nc2ccccc2[nH]1"
+            ],
+            "gold": [
+                "CC[C@@H]([C@@H]1Cc2cc(C)c(C)cc2O1)c1nc2ccccc2[nH]1"
+            ],
+            "group_a": [
+                "amide"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.40298507462686567
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_9",
+            "pred_raw": [
+                "{\n    \"output\": \"CCN(Cc1ccccn1)c1cccOo1\"\n}"
+            ],
+            "pred_smiles": [
+                "CCN(Cc1ccccn1)c1cccOo1"
+            ],
+            "source": [
+                "CCN(Cc1ccccn1)c1ccc(C=O)o1"
+            ],
+            "gold": [
+                "CCN(Cc1ccccn1)c1ccco1"
+            ],
+            "group_a": [
+                "aldehyde"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.5217391304347826
+            ]
+        }
+    ]
+}

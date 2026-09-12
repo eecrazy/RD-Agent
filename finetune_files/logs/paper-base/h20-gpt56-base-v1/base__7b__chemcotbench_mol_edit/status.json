@@ -1,0 +1,324 @@
+{
+  "experiment_id": "base/7b/chemcotbench_mol_edit",
+  "paper_group": "base-7b",
+  "method": "Base Model",
+  "benchmark": "chemcotbench_mol_edit",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": null,
+  "data_limit": null,
+  "timeout": null,
+  "run_index": 1,
+  "runner": "run_base_eval.py",
+  "artifact_status": "reconstructed-from-released-evaluator",
+  "source": "main-results",
+  "gpu": "5",
+  "state": "succeeded",
+  "started_at": "2026-08-28T02:14:44.104332+08:00",
+  "benchmark_asset": "benchmark-chemcotbench",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "model_asset": "model-qwen2.5-7b-instruct",
+  "task_timeout": 43200,
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:33967/v1"
+  },
+  "splits": {
+    "validation": {
+      "state": "succeeded",
+      "range": "[:min(100, len(index_list)//2)]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/configs/validation.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/configs/validation.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/validation"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/validation/20260828_021454",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/validation/20260828_021454/summary/summary_20260828_021454.csv",
+        "rows": [
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "correct_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "30.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "valid_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "tanimoto_similarity",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "30.31"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "3.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "5.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "10.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "correct_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "40.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "valid_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "60.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "tanimoto_similarity",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "26.97"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "4.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "6.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "10.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "correct_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "20.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "valid_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "63.33"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "tanimoto_similarity",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "38.97"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "6.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "19.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "30.00"
+          }
+        ]
+      }
+    },
+    "test": {
+      "state": "succeeded",
+      "range": "[-min(100, len(index_list)//2):]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/configs/test.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/configs/test.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_021655",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_021655/summary/summary_20260828_021655.csv",
+        "rows": [
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "correct_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "10.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "valid_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "tanimoto_similarity",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "24.89"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "1.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "5.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_add",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "10.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "correct_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "30.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "valid_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "80.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "tanimoto_similarity",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "43.90"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "3.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "8.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_delete",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "10.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "correct_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "23.33"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "valid_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "66.67"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "tanimoto_similarity",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "37.81"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "7.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "valid_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "20.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_edit_sub",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_edit": "30.00"
+          }
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-08-28T02:18:49.800731+08:00"
+}

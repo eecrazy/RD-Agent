@@ -1,0 +1,310 @@
+{
+    "correct_rate": 70.0,
+    "valid_rate": 100.0,
+    "tanimoto_similarity": 59.00552220111044,
+    "correct_count": 7.0,
+    "valid_count": 10.0,
+    "total_count": 10.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_10",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a benzene ring with three substituents: a methyl group (-CH3), a nitro group (-NO2), and a piperazine-derived side chain (N2CC[C@H](C(N)=O)C2). The nitro group is meta to the methyl group, and the piperazine ring is attached at the para position relative to the methyl group.\n2. Function group introduce strategy: The nitro group (-NO2) is best added to the methyl-substituted benzene ring. The methyl group is an ortho/para-directing group, but the "
+            ],
+            "pred_smiles": [
+                "Cc1ccc([N+](=O)[O-])c(N2CC[C@H](C(N)=O)C2)c1[N+](=O)[O-]"
+            ],
+            "source": [
+                "Cc1ccc([N+](=O)[O-])c(N2CC[C@H](C(N)=O)C2)c1"
+            ],
+            "gold": [
+                "Cc1ccc([N+](=O)[O-])c(N2CC[C@H](C(N)=O)C2)c1C(=O)[N+](=O)[O-]"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.74
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_11",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a central carbon atom bonded to: (1) a methyl group, (2) a substituted amine chain (CNC(=O)NCc1ccncc1), and (3) a quaternary ammonium group ([NH+](C)C1CC1) attached to a cyclopropane ring. The amine chain includes an amide group (C(=O)) and a pyridine-containing aromatic ring (c1ccncc1).\n2. Function group introduce strategy: The amine group (-NH2) can be introduced by replacing the methyl group (C) attached to the central carbon with a -CH2NH2 su"
+            ],
+            "pred_smiles": [
+                "CNc1ccncc1C(=O)NC(CNC(=O)NCc2ccncc2)[NH+](C)C1CC1"
+            ],
+            "source": [
+                "C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CC1"
+            ],
+            "gold": [
+                "C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CNC1"
+            ],
+            "group_a": [
+                "amine"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.5079365079365079
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_12",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a bicyclic structure with two chiral centers (C[C@H]), a sulfonamide group (S(=O)(=O)), an amide (C(=O)N), an ether (Oc3ccccc3), and an aromatic ring with a para-substituted ethoxy group. The ethoxy group (NCCOc3ccccc3) includes an ether linkage and an aromatic ring.\n2. Function group introduce strategy: The halo group (iodine) is best added to the ethyl chain in the ethoxy group (Oc3ccccc3) as it allows substitution without disrupting aromaticit"
+            ],
+            "pred_smiles": [
+                "C[I]CCOc1ccccc1"
+            ],
+            "source": [
+                "C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccccc3)c2)C1"
+            ],
+            "gold": [
+                "C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccc(Cl)cc3)c2)C1"
+            ],
+            "group_a": [
+                "halo"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.1875
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_13",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule is a substituted benzene ring with methyl groups, a sulfonamide group (C[S@@](=O)), and a propargyl alcohol chain (CC#N) attached to the sulfonamide. The methyl groups and sulfonamide are electron-withdrawing, while the propargyl alcohol contains a terminal thiol (-SH) group.\n2. Function group introduce strategy: The thiol (-SH) group can be added to one of the methyl groups on the benzene ring via substitution. The methyl group at the para position relat"
+            ],
+            "pred_smiles": [
+                "Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)c1S"
+            ],
+            "source": [
+                "Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)c1"
+            ],
+            "gold": [
+                "Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)c1S"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_14",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a central tertiary carbon connected to: (1) a methyl group, (2) a chain with an amide (-N-C(=O)-) and a sulfonamide (-NS(C)(=O)=O), and (3) a piperazine ring substituted with a trifluoromethyl group. Existing functional groups include amides, sulfonamides, and aromatic rings.\n2. Function group introduce strategy: The amide group (-CONH-) can be introduced by replacing the methyl group (C) attached to the central tertiary carbon with a -CH2CONH2 s"
+            ],
+            "pred_smiles": [
+                "CC(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1)NS(C)(=O)=O"
+            ],
+            "source": [
+                "CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1)NS(C)(=O)=O"
+            ],
+            "gold": [
+                "CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1(C(=O)N))NS(C)(=O)=O"
+            ],
+            "group_a": [
+                "amide"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.36764705882352944
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_15",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains an amide group (O=C-N), a cyclohexane ring, a furan substituent (-c2ccoc2), and a sugar-like moiety (C1OCCO1) attached to the cyclohexane. The sugar ring has two oxygen atoms and a CH2 group connected to the cyclohexane.\n2. Function group introduce strategy: The amine group (-NH2) can be introduced by replacing one of the hydroxyl (-OH) groups in the sugar-like ring (C1OCCO1) with an amine. The third carbon in the ring (C1-O-C*-O-C*) is modified "
+            ],
+            "pred_smiles": [
+                "O=C(c1cccc(-c2ccoc2)c1)N1CCCC[C@H]1C1OC(N)CO1"
+            ],
+            "source": [
+                "O=C(c1cccc(-c2ccoc2)c1)N1CCCC[C@H]1C1OCCO1"
+            ],
+            "gold": [
+                "O=C(c1ccc(N)c(-c2ccoc2)c1)N1CCCC[C@H]1C1OCCO1"
+            ],
+            "group_a": [
+                "amine"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.5538461538461539
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_16",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a central benzene ring substituted with a methyl group (Cc1...), a chlorine atom (Cl), and a biphenyl group (-c2ccc(...)o2). The biphenyl is further substituted with a thiourea moiety (C(=O)NC(=S)N...) connected to another sulfonamide-containing benzene ring (c3ccc(S(N)(=O)=O)cc3). Key functional groups include aryl chloride, aromatic rings, sulfonamide, and thiourea.\n2. Function group introduce strategy: The nitro group (-NO₂) is best added to t"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3NO)o2)cc1Cl"
+            ],
+            "source": [
+                "Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3)o2)cc1Cl"
+            ],
+            "gold": [
+                "Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3[N+](=O)[O-])o2)cc1Cl"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.7727272727272727
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_17",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a methoxy group (COc...), a benzene ring, an amide group (C(=O)N...), a cyclopropane ring (c2ccco2), and a fused bicyclic aromatic system with a hydroxyl group (c2c(O)ccc3ccccc23). The amide is attached to a chiral carbon connected to the cyclopropane and fused aromatics.\n2. Function group introduce strategy: The aldehyde group (-CHO) is best introduced by modifying the methoxy group. Replacing the methyl group of the methoxy with a formyl group "
+            ],
+            "pred_smiles": [
+                "C(=O)Oc1cccc(C(=O)N[C@@H](c2ccco2)c2c(O)ccc3ccccc23)c1"
+            ],
+            "source": [
+                "COc1cccc(C(=O)N[C@@H](c2ccco2)c2c(O)ccc3ccccc23)c1"
+            ],
+            "gold": [
+                "COc1cccc(C(=O)N[C@@H](c2ccco2)c2c(O)ccc3ccccc23)c1C=O"
+            ],
+            "group_a": [
+                "aldehyde"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.5882352941176471
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_18",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a bicyclic structure with a lactam (cyclic amide) and a cyclohexane ring fused via an ammonium group. Key functional groups include two carbonyl groups (C=O), a tertiary amine (NC=O), and a protonated amine ([NH2+]) in the cyclohexane ring.\n2. Function group introduce strategy: The hydroxyl group (-OH) is best added to the cyclohexane ring's carbon adjacent to the ammonium group. This position allows valence satisfaction (substituting a hydrogen "
+            ],
+            "pred_smiles": [
+                "CN1C(=O)NC(=O)[C@@]12CCC[NH2+]C2O"
+            ],
+            "source": [
+                "CN1C(=O)NC(=O)[C@@]12CCC[NH2+]C2"
+            ],
+            "gold": [
+                "CN1C(=O)NC(=O)[C@@]12CC(O)C[NH2+]C2"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.38636363636363635
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_19",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains an amide group (O=C-N), a cyclohexane ring fused with a sulfonamide group (S[C@@H]), a fluorinated benzene ring (Cc1ccc(F)c(F)c1), and a benzene ring (c2ccccc2) attached to the sulfonamide. The sulfonamide is part of a bicyclic structure.\n2. Function group introduce strategy: The carboxyl group (-COOH) is best added to the benzene ring (c2ccccc2) attached to the sulfonamide. This ring has available positions for substitution, and the carboxyl gro"
+            ],
+            "pred_smiles": [
+                "O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2cccc(C(=O)O)c2)C1"
+            ],
+            "source": [
+                "O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccccc2)C1"
+            ],
+            "gold": [
+                "O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccc(cc2)C(=O)O)C1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.7962962962962963
+            ]
+        }
+    ]
+}

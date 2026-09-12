@@ -1,0 +1,86 @@
+{
+  "experiment_id": "base/7b/aime25",
+  "paper_group": "base-7b",
+  "method": "Base Model",
+  "benchmark": "aime25",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": null,
+  "data_limit": null,
+  "timeout": null,
+  "run_index": 1,
+  "runner": "run_base_eval.py",
+  "artifact_status": "reconstructed-from-released-evaluator",
+  "source": "main-results",
+  "gpu": "0",
+  "state": "succeeded",
+  "started_at": "2026-08-28T01:46:14.208979+08:00",
+  "benchmark_asset": "benchmark-aime2025",
+  "benchmark_dataset_path": "pinned/aime2025/aime2025.jsonl",
+  "model_asset": "model-qwen2.5-7b-instruct",
+  "task_timeout": 43200,
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:44123/v1"
+  },
+  "splits": {
+    "validation": {
+      "state": "succeeded",
+      "range": "[:min(100, len(index_list)//2)]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/configs/validation.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/configs/validation.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/validation"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/validation/20260828_014627",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/validation/20260828_014627/summary/summary_20260828_014627.csv",
+        "rows": [
+          {
+            "dataset": "aime2025",
+            "version": "5e9f4f",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-aime25": "0.00"
+          }
+        ]
+      }
+    },
+    "test": {
+      "state": "succeeded",
+      "range": "[-min(100, len(index_list)//2):]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/configs/test.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/configs/test.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/test"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/test/20260828_014931",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__aime25/test/20260828_014931/summary/summary_20260828_014931.csv",
+        "rows": [
+          {
+            "dataset": "aime2025",
+            "version": "5e9f4f",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-aime25": "0.00"
+          }
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-08-28T01:50:30.075317+08:00"
+}

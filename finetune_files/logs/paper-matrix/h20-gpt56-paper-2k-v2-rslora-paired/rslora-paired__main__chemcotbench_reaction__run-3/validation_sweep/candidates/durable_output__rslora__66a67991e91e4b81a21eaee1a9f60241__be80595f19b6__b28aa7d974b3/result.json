@@ -1,0 +1,225 @@
+{
+  "candidate_id": "durable_output__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__b28aa7d974b3",
+  "source": "durable_output",
+  "workspace_id": "rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6",
+  "checkpoint_step": null,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/workspace/.ft_model_checkpoints/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6/output",
+  "selection_signature": "3b547e674a283b7aa9687d1fd6b618b98fd9d59385b978014e9e230f28c23ac8",
+  "formal_training_evidence_signature": "a87cffb95be0c0dc4088e739ed0fc108d7bc03ffcfc85cf9b769b7b00b5e7478",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-3",
+  "benchmark": "chemcotbench_reaction",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "a4838bc86a66e79e906f705d463c46fd4632de7cc79b84049223ec6e668f8bd3",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:45:26.159162+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:52:03.389276+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_reaction_fs": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 50.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      },
+      "chemcotbench_reaction_mechsel": {
+        "accuracy": 70.0,
+        "correct_count": 35.0,
+        "total_count": 50.0
+      },
+      "chemcotbench_reaction_nepp": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 42.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      },
+      "chemcotbench_reaction_rcr": {
+        "exact_count": 0.0,
+        "exact_match": 0.0,
+        "total_count": 45.0
+      },
+      "chemcotbench_reaction_retro": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 50.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "CCN(CC)CC",
+        "model_output": "The transformation is a nucleophilic acyl substitution of the methyl ester by the nitrophenolate nucleophile. A polar aprotic, non-nucleophilic additive is needed to dissolve the organic substrates and promote the reaction without competing as a nucleophile. N-Methyl-2-pyrrolidone is well suited because it is compatible with the acidic hydroxyl groups and the nitro group, and it dissolves both the ester and the nitrophenol.\n\n{\"SMILES\":\"CC(C)(N)O\"}",
+        "question": "Given the following reaction under the type of Functional Group Addition:\nCC(C)(C)OC(=O)OC(=O)OC(C)(C)C.Nc1cc([N+](=O)[O-])cc(C(F)(F)F)c1>>CC(C)(C)OC(=O)Nc1cc([N+](=O)[O-])cc(C(F)(F)F)c1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "D",
+        "model_output": "The PdX₂–1,5-cyclooctadiene complex is first converted into a coordinatively unsaturated Pd(0) species through ligand dissociation and reductive elimination. Copper activation then prepares the organometallic coupling partner. The organic substrate undergoes oxidative addition to Pd(0), producing a Pd(II) intermediate. Transmetalation transfers the organic group from copper to palladium, and reductive elimination forms the new C–C bond and regenerates Pd(0).\n\n{\"choice\": \"E\"}",
+        "question": "For reaction class: 'Sulfoxy Stille reaction', under the condition of 'Reaction with PdX2 and 1,5-cyclooctadiene' and given reagents (writtin in SMARTS format) '[Cl,Br,I,O][Pd;+0][Cl,Br,I,O].C1=CCCC=CCC1', which following description is the correct elementary reaction stages description, considering the mechanism of this type of reaction?\n\nChoices:\nA: First Pd-P ligand formation | Second Pd-P ligand formation | Copper activation | Oxidative addition | Transmetalation | Neutralization | Reductive elimination\nB: Ligand leaving | Ligand leaving | Copper activation | Oxidative addition | Transmetalation | Reductive elimination\nC: Palladium-ligand dissociation | Palladium-ligand formation | Hydroxide ion preparation | Hydroxide-Phosphine reaction | Deprotonation | Palladium reduction | First Pd-P ligand formation | Second Pd-P ligand formation | Ligand dissociation - reductive elimination type | Copper activation | Oxidative addition | Transmetalation | Reductive elimination\nD: Palladium-ligand formation | Hydroxide ion preparation | Hydroxide-cyclooctadiene reaction | Beta-H elimination | Ligand dissociation - reductive elimination type | Copper activation | Oxidative addition | Transmetalation | Reductive elimination\nE: Copper activation | Oxidative addition | Transmetalation | Reductive elimination\nF: PdX+ formation | PdX2 formation | Hydroxide ion preparation | Hydroxide-Phosphine reaction | Deprotonation | Palladium reduction | Ligand dissociation - reductive elimination type | Copper activation | Oxidative addition | Transmetalation | Reductive elimination\nG: Copper activation | Oxidative addition | Transmetalation | Neutralization | Reductive elimination\nH: Amine coordination | Imine formation | Reductive elimination | Copper activation | Oxidative addition | Transmetalation | Reductive elimination\n\nReturn the choice (capital letter) in JSON format:\n{\n    \"choice\": str # (e.g. 'A'/'B')\n}\n"
+      },
+      {
+        "gold": "C=CCOC(=O)NC(C(=O)NC(C)C(=O)Nc1ccc(COC(=O)N2c3cc(OCCCCCOc4cc5c(cc4OC)C(=O)N4C=C(c6ccc(OC)cc6)CC4CN5C(=O)OCC=C)c(OC)cc3C(=O)N3CC4(CC4)CC3C2O)cc1)C(C)C",
+        "model_output": "The substrate contains a primary benzylic alcohol, while the other functional groups are relatively stable under the given conditions. The alcohol is converted into its benzyl triflate by reaction with the electrophilic sulfur center of triflic anhydride. The alcohol oxygen is replaced by a sulfur triflate group, with the benzylic carbon remaining bonded to the aromatic ring and the methoxy-substituted pyridine ring. The amide, lactam, ether, ester, silyl ether, and other heterocyclic groups remain unchanged.\n\n{\"C=CCOC(=O)NC(C(=O)NC(C)C(=O)Nc1ccc(COC(=O)N2c3cc(OCCCCCOc4cc5c(cc4OC)C(=O)N4C=C(c6ccc(OC)cc6)CC4CN5C(=O)OCC=C)c(OC)cc3C(=O)N3CC4(CC4)CC3C2O[Si](C)(C)C(C)(C)C)cc1)C(C)C.S(C)(=O)(=O)C(F)(F)F\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: C=CCOC(=O)NC(C(=O)NC(C)C(=O)Nc1ccc(COC(=O)N2c3cc(OCCCCCOc4cc5c(cc4OC)C(=O)N4C=C(c6ccc(OC)cc6)CC4CN5C(=O)OCC=C)c(OC)cc3C(=O)N3CC4(CC4)CC3C2O[Si](C)(C)C(C)(C)C)cc1)C(C)C.[F-]\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "Cc1cnc(C(O)c2ccn3c(C(F)(F)F)nnc3c2C)cc1CO[Si](C)(C)C(C)(C)CO=S(Cl)Cl",
+        "model_output": "The product contains a secondary alcohol on the fused heteroaromatic ring, while the aryl chloride, trifluoromethyl group, and silyl ether remain unchanged. Retrosynthetically, this alcohol is traced back to the corresponding secondary alcohol on the same fused heteroaromatic ring. The required precursor is therefore the same fused heteroaromatic framework bearing a secondary hydroxymethyl group rather than the primary alcohol. The alcohol can be converted to the corresponding tosylate ester by reaction with p-toluenesulfonyl chloride, followed by silylation of the resulting tosylate with tert-butyldimethylsilyl chloride. The aryl chloride and trifluoromethyl group are consistent with a chloro-3,3,3-trifluoropropyl substituent on the fused ring.\n\n{\"CC(C)(C)c1cccc(C(C)(C)C)n1CO.CC(C)(C)O[S+](=O)(=O)[O-].Cl[C+](S)(=O)(=O)C1CClCC1\"}",
+        "question": "Given the product SMILES and reagents SMILES, your task is to predict the reactants SMILES using your experienced chemical Retrosynthesis knowledge.\n\nInput:\nProduct SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nReactants SMILES separated by '.'\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes only the reactants SMILES:\n\nQuestion:\nProducts: Cc1cnc(C(Cl)c2ccn3c(C(F)(F)F)nnc3c2C)cc1CO[Si](C)(C)C(C)(C)C\nReagents: CC(C)(C)c1cccc(C(C)(C)C)n1.ClCCl\n\nAnswer:\n{\n    \"Reactants\": ...\n}\n\n"
+      },
+      {
+        "gold": "COc1ccc(Cl)nn1CC(C)(C)C(N)=O",
+        "model_output": "The product is a Boc-protected pyrazole bearing a methyl group at the ring nitrogen. Retrosynthetic cleavage of the pyrazole C–N bond gives the corresponding methyl-substituted pyrazole-5-carbaldehyde and Boc anhydride. The palladium source, bulky bisphosphine ligand, and cesium carbonate base are characteristic of a Buchwald–Hartwig amination: the aldehyde carbon is converted into an N–H bond while the Boc group remains intact. Thus, the required precursors are the methyl pyrazole aldehyde and di-tert-butyl dicarbonate.\n\n{\"COc1ccc(N=O)nn1.CC(C)(C)OC(=O)OC(C)(C)C\"}",
+        "question": "Given the product SMILES and reagents SMILES, your task is to predict the reactants SMILES using your experienced chemical Retrosynthesis knowledge.\n\nInput:\nProduct SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nReactants SMILES separated by '.'\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes only the reactants SMILES:\n\nQuestion:\nProducts: COc1ccc(NC(=O)C(C)(C)C)nn1\nReagents: c1ccc(P(c2ccccc2)c2ccc3ccccc3c2-c2c(P(c3ccccc3)c3ccccc3)ccc3ccccc23)cc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(O[Cs])O[Cs].C1COCCO1.[Pd].[Pd]\n\nAnswer:\n{\n    \"Reactants\": ...\n}\n\n"
+      },
+      {
+        "gold": "[Pd]",
+        "model_output": "The transformation is a reduction of a vinyl ester to a secondary alcohol, with the carbon–carbon double bond and the ester carbonyl retained. A hydrogenation catalyst is appropriate. Palladium on carbon is well suited because it selectively reduces the vinyl group while leaving the carbonyl unchanged. The catalyst is represented as palladium black supported on carbon.\n\n{\"SMILES\":\"[Pd]#[C-]#[C-]\"}",
+        "question": "Given the following reaction under the type of Reduction:\nCOC(=O)[C@]1(c2cccc(F)c2C)C=C(c2ccnn2C)CC1>>COC(=O)[C@@]1(c2cccc(F)c2C)CCC(c2ccnn2C)C1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "CN(C)C=O",
+        "model_output": "The transformation is a nucleophilic acyl substitution of the primary aniline nitrogen on the chloro-substituted benzoyl group. A suitable catalyst is a Lewis acid that activates the acid hydroxyl group and promotes attack by the aniline nitrogen. A chloropalladium complex is well suited because it generates a chloropalladium-bound benzoyl species that can activate the acid and enable the substitution. The palladium catalyst is represented as a chloropalladium acetate complex.\n\n{\"SMILES\":\"Cl[Pd](OAc)2\"}",
+        "question": "Given the following reaction under the type of Acylation:\nCNc1cccnc1.O=C(O)c1cc(Cl)sc1Cl>>CN(C(=O)c1cc(Cl)sc1Cl)c1cccnc1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "C=C(OCC)c1cnc(F)c(-c2cc(N)nc(C)n2)c1",
+        "model_output": "The organotin reagent is a Grignard reagent, while the heteroaromatic substrate contains an acidic N–H group. The principal transformation is N-methylation: the methyl group from tin transfers to nitrogen, forming the N–CH₃ bond and converting the heteroaryl C–N bond into a C–N–CH₃ bond. The aryl chloride and difluoromethyl substituents remain unchanged.\n\n{\"Cc1nc(NC(=O)C)cc(-c2cc(Cl)cnc2F)n1\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: C=C(OCC)[Sn](CCCC)(CCCC)CCCC.Cc1nc(N)cc(-c2cc(Cl)cnc2F)n1\nReagents: CC(C)c1cc(C(C)C)c(-c2ccccc2P(C2CCCCC2)C2CCCCC2)c(C(C)C)c1.CC(=O)O[Pd]OC(C)=O.C1COCCO1.CN(C)C=O.F[Cs]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "c1ccc([P](c2ccccc2)(c2ccccc2)[Pd]([P](c2ccccc2)(c2ccccc2)c2ccccc2)([P](c2ccccc2)(c2ccccc2)c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)cc1",
+        "model_output": "The transformation is a Curtius rearrangement of an isocyanate to an isocyanate-derived nitrile. A phosphine–gold catalyst promotes isocyanate activation and nitrile formation. Tetrakis(triphenylphosphine)palladium(0) is well suited because it generates a phosphine-ligated palladium species that can activate the isocyanate and support the rearrangement.\n\n{\"SMILES\":\"Pd[PH](c1ccccc1)(c1ccccc1)(c1ccccc1)(c1ccccc1)\"}",
+        "question": "Given the following reaction under the type of Functional Group Addition:\nN#Cc1cccc(N)c1.O=[N+]([O-])c1c(OS(=O)(=O)C(F)(F)F)ccc2c1CCCC2>>N#Cc1cccc(Nc2ccc3c(c2[N+](=O)[O-])CCCC3)c1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "CC(C)(C)S(=O)N1Cc2cc(C(N)=O)nc(-c3cccc(-c4cccnc4)c3)c2C1CCO",
+        "model_output": "The substrate contains a tert-butyl sulfonamide, while the other functional groups remain unchanged. The sulfonamide nitrogen is the most electrophilic site, and fluoride promotes N–H activation and N–F substitution. The resulting product is the corresponding N–F sulfonamide, with the tert-butoxycarbonyl group and the fused heteroaromatic framework retained.\n\n{\"Major Product\": CC(C)(C)S(=O)N1Cc2cc(C(F)=O)nc(-c3cccc(-c4cccnc4)c3)c2C1CCO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)S(=O)N1Cc2cc(C(N)=O)nc(-c3cccc(-c4cccnc4)c3)c2C1CCO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C.[F-]\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_reaction_fs": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.0,
+      "maccs_sims": 0.0,
+      "morgan_sims": 0.0,
+      "rdk_sims": 0.0,
+      "total_count": 50.0,
+      "valid_count": 0.0,
+      "validity": 0.0
+    },
+    "chemcotbench_reaction_mechsel": {
+      "accuracy": 70.0,
+      "correct_count": 35.0,
+      "total_count": 50.0
+    },
+    "chemcotbench_reaction_nepp": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.0,
+      "maccs_sims": 0.0,
+      "morgan_sims": 0.0,
+      "rdk_sims": 0.0,
+      "total_count": 42.0,
+      "valid_count": 0.0,
+      "validity": 0.0
+    },
+    "chemcotbench_reaction_rcr": {
+      "exact_count": 0.0,
+      "exact_match": 0.0,
+      "total_count": 45.0
+    },
+    "chemcotbench_reaction_retro": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.0,
+      "maccs_sims": 0.0,
+      "morgan_sims": 0.0,
+      "rdk_sims": 0.0,
+      "total_count": 50.0,
+      "valid_count": 0.0,
+      "validity": 0.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "fingerprint_similarity",
+      "label": "FTS",
+      "value": 0.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mean Morgan fingerprint similarity of fs, retro, and nepp",
+      "components": [
+        {
+          "dataset": "chemcotbench_reaction_fs",
+          "metric": "morgan_sims",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_reaction_nepp",
+          "metric": "morgan_sims",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_reaction_retro",
+          "metric": "morgan_sims",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 70.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mechanism-selection accuracy",
+      "components": [
+        {
+          "dataset": "chemcotbench_reaction_mechsel",
+          "metric": "accuracy",
+          "value": 70.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/validation_sweep/candidates/durable_output__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__b28aa7d974b3/workspace"
+}

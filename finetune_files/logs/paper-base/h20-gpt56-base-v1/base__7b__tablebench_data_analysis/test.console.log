@@ -1,0 +1,73 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 02:02:03 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/test/20260828_020203
+08/28 02:02:03 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 02:02:03 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_correlationanalysis] on GPU 0
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:50<03:23, 50.77s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_statisticalanalysis] on GPU 0
+ 20%|██        | 1/5 [00:51<03:23, 50.77s/it] 40%|████      | 2/5 [01:59<03:03, 61.29s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_trendforecasting] on GPU 0
+ 40%|████      | 2/5 [02:00<03:03, 61.29s/it] 60%|██████    | 3/5 [02:42<01:46, 53.10s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_impactanalysis] on GPU 0
+ 60%|██████    | 3/5 [02:43<01:46, 53.10s/it] 80%|████████  | 4/5 [03:27<00:49, 49.62s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_other] on GPU 0
+ 80%|████████  | 4/5 [03:27<00:49, 49.62s/it]100%|██████████| 5/5 [04:48<00:00, 61.00s/it]100%|██████████| 5/5 [04:48<00:00, 57.65s/it]
+08/28 02:06:51 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 02:06:51 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_correlationanalysis] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_trendforecasting] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_statisticalanalysis] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_impactanalysis] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-tablebench_data_analysis/tablebench_analysis_other] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:14<00:56, 14.06s/it] 60%|██████    | 3/5 [00:15<00:08,  4.02s/it] 80%|████████  | 4/5 [00:16<00:02,  2.99s/it]100%|██████████| 5/5 [00:16<00:00,  3.24s/it]
+dataset                                  version    metric            mode      base-qwen2.5-7b-instruct-tablebench_data_analysis
+---------------------------------------  ---------  ----------------  ------  ---------------------------------------------------
+tablebench_analysis_correlationanalysis  4f5a08     accuracy          gen                                                   12.00
+tablebench_analysis_correlationanalysis  4f5a08     EM_with_error_10  gen                                                   12.00
+tablebench_analysis_correlationanalysis  4f5a08     correct_count     gen                                                    3.00
+tablebench_analysis_correlationanalysis  4f5a08     total_count       gen                                                   25.00
+tablebench_analysis_trendforecasting     4f5a08     accuracy          gen                                                   40.00
+tablebench_analysis_trendforecasting     4f5a08     EM_with_error_10  gen                                                   40.00
+tablebench_analysis_trendforecasting     4f5a08     correct_count     gen                                                   10.00
+tablebench_analysis_trendforecasting     4f5a08     total_count       gen                                                   25.00
+tablebench_analysis_statisticalanalysis  4f5a08     accuracy          gen                                                   48.00
+tablebench_analysis_statisticalanalysis  4f5a08     EM_with_error_10  gen                                                   48.00
+tablebench_analysis_statisticalanalysis  4f5a08     correct_count     gen                                                   12.00
+tablebench_analysis_statisticalanalysis  4f5a08     total_count       gen                                                   25.00
+tablebench_analysis_impactanalysis       4f5a08     accuracy          gen                                                   28.00
+tablebench_analysis_impactanalysis       4f5a08     exact_match       gen                                                   28.00
+tablebench_analysis_impactanalysis       4f5a08     correct_count     gen                                                    7.00
+tablebench_analysis_impactanalysis       4f5a08     total_count       gen                                                   25.00
+tablebench_analysis_other                4f5a08     accuracy          gen                                                   38.18
+tablebench_analysis_other                4f5a08     ROUGE-L           gen                                                   38.18
+tablebench_analysis_other                4f5a08     correct_count     gen                                                   22.00
+tablebench_analysis_other                4f5a08     total_count       gen                                                  100.00
+08/28 02:07:08 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/test/20260828_020203/summary/summary_20260828_020203.txt
+08/28 02:07:08 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/test/20260828_020203/summary/summary_20260828_020203.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-tablebench_data_analysis |
+|----- | ----- | ----- | ----- | -----|
+| tablebench_analysis_correlationanalysis | 4f5a08 | accuracy | gen | 12.00 |
+| tablebench_analysis_correlationanalysis | 4f5a08 | EM_with_error_10 | gen | 12.00 |
+| tablebench_analysis_correlationanalysis | 4f5a08 | correct_count | gen | 3.00 |
+| tablebench_analysis_correlationanalysis | 4f5a08 | total_count | gen | 25.00 |
+| tablebench_analysis_trendforecasting | 4f5a08 | accuracy | gen | 40.00 |
+| tablebench_analysis_trendforecasting | 4f5a08 | EM_with_error_10 | gen | 40.00 |
+| tablebench_analysis_trendforecasting | 4f5a08 | correct_count | gen | 10.00 |
+| tablebench_analysis_trendforecasting | 4f5a08 | total_count | gen | 25.00 |
+| tablebench_analysis_statisticalanalysis | 4f5a08 | accuracy | gen | 48.00 |
+| tablebench_analysis_statisticalanalysis | 4f5a08 | EM_with_error_10 | gen | 48.00 |
+| tablebench_analysis_statisticalanalysis | 4f5a08 | correct_count | gen | 12.00 |
+| tablebench_analysis_statisticalanalysis | 4f5a08 | total_count | gen | 25.00 |
+| tablebench_analysis_impactanalysis | 4f5a08 | accuracy | gen | 28.00 |
+| tablebench_analysis_impactanalysis | 4f5a08 | exact_match | gen | 28.00 |
+| tablebench_analysis_impactanalysis | 4f5a08 | correct_count | gen | 7.00 |
+| tablebench_analysis_impactanalysis | 4f5a08 | total_count | gen | 25.00 |
+| tablebench_analysis_other | 4f5a08 | accuracy | gen | 38.18 |
+| tablebench_analysis_other | 4f5a08 | ROUGE-L | gen | 38.18 |
+| tablebench_analysis_other | 4f5a08 | correct_count | gen | 22.00 |
+| tablebench_analysis_other | 4f5a08 | total_count | gen | 100.00 |
+
+08/28 02:07:08 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/test/20260828_020203/summary/summary_20260828_020203.md

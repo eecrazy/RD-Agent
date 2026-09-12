@@ -1,0 +1,14 @@
+Selected 4 tasks; GPUs=0,1,2,3; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2
+  main/tablebench_data_analysis/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/tablebench_visualization/run-2: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/panorama_par4pc/run-3: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+  main/chemcotbench_mol_edit/run-3: Qwen/Qwen2.5-7B-Instruct, gpt-5.2, limit=2000, timeout=12h
+Pipeline workers=4 (1 per GPU; GPU stages lease-serialized)
+START gpu=0 main/tablebench_data_analysis/run-2
+START gpu=1 main/tablebench_visualization/run-2
+START gpu=2 main/panorama_par4pc/run-3
+START gpu=3 main/chemcotbench_mol_edit/run-3
+FAIL  gpu=1 main/tablebench_visualization/run-2
+FAIL  gpu=3 main/chemcotbench_mol_edit/run-3
+FAIL  gpu=0 main/tablebench_data_analysis/run-2
+FAIL  gpu=2 main/panorama_par4pc/run-3

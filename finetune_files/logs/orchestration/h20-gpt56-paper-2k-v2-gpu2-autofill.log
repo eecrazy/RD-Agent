@@ -1,0 +1,467 @@
+2026-09-09 09:50:37 +0800 GPU2_FILL_CHECK seed=101 keep=32
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T02:13:16.694700+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed101-v1",
+  "selected_run_ids": [
+    "chemcotbench_mol_und__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "chemcotbench_mol_und__lora": {
+      "state": "succeeded",
+      "run_id": "chemcotbench_mol_und__lora",
+      "benchmark": "chemcotbench_mol_und",
+      "method": "lora",
+      "gpus": [
+        "2"
+      ],
+      "config_sha256": "b9ae835f41061b2c6c09a056b973c60b2346144257a0354f45915223cb13a56a",
+      "seed": 101,
+      "data_seed": 101,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_train.json",
+        "sha256": "03776790c59a05ff579df92feffcc4b823289eace01d4ef7b4ff3cee89e84d87",
+        "records": 1728
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_validation.json",
+        "sha256": "430d7ab7fb7cd4dd285ad9d0da1b78b71033687208d8ce2daef32b8ad32c8360",
+        "records": 272
+      },
+      "prepared_at": "2026-09-09T01:50:37.978458+00:00",
+      "started_at": "2026-09-09T01:50:37.978612+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T02:13:16.691161+00:00",
+      "duration_seconds": 1358.711782561615,
+      "metrics": {
+        "epoch": 4.0,
+        "eval_loss": 0.4262511730194092,
+        "eval_runtime": 17.2189,
+        "eval_samples_per_second": 3.368,
+        "eval_steps_per_second": 3.368,
+        "total_flos": 1.2725903733817344e+17,
+        "train_loss": 0.5197760078642103,
+        "train_runtime": 1318.8975,
+        "train_samples_per_second": 1.086,
+        "train_steps_per_second": 0.136,
+        "global_step": 180,
+        "max_steps": 180,
+        "best_metric": 0.4262511134147644,
+        "last_eval_loss": 0.43381467461586,
+        "min_eval_loss": 0.4262511134147644
+      },
+      "gpu": {
+        "2": {
+          "samples": 619,
+          "peak_memory_mib": 27305.0,
+          "peak_utilization_percent": 99.0,
+          "mean_utilization_percent": 94.19063004846527,
+          "mean_power_watts": 329.1123909531504
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed101-v1/chemcotbench_mol_und__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 64,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 10:13:16 +0800 GPU2_FILL_END seed=101 rc=0
+2026-09-09 10:13:27 +0800 GPU2_FILL_CHECK seed=102 keep=32
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T02:36:08.031849+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed102-v1",
+  "selected_run_ids": [
+    "chemcotbench_mol_und__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "chemcotbench_mol_und__lora": {
+      "state": "succeeded",
+      "run_id": "chemcotbench_mol_und__lora",
+      "benchmark": "chemcotbench_mol_und",
+      "method": "lora",
+      "gpus": [
+        "2"
+      ],
+      "config_sha256": "d71e6abe7e0b63f988ec7c7bd4fe1db74cc8b4917f8bd583b46a7a6bc356a758",
+      "seed": 102,
+      "data_seed": 102,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_train.json",
+        "sha256": "03776790c59a05ff579df92feffcc4b823289eace01d4ef7b4ff3cee89e84d87",
+        "records": 1728
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_validation.json",
+        "sha256": "430d7ab7fb7cd4dd285ad9d0da1b78b71033687208d8ce2daef32b8ad32c8360",
+        "records": 272
+      },
+      "prepared_at": "2026-09-09T02:13:27.679168+00:00",
+      "started_at": "2026-09-09T02:13:27.679327+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T02:36:08.028265+00:00",
+      "duration_seconds": 1360.3480937080458,
+      "metrics": {
+        "epoch": 4.0,
+        "eval_loss": 0.4269031584262848,
+        "eval_runtime": 17.2218,
+        "eval_samples_per_second": 3.368,
+        "eval_steps_per_second": 3.368,
+        "total_flos": 1.2725903733817344e+17,
+        "train_loss": 0.520002324713601,
+        "train_runtime": 1319.7235,
+        "train_samples_per_second": 1.085,
+        "train_steps_per_second": 0.136,
+        "global_step": 180,
+        "max_steps": 180,
+        "best_metric": 0.4269031584262848,
+        "last_eval_loss": 0.432827889919281,
+        "min_eval_loss": 0.4269031584262848
+      },
+      "gpu": {
+        "2": {
+          "samples": 619,
+          "peak_memory_mib": 27185.0,
+          "peak_utilization_percent": 99.0,
+          "mean_utilization_percent": 93.94830371567043,
+          "mean_power_watts": 328.80198707592905
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed102-v1/chemcotbench_mol_und__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 64,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 10:36:08 +0800 GPU2_FILL_END seed=102 rc=0
+2026-09-09 10:36:18 +0800 GPU2_FILL_CHECK seed=103 keep=32
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T02:58:58.091258+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed103-v1",
+  "selected_run_ids": [
+    "chemcotbench_mol_und__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "chemcotbench_mol_und__lora": {
+      "state": "succeeded",
+      "run_id": "chemcotbench_mol_und__lora",
+      "benchmark": "chemcotbench_mol_und",
+      "method": "lora",
+      "gpus": [
+        "2"
+      ],
+      "config_sha256": "3e9f953bfb322116fa3acde733e27d55d3c60c03a43d2077ebfdbe2f85ccf6cf",
+      "seed": 103,
+      "data_seed": 103,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_train.json",
+        "sha256": "03776790c59a05ff579df92feffcc4b823289eace01d4ef7b4ff3cee89e84d87",
+        "records": 1728
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_validation.json",
+        "sha256": "430d7ab7fb7cd4dd285ad9d0da1b78b71033687208d8ce2daef32b8ad32c8360",
+        "records": 272
+      },
+      "prepared_at": "2026-09-09T02:36:19.058152+00:00",
+      "started_at": "2026-09-09T02:36:19.058308+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T02:58:58.087679+00:00",
+      "duration_seconds": 1359.0284716794267,
+      "metrics": {
+        "epoch": 4.0,
+        "eval_loss": 0.42792585492134094,
+        "eval_runtime": 17.3226,
+        "eval_samples_per_second": 3.348,
+        "eval_steps_per_second": 3.348,
+        "total_flos": 1.2725903733817344e+17,
+        "train_loss": 0.5216267453299628,
+        "train_runtime": 1319.5761,
+        "train_samples_per_second": 1.085,
+        "train_steps_per_second": 0.136,
+        "global_step": 180,
+        "max_steps": 180,
+        "best_metric": 0.42792582511901855,
+        "last_eval_loss": 0.4333955645561218,
+        "min_eval_loss": 0.42792582511901855
+      },
+      "gpu": {
+        "2": {
+          "samples": 618,
+          "peak_memory_mib": 27305.0,
+          "peak_utilization_percent": 99.0,
+          "mean_utilization_percent": 93.98058252427184,
+          "mean_power_watts": 329.18090614886717
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed103-v1/chemcotbench_mol_und__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 64,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 10:58:58 +0800 GPU2_FILL_END seed=103 rc=0
+2026-09-09 10:59:08 +0800 GPU2_FILL_CHECK seed=104 keep=32
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T03:21:43.266251+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed104-v1",
+  "selected_run_ids": [
+    "chemcotbench_mol_und__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "chemcotbench_mol_und__lora": {
+      "state": "succeeded",
+      "run_id": "chemcotbench_mol_und__lora",
+      "benchmark": "chemcotbench_mol_und",
+      "method": "lora",
+      "gpus": [
+        "2"
+      ],
+      "config_sha256": "fb322c6bda27845deab962ef4fe0765596d07f7f2976f66f4ebee027132eecb2",
+      "seed": 104,
+      "data_seed": 104,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_train.json",
+        "sha256": "03776790c59a05ff579df92feffcc4b823289eace01d4ef7b4ff3cee89e84d87",
+        "records": 1728
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_validation.json",
+        "sha256": "430d7ab7fb7cd4dd285ad9d0da1b78b71033687208d8ce2daef32b8ad32c8360",
+        "records": 272
+      },
+      "prepared_at": "2026-09-09T02:59:09.167921+00:00",
+      "started_at": "2026-09-09T02:59:09.168075+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T03:21:43.262644+00:00",
+      "duration_seconds": 1354.0937651209533,
+      "metrics": {
+        "epoch": 4.0,
+        "eval_loss": 0.4281359314918518,
+        "eval_runtime": 17.1466,
+        "eval_samples_per_second": 3.383,
+        "eval_steps_per_second": 3.383,
+        "total_flos": 1.2725903733817344e+17,
+        "train_loss": 0.5206018096870846,
+        "train_runtime": 1315.0831,
+        "train_samples_per_second": 1.089,
+        "train_steps_per_second": 0.137,
+        "global_step": 180,
+        "max_steps": 180,
+        "best_metric": 0.42813587188720703,
+        "last_eval_loss": 0.43443337082862854,
+        "min_eval_loss": 0.42813587188720703
+      },
+      "gpu": {
+        "2": {
+          "samples": 617,
+          "peak_memory_mib": 27305.0,
+          "peak_utilization_percent": 99.0,
+          "mean_utilization_percent": 94.3192868719611,
+          "mean_power_watts": 330.0777309562396
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed104-v1/chemcotbench_mol_und__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 64,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 11:21:43 +0800 GPU2_FILL_END seed=104 rc=0
+2026-09-09 11:21:54 +0800 GPU2_FILL_CHECK seed=105 keep=32
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T03:44:36.287993+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed105-v1",
+  "selected_run_ids": [
+    "chemcotbench_mol_und__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "chemcotbench_mol_und__lora": {
+      "state": "succeeded",
+      "run_id": "chemcotbench_mol_und__lora",
+      "benchmark": "chemcotbench_mol_und",
+      "method": "lora",
+      "gpus": [
+        "2"
+      ],
+      "config_sha256": "dedc22bed7a819fa5c139a807be24afddedcfb637e1b33305a3de9ed5ca3b2a9",
+      "seed": 105,
+      "data_seed": 105,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_train.json",
+        "sha256": "03776790c59a05ff579df92feffcc4b823289eace01d4ef7b4ff3cee89e84d87",
+        "records": 1728
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_validation.json",
+        "sha256": "430d7ab7fb7cd4dd285ad9d0da1b78b71033687208d8ce2daef32b8ad32c8360",
+        "records": 272
+      },
+      "prepared_at": "2026-09-09T03:21:54.298603+00:00",
+      "started_at": "2026-09-09T03:21:54.298754+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T03:44:36.284094+00:00",
+      "duration_seconds": 1361.984547435306,
+      "metrics": {
+        "epoch": 4.0,
+        "eval_loss": 0.42777571082115173,
+        "eval_runtime": 17.2771,
+        "eval_samples_per_second": 3.357,
+        "eval_steps_per_second": 3.357,
+        "total_flos": 1.2725903733817344e+17,
+        "train_loss": 0.5201511409547593,
+        "train_runtime": 1319.768,
+        "train_samples_per_second": 1.085,
+        "train_steps_per_second": 0.136,
+        "global_step": 180,
+        "max_steps": 180,
+        "best_metric": 0.4277757406234741,
+        "last_eval_loss": 0.4337170124053955,
+        "min_eval_loss": 0.4277757406234741
+      },
+      "gpu": {
+        "2": {
+          "samples": 621,
+          "peak_memory_mib": 27187.0,
+          "peak_utilization_percent": 99.0,
+          "mean_utilization_percent": 93.9645732689211,
+          "mean_power_watts": 329.12772946859906
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed105-v1/chemcotbench_mol_und__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 64,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 11:44:36 +0800 GPU2_FILL_END seed=105 rc=0
+2026-09-09 11:44:47 +0800 GPU2_FILL_CHECK seed=106 keep=33
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T04:07:26.483057+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed106-v1",
+  "selected_run_ids": [
+    "chemcotbench_mol_und__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "chemcotbench_mol_und__lora": {
+      "state": "succeeded",
+      "run_id": "chemcotbench_mol_und__lora",
+      "benchmark": "chemcotbench_mol_und",
+      "method": "lora",
+      "gpus": [
+        "2"
+      ],
+      "config_sha256": "444b32a03770b444bdeaa51c0788b7f852015718f6946b678a757e40e8f2d18a",
+      "seed": 106,
+      "data_seed": 106,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_train.json",
+        "sha256": "03776790c59a05ff579df92feffcc4b823289eace01d4ef7b4ff3cee89e84d87",
+        "records": 1728
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__chemcotbench_mol_und__run-1/workspace/2657b0f5e42e407bb6168d8cbcc243d5/data_validation.json",
+        "sha256": "430d7ab7fb7cd4dd285ad9d0da1b78b71033687208d8ce2daef32b8ad32c8360",
+        "records": 272
+      },
+      "prepared_at": "2026-09-09T03:44:47.591109+00:00",
+      "started_at": "2026-09-09T03:44:47.591251+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T04:07:26.479559+00:00",
+      "duration_seconds": 1358.8875463521108,
+      "metrics": {
+        "epoch": 4.0,
+        "eval_loss": 0.42831894755363464,
+        "eval_runtime": 17.3923,
+        "eval_samples_per_second": 3.335,
+        "eval_steps_per_second": 3.335,
+        "total_flos": 1.2725903733817344e+17,
+        "train_loss": 0.5218293362193638,
+        "train_runtime": 1319.1804,
+        "train_samples_per_second": 1.086,
+        "train_steps_per_second": 0.136,
+        "global_step": 180,
+        "max_steps": 180,
+        "best_metric": 0.42831894755363464,
+        "last_eval_loss": 0.43401214480400085,
+        "min_eval_loss": 0.42831894755363464
+      },
+      "gpu": {
+        "2": {
+          "samples": 617,
+          "peak_memory_mib": 27185.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 94.21717990275526,
+          "mean_power_watts": 329.3705834683956
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-chemcot-lora-gpu2-seed106-v1/chemcotbench_mol_und__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 64,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}

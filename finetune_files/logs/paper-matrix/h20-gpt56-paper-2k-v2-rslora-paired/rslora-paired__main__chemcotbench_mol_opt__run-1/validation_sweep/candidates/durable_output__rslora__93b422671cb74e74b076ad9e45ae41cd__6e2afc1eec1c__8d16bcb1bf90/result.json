@@ -1,0 +1,293 @@
+{
+  "candidate_id": "durable_output__rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c__8d16bcb1bf90",
+  "source": "durable_output",
+  "workspace_id": "rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c",
+  "checkpoint_step": null,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-1/workspace/.ft_model_checkpoints/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c/output",
+  "selection_signature": "3c6950da03adcbc922a51d9596d21f7ac513eac6c8f6af15a723f0ec71b46a68",
+  "formal_training_evidence_signature": "053a77a439c57b01a1b214ef62f10421a81dfcfb10fc27f03324d911555b8b14",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-1",
+  "benchmark": "chemcotbench_mol_opt",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "a9778bb5b378a82f640be675efa50d3c2765de66b627c84f1081d112af650541",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:34:49.275692+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:41:25.259077+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_mol_opt_drd": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 12.0,
+        "scaffold_soft": 31.07,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 48.0
+      },
+      "chemcotbench_mol_opt_gsk": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 14.0,
+        "scaffold_soft": 35.06,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 50.0
+      },
+      "chemcotbench_mol_opt_jnk": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 8.0,
+        "scaffold_soft": 31.6,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 48.0
+      },
+      "chemcotbench_mol_opt_logp": {
+        "best_rate": 34.0,
+        "mean_improvement": 0.51,
+        "scaffold_hard": 22.0,
+        "scaffold_soft": 32.0,
+        "success_rate": 42.0,
+        "total_count": 50.0,
+        "valid_score_rate": 44.0,
+        "valid_smiles_rate": 44.0
+      },
+      "chemcotbench_mol_opt_qed": {
+        "best_rate": 10.0,
+        "mean_improvement": 0.09,
+        "scaffold_hard": 14.0,
+        "scaffold_soft": 28.5,
+        "success_rate": 42.0,
+        "total_count": 50.0,
+        "valid_score_rate": 48.0,
+        "valid_smiles_rate": 48.0
+      },
+      "chemcotbench_mol_opt_solubility": {
+        "best_rate": 16.0,
+        "mean_improvement": 0.22,
+        "scaffold_hard": 18.0,
+        "scaffold_soft": 32.34,
+        "success_rate": 32.0,
+        "total_count": 50.0,
+        "valid_score_rate": 44.0,
+        "valid_smiles_rate": 44.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCC3CCOCC3)c2cn1)c1ccccc1",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a pyrimidine-like core (c1cc2[nH]nc...c2cn1) with an ethoxy-linked tetrahydropyran (OCC3CCOCC3) and a benzyl group (c1ccccc1). The pyrrole and pyrimidine rings provide aromaticity and hydrogen-bonding potential, while the tetrahydropyran contributes to solubility.\nProperty Analysis: GSK3-beta inhibitors often require planar aromatic systems for ATP-binding pocket interaction, hydrogen-bond donors/acceptors, and balanced lipophilicity. The ethoxy group (OCC3CCOCC3) may reduce binding due to steric bulk and lack of aromaticity.\nOptimization for Source Molecule: Replace the ethoxy group (OCC3CCOCC3) with a pyridine ring (c3ccncc3) to enhance aromatic stacking in the ATP-binding pocket. Pyridine improves hydrogen-bonding via its lone pair on nitrogen and reduces steric bulk while maintaining tetrahydropyran's solubility.\n{\"Final Target Molecule\": \"CC(NC(=O)Nc1cc2[nH]nc(Oc3ccncc3)c2cn1)c1ccccc1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCC3CCOCC3)c2cn1)c1ccccc1.\n"
+      },
+      {
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a pyrimidine-like system (c1cc2[nH]nc...c2cn1) with a trifluoromethylpyridine substituent (CNCC(F)F). The core scaffold includes a benzyl group (c1ccccc1) and an amide linkage (NC(=O)N).\nProperty Analysis: The pyrrole and pyrimidine system may contribute to GSK3-beta binding via hydrogen bonding and aromatic interactions. The trifluoromethylpyridine group enhances lipophilicity and potential target engagement. The amide linker provides conformational flexibility.\nOptimization for Source Molecule: Introduce a piperazine ring (C1CNCCN1) to the pyrrole substituents to improve solubility and hydrogen-bonding capacity. Replace the trifluoromethylpyridine with a fluorinated piperazine (CN1CC(F)CN1) to maintain lipophilicity while enhancing polarity and target affinity.\n{\"Final Target Molecule\": \"CC(NC(=O)Nc1cc2[nH]nc(CN1CC(F)CN1)c2cn1)c1ccccc1.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1.\n"
+      },
+      {
+        "gold": "Cc1cc(C(=O)N2CCC3(CC2)CN(C(=O)Nc2ccc(OC(F)(F)F)cc2)CCO3)no1",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) connected to a pyrazole ring (C1=CC=CN1) and a trifluoromethoxy-substituted phenyl ring (c2ccc(OC(F)(F)F)cc2). The molecule also has a hydroxyl group (CCO3) and a carbonyl group (C(=O)N) attached to the piperidine ring.\nProperty Analysis: The LogP of the source molecule is influenced by the presence of the hydrophilic hydroxyl group (CCO3) and the polar carbonyl group (C(=O)N). The trifluoromethoxy-substituted phenyl ring (c2ccc(OC(F)(F)F)cc2) is also polar due to the ether linkage (OC(F)(F)F).\nOptimization for Source Molecule: To improve the LogP, the hydroxyl group (CCO3) can be replaced with a more hydrophobic group, such as a tert-butyl group (CC(C)(C)O3). This modification reduces the overall polarity of the molecule while maintaining some solubility in water due to the ether linkage.\n{\"Final Target Molecule\": \"Cc1cc(C(=O)N2CCC3(CC2)CN(C(=O)Nc2ccc(OC(F)(F)F)cc2)CC(C)(C)O3)no1.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the LogP value while following a structured intermediate optimization process. LogP is a measure of a molecule's lipophilicity, which is its tendency to dissolve in a lipid (fatty) environment compared to water. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cc(C(=O)N2CCC3(CC2)CN(C(=O)Nc2ccc(OC(F)(F)F)cc2)CCO3)no1.\n"
+      },
+      {
+        "gold": "COC(=O)CCC(=O)Nc1cccc(C(F)(F)F)c1",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a trifluoromethylphenyl group (c1cccc(C(F)(F)F)c1) connected to a carbamate group (COC(=O)) and a urea derivative (CCC(=O)N). The trifluoromethyl group (CF3) is highly hydrophobic, which likely reduces water solubility.\nIntermediate Optimization for Source Molecule: To improve water solubility, the trifluoromethylphenyl group can be replaced with a more polar or hydrophilic group. Introducing a hydroxyl group (OH) increases hydrogen bonding potential and hydrophilicity. The carbamate and urea groups are already polar and can be retained.\n{\"Final Target Molecule\": \"COC(=O)CCC(=O)Nc1cc(O)cccc1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC(=O)CCC(=O)Nc1cccc(C(F)(F)F)c1.\n"
+      },
+      {
+        "gold": "CCOC(=O)N1CCN(S(=O)(=O)c2ccc(C(=O)Nc3nc4c(s3)CC(C)CC4)cc2)CC1",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane), a sulfonamide group (S(=O)(=O)), a pyrrole ring (azole), and a tertiary amide (C(=O)Nc3nc4c(s3)CC(C)CC4). The presence of the piperazine ring and the tertiary amide may contribute to its solubility in water.\nOptimization for Source Molecule: To improve water solubility, the tertiary amide (C(=O)Nc3nc4c(s3)CC(C)CC4) can be replaced with a more polar and water-soluble group, such as a secondary amide (C(=O)Nc3ccccc3). This modification increases the polarity of the molecule without significantly altering its core structure.\n{\"Final Target Molecule\": \"CCOC(=O)N1CCN(S(=O)(=O)c2ccc(C(=O)Nc3ccccc3)cc2)CC1.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)N1CCN(S(=O)(=O)c2ccc(C(=O)Nc3nc4c(s3)CC(C)CC4)cc2)CC1.\n"
+      },
+      {
+        "gold": "COc1ccc(NC(=O)CSc2nc3ccccc3nc2N2CCCC2)cc1Cl",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a central thiazole ring (CSc2nc3ccccc3nc2N2CCCC2) with a piperidine ring (N2CCCC2) attached. The molecule also has a methoxy group (COc1ccc), an amide group (NC(=O)), and a chloro substituent (Cl) on the aromatic ring.\nProperty Analysis: The solubility of the source molecule is likely limited due to the presence of the hydrophobic chloro substituent (Cl) and the piperidine ring (N2CCCC2), which is less polar than a piperazine ring.\nOptimization for Source Molecule: To improve solubility, the chloro substituent can be replaced with a more polar group, such as a hydroxyl group (OH). The piperidine ring can be retained or replaced with a more polar group if necessary. The amide and thiazole core can be retained as they contribute to the molecule's polarity.\n{\"Final Target Molecule\": \"COc1ccc(NC(=O)CSc2nc3ccccc3nc2N2CCCC2)cc1O.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(NC(=O)CSc2nc3ccccc3nc2N2CCCC2)cc1Cl.\n"
+      },
+      {
+        "gold": "Cn1ccc(Oc2ccc3cc(NC(=O)C4CC4)ncc3c2)n1",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) connected to a benzene ring via an ether linkage. The benzene ring has a substituted amide group (NC(=O)C4CC4) where C4CC4 is a cyclopropane ring. The pyrrole nitrogen is methylated (Cn1ccc...).\nProperty Analysis: GSK3-beta inhibitors often require hydrogen bond donors/acceptors and planar aromatic systems for binding. The pyrrole ring (electron-rich, planar) and the amide group (hydrogen bond donor/acceptor) are favorable for kinase inhibition.\nOptimization for Source Molecule: 1) Replace the pyrrole ring with a pyridine ring (electron-deficient, planar) to enhance aromatic stacking. 2) Retain the cyclopropane-amide group (C4CC4) for rigidity and hydrogen bonding. 3) Maintain the ether linkage for solubility.\n{\"Final Target Molecule\": \"Cc1ccc(Oc2ccc3cc(NC(=O)C4CC4)ncc3c2)n1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1ccc(Oc2ccc3cc(NC(=O)C4CC4)ncc3c2)n1.\n"
+      },
+      {
+        "gold": "COCCNC(=O)CN(c1cc(C(F)(F)F)ccc1Cl)S(C)(=O)=O",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a sulfonamide group (S(=O)(=O)C), a trifluoromethyl group (C(F)(F)F), a chloro-substituted phenyl ring, and an amide linkage (NC(=O)). The presence of the sulfonamide and trifluoromethyl groups contributes to its hydrophilicity.\nOptimization for Source Molecule: To improve LogP, the trifluoromethyl group can be replaced with a more hydrophobic group, such as a methyl group. The sulfonamide group can be retained or modified to a less polar group if necessary. The amide linkage can be retained or modified to a more hydrophobic group, such as an ester or a ketone.\n{\"Final Target Molecule\": \"CC(=O)N(c1ccccc1)CN(c1cc(C(F)(F)F)ccc1Cl)S(C)(=O)=O.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the LogP value while following a structured intermediate optimization process. LogP is a measure of a molecule's lipophilicity, which is its tendency to dissolve in a lipid (fatty) environment compared to water. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COCCNC(=O)CN(c1cc(C(F)(F)F)ccc1Cl)S(C)(=O)=O.\n"
+      },
+      {
+        "gold": "Cc1ccccc1-c1ccc(CC2NC(=O)c3cc(Cl)ccc3N(C)C2=O)cc1",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a toluene group (Cc1ccccc1) and a chlorinated benzene ring (c3cc(Cl)ccc3) linked via a carbonyl group (NC(=O)). The nitrogen in the carbamate group (NC(=O)) is substituted with a methyl group (N(C)C2=O).\nProperty Analysis: The carbamate group (NC(=O)) may contribute to hydrogen bonding with GSK3-beta, but the methyl substitution on the nitrogen could limit optimal interactions. The chlorinated benzene ring (c3cc(Cl)ccc3) provides hydrophobic interactions, but the lack of additional polar or charged groups may reduce binding affinity.\nOptimization for Source Molecule: Replace the methyl group (N(C)C2=O) on the carbamate nitrogen with a dimethylamino group (N(C)C(C)N(C)C2=O). This introduces a tertiary amine (piperazine-like) that enhances hydrogen bonding potential and solubility, while maintaining the carbamate's rigidity.\n{\"Final Target Molecule\": \"Cc1ccccc1-c1ccc(CC2NC(=O)c3cc(Cl)ccc3N(C)C(C)N(C)C2=O)cc1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccccc1-c1ccc(CC2NC(=O)c3cc(Cl)ccc3N(C)C2=O)cc1.\n"
+      },
+      {
+        "gold": "OC(CN1CCN(Cc2cccs2)CC1)(Cn1cncn1)c1ccc(F)cc1F",
+        "model_output": "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane), a thiophene ring (c2cccs2), a pyrimidine-like ring (Cn1cncn1), and a difluorophenyl group (c1ccc(F)cc1F). The presence of the piperazine ring and the difluorophenyl group contributes to its hydrophilicity.\nOptimization for Source Molecule: To improve the LogP (increase lipophilicity), the piperazine ring can be replaced with a more lipophilic piperidine ring (1,4-diazacyclohexane to 1,4-diazacycloheptane). The difluorophenyl group can be retained or modified to a less polar group if necessary.\n{\"Final Target Molecule\": \"OCC1CN(Cc2cccs2)CCN1Cn1cncn1c1ccc(F)cc1F\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the LogP value while following a structured intermediate optimization process. LogP is a measure of a molecule's lipophilicity, which is its tendency to dissolve in a lipid (fatty) environment compared to water. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: OC(CN1CCN(Cc2cccs2)CC1)(Cn1cncn1)c1ccc(F)cc1F.\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_mol_opt_drd": {
+      "best_rate": 0.0,
+      "mean_improvement": 0.0,
+      "scaffold_hard": 12.0,
+      "scaffold_soft": 31.07,
+      "success_rate": 0.0,
+      "total_count": 50.0,
+      "valid_score_rate": 0.0,
+      "valid_smiles_rate": 48.0
+    },
+    "chemcotbench_mol_opt_gsk": {
+      "best_rate": 0.0,
+      "mean_improvement": 0.0,
+      "scaffold_hard": 14.0,
+      "scaffold_soft": 35.06,
+      "success_rate": 0.0,
+      "total_count": 50.0,
+      "valid_score_rate": 0.0,
+      "valid_smiles_rate": 50.0
+    },
+    "chemcotbench_mol_opt_jnk": {
+      "best_rate": 0.0,
+      "mean_improvement": 0.0,
+      "scaffold_hard": 8.0,
+      "scaffold_soft": 31.6,
+      "success_rate": 0.0,
+      "total_count": 50.0,
+      "valid_score_rate": 0.0,
+      "valid_smiles_rate": 48.0
+    },
+    "chemcotbench_mol_opt_logp": {
+      "best_rate": 34.0,
+      "mean_improvement": 0.51,
+      "scaffold_hard": 22.0,
+      "scaffold_soft": 32.0,
+      "success_rate": 42.0,
+      "total_count": 50.0,
+      "valid_score_rate": 44.0,
+      "valid_smiles_rate": 44.0
+    },
+    "chemcotbench_mol_opt_qed": {
+      "best_rate": 10.0,
+      "mean_improvement": 0.09,
+      "scaffold_hard": 14.0,
+      "scaffold_soft": 28.5,
+      "success_rate": 42.0,
+      "total_count": 50.0,
+      "valid_score_rate": 48.0,
+      "valid_smiles_rate": 48.0
+    },
+    "chemcotbench_mol_opt_solubility": {
+      "best_rate": 16.0,
+      "mean_improvement": 0.22,
+      "scaffold_hard": 18.0,
+      "scaffold_soft": 32.34,
+      "success_rate": 32.0,
+      "total_count": 50.0,
+      "valid_score_rate": 44.0,
+      "valid_smiles_rate": 44.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "success_rate",
+      "label": "SR",
+      "value": 19.333333333333332,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "unweighted mean success_rate across six optimization views",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_opt_drd",
+          "metric": "success_rate",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_gsk",
+          "metric": "success_rate",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_jnk",
+          "metric": "success_rate",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_logp",
+          "metric": "success_rate",
+          "value": 42.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_qed",
+          "metric": "success_rate",
+          "value": 42.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_solubility",
+          "metric": "success_rate",
+          "value": 32.0
+        }
+      ]
+    },
+    {
+      "metric": "valid_smiles_rate",
+      "label": "VS",
+      "value": 47.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "unweighted mean valid_smiles_rate across six optimization views",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_opt_drd",
+          "metric": "valid_smiles_rate",
+          "value": 48.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_gsk",
+          "metric": "valid_smiles_rate",
+          "value": 50.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_jnk",
+          "metric": "valid_smiles_rate",
+          "value": 48.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_logp",
+          "metric": "valid_smiles_rate",
+          "value": 44.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_qed",
+          "metric": "valid_smiles_rate",
+          "value": 48.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_solubility",
+          "metric": "valid_smiles_rate",
+          "value": 44.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-1/validation_sweep/candidates/durable_output__rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c__8d16bcb1bf90/workspace"
+}

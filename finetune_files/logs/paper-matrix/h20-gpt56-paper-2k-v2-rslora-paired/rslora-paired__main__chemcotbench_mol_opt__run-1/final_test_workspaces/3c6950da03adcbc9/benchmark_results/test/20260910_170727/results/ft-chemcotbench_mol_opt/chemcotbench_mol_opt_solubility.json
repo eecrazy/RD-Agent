@@ -1,0 +1,1662 @@
+{
+    "mean_improvement": 0.6254438001494534,
+    "success_rate": 52.0,
+    "best_rate": 40.0,
+    "valid_smiles_rate": 62.0,
+    "valid_score_rate": 62.0,
+    "scaffold_hard": 18.0,
+    "scaffold_soft": 40.12217012823954,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_50",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperidine ring (C1CCCC1), a pyrrole ring (C1=CC=CN1), and multiple amide and ether functional groups. The presence of aromatic rings (benzene) and hydrophobic groups (methyl, phenyl) reduces water solubility.\nProperty Analysis: The molecule has moderate solubility due to polar amide groups, but hydrophobic aromatic and aliphatic regions limit its overall water solubility.\nOptimization for Source Molecule: To improve solubili"
+            ],
+            "pred_smiles": [
+                "CCOc1ccccc1C(=O)N1CCCC1C(=O)NC(c1ccccc1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(c1ccccc1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.683967289761244
+            ],
+            "tgt_property": [
+                -6.19716549983041
+            ],
+            "improvement": [
+                -0.5131982100691657
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6530612244897959
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_51",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a nitrile group (N#C), a sulfonamide group (S(=O)(=O)N), a thiazole ring (c2nccs2), an ether linkage (Oc1ccc(Cl)cc1), and a trifluoromethylpyridine group (c1ccnn1CC(F)(F)F). The presence of the nitrile and trifluoromethyl groups may reduce water solubility.\nOptimization for Source Molecule: To improve water solubility, the nitrile group can be replaced with a more polar group (e.g., hydroxyl or amine). The trifluoromethylpyridi"
+            ],
+            "pred_smiles": [
+                "Oc1ccc(Cl)cc1-c1ccnn1CC(F)(F)Fc1nccs1S(=O)(=O)Nc1ccc(O)cc1"
+            ],
+            "source_smiles": [
+                "N#Cc1cc(S(=O)(=O)Nc2nccs2)ccc1Oc1ccc(Cl)cc1-c1ccnn1CC(F)(F)F"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_52",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperidine ring (C1CCNCC1) attached to a carbonyl group (O=C) and a benzodioxole moiety (Oc1ccccc1). The piperidine ring is a saturated, non-polar aliphatic amine, which may limit water solubility.\nOptimization for Source Molecule: Replace the piperidine ring with a more polar and water-soluble group, such as a carboxylic acid (O=C(O)). This introduces a polar, ionizable group that can enhance solubility in water.\n{\"Final Tar"
+            ],
+            "pred_smiles": [
+                "O=C(O)CNc1ccccc1Oc1ccccc1"
+            ],
+            "source_smiles": [
+                "O=C(CN1CCCCC1)Nc1ccccc1Oc1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -4.891828012986075
+            ],
+            "tgt_property": [
+                -3.8213807293897837
+            ],
+            "improvement": [
+                1.070447283596291
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.28205128205128205
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_53",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central urea scaffold (NC(=O)) with a methoxy-substituted benzene ring (COc1ccccc1) and a second benzene ring substituted with a carbonyl-linked ethyl ester (COC(=O)CCC2CCCC2). The ester group (COC(=O)) and the piperidine ring (C2CCCC2) are hydrophobic.\nProperty Analysis: The solubility of the source molecule is limited by the hydrophobic ester group (COC(=O)) and the piperidine ring (C2CCCC2). The urea scaffold (NC(=O)) and "
+            ],
+            "pred_smiles": [
+                "COc1ccccc1NC(=O)c1ccc(C(=O)O)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)CCC2CCCC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.94336777645297
+            ],
+            "tgt_property": [
+                -3.737140725090742
+            ],
+            "improvement": [
+                2.206227051362228
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4222222222222222
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_54",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central amide linkage (NC(=O)) connecting a chlorinated phenyl ring (-c3c(Cl)cccc3Cl) to a piperazine-like structure (CCN). The presence of chlorine atoms and the piperazine-like group (CCN) may influence solubility.\nOptimization for Source Molecule: To improve water solubility, the piperazine-like group (CCN) can be replaced with a more polar and hydrophilic group, such as a simple ethylamine (CCN). This reduces the hydropho"
+            ],
+            "pred_smiles": [
+                "CCNc1ccc(NC(=O)c2c(-c3c(Cl)cccc3Cl)noc2CC)cc1."
+            ],
+            "source_smiles": [
+                "CCNc1ccc(NC(=O)c2c(-c3c(Cl)cccc3Cl)noc2C)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_55",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a nitrile group (N#C), a fluorine-substituted pyrimidine ring, a piperazine-like structure (N(Cc2ccc(Cl)cc2)Cc2ccc3c(c2)OCO3), and a chlorinated phenyl ring. The presence of the nitrile and the chlorinated phenyl ring may reduce water solubility.\nOptimization for Source Molecule: To improve water solubility, the nitrile group can be replaced with a more polar group, such as an amine or hydroxyl group. The chlorinated phenyl rin"
+            ],
+            "pred_smiles": [
+                "Oc1ccc2c(c1)OCO2Cc1ccncc1N(Cc2ccc(Cl)cc2)Cc1ccc2c(c1)OCO3"
+            ],
+            "source_smiles": [
+                "N#Cc1ncc(F)c(N(Cc2ccc(Cl)cc2)Cc2ccc3c(c2)OCO3)n1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_56",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (Cc1c(Sc2cccc(Cl)c2)n(COCCO)c(=O)[nH]c1=O) with a methyl group, a thioether-linked chlorophenyl group, a hydroxymethyl group, and a carbonyl group. The presence of the hydroxymethyl group (COCCO) and the carbonyl groups (C=O) suggests some polarity, but the thioether (S) and the chlorophenyl group (Sc2cccc(Cl)c2) are hydrophobic.\nOptimization for Source Molecule: To improve water solubility, the hydroxymethyl gr"
+            ],
+            "pred_smiles": [
+                "Cc1c(Nc2cccc(Cl)c2)n(CC(=O)O)c(=O)[nH]c1=O"
+            ],
+            "source_smiles": [
+                "Cc1c(Sc2cccc(Cl)c2)n(COCCO)c(=O)[nH]c1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -3.4164052913886906
+            ],
+            "tgt_property": [
+                -3.0008528112496466
+            ],
+            "improvement": [
+                0.415552480139044
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4444444444444444
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_57",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole ring (CCSc1nnc...s1) with a substituted amide group (NC(=O)C(NC(=O)c2ccccc2F)C(C)C) attached. The amide group is further substituted with a fluorinated phenyl ring (c2ccccc2F) and a tert-butyl group (C(C)C).\nProperty Analysis: The solubility of the source molecule is likely limited due to the presence of hydrophobic groups (tert-butyl, fluorinated phenyl) and the thiazole ring, which is less polar than a pyridine rin"
+            ],
+            "pred_smiles": [
+                "Cc1ccncc1NC(=O)C(NC(=O)c2ccccc2)C(C)C"
+            ],
+            "source_smiles": [
+                "CCSc1nnc(NC(=O)C(NC(=O)c2ccccc2F)C(C)C)s1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -4.792125167753701
+            ],
+            "tgt_property": [
+                -4.067554203209425
+            ],
+            "improvement": [
+                0.7245709645442764
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5217391304347826
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_58",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole ring (c2nc3ccc(C)cn3c2) attached to a phenyl ring (Cc1ccc...cc1) and a thiophene ring (Cc2ccsc2). The presence of the thiophene ring and the thiazole nitrogen atoms may limit water solubility due to their hydrophobic nature.\nOptimization for Source Molecule: To improve water solubility, the thiophene ring can be replaced with a more polar heterocycle, such as a pyridine ring (c2ccncc2), which has a nitrogen atom that"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(-c2nc3ccc(C)cn3c2Cc2ccncc2)cc1"
+            ],
+            "source_smiles": [
+                "Cc1ccc(-c2nc3ccc(C)cn3c2Cc2ccsc2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -6.114192090559901
+            ],
+            "tgt_property": [
+                -5.588842375594918
+            ],
+            "improvement": [
+                0.5253497149649826
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6744186046511628
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_59",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central core with a piperidine ring (C1CCNCC1) and a pyrrole ring (C1=CC=CN1) connected via a carbonyl group. The molecule also has a chloro-substituted phenyl ring and a nitrile group.\nProperty Analysis: The solubility of the source molecule is likely limited due to the presence of hydrophobic groups such as the chloro-substituted phenyl ring and the nitrile group. The piperidine ring and the pyrrole ring can contribute to s"
+            ],
+            "pred_smiles": [
+                "CC1CCN(C(=O)N2CCCC2C)c2c1COCC2C(=O)N2CCCC2C"
+            ],
+            "source_smiles": [
+                "CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1COCC2)c1ccc(C#N)cc1Cl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.880117288307331
+            ],
+            "tgt_property": [
+                -4.328184059207322
+            ],
+            "improvement": [
+                1.5519332291000092
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.2028985507246377
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_60",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzopyranone core (O=c1ccoc2ccc12) with a morpholine ring (N2CCOCC2) and a substituted phenyl ring (OCc3ccc(Cl)cc3). The morpholine ring is a six-membered ring with one oxygen and one nitrogen atom, while the substituted phenyl ring has a chlorine atom at the para position.\nProperty Analysis: The solubility of the source molecule is likely limited by the hydrophobic substituted phenyl ring (OCc3ccc(Cl)cc3). The chlor"
+            ],
+            "pred_smiles": [
+                "O=c1cc(N2CCOCC2)oc2cc(OCc3ccccc3)ccc12."
+            ],
+            "source_smiles": [
+                "O=c1cc(N2CCOCC2)oc2cc(OCc3ccc(Cl)cc3)ccc12"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_61",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a bromobenzene ring (Brc1ccc) connected to an ethoxy chain (OCCCC) and a piperidine ring (N2CCCCC2). The bromine atom is a hydrophobic group, and the piperidine ring is moderately polar but not highly water-soluble.\nProperty Analysis: The solubility of the source molecule is limited due to the hydrophobic bromine atom and the piperidine ring. The ethoxy chain (OCCCC) adds some polarity but is not sufficient for high water solub"
+            ],
+            "pred_smiles": [
+                "O=C(O)CCCN1CCCCC1"
+            ],
+            "source_smiles": [
+                "Brc1ccc(OCCCCN2CCCCC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -4.961768162105591
+            ],
+            "tgt_property": [
+                -1.8492370267101037
+            ],
+            "improvement": [
+                3.1125311353954874
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.08823529411764706
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_62",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyrazole ring (nn) with a chlorinated phenyl group (-c3cccc(Cl)c3) attached. The phenyl ring is chlorinated, which is a hydrophobic group. The molecule also has a methoxy group (COc1ccc) and a chlorinated pyridone ring (Oc2c(Cl)cnn...c2=O).\nProperty Analysis: The solubility of the source molecule is likely limited due to the presence of the hydrophobic chlorinated phenyl group (-c3cccc(Cl)c3) and the overall size of t"
+            ],
+            "pred_smiles": [
+                "COc1ccc(Oc2c(Cl)cnn(c3ccccc3)c2=O)cc1."
+            ],
+            "source_smiles": [
+                "COc1ccc(Oc2c(Cl)cnn(-c3cccc(Cl)c3)c2=O)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_63",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central thiazole ring (c2nnc...n2) with a thioether linkage (SCc3ccc(C#N)cc3) to a cyanophenyl group (c3ccc(C#N)cc3) and a methoxy-substituted benzene ring (COc1cccc). The presence of the thioether (S) and the cyanophenyl group (C#N) may limit water solubility.\nOptimization for Source Molecule: To improve water solubility, the thioether (S) can be replaced with a more polar linker, such as an amine (NH), to form a piperazine "
+            ],
+            "pred_smiles": [
+                "COc1cccc(-c2nnc(Nc3ccc(C#N)cc3)n2Cc2ccco2)c1"
+            ],
+            "source_smiles": [
+                "COc1cccc(-c2nnc(SCc3ccc(C#N)cc3)n2Cc2ccco2)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -6.229550613793012
+            ],
+            "tgt_property": [
+                -5.632041338912525
+            ],
+            "improvement": [
+                0.5975092748804869
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.56
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_64",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a methoxy group (COc1cccc), a carboxylic acid ester (C(=O)OCC(C)C), and a complex bicyclic system (C2CCC3C(O)CCCC23C) with a hydroxyl group. The ester group and the hydroxyl group are potential sites for modification to improve water solubility.\nOptimization for Source Molecule: To improve water solubility, the ester group (C(=O)OCC(C)C) can be hydrolyzed to a carboxylic acid (C(=O)OH), which is more hydrophilic. The hydroxyl g"
+            ],
+            "pred_smiles": [
+                "COc1cccc(C(=O)OCC(C)C2CCC3C(O)CCCC23C)Oc1"
+            ],
+            "source_smiles": [
+                "COc1cccc(C(=O)OCC(C)C2CCC3C(O)CCCC23C)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.1305253296453275
+            ],
+            "tgt_property": [
+                -4.863849434245472
+            ],
+            "improvement": [
+                0.2666758953998558
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.58
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_65",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains an ester group (CCOC(=O)), an amide linkage (NC(=O)), and two phenyl rings (c1ccccc1). The ester group is hydrophobic, and the amide linkage can form hydrogen bonds with water, but the overall solubility is limited by the hydrophobic phenyl rings and the ester group.\nOptimization for Source Molecule: To improve water solubility, the ester group can be replaced with a more polar or hydrophilic group, such as a carboxylic acid or"
+            ],
+            "pred_smiles": [
+                "O=C(NC(=O)c1ccccc1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CCOC(=O)C(NC(=O)c1ccccc1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -3.856940748454173
+            ],
+            "tgt_property": [
+                -3.196334953436755
+            ],
+            "improvement": [
+                0.660605795017418
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5384615384615384
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_66",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a tert-butyl group (CC(C)(C)), a thiazole core (c1nc2ccccc2n1), a sulfonamide group (S(=O)(=O)CC3CCNCC3), and a cyclopropane ring (CC1CC1). The thiazole and sulfonamide groups are polar and can form hydrogen bonds, but the tert-butyl group is hydrophobic.\nProperty Analysis: The solubility of the source molecule is limited by the hydrophobic tert-butyl group. The sulfonamide and thiazole groups can enhance solubility through hyd"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)Cc1nc2cc(S(=O)(=O)CC3CCNCC3)ccc2n1CC1CC1"
+            ],
+            "source_smiles": [
+                "CC(C)(C)Cc1nc2cc(S(=O)(=O)CC3CCNCC3)ccc2n1CC1CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.3488422098895
+            ],
+            "tgt_property": [
+                -5.3488422098895
+            ],
+            "improvement": [
+                0.0
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_67",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with an aniline group (Nc2ncnc3ccc(-c4cncs4)cc23). The aniline is further substituted with a complex heterocyclic system (ncnc3ccc(-c4cncs4)cc23) and a thiophene ring (-c4cncs4). The presence of the thiophene ring and the heterocyclic system may contribute to the molecule's hydrophobicity.\nOptimization for Source Molecule: To improve water solubility, the thiophene ring (-c4cncs4) can be repla"
+            ],
+            "pred_smiles": [
+                "c1ccc(Nc2ncnc3ccc(-c4ccncc4)cc23)cc1"
+            ],
+            "source_smiles": [
+                "c1ccc(Nc2ncnc3ccc(-c4cncs4)cc23)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.483662794845748
+            ],
+            "tgt_property": [
+                -5.399017123626154
+            ],
+            "improvement": [
+                0.08464567121959377
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6521739130434783
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_68",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thioether group (C-S-C), a phenyl ring, an amide linkage (NC=O), a piperidine ring (N1CCCC1), and a benzodioxole-substituted carbonyl group (C(=O)c2ccc3c(c2)OCO3). The thioether group is hydrophobic and may reduce water solubility.\nOptimization for Source Molecule: Replace the thioether (S) with a more polar group (e.g., -NH2 or -OH) to increase water solubility. Introduce a polar side chain (e.g., -CH2CH2OH) to enhance hydro"
+            ],
+            "pred_smiles": [
+                "CC(O)CN1CCCC(C(=O)c2ccc3c(c2)OCO3)C1"
+            ],
+            "source_smiles": [
+                "CSc1ccccc1NC(=O)N1CCCC(C(=O)c2ccc3c(c2)OCO3)C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.705686036974897
+            ],
+            "tgt_property": [
+                -3.027726220591653
+            ],
+            "improvement": [
+                2.677959816383244
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_69",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a trifluoromethyl group (FC(F)(F)) attached to a benzene ring, which is connected to a pyrazole ring (c1nccc(NCc2ccccc2)n1). The pyrazole ring is substituted with an aniline group (NCc2ccccc2), which is a phenyl ring connected to a secondary amine.\nProperty Analysis: The presence of the trifluoromethyl group (FC(F)(F)) in the source molecule increases its hydrophobicity, which reduces its water solubility. The pyrazole ring and"
+            ],
+            "pred_smiles": [
+                "Oc1ccccc1-c1nccc(NCc2ccccc2)n1"
+            ],
+            "source_smiles": [
+                "FC(F)(F)c1ccccc1-c1nccc(NCc2ccccc2)n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.763909348273311
+            ],
+            "tgt_property": [
+                -4.49170380548913
+            ],
+            "improvement": [
+                1.2722055427841807
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_70",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyrimidine ring (c1cncn1) with a methoxy group (COc1), a phenyl ring (Oc2ccccc2), and a fluorinated phenyl ring (c2ccc(-c3cnc(N)cn3)c(F)c2). The pyrimidine ring is substituted with a piperazine-like structure (c3cnc(N)cn3) and a fluorine atom.\nProperty Analysis: The solubility of the source molecule is likely limited by the presence of the hydrophobic fluorinated phenyl ring and the piperazine-like structure, which ma"
+            ],
+            "pred_smiles": [
+                "COc1cnc(Oc2ccccc2-c2ccc(-c3ccncc3)cc2)nc1."
+            ],
+            "source_smiles": [
+                "COc1cnc(Oc2ccccc2-c2ccc(-c3cnc(N)cn3)c(F)c2)nc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_71",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central carbon atom connected to a trifluoromethylphenyl group, a thioether-linked cyclohexane ring, and a sulfonamide-substituted phenyl ring. The presence of the trifluoromethyl group (CF3) and the sulfonamide (NS(=O)(=O)) contributes to its hydrophobicity and potential for hydrogen bonding.\nProperty Analysis: The solubility of the source molecule is likely limited due to the hydrophobic trifluoromethyl group and the overal"
+            ],
+            "pred_smiles": [
+                "CC(C(=O)NCc1ccc(O)nc1SC1CCCCC1)c1ccc(NS(C)(=O)=O)c(F)c1."
+            ],
+            "source_smiles": [
+                "CC(C(=O)NCc1ccc(C(F)(F)F)nc1SC1CCCCC1)c1ccc(NS(C)(=O)=O)c(F)c1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_72",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core (c1nc(-c2ccccc2)nc2c1nnn2) with a fluorophenyl group (Cc1ccccc1F) attached via a methylene bridge. The pyrimidine core is substituted with a phenyl group (-c2ccccc2) and a fluorophenyl group.\nProperty Analysis: The solubility of the source molecule is likely limited due to the presence of hydrophobic groups (phenyl and fluorophenyl) and the lack of polar or ionizable groups.\nOptimization for Source Molecule: T"
+            ],
+            "pred_smiles": [
+                "CCCNC(=O)C(=O)Nc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F."
+            ],
+            "source_smiles": [
+                "CCCNc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_73",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a naphthyridine core (two fused benzene rings with nitrogen atoms at positions 1 and 10) with a chlorinated phenyl ring (via ether linkage) and a methyl group at the 10-position. The presence of chlorine atoms and the naphthyridine core contributes to its hydrophobicity.\nOptimization for Source Molecule: To improve water solubility, the chlorinated phenyl ring can be replaced with a non-chlorinated phenyl ring, and the naphthyr"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(Cn2c(=O)n(CCOc3ccc(Cl)cc3Cl)c3ccccc32)cc1"
+            ],
+            "source_smiles": [
+                "Cn1c(=O)n(CCOc2ccc(Cl)cc2Cl)c2ccccc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.009177509146263
+            ],
+            "tgt_property": [
+                -6.966028433391482
+            ],
+            "improvement": [
+                -1.9568509242452192
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5714285714285714
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_74",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole ring (CSc1nnc(-c2cccnc2)o1) with a phenyl group (c1ccccc1) attached to a carbonyl group (C=). The phenyl group is a hydrophobic moiety, which may reduce water solubility.\nIntermediate Optimization for Source Molecule: To improve water solubility, the phenyl group can be replaced with a more polar or hydrophilic group. Introducing a polar substituent like a hydroxyl (-OH) or amine (-NH2) group can enhance solubility. "
+            ],
+            "pred_smiles": [
+                "C(=O)CSc1nnc(-c2cccnc2)o1"
+            ],
+            "source_smiles": [
+                "C(=Cc1ccccc1)CSc1nnc(-c2cccnc2)o1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -4.9401576647002345
+            ],
+            "tgt_property": [
+                -2.5559331654496846
+            ],
+            "improvement": [
+                2.38422449925055
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3958333333333333
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_75",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) with a trifluoromethyl group (CF3) and a nitrile (C#N) substituent. The piperidine nitrogen is connected to a carbonyl group (C=O) and a guanidine-like structure (CC(C(F)(F)F)=NN1).\nProperty Analysis: The presence of multiple trifluoromethyl groups (CF3) and a nitrile (C#N) contributes to high hydrophobicity, reducing water solubility. The guanidine-like group (CC(C(F)(F)F)=NN1) may also hin"
+            ],
+            "pred_smiles": [
+                "CC(=O)Nc1ccc(C#N)cc1C1(C(F)(F)F)N(C#N)CC1"
+            ],
+            "source_smiles": [
+                "CCCC1(C(=O)Nc2ccc(C#N)c(C(F)(F)F)c2)CC(C(F)(F)F)=NN1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.355890091347951
+            ],
+            "tgt_property": [
+                -3.712255871524592
+            ],
+            "improvement": [
+                1.643634219823359
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.21951219512195122
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_76",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (CS1) with a trifluoromethylphenyl group (c3ccc(F)cc3F) and a chlorophenyl group (c3ccc(Cl)cc3) attached via an ether linkage (COC). The molecule also has a guanidine-like group (NC1=NC2).\nProperty Analysis: The solubility of the source molecule is likely limited due to the presence of hydrophobic groups (trifluoromethylphenyl and chlorophenyl) and the thiazole core, which is less polar than a pyridine ring.\nOpt"
+            ],
+            "pred_smiles": [
+                "NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CC1"
+            ],
+            "source_smiles": [
+                "NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CS1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.99112798194373
+            ],
+            "tgt_property": [
+                -5.938193319357685
+            ],
+            "improvement": [
+                0.05293466258604518
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6666666666666666
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_77",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central urea scaffold (O=C(NR1)(NR2)) with a bromophenyl group (c1ccc(Br)cc1) attached to one amine (R1) and a nitrophenyl group (c1ccc([N+](=O)[O-])cc1) attached to the other amine (R2). The nitro group ([N+](=O)[O-]) is a strong electron-withdrawing group that may reduce solubility.\nOptimization for Source Molecule: To improve water solubility, the nitro group can be replaced with a more hydrophilic group, such as a hydroxy"
+            ],
+            "pred_smiles": [
+                "O=C(NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1)c1ccc(O)cc1."
+            ],
+            "source_smiles": [
+                "O=C(NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1)c1ccc([N+](=O)[O-])cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_78",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central amide linkage (NC(=O)) connecting two aromatic rings. One ring is methoxylated (COc1ccc(OC)), and the other is substituted with a urea group (NC(=O)N3Cc4ccccc4C3) linked to a benzyl-piperazine moiety (N3Cc4ccccc4C3).\nProperty Analysis: The solubility of the source molecule is likely limited by the hydrophobic benzyl-piperazine group (N3Cc4ccccc4C3) and the overall size of the molecule.\nOptimization for Source Molecule"
+            ],
+            "pred_smiles": [
+                "COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)N3CCN3)cc2)c1"
+            ],
+            "source_smiles": [
+                "COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)N3Cc4ccccc4C3)cc2)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -6.070447237997635
+            ],
+            "tgt_property": [
+                -3.9872629438717033
+            ],
+            "improvement": [
+                2.0831842941259313
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6097560975609756
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_79",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thioether group (C-S-C), an ether linkage (Oc2ncccc2), a nitroso group (C(=NO)), an amine (NC), and a pyridine ring (c2ccncc2). The presence of the thioether and the pyridine ring may limit water solubility.\nOptimization for Source Molecule: To improve water solubility, the thioether group can be replaced with a more polar group, such as an amide (C(=O)N). The pyridine ring can be retained or modified to include a polar subst"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ccncc1)c1ncccc1C(=NO)NCc1ccncc1"
+            ],
+            "source_smiles": [
+                "CSc1ccc(Oc2ncccc2C(=NO)NCc2ccncc2)cc1C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.652089197064619
+            ],
+            "tgt_property": [
+                -3.8407400084568355
+            ],
+            "improvement": [
+                1.8113491886077835
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5294117647058824
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_80",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (C1CNCCN1), a fluorinated phenyl ring, and a pyrimidine-like heterocycle (c2ccc3ncnc(N)c3n2). The presence of the piperazine ring and the pyrimidine-like heterocycle may contribute to its solubility in water.\nOptimization for Source Molecule: To improve water solubility, the piperazine ring can be replaced with a more polar and water-soluble group, such as a hydroxyl-terminated alkyl chain (e.g., -CH2CH2OH). T"
+            ],
+            "pred_smiles": [
+                "CN(C)CCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1CC(O)"
+            ],
+            "source_smiles": [
+                "CN(C)CCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -3.5919095840912116
+            ],
+            "tgt_property": [
+                -3.504206059334691
+            ],
+            "improvement": [
+                0.08770352475652077
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_81",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole ring (c1noc(C)c1), a carbonyl group (C(=O)), a piperidine ring (N1CCC2CC...), and a morpholine-like structure (OC2C1). The presence of the thiazole ring and the morpholine-like structure may limit water solubility due to their hydrophobic nature.\nOptimization for Source Molecule: To improve water solubility, the thiazole ring can be replaced with a more hydrophilic heterocycle, such as a pyridine ring (c1ccncc1). The"
+            ],
+            "pred_smiles": [
+                "Cc1ccncc1C(=O)N1CCC2CC(c3ccncn3)OC2C1"
+            ],
+            "source_smiles": [
+                "Cc1noc(C)c1C(=O)N1CCC2CC(c3ccncn3)OC2C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -3.6371036124043474
+            ],
+            "tgt_property": [
+                -3.7016020083318146
+            ],
+            "improvement": [
+                -0.0644983959274672
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7457627118644068
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_82",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with an ether-linked phenyl group (Oc2ccc(S(C)(=O)=O)cc2), a carboxamide (C(=O)Nc2nccs2), and a tertiary amine (CN(C)C) connected via an ether (Oc1cc...). The sulfonamide (S(C)(=O)=O) and carboxamide (C(=O)N) are polar groups, while the tertiary amine (CN(C)C) and aromatic rings contribute to hydrophobicity.\nProperty Analysis: The solubility of the source molecule is likely limited by the hydr"
+            ],
+            "pred_smiles": [
+                "CC(C)Oc1cc(Oc2ccc(S(C)(=O)=O)cc2)cc(C(=O)Nc2nccs2)c1."
+            ],
+            "source_smiles": [
+                "CC(CN(C)C)Oc1cc(Oc2ccc(S(C)(=O)=O)cc2)cc(C(=O)Nc2nccs2)c1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_83",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a long aliphatic chain (CCCCCO-), a carboxylic acid group (OC(=O)), and a complex bicyclic aromatic system with a hydroxyl group (CO2). The hydroxyl group is attached to a carbonyl (C=O) in the aromatic system.\nProperty Analysis: The solubility of the source molecule is likely limited by the long hydrophobic aliphatic chain (CCCCCO-) and the overall size of the molecule. The carboxylic acid group (OC(=O)) can improve solubility"
+            ],
+            "pred_smiles": [
+                "O=C(O)c1ccc2c(c1)C(=O)c1ccccc1CO2."
+            ],
+            "source_smiles": [
+                "CCCCCOC(=O)Cc1ccc2c(c1)C(=O)c1ccccc1CO2"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_84",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a nitrile group (C#N), an ester group (CCOC(=O)), and a phenyl ring with an ether linkage (OCC(=O)Nc2ccc(C)cc2C). The presence of the nitrile and ester groups may contribute to some polarity, but the overall solubility in water is likely limited due to the hydrophobic phenyl rings and the alkyne group.\nOptimization for Source Molecule: To improve water solubility, the nitrile group can be replaced with a more polar group such a"
+            ],
+            "pred_smiles": [
+                "O=C(O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C)cc2C)c(OC)c1."
+            ],
+            "source_smiles": [
+                "CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C)cc2C)c(OC)c1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_85",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyridine ring (C1=C(C)NC(C)=C(C(=O)OCC)C1) with a fluorine and chlorine substituent on the benzene ring (c1c(F)cccc1Cl). The molecule also has an ester group (CCOC(=O)) and a carboxylic acid (C(=O)OCC) attached to the pyridine ring.\nProperty Analysis: The solubility of the source molecule is likely limited by the presence of the hydrophobic fluorine and chlorine substituents on the benzene ring, as well as the overall"
+            ],
+            "pred_smiles": [
+                "CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1cc(O)ccc1O."
+            ],
+            "source_smiles": [
+                "CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1c(F)cccc1Cl"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_86",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a trifluoromethyl group (FC(F)(F)), a benzodioxole core (c1ccc2c(c1)nc1n2), and a piperazine-like ring (CCOc2ccccc2-1) with a fused benzene ring. The trifluoromethyl group is highly hydrophobic, which likely reduces water solubility.\nOptimization for Source Molecule: To improve water solubility, the trifluoromethyl group can be replaced with a more hydrophilic group, such as a hydroxyl group (OH). This modification increases hy"
+            ],
+            "pred_smiles": [
+                "Oc1ccc2c(c1)nc1n2CCOc2ccccc2-1"
+            ],
+            "source_smiles": [
+                "FC(F)(F)c1ccc2c(c1)nc1n2CCOc2ccccc2-1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.093444061657704
+            ],
+            "tgt_property": [
+                -3.8214570330931457
+            ],
+            "improvement": [
+                1.271987028564558
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_87",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CC2CCC(C1)N2C) connected to a phenyl ring (c1ccccc1) via an amide linkage (NC(=O)N). The phenyl ring is further substituted with a butoxy group (CCCO). The piperidine and phenyl rings are hydrophobic, while the amide and butoxy groups contribute some polarity.\nProperty Analysis: The solubility of the source molecule is limited due to the presence of hydrophobic groups (piperidine, phenyl, butoxy) an"
+            ],
+            "pred_smiles": [
+                "O=C(NC1CC2CCC(C1)N2C)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CCCCOc1ccccc1NC(=O)NC1CC2CCC(C1)N2C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -4.695955064121188
+            ],
+            "tgt_property": [
+                -3.004193967937349
+            ],
+            "improvement": [
+                1.6917610961838392
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.631578947368421
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_88",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a methoxy group (COc1ccc...), an amide linkage (NC(=O)N...), a thiazole-like heterocycle (c2nnc(N3CCCC3)s2), and a piperidine ring (N3CCCC3). The presence of the piperidine ring and the thiazole-like heterocycle may contribute to its hydrophobicity.\nOptimization for Source Molecule: To improve water solubility, the piperidine ring (N3CCCC3) can be replaced with a more polar group, such as a hydroxyl-terminated alkyl chain (e.g."
+            ],
+            "pred_smiles": [
+                "COc1ccc(NC(=O)Nc2nnc(-c3ccccc3O)s2)cc1."
+            ],
+            "source_smiles": [
+                "COc1ccc(NC(=O)Nc2nnc(N3CCCC3)s2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_89",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thioether (C-S-C) group, a urea (NC(=O)N) linkage, and a piperazine ring (C1CNCCN1) substituted with a benzyl group (Cc3ccccc3). The thioether group is hydrophobic, and the piperazine ring, while polar, is partially masked by the hydrophobic benzyl group.\nProperty Analysis: The solubility of the source molecule is limited by the hydrophobic thioether group and the benzyl-substituted piperazine ring. The urea linkage and the p"
+            ],
+            "pred_smiles": [
+                "Nc1ccc(NC(=O)NC2CCN(C)CC2)cc1"
+            ],
+            "source_smiles": [
+                "CSc1ccc(NC(=O)NC2CCN(Cc3ccccc3)CC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.388438739702687
+            ],
+            "tgt_property": [
+                -2.6174100371055093
+            ],
+            "improvement": [
+                2.771028702597178
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5714285714285714
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_90",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thioether (S) linkage, a sulfonamide (S(=O)(=O)N), a nitrooxy (C(=O)NO) group, and a nitrile (C#N) substituent. The presence of the nitrile and the nitrooxy group may contribute to some polarity, but the thioether and sulfonamide groups are hydrophobic.\nOptimization for Source Molecule: To improve water solubility, the thioether (S) can be replaced with a more polar group, such as an amine (NH2). The sulfonamide (S(=O)(=O)N) "
+            ],
+            "pred_smiles": [
+                "N#CC(N)C(=O)NOc1ccc(-c2ccc(N)cc2)cc1S(=O)(=O)C"
+            ],
+            "source_smiles": [
+                "CC(CCc1ccc(-c2ccc(C#N)cc2)cc1)(C(=O)NO)S(C)(=O)=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -4.207523163884892
+            ],
+            "tgt_property": [
+                -2.7548797207041704
+            ],
+            "improvement": [
+                1.4526434431807211
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_91",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole ring (C1=NC=CN1) with a methylthio (SMe) group, a hydroxyl group, and a fluorine-substituted pyrimidine-like ring (n2cnc3c(N)nc(F)nc32). The presence of the SMe group and the hydroxyl group contributes to its polarity but may limit water solubility due to the hydrophobic SMe group.\nProperty Analysis: The solubility of the source molecule is likely limited by the hydrophobic SMe group. The hydroxyl group and the polar"
+            ],
+            "pred_smiles": [
+                "OCC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O"
+            ],
+            "source_smiles": [
+                "CSC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -1.5362251181311766
+            ],
+            "tgt_property": [
+                -0.4448618740855038
+            ],
+            "improvement": [
+                1.0913632440456729
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_92",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a nitrile group (N#C), a sulfonamide group (S(=O)(=O)N), a fluorinated phenyl ring (c2ccc(F)cn2), and a fluorinated phenyl ether (Oc1ccccc1F). The presence of the nitrile and the fluorinated phenyl ether may limit water solubility.\nOptimization for Source Molecule: To improve water solubility, the nitrile group can be replaced with a more polar group, such as a hydroxyl or carboxylate. The fluorinated phenyl ether can be replac"
+            ],
+            "pred_smiles": [
+                "Oc1ccc(S(=O)(=O)Nc2ccc(F)cn2)cc1N#C"
+            ],
+            "source_smiles": [
+                "N#Cc1cc(S(=O)(=O)Nc2ccc(F)cn2)ccc1Oc1ccccc1F"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_93",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a sulfonamide group (S(=O)(=O)) attached to a phenyl ring, which is further connected to a piperazine-like structure (NCCN). The presence of the sulfonamide group and the piperazine-like structure may contribute to its solubility in water.\nOptimization for Source Molecule: To improve water solubility, the piperazine-like structure (NCCN) can be replaced with a more polar and water-soluble group, such as a hydroxyl group (OH). T"
+            ],
+            "pred_smiles": [
+                "CCNc1ccc(S(=O)(=O)c2ccc(O)cc2)cc1."
+            ],
+            "source_smiles": [
+                "CCNc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_94",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole ring (c1n[n+]([O-])c2ccccc2[n+]1[O-]) with a dimethylamino group (CCN(CC)) attached. The thiazole ring has two nitro groups ([n+]([O-])) and a phenyl ring fused to it.\nProperty Analysis: The solubility of the source molecule is likely limited due to the presence of the hydrophobic phenyl ring and the dimethylamino group, which is less polar than a primary or secondary amine.\nOptimization for Source Molecule: To impro"
+            ],
+            "pred_smiles": [
+                "CCCNc1n[n+]([O-])c2ccccc2[n+]1[O-]"
+            ],
+            "source_smiles": [
+                "CCN(CC)c1n[n+]([O-])c2ccccc2[n+]1[O-]"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -1.7864852913266749
+            ],
+            "tgt_property": [
+                -1.691360549782835
+            ],
+            "improvement": [
+                0.09512474154383987
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_95",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyrimidine ring (c1nc2cc...n2n1) with two pyridine substituents (-c3cccnc3) and an amide group (CCNC(=O)N). The pyridine rings are hydrophobic, and the amide group provides some polarity.\nProperty Analysis: The solubility in water is limited due to the hydrophobic pyridine rings and the overall non-polar nature of the molecule.\nOptimization for Source Molecule: To improve water solubility, we can introduce a polar or "
+            ],
+            "pred_smiles": [
+                "CCNC(=O)Nc1nc2cc(-c3cccnc3)cc(-c3ccnc3n3)n2n1"
+            ],
+            "source_smiles": [
+                "CCNC(=O)Nc1nc2cc(-c3cccnc3)cc(-c3cccnc3)n2n1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_96",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a methoxy group (COc1ccc), a nitrooxy carbonyl (C(=O)NO), an amide linkage (NC(=O)), and a chlorinated phenyl ring (c1ccccc1Cl). The nitrooxy group (NO) is a strong electron-withdrawing group that may reduce solubility.\nIntermediate Optimization: Replace the nitrooxy carbonyl (C(=O)NO) with a more hydrophilic group, such as a carboxylic acid (C(=O)O), to enhance water solubility. The carboxylic acid can form hydrogen bonds with"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C(=O)O)cc1NC(=O)c1ccccc1Cl"
+            ],
+            "source_smiles": [
+                "COc1ccc(C(=O)NO)cc1NC(=O)c1ccccc1Cl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -4.0960457603018945
+            ],
+            "tgt_property": [
+                -4.437387220745748
+            ],
+            "improvement": [
+                -0.3413414604438536
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_97",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (Cn1c(=O)oc2ccccc21) with a sulfonyl group (S(=O)(=O)N3CCCC3) attached to the aromatic ring. The sulfonyl group is linked to a piperidine ring (N3CCCC3). The molecule also has a propyl chain (CCC) and an amide group (NC(=O)) attached to the thiazole core.\nProperty Analysis: The solubility of the source molecule is likely limited by the hydrophobic propyl chain (CCC) and the thiazole core. The sulfonyl group and "
+            ],
+            "pred_smiles": [
+                "CCCOHNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)N3CCCC3)ccc21."
+            ],
+            "source_smiles": [
+                "CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)N3CCCC3)ccc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_98",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a tert-butyl ester group (CC(C)(C)OC(=O)), a piperidine ring (C1CCC(n2cnc3cnc4[nH]ccc4c32)CC1), and a complex heterocyclic system (n2cnc3cnc4[nH]ccc4c32) with multiple nitrogen atoms. The heterocyclic system includes a pyrrole-like [nH] group and multiple nitrogen-containing rings.\nProperty Analysis: The solubility of the source molecule is likely limited by the hydrophobic tert-butyl ester group and the overall size and comple"
+            ],
+            "pred_smiles": [
+                "O=C(O)C1CCC(n2cnc3cnc4[nH]ccc4c32)CC1"
+            ],
+            "source_smiles": [
+                "CC(C)(C)OC(=O)NC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -5.187572279217548
+            ],
+            "tgt_property": [
+                -3.8795672482807486
+            ],
+            "improvement": [
+                1.3080050309367994
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_solubility_99",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperidine ring (C1CCNCC1) fused with a pyrrole ring (C1=CC=CN1) and a benzodioxole-substituted pyridine (c3cncc(Oc4ccccc4)c3). The presence of the piperidine ring and the benzodioxole group contributes to its hydrophobicity.\nOptimization for Source Molecule: To improve water solubility, the piperidine ring can be replaced with a more polar group, such as a piperazine (C1CNCCN1), which introduces an additional nitrogen atom c"
+            ],
+            "pred_smiles": [
+                "Oc1ccccc1c1cncc(C2C=C(C(=O)N3CCNCC3)CC2C)cn1"
+            ],
+            "source_smiles": [
+                "CN1CC2C=C(c3cncc(Oc4ccccc4)c3)CC(C2)C1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        }
+    ]
+}

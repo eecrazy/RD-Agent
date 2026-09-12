@@ -1,0 +1,1662 @@
+{
+    "mean_improvement": 0.0,
+    "success_rate": 0.0,
+    "best_rate": 0.0,
+    "valid_smiles_rate": 70.0,
+    "valid_score_rate": 0.0,
+    "scaffold_hard": 20.0,
+    "scaffold_soft": 48.3199295725236,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_50",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a dimethylamino group (CN(C)), a piperazine ring (C1CCNCC1), and a thiazole ring (c2c(COc3ccccc3CO)sc3ccccc23) connected via a methylene linker. The thiazole ring is substituted with a benzodioxole group (COc3ccccc3CO).\nProperty Analysis: DRD2 activity is influenced by the basicity and steric/electronic properties of the amine group. The dimethylamino group (CN(C)) is less basic than a primary or secondary amine, which may redu"
+            ],
+            "pred_smiles": [
+                "Nc1nccc2c1c(COc3ccccc3CO)sc1ccccc21"
+            ],
+            "source_smiles": [
+                "CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_51",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a methoxy group (COc1), an amino group (N), and a chlorine atom (Cl). It also features a carbonyl-linked piperazine ring (C(=O)NC1CCN...CC1OC) and a thiazole-like group (C(=S)C(C)C) attached to a secondary amine in a piperidine ring (CCN(C(=S)C(C)C)CC2).\nProperty Analysis: The thiazole group (C(=S)C(C)C) in the piperidine ring may reduce DRD2 activity due to its electron-withdrawing natur"
+            ],
+            "pred_smiles": [
+                "COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CC2CCN(C(=O)C1=CC=CN1)CC2)CC1OC."
+            ],
+            "source_smiles": [
+                "COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CC2CCN(C(=S)C(C)C)CC2)CC1OC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_52",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a biphenyl core with a methoxy group (CCO) on one phenyl ring and a pyrimidine-like heterocycle (c1nc(CN2CCN(C)CC2)co1) on the other. The heterocycle includes a piperazine ring (CN2CCN(C)CC2) substituted with a methyl group.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. Piperazine derivatives often enhance DRD2 binding due to their b"
+            ],
+            "pred_smiles": [
+                "CCOc1ccccc1-c1nc(CN2CCC(N)CC2)co1"
+            ],
+            "source_smiles": [
+                "CCOc1ccccc1-c1nc(CN2CCN(C)CC2)co1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7435897435897436
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_53",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a fluorine atom and a piperazine-linked chloropyridine group. The piperazine (C1CNCCN1) is connected via a methylene bridge to a chlorinated pyridine ring. The pyridine ring is further substituted with a morpholine-ethylamine group (NCCC4CCCNC4).\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the amine group. Piperazine and morpholine are "
+            ],
+            "pred_smiles": [
+                "Fc1cccc(CNc2cccc(-c3cc(NCC4CCCC4)ncc3Cl)n2)c1"
+            ],
+            "source_smiles": [
+                "Fc1cccc(CNc2cccc(-c3cc(NCCC4CCCNC4)ncc3Cl)n2)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6779661016949152
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_54",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperidine ring (C1CCNCC1) fused to a cyclohexane ring, with a trifluoromethylphenyl ether group (Oc1ccc(C(F)(F)F)cc1) and a benzyl group (c1ccccc1). The piperidine nitrogen is methylated (CN1C2...).\nProperty Analysis: DRD2 activity is influenced by steric bulk, hydrogen bonding, and lipophilicity. The trifluoromethyl group (CF3) is highly electron-withdrawing and bulky, potentially reducing receptor binding affinity.\nOptimiz"
+            ],
+            "pred_smiles": [
+                "CN1C2CCC1CC(Oc1ccc(N)cc1)(c1ccccc1)C2"
+            ],
+            "source_smiles": [
+                "CN1C2CCC1CC(Oc1ccc(C(F)(F)F)cc1)(c1ccccc1)C2"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_55",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1C...CC2CCC1N2C) with a substituted phenyl group (c2ccc(C#CCCCCO)cc2) and a methyl ester (COC(=O)). The phenyl group has a propargyl ether (C#CCCCCO) substituent, which introduces rigidity and potential metabolic instability.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The propargyl ether group (C#CCCCCO"
+            ],
+            "pred_smiles": [
+                "COC(=O)C1C(c2ccc(C1CC1)cc2)CC2CCC1N2C"
+            ],
+            "source_smiles": [
+                "COC(=O)C1C(c2ccc(C#CCCCCO)cc2)CC2CCC1N2C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6538461538461539
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_56",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central carbonyl group (O=C) connected to two phenyl rings. One phenyl ring is substituted with a propyl group (CCc1ccccc1), and the other is unsubstituted (c1ccccc1O). The presence of the carbonyl group and the unsubstituted phenyl ring may limit DRD2 activity due to steric and electronic effects.\nProperty Analysis: DRD2 activity often benefits from hydrophobic interactions and optimal steric fit. The unsubstituted phenyl ri"
+            ],
+            "pred_smiles": [
+                "O=C(CCc1ccccc1)c1cc(C(F)(F)F)ccc1O."
+            ],
+            "source_smiles": [
+                "O=C(CCc1ccccc1)c1ccccc1O"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_57",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a methoxy-substituted benzene ring connected to a piperazine ring. The piperazine is substituted with a butyl chain bearing a urea group linked to a bridged bicyclic system (decalin-like structure).\nProperty Analysis: The urea group (NC(=O)) in the side chain may reduce DRD2 activity due to its polarity and hydrogen-bonding potential, which could hinder membrane permeability or receptor binding.\nOptimization for Source Molecule"
+            ],
+            "pred_smiles": [
+                "COc1ccccc1N1CCN(CCCCNC(=O)C2CC3CCCC3C2)CC1"
+            ],
+            "source_smiles": [
+                "COc1ccccc1N1CCN(CCCCNC(=O)C2CC3CCCC3C2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_58",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a benzene ring with a fluorine substituent. The pyrrole nitrogen is connected to a butylamine chain (NCCCC). The fluorine atom is a weak electron-withdrawing group, and the butylamine chain may limit conformational rigidity.\nProperty Analysis: DRD2 activity often benefits from aromatic/hydrophobic interactions and optimal steric fit. The fluorine substituent may reduce binding affinity due to"
+            ],
+            "pred_smiles": [
+                "N1CCC1CCc2c[nH]c3ccc(Cl)cc23"
+            ],
+            "source_smiles": [
+                "NCCCCc1c[nH]c2ccc(F)cc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.2564102564102564
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_59",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) substituted with an ethoxy group (OCCN) and a morpholine-derived side chain (N(CC2CC2)S(=O)(=O)c2cnn(C)c2). The morpholine subunit includes a sulfonamide group (S(=O)(=O)) attached to a pyrazole ring (cnn(C)c2).\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The morpholine and sulfonamide groups ma"
+            ],
+            "pred_smiles": [
+                "CC(C)c1ccccc1OCCN1CCC(N(CC2CC2)S(=O)(=O)ccncc2)CC1."
+            ],
+            "source_smiles": [
+                "CC(C)c1ccccc1OCCN1CCC(N(CC2CC2)S(=O)(=O)c2cnn(C)c2)CC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_60",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a sulfonamide group (CCS(=O)(=O)N) attached to a tertiary carbon, a pyridine ring (c1cncc), and a piperidine ring (CCCN3C(N)=O) with an amide group. The piperidine ring is a six-membered saturated ring with one nitrogen atom.\nProperty Analysis: The sulfonamide group is highly polar and may reduce blood-brain barrier permeability. The tertiary carbon and pyridine ring may contribute to steric hindrance, potentially limiting rece"
+            ],
+            "pred_smiles": [
+                "CCN1CCCN(c2cnc3c(c2)CCCN3C(N)=O)C1"
+            ],
+            "source_smiles": [
+                "CCS(=O)(=O)N(C)C(C)c1cncc(-c2cnc3c(c2)CCCN3C(N)=O)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.42857142857142855
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_61",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a brominated benzene ring connected to an ethoxy group, which is attached to a piperidine ring (C1CCNCC1). The piperidine is substituted with a cyclopropane (C3CC3) at the nitrogen atom. The bromine and cyclopropane groups are potential sites for modification to enhance DRD2 activity.\nProperty Analysis: DRD2 activity is influenced by the ability of the molecule to interact with the dopamine D2 receptor. The bromine atom may con"
+            ],
+            "pred_smiles": [
+                "OCC1CCN(CC2CC2)CC1"
+            ],
+            "source_smiles": [
+                "Brc1ccc(OCC2CCN(CC3CC3)CC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3939393939393939
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_62",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a benzene ring, an ethyl ester group (CCOC=O), and a piperazine ring (C3(Cc4ccccc4)CCNC3) substituted with a benzyl group (Cc4ccccc4). The piperazine (1,4-diazacyclohexane) is a key structural feature.\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the piperazine ring. The benzyl substituent on the piperazine may reduce basicity due to electro"
+            ],
+            "pred_smiles": [
+                "CCOC(=O)c1cc2cc(C3(C4CCCC4)CCNC3)ccc2[nH]1"
+            ],
+            "source_smiles": [
+                "CCOC(=O)c1cc2cc(C3(Cc4ccccc4)CCNC3)ccc2[nH]1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_63",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperazine ring (1,4-diazacyclohexane) connected to a substituted benzofuran moiety and a pyrrole ring. The piperazine is substituted with a diethyl group and a propyl chain terminating in an amine.\nProperty Analysis: Piperazine derivatives can modulate DRD2 activity, but steric bulk and conformational flexibility may reduce receptor binding. The diethyl group on the piperazine introduces steric hindrance, potentially"
+            ],
+            "pred_smiles": [
+                "CN(C)CCNC1c2cc(OC)ccc2OCc2ncccc21"
+            ],
+            "source_smiles": [
+                "CCN(CC)CCCNC1c2cc(OC)ccc2OCc2ncccc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_64",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a methoxy group (COc1), an amino group (N), and a chlorine atom (Cl). A carbonyl group (C=O) is attached to the benzene ring via an ether linkage (OCCN1), which connects to a piperidine ring (CCC(C(N)=O)CC1) with an amide group (C(N)=O).\nProperty Analysis: The amide group (C(N)=O) in the piperidine ring may reduce DRD2 activity due to its polarity and hydrogen-bonding potential, which cou"
+            ],
+            "pred_smiles": [
+                "COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(c2ccncc2)CC1"
+            ],
+            "source_smiles": [
+                "COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_65",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central carbonyl group (O=C) connected to a piperazine ring (CN2CCN(Cc3ccccc3)CC2) and a benzodioxole moiety (Oc2ccccc21). The piperazine is substituted with a benzyl group (Cc3ccccc3). The benzodioxole contributes aromaticity and potential metabolic stability.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. Piperazine derivatives of"
+            ],
+            "pred_smiles": [
+                "O=C1CC(CN2CCN(c3ccncc3)CC2)Oc2ccccc21."
+            ],
+            "source_smiles": [
+                "O=C1CC(CN2CCN(Cc3ccccc3)CC2)Oc2ccccc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_66",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with two methoxy groups (OC), a central carbon connected to a carbonyl group (C=O) and an aniline derivative (NC(C)), and a thiazole ring (c2nccs2) attached to the central carbon. The aniline group is further substituted with a tert-butylamine (OC1CCN(C(C)C)CC1).\nProperty Analysis: The thiazole ring (c2nccs2) may contribute to DRD2 activity due to its aromatic nature and potential hydrogen bon"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C(=O)NC(C)c2ccncc2)cc1OC1CCN(C(C)C)CC1"
+            ],
+            "source_smiles": [
+                "COc1ccc(C(=O)NC(C)c2nccs2)cc1OC1CCN(C(C)C)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6964285714285714
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_67",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a methoxy group (COc1), an amino group (N), a chlorine atom (Cl), and a carbonyl-linked piperazine derivative (C(=O)NC1CCNCC1OC). The piperazine ring (C1CNCCN1) is further substituted with an ethoxy group (OC).\nProperty Analysis: The piperazine ring in the source molecule may exhibit moderate DRD2 activity due to its basicity and hydrogen-bonding potential. However, the ethoxy group (OC) "
+            ],
+            "pred_smiles": [
+                "COc1cc(N)c(Cl)cc1C(=O)NC1CCN(C(F)(F)F)CC1"
+            ],
+            "source_smiles": [
+                "COc1cc(N)c(Cl)cc1C(=O)NC1CCNCC1OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_68",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyridine ring (c2ccnc(NC3CCN(Cc4ccccc4)CC3)n2) substituted with a piperazine group (NC3CCN(Cc4ccccc4)CC3) and a benzyl group (Cc4ccccc4). The piperazine is a 1,4-diazacyclohexane ring, which is a common scaffold for bioactive molecules due to its ability to form hydrogen bonds and its conformational flexibility.\nProperty Analysis: The piperazine group in the source molecule may contribute to moderate DRD2 activity due"
+            ],
+            "pred_smiles": [
+                "c1ccc(CNc2ccnc(NC3CCN(c4ccncc4)CC3)n2)cc1"
+            ],
+            "source_smiles": [
+                "c1ccc(CNc2ccnc(NC3CCN(Cc4ccccc4)CC3)n2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7115384615384616
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_69",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyrazole ring (c1cnn1) connected to a substituted benzene ring (c1ccccc1) and a side chain (CCCc1c(C(=O)Nc2cc(O)ccc2C)cnn1). The side chain includes a carbonyl group (C=O) linked to a para-hydroxyphenyl ring (c2cc(O)ccc2C).\nProperty Analysis: The hydroxyl group (-OH) on the phenyl ring (c2cc(O)ccc2C) may contribute to high polarity, potentially reducing blood-brain barrier permeability and limiting CNS activity. The c"
+            ],
+            "pred_smiles": [
+                "CCCc1c(C(=O)Nc2cc(C)ccc2C)cnn1-c1ccccc1."
+            ],
+            "source_smiles": [
+                "CCCc1c(C(=O)Nc2cc(O)ccc2C)cnn1-c1ccccc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_70",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central urea group (O=C-N) connecting two aromatic systems. The left side has a biphenyl-like structure (two benzene rings connected by a single bond), while the right side has a piperazine ring (N1CCNCC1) substituted with a fluorinated benzene ring (-c2ccccc2F).\nProperty Analysis: The piperazine ring (N1CCNCC1) in the source molecule is a 1,4-diazacyclohexane, which is a common scaffold for DRD2 ligands due to its conformati"
+            ],
+            "pred_smiles": [
+                "O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccnc2)CC1."
+            ],
+            "source_smiles": [
+                "O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2F)CC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_71",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a sulfonamide group (S(=O)(=O)N) attached to a dimethylamine (CN(C)), a central benzene ring substituted with a urea-linked pyrrole (NC(=O)c2ncc(C#N)[nH]2), and a cyclohexyl group (C2=CCCCC2). The pyrrole ring (c2ncc(C#N)[nH]2) is a key structural feature with a nitrile (C#N) and an NH group.\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric compatibility. The nitrile group (C"
+            ],
+            "pred_smiles": [
+                "CN(C)S(=O)(=O)CCc1ccc(NC(=O)c2ncc(C(C#N)[nH]2)c(C2=CCCCC2)c1."
+            ],
+            "source_smiles": [
+                "CN(C)S(=O)(=O)CCc1ccc(NC(=O)c2ncc(C#N)[nH]2)c(C2=CCCCC2)c1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_72",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyrrole ring (C1=CC=CN1) fused to a benzene ring, with a methoxy-substituted benzene ring (COc1cccc) attached via a methylene group. The pyrrole ring is substituted with a carbonyl-linked aniline group (-c4ccccc4) and a ketone group (C=O). The aniline group is a key structural feature for potential DRD2 activity.\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric comp"
+            ],
+            "pred_smiles": [
+                "COc1cccc(CNC(=O)c2nc3cccc(-c4ccc(Cl)cc4)c3c(=O)[nH]2)c1"
+            ],
+            "source_smiles": [
+                "COc1cccc(CNC(=O)c2nc3cccc(-c4ccccc4)c3c(=O)[nH]2)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_73",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a fluorinated benzene ring connected to a piperazine ring (C1CCNCCN1) substituted with a pyrrole-derived group (Cc2nc(CC3CC3)no2). The pyrrole (azole) is further substituted with a cyclopropane (CC3CC3) and a methyl group.\nProperty Analysis: The fluorinated benzene and piperazine may contribute to moderate DRD2 activity, but the pyrrole-cyclopropane-methyl group substitution on the pyrrole limits optimal receptor binding due to"
+            ],
+            "pred_smiles": [
+                "Fc1ccccc1C1CCN(Cc2nc(-c3ccncc3)no2)C1"
+            ],
+            "source_smiles": [
+                "Fc1ccccc1C1CCN(Cc2nc(CC3CC3)no2)C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6153846153846154
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_74",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central amide group (NC=O) connected to a diethylamine (CCN(CC)), a benzyl group (c1cc(Cl)c(N)cc1O), and a hydroxyl group (O). The diethylamine and hydroxyl groups are potential sites for modification to enhance DRD2 activity.\nProperty Analysis: DRD2 activity is influenced by the basicity and steric/electronic properties of the amine group. The hydroxyl group may contribute to hydrogen bonding but could reduce membrane permea"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1cc(Cl)c(N)cc1O)C1CNCCN1"
+            ],
+            "source_smiles": [
+                "CCN(CC)CCNC(=O)c1cc(Cl)c(N)cc1O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0967741935483871
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_75",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyrimidine ring (ncnc) with a substituted aniline (Nc3ccc(F)c(Cl)c3) and a methoxy group (COc1cc2...). The side chain includes a hydroxyl group (OCCNC(C)C) connected to a tert-butyl group (NC(C)C).\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric compatibility. The hydroxyl group (OCCNC(C)C) may reduce lipophilicity and hinder receptor binding due to excessive polar"
+            ],
+            "pred_smiles": [
+                "COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCN(C)C."
+            ],
+            "source_smiles": [
+                "COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCNC(C)C"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_76",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central pyridine ring (c1cc(-c2ccc(F)cc2)nc2cc(F)ccc12) with a fluorinated phenyl group (-c2ccc(F)cc2) attached to the nitrogen. The pyridine ring is substituted with a fluorinated phenyl group (nc2cc(F)ccc12) and an ether-linked morpholine derivative (OC(CN1C=COC=C1)).\nProperty Analysis: The fluorinated phenyl groups and the morpholine derivative may contribute to DRD2 activity, but the ether linkage (OC) and the morpholine'"
+            ],
+            "pred_smiles": [
+                "CN1CCN(c2cc(-c3ccc(F)cc3)nc3cc(F)ccc23)CC1"
+            ],
+            "source_smiles": [
+                "OC(CN1C=COC=C1)c1cc(-c2ccc(F)cc2)nc2cc(F)ccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_77",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with an acetophenone group and a piperazine ring. The piperazine is further substituted with a hydroxyl group connected to a fluorinated pyridine ring (Cn3cncn3) and a difluorophenyl group.\nProperty Analysis: The acetophenone group (CC(=O)) may reduce bioavailability due to its hydrophobic nature and potential metabolic instability. The piperazine ring (N2CCN...CC2) provides a basic scaffold f"
+            ],
+            "pred_smiles": [
+                "CC(=O)Oc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1"
+            ],
+            "source_smiles": [
+                "CC(=O)c1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_78",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring fused to a pyrrole ring (azole) with a piperazine ring (1,4-diazacyclohexane) attached via a carbonyl group. The piperazine (1,4-diazacyclohexane) is a six-membered ring with two nitrogen atoms at positions 1 and 4. The molecule also features a chlorophenyl group and a carbonyl group.\nProperty Analysis: The piperazine ring in the source molecule may contribute to moderate DRD2 activity due to its basicity"
+            ],
+            "pred_smiles": [
+                "O=C(NCCCN1CCNCC1)c1ccc2c(=O)n(Cc3ccc(Cl)cc3)c(=O)[nH]c2c1"
+            ],
+            "source_smiles": [
+                "O=C(NCCCN1CCOCC1)c1ccc2c(=O)n(Cc3ccc(Cl)cc3)c(=O)[nH]c2c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.8166666666666667
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_79",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (C1CNCCN1) connected to a carbonyl group (C=O) and a substituted piperidine ring (C1CCNCC1). The piperidine is further substituted with a fluorophenyl group (c3ccc(F)cc3) via a methylene linker (CC).\nProperty Analysis: The fluorophenyl group (c3ccc(F)cc3) is a strong electron-withdrawing group that may reduce the basicity of the piperazine ring, potentially weakening its interaction with the DRD2 receptor. The"
+            ],
+            "pred_smiles": [
+                "COC(=O)C1CCN(CCCN2CCN(c3ccncc3)CC2)CC1"
+            ],
+            "source_smiles": [
+                "COC(=O)C1CCN(CCCN2CCN(c3ccc(F)cc3)CC2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.696969696969697
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_80",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) connected to a carbonyl group, which is linked to a substituted benzene ring. The benzene ring has a thioether (S) group attached to another substituted benzene ring with a chlorine atom.\nProperty Analysis: Piperazine derivatives can modulate dopamine D2 receptor activity, but the thioether group (S) and chlorine substituent may reduce bioavailability or introduce unfavorable pharmacokin"
+            ],
+            "pred_smiles": [
+                "CN1CCN(CC(=O)Nc2ccc(Cc3ccc(Cl)cc3)cc2)CC1"
+            ],
+            "source_smiles": [
+                "CN1CCN(CC(=O)Nc2ccc(Sc3ccc(Cl)cc3)cc2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7045454545454546
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_81",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central carbon atom connected to a dimethoxybenzene ring, a piperazine ring (N1CCOCC1), and a morpholine ring (N1CCOCC1). The morpholine ring (1-oxa-4-azacyclohexane) is a six-membered ring with one oxygen and one nitrogen atom.\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the amine-containing ring. Morpholine, with its oxygen atom, has lower basicity and reduced conformatio"
+            ],
+            "pred_smiles": [
+                "COc1cc2c(cc1OC)CC(N1CCNCC1)C2"
+            ],
+            "source_smiles": [
+                "COc1cc2c(cc1OC)CC(N1CCOCC1)C2"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_82",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperidine ring (C1CCCCN1) connected to a cyclohexane ring, a fluorophenyl group, and a tertiary amine (CCN(C(C)C)C(C)C) with two isopropyl substituents. The amide group (C(N)=O) is present on the cyclohexane ring.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the receptor. The tertiary amine (tertiary butyl group) may reduce solubility and intr"
+            ],
+            "pred_smiles": [
+                "CC1CCCCN1CCC(CCN(CC)C(C)C)(C(N)=O)c1ccccc1F."
+            ],
+            "source_smiles": [
+                "CC1CCCCN1CCC(CCN(C(C)C)C(C)C)(C(N)=O)c1ccccc1F"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_83",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) substituted with a benzyl group (c2ccccc2OC) and a carbonyl-linked propyl chain (CCC(=O)N). The benzyl group has an ether-linked phenyl ring (OC).\nProperty Analysis: Piperazine derivatives often exhibit dopamine D2 receptor (DRD2) activity due to their conformational flexibility and hydrogen-bonding potential. The carbonyl group (CCC(=O)) may reduce basicity, potentially weakening recept"
+            ],
+            "pred_smiles": [
+                "CCCNCCN1CCN(c2ccccc2OC)CC1"
+            ],
+            "source_smiles": [
+                "CCC(=O)NCCCCN1CCN(c2ccccc2OC)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_84",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) connected to a substituted benzene ring with methoxy groups (OC). The piperidine is substituted with a tertiary amine (N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2=O) and a butyl chain. The benzene ring has two methoxy groups, and a ketone (C=O) is present in the fused ring system.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility wi"
+            ],
+            "pred_smiles": [
+                "COc1ccc(N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2CN)cc1OC."
+            ],
+            "source_smiles": [
+                "COc1ccc(N(C)CCCN2CCc3cc(OC)c(OC)cc3CC2=O)cc1OC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_85",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CCNCC1) connected to a benzyl group (CN1CCc2ccccc2C1) and a glycerol-derived chain (OC(COc1ccc(-n2cncn2)cc1). The pyrimidine-like heterocycle (-n2cncn2) is a key structural feature.\nProperty Analysis: DRD2 activity is influenced by aromatic/hydrophobic interactions and hydrogen bonding. The glycerol chain (hydrophilic) may reduce membrane permeability, while the pyrimidine heterocycle (aromatic) may"
+            ],
+            "pred_smiles": [
+                "Oc1ccc(-n2cncn2)cc1CN1CCc2ccccc2C1"
+            ],
+            "source_smiles": [
+                "OC(COc1ccc(-n2cncn2)cc1)CN1CCc2ccccc2C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5454545454545454
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_86",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central hydantoin-like core (N1N=C...CC1) with a fluorinated biphenyl group (c2cc(F)ccc2F) and a benzyl group (c1ccccc1). The carbonyl group (CC(=O)) is attached to the hydantoin nitrogen.\nProperty Analysis: DRD2 activity is influenced by aromatic interactions, hydrogen bonding, and steric compatibility. The fluorinated biphenyl group may enhance lipophilicity and target binding, while the benzyl group provides a flexible hyd"
+            ],
+            "pred_smiles": [
+                "CC(=O)N1N=C(c2cc(F)ccc2F)CC1c1ccncc1"
+            ],
+            "source_smiles": [
+                "CC(=O)N1N=C(c2cc(F)ccc2F)CC1c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.8064516129032258
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_87",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1C2CCCN3CCCC(CN1CCO)C23) with a hydroxyl group (OH) attached to a nitrogen in a piperazine-like side chain (CN1CCO). The side chain includes a morpholine ring (CCO) and a carboxylic acid group (O=C(O)) connected via a four-carbon chain (CCCC).\nProperty Analysis: The hydroxyl group (OH) in the side chain (CN1CCO) may reduce DRD2 activity due to increased polarity and potential hydrogen bonding, which "
+            ],
+            "pred_smiles": [
+                "CC(=O)NCC1C2CCCN3CCCC(CN1CCO)C23."
+            ],
+            "source_smiles": [
+                "O=C(O)CCCC1C2CCCN3CCCC(CN1CCO)C23"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_88",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) with two carbonyl groups (C=O) and a piperazine ring (N2CCN(Cc3ccccc3)CC2) substituted with a benzyl group (Cc3ccccc3). The piperazine is a 1,4-diazacyclohexane, which is a common scaffold for bioactive molecules due to its ability to form hydrogen bonds and its conformational flexibility.\nProperty Analysis: The DRD2 activity of the source molecule is likely influenced by the piperazine's ability to i"
+            ],
+            "pred_smiles": [
+                "CCn1c(=O)cc(N2CCN(Cc3ccc(CO)cc3)CC2)[nH]c1=O."
+            ],
+            "source_smiles": [
+                "CCn1c(=O)cc(N2CCN(Cc3ccccc3)CC2)[nH]c1=O"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_89",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a dimethylamino group (CN(C)), a fused bicyclic aromatic system (benzene fused to a naphthyridine-like structure), and a sulfonamide group (S(=O)(=O)N) linked to a cyanophenyl ring (C#N-substituted phenyl). The dimethylamino group is a tertiary amine, and the naphthyridine core is electron-rich.\nProperty Analysis: DRD2 activity is influenced by the balance of lipophilicity, hydrogen bonding, and steric compatibility with the re"
+            ],
+            "pred_smiles": [
+                "Nc1ccc(F)c(Nc2cccc3c(S(=O)(=O)Nc4ccc(C#N)nn4)cccc23)n1"
+            ],
+            "source_smiles": [
+                "CN(C)c1cccc2c(S(=O)(=O)Nc3ccc(C#N)nn3)cccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6521739130434783
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_90",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (N1CCc2ccccc2C1) connected to a benzyl group (c2ccccc2) and a side chain (CNC(=O)c1ccccc1Br) with a brominated phenyl ring (c1ccccc1Br) and an amide linkage (NC(=O)).\nProperty Analysis: The brominated phenyl ring (c1ccccc1Br) may reduce DRD2 activity due to steric bulk and potential metabolic instability. The amide group (NC(=O)) could also limit activity due to hydrogen bonding or conformational rigid"
+            ],
+            "pred_smiles": [
+                "CCC(CNC(=O)c1ccccc1)N1CCc2ccccc2C1"
+            ],
+            "source_smiles": [
+                "CCC(CNC(=O)c1ccccc1Br)N1CCc2ccccc2C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_91",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a nitrile group (N#C) connected to a piperazine ring (NCCCN1CCCCC1) via a methylene bridge (CCCN). The piperazine is a six-membered ring with two nitrogen atoms, and the cyclohexane ring (CCCCC1) is a six-membered saturated ring.\nProperty Analysis: The nitrile group (N#C) is electron-withdrawing and may reduce basicity, potentially weakening interactions with the DRD2 receptor. The piperazine ring is a known pharmacophore for D"
+            ],
+            "pred_smiles": [
+                "CN(C)CCCN1CCCCC1"
+            ],
+            "source_smiles": [
+                "N#CCCNCCCN1CCCCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_92",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzofuranone core (O=c1cc(-c2ccccc2)oc2cc...cc12) with a phenyl substituent (-c2ccccc2) and a side chain (OCCN3CCOCC3) terminating in a morpholine ring (N3CCOCC3). The morpholine (1,4-oxazinane) is a six-membered ring with one oxygen and one nitrogen atom.\nProperty Analysis: DRD2 activity is influenced by the basicity and conformational flexibility of the amine group. Morpholine, while moderately basic, has limited p"
+            ],
+            "pred_smiles": [
+                "O=c1cc(-c2ccccc2)oc2cc(OCCN3CCN(C)CC3)cc(O)c12"
+            ],
+            "source_smiles": [
+                "O=c1cc(-c2ccccc2)oc2cc(OCCN3CCOCC3)cc(O)c12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7843137254901961
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_93",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a nitro group (NO), a carbonyl group (C=O), a thioamide (S(=O)(=O)), a piperazine-like ring (ccn2), and a benzodioxole-like scaffold (c1ccc2c(ccn2S(=O)(=O)c2ccccc2)c1). The nitro group and carbonyl group may contribute to metabolic instability or suboptimal receptor binding.\nProperty Analysis: DRD2 activity is influenced by hydrogen bonding, steric fit, and aromatic interactions. The nitro group (electron-withdrawing) may reduc"
+            ],
+            "pred_smiles": [
+                "Oc1ccc2c(ccn2S(=O)(=O)c2ccccc2)c1"
+            ],
+            "source_smiles": [
+                "O=C(CCc1ccc2c(ccn2S(=O)(=O)c2ccccc2)c1)NO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_94",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) substituted with a chlorophenyl group. The piperazine core is a six-membered ring with two nitrogen atoms at positions 1 and 4, while the chlorophenyl group is attached to the nitrogen at position 1.\nProperty Analysis: Piperazine derivatives can exhibit moderate DRD2 activity due to their basicity and hydrogen-bonding potential. However, the chlorophenyl group may reduce lipophilicity an"
+            ],
+            "pred_smiles": [
+                "CCN1CCN(Cc2ccccc2)CC1"
+            ],
+            "source_smiles": [
+                "CCN1CCN(c2cccc(Cl)c2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4827586206896552
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_95",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a pyridine core (c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1) with a methyl ester (COC(=O)), a substituted benzene ring (Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2), and a pyrrole ring (cn1). The benzene ring has a fluorophenyl group (-c4ccc(F)cc4) and a carbamoyl group (C(N)=O).\nProperty Analysis: The fluorophenyl group (-c4ccc(F)cc4) is electron-withdrawing and may reduce electron density in the aromatic system, potentially wea"
+            ],
+            "pred_smiles": [
+                "COC(=O)c1cn(Cc2ccc3c(-c4ccccc4)cc(C(N)=O)nc3c2)cn1."
+            ],
+            "source_smiles": [
+                "COC(=O)c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_96",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a hydroxyl group (O), an ethoxy chain (OCCCN), and a piperidine ring (N1CCCCC1). The piperidine ring is a saturated 6-membered ring with one nitrogen atom.\nProperty Analysis: DRD2 activity is influenced by the basicity and steric compatibility of the amine group in the piperidine ring. Piperidine's saturated structure and basic nitrogen may limit optimal receptor interactions due to confo"
+            ],
+            "pred_smiles": [
+                "c1cc(OCCCN2CCCCC2)ccc1CN1CCNCC1"
+            ],
+            "source_smiles": [
+                "c1cc(OCCCN2CCCCC2)ccc1CN1CCCCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.8333333333333334
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_97",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a piperazine ring (1,4-diazacyclohexane) connected to a carbonyl group, a tertiary amine, and a thioether-substituted benzene ring. The piperazine (1,4-diazacyclohexane) is a flexible, basic nitrogen-containing heterocycle, while the thioether (S) and carbonyl (C=O) groups contribute to polarity and hydrogen bonding potential.\nProperty Analysis: Piperazine derivatives can exhibit moderate DRD2 activity due to their basicity and"
+            ],
+            "pred_smiles": [
+                "CC(=O)N(C)c1ccc(Sc2ccccc2)cc1"
+            ],
+            "source_smiles": [
+                "CN1CCN(CC(=O)N(C)c2ccc(Sc3ccccc3)cc2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3157894736842105
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_98",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central urea group (O=C(N-)) linking two aromatic systems. The left side has a pyrimidine-like core (c1nc2ccccc2n1) with a benzyl substituent (Cc1ccc(Cl)cc1), and the right side has a benzofuran moiety (c1ccco1). The pyrimidine core and benzofuran are critical for structural stability.\nProperty Analysis: DRD2 activity often benefits from aromatic/hydrophobic interactions and hydrogen bonding. The benzofuran (electron-rich oxy"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1nc2ccccc2n1c1ccncc1)c1ccco1."
+            ],
+            "source_smiles": [
+                "O=C(Nc1nc2ccccc2n1Cc1ccc(Cl)cc1)c1ccco1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_drd_99",
+            "pred_raw": [
+                "Structural Analysis of Source Molecule: The source molecule contains a central guanidine group (N1CCN(c2ccccn2)CC1) connected to a carbonyl group (CON=C) and a benzene ring (c1ccccc1). The guanidine group is a strong base and may reduce blood-brain barrier penetration. The benzene ring provides hydrophobicity but lacks polar interactions.\nProperty Analysis: DRD2 activity requires balanced lipophilicity, hydrogen bonding, and steric compatibility. The guanidine group (high basicity) may hinder CN"
+            ],
+            "pred_smiles": [
+                "CCCN1CCN(c2ccncc2)CC1CON=Cc1ccncc1"
+            ],
+            "source_smiles": [
+                "CON=C(CCN1CCN(c2ccccn2)CC1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.14705882352941177
+            ],
+            "correct": [
+                false
+            ]
+        }
+    ]
+}

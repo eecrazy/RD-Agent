@@ -1,0 +1,1964 @@
+{
+    "exact_match": 4.0,
+    "validity": 24.0,
+    "morgan_sims": 13.89529699451693,
+    "maccs_sims": 15.483098812440508,
+    "rdk_sims": 13.923384570327654,
+    "bleu": 1.8216143317331641,
+    "levenshtein": 3.48,
+    "exact_match_count": 2.0,
+    "valid_count": 12.0,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_reaction_fs_50",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)OC(=O)OC(C)(C)C (tert-butyl 2,2-dimethyl-2-oxoacetate, a tert-butyl ester). Reactant 2: NCCN (N,N-dimethylamine, a primary amine). Reagent: ClCCl (chloroform, an organic solvent).\nStep 2: Identify Functional Groups: Reactant 1: Tert-butyl ester (-C(=O)OC(C)(C)C), tert-butyl group (-C(C)(C)C), methyl groups (-CH3). Reactant 2: Primary amine (-NH2), methyl groups (-CH3). Reagent: Chloroform (CHCl3), a non-reactive organic solvent.\nStep 3:"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)OC(=O)OC(C)(C)C (tert-butyl 2,2-dimethyl-2-oxoacetate, a tert-butyl ester). Reactant 2: NCCN (N,N-dimethylamine, a primary amine). Reagent: ClCCl (chloroform, an organic solvent).\nStep 2: Identify Functional Groups: Reactant 1: Tert-butyl ester (-C(=O)OC(C)(C)C), tert-butyl group (-C(C)(C)C), methyl groups (-CH3). Reactant 2: Primary amine (-NH2), methyl groups (-CH3). Reagent: Chloroform (CHCl3), a non-reactive organic solvent.\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The primary amine (NCCN) acts as a nucleophile, attacking the electrophilic carbonyl carbon of the tert-butyl ester. The tert-butyl ester is a good leaving group. This reaction typically forms a ketone (NCC=O) and tert-butyl carboxylate (CC(C)(C)OC(=O)O). The reaction is facilitated by the presence of a base (e.g., triethylamine, pyridine) which deprotonates the amine to form the more potent nucleophile, the amide anion.\nStep 4: Construct Product Structures: The amine NCCN reacts with the ester CC(C)(C)OC(=O)OC(=O)OC(C)(C)C. The nitrogen atom of the amine attacks the carbonyl carbon of the ester. The ester group -OC(=O)OC(=O)OC(C)(C)C is replaced by the amine group -NCCN. The resulting product is N,N-dimethyl-2-(tert-butylcarbamoyl)acetamide. The structure is NCC=O, where the carbonyl carbon is attached to a methyl group (from the amine) and a tert-butylcarbamate group (-OC(=O)OC(=O)OC(C)(C)C).\n{\"Major Product\": CC(C)(C)OC(=O)NCC=O, \"Byproduct(s)\": CC(C)(C)OC(=O)O}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(C)(C)OC(=O)NCCN"
+            ],
+            "gold_canonical": [
+                "CC(C)(C)OC(=O)NCCN"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_51",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)C(=O)c1ccccc1 (ethyl 2-(phenylcarbonyl)acetate). Reactant 2: C=CC[Si](C)(C)C (trimethylsilylacetylene). Reagent 1: Cl[Sn](Cl)(Cl)Cl (Tin(II) chloride). Reagent 2: ClCCl (Chloroform).\nStep 2: Identify Functional Groups: Reactant 1: Ethyl ester (-COOEt), Phenyl ketone (-C(=O)Ph). Reactant 2: Terminal alkyne (-C≡CH), Trimethylsilyl group (-Si(CH3)3). Reagent 1: Tin(II) chloride (Lewis acid). Reagent 2: Chloroform (solvent).\nStep 3: Predict React"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)C(=O)c1ccccc1 (ethyl 2-(phenylcarbonyl)acetate). Reactant 2: C=CC[Si](C)(C)C (trimethylsilylacetylene). Reagent 1: Cl[Sn](Cl)(Cl)Cl (Tin(II) chloride). Reagent 2: ClCCl (Chloroform).\nStep 2: Identify Functional Groups: Reactant 1: Ethyl ester (-COOEt), Phenyl ketone (-C(=O)Ph). Reactant 2: Terminal alkyne (-C≡CH), Trimethylsilyl group (-Si(CH3)3). Reagent 1: Tin(II) chloride (Lewis acid). Reagent 2: Chloroform (solvent).\nStep 3: Predict Reaction Type: Sonogashira coupling. This is a palladium-catalyzed cross-coupling reaction between a terminal alkyne and an aryl or vinyl halide/pseudohalide, often facilitated by a copper co-catalyst. In this case, the alkyne is C=CC[Si](C)(C)C, and the coupling partner is the phenyl ketone CCOC(=O)C(=O)c1ccccc1, which can be considered as an aryl halide (phenyl chloride) for the purpose of this reaction type.\nStep 4: Construct Product Structure: The Sonogashira coupling will form a new carbon-carbon bond between the terminal carbon of the alkyne (C=CC[Si](C)(C)C) and the phenyl ring of the ketone (CCOC(=O)C(=O)c1ccccc1). The trimethylsilyl group on the alkyne and the ethyl ester group on the ketone are expected to remain unchanged under typical Sonogashira conditions. The product is ethyl 2-(phenylcarbonyl)-3-(trimethylsilyl)acrylate.\n{\"Major Product\": CCOC(=O)C(=O)c1ccccc1C#CC[Si](C)(C)C, \"Byproduct(s)\": ClCCl}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "C=CCC(O)(C(=O)OCC)c1ccccc1"
+            ],
+            "gold_canonical": [
+                "C=CCC(O)(C(=O)OCC)c1ccccc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_52",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1 (a complex molecule containing a primary amine). Reagent 1: Br (interpreted as HBr, a common reagent for deprotection, based on typical reaction contexts and the presence of a protected amine).\nStep 2: Identify Functional Groups: Reactant 1 contains a primary amine (-NH2) group, which is part of a larger molecule. The SMILES string `...C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1cc"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1 (a complex molecule containing a primary amine). Reagent 1: Br (interpreted as HBr, a common reagent for deprotection, based on typical reaction contexts and the presence of a protected amine).\nStep 2: Identify Functional Groups: Reactant 1 contains a primary amine (-NH2) group, which is part of a larger molecule. The SMILES string `...C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1` indicates that the primary amine is attached to a nitrogen atom, which is also part of a piperazine ring. This nitrogen is the one that is primary (N1 in the SMILES fragment `C1CN(...)`). The rest of the molecule contains a pyrimidine ring, a pyridine ring, a benzene ring, and a substituted phenyl group. Reagent 1 (HBr) is a strong acid.\nStep 3: Predict Reaction Type: The reaction is predicted to be the deprotection of a primary amine. HBr is a common reagent for the deprotection of primary amines, especially when they are part of a larger molecule that might be sensitive to harsher conditions like strong bases. The primary amine group (-NH2) will react with HBr to form a secondary amine (-N(H)Br) and water.\nStep 4: Construct Product Structure: The primary amine group (-NH2) on the nitrogen atom of the piperazine ring (N1 in the fragment `C1CN(...)` of the reactant SMILES) is converted to a secondary amine group (-N(H)Br). The rest of the molecule remains unchanged. The fragment `C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1` in the reactant becomes `C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1` in the product, where the first `C` of the `C1CN(...)` sequence is the piperazine ring, and the second `C` is the nitrogen atom that was primary and is now secondary.\n{\"Major Product\": CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1"
+            ],
+            "gold_canonical": [
+                "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_53",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)N[C@H](C=O)CC1CCC1 (tert-butyl (R)-2-oxo-2-phenylacetamide, a chiral amide). Reactant 2: [C-]#[N+]C1CC1 (piperidin-4-yl cation, a secondary amine). Reagent 1: CC(=O)O (acetic acid, a protic acid). Reagent 2: CCOC(C)=O (methyl isobutyrate, a ketone). Reagent 3: ClCCl (chloroform, a non-nucleophilic solvent).\nStep 2: Identify Functional Groups: Reactant 1: Tert-butyl ester (-C(=O)OC(C)(C)C), chiral center ([C@H]), amide (-C(=O)NH-). React"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)N[C@H](C=O)CC1CCC1 (tert-butyl (R)-2-oxo-2-phenylacetamide, a chiral amide). Reactant 2: [C-]#[N+]C1CC1 (piperidin-4-yl cation, a secondary amine). Reagent 1: CC(=O)O (acetic acid, a protic acid). Reagent 2: CCOC(C)=O (methyl isobutyrate, a ketone). Reagent 3: ClCCl (chloroform, a non-nucleophilic solvent).\nStep 2: Identify Functional Groups: Reactant 1: Tert-butyl ester (-C(=O)OC(C)(C)C), chiral center ([C@H]), amide (-C(=O)NH-). Reactant 2: Secondary amine (-NH-). Reagent 1: Carboxylic acid (-COOH). Reagent 2: Ketone (-C(=O)CH3). Reagent 3: Non-nucleophilic solvent (chloroform).\nStep 3: Predict Reaction Type: The reaction is predicted to be a nucleophilic acyl substitution. The secondary amine (piperidin-4-yl cation) acts as a nucleophile, attacking the electrophilic carbonyl carbon of the ketone (methyl isobutyrate). The acetic acid (carboxylic acid) is present and can act as a proton source or sink, potentially catalyzing the reaction or affecting the equilibrium. The tert-butyl ester is significantly less reactive towards nucleophilic attack by the secondary amine under typical conditions for ketone acylation. Chloroform serves as a solvent.\nStep 4: Construct Product Structure: The secondary amine ([C-]#[N+]C1CC1) reacts with methyl isobutyrate (CCOC(C)=O). The nitrogen atom of the amine attacks the carbonyl carbon of the ketone. The C=O double bond of the ketone becomes a C-O single bond, and the nitrogen atom becomes a C-N single bond. The methyl group from the ketone and the isobutyl group from the ketone remain attached to the carbonyl carbon. The piperidine ring and its positive charge remain unchanged. The product formed is N-(piperidin-4-yl)-2-methylbutanamide.\n{\"Major Product\": CCOC(C)C(=O)N[C@H](C=O)CC1CCC1, \"Byproduct(s)\": CC(=O)O}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(=O)OC(C(=O)NC1CC1)[C@H](CC1CCC1)NC(=O)OC(C)(C)C"
+            ],
+            "gold_canonical": [
+                "CC(=O)OC(C(=O)NC1CC1)C(CC1CCC1)NC(=O)OC(C)(C)C"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_54",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)Cc1cncnc1Cl (Ethyl 2-chloro-4-methylpyrimidine-5-carboxylate). Reactant 2: C#C[Si](CC)(CC)CC (Trimethylsilylacetylene). Reagent 1: c1ccc(P(c2ccccc2)c2ccccc2)cc1 (Triphenylphosphine, PPh3). Reagent 2: CCN(CC)CC (N,N-Dimethylethylamine, DMEDA). Reagent 3: CN(C)C=O (Diisopropyl azodicarboxylate, DIAD).\nStep 2: Identify Functional Groups: Reactant 1: Ethyl ester (-COOEt), Pyrimidine ring, Chloro (-Cl) substituent on the pyrimidine ring, Methyl (-"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)Cc1cncnc1Cl (Ethyl 2-chloro-4-methylpyrimidine-5-carboxylate). Reactant 2: C#C[Si](CC)(CC)CC (Trimethylsilylacetylene). Reagent 1: c1ccc(P(c2ccccc2)c2ccccc2)cc1 (Triphenylphosphine, PPh3). Reagent 2: CCN(CC)CC (N,N-Dimethylethylamine, DMEDA). Reagent 3: CN(C)C=O (Diisopropyl azodicarboxylate, DIAD).\nStep 2: Identify Functional Groups: Reactant 1: Ethyl ester (-COOEt), Pyrimidine ring, Chloro (-Cl) substituent on the pyrimidine ring, Methyl (-CH3) substituent on the pyrimidine ring. Reactant 2: Terminal alkyne (-C≡CH), Trimethylsilyl group (-Si(CH3)3). Reagent 1 (PPh3): Phosphine. Reagent 2 (DMEDA): Amine. Reagent 3 (DIAD): Azodicarboxylate.\nStep 3: Predict Reaction Type: Sonogashira coupling. This is a palladium- and copper-catalyzed cross-coupling reaction between a terminal alkyne and an aryl or vinyl halide/pseudohalide, typically using a phosphine ligand, an amine, and an azodicarboxylate.\nStep 4: Construct Product Structure: The Sonogashira coupling will occur between the terminal alkyne (C#C[Si](CC)(CC)CC) and the aryl chloride (CCOC(=O)Cc1cncnc1Cl). The chlorine atom on the pyrimidine ring is replaced by the trimethylsilylacetylene group. The ethyl ester group and the methyl group on the pyrimidine ring remain unchanged. The trimethylsilyl group on the alkyne is expected to be present in the final product.\n{\"Major Product\": CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC, \"Byproduct(s)\": CCN(CC)CC.CN(C)C=O}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+            ],
+            "gold_canonical": [
+                "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_55",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(=O)Nc1ccc(C=O)cc1 (N-(4-(methylcarbonyl)phenyl)acetamide). Reactant 2: N#CCC#N (Cyanamide). Reagent 1: CCO (Ethanol). Reagent 2: C1CCNCC1 (Piperidine).\nStep 2: Identify Functional Groups: Reactant 1: Acyl chloride (-C(=O)Cl), N-methylamide (-NHCOCH3), aromatic ring. Reactant 2: Cyanamide (-C≡N-NH2). Reagent 1: Primary alcohol (-OH). Reagent 2: Piperidine (cyclic secondary amine).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The p"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(=O)Nc1ccc(C=O)cc1 (N-(4-(methylcarbonyl)phenyl)acetamide). Reactant 2: N#CCC#N (Cyanamide). Reagent 1: CCO (Ethanol). Reagent 2: C1CCNCC1 (Piperidine).\nStep 2: Identify Functional Groups: Reactant 1: Acyl chloride (-C(=O)Cl), N-methylamide (-NHCOCH3), aromatic ring. Reactant 2: Cyanamide (-C≡N-NH2). Reagent 1: Primary alcohol (-OH). Reagent 2: Piperidine (cyclic secondary amine).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The primary alcohol (ethanol) acts as a nucleophile, attacking the electrophilic carbonyl carbon of the acyl chloride. This leads to the formation of an ester. The cyanamide and piperidine are expected to be spectators under typical conditions for this reaction.\nStep 4: Construct Product Structure: The acyl chloride group (-C(=O)Cl) on N-(4-(methylcarbonyl)phenyl)acetamide reacts with ethanol (CCO). The chloride atom is displaced, and an ethoxy group (-OCC) is attached to the carbonyl carbon. The resulting product is N-(4-(methylcarbonyl)phenyl)acetic acid ethyl ester. The SMILES for this product is CCOC(=O)Nc1ccc(C=O)cc1.\n{\"Major Product\": CCOC(=O)Nc1ccc(C=O)cc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(=O)Nc1ccc(C=C(C#N)C#N)cc1"
+            ],
+            "gold_canonical": [
+                "CC(=O)Nc1ccc(C=C(C#N)C#N)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_56",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O (a substituted urea derivative with a tert-butyl group and a phenyl group). Reactant 2: Clc1cccc(CBr)c1Cl (2,6-dichloro-4-(bromomethyl)phenyl chloride). Reagents: O (water, likely as a solvent or for hydrolysis), CN(C)C=O (diisopropyl azodicarboxylate, DIAD), [NaH] (sodium hydride, a strong base).\nStep 2: Identify Functional Groups: Reactant 1: Contains a urea group (-NH-CO-NH-), a tert-butyl group (-C(CH3)3), and a p"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O (a substituted urea derivative with a tert-butyl group and a phenyl group). Reactant 2: Clc1cccc(CBr)c1Cl (2,6-dichloro-4-(bromomethyl)phenyl chloride). Reagents: O (water, likely as a solvent or for hydrolysis), CN(C)C=O (diisopropyl azodicarboxylate, DIAD), [NaH] (sodium hydride, a strong base).\nStep 2: Identify Functional Groups: Reactant 1: Contains a urea group (-NH-CO-NH-), a tert-butyl group (-C(CH3)3), and a phenyl group (-C6H5). The urea group is the primary reactive site. Reactant 2: Contains an aryl chloride (-Cl) and a bromomethyl group (-CH2Br) on a phenyl ring. The aryl chloride is the primary reactive site for nucleophilic substitution. Reagents: DIAD is an azodicarboxylate, and NaH is a strong base.\nStep 3: Predict Reaction Type: The reaction is predicted to be a nucleophilic substitution. The nitrogen atom of the urea group in Reactant 1 acts as a nucleophile, attacking the electrophilic carbon atom of the aryl chloride in Reactant 2. This leads to the displacement of the chloride ion. The reaction is facilitated by the strong base (NaH) and the azodicarboxylate (DIAD), which are characteristic of a Mitsunobu reaction. The bromomethyl group on Reactant 2 is expected to remain unchanged under these conditions.\nStep 4: Construct Product Structure: The urea group in Reactant 1 is represented as -NH-CO-NH-R, where R is C(C)(Cc2ccccc2)C1=O. The nitrogen atom of the first -NH- group (let's call it N1) is the nucleophile. The aryl chloride in Reactant 2 is Ar-Cl, where Ar is c1cccc(CBr)c1Cl. The chlorine atom (Cl) is the leaving group. The nucleophilic attack of N1 on the carbon atom of Ar results in the formation of a new C-N bond. The chloride ion is displaced. The resulting product is Ar-NH-CO-NH-R. In SMILES, this corresponds to Clc1cccc(CBr)c1Cl attached to one nitrogen of the urea group, and the original urea group attached to the other nitrogen. The SMILES for the product is Clc1cccc(CBr)c1Cl-NH-CO-NH-C(C)(Cc2ccccc2)C1=O.\n{\"Major Product\": Clc1cccc(CBr)c1ClN(C)C(=O)NC(C)(Cc2ccccc2)C1=O, \"Byproduct(s)\": CN(C)C=O}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CN1C(=O)C(C)(Cc2ccccc2)N(C)C(=O)C1Cc1cccc(Cl)c1Cl"
+            ],
+            "gold_canonical": [
+                "CN1C(=O)C(C)(Cc2ccccc2)N(C)C(=O)C1Cc1cccc(Cl)c1Cl"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_57",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1 (1-phenyl-1,2,3,4-tetrahydronaphthalen-1-ium, a phenyl-substituted quaternary ammonium salt). Reactant 2: COC(=O)CCCCCCC=O (methyl 10-oxodecanoate, a methyl ester of a decanoic acid derivative). Reagents: Not specified.\nStep 2: Identify Functional Groups: Reactant 1: Quaternary ammonium cation ([P+]), phenyl group. Reactant 2: Methyl ester group (-COOCH3), decanoyl group (-CH2CH2CH2CH2CH2CH2CH2CH2COOH).\nStep 3: "
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1 (1-phenyl-1,2,3,4-tetrahydronaphthalen-1-ium, a phenyl-substituted quaternary ammonium salt). Reactant 2: COC(=O)CCCCCCC=O (methyl 10-oxodecanoate, a methyl ester of a decanoic acid derivative). Reagents: Not specified.\nStep 2: Identify Functional Groups: Reactant 1: Quaternary ammonium cation ([P+]), phenyl group. Reactant 2: Methyl ester group (-COOCH3), decanoyl group (-CH2CH2CH2CH2CH2CH2CH2CH2COOH).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The quaternary ammonium cation (a strong nucleophile) will attack the electrophilic carbonyl carbon of the methyl ester. The methyl group will act as a leaving group. This reaction is a type of acylation of a quaternary ammonium salt.\nStep 4: Construct Product Structure: The methyl group from the methyl ester (COC(=O)CCCCCCC=O) is replaced by the 1-phenyl-1,2,3,4-tetrahydronaphthalen-1-ium cation (CCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1). The resulting product is methyl 1-phenyl-1,2,3,4-tetrahydronaphthalen-1-ium-10-carboxylate. The SMILES string for this product is COC(=O)CCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1.\n{\"Major Product\": COC(=O)CCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCCCC=CCCCCCCC(=O)OC"
+            ],
+            "gold_canonical": [
+                "CCCCCC=CCCCCCCC(=O)OC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_58",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13 (a complex molecule containing a pyrazole ring). Reactant 2: Brc1ccccc1 (1-bromobenzene). Reagents: O=C(C=Cc1ccccc1)C=Cc1ccccc1 (Bis(triphenylphosphine)palladium(II) chloride, a palladium catalyst precursor), CC(C)(C)P(C(C)(C)C)C(C)(C)C (Tributylphosphine, a ligand), Cc1ccccc1C (Tetrahydrofuran, a solvent), CC(C)(C)O[Na] (Sodium tert-butoxide, a base).\nStep 2: Iden"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13 (a complex molecule containing a pyrazole ring). Reactant 2: Brc1ccccc1 (1-bromobenzene). Reagents: O=C(C=Cc1ccccc1)C=Cc1ccccc1 (Bis(triphenylphosphine)palladium(II) chloride, a palladium catalyst precursor), CC(C)(C)P(C(C)(C)C)C(C)(C)C (Tributylphosphine, a ligand), Cc1ccccc1C (Tetrahydrofuran, a solvent), CC(C)(C)O[Na] (Sodium tert-butoxide, a base).\nStep 2: Identify Functional Groups: Reactant 1: Pyrazole ring (electron-rich heteroaromatic system), multiple phenyl rings (electron-rich), a complex fused heterocyclic system (electron-rich), and a tertiary amine (-N(CH3)2) group. Reactant 2: Aryl bromide (-Br attached to an aromatic ring). Reagents: Palladium catalyst, phosphine ligand, tetrahydrofuran solvent, strong base (sodium tert-butoxide).\nStep 3: Predict Reaction Type: Palladium-catalyzed cross-coupling reaction, specifically a Buchwald-Hartwig amination. This reaction couples an aryl halide (1-bromobenzene) with an amine (the tertiary amine in Reactant 1) in the presence of a palladium catalyst, a phosphine ligand, and a base.\nStep 4: Construct Product Structure: The reaction involves the formation of a new carbon-nitrogen bond between the aryl group of 1-bromobenzene and the nitrogen atom of the tertiary amine in Reactant 1. The hydrogen atom on the nitrogen of the tertiary amine is replaced by the 1-bromo-phenyl group. The rest of the molecule remains unchanged. The SMILES for the product is formed by replacing the hydrogen on the nitrogen of the tertiary amine group (-N(CH3)2) with the 1-bromo-phenyl group (c1ccccc1Br).\n{\"Major Product\": CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC1(C)c2ccccc2-c2cc3c4cc(-c5ccc6c(c5)c5cc7c(cc5n6-c5ccccc5)oc5ccccc57)ccc4n(-c4ccccc4)c3cc21"
+            ],
+            "gold_canonical": [
+                "CC1(C)c2ccccc2-c2cc3c4cc(-c5ccc6c(c5)c5cc7c(cc5n6-c5ccccc5)oc5ccccc57)ccc4n(-c4ccccc4)c3cc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_59",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactants: O (water), C=CC#N (propargyl nitrile), C=C(C)C (isobutylene). Reagents: COC (ethanol), O=S(=O)(O)O (sulfuric acid), Oc1ccc(O)cc1 (p-cresol).\nStep 2: Identify Functional Groups: Water (polar protic solvent, catalyst). Propargyl nitrile (nitrile group, electrophilic carbon). Isobutylene (alkene group, electrophilic carbon). Ethanol (alcohol, nucleophile). Sulfuric acid (strong acid, catalyst). p-Cresol (phenol, nucleophile).\nStep 3: Predict Reaction Typ"
+            ],
+            "pred_smiles": [
+                "O=C(C=CC#N)c1ccc(O)cc1"
+            ],
+            "pred_canonical": [
+                "N#CC=CC(=O)c1ccc(O)cc1"
+            ],
+            "gold": [
+                "C=CC(=O)NC(C)(C)C"
+            ],
+            "gold_canonical": [
+                "C=CC(=O)NC(C)(C)C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.07407407407407407
+            ],
+            "maccs_similarity": [
+                0.14285714285714285
+            ],
+            "rdk_similarity": [
+                0.058823529411764705
+            ],
+            "levenshtein": [
+                12
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_60",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Cc1ccc(-n2nc(C(C)(C)C)cc2N)cc1 (a substituted pyrimidine derivative with a tert-butyl group). Reagent 1: O=C(Cl)OCC(Cl)(Cl)Cl (penta-chlorophenylacetic acid, an acylating agent). Reagent 2: c1ccncc1 (pyridine, a base).\nStep 2: Identify Functional Groups: Reactant 1: Pyrimidine ring (electron-deficient heteroaromatic system), tert-butyl group (-C(CH3)3, a strong electron-withdrawing group). Reagent 1: Acyl chloride (-COCl, electrophilic carbonyl), pen"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2C(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "pred_canonical": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2C(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "gold": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "gold_canonical": [
+                "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7702702702702703
+            ],
+            "maccs_similarity": [
+                0.8363636363636363
+            ],
+            "rdk_similarity": [
+                0.5064599483204134
+            ],
+            "levenshtein": [
+                1
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_61",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21 (Dess-Martin Periodinane, an oxidizing agent). Reactant 2: O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1 (a secondary alcohol). Reagents: Not explicitly provided, but Dess-Martin Periodinane is a common reagent for this transformation.\nStep 2: Identify Functional Groups: Reactant 1 (Dess-Martin Periodinane): Hypervalent iodine(V) compound, serves as an oxidizing agent. Reactant 2 (Secondary Alcoho"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21 (Dess-Martin Periodinane, an oxidizing agent). Reactant 2: O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1 (a secondary alcohol). Reagents: Not explicitly provided, but Dess-Martin Periodinane is a common reagent for this transformation.\nStep 2: Identify Functional Groups: Reactant 1 (Dess-Martin Periodinane): Hypervalent iodine(V) compound, serves as an oxidizing agent. Reactant 2 (Secondary Alcohol): Secondary alcohol (-CH(OH)-) group, which is the primary reactive site for oxidation. Other groups include a carboxylic acid, a pyridine ring, a pyrimidine ring, a trifluoromethyl group, and a trifluoromethoxy group.\nStep 3: Predict Reaction Type: Oxidation of a secondary alcohol to a ketone. Dess-Martin Periodinane is a mild and selective reagent for this transformation.\nStep 4: Construct Product Structure: The secondary alcohol group (-CH(OH)-) in the reactant O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1 is oxidized to a ketone group (-C(=O)-). The carbon atom of the alcohol is converted to a carbonyl carbon, and the hydroxyl group (-OH) is converted to a hydrogen atom (-H). The rest of the molecule remains unchanged.\n{\"Major Product\": O=C(C1CCC(=O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "O=C1CCC(C(=O)N2CCC(F)C2)n2c1nn(Cc1ccc(C(F)(F)F)nc1)c2=O"
+            ],
+            "gold_canonical": [
+                "O=C1CCC(C(=O)N2CCC(F)C2)n2c1nn(Cc1ccc(C(F)(F)F)nc1)c2=O"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_62",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCC(C)(C)C(=O)O (4-methylpentanoic acid). Reactant 2: CNOC (methoxymethanol, CH3OCH2OH). Reagents: Cl (likely HCl, hydrochloric acid), CCN=C=NCCCN(C)C (Diisopropyl azodicarboxylate, DIAD), CN1CCOCC1 (1-methylpiperazin-4-amine, a secondary amine), On1nnc2ccccc21 (a substituted pyrrolo[2,3-d]pyrimidine, likely a tertiary amine or a base). ClCCl (1,2-dichloroethane, solvent).\nStep 2: Identify Functional Groups: Reactant 1 (4-methylpentanoic acid): Cont"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCC(C)(C)C(=O)O (4-methylpentanoic acid). Reactant 2: CNOC (methoxymethanol, CH3OCH2OH). Reagents: Cl (likely HCl, hydrochloric acid), CCN=C=NCCCN(C)C (Diisopropyl azodicarboxylate, DIAD), CN1CCOCC1 (1-methylpiperazin-4-amine, a secondary amine), On1nnc2ccccc21 (a substituted pyrrolo[2,3-d]pyrimidine, likely a tertiary amine or a base). ClCCl (1,2-dichloroethane, solvent).\nStep 2: Identify Functional Groups: Reactant 1 (4-methylpentanoic acid): Contains a carboxylic acid group (-COOH) and a methyl group (-CH3) on a carbon chain. Reactant 2 (methoxymethanol): Contains a primary alcohol group (-OH) and a methoxy group (-OCH3). Reagents: HCl (strong acid), DIAD (azodicarboxylate), 1-methylpiperazin-4-amine (secondary amine), substituted pyrrolo[2,3-d]pyrimidine (tertiary amine or base).\nStep 3: Predict Reaction Type: Mitsunobu reaction. This reaction typically involves an alcohol, an acid (like HCl), an azodicarboxylate (like DIAD), and a nucleophile (like a secondary or tertiary amine). The alcohol is activated by the acid and the azodicarboxylate, then attacked by the nucleophile.\nStep 4: Construct Product Structure: The reaction involves the conversion of the primary alcohol (-OH) of methoxymethanol (CH3OCH2OH) to a tertiary alcohol. The carboxylic acid group of 4-methylpentanoic acid is expected to remain unchanged under typical Mitsunobu conditions. The methoxymethanol will react with the 1-methylpiperazin-4-amine (or the substituted pyrrolo[2,3-d]pyrimidine, which acts as the nucleophile) to form a tertiary alcohol. The product will be 4-methylpentanoic acid esterified with the resulting tertiary alcohol.\nStep 5: Validate Reagents Conditions: The presence of HCl (acid), DIAD (azodicarboxylate), and a secondary amine (1-methylpiperazin-4-amine) is consistent with a Mitsunobu reaction. The reaction conditions are suitable for converting the primary alcohol of methoxymethanol to a tertiary alcohol, which will then react with the carboxylic acid of 4-methylpentanoic acid.\n{\"Major Product\": CCCC(C)(C)C(=O)OCCOC1CCNCC1, \"Byproduct(s)\": CN1CCOCC1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCC(C)(C)C(=O)N(C)OC"
+            ],
+            "gold_canonical": [
+                "CCCC(C)(C)C(=O)N(C)OC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_63",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COc1cccc([N+](=O)[O-])c1C (4-methoxy-3-nitrobenzyl alcohol). Reactant 2: O=C1CCC(=O)N1Br (N-Bromosuccinimide, NBS). Reagent: CC(C)(C)OO (tert-butanol).\nStep 2: Identify Functional Groups: Reactant 1: Primary alcohol (-CH2OH), methoxy group (-OCH3), nitro group (-NO2). Reactant 2: N-Br bond (source of electrophilic bromine, Br+). Reagent: Tertiary alcohol (-OH).\nStep 3: Predict Reaction Type: Electrophilic Aromatic Substitution (EAS). The primary alco"
+            ],
+            "pred_smiles": [
+                "COc1cccc([N+](=O)[O-])c1CBr"
+            ],
+            "pred_canonical": [
+                "COc1cccc([N+](=O)[O-])c1CBr"
+            ],
+            "gold": [
+                "COc1cccc([N+](=O)[O-])c1CBr"
+            ],
+            "gold_canonical": [
+                "COc1cccc([N+](=O)[O-])c1CBr"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_64",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: O=C(Cl)OCc1ccccc1 (4-(benzyloxy)benzoyl chloride). Reactant 2: OCC1Cc2ccccc2CN1 (a substituted pyrrolidine, specifically 1-(benzyl)pyrrolidin-3-ol). Reagents: Not specified.\nStep 2: Identify Functional Groups: Reactant 1: Acyl chloride (-COCl), phenol (-OH). Reactant 2: Primary alcohol (-OH), tertiary amine (pyrrolidine nitrogen).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The primary alcohol of the pyrrolidine derivative acts as "
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: O=C(Cl)OCc1ccccc1 (4-(benzyloxy)benzoyl chloride). Reactant 2: OCC1Cc2ccccc2CN1 (a substituted pyrrolidine, specifically 1-(benzyl)pyrrolidin-3-ol). Reagents: Not specified.\nStep 2: Identify Functional Groups: Reactant 1: Acyl chloride (-COCl), phenol (-OH). Reactant 2: Primary alcohol (-OH), tertiary amine (pyrrolidine nitrogen).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The primary alcohol of the pyrrolidine derivative acts as a nucleophile, attacking the electrophilic carbonyl carbon of the acyl chloride. This leads to the formation of an ester.\nStep 4: Construct Product Structure: The hydroxyl group of the primary alcohol (OCC1Cc2ccccc2CN1) is replaced by the 4-(benzyloxy)benzoyl group (O=C(Cl)OCc1ccccc1). The hydrogen atom of the alcohol's hydroxyl group and the chlorine atom of the acyl chloride's hydroxyl group are eliminated (formally as HCl). The resulting product is 1-(4-(benzyloxy)benzoyl)-3-(benzyl)pyrrolidin-3-ol.\n{\"Major Product\": OCC1Cc2ccccc2C(=O)OCc3ccccc3CN1, \"Byproduct(s)\": Cl}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "O=C(OCc1ccccc1)N1Cc2ccccc2CC1CO"
+            ],
+            "gold_canonical": [
+                "O=C(OCc1ccccc1)N1Cc2ccccc2CC1CO"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_65",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CON(C)C(=O)Cc1ccc(Cl)cc1Cl (N-(4,4-dichlorobenzyl)-N-methoxy-N-methylamine). Reagent 1: C[Mg]Br (methylmagnesium bromide).\nStep 2: Identify Functional Groups: Reactant 1: Primary amine (-NH2), N-methoxy-N-methylamino group (-N(OCH3)CH3), aromatic ring, dichlorobenzyl group. Reagent 1: Grignard reagent (organometallic, source of nucleophilic methyl group).\nStep 3: Predict Reaction Type: Nucleophilic addition of the Grignard reagent to the primary amin"
+            ],
+            "pred_smiles": [
+                "CNC(=O)N(C)Cc1ccc(Cl)cc1Cl"
+            ],
+            "pred_canonical": [
+                "CNC(=O)N(C)Cc1ccc(Cl)cc1Cl"
+            ],
+            "gold": [
+                "CC(=O)Cc1ccc(Cl)cc1Cl"
+            ],
+            "gold_canonical": [
+                "CC(=O)Cc1ccc(Cl)cc1Cl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.5652173913043478
+            ],
+            "maccs_similarity": [
+                0.3888888888888889
+            ],
+            "rdk_similarity": [
+                0.3192488262910798
+            ],
+            "levenshtein": [
+                5
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_66",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1 (a methyl ester with a tert-butyl group, a bromomethyl group, and a 2,4,6-trichlorophenyl group). Reactant 2: CC(=O)N(C)C1CCNCC1 (N-methyl-N-(piperidin-4-yl)glycine, an amine with a piperidine ring). Reagents: Not specified.\nStep 2: Identify Functional Groups: Reactant 1: Methyl ester (-COOCH3), tert-butyl group (-C(CH3)3), bromomethyl group (-CH2Br), 2,4,6-trichlorophenyl group. Reactant 2: Primary amine (-NH2), pip"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1 (a methyl ester with a tert-butyl group, a bromomethyl group, and a 2,4,6-trichlorophenyl group). Reactant 2: CC(=O)N(C)C1CCNCC1 (N-methyl-N-(piperidin-4-yl)glycine, an amine with a piperidine ring). Reagents: Not specified.\nStep 2: Identify Functional Groups: Reactant 1: Methyl ester (-COOCH3), tert-butyl group (-C(CH3)3), bromomethyl group (-CH2Br), 2,4,6-trichlorophenyl group. Reactant 2: Primary amine (-NH2), piperidine ring (cyclic secondary amine).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The primary amine of N-methyl-N-(piperidin-4-yl)glycine acts as a nucleophile, attacking the electrophilic carbonyl carbon of the methyl ester. The methyl group (-CH3) is a good leaving group. This reaction forms a new amide bond.\nStep 4: Construct Product Structure: The methyl group of the methyl ester (COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1) is replaced by the piperidin-4-ylamino group (-NH-C1CCNCC1) from N-methyl-N-(piperidin-4-yl)glycine. The core structure of the ester, including the tert-butyl group, bromomethyl group, and 2,4,6-trichlorophenyl group, remains unchanged. The resulting product is N-(2,4,6-trichlorophenyl)-N-(tert-butyl)-N'-(4-(piperidin-1-yl)butyl)glycine.\n{\"Major Product\": COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1NC(=O)N(C)C1CCNCC1, \"Byproduct(s)\": COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COC(=O)C(C)(CCN1CCC(N(C)C(C)=O)CC1)c1ccc(Cl)c(Cl)c1"
+            ],
+            "gold_canonical": [
+                "COC(=O)C(C)(CCN1CCC(N(C)C(C)=O)CC1)c1ccc(Cl)c(Cl)c1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_67",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1=O (a molecule containing a methyl ester, a piperidine ring, and a substituted quinone moiety). Reactant 2: C1CNC1 (pyrrolidine, a secondary amine). Reagent: CC(=O)O[BH-](OC(C)=O)OC(C)=O (sodium triacetoxyborohydride, a selective reducing agent).\nStep 2: Identify Functional Groups: Reactant 1: Methyl ester (-COOCH3), quinone (C=O groups within a benzene ring), tertiary amine (piperidine nitrogen), tertiary alcohol (on t"
+            ],
+            "pred_smiles": [
+                "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1CCO1"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1N1CCC1"
+            ],
+            "gold_canonical": [
+                "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1N1CCC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_68",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COc1cccc2c1Sc1ccccc1CC2 (a substituted phenol). Reagent 1: O (Water). Reagent 2: Cl (Hydrogen chloride, HCl). Reagent 3: c1ccncc1 (Pyridine).\nStep 2: Identify Functional Groups: Reactant 1 (COc1cccc2c1Sc1ccccc1CC2) contains a phenolic hydroxyl group (-OH), a thioether group (-S-), and aromatic rings. Reagent 1 (O) is water. Reagent 2 (Cl) is hydrogen chloride. Reagent 3 (c1ccncc1) is pyridine.\nStep 3: Predict Reaction Type: The reaction is predicted "
+            ],
+            "pred_smiles": [
+                "COc1cccc2c1Sc1ccccc1CC2Cl"
+            ],
+            "pred_canonical": [
+                "COc1cccc2c1Sc1ccccc1CC2Cl"
+            ],
+            "gold": [
+                "Oc1cccc2c1Sc1ccccc1CC2"
+            ],
+            "gold_canonical": [
+                "Oc1cccc2c1Sc1ccccc1CC2"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.47761194029850745
+            ],
+            "maccs_similarity": [
+                0.6451612903225806
+            ],
+            "rdk_similarity": [
+                0.6532951289398281
+            ],
+            "levenshtein": [
+                3
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_69",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C (Bis(pinacolato)diboron, B2pin2). Reactant 2: COc1ncnc(OC)c1I (2-iodo-4-methoxypyrimidine). Reagent 1: C1=CC([Fe]C2(P(c3ccccc3)c3ccccc3)C=CC=C2)(P(c2ccccc2)c2ccccc2)C=C1 (Tetrakis(triphenylphosphine)palladium(0), Pd(PPh3)4). Reagent 2: C1COCCO1 (1,3-dimethoxypropane, DMMP). Reagent 3: CC(=O)O[K] (Potassium acetate, KAc). Reagent 4: Cl[Pd]Cl (Palladium(II) chloride, PdCl2).\nStep 2: Identify Functional Groups: React"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C (Bis(pinacolato)diboron, B2pin2). Reactant 2: COc1ncnc(OC)c1I (2-iodo-4-methoxypyrimidine). Reagent 1: C1=CC([Fe]C2(P(c3ccccc3)c3ccccc3)C=CC=C2)(P(c2ccccc2)c2ccccc2)C=C1 (Tetrakis(triphenylphosphine)palladium(0), Pd(PPh3)4). Reagent 2: C1COCCO1 (1,3-dimethoxypropane, DMMP). Reagent 3: CC(=O)O[K] (Potassium acetate, KAc). Reagent 4: Cl[Pd]Cl (Palladium(II) chloride, PdCl2).\nStep 2: Identify Functional Groups: Reactant 1 (B2pin2): Contains two pinacolato boronate ester groups (-Bpin), which are reactive sites for transmetalation. Reactant 2 (2-iodo-4-methoxypyrimidine): Contains an aryl iodide (Ar-I) group, which is the electrophilic center for oxidative addition. It also contains a methoxy group (-OCH3) and a pyrimidine ring. Reagent 1 (Pd(PPh3)4): Palladium(0) complex, a common catalyst for cross-coupling reactions. Reagent 2 (DMMP): Trialkyl phosphonium salt, a ligand for palladium catalysts. Reagent 3 (KAc): Acetate salt, a base. Reagent 4 (PdCl2): Palladium(II) chloride, a precursor to the active Pd(0) catalyst.\nStep 3: Predict Reaction Type: Miyaura Borylation. This is a palladium-catalyzed cross-coupling reaction where an aryl halide (in this case, an aryl iodide) reacts with a diboron reagent (B2pin2) to form an aryl boronate ester. The reaction proceeds via oxidative addition of the Pd(0) catalyst to the C-I bond, followed by transmetalation with B2pin2, and finally reductive elimination.\nStep 4: Construct Product Structure: The iodine atom on the 2-iodo-4-methoxypyrimidine (COc1ncnc(OC)c1I) is replaced by a pinacolboronate group (-Bpin). The pinacolboronate group is -B1OC(C)(C)C(C)(C)O1. The methoxy group (-OCH3) and the pyrimidine ring remain unchanged. The product is 2-(4-methoxypyrimidin-2-yl)pinacolborane.\n{\"Major Product\": COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+            ],
+            "gold_canonical": [
+                "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_70",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(O)C1CCNC1 (tert-butyl 4-aminopiperidine-1-carboxylate). Reactant 2: CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CO)cc32)CC1 (a complex molecule containing a primary alcohol, a Boc-protected amine, and a piperidine ring with a secondary amine). Reagent: O=S(Cl)Cl (Thionyl chloride).\nStep 2: Identify Functional Groups: Reactant 1: Primary amine (-NH2), tert-butyl ester (-C(=O)OC(C)(C)C). Reactant 2: Primary alcohol (-CH2OH), Boc-protected a"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(O)C1CCNC1 (tert-butyl 4-aminopiperidine-1-carboxylate). Reactant 2: CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CO)cc32)CC1 (a complex molecule containing a primary alcohol, a Boc-protected amine, and a piperidine ring with a secondary amine). Reagent: O=S(Cl)Cl (Thionyl chloride).\nStep 2: Identify Functional Groups: Reactant 1: Primary amine (-NH2), tert-butyl ester (-C(=O)OC(C)(C)C). Reactant 2: Primary alcohol (-CH2OH), Boc-protected amine (-NHBoc), secondary amine (-NH-), piperidine ring. Reagent: Thionyl chloride (SOCl2).\nStep 3: Predict Reaction Type: The primary reaction is the conversion of the primary alcohol (-CH2OH) in Reactant 2 to a primary alkyl chloride (-CH2Cl) using thionyl chloride. This is a standard reaction for alcohol chlorination. Other functional groups (tert-butyl ester, Boc-protected amine, secondary amine, piperidine) are expected to be stable under these conditions.\nStep 4: Construct Product Structure: The primary alcohol group (-CH2OH) on the side chain of Reactant 2 is converted to a primary alkyl chloride (-CH2Cl). The rest of the molecule, including the Boc-protected amine, the secondary amine, the piperidine ring, and the tert-butyl ester, remains unchanged. The SMILES for the alcohol part of Reactant 2 is ...c(CO)cc32. The SMILES for the alkyl chloride part is ...c(CCl)cc32. The rest of the molecule is unchanged.\n{\"Major Product\": CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CCl)cc32)CC1, \"Byproduct(s)\": SO2.Cl2}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CN4CCC(C(C)(C)O)C4)cc32)CC1"
+            ],
+            "gold_canonical": [
+                "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CN4CCC(C(C)(C)O)C4)cc32)CC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_71",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Ic1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1 (a complex molecule containing a primary alcohol). Reactant 2: CC1(C)c2ccccc2Oc2c(B(O)O)cccc21 (a molecule containing a boronic ester). Reagents: c1ccc([Pd]([P](c2ccccc2)(c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)([P](c2ccccc2)(c2ccccc2)c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)cc1 (Palladium catalyst), Cc1ccccc1 (Benzene, solvent), O=C(O[K])O[K] (Potassium carbonate, base), CCO (Ethanol,"
+            ],
+            "pred_smiles": [
+                "Cc1ccccc1c1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1"
+            ],
+            "pred_canonical": [
+                "Cc1ccccc1-c1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1"
+            ],
+            "gold": [
+                "CC1(C)c2ccccc2Oc2c(-c3cc(-n4c5ccccc5c5ccccc54)cc4c3Oc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21"
+            ],
+            "gold_canonical": [
+                "CC1(C)c2ccccc2Oc2c(-c3cc(-n4c5ccccc5c5ccccc54)cc4c3Oc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7857142857142857
+            ],
+            "maccs_similarity": [
+                0.8717948717948718
+            ],
+            "rdk_similarity": [
+                0.8084008843036109
+            ],
+            "levenshtein": [
+                34
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_72",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)=O (propanal, an aldehyde). Reactant 2: COc1ccc(C=O)cc1 (4-methoxybenzaldehyde, an aldehyde). Reagent: O=[Zn] (zinc, a metal catalyst).\nStep 2: Identify Functional Groups: Reactant 1 (propanal): Aldehyde group (-CHO). Reactant 2 (4-methoxybenzaldehyde): Aldehyde group (-CHO), Methoxy group (-OCH3). Reagent (Zinc): Metal catalyst.\nStep 3: Predict Reaction Type: The reaction is a condensation between two aldehydes, catalyzed by zinc. This is a Vil"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)=O (propanal, an aldehyde). Reactant 2: COc1ccc(C=O)cc1 (4-methoxybenzaldehyde, an aldehyde). Reagent: O=[Zn] (zinc, a metal catalyst).\nStep 2: Identify Functional Groups: Reactant 1 (propanal): Aldehyde group (-CHO). Reactant 2 (4-methoxybenzaldehyde): Aldehyde group (-CHO), Methoxy group (-OCH3). Reagent (Zinc): Metal catalyst.\nStep 3: Predict Reaction Type: The reaction is a condensation between two aldehydes, catalyzed by zinc. This is a Vilsmeier-Haack reaction variant, where the aldehydes react to form a cyclic iminium ion intermediate, which then undergoes intramolecular cyclization and dehydration to form a cyclohexene derivative. This specific reaction type often leads to the formation of a substituted cyclohexene, typically a cyclohexenone, depending on the reactants' substituents.\nStep 4: Construct Product Structure: The aldehyde groups of propanal (CH3-CH2-CHO) and 4-methoxybenzaldehyde (Ar-CHO) react. The carbonyl carbons of both aldehydes form a new carbon-carbon bond, creating a six-membered ring. The propanal's carbonyl oxygen attacks the 4-methoxybenzaldehyde's carbonyl carbon, and the resulting intermediate collapses. The propanal's CH3-CH2-CH2- group becomes part of the ring, and the 4-methoxybenzaldehyde's Ar-CH2- group becomes part of the ring. The resulting structure is 1-(4-methoxyphenyl)-1-(propan-2-yl) cyclohex-1-ene. The SMILES for this product is COc1ccc(C=Cc2ccccc2)cc1.\n{\"Major Product\": COc1ccc(C=Cc2ccccc2)cc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COc1ccc(C=CC(C)=O)cc1"
+            ],
+            "gold_canonical": [
+                "COc1ccc(C=CC(C)=O)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_73",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Nc1c(C(=O)O)ccc(Br)c1F (4-amino-3-bromofluorobenzoyl chloride). Reactant 2: O=C1CCC(=O)N1Cl (N-(4-chlorophenyl)glycine). Reagent: CN(C)C=O (Diisopropylethylamine, DIPEA).\nStep 2: Identify Functional Groups: Reactant 1: Amino group (-NH2), Carboxylic acid (-COOH), Fluorine atom (F), Bromine atom (Br). Reactant 2: Primary amine (-NH2), Carboxylic acid (-COOH), Chlorine atom (Cl). Reagent: DIPEA (a non-nucleophilic base).\nStep 3: Predict Reaction Type: "
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Nc1c(C(=O)O)ccc(Br)c1F (4-amino-3-bromofluorobenzoyl chloride). Reactant 2: O=C1CCC(=O)N1Cl (N-(4-chlorophenyl)glycine). Reagent: CN(C)C=O (Diisopropylethylamine, DIPEA).\nStep 2: Identify Functional Groups: Reactant 1: Amino group (-NH2), Carboxylic acid (-COOH), Fluorine atom (F), Bromine atom (Br). Reactant 2: Primary amine (-NH2), Carboxylic acid (-COOH), Chlorine atom (Cl). Reagent: DIPEA (a non-nucleophilic base).\nStep 3: Predict Reaction Type: Nucleophilic Aromatic Substitution (SNAr). The amino group of N-(4-chlorophenyl)glycine acts as a nucleophile, attacking the electrophilic carbon of the 4-amino-3-bromofluorobenzoyl chloride. The chlorine atom on the phenyl ring of N-(4-chlorophenyl)glycine is a good leaving group. The fluorine atom on the benzoyl chloride is a good leaving group. DIPEA is used to neutralize the HCl byproduct.\nStep 4: Construct Product Structure: The amino group (-NH2) from N-(4-chlorophenyl)glycine replaces the chlorine atom on the 4-amino-3-bromofluorobenzoyl chloride. The fluorine atom on the benzoyl chloride remains. The resulting product is N-(4-chlorophenyl)-N-(4-amino-3-bromofluorobenzoyl)glycine.\n{\"Major Product\": O=C(Nc1c(C(=O)O)ccc(Br)c1F)N1CCl, \"Byproduct(s)\": Cl}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "Nc1c(C(=O)O)cc(Cl)c(Br)c1F"
+            ],
+            "gold_canonical": [
+                "Nc1c(C(=O)O)cc(Cl)c(Br)c1F"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_74",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCC1 (a complex molecule containing a primary alcohol, a methyl ester, a pyridine ring, a chloro-substituted pyridine, and a 1,3,4-thiadiazole moiety). Reagent: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21 (Dess-Martin Periodinane, an oxidizing agent).\nStep 2: Identify Functional Groups: Reactant 1 contains a primary alcohol (-CH2OH) group, which is the most reactive site for oxidation by Dess-Martin Period"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCC1 (a complex molecule containing a primary alcohol, a methyl ester, a pyridine ring, a chloro-substituted pyridine, and a 1,3,4-thiadiazole moiety). Reagent: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21 (Dess-Martin Periodinane, an oxidizing agent).\nStep 2: Identify Functional Groups: Reactant 1 contains a primary alcohol (-CH2OH) group, which is the most reactive site for oxidation by Dess-Martin Periodinane. Other groups include a methyl ester (-COOCH3), aromatic rings (pyridine, thiadiazole), and a chloro-substituent on a pyridine ring. The reagent, Dess-Martin Periodinane, is a hypervalent iodine compound used for the selective oxidation of primary alcohols to aldehydes and secondary alcohols to ketones.\nStep 3: Predict Reaction Type: Oxidation of a primary alcohol to an aldehyde. Dess-Martin Periodinane is a mild and selective reagent for this transformation.\nStep 4: Construct Product Structure: The primary alcohol group (-CH2OH) in the reactant COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCC1 is oxidized to an aldehyde group (-CHO). The rest of the molecule remains unchanged. The fragment CCO (representing -CH2OH) becomes C=O (representing -CHO).\n{\"Major Product\": COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(C=O)c2c1OC1CCCC1, \"Byproduct(s)\": O=Cc1ccccc1OC(=O)OC(C)=O}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CC=O)c2c1OC1CCCC1"
+            ],
+            "gold_canonical": [
+                "COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CC=O)c2c1OC1CCCC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_75",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Fc1ccc(Br)cc1 (4-bromophenylboronic acid). Reagent: [Mg] (Methylmagnesium iodide).\nStep 2: Identify Functional Groups: Reactant 1: Aryl bromide (-Br attached to an aromatic ring), boronic acid (-B(OR)2). Reagent: Grignard reagent (organometallic, source of nucleophilic methyl group).\nStep 3: Predict Reaction Type: Grignard reaction. The nucleophilic methyl group from methylmagnesium iodide will attack the electrophilic carbon of the aryl bromide. Thi"
+            ],
+            "pred_smiles": [
+                "COC(=O)C(C)Cc1ccc(Bc2ccccc2)cc1"
+            ],
+            "pred_canonical": [
+                "COC(=O)C(C)Cc1ccc(Bc2ccccc2)cc1"
+            ],
+            "gold": [
+                "Fc1ccc([Mg]Br)cc1"
+            ],
+            "gold_canonical": [
+                "Fc1cc[c]([Mg][Br])cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.1388888888888889
+            ],
+            "maccs_similarity": [
+                0.14814814814814814
+            ],
+            "rdk_similarity": [
+                0.06301369863013699
+            ],
+            "levenshtein": [
+                23
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_76",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12 (a complex molecule containing a ketone, a tertiary amine, a pyrimidine ring, and a substituted benzene ring). Reagent: [BH4-] (borohydride anion, a reducing agent).\nStep 2: Identify Functional Groups: Reactant 1 contains a ketone group (C=O) within the side chain -CH2C(=O)CH3. Other functional groups include a tertiary amine, a pyrimidine ring, and a substituted benzene ring. The "
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12 (a complex molecule containing a ketone, a tertiary amine, a pyrimidine ring, and a substituted benzene ring). Reagent: [BH4-] (borohydride anion, a reducing agent).\nStep 2: Identify Functional Groups: Reactant 1 contains a ketone group (C=O) within the side chain -CH2C(=O)CH3. Other functional groups include a tertiary amine, a pyrimidine ring, and a substituted benzene ring. The reagent [BH4-] is a source of hydride ions (H-), which are the active species for reduction.\nStep 3: Predict Reaction Type: Reduction of a ketone to a secondary alcohol. Borohydride ([BH4-]) is a common and selective reagent for this transformation.\nStep 4: Construct Product Structure: The ketone group C=O in the side chain -CH2C(=O)CH3 will be reduced to a secondary alcohol group CH-OH. The rest of the molecule, including the tertiary amine, the pyrimidine ring, and the substituted benzene ring, is expected to remain unchanged under typical conditions for ketone reduction with borohydride.\n{\"Major Product\": COC(O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "Cn1c(=O)c2c(-c3ccccc3)[nH]c(C(c3nc(Cl)cs3)C(C)(C)CO)c2n(C)c1=O"
+            ],
+            "gold_canonical": [
+                "Cn1c(=O)c2c(-c3ccccc3)[nH]c(C(c3nc(Cl)cs3)C(C)(C)CO)c2n(C)c1=O"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_77",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C (a complex molecule containing a Boc-protected alcohol, a phenol, and a carboxylic acid). Reactant 2: NNC(=O)OCc1ccccc1 (N,N-Dimethyl-4-(phenylsulfonyl)benzamide, a sulfonyl chloride). Reagents: CCN=C=NCCCN(C)C (Diisopropyl azodicarboxylate, DIAD), On1nnc2ccccc21 (1,3,5-tris(2-methoxyethoxy)benzene, a base), CCN(C(C)C)C(C)C (N,N-Diisopropylethylamine, DIPEA), CN(C)C=O (2-Aminoethanol, an amine).\nStep 2"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C (a complex molecule containing a Boc-protected alcohol, a phenol, and a carboxylic acid). Reactant 2: NNC(=O)OCc1ccccc1 (N,N-Dimethyl-4-(phenylsulfonyl)benzamide, a sulfonyl chloride). Reagents: CCN=C=NCCCN(C)C (Diisopropyl azodicarboxylate, DIAD), On1nnc2ccccc21 (1,3,5-tris(2-methoxyethoxy)benzene, a base), CCN(C(C)C)C(C)C (N,N-Diisopropylethylamine, DIPEA), CN(C)C=O (2-Aminoethanol, an amine).\nStep 2: Identify Functional Groups: Reactant 1: Boc-protected alcohol (-CH2CH2CH2CH2OC(=O)O-), phenol (-OH), carboxylic acid (-COOH). Reactant 2: Sulfonyl chloride (-SO2Cl). Reagents: DIAD (azodicarboxylate), base (1,3,5-tris(2-methoxyethoxy)benzene), DIPEA (amine base), 2-Aminoethanol (amine).\nStep 3: Predict Reaction Type: Mitsunobu reaction. This reaction typically involves an alcohol, an electrophile (here, the sulfonyl chloride), an azodicarboxylate (DIAD), a base (1,3,5-tris(2-methoxyethoxy)benzene), and an amine (2-Aminoethanol). The alcohol is activated by the azodicarboxylate and base, and then attacks the sulfonyl chloride.\nStep 4: Construct Product Structure: The Boc-protected alcohol group (-CH2CH2CH2CH2OC(=O)O-) in Reactant 1 will react with the sulfonyl chloride group (-SO2Cl) in Reactant 2. The chlorine atom of the sulfonyl chloride is replaced by the Boc-protected alcohol group. The phenol and carboxylic acid groups are expected to remain unchanged under typical Mitsunobu conditions. The product formed is N,N-Dimethyl-4-(Boc-protected alcohol sulfonyl)benzamide.\n{\"Major Product\": CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C.SN(C)(=O)OCc1ccccc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(C)(C)OC(=O)COc1ccc(C(=O)NNC(=O)OCc2ccccc2)cc1OCC(=O)OC(C)(C)C"
+            ],
+            "gold_canonical": [
+                "CC(C)(C)OC(=O)COc1ccc(C(=O)NNC(=O)OCc2ccccc2)cc1OCC(=O)OC(C)(C)C"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_78",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCSC(SCCC)=C(C#N)C#N (2-(propylthio)-3,3-dimethyl-1,3-butanedione, also known as 2-(propylthio)-3,3-dimethylbutane-1,3-dione). Reactant 2: C1CCNC1 (piperidine-1-carbaldehyde). Reagent 1: CCCSC(=C(C#N)C#N)N1CCOCC1 (N-(2-(propylthio)-3,3-dimethyl-1,3-butanedionyl)-N-methylpiperazine). Reagent 2: CCO (ethanol).\nStep 2: Identify Functional Groups: Reactant 1: Ketone (C=O), C=N double bond (part of a cyclopropyl group), C#N (alkynyl group). Reactant 2: A"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCSC(SCCC)=C(C#N)C#N (2-(propylthio)-3,3-dimethyl-1,3-butanedione, also known as 2-(propylthio)-3,3-dimethylbutane-1,3-dione). Reactant 2: C1CCNC1 (piperidine-1-carbaldehyde). Reagent 1: CCCSC(=C(C#N)C#N)N1CCOCC1 (N-(2-(propylthio)-3,3-dimethyl-1,3-butanedionyl)-N-methylpiperazine). Reagent 2: CCO (ethanol).\nStep 2: Identify Functional Groups: Reactant 1: Ketone (C=O), C=N double bond (part of a cyclopropyl group), C#N (alkynyl group). Reactant 2: Aldehyde (C=O). Reagent 1: Ketone (C=O), C=N double bond (part of a piperazine ring), C#N (alkynyl group). Reagent 2: Primary alcohol (-OH).\nStep 3: Predict Reaction Type: The reaction is predicted to be a nucleophilic addition of the aldehyde (C1CCNC1) to the ketone (CCCSC(SCCC)=C(C#N)C#N). This is a condensation reaction leading to a hemiacetal intermediate, which can then dehydrate to form a tertiary alcohol. The presence of ethanol (CCO) as a reagent suggests it may act as a solvent or participate in the reaction, possibly as a nucleophile or by proton transfer, but its primary role is not explicitly clear without further context. The piperazine and its alkynyl derivative are likely spectator molecules under these conditions.\nStep 4: Construct Product Structure: The aldehyde group (C=O) of piperidine-1-carbaldehyde (C1CCNC1) attacks the electrophilic carbonyl carbon of the ketone (CCCSC(SCCC)=C(C#N)C#N). The oxygen of the aldehyde forms a new C-O bond with the ketone's carbonyl carbon. The hydrogen from the aldehyde's carbonyl oxygen is lost. The resulting structure is a tertiary alcohol: CCCSC(SCCC)=C(C#N)C#N-C(=O)-C1CCNC1. The SMILES string for this product is CCCSC(SCCC)=C(C#N)C#N-C(=O)C1CCNC1.\n{\"Major Product\": CCCSC(SCCC)=C(C#N)C#N-C(=O)C1CCNC1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCSC(=C(C#N)C#N)N1CCCC1"
+            ],
+            "gold_canonical": [
+                "CCCSC(=C(C#N)C#N)N1CCCC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_79",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)CC(O)(CCCC(C)(C)O)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4 (a complex molecule containing a primary alcohol). Reagent 1: O=S(Cl)Cl (Thionyl chloride).\nStep 2: Identify Functional Groups: Reactant 1: Primary alcohol (-CH2OH), ester (-C(=O)O-), ether (-COC-), tertiary amine (piperidine nitrogen), aromatic rings. Reagent 1: Thionyl chloride (SOCl2), a chlorinating agent.\nStep 3: Predict Reaction Type: Chlorination of the primary alcohol. Thion"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COC(=O)CC(O)(CCCC(C)(C)O)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4 (a complex molecule containing a primary alcohol). Reagent 1: O=S(Cl)Cl (Thionyl chloride).\nStep 2: Identify Functional Groups: Reactant 1: Primary alcohol (-CH2OH), ester (-C(=O)O-), ether (-COC-), tertiary amine (piperidine nitrogen), aromatic rings. Reagent 1: Thionyl chloride (SOCl2), a chlorinating agent.\nStep 3: Predict Reaction Type: Chlorination of the primary alcohol. Thionyl chloride (SOCl2) reacts with alcohols to form alkyl chlorides. The reaction typically proceeds via an alkyl chloride intermediate (R-O-Cl) and gaseous byproducts (SO2 and HCl).\nStep 4: Construct Product Structure: The primary alcohol group (-CH2OH) on the side chain CCCCC(C)(C)O is converted to a primary alkyl chloride (-CH2Cl). The rest of the molecule remains unchanged. The fragment CCCCC(C)(C)O becomes CCCCC(C)(C)Cl.\n{\"Major Product\": COC(=O)CC(O)(CCCC(C)(C)Cl)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4, \"Byproduct(s)\": Cl2O.S}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COC(=O)CC(O)(CCCC(C)(C)Cl)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4"
+            ],
+            "gold_canonical": [
+                "COC(=O)CC(O)(CCCC(C)(C)Cl)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_80",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)N1CCC(C=O)C1 (tert-butyl (1-((tert-butoxycarbonyl)amino)cyclohexyl)carboxylate). Reagent 1: C[Mg]I (methylmagnesium iodide). Reagent 2: C1CCOC1 (tetrahydrofuran, THF). Reagent 3: [C-]#[O+]. This is interpreted as a base, likely hydroxide (e.g., NaOH or KOH), which is common for deprotonation steps.\nStep 2: Identify Functional Groups: Reactant 1: Tert-butyl ester (-C(=O)OC(C)(C)C), tert-butyl amine (-NHC(=O)OC(C)(C)C), cyclohexyl group. "
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)N1CCC(C=O)C1 (tert-butyl (1-((tert-butoxycarbonyl)amino)cyclohexyl)carboxylate). Reagent 1: C[Mg]I (methylmagnesium iodide). Reagent 2: C1CCOC1 (tetrahydrofuran, THF). Reagent 3: [C-]#[O+]. This is interpreted as a base, likely hydroxide (e.g., NaOH or KOH), which is common for deprotonation steps.\nStep 2: Identify Functional Groups: Reactant 1: Tert-butyl ester (-C(=O)OC(C)(C)C), tert-butyl amine (-NHC(=O)OC(C)(C)C), cyclohexyl group. Reagent 1: Grignard reagent (C-MgI). Reagent 2: THF (cyclic ether). Reagent 3: Hydroxide-like species ([C-]#[O+]).\nStep 3: Predict Reaction Type: The reaction is a Grignard reaction. The methyl group from methylmagnesium iodide will act as a nucleophile, attacking the electrophilic carbonyl carbon of the tert-butyl ester. This leads to the formation of a tertiary alkoxide intermediate. Subsequent protonation (often workup step) yields a tertiary alcohol. The tert-butyl amine group is expected to be unreactive under these conditions.\nStep 4: Construct Product Structure: The methyl group from C[Mg]I replaces the -OC(=O)OC(C)(C)C group of the tert-butyl ester. The original ester is CC(C)(C)OC(=O)N1CCC(C=O)C1. The product is CH3OC(=O)N1CCC(C=O)C1. The SMILES for this product is CC(C)(C)OC(=O)N1CCC(C=O)C1, where the first 'C' is the new methyl group attached to the carbonyl.\n{\"Major Product\": CC(C)(C)OC(=O)N1CCC(C=O)C1, \"Byproduct(s)\": C[Mg]I}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(O)C1CCN(C(=O)OC(C)(C)C)C1"
+            ],
+            "gold_canonical": [
+                "CC(O)C1CCN(C(=O)OC(C)(C)C)C1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_81",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC (a complex molecule containing a primary alcohol, a secondary amine, a nitrile, and a phenol). Reactant 2: CO (methanol). Reagents: Nc1c(/N=N/c2ccc(-c3ccc(/N=N/c4cc(S(=O)(=O)O)c5ccccc5c4N)cc3)cc2)cc(S(=O)(=O)O)c2ccccc12 (a complex molecule containing a sulfonamide, a nitrile, and a sulfonyl group), CCOCC (tetrahydrofuran, THF), O[Na] (sodium hydroxide), Cl (chloride ion).\nStep 2: Identify Functional Groups: Reacta"
+            ],
+            "pred_smiles": [
+                "COCCOc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC"
+            ],
+            "pred_canonical": [
+                "COCCOc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC"
+            ],
+            "gold": [
+                "COC(=N)N1CCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1"
+            ],
+            "gold_canonical": [
+                "COC(=N)N1CCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.6
+            ],
+            "maccs_similarity": [
+                0.7777777777777778
+            ],
+            "rdk_similarity": [
+                0.845464725643897
+            ],
+            "levenshtein": [
+                30
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_82",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: [C-]#[N+]C1CCCCC1 (1-adamantyl nitrile). Reactant 2: CC(=O)Cl (acetyl chloride). Reactant 3: CC=O (acetic acid). Reactant 4: Nc1ncccn1 (pyridine). Reagent: O=Cl(=O)(=O)O (perchloric acid).\nStep 2: Identify Functional Groups: Reactant 1: Nitrile (-C≡N), adamantyl group. Reactant 2: Acyl chloride (-COCl). Reactant 3: Carboxylic acid (-COOH). Reactant 4: Pyridine ring (electron-rich aromatic heterocycle). Reagent: Perchloric acid (strong acid, dehydrati"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: [C-]#[N+]C1CCCCC1 (1-adamantyl nitrile). Reactant 2: CC(=O)Cl (acetyl chloride). Reactant 3: CC=O (acetic acid). Reactant 4: Nc1ncccn1 (pyridine). Reagent: O=Cl(=O)(=O)O (perchloric acid).\nStep 2: Identify Functional Groups: Reactant 1: Nitrile (-C≡N), adamantyl group. Reactant 2: Acyl chloride (-COCl). Reactant 3: Carboxylic acid (-COOH). Reactant 4: Pyridine ring (electron-rich aromatic heterocycle). Reagent: Perchloric acid (strong acid, dehydrating agent).\nStep 3: Predict Reaction Type: Nucleophilic acyl substitution. The nitrile group of 1-adamantyl nitrile is a potent nucleophile. It will attack the electrophilic carbonyl carbon of acetyl chloride. The reaction is facilitated by the strong acid (perchloric acid), which protonates the nitrile nitrogen, making it a better nucleophile, and activates the acyl chloride by protonating the carbonyl oxygen, making the carbonyl carbon more electrophilic. The pyridine and acetic acid are spectator molecules under these conditions.\nStep 4: Construct Product Structure: The nitrile group (-C≡N) of 1-adamantyl nitrile reacts with acetyl chloride (CH3C(=O)Cl) to form an acyl nitrile. The acetyl group (CH3C(=O)-) from acetyl chloride attaches to the carbon atom of the nitrile group. The nitrogen atom of the nitrile group remains bonded to the carbon atom. The adamantyl group and the pyridine group remain unchanged. The product is 1-adamantyl-3-acetyl-2,4,5,6-tetrahydropyridine-2-carbonitrile.\n{\"Major Product\": CC(=O)C1CCCCC1C(=N)[N-]C2CCN2}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "[Cl-]CC(=O)[n+]1c(C)c(NC2CCCCC2)n2cccnc21"
+            ],
+            "gold_canonical": [
+                null
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_83",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)Cl)ccc2N2CCCC2)cc2ccccc21 (a complex molecule containing a tert-butyl ester, a thieno[2,3-d]pyrimidine core, and a 1,3,4-thiadiazole moiety with a chlorosulfone group). Reactant 2: CNCCN1CCOCC1 (piperidine-4-amine). Reagent: ClCCl (chloroform).\nStep 2: Identify Functional Groups: Reactant 1: tert-butyl ester (-C(=O)OC(C)(C)C), thieno[2,3-d]pyrimidine heteroaromatic system, 1,3,4-thiadiazole heteroaromatic system, chlo"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)Cl)ccc2N2CCCC2)cc2ccccc21 (a complex molecule containing a tert-butyl ester, a thieno[2,3-d]pyrimidine core, and a 1,3,4-thiadiazole moiety with a chlorosulfone group). Reactant 2: CNCCN1CCOCC1 (piperidine-4-amine). Reagent: ClCCl (chloroform).\nStep 2: Identify Functional Groups: Reactant 1: tert-butyl ester (-C(=O)OC(C)(C)C), thieno[2,3-d]pyrimidine heteroaromatic system, 1,3,4-thiadiazole heteroaromatic system, chlorosulfone group (-S(=O)(=O)Cl). Reactant 2: Primary amine (-NH2). Reagent: Chloroform (CHCl3), a non-reactive solvent.\nStep 3: Predict Reaction Type: Nucleophilic Aromatic Substitution (SNAr). The primary amine of piperidine-4-amine (Reactant 2) acts as a nucleophile, attacking the electron-deficient carbon atom bearing the chlorosulfone group (-S(=O)(=O)Cl) on the 1,3,4-thiadiazole ring of Reactant 1. Chloride ion is the leaving group.\nStep 4: Construct Product Structure: The hydrogen atom of the primary amine in piperidine-4-amine replaces the chlorine atom of the chlorosulfone group on the 1,3,4-thiadiazole ring. The rest of the molecule remains unchanged. The chlorosulfone group S(=O)(=O)Cl becomes S(=O)(=O)N1CCNCC1, where N1 is the nitrogen atom of the piperidine ring.\n{\"Major Product\": CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)N1CCNCC1)ccc2N2CCCC2)cc2ccccc21, \"Byproduct(s)\": Cl}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CN(CCN1CCOCC1)S(=O)(=O)c1ccc(N2CCCC2)c(-c2cc3ccccc3n2C(=O)OC(C)(C)C)c1"
+            ],
+            "gold_canonical": [
+                "CN(CCN1CCOCC1)S(=O)(=O)c1ccc(N2CCCC2)c(-c2cc3ccccc3n2C(=O)OC(C)(C)C)c1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_84",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CN(C)c1ccc(C=Cc2ccc(S(=O)(=O)CCCO)cc2)cc1 (a molecule containing a primary amine, a methyl group, and a substituted phenyl ring with a terminal alkyne and a sulfonamide group). Reactant 2: O=S(=O)(CCCOC1CCCOC1)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1 (a molecule containing a sulfonamide group, a cyclopropyl group, and a substituted phenyl ring with a terminal alkyne and a furan group). Reagents: Not specified.\nStep 2: Identify Functional Groups: Reactant 1: Pri"
+            ],
+            "pred_smiles": [
+                "CN(C)c1ccc(C=Cc2ccc(S(=O)(=O)CCCO)cc2)cc1C#Cc1ccc2c(c1)OCCO2C(=O)N(CCCOC3CCCOC3)S(=O)(=O)O"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "O=S(=O)(CCCO)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+            ],
+            "gold_canonical": [
+                "O=S(=O)(CCCO)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_85",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCCCc1ccc(Br)cc1 (a substituted benzene ring with a methyl group and a bromine atom). Reactant 2: C#CC(C)(C)O (propargyl alcohol, a terminal alkyne with a primary alcohol). Reagents: Cl[Pd](Cl)([P](c1ccccc1)(c1ccccc1)c1ccccc1)[P](c1ccccc1)(c1ccccc1)c1ccccc1 (a palladium catalyst with phosphine ligands), c1ccc(P(c2ccccc2)c2ccccc2)cc1 (triphenylphosphine, a ligand), CCN(CC)CC (triethylamine, a base), [C-]#[O+] (hydroxylamine, a reagent for the Sonogas"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCCCc1ccc(Br)cc1 (a substituted benzene ring with a methyl group and a bromine atom). Reactant 2: C#CC(C)(C)O (propargyl alcohol, a terminal alkyne with a primary alcohol). Reagents: Cl[Pd](Cl)([P](c1ccccc1)(c1ccccc1)c1ccccc1)[P](c1ccccc1)(c1ccccc1)c1ccccc1 (a palladium catalyst with phosphine ligands), c1ccc(P(c2ccccc2)c2ccccc2)cc1 (triphenylphosphine, a ligand), CCN(CC)CC (triethylamine, a base), [C-]#[O+] (hydroxylamine, a reagent for the Sonogashira coupling), [Cu]I (copper(I) iodide, a co-catalyst).\nStep 2: Identify Functional Groups: Reactant 1: Aryl bromide (-Br on an aromatic ring), methyl group (-CH3). Reactant 2: Terminal alkyne (-C≡CH), primary alcohol (-OH). Reagents: Pd(0) catalyst, triphenylphosphine ligand, triethylamine base, hydroxylamine, Cu(I) co-catalyst.\nStep 3: Predict Reaction Type: Sonogashira coupling. This is a palladium- and copper-catalyzed cross-coupling reaction between a terminal alkyne and an aryl or vinyl halide/pseudohalide. The aryl bromide (Reactant 1) will react with the terminal alkyne (Reactant 2) to form a new carbon-carbon bond.\nStep 4: Construct Product Structure: The bromine atom on the phenyl ring of CCCCCc1ccc(Br)cc1 is replaced by the propargyl group (-C#CC(C)(C)O) from C#CC(C)(C)O. The methyl group on the phenyl ring remains unchanged. The product is CCCCCc1ccc(C#CC(C)(C)O)cc1.\n{\"Major Product\": CCCCCc1ccc(C#CC(C)(C)O)cc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+            ],
+            "gold_canonical": [
+                "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_86",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCO (Ethanol). Reactant 2: Cc1ccc2c(C(=O)O)cccc2n1 (4-methyl-1,2,3,4-tetrahydroisoquinoline-3-carboxylic acid). Reagent 1: O=S(=O)(O)O (Dess-Martin Periodinane, DMP).\nStep 2: Identify Functional Groups: Ethanol: Primary alcohol (-OH). 4-methyl-1,2,3,4-tetrahydroisoquinoline-3-carboxylic acid: Carboxylic acid (-COOH), methyl group (-CH3), aromatic ring. Dess-Martin Periodinane: Hypervalent iodine(V) reagent.\nStep 3: Predict Reaction Type: Oxidation of"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCO (Ethanol). Reactant 2: Cc1ccc2c(C(=O)O)cccc2n1 (4-methyl-1,2,3,4-tetrahydroisoquinoline-3-carboxylic acid). Reagent 1: O=S(=O)(O)O (Dess-Martin Periodinane, DMP).\nStep 2: Identify Functional Groups: Ethanol: Primary alcohol (-OH). 4-methyl-1,2,3,4-tetrahydroisoquinoline-3-carboxylic acid: Carboxylic acid (-COOH), methyl group (-CH3), aromatic ring. Dess-Martin Periodinane: Hypervalent iodine(V) reagent.\nStep 3: Predict Reaction Type: Oxidation of a primary alcohol to an aldehyde. Dess-Martin Periodinane is a mild and selective reagent for this transformation.\nStep 4: Construct Product Structure: Ethanol (CCO) is oxidized to acetaldehyde (CC=O). The carboxylic acid group on the tetrahydroisoquinoline derivative remains unchanged. The product formed is the acetaldehyde adduct with the carboxylic acid.\n{\"Major Product\": CC=O.Cc1ccc2c(C(=O)O)cccc2n1, \"Byproduct(s)\": O=S(=O)(O)I}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCOC(=O)c1cccc2nc(C)ccc12"
+            ],
+            "gold_canonical": [
+                "CCOC(=O)c1cccc2nc(C)ccc12"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_87",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12 (a methyl ester). Reagent 1: O (water). Reagent 2: O[Na] (sodium hydroxide). Reagent 3: C1COCCO1 (tetrahydrofuran, THF).\nStep 2: Identify Functional Groups: Reactant 1 contains a methyl ester group (-C(=O)OCH3) and a tertiary amine (piperidine nitrogen). Reagent 1 (water) is a nucleophile and a protic solvent. Reagent 2 (sodium hydroxide) is a strong base and a nucleophile. Reagent 3 (THF) is a non-nucl"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12 (a methyl ester). Reagent 1: O (water). Reagent 2: O[Na] (sodium hydroxide). Reagent 3: C1COCCO1 (tetrahydrofuran, THF).\nStep 2: Identify Functional Groups: Reactant 1 contains a methyl ester group (-C(=O)OCH3) and a tertiary amine (piperidine nitrogen). Reagent 1 (water) is a nucleophile and a protic solvent. Reagent 2 (sodium hydroxide) is a strong base and a nucleophile. Reagent 3 (THF) is a non-nucleophilic solvent.\nStep 3: Predict Reaction Type: The reaction is a base-catalyzed hydrolysis of the methyl ester, commonly known as saponification. The sodium hydroxide will deprotonate the ester, followed by nucleophilic attack of the hydroxide ion to cleave the C-O bond of the ester, forming a carboxylate salt and methanol. The piperidine nitrogen is expected to remain unchanged under these conditions.\nStep 4: Construct Product Structures: The methyl ester group (-C(=O)OCH3) is converted into a carboxylic acid group (-C(=O)OH). The rest of the molecule, including the tertiary amine and the complex aromatic system, remains intact. The product is the sodium salt of the carboxylic acid, which would typically be represented as the free acid in SMILES for simplicity, with the sodium ion as a counterion.\n{\"Major Product\": CCOC(=O)Oc1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12, \"Byproduct(s)\": C}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F"
+            ],
+            "gold_canonical": [
+                "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_88",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C (Bis(pinacolato)diboron, B2pin2). Reactant 2: Cc1cc(-c2ccccc2)nc2cc(Cl)ccc12 (a substituted pyridine derivative). Reagent 1: CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1 (a complex aryl halide). Reagent 2: CC(=O)O[Pd]OC(C)=O (Palladium(II) acetate, Pd(OAc)2). Reagent 3: CC(=O)O[K] (Potassium acetate, KAc). Reagent 4: C1CCOC1 (Tetrahydrofuran, THF). Reagent 5: [Cl-] (Chloride ion).\nStep 2: Identify Functional Gro"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C (Bis(pinacolato)diboron, B2pin2). Reactant 2: Cc1cc(-c2ccccc2)nc2cc(Cl)ccc12 (a substituted pyridine derivative). Reagent 1: CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1 (a complex aryl halide). Reagent 2: CC(=O)O[Pd]OC(C)=O (Palladium(II) acetate, Pd(OAc)2). Reagent 3: CC(=O)O[K] (Potassium acetate, KAc). Reagent 4: C1CCOC1 (Tetrahydrofuran, THF). Reagent 5: [Cl-] (Chloride ion).\nStep 2: Identify Functional Groups: Reactant 1 (B2pin2): Diboron reagent with two pinacolato ligands. Reactant 2 (Cc1cc(-c2ccccc2)nc2cc(Cl)ccc12): Contains a pyridine ring with a methyl group and a chloro substituent. The chloro group is a good leaving group. Reactant 3 (CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1): Contains an aryl chloride (-Cl) on a complex aromatic system. This is the primary reactive site for cross-coupling. Reagent 1 (Pd(OAc)2): Palladium(II) acetate, a common palladium catalyst precursor. Reagent 3 (KAc): Potassium acetate, a base. Reagent 4 (THF): Tetrahydrofuran, a common organic solvent. Reagent 5 ([Cl-]): Chloride ion, a halide.\nStep 3: Predict Reaction Type: Miyaura Borylation. This is a palladium-catalyzed cross-coupling reaction where an aryl halide (Reactant 3) reacts with a diboron reagent (B2pin2) to form an arylboronate ester. Potassium acetate serves as a base, and THF is the solvent.\nStep 4: Construct Product Structure: The reaction involves the replacement of the chlorine atom on the aryl group of Reactant 3 (CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1) with a pinacolboronate group (-B(pin)). The pinacolboronate group is -B1OC(C)(C)C(C)(C)O1. The rest of the molecule, including the palladium catalyst, base, and solvent, remains unchanged. The product is formed by attaching the pinacolboronate group to the carbon atom of Reactant 3 that was previously bonded to the chlorine atom.\n{\"Major Product\": CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1B1OC(C)(C)C(C)(C)O1, \"Byproduct(s)\": CC(=O)O[Pd]OC(C)=O.CC(=O)O[K].C1CCOC1.[Cl-]\"}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+            ],
+            "gold_canonical": [
+                "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_89",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O (a complex molecule containing a primary amine, a methyl ester, a carboxylic acid, and a pyridine ring). Reactant 2: CCCN (propan-1-amine). Reagents: CN(C)c1ccncc1 (morpholine), CCN(CC)CC (triethylamine), C1CCOC1 (tetrahydrofuran), N#N (azobisisobutyronitrile, AIBN).\nStep 2: Identify Functional Groups: Reactant 1: Primary amine (-NH2), methyl ester (-COOCH3), carboxylic acid (-COOH), pyridine rin"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O (a complex molecule containing a primary amine, a methyl ester, a carboxylic acid, and a pyridine ring). Reactant 2: CCCN (propan-1-amine). Reagents: CN(C)c1ccncc1 (morpholine), CCN(CC)CC (triethylamine), C1CCOC1 (tetrahydrofuran), N#N (azobisisobutyronitrile, AIBN).\nStep 2: Identify Functional Groups: Reactant 1: Primary amine (-NH2), methyl ester (-COOCH3), carboxylic acid (-COOH), pyridine ring. Reactant 2: Primary amine (-NH2). Reagents: Morpholine (amine), triethylamine (amine), tetrahydrofuran (solvent), AIBN (initiator for radical reactions).\nStep 3: Predict Reaction Type: Nucleophilic Aromatic Substitution (SNAr). The primary amine of propan-1-amine (CCCN) acts as a nucleophile, attacking the electron-deficient carbon atom of the pyridine ring in the complex reactant. The chlorine atom on the pyridine ring is the leaving group. This reaction is typically facilitated by a base (like morpholine or triethylamine) to deprotonate the amine, making it a stronger nucleophile.\nStep 4: Construct Product Structure: The hydrogen atom of the primary amine (-NH2) in propan-1-amine (CCCN) is transferred to the carbon atom of the pyridine ring in the complex reactant. The chlorine atom on the pyridine ring is eliminated. The resulting product is a secondary amine where the nitrogen is attached to the pyridine ring and also to the complex organic moiety from the reactant. The structure is CCCN-pyridine-CH2-... (where the rest of the molecule is CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O).\n{\"Major Product\": CCCNc1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O, \"Byproduct(s)\": CN(C)c1ccncc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCNC(=O)c1cc(C(=O)NC)c(=O)n(Cc2ccccc2)c1"
+            ],
+            "gold_canonical": [
+                "CCCNC(=O)c1cc(C(=O)NC)c(=O)n(Cc2ccccc2)c1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_90",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC (a complex molecule containing a Boc-protected piperidine, a 1,2,3-triazole, and a 1,3,4-thiadiazole with a secondary amine). Reactant 2: Clc1nccc2ccccc12 (2-chloropyridine). Reagents: Palladium catalyst (Pd), a phosphine ligand (Xantphos, c1ccc(P(c2ccccc2)c2ccc3ccccc3c2-c2c(P(c3ccccc3)c3ccccc3)ccc3ccccc23)cc1), a base (Cesium carbonate, Cs2CO3), and a solvent (Cyclohexane).\nStep 2: Identify Functional Groups"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC (a complex molecule containing a Boc-protected piperidine, a 1,2,3-triazole, and a 1,3,4-thiadiazole with a secondary amine). Reactant 2: Clc1nccc2ccccc12 (2-chloropyridine). Reagents: Palladium catalyst (Pd), a phosphine ligand (Xantphos, c1ccc(P(c2ccccc2)c2ccc3ccccc3c2-c2c(P(c3ccccc3)c3ccccc3)ccc3ccccc23)cc1), a base (Cesium carbonate, Cs2CO3), and a solvent (Cyclohexane).\nStep 2: Identify Functional Groups: Reactant 1: Secondary amine (-NH-), Boc-protected piperidine, 1,2,3-triazole, 1,3,4-thiadiazole. Reactant 2: Aryl chloride (-Cl attached to pyridine). Reagents: Palladium catalyst, phosphine ligand, base.\nStep 3: Predict Reaction Type: Buchwald-Hartwig Amination. This is a palladium-catalyzed cross-coupling reaction used to form carbon-nitrogen bonds between an aryl halide (2-chloropyridine) and an amine (the secondary amine in Reactant 1).\nStep 4: Construct Product Structure: The secondary amine group (-NH-) in Reactant 1 will react with 2-chloropyridine (Reactant 2). The chlorine atom on the pyridine ring will be replaced by the nitrogen atom of the amine. The hydrogen atom on the amine's nitrogen will be lost. The Boc-protected piperidine, 1,2,3-triazole, and 1,3,4-thiadiazole moieties in Reactant 1 will remain unchanged. The product will be a new molecule where the secondary amine is now bonded to the pyridine ring.\n{\"Major Product\": COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC.Clc1nccc2ccccc12}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "COc1ccc(-c2noc(C3CCN(C(=O)CNc4nccc5ccccc45)CC3)n2)cc1OC"
+            ],
+            "gold_canonical": [
+                "COc1ccc(-c2noc(C3CCN(C(=O)CNc4nccc5ccccc45)CC3)n2)cc1OC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_91",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)CC(c1ccc(C)c(CO)c1)c1ccc2c(nnn2C)c1C (a molecule containing a primary alcohol, a methyl ester, and a pyrimidine ring). Reactant 2: O=S1(=O)NCCOc2ccncc21 (a cyclic sulfonamide, specifically a 1,3,4-thiadiazolidine-2,5-dione derivative with a secondary alcohol). Reagent: O=C(N=NC(=O)N1CCCCC1)N1CCCCC1 (Diisopropyl azodicarboxylate, DIAD), CCCCP(CCCC)CCCC (Tributylphosphine, PBu3), C1CCOC1 (1-methoxy-1-methylurea, DMAP).\nStep 2: Identify Function"
+            ],
+            "pred_smiles": [
+                "CCOC(=O)CC(c1ccc(C)c(CN)c1)c1ccc2c(nnn2C)c1C.O=S1(=O)NCCNc2ccncc21"
+            ],
+            "pred_canonical": [
+                "CCOC(=O)CC(c1ccc(C)c(CN)c1)c1ccc2c(nnn2C)c1C.O=S1(=O)NCCNc2ccncc21"
+            ],
+            "gold": [
+                "CCOC(=O)CC(c1ccc(C)c(CN2CCOc3ccncc3S2(=O)=O)c1)c1ccc2c(nnn2C)c1C"
+            ],
+            "gold_canonical": [
+                "CCOC(=O)CC(c1ccc(C)c(CN2CCOc3ccncc3S2(=O)=O)c1)c1ccc2c(nnn2C)c1C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.6946564885496184
+            ],
+            "maccs_similarity": [
+                0.8297872340425532
+            ],
+            "rdk_similarity": [
+                0.7571523619427811
+            ],
+            "levenshtein": [
+                33
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_92",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CN1C(=O)C(N)N=C(c2ccccc2)c2ccccc21 (a substituted urea derivative with a 1,3,4-thiadiazole moiety). Reactant 2: O=C(O)C(Cc1ccc(Cl)c(Cl)c1)c1ccccc1 (3-(4-chlorophenyl)-4,5,6,7-tetrahydro-1H-pyrazolo[3,4-d]pyrimidine-5-carboxylic acid, a substituted pyrazolo[3,4-d]pyrimidine derivative). No explicit reagents are given.\nStep 2: Identify Functional Groups: Reactant 1: Contains a primary amine (-NH2) group, a urea group (-NH-CO-NH-), and a 1,3,4-thiadiazo"
+            ],
+            "pred_smiles": [
+                "CN1C(=O)C(N)N=C(c2ccccc2)c2ccccc21C(=O)N(Cc3ccc(Cl)c(Cl)c3)c3ccccc3"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CN1C(=O)C(NC(=O)C(Cc2ccc(Cl)c(Cl)c2)c2ccccc2)N=C(c2ccccc2)c2ccccc21"
+            ],
+            "gold_canonical": [
+                "CN1C(=O)C(NC(=O)C(Cc2ccc(Cl)c(Cl)c2)c2ccccc2)N=C(c2ccccc2)c2ccccc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_93",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Cc1ccc(C)c2c(C(C)C)cc(O)nc12 (a substituted pyrimidine derivative with a primary alcohol). Reagent 1: O=P(Cl)(Cl)Cl (Phosphorus oxychloride, POCl3). Reagent 2: Cc1ccccc1 (Benzene, likely used as a solvent or toluene, which is a common solvent for POCl3 reactions).\nStep 2: Identify Functional Groups: Reactant 1 contains a primary alcohol (-CH2OH) group, which is the most reactive site for reaction with POCl3. Reagent 1 (POCl3) is a chlorinating agent."
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "pred_canonical": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "gold": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "gold_canonical": [
+                "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "morgan_similarity": [
+                1.0
+            ],
+            "maccs_similarity": [
+                1.0
+            ],
+            "rdk_similarity": [
+                1.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_94",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C (a substituted pyrrolo[2,3-d]pyrimidine derivative). Reactant 2: CCCI (1-iodopropane).\nStep 2: Identify Functional Groups: Reactant 1: Pyrrolo[2,3-d]pyrimidine core, N-H group (acidic proton), aryl fluoride, ketone group. Reactant 2: Primary alkyl iodide (C-I bond, iodine as a good leaving group).\nStep 3: Predict Reaction Type: N-alkylation of the N-H group. This is a nucleophilic substitution reaction where t"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C (a substituted pyrrolo[2,3-d]pyrimidine derivative). Reactant 2: CCCI (1-iodopropane).\nStep 2: Identify Functional Groups: Reactant 1: Pyrrolo[2,3-d]pyrimidine core, N-H group (acidic proton), aryl fluoride, ketone group. Reactant 2: Primary alkyl iodide (C-I bond, iodine as a good leaving group).\nStep 3: Predict Reaction Type: N-alkylation of the N-H group. This is a nucleophilic substitution reaction where the nitrogen atom of the N-H group acts as a nucleophile, attacking the primary carbon of 1-iodopropane, with iodide as the leaving group.\nStep 4: Construct Product Structure: The N-H group of the pyrrolo[2,3-d]pyrimidine derivative is replaced by a -CH2CH2CH3 group from 1-iodopropane. The hydrogen atom of the N-H group and the iodine atom from 1-iodopropane are eliminated. The core structure of the pyrrolo[2,3-d]pyrimidine, including the aryl fluoride and the ketone, remains unchanged.\n{\"Major Product\": CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C.CCCI}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCn1c2c(c(=O)n1-c1ccccc1F)C1CCC2(C)C1(C)C"
+            ],
+            "gold_canonical": [
+                "CCCn1c2c(c(=O)n1-c1ccccc1F)C1CCC2(C)C1(C)C"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_95",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Cc1cc(OCC(=O)O)cc(C)c1Cc1ccc(O)c(C(C)C)c1 (a substituted benzene derivative with a 2,2-dimethyl-1,3-dioxolane group). Reactant 2: CO (Methanol). Reagents: O=S(=O)(O)O (Sulfuric acid, catalyst), ClCCl (Dichloromethane, solvent), CO (Methanol, co-reactant), CO (Methanol, co-reactant), O[Na] (Sodium hydroxide, base).\nStep 2: Identify Functional Groups: Reactant 1: Phenolic hydroxyl group (-OH), ester group (-C(=O)O-), dimethyl-1,3-dioxolane ring. Reacta"
+            ],
+            "pred_smiles": [
+                "COC(=O)OCC1CCOCC1"
+            ],
+            "pred_canonical": [
+                "COC(=O)OCC1CCOCC1"
+            ],
+            "gold": [
+                "Cc1cc(OCC(N)=O)cc(C)c1Cc1ccc(O)c(C(C)C)c1"
+            ],
+            "gold_canonical": [
+                "Cc1cc(OCC(N)=O)cc(C)c1Cc1ccc(O)c(C(C)C)c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.06451612903225806
+            ],
+            "maccs_similarity": [
+                0.23636363636363636
+            ],
+            "rdk_similarity": [
+                0.08571428571428572
+            ],
+            "levenshtein": [
+                27
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_96",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCCCCCCCCOC(C)c1ccc(C(=O)OCCCC)cc1 (a molecule containing a primary alcohol, a tert-butyl group, and a substituted phenyl ring). Reagent 1: O[Na] (sodium hydroxide, a strong base and nucleophile). Reagent 2: C1CCOC1 (tetrahydrofuran, a polar aprotic solvent).\nStep 2: Identify Functional Groups: Reactant 1: Primary alcohol (-CH2OH), tert-butyl group (-C(CH3)3), phenyl group. Reagent 1: Hydroxide ion (OH-), which is the active nucleophile. Reagent 2: "
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCCCCCCCCCOC(C)c1ccc(C(=O)OCCCC)cc1 (a molecule containing a primary alcohol, a tert-butyl group, and a substituted phenyl ring). Reagent 1: O[Na] (sodium hydroxide, a strong base and nucleophile). Reagent 2: C1CCOC1 (tetrahydrofuran, a polar aprotic solvent).\nStep 2: Identify Functional Groups: Reactant 1: Primary alcohol (-CH2OH), tert-butyl group (-C(CH3)3), phenyl group. Reagent 1: Hydroxide ion (OH-), which is the active nucleophile. Reagent 2: Tetrahydrofuran (THF), a non-reactive solvent.\nStep 3: Predict Reaction Type: The reaction is a base-catalyzed hydrolysis of the primary alcohol. This is a nucleophilic acyl substitution reaction where the hydroxide ion attacks the electrophilic carbonyl carbon of the alcohol, leading to the formation of a carboxylate salt. Subsequent protonation (typically during aqueous workup) yields the carboxylic acid.\nStep 4: Construct Product Structure: The primary alcohol group (-CH2OH) on the reactant CCCCCCCCCCOC(C)c1ccc(C(=O)OCCCC)cc1 is converted into a carboxylic acid group (-C(=O)OH). The rest of the molecule, including the tert-butyl group and the phenyl ring, remains unchanged. The product is CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1.\n{\"Major Product\": CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1, \"Byproduct(s)\": O}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1"
+            ],
+            "gold_canonical": [
+                "CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_97",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)N=NC(=O)OCC (Ethyl 2-(ethoxycarbonyl)-2-(hydroxymethyl)azetidine-1-carboxylate). Reactant 2: O=C1NC(=O)c2ccccc21 (N-(1H-pyrazol-4-yl)glycine). Reactant 3: OC1CC2CCC1C2 (Tetrahydrofuran-2-ol). Reagent: c1ccc(P(c2ccccc2)c2ccccc2)cc1 (Triphenylphosphine, PPh3).\nStep 2: Identify Functional Groups: Reactant 1: Ethyl ester (-COOEt), secondary alcohol (-CH(OH)-), azetidine ring. Reactant 2: Glycine derivative (-NHCOCH3), pyrazole ring. Reactant 3: P"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: CCOC(=O)N=NC(=O)OCC (Ethyl 2-(ethoxycarbonyl)-2-(hydroxymethyl)azetidine-1-carboxylate). Reactant 2: O=C1NC(=O)c2ccccc21 (N-(1H-pyrazol-4-yl)glycine). Reactant 3: OC1CC2CCC1C2 (Tetrahydrofuran-2-ol). Reagent: c1ccc(P(c2ccccc2)c2ccccc2)cc1 (Triphenylphosphine, PPh3).\nStep 2: Identify Functional Groups: Reactant 1: Ethyl ester (-COOEt), secondary alcohol (-CH(OH)-), azetidine ring. Reactant 2: Glycine derivative (-NHCOCH3), pyrazole ring. Reactant 3: Primary alcohol (-CH2OH), tetrahydrofuran ring. Reagent: Triphenylphosphine (PPh3).\nStep 3: Predict Reaction Type: Mitsunobu reaction. This reaction typically involves an alcohol and an electrophile (like an ester or an amide) in the presence of triphenylphosphine (PPh3) and a strong acid (like DIAD, DEAD, or H3PO2, which are not explicitly listed but are implied for the reaction to proceed). The alcohol is activated, and the ester is converted into a nucleophile, leading to an SN2 reaction.\nStep 4: Construct Product Structure: The reaction involves the alcohol of tetrahydrofuran-2-ol (OC1CC2CCC1C2) and the ethyl ester of the azetidine derivative (CCOC(=O)N=NC(=O)OCC). The hydroxyl group of the tetrahydrofuran alcohol is activated by PPh3 and H3PO2 (or similar). The ethyl ester group (-COOEt) of the azetidine derivative is converted into an ethyl group (-CH2CH3). The nitrogen atom of the azetidine ring remains bonded to the ethyl group. The pyrazole derivative (O=C1NC(=O)c2ccccc21) acts as a spectator in this reaction. The product formed is ethyl 2-(ethoxycarbonyl)-2-(tetrahydrofuran-2-ylmethyl)azetidine-1-carboxylate.\n{\"Major Product\": CCOC(=O)N=NC(=O)OCC1CC2CCC1C2, \"Byproduct(s)\": O=C1NC(=O)c2ccccc21}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "O=C1c2ccccc2C(=O)N1C1CC2CCC1C2"
+            ],
+            "gold_canonical": [
+                "O=C1c2ccccc2C(=O)N1C1CC2CCC1C2"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_98",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(C=O)cnc12 (a complex molecule containing a ketone and a secondary amine). Reactant 2: NCC1CC1 (1-methylpiperazine, a secondary amine). Reagent: CC(=O)O[BH-](OC(C)=O)OC(C)=O (Sodium triacetoxyborohydride, a selective reducing agent).\nStep 2: Identify Functional Groups: Reactant 1: Ketone (C=O), secondary amine (NC(=O)-), ether (Ar-O-CH2-), and a complex heterocyclic system. Reactant 2: Secondary amine (-NH-). Reag"
+            ],
+            "pred_smiles": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CC(O))cnc12"
+            ],
+            "pred_canonical": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CCO)cnc12"
+            ],
+            "gold": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CNCC3CC3)cnc12"
+            ],
+            "gold_canonical": [
+                "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CNCC3CC3)cnc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.7766990291262136
+            ],
+            "maccs_similarity": [
+                0.864406779661017
+            ],
+            "rdk_similarity": [
+                0.8641188959660298
+            ],
+            "levenshtein": [
+                6
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_reaction_fs_99",
+            "pred_raw": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Oc1ccc(OCc2ccccc2)cc1 (a substituted phenol, specifically 4-(2-methoxyphenyl)phenol). Reactant 2: CC(C)C(=O)Cl (isobutyryl chloride, an acylating agent). Reagents: c1ccncc1 (pyridine, a common base and catalyst for acylation of phenols).\nStep 2: Identify Functional Groups: Reactant 1 (4-(2-methoxyphenyl)phenol) contains a phenolic hydroxyl group (-OH) which is a strong nucleophile and a good leaving group after protonation. Reactant 2 (isobutyryl chl"
+            ],
+            "pred_smiles": [
+                "Step 1: Parse Reactants/Reagents: Reactant 1: Oc1ccc(OCc2ccccc2)cc1 (a substituted phenol, specifically 4-(2-methoxyphenyl)phenol). Reactant 2: CC(C)C(=O)Cl (isobutyryl chloride, an acylating agent). Reagents: c1ccncc1 (pyridine, a common base and catalyst for acylation of phenols).\nStep 2: Identify Functional Groups: Reactant 1 (4-(2-methoxyphenyl)phenol) contains a phenolic hydroxyl group (-OH) which is a strong nucleophile and a good leaving group after protonation. Reactant 2 (isobutyryl chloride) contains an acyl chloride group (-COCl), which is an electrophilic center. Reagent (pyridine) is a base.\nStep 3: Predict Reaction Type: The reaction is predicted to be an acylation of the phenolic hydroxyl group. The phenol will first be protonated by the pyridine (or another proton source, e.g., HCl formed in situ) to form a good leaving group (phenol proton, H2O). The acyl chloride will then react with the protonated phenol in an electrophilic aromatic substitution-like reaction, leading to the formation of an aryl ester. The pyridine acts as a base to neutralize the HCl byproduct.\nStep 4: Construct Product Structure: The hydroxyl group (-OH) of 4-(2-methoxyphenyl)phenol is replaced by the isobutyl group (-C(=O)CH2CH2CH3) from isobutyryl chloride. The core structure of the phenol, 4-(2-methoxyphenyl)phenyl, remains unchanged. The product is 4-(2-methoxyphenyl)-2-(isobutyl)phenol.\n{\"Major Product\": Oc1ccc(C(=O)CC(C)C)cc1, \"Byproduct(s)\": c1ccncc1}"
+            ],
+            "pred_canonical": [
+                null
+            ],
+            "gold": [
+                "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+            ],
+            "gold_canonical": [
+                "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "exact_match": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "morgan_similarity": [
+                0.0
+            ],
+            "maccs_similarity": [
+                0.0
+            ],
+            "rdk_similarity": [
+                0.0
+            ],
+            "levenshtein": [
+                0
+            ]
+        }
+    ]
+}

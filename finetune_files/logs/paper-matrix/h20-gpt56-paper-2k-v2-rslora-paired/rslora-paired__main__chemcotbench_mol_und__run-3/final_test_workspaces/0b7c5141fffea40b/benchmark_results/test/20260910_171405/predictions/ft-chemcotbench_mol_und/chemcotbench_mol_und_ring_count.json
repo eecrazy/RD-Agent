@@ -1,0 +1,102 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC1CN(c2cc(-c3cnc(N)c(OC(F)F)c3)nc(N3CCC3)n2)C1, Ring Structure: C1CNC1.\n"
+            }
+        ],
+        "prediction": "Input structure: COC1CN(c2cc(-c3cnc(N)c(OC(F)F)c3)nc(N3CCC3)n2)C1\nRing identification: The input molecule contains two 5-membered rings matching C1CNC1: one in the 2,4-dioxopyrimidin-5-yl group (N3CCC3) and another in the 1,3,4-oxadiazole-2-yl substituent (C1CN(C)C1).\nCounting: Two 5-membered rings with one nitrogen atom and four carbons match the target structure.\n{\"count\":\"2\"}",
+        "gold": "2"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCN1c2ncc(COc3cc[n+]([O-])cc3)cc2C(=O)N(C)c2cccnc21, Ring Structure: c1ccncc1.\n"
+            }
+        ],
+        "prediction": "Input structure: CCN1c2ncc(COc3cc[n+]([O-])cc3)cc2C(=O)N(C)c2cccnc21\nRing identification: The input molecule contains two pyridine rings (c1ccncc1): one in the 1,3,5-triazin-2-yl group and another in the fused bicyclic system.\nCounting: Two pyridine rings match the structure c1ccncc1.\n{\"count\":\"2\"}",
+        "gold": "3"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(O)CCCC1C2CCCN3CCCC(CN1CCO)C23, Ring Structure: C1CCNCC1.\n"
+            }
+        ],
+        "prediction": "Input structure: O=C(O)CCCC1C2CCCN3CCCC(CN1CCO)C23\nRing identification: The molecule contains a bicyclo[3.2.1]octane system (two fused rings: a 5-membered and a 6-membered ring) and a 6-membered piperidine ring (C1CCNCC1) in the substituent.\nCounting: The 6-membered piperidine ring (C1CCNCC1) appears once as a substituent on the bicyclo system.\n{\"count\":\"1\"}",
+        "gold": "3"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1nc2ccc3nc(NC(=O)c4ccco4)sc3c2s1, Ring Structure: c1cscn1.\n"
+            }
+        ],
+        "prediction": "Input structure: CSc1nc2ccc3nc(NC(=O)c4ccco4)sc3c2s1\nRing identification: The input molecule contains two fused thieno[2,3-d]pyrimidine rings (each with a thiophene fused to a pyrimidine) and a pyridine ring. The target ring c1cscn1 matches the two thieno[2,3-d]pyrimidine systems.\nCounting: Two instances of the c1cscn1 ring structure are present in the fused thieno[2,3-d]pyrimidine groups.\n{\"count\":\"2\"}",
+        "gold": "2"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)N1CCN(c2ccc(NCc3ccc(C)cc3)cc2)CC1, Ring Structure: c1ccccc1.\n"
+            }
+        ],
+        "prediction": "Input structure: CC(=O)N1CCN(c2ccc(NCc3ccc(C)cc3)cc2)CC1\nRing identification: Two benzene rings (c1ccccc1) in the 4-methoxyphenyl and 2-methylphenyl substituents\nCounting: Two benzene rings match the target structure\n{\"count\":\"2\"}",
+        "gold": "2"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)c1ccccc1, Ring Structure: c1ccncc1.\n"
+            }
+        ],
+        "prediction": "Input structure: CC(NC(=O)Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)c1ccccc1\nRing identification: The input molecule contains two pyridine rings (c1ccncc1): one in the 2-pyridinylethyl group (c3ccccn3) and another in the fused bicyclic system (c1cc2[nH]nc...c2cn1).\nCounting: Two instances of the pyridine ring structure are identified.\n{\"count\":\"2\"}",
+        "gold": "2"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO, Ring Structure: c1cc[nH]c1.\n"
+            }
+        ],
+        "prediction": "Input structure: O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO\nRing identification: Two fused bicyclic systems (each containing a pyridine-like ring with NH) in the hexyl chain\nCounting: Two instances of the c1cc[nH]c1 ring structure\n{\"count\":\"2\"}",
+        "gold": "2"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCc1ccc(OC(C)=O)c(C(=O)c2ccc(C)cc2)c1, Ring Structure: c1ccccc1.\n"
+            }
+        ],
+        "prediction": "Input structure: CCc1ccc(OC(C)=O)c(C(=O)c2ccc(C)cc2)c1\nRing identification: Two benzene rings: one in the 4-methoxyphenyl group and one in the 2-methylphenyl group.\nCounting: Both rings match the c1ccccc1 structure (aromatic six-membered rings with alternating double bonds).\n{\"count\":\"2\"}",
+        "gold": "2"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CN1CCC2(CC1)CCN(C(=O)c1cccc(F)c1)CC2, Ring Structure: C1CCNCC1.\n"
+            }
+        ],
+        "prediction": "Input structure: CN1CCC2(CC1)CCN(C(=O)c1cccc(F)c1)CC2\nRing identification: The input molecule contains a bicyclo[2.2.1]heptane system (two fused six-membered rings, each with one nitrogen) and a benzene ring (aromatic, not matching the target).\nCounting: Two six-membered rings in the bicyclo[2.2.1]heptane core match the C1CCNCC1 structure.\n{\"count\":\"2\"}",
+        "gold": "2"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1, Ring Structure: C1CCNC1.\n"
+            }
+        ],
+        "prediction": "Input structure: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1\nRing identification: The molecule contains a benzene ring (aromatic, not matching C1CCNC1) and a spiro[4.5]decane system. The spiro system includes two fused five-membered rings: one with a nitrogen (C1CCNC1 pattern) and another with a fluorine-substituted nitrogen. The cyclobutyl group (N4CCCC4C) does not match the target ring structure.\nCounting: Two five-membered rings in the spiro system match the C1CCNC1 pattern: one with N and one with F-substituted N.\n{\"count\":\"2\"}",
+        "gold": "2"
+    }
+}

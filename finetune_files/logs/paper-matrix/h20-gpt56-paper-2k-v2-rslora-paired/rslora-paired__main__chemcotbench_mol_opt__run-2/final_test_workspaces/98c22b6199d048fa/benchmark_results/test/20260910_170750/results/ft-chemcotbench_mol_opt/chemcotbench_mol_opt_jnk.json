@@ -1,0 +1,1662 @@
+{
+    "mean_improvement": 0.0,
+    "success_rate": 0.0,
+    "best_rate": 0.0,
+    "valid_smiles_rate": 82.0,
+    "valid_score_rate": 0.0,
+    "scaffold_hard": 8.0,
+    "scaffold_soft": 48.69093997123952,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_50",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole core (Cc1ncc...s1) with a methyl substituent. It features a carbonyl-linked aniline group (C(=O)Nc2cccc...) bearing a secondary amine connected to a bicyclic system (ncnc4c(C(N)=O)cccc34). The aniline ring has a methyl group and a thiophene-like aromatic system.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding with the kinase's hinge region (via carbonyl groups) and hydrophobic int"
+            ],
+            "pred_smiles": [
+                "COc1cc(Nc2cccc(C(C)Nc3ncnc4c(C(N)=O)cccc34)c2)c(-c2ccncc2)s1"
+            ],
+            "source_smiles": [
+                "Cc1ncc(C(=O)Nc2cccc(C(C)Nc3ncnc4c(C(N)=O)cccc34)c2)s1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5441176470588235
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_51",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperidine ring (C1CCNCC1) substituted with a methyl group and a pyrimidine-linked piperazine moiety. The pyrimidine ring is functionalized with an amide group (C(C)NC(C)=O) attached to a para-substituted benzene ring. The methyl group on the piperidine and the amide's tertiary amine may limit interactions with JNK3.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding (amide groups) an"
+            ],
+            "pred_smiles": [
+                "COCC(=O)N1CCC(Oc2ccc(Nc3nccc(C4CCN(C)CC4)C3)cc2)C1"
+            ],
+            "source_smiles": [
+                "COC1CCCN(c2nccc(N3CCC(Oc4ccc(C(C)NC(C)=O)cc4)C3)n2)C1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_52",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains two aromatic rings: a central benzene ring substituted with an amino group (-NH2) and a thiophene ring. The thiophene is linked to a chlorophenyl group via a nitrogen atom. The structure lacks rigid heterocyclic motifs (e.g., piperazine, piperidine) and has limited hydrogen-bonding capacity beyond the amino group.\",\n    \"Property Analysis\": \"JNK3 inhibition requires strong interactions with the ATP-binding pocket, incl"
+            ],
+            "pred_smiles": [
+                "CN1CCC(Nc2nc(-c3ccc(Cl)cc3)cs2)CC1"
+            ],
+            "source_smiles": [
+                "Nc1ccc(Nc2nc(-c3ccc(Cl)cc3)cs2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5121951219512195
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_53",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a dichlorophenyl group (Nc3cc(Cl)ccc3Cl) attached to a bicyclic aromatic core (benzoxazole-like scaffold). The side chain includes a methoxy group (COc1...), a long aliphatic chain (OCCCCCC), and a terminal nitrate ester group (=O)NO.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires optimal hydrophobic interactions, hydrogen bonding, and steric compatibility. The dichlorophenyl group may introduce excessive s"
+            ],
+            "pred_smiles": [
+                "COc1cc2ncnc(Nc3ccc(F)cc3F)c2cc1OCCCCCC(=O)NO"
+            ],
+            "source_smiles": [
+                "COc1cc2ncnc(Nc3cc(Cl)ccc3Cl)c2cc1OCCCCCC(=O)NO"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_54",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole core with two substituents: (1) a fluorophenyl group and (2) a pyridine ring linked to a methoxybenzyl group (OCc1ccccc1). The methoxy group (OC) is an electron-donating substituent.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and hydrogen bonding. The methoxy group (OC) may contribute to lipophilicity but lacks strong hydrogen-bonding capacity, potentially limiti"
+            ],
+            "pred_smiles": [
+                "CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(C(N)=O)c2)[nH]1"
+            ],
+            "source_smiles": [
+                "CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OCc3ccccc3)c2)[nH]1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5476190476190477
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_55",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core with an isopropyl group (C(C)C), an iodine substituent, and a benzylamine side chain (NCH2C6H5). The iodine is positioned on the exocyclic amino ring, and the benzylamine is attached to the exocyclic pyrimidine ring.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and hydrophobic interactions. The iodine atom, while providing steric bulk, lacks "
+            ],
+            "pred_smiles": [
+                "CC(C)n1cnc2c(NCc3ccccc3)nc(N)nc21"
+            ],
+            "source_smiles": [
+                "CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_56",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzothiophene core (fused aromatic system) with a carboxylic acid group attached via an ethylthio (-S-CH2-CH2-) linker. The benzothiophene provides aromaticity and potential π-π stacking interactions, while the carboxylic acid offers hydrogen-bonding capability.\",\n    \"Property Analysis\": \"JNK3 inhibition typically requires strong hydrogen-bonding interactions with the kinase's ATP-binding pocket and optimal hydroph"
+            ],
+            "pred_smiles": [
+                "O=C(O)c1ccc(CSc2ccc3ccccc3n2)cc1"
+            ],
+            "source_smiles": [
+                "O=C(O)CCSc1ccc2ccccc2n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3333333333333333
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_57",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central bicyclic aromatic core (imidazo[1,2-a]pyrimidine) with methoxy substituents. A benzodioxole group (OCO4 fused ring) is attached via an amine linker at the 2-position. The structure lacks nitrogen-containing heterocycles (e.g., piperazine/piperidine) that could enhance JNK3 binding.\",\n    \"Property Analysis\": \"JNK3 inhibition requires hydrogen bonding with the kinase hinge region (via electron-deficient aromat"
+            ],
+            "pred_smiles": [
+                "COc1cc2c(Nc3ccc4c(c3)OCO4)ncnc2c(COCN1CCNCC1)c1OC"
+            ],
+            "source_smiles": [
+                "COc1cc2c(Nc3ccc4c(c3)OCO4)ncnc2c(OC)c1OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.38571428571428573
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_58",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core with a tert-butyl group (CC(C)) at position 4, a benzylamine substituent (NCH2C6H5) at position 2, and an amino group (-NH2) at position 5. The bicyclic system includes a fused pyrimidine ring.\",\n    \"Property Analysis\": \"JNK3 inhibition typically requires hydrogen bonding with the kinase hinge region (e.g., via NH groups) and hydrophobic interactions with substituents. The benzylamine group"
+            ],
+            "pred_smiles": [
+                "Cn1c(Nc2ccccc2)nc2c(NCc3ccccc3)nc(N)c21"
+            ],
+            "source_smiles": [
+                "CC(C)n1cnc2c(NCc3ccccc3)nc(N)nc21"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_59",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thiazole ring (CSc1nc(N)cc...n1) with an amino group (-NH2) and a fluorophenyl-substituted imidazole (-c2c(-c3ccc(F)cc3)ncn2) linked via a propyl chain (CCCN2CCOCC2). The thiazole and imidazole rings may contribute to JNK3 binding, while the fluorophenyl group enhances hydrophobic interactions.\",\n    \"Property Analysis\": \"JNK3 inhibition requires strong hydrogen bonding (via NH2), hydrophobic interactions (fl"
+            ],
+            "pred_smiles": [
+                "CSc1nc(N)cc(-c2c(-c3ccc(F)cc3)ncn2CCN2CCCC2)n1"
+            ],
+            "source_smiles": [
+                "CSc1nc(N)cc(-c2c(-c3ccc(F)cc3)ncn2CCCN2CCOCC2)n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7450980392156863
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_60",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a cyclohexanol core linked to a pyrimidine ring (with a hydroxyl group) and a para-substituted benzene ring bearing an aminopyridine group (Nc3ccccn3). The pyrimidine and benzene rings are connected via an ether oxygen.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding with the kinase's hinge region (via hydroxyl groups) and hydrophobic/aromatic interactions. The aminopyridine group may contri"
+            ],
+            "pred_smiles": [
+                "OC1CCCC(c2nccnc2Oc2ccc(Br)cc2)C1"
+            ],
+            "source_smiles": [
+                "OC1CCCC(c2nccnc2Oc2ccc(Nc3ccccn3)cc2)C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6590909090909091
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_61",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core (n1cnc2...ncnc21) with a tert-butyl group (CC(C)) at position 3 and a para-chloroaniline substituent (Nc3cccc(Cl)c3) at position 6. The rigid bicyclic system and electron-withdrawing Cl group dominate the structure.\",\n    \"Property Analysis\": \"JNK3 inhibition requires balanced hydrophobicity, hydrogen bonding, and steric compatibility. The para-chloroaniline provides moderate electron-withdr"
+            ],
+            "pred_smiles": [
+                "CC(C)n1cnc2c(NCCCN3CCOCC3)nc(Nc3cccc(O)c3)nc21"
+            ],
+            "source_smiles": [
+                "CC(C)n1cnc2c(Nc3cccc(Cl)c3)ncnc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.39285714285714285
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_62",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a quinazolinone core substituted with a difluorophenoxy group and a piperidine ring (N3CCC(O)C3) attached via an amine. The piperidine ring includes a hydroxyl group at the 4-position.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and hydrogen bonding. The hydroxyl group on the piperidine may reduce membrane permeability due to increased polarity, while the piperidine's confor"
+            ],
+            "pred_smiles": [
+                "Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(-c3ccncc3C#N)nc21"
+            ],
+            "source_smiles": [
+                "Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCC(O)C3)nc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5740740740740741
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_63",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a tert-butylamine group, a cyano substituent, and a pyridine-linked piperazine moiety. The piperazine (1,4-diazacyclohexane) is connected via an ethylamine bridge to the pyridine ring.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from planar aromatic systems for target binding and electron-withdrawing groups (e.g., cyano) for enhanced interactions. Piperazine may introduce excessive f"
+            ],
+            "pred_smiles": [
+                "CCC(C)(C)Nc1c(C#N)cnc2cnc(Nc3ccc4c(c3)C(C)(C)CC4)cc12"
+            ],
+            "source_smiles": [
+                "CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.43137254901960786
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_64",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a cyclohexane ring substituted with a methyl group, an ethyl sulfonamide group, and a benzamide moiety linked to a furan ring. The sulfonamide group (S(=O)(=O)) and the amide bond (C(=O)N) are key functional groups.\",\n    \"Property Analysis\": \"JNK3 inhibition typically requires hydrogen bonding with the kinase hinge region (via sulfonamide/amide groups) and hydrophobic interactions with the ATP-binding pocket. The fura"
+            ],
+            "pred_smiles": [
+                "CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccncc3)cc2)C1"
+            ],
+            "source_smiles": [
+                "CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccco3)cc2)C1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6153846153846154
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_65",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzofuranone core (O=c1cc...oc2c1...) fused to a naphthalene system. A chlorophenyl group (-c2ccccc2Cl) is attached to the benzofuranone ring. The rigid planar structure may aid binding, but the chlorine substituent introduces steric/electronic effects.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding (e.g., with hinge region residues) and hydrophobic interactions. The chlorophenyl"
+            ],
+            "pred_smiles": [
+                "O=c1cc(N)oc2c1ccc1ccccc12"
+            ],
+            "source_smiles": [
+                "O=c1cc(-c2ccccc2Cl)oc2c1ccc1ccccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_66",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a quinazolinone core substituted with a difluorophenoxy group and a piperidine ring (N3CCC(O)C3) attached via an amine. The piperidine ring includes a hydroxyl group at the 4-position.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and hydrogen bonding. The hydroxyl group on the piperidine may reduce membrane permeability due to increased polarity, while the piperidine's confor"
+            ],
+            "pred_smiles": [
+                "Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(Nc3ccc(Cl)nc3)nc21"
+            ],
+            "source_smiles": [
+                "Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCC(O)C3)nc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5535714285714286
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_67",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a fluorobenzene ring connected to a pyrrole ring (via a single bond) and a pyridine ring. The pyrrole ring has an NH group, contributing to potential hydrogen bonding. The pyridine ring provides aromaticity and basicity due to the lone pair on nitrogen.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding with the kinase's hinge region (e.g., via NH groups) and hydrophobic interactions with aroma"
+            ],
+            "pred_smiles": [
+                "c1cc(-c2nc[nH]c2-c2ccncc2)ccn1"
+            ],
+            "source_smiles": [
+                "Fc1ccc(-c2nc[nH]c2-c2ccncc2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.8518518518518519
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_68",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a diethylamine chain (CCN(CC)CC) attached to a bicyclic aromatic system (naphthyridine core). The substituent at the para position of the benzene ring is a methyl group (C).\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and hydrogen bonding. The methyl group provides hydrophobicity but lacks hydrogen-bonding capability, potentially limiting target engagement.\",\n    \"Limitation"
+            ],
+            "pred_smiles": [
+                "CCN(CC)CCn1c(NC(=O)c2cccc(C(=O)O)c2)nc2ccccc21"
+            ],
+            "source_smiles": [
+                "CCN(CC)CCn1c(NC(=O)c2ccc(C)cc2)nc2ccccc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_69",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core (ncnc fused to a benzene ring) with two methoxy (-OCH3) substituents. The substituent at the exocyclic amino group is a branched alkyl chain (tert-butyl).\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from planar aromatic systems for target binding and hydrophobic substituents for affinity. The methoxy groups may contribute to solubility but lack optimal steric or electronic int"
+            ],
+            "pred_smiles": [
+                "COc1cc2ncnc(Nc3ccccc3)c2cc1OC"
+            ],
+            "source_smiles": [
+                "CCC(C)Nc1ncnc2cc(OC)c(OC)cc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.3142857142857143
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_70",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tert-butyl group attached to an oxazole ring, linked via a thioether to a second oxazole ring substituted with an amide-linked phenyl group. Key heterocycles include oxazole and thiazole, with the amide group (NC(=O)) providing hydrogen-bonding potential.\",\n    \"Property Analysis\": \"JNK3 inhibition typically requires strong hydrogen-bonding interactions with the kinase's ATP-binding pocket and hydrophobic complementa"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)c1cnc(CSc2cnc(NC(=O)c3ccc(-c4ccncc4)cc3)s2)o1"
+            ],
+            "source_smiles": [
+                "CC(C)(C)c1cnc(CSc2cnc(NC(=O)c3ccccc3)s2)o1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7843137254901961
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_71",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a ketone group, a methoxy-substituted benzene ring, and an ethoxybenzyl substituent on the nitrogen. The ethoxy group (OCc3ccccc3) is an electron-donating, lipophilic substituent.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and balanced lipophilicity. The ethoxy group may reduce binding due to excessive lipophilicity or lack of hydrogen-bonding cap"
+            ],
+            "pred_smiles": [
+                "COCCn1c(=O)c(-c2ccc(OC)cc2)nc2cnc(NCCO)nc21"
+            ],
+            "source_smiles": [
+                "COCCn1c(=O)c(-c2ccc(OC)cc2)nc2cnc(OCc3ccccc3)nc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5531914893617021
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_72",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pentyl chain (CCCCN) attached to a carbonyl group (C=O), linked to a benzyl-like aromatic system with a hydroxyl (OH) and bromine (Br) substituent. The aromatic system consists of a fused bicyclic structure (c1c...ccc2...ccc12).\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bond donors/acceptors (e.g., amide groups) and aromatic/halogen interactions. The hydroxyl group (OH) may contribute to pol"
+            ],
+            "pred_smiles": [
+                "CCN(C(=O)Cc1c(OC)ccc2cc(Br)ccc12)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CCCCNC(=O)Cc1c(OC)ccc2cc(Br)ccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.2413793103448276
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_73",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (n1cc(C)cn1) substituted with a methyl group (Cc1) and a phenyl ring (-c2ccc(C(=O)Nc3sccc3C(N)=O)cc2). The phenyl ring is linked to a urea group (C(=O)N) connected to a thiophene ring (c3sccc3) with a methylated carbonyl (C(N)=O).\",\n    \"Property Analysis\": \"JNK3 inhibition often requires optimal hydrogen bonding (via urea), hydrophobic interactions (aromatic systems), and steric compatibility. The th"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C(=O)Nc2ncc(-c3ccc(C(=O)Nc4cccnc4)cc3)n2)cc1"
+            ],
+            "source_smiles": [
+                "Cc1cc(C)n(-c2ccc(C(=O)Nc3sccc3C(N)=O)cc2)n1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_74",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (c1cnc...cn1) linked to a bicyclic substituent (-c2c[nH]c3ncnc(N4CCOCC4)c23). The substituent includes a piperazine ring (N4CCOCC4) attached to a bicyclic system with a pyrrole-like nitrogen ([nH]).\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and halogen bonding. The piperazine group (N4CCOCC4) may reduce potency due to excessive polarity and poor hydrophob"
+            ],
+            "pred_smiles": [
+                "c1cnc(-c2c[nH]c3ncnc(Nc4ccc(Cl)cc4)c23)cn1"
+            ],
+            "source_smiles": [
+                "c1cnc(-c2c[nH]c3ncnc(N4CCOCC4)c23)cn1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5283018867924528
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_75",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a fused bicyclic aromatic system (benzene fused to a pyrimidine-like ring), an amide group (-NC=O), and a piperazine-linked thiazole substituent. The piperazine (1,4-diazacyclohexane) group and thiazole (sulfur-containing heterocycle) are key structural motifs.\",\n    \"Property Analysis\": \"JNK3 inhibition typically benefits from (1) hydrogen-bond donors/acceptors (e.g., amide groups), (2) planar aromatic systems for tar"
+            ],
+            "pred_smiles": [
+                "NC(=O)c1cccc2c(NCc3cccc(N3CCCC(CO)c3)c3)ncnc12"
+            ],
+            "source_smiles": [
+                "NC(=O)c1cccc2c(NCc3cccc(Nc4nccs4)c3)ncnc12"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_76",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core (purine-like) with two methoxy groups, an N-alkylated amine (N(CH3)), and a substituted phenyl ring (F/Cl). The N-alkylation uses a methyl group, which is a saturated, non-aromatic substituent.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from aromatic/heteroaromatic substituents at the kinase hinge region to enhance binding affinity and selectivity. The N-methyl group in the source molecu"
+            ],
+            "pred_smiles": [
+                "COc1cc2ncnc(Nc3ccc(-c4cccnc4)c(Cl)c3)c2cc1OC"
+            ],
+            "source_smiles": [
+                "COc1cc2ncnc(N(C)c3ccc(F)c(Cl)c3)c2cc1OC"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6153846153846154
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_77",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (CS(=O)(=O)N-) attached to a benzene ring, which is linked to a bicyclic system (pyrimidine fused with a substituted benzene). The substituent on the fused benzene includes a piperazine-like N-linked chloropyridine (Nc4ncccc4Cl).\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and halogen bonding. The chlorine atom in the chloropyridine (Nc4ncccc4Cl) provides"
+            ],
+            "pred_smiles": [
+                "CS(=O)(=O)Nc1ccc(-c2cnc3cccc(Nc4cccc(C(F)(F)F)OC4)c3c2)cc1"
+            ],
+            "source_smiles": [
+                "CS(=O)(=O)Nc1ccc(-c2cnc3cccc(Nc4ncccc4Cl)c3c2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_78",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thioether-linked benzene ring with an ethyl carbonate group (CCCONC(=O)) and a substituted indole-pyrrole system (C=Cc3ccccn3 attached to the benzene). The indole-pyrrole moiety includes a vinyl group connected to a pyrrole ring fused to a benzene.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding interactions (e.g., with hinge region residues) and hydrophobic packing. The ethyl carb"
+            ],
+            "pred_smiles": [
+                "c1ccc(CSc2ccc3c(C=Cc4ccccn4)n[nH]c3c2)cc1NC(=O)N"
+            ],
+            "source_smiles": [
+                "CCCONC(=O)c1ccccc1Sc1ccc2c(C=Cc3ccccn3)n[nH]c2c1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7142857142857143
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_79",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thioether-linked bicyclic core (benzene fused to a diazepinone-like ring with a triethylene glycol chain) and a benzyl-amide substituent. Key groups include a flexible CCCO chain and a rigid bicyclic system.\",\n    \"Property Analysis\": \"JNK3 inhibition requires optimal binding to the ATP-binding pocket. The benzyl group provides hydrophobic interactions, but the CCCO chain may lack sufficient rigidity and fail"
+            ],
+            "pred_smiles": [
+                "O=C(CSc1nc2ccccc2c(=O)n1CC2CCCCC2)NCc1ccccc1"
+            ],
+            "source_smiles": [
+                "O=C(CSc1nc2ccccc2c(=O)n1CCCO)NCc1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4915254237288136
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_80",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a quinazolinone core with a methoxy-substituted benzene ring and a chloro-substituted aryloxy group. The aryloxy group (Oc4cccc(Cl)c4) is linked to the quinazolinone via an oxygen atom.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and hydrophobic interactions. The chloro-substituted benzene in the aryloxy group may contribute to hydrophobicity but lacks hydrogen-bonding"
+            ],
+            "pred_smiles": [
+                "COc1ccc(-n2c(=O)cnc3cnc(-c4ccc(N)c(Cl)c4)nc32)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(-n2c(=O)cnc3cnc(Oc4cccc(Cl)c4)nc32)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6666666666666666
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_81",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzofuranone core (O=c1cc...oc2c1...) fused to a naphthalene system. A phenol group (-c2cccc(O)c2) is attached to the benzofuranone ring. The rigid planar structure may limit conformational flexibility for optimal JNK3 binding.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding with the kinase hinge region (e.g., via hydroxyl groups) and hydrophobic interactions with the ATP-binding "
+            ],
+            "pred_smiles": [
+                "Cc1ccncc1-c1ccc2c(=O)cc(-c3cccc(O)c3)oc2c1"
+            ],
+            "source_smiles": [
+                "O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.44680851063829785
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_82",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an acetamide core linked to a substituted benzene ring with an ether-connected piperidine derivative. The piperidine is substituted with a pyrrole ring bearing a fluorinated piperazine group (N4CCCC(F)(F)C4). Key groups include piperidine (C1CCNCC1), pyrrole (C1=CC=CN1), and fluorinated piperazine (C1CNCCN1F).\",\n    \"Property Analysis\": \"JNK3 inhibition requires strong hydrogen bonding with the kinase's ATP-binding poc"
+            ],
+            "pred_smiles": [
+                "CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(C4CCN(CO)CC4)n3)C2)cc1"
+            ],
+            "source_smiles": [
+                "CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCCC(F)(F)C4)n3)C2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6037735849056604
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_83",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrrole ring (C1=CC=CN1) substituted with a bromine atom, a methyl group, and a vinyl-linked benzamide group. The pyrrole core and bromine substituent are potential targets for property optimization.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heteroaromatic motifs that engage the kinase's ATP-binding pocket. Bromine, while contributing to lipophilicity,"
+            ],
+            "pred_smiles": [
+                "Cc1[nH]c(O)cc(C=C2C(=O)Nc3ccccc32)c1C"
+            ],
+            "source_smiles": [
+                "Cc1[nH]c(C=C2C(=O)Nc3ccccc32)c(C)c1Br"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_84",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperidine ring (C1CCC(...)CC1) substituted with a methoxyethylamine group (COCCN-) and an aniline-derived moiety. The aniline group is linked to a chlorinated pyridine ring and a chloropyrimidine group, with a piperazine-like substituent (NCC4CCOCC4) attached via an ethyl chain.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heteroaromatic interact"
+            ],
+            "pred_smiles": [
+                "COCCNC1CCC(Nc2cc(-c3nc(Nc4cccnc4)ccc3Cl)c(Cl)cn2)CC1"
+            ],
+            "source_smiles": [
+                "COCCNC1CCC(Nc2cc(-c3nc(NCC4CCOCC4)ccc3Cl)c(Cl)cn2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5666666666666667
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_85",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzodioxole group (OCO2) attached to an aniline ring, a central carbonyl group, a cyclopropane ring fused to a nitroso group, and a chloro-substituted fluorophenyl group. Key functional groups include amide (C=O-N), nitroso (C=N-O), and aromatic rings with halogen substituents.\",\n    \"Property Analysis\": \"JNK3 inhibition typically requires hydrogen bonding (amide/nitroso groups), hydrophobic interactions (aromatic r"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ccc2c(c1)N2CCOCC2)C1CC(c2c(F)cccc2Cl)=NO1"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ccc2c(c1)OCO2)C1CC(c2c(F)cccc2Cl)=NO1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_86",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a fused bicyclic aromatic system (benzene fused to a pyrimidine ring) with an amide group (-NC=O) and a fluorinated aniline substituent via an ethyl linker. The fluorinated aromatic ring (para-substituted on the benzene) is connected via N-alkylation to the central core.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and halogen bonding. Fluorine, while electron-withdrawing, ma"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1cccc(Cl)c1)c1cccc2c(Nc3cccc(Cl)c3)ncnc12"
+            ],
+            "source_smiles": [
+                "NC(=O)c1cccc2c(NCc3cccc(F)c3)ncnc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.29411764705882354
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_87",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected via an amine group to a pyrimidine ring. The pyrimidine ring is further substituted with a piperazine group (N3CCN(C)CC3). Piperazine introduces flexibility and basicity due to its two tertiary amines.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions and hydrogen bonding. The piperazine group may reduce binding affinity due to excessiv"
+            ],
+            "pred_smiles": [
+                "COc1ccc(Nc2nccc(-c3ccc(F)cc3)n2)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(Nc2nccc(N3CCN(C)CC3)n2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.525
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_88",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic pyrrole core (methyl-substituted with Cl) linked to a pyridine ring. The pyridine ring has a piperazine (N2CCCC2) substituent at the para position. Key groups include a chloro-heterocycle and a flexible piperazine moiety.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from rigid, planar heterocycles (e.g., pyrrole) for hinge-binding interactions and basic nitrogen atoms (e.g., piperazine) for kin"
+            ],
+            "pred_smiles": [
+                "Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCCC2)n1"
+            ],
+            "source_smiles": [
+                "Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCC2)n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.9743589743589743
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_89",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic purine-like core with two tert-butyl groups (C(C)C), a chlorophenyl group (Nc2cccc(Cl)c2), and an N-ethyl-N-(2-hydroxyethyl)amine substituent (CC(C)N(CCO)). The hydroxyl group (CCO) may contribute to polarity but could limit membrane permeability.\",\n    \"Property Analysis\": \"JNK3 inhibition requires balanced hydrophobicity, hydrogen bonding, and steric compatibility. The chlorophenyl group likely engages in "
+            ],
+            "pred_smiles": [
+                "CC(C)n1cnc2c(Nc3cccc(Cl)c3)nc(N(C)C)c2n1"
+            ],
+            "source_smiles": [
+                "CC(C)N(CCO)c1nc(Nc2cccc(Cl)c2)c2ncn(C(C)C)c2n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4146341463414634
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_90",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring linked to a bicyclic heteroaromatic system (thieno[3,4-d]pyrimidine core) with a piperazine substituent (N4CCNCC4). The piperazine (1,4-diazacyclohexane) group provides basicity and hydrogen-bonding potential but introduces conformational flexibility.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from rigid aromatic/heteroaromatic motifs for target binding and reduced off"
+            ],
+            "pred_smiles": [
+                "COc1ccc(-n2c(=O)c(C)nc3cnc(-c4ccncc4)nc32)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(-n2c(=O)c(C)nc3cnc(N4CCNCC4)nc32)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.54
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_91",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a pyrrole ring ([nH] group) and a piperidine substituent (N-linked to the fused bicyclic system). The piperidine (C1CCNCC1) provides a basic nitrogen but lacks additional hydrogen-bonding capacity.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen-bond donors/acceptors and hydrophobic interactions. The piperidine's lone basic nitrogen may contribute to binding but limits solubilit"
+            ],
+            "pred_smiles": [
+                "c1nc(N2CCNCC2)c2cc[nH]c2n1"
+            ],
+            "source_smiles": [
+                "c1nc(N2CCCCC2)c2cc[nH]c2n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7647058823529411
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_92",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core (imidazo[1,2-a]pyrimidine) with a benzyloxy substituent (OCc1ccccc1) and a fluorophenylmethyl group. The benzyloxy group is linked via an oxygen atom to the bicyclic system.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and planar aromatic systems for target binding. The benzyloxy group may lack optimal hydrogen-bonding capacity, and the oxygen atom in th"
+            ],
+            "pred_smiles": [
+                "O=c1cnc2cnc(Nc3ccccn3)nc2n1Cc1ccc(F)cc1"
+            ],
+            "source_smiles": [
+                "O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5660377358490566
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_93",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (Nc1nccc...n1) linked to a biphenyl group. The pyrimidine has two nitrogen atoms in meta positions, contributing to aromaticity and potential hydrogen bonding. The biphenyl group provides hydrophobicity and structural rigidity.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding with the kinase's hinge region (via heterocyclic cores like pyrimidine) and hydrophobic interactions"
+            ],
+            "pred_smiles": [
+                "COc1cccc(-c2ccc3ccccc3c2)c1"
+            ],
+            "source_smiles": [
+                "Nc1nccc(-c2ccc3ccccc3c2)n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.45161290322580644
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_94",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a methyl group, a dichlorophenyl substituent, and a hydroxyl group on the purine-like scaffold. The dichlorophenyl group introduces steric bulk and electron-withdrawing effects.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from balanced hydrophobicity and hydrogen-bonding interactions. The dichlorophenyl group may disrupt optimal binding due to excessive hydrophobicity or steric clash"
+            ],
+            "pred_smiles": [
+                "Cn1c(=O)c(-c2ccc(Cl)cc2)cc2cnc(O)nc21"
+            ],
+            "source_smiles": [
+                "Cn1c(=O)c(-c2c(Cl)cccc2Cl)cc2cnc(O)nc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_95",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (ncn1) with a dimethylamine side chain (N(C)C) attached via a propyl linker (CCCN) to a urea group (C(=O)N). The aromatic ring is substituted with two chlorine atoms and an aniline moiety (Nc2).\",\n    \"Property Analysis\": \"JNK3 inhibition often requires optimal hydrogen bonding and steric compatibility. The urea group (C(=O)N) may act as a hydrogen bond donor/acceptor, while the chlorine atoms enhance"
+            ],
+            "pred_smiles": [
+                "CNc1cc(NC2CCCC2)Nc2c(Cl)cccc2Cl)ncn1"
+            ],
+            "source_smiles": [
+                "CNc1cc(N(CCCN(C)C)C(=O)Nc2c(Cl)cccc2Cl)ncn1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_96",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole core with two substituents: (1) a fluorophenyl group and (2) a pyridine ring substituted with an isopropoxy group (OC(C)C). The thiazole and fluorophenyl groups are canonical for kinase inhibition, but the isopropoxy-pyridine may limit activity.\",\n    \"Property Analysis\": \"JNK3 inhibition requires optimal hydrogen bonding and hydrophobic interactions. The isopropoxy group (OC(C)C) provides moderate hydrophob"
+            ],
+            "pred_smiles": [
+                "CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(-c3onc(=O)c3)c2)[nH]1"
+            ],
+            "source_smiles": [
+                "CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OC(C)C)c2)[nH]1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_97",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a fused bicyclic aromatic core (benzene fused to a pyrimidine ring) with an amide group (-NC=O) and a piperazine-linked substituent (NCC6H4-piperazine). The piperazine is further substituted with a pyrrole ring (C1=CC=CN1).\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions, hydrogen bonding, and aromatic stacking. The amide group provides hydrogen-bonding potential, but the unsubs"
+            ],
+            "pred_smiles": [
+                "NC(=O)c1ccc(F)cc1c1cccc2c(NCc3cccc(Nc4ncccn4)c3)ncnc12"
+            ],
+            "source_smiles": [
+                "NC(=O)c1cccc2c(NCc3cccc(Nc4ncccn4)c3)ncnc12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6923076923076923
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_98",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a ketone group (C=O), a thioether-linked side chain (SCC(=O)NCc2ccco2), and methyl-substituted rings. The side chain includes a furan ring (ccco2).\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions, hydrogen bonding, and optimal steric fit. The furan ring (oxygen heterocycle) in the side chain may limit potency due to its electron-rich nature and reduced hydro"
+            ],
+            "pred_smiles": [
+                "C=CCn1c(SCC(=O)NCc2ccccc2)nc2sc(C)c(C)c2c1=O"
+            ],
+            "source_smiles": [
+                "C=CCn1c(SCC(=O)NCc2ccco2)nc2sc(C)c(C)c2c1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7090909090909091
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_jnk_99",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C-N) linked to a propyl chain (CCC) terminating in a benzene ring (c1ccccc1). The aniline moiety (Nc1ccc(O)cc1) has a hydroxyl group (-O) on the benzene ring. The structure lacks heterocyclic motifs (e.g., piperazine, piperidine, pyrrole) and has limited conformational flexibility.\",\n    \"Property Analysis\": \"JNK3 inhibition typically benefits from (1) hydrogen-bond donors/acceptors (e.g., amid"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ccc2c(c1)N2CC2CCC2)c1ccccc1"
+            ],
+            "source_smiles": [
+                "O=C(CCCc1ccccc1)Nc1ccc(O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.24074074074074073
+            ],
+            "correct": [
+                false
+            ]
+        }
+    ]
+}

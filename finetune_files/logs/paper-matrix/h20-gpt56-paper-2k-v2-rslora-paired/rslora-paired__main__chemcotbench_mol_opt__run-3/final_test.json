@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-3",
+  "benchmark": "chemcotbench_mol_opt",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "selection_profile": "main",
+  "state": "succeeded",
+  "evaluation_mode": "post_selection",
+  "selection": {
+    "source": "validation_sweep",
+    "candidate_source": "durable_output",
+    "training_policy": "rslora",
+    "history_index": null,
+    "loop_id": null,
+    "candidate_id": "durable_output__rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199__2e8159a674ca",
+    "checkpoint_step": null,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-3/workspace/.ft_model_checkpoints/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199/output",
+    "signature": "75dcf1aa665c8044327d04c21a0a4ddb7d8905d5325a03e81b5c2696d0a93151",
+    "expected_samples": 2000,
+    "formal_training_evidence_signature": "340e71b205200967ab4dc9abbac71b2b552e0ae5ebd0d235fb15a7694c47b9eb",
+    "validation_selection_artifact_signature": "dda77f11f40c8ed6cd7434649905c41efa77bfeffbbf00388652768b02eb1117",
+    "pairing_artifact_signature": "4d15d9721d0416a6a72998ee69ba5eeb23176d0a296ee9baf686a4466683afb2",
+    "selection_profile": "main"
+  },
+  "test_range": "[-min(100, len(index_list)//2):]",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "pairing_artifact_signature": "4d15d9721d0416a6a72998ee69ba5eeb23176d0a296ee9baf686a4466683afb2",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:36711/v1"
+  },
+  "started_at": "2026-09-10T17:08:42.465816+08:00",
+  "finished_at": "2026-09-10T17:15:55.126132+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_mol_opt_drd": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 8.0,
+        "scaffold_soft": 24.09,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 48.0
+      },
+      "chemcotbench_mol_opt_gsk": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 2.0,
+        "scaffold_soft": 21.04,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 34.0
+      },
+      "chemcotbench_mol_opt_jnk": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 4.0,
+        "scaffold_soft": 26.06,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 44.0
+      },
+      "chemcotbench_mol_opt_logp": {
+        "best_rate": 24.0,
+        "mean_improvement": 0.25,
+        "scaffold_hard": 8.0,
+        "scaffold_soft": 22.74,
+        "success_rate": 32.0,
+        "total_count": 50.0,
+        "valid_score_rate": 38.0,
+        "valid_smiles_rate": 38.0
+      },
+      "chemcotbench_mol_opt_qed": {
+        "best_rate": 14.0,
+        "mean_improvement": 0.09,
+        "scaffold_hard": 16.0,
+        "scaffold_soft": 24.89,
+        "success_rate": 36.0,
+        "total_count": 50.0,
+        "valid_score_rate": 40.0,
+        "valid_smiles_rate": 40.0
+      },
+      "chemcotbench_mol_opt_solubility": {
+        "best_rate": 18.0,
+        "mean_improvement": 0.16,
+        "scaffold_hard": 20.0,
+        "scaffold_soft": 26.86,
+        "success_rate": 26.0,
+        "total_count": 50.0,
+        "valid_score_rate": 34.0,
+        "valid_smiles_rate": 34.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCCOC(F)(F)F)c2cn1)c1ccc(F)cc1",
+        "model_output": "1. The source contains a fused nitrogen-rich heteroaromatic core, a fluorophenyl group, a urea linker, and a fluorinated tetrahydropyran substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the fluorinated ether contributes lipophilicity and steric bulk.\n\n2. The demonstrated modification replaces the fluorinated tetrahydropyran with a cyclopentyl group. This removes the ether oxygen and fluorinated ring while retaining a compact hydrophobic substituent; it is not simply replacement by a cyclohexyl group.\n\n3. Removing the ether oxygen reduces hydrogen-bond-acceptor capacity and may alter polarity and metabolic susceptibility. The cyclopentyl group also changes steric shape and conformational preferences, which could affect how the substituent occupies a GSK3-beta binding region.\n\n4. Retention of the urea-linked fluorophenyl and fused heteroaromatic framework preserves the principal donor/acceptor features of the source. The modification is chemically plausible as a focused side-chain change, but improved GSK3-beta inhibition cannot be inferred without binding or activity data.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(C3CCCC3)c2cn1)c1ccc(F)cc1.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCCOC(F)(F)F)c2cn1)c1ccc(F)cc1.\n"
+      },
+      {
+        "gold": "Cc1sc2ncnc(NCCCO)c2c1C",
+        "model_output": "1. The source contains a fused sulfur/nitrogen heteroaromatic core bearing a methyl group, a ring-bound isopropyl substituent, and a flexible three-carbon amino side chain.\n\n2. The amino side chain is a plausible hydrogen-bond donor and may support kinase hinge recognition, but its flexibility could impose an unfavorable conformational penalty and may not optimally occupy a hydrophobic region of the GSK3-beta ATP-binding site.\n\n3. The demonstrated modification replaces the amino side chain with a directly attached pyridyl ring, while retaining the fused core and isopropyl group. This increases rigidity and introduces a ring-nitrogen hydrogen-bond acceptor.\n\n4. The pyridyl substituent could provide more defined hydrophobic and polar interactions and reduce side-chain flexibility, which is chemically consistent with improved GSK3-beta binding. However, the actual binding orientation, affinity, permeability, and metabolic behavior would require experimental confirmation.\n{\n    \"Final Target Molecule\": \"Cc1sc2ncnc(-c3ccncc3)c2c1C\",\n}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1sc2ncnc(NCCCO)c2c1C.\n"
+      },
+      {
+        "gold": "CC(C)Oc1ccc(Nc2ncc(C(=O)NC(C)C(=O)O)c(=O)n2Cc2ccc(Cl)cc2)cc1F",
+        "model_output": "1. The source combines a fluorinated phenyl ring and chlorophenyl group with polar amide, carbamate, heterocyclic, and ether functionalities, giving competing hydrophobic and hydrogen-bonding contributions to its LogP.\n\n2. The demonstrated modification replaces the branched isopropoxy substituent on the fluorophenyl ring with a methoxy group, while retaining the remainder of the molecular scaffold unchanged.\n\n3. Removing the isopropyl group reduces nonpolar carbon content and steric bulk, which could lower the neutral molecule’s lipophilicity. However, the methoxy group retains one hydrogen-bond acceptor and may increase polarity relative to the ether.\n\n4. This is a chemically plausible, conservative substitution, but its net effect on LogP is not unambiguous from structure alone and would require calculated or measured partitioning data.\n{\"Final Target Molecule\": COc1ccc(Nc2ncc(C(=O)NC(C)C(=O)O)c(=O)n2Cc2ccc(Cl)cc2)cc1F}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the LogP value while following a structured intermediate optimization process. LogP is a measure of a molecule's lipophilicity, which is its tendency to dissolve in a lipid (fatty) environment compared to water. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)Oc1ccc(Nc2ncc(C(=O)NC(C)C(=O)O)c(=O)n2Cc2ccc(Cl)cc2)cc1F.\n"
+      },
+      {
+        "gold": "NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CS1",
+        "model_output": "1. The source contains a fused sulfur/nitrogen heterocyclic core, a difluorophenyl group, a chlorophenyl substituent, and an N-methyl group. The chlorophenyl and difluorophenyl rings contribute substantial hydrophobic surface area.\n\n2. The demonstrated modification replaces the N-methyl substituent with a hydroxyl group while retaining the fused core, difluorophenyl group, and chlorophenyl substituent.\n\n3. The hydroxyl adds a hydrogen-bond donor and acceptor and reduces the strongly lipophilic character of the methyl group. This may improve hydration and lower overall hydrophobicity, although the retained aromatic rings still impose a significant lipophilic burden.\n\n4. The modification is chemically plausible as a solubility-oriented change, but its net effect will depend on ionization state, crystal packing, and solid-state stability; improved aqueous solubility is therefore not assured.\n}\n{\"Final Target Molecule\":\"O=C1(c2ccc(F)cc2F)COC(c2ccc(Cl)cc2)CC1N1CCOCC1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CS1.\n"
+      },
+      {
+        "gold": "c1ccc(Nc2ncnc3ccc(-c4cncs4)cc23)cc1",
+        "model_output": "1. The source is a largely planar, fused aza-aromatic scaffold bearing a methyl group and a thiazolyl substituent. Its extended aromatic surface and limited heteroatom content are consistent with substantial hydrophobic character.\n\n2. The thiazolyl group adds aromatic surface area and a ring nitrogen, but its sulfur atom is not appreciably ionizable under typical aqueous conditions. The fused aza-aromatic system may also support crystal packing that limits dissolution.\n\n3. The demonstrated modification replaces the thiazolyl substituent with a pyridyl ring while retaining the remaining molecular framework and substitution pattern.\n\n4. Pyridine nitrogen provides a hydrogen-bond acceptor and may be protonated under suitable pH conditions, potentially increasing hydration and enabling salt formation. This is a chemically plausible solubility-oriented change, although the outcome will depend on pH, solid-state packing, and the compound’s actual pKa.\n{\"Final Target Molecule\": \"CNc1cc(-c2ccc3ncnc(Nc4ccccc4)c3c2)ccn1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1ccc(Nc2ncnc3ccc(-c4cncs4)cc23)cc1.\n"
+      },
+      {
+        "gold": "CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1COCC2)c1ccc(C#N)cc1Cl",
+        "model_output": "1. The source contains a chlorophenyl–propyl–amide–pyridine core, with a pyridine N-oxide substituent and a terminal nitrile. The amide, ether, and nitrile provide hydrogen-bonding capacity, while the aromatic rings and chlorine contribute hydrophobic character.\n\n2. The demonstrated modification replaces the pyridine N-oxide substituent with a hydroxyl group while retaining the chlorophenyl–propyl–amide–pyridine framework and terminal nitrile.\n\n3. This change removes a heteroaromatic ring and introduces a hydrogen-bond donor/acceptor, potentially increasing polarity and enabling additional hydration. However, it also removes the N-oxide acceptor and may reduce aromatic surface area, so the net solubility effect is not unambiguous.\n\n4. The modification is chemically plausible as a polarity-tuning strategy, but improved water solubility would require experimental confirmation because crystal packing, ionization, and solid-state properties may offset the expected benefit.\n}\n{\"Final Target Molecule\":\"CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1OCC2)c1ccc(C#N)cc1Cl.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1COCC2)c1ccc(C#N)cc1Cl.\n"
+      },
+      {
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCc3ccccc3)c2cn1)c1ccccc1",
+        "model_output": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing a urea-linked benzyl group and a benzyloxy substituent. The urea and heterocyclic nitrogens provide potential hydrogen-bonding interactions, while the benzyl groups contribute hydrophobic surface area.\n\n2. The benzyloxy group is predominantly hydrophobic and offers no hydrogen-bond donor, which may limit polar contacts within the GSK3-beta binding site. Its phenyl ring could also support nonpolar or aromatic interactions, although the actual binding geometry is not established by the supplied evidence.\n\n3. The demonstrated modification replaces the benzyloxy group with a directly attached pyridyl ring, removing the ether linkage and introducing a ring nitrogen. This changes the substituent’s polarity, hydrogen-bond-acceptor character, and aromatic geometry while retaining a similar-sized aryl group.\n\n4. The pyridyl nitrogen could provide a directional polar interaction and alter substituent orientation, which is chemically plausible as a strategy for improving complementarity to the GSK3-beta binding pocket. However, the net effect on inhibition, solubility, permeability, and metabolic stability would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(-c3ccncc3)c2cn1)c1ccccc1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCc3ccccc3)c2cn1)c1ccccc1.\n"
+      },
+      {
+        "gold": "O=C(Nc1ccc(Oc2ncnc3[nH]ncc23)cc1)Nc1ccc(C(F)(F)F)cc1Cl",
+        "model_output": "1. The source contains a diaryl urea, a phenyl ring bearing chlorine and trifluoromethyl, and a fused nitrogen-rich heteroaromatic ring bearing a phenyl ether. The urea, heteroaromatic nitrogens, ether, and amide provide substantial polarity, while the aromatic rings and halogenated phenyl group contribute lipophilicity.\n\n2. The demonstrated modification replaces the phenyl ether substituent with a directly attached pyridyl ring. This removes one ether oxygen and increases aromatic surface area, which could shift the neutral molecule toward greater lipophilicity.\n\n3. The change also removes the phenyl ether’s hydrogen-bond-accepting character and alters the heteroaromatic ring’s electronics and basicity. These effects could influence ionization-dependent partitioning, so LogP alone may not fully represent the change in distribution behavior.\n\n4. The modification is chemically plausible as a polarity–lipophilicity rebalance, but its net effect on LogP cannot be established without calculation or measurement. The retained urea, heteroaromatic nitrogens, and amide continue to provide important polar interactions.\n}\n1. The source combines a polar urea and heteroaromatic nitrogens with a lipophilic trifluoromethylphenyl group, creating competing contributions to partitioning.\n\n2. The demonstrated modification replaces the phenyl ether substituent with a directly attached pyridyl ring, removing the ether oxygen and increasing aromatic surface area. This is a substantial scaffold change rather than a simple ether-to-amine substitution.\n\n3. Removing the ether oxygen reduces hydrogen-bond-acceptor capacity and polar surface area, while the pyridine nitrogen preserves a polar interaction site. The resulting shift in LogP is therefore chemically plausible but direction and magnitude cannot be inferred without calculation or measurement.\n\n4. The retained urea and heteroaromatic nitrogens continue to influence polarity and ionization, so the modification may rebalance lipophilicity without eliminating the molecule’s polar functionality. Any improvement in aqueous solubility or activity would require experimental confirmation.\n{\"Final Target Molecule\":\"O=C(Nc1ccc(-c2ccncc2)cc1)Nc1ccc(C(F)(F)F)cc1Cl.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the LogP value while following a structured intermediate optimization process. LogP is a measure of a molecule's lipophilicity, which is its tendency to dissolve in a lipid (fatty) environment compared to water. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccc(Oc2ncnc3[nH]ncc23)cc1)Nc1ccc(C(F)(F)F)cc1Cl.\n"
+      },
+      {
+        "gold": "CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21",
+        "model_output": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing an isopropyl group, an N-linked benzylamino substituent, and a bulky iodine atom.\n\n2. The iodine increases steric volume and lipophilicity and may interfere with productive positioning in the GSK3-beta ATP-binding site, although its effect on binding affinity cannot be inferred without structural or experimental data.\n\n3. The demonstrated modification is deiodination of the heteroaromatic core, leaving the fused core, isopropyl group, and benzylamino substituent unchanged.\n\n4. Removing iodine plausibly reduces steric congestion and may permit a more favorable binding geometry. This is a chemically reasonable strategy for improving GSK3-beta recognition, but improved inhibition or activity would require experimental confirmation.\n{\n    \"Final Target Molecule\": CC(C)n1cnc2c(NCc3ccccc3)nc21.\n}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21.\n"
+      },
+      {
+        "gold": "Cc1onc(-c2ccccc2)c1COc1ccc(C(=O)NCC(O)CO)cn1",
+        "model_output": "1. The source contains a methyl-substituted oxadiazole linked through an ether to a pyridine, plus a carboxamide bearing a hydroxymethyl group. The amide, ether, ring nitrogens, and alcohol provide several hydrogen-bonding sites and increase polarity.\n\n2. The demonstrated modification replaces the hydroxymethyl substituent on the amide nitrogen with a methyl group, while retaining the remaining scaffold unchanged.\n\n3. Removing the alcohol eliminates one hydrogen-bond donor and a polar functionality, which could increase lipophilicity. However, the amide remains polar, and the change does not add a hydrophobic aromatic ring.\n\n4. This is a chemically plausible way to shift LogP, but the magnitude and whether it reaches a desirable range would require calculation or measurement; effects on solubility, ionization, and activity also remain uncertain.\n{\n    \"Final Target Molecule\": \"Cc1onc(-c2ccccc2)c1COc1ccc(C(=O)NC(C)C)cn1.\"\n}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the LogP value while following a structured intermediate optimization process. LogP is a measure of a molecule's lipophilicity, which is its tendency to dissolve in a lipid (fatty) environment compared to water. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1onc(-c2ccccc2)c1COc1ccc(C(=O)NCC(O)CO)cn1.\n"
+      }
+    ]
+  },
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-3/final_test_workspaces/75dcf1aa665c8044"
+}

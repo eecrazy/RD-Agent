@@ -1,0 +1,1662 @@
+{
+    "mean_improvement": 0.5338606400000004,
+    "success_rate": 56.00000000000001,
+    "best_rate": 48.0,
+    "valid_smiles_rate": 76.0,
+    "valid_score_rate": 76.0,
+    "scaffold_hard": 20.0,
+    "scaffold_soft": 47.11397122345628,
+    "total_count": 50.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_50",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with: (1) an ethoxy group (CCO), (2) an amide-linked thiophene (NC(=O)c2cccs2), (3) a hydroxymethyl group (OCC), and (4) a piperazine-derived side chain (NC(=O)CCC(=O)NCCN1CCOCC1). The piperazine moiety (N1CCOCC1) is a flexible, polar group that may negatively impact LogP.\",\n    \"Property Analysis\": \"The LogP is likely reduced due to the polar piperazine group and the amide functional"
+            ],
+            "pred_smiles": [
+                "CCOc1cc(NC(=O)c2cccs2)c(OCC)cc1NC(=O)Cc1ccccc1"
+            ],
+            "source_smiles": [
+                "CCOc1cc(NC(=O)c2cccs2)c(OCC)cc1NC(=O)CCC(=O)NCCN1CCOCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.964900000000001
+            ],
+            "tgt_property": [
+                4.979000000000004
+            ],
+            "improvement": [
+                2.0141000000000027
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4909090909090909
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_51",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an acetamide group (CC(=O)N), a piperazine ring (OC2CCN...C2), and a pyrrole ring (c3ccnc...n3) substituted with a morpholine group (N4CCOCC4). The aromatic system includes a benzene ring with a methoxy substituent.\",\n    \"Property Analysis\": \"The morpholine group (N4CCOCC4) is polar and may reduce the LogP by increasing water solubility. The pyrrole ring (c3ccnc...n3) is moderately polar due to its nitrogen and may al"
+            ],
+            "pred_smiles": [
+                "CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(C)n3)C2)cc1"
+            ],
+            "source_smiles": [
+                "CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCOCC4)n3)C2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.168
+            ],
+            "tgt_property": [
+                2.639820000000001
+            ],
+            "improvement": [
+                0.471820000000001
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.58
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_52",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central 1,4-diazacyclohexane (piperazine) ring fused to a benzene ring with a fluorine substituent. The side chain includes a propylamine group (CCN) connected to an amide (C=O).\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between hydrophobic (alkyl groups, aromatic rings) and hydrophilic (amide, piperazine nitrogen) components. The propylamine group may reduce LogP due to its polar NH and hydro"
+            ],
+            "pred_smiles": [
+                "CC(C)CC(=O)NC1CC(C)(C)Oc2ccc(F)cc21"
+            ],
+            "source_smiles": [
+                "CCNC(=O)NC1CC(C)(C)Oc2ccc(F)cc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.7470000000000017
+            ],
+            "tgt_property": [
+                3.590200000000003
+            ],
+            "improvement": [
+                0.8432000000000013
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_53",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tert-butyl group (CC(C)(C)), a sulfonamide (S(=O)(=O)N), a chlorinated phenyl ring, a diketopiperazine-like core (C(=O)N(Cc2ccc[n+]([O-])c2)C3=O), and a nitro-substituted pyrrole (ccc[n+]([O-])c2).\",\n    \"Property Analysis\": \"The nitro group ([n+]([O-])) in the pyrrole ring is highly polar and negatively impacts LogP by increasing water solubility. The pyrrole's aromaticity and nitro substituent also introduce metabo"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)c1ccc(S(=O)(=O)Nc2ccc(Cl)c3c2C(=O)N(Cc2ccccc2)C3=O)cc1"
+            ],
+            "source_smiles": [
+                "CC(C)(C)c1ccc(S(=O)(=O)Nc2ccc(Cl)c3c2C(=O)N(Cc2ccc[n+]([O-])c2)C3=O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.8679000000000023
+            ],
+            "tgt_property": [
+                5.234500000000005
+            ],
+            "improvement": [
+                1.3666000000000027
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.8085106382978723
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_54",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with an acetyl group (COCH3), a fluorophenyl group (-C6H4F), and an amide-linked cyclohexane group (NC(=O)C6H11). The fluorophenyl group contributes to hydrophilicity, while the acetyl and cyclohexane groups are hydrophobic.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between hydrophilic (amide, fluorophenyl) and hydrophobic (acetyl, cyclohexane) groups. The fluo"
+            ],
+            "pred_smiles": [
+                "CC(=O)c1cc(-c2ccc(Cl)cc2)n(CC(=O)NC2CCC(C)CC2)c1C"
+            ],
+            "source_smiles": [
+                "CC(=O)c1cc(-c2ccc(F)cc2)n(CC(=O)NC2CCC(C)CC2)c1C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                4.5001200000000035
+            ],
+            "tgt_property": [
+                5.014420000000004
+            ],
+            "improvement": [
+                0.5143000000000004
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_55",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl-substituted oxazole ring (Cc1onc(-c2ccccc2)c1) linked via an ether (COc1ccc...) to a pyridine ring substituted with a carbonyl group connected to a glycerol-like chain (C(=O)NCC(O)CO). The oxazole and pyridine rings are aromatic, while the glycerol chain is polar.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between hydrophobic (methyl groups, aromatic rings) and hydrophilic (carbonyl, hyd"
+            ],
+            "pred_smiles": [
+                "CCCNCc1ccc(COc2nc(Cc3ccccc3)on2C(N)=O)cn1"
+            ],
+            "source_smiles": [
+                "Cc1onc(-c2ccccc2)c1COc1ccc(C(=O)NCC(O)CO)cn1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_56",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C(N-)) linked to two aromatic rings. One ring has a piperazine substituent (N2CCOCC2) and a hydroxyl group (-OH), while the other has a chlorine substituent (-Cl) and an additional hydroxyl group. The piperazine is a flexible, polar moiety with two nitrogen atoms.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar amide group, the hydroxyl groups, and the chl"
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ccc(-c2c[nH]cn2)cc1)c1cc(Cl)ccc1O"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ccc(N2CCOCC2)cc1)c1cc(Cl)ccc1O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.1345000000000023
+            ],
+            "tgt_property": [
+                3.688000000000001
+            ],
+            "improvement": [
+                0.5534999999999988
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4166666666666667
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_57",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide backbone with a tert-butyl group (CC(C)C), a benzodioxole-substituted alkyl chain (C(c1ccc2c(c1)OCO2)), and a morpholine ring (N1CCOCC1). The morpholine ring is a polar, hydrophilic group that may negatively impact LogP.\",\n    \"Property Analysis\": \"LogP is influenced by the balance of hydrophobic (e.g., tert-butyl, benzodioxole) and hydrophilic (e.g., amide groups, morpholine) moieties. The morpholine r"
+            ],
+            "pred_smiles": [
+                "CC(C)CNC(=O)C(=O)NCC(c1ccc2c(c1)OCO2)Cc1ccccc1"
+            ],
+            "source_smiles": [
+                "CC(C)CNC(=O)C(=O)NCC(c1ccc2c(c1)OCO2)N1CCOCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.6770000000000007
+            ],
+            "tgt_property": [
+                2.630000000000001
+            ],
+            "improvement": [
+                1.953
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.47368421052631576
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_58",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an acetamide group (CC(=O)N), a piperidine ring (C1CN(C)C(=O)O1), and a para-substituted aniline (c2cccc(N)c2). The piperidine ring is substituted with a carbonyl group and an acetamide group.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar acetamide and carbonyl groups, which decrease lipophilicity, and the aromatic aniline and piperidine rings, which increase lipophilicity. The "
+            ],
+            "pred_smiles": [
+                "Cc1cccc(N2CC3CN(c4cccc(N)c4)C(=O)O3)cc1"
+            ],
+            "source_smiles": [
+                "CC(=O)NCC1CN(c2cccc(N)c2)C(=O)O1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_59",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tert-butyl group (CC(C)(C)), a pyrrole ring (c1cccnc1), a benzofuran-like moiety (N(C(=O)c1ccco1)), and a sulfonamide-substituted benzene ring (c1ccc(NS(C)(=O)=O)cc1). The presence of polar groups (amide, sulfonamide) and aromatic systems influences its LogP.\",\n    \"Property Analysis\": \"The LogP is likely moderate due to the balance between hydrophobic (tert-butyl, aromatic rings) and hydrophilic (amide, sulfonamide)"
+            ],
+            "pred_smiles": [
+                "C1CCCCC1NC(=O)C(c1cccnc1)N(C(=O)c1ccco1)c1ccc(NS(C)(=O)=O)cc1"
+            ],
+            "source_smiles": [
+                "CC(C)(C)NC(=O)C(c1cccnc1)N(C(=O)c1ccco1)c1ccc(NS(C)(=O)=O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.348900000000002
+            ],
+            "tgt_property": [
+                3.8831000000000024
+            ],
+            "improvement": [
+                0.5342000000000002
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.46774193548387094
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_60",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyridine ring (ccn1) substituted with a methyl group (Cc1) and a complex heterocyclic system (-c2n[nH]c3cc(NC(=O)NC(CN)c4ccccc4)ncc23). The heterocyclic system includes a hydrazine-linked aromatic ring with a urea group (NC(=O)NC) connected to a benzyl group (c4ccccc4).\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the balance between its hydrophobic (methyl group, aromatic rings) and h"
+            ],
+            "pred_smiles": [
+                "Cc1cc(-c2n[nH]c3cc(NC(=O)NC(CN)Cc4ccc(F)(F)F)ncc23)ccn1"
+            ],
+            "source_smiles": [
+                "Cc1cc(-c2n[nH]c3cc(NC(=O)NC(CN)c4ccccc4)ncc23)ccn1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_61",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an ethoxy group (CCO), a phenyl ring connected via an alkyne (C#C), and a secondary amide (C(C)NC(=O)CCO) attached to the second phenyl ring. The amide group includes a methoxyethyl substituent (CCO).\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar amide group and the methoxyethyl substituent, which may reduce its hydrophobicity. The alkyne and aromatic rings contribute to lipophi"
+            ],
+            "pred_smiles": [
+                "CCCFc1ccc(C(C)NC(=O)CCO)cc1"
+            ],
+            "source_smiles": [
+                "CCOc1ccc(C#Cc2ccc(C(C)NC(=O)CCO)cc2)cc1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_62",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (c1ncc...cn1) with a methyl group (Cc1) and a substituted phenyl ring (-c2nc3cc(S(=O)(=O)N4CCCC4)ccc3n2C). The phenyl ring is functionalized with a sulfonamide group (S(=O)(=O)N) linked to a piperidine ring (N4CCCC4).\",\n    \"Property Analysis\": \"The sulfonamide group (S(=O)(=O)N) is highly polar and hydrophilic, which likely reduces the LogP (octanol-water partition coefficient) by increasing water so"
+            ],
+            "pred_smiles": [
+                "Cc1ncc(-c2nc3cc(CSC4CC4)ccc3n2C)cn1"
+            ],
+            "source_smiles": [
+                "Cc1ncc(-c2nc3cc(S(=O)(=O)N4CCCC4)ccc3n2C)cn1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.12322
+            ],
+            "tgt_property": [
+                3.734320000000002
+            ],
+            "improvement": [
+                1.6111000000000022
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.4727272727272727
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_63",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrazole core (COc1n[nH]c2...) with a urea linker (NC(=O)NC(C)...), a phenyl group (c3ccccc3), and hydroxyl/alkyl substituents (COCC(C)O). The pyrazole has two methoxy groups (CO), and the urea is connected to a tert-butyl-protected hydroxyl group (NC(C)c3ccccc3).\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between polar (urea, hydroxyl) and non-polar (phenyl, tert-butyl) groups. The current str"
+            ],
+            "pred_smiles": [
+                "COc1n[nH]c2cc(NC(=O)NCC3CCCCC3)nc(COCC(C)O)c12"
+            ],
+            "source_smiles": [
+                "COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)nc(COCC(C)O)c12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.7466000000000013
+            ],
+            "tgt_property": [
+                2.565700000000001
+            ],
+            "improvement": [
+                -0.18090000000000028
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5961538461538461
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_64",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperidine ring (C1CCNCC1) substituted with a sulfonamide group (S(=O)(=O)) attached to a benzodioxole moiety (c2ccc3c(c2)OCCO3). The side chain includes a methyl group with a carbamate linker (CNC(=O)CO-).\",\n    \"Property Analysis\": \"The LogP is influenced by the polar carbamate group (CNC(=O)CO-) and the sulfonamide-benzodioxole moiety. The carbamate is highly polar and may reduce LogP by increasing water s"
+            ],
+            "pred_smiles": [
+                "CCCNc1ccc2c(c1)OCCO2CC1CCN(S(=O)(=O)c1ccc2c(c1)OCCO2)CC1"
+            ],
+            "source_smiles": [
+                "CNC(=O)COC(=O)C1CCN(S(=O)(=O)c2ccc3c(c2)OCCO3)CC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_65",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a triazole ring (n1nnc) linked to a thiazole ring (-c2sc(...)nc2) and a phenyl group (-c2ccccc2). The thiazole ring has an amide substituent (NC(=O)C3CC3) at the 2-position. The triazole and thiazole rings contribute to aromaticity and planar geometry.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the balance between its polar (amide, nitrogen heterocycles) and non-polar (phenyl, methyl g"
+            ],
+            "pred_smiles": [
+                "CCn1nnc(-c2sc(C3CC3)nc2-c2ccccc2)n1"
+            ],
+            "source_smiles": [
+                "CCn1nnc(-c2sc(NC(=O)C3CC3)nc2-c2ccccc2)n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.8320000000000007
+            ],
+            "tgt_property": [
+                3.3609000000000018
+            ],
+            "improvement": [
+                0.528900000000001
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5961538461538461
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_66",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyridine ring (ccn1) substituted with a methyl group (Cc1) and a complex heterocyclic system (-c2n[nH]c3cc(NC(=O)NCC4CCCCO4)ncc23). The heterocyclic system includes a hydrazine-linked benzene ring with a urea group (NC(=O)N) connected to a piperidine-like moiety (CC4CCCCO4).\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar urea group (NC(=O)N) and the hydrophilic piperidine-like "
+            ],
+            "pred_smiles": [
+                "Cc1cc(-c2n[nH]c3cc(NC(=O)NCCC)ncc23)ccn1"
+            ],
+            "source_smiles": [
+                "Cc1cc(-c2n[nH]c3cc(NC(=O)NCC4CCCCO4)ncc23)ccn1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.0189200000000014
+            ],
+            "tgt_property": [
+                2.859820000000001
+            ],
+            "improvement": [
+                -0.15910000000000046
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.35
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_67",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a carboxylic acid group (O=C(O)), a bicyclic aromatic system (benzene fused with a nitrogen-containing ring), a thiazole-like substituent (-c1nccs1), and a cyclohexyl group (C1CCCCC1). The presence of the polar carboxylic acid and the thiazole-like group contributes to its hydrophilicity.\",\n    \"Property Analysis\": \"The LogP of the source molecule is likely low due to the polar carboxylic acid group and the thiazole-li"
+            ],
+            "pred_smiles": [
+                "O=C(O)c1ccc2c(c1)nc(-c1ccccc1)n2C1CCCCC1"
+            ],
+            "source_smiles": [
+                "O=C(O)c1ccc2c(c1)nc(-c1nccs1)n2C1CCCCC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                4.363200000000003
+            ],
+            "tgt_property": [
+                4.906700000000003
+            ],
+            "improvement": [
+                0.5435000000000008
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6136363636363636
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_68",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyridone core (c(=O)[nH]c1=O) with a methyl-substituted piperazine ring (C2CC(n3cc(C(C)(C)C)nn3)C(CO)O2) and a tert-butyl-substituted pyrazole (n3cc(C(C)(C)C)nn3). The piperazine ring has hydroxyl and methoxy substituents, contributing to hydrophilicity.\",\n    \"Property Analysis\": \"The LogP is likely moderate due to the balance between hydrophobic (tert-butyl, methyl) and hydrophilic (hydroxyl, methoxy) groups. The p"
+            ],
+            "pred_smiles": [
+                "C(C)(C)c1nn(C2CC(n3cc(C(C)(C)C)nn3)C(CO)O2)cc1C2CC(C(=O)[nH]c3=O)OC2"
+            ],
+            "source_smiles": [
+                "Cc1cn(C2CC(n3cc(C(C)(C)C)nn3)C(CO)O2)c(=O)[nH]c1=O"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_69",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperidine ring (C1CCC(...)CC1) substituted with a methylamine group (CN) and a fused bicyclic system (pyrrole fused to a pyrimidine-like ring: c2nnn3cnc4[nH]ccc4c23). The methylamine group is attached to the piperidine ring.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar methylamine group (CN) on the piperidine ring. The fused bicyclic system is aromatic and contributes to lip"
+            ],
+            "pred_smiles": [
+                "CC(C)NCC1CCC(c2nnn3cnc4[nH]ccc4c23)CC1"
+            ],
+            "source_smiles": [
+                "CNCC1CCC(c2nnn3cnc4[nH]ccc4c23)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.0987999999999998
+            ],
+            "tgt_property": [
+                2.8774000000000006
+            ],
+            "improvement": [
+                0.7786000000000008
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_70",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a cyclohexane ring (CC1CCC...CC1) attached to an amide group (NC(=O)), which is part of a larger bicyclic system (pyrrole fused with a pyridine-like ring). The amide is substituted with a bulky tert-butyl-like group (CCCn(CCCCO)c2=O).\",\n    \"Property Analysis\": \"The LogP is likely low due to the polar amide group and the polarizable CCCCO substituent. The cyclohexane ring contributes to hydrophobicity, but the overall "
+            ],
+            "pred_smiles": [
+                "CC(C)(C)c1n2c(cc1C)NC(=O)c1cc(C)cc(C)C1=O"
+            ],
+            "source_smiles": [
+                "CC1CCC(NC(=O)c2cc3cccnc3n(CCCCO)c2=O)CC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_71",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a complex polycyclic structure with multiple rings (cyclohexane, cyclopentane, and fused rings) and functional groups (ester, thioether, amine, hydroxyl). The presence of polar groups (ester, amine, hydroxyl) and aromatic systems affects its hydrophilicity.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between hydrophobic (alkyl, aryl) and hydrophilic (ester, amine, hydroxyl) groups. The current str"
+            ],
+            "pred_smiles": [
+                "CSc1nc(N)cc(OC)n1C(=O)OCC1(C)C(C)CCC2(CCC(=O)C12)C(C)C1O"
+            ],
+            "source_smiles": [
+                "C=CC1(C)CC(OC(=O)CSc2nc(N)cc(OC)n2)C2(C)C(C)CCC3(CCC(=O)C32)C(C)C1O"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_72",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonyl group (SO2) attached to a benzene ring, which is connected to a conjugated system (C=C-C=C) and a carboxylic acid group (COOH) on a fluorinated benzene ring. The presence of the sulfonyl group and the carboxylic acid contributes to its hydrophilicity.\",\n    \"Property Analysis\": \"The sulfonyl group (SO2) is highly polar and hydrophilic, which decreases the LogP (octanol-water partition coefficient), making th"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(C=C2C=C(CC(=O)O)c3cc(F)ccc32)cc1"
+            ],
+            "source_smiles": [
+                "CS(=O)(=O)c1ccc(C=C2C=C(CC(=O)O)c3cc(F)ccc32)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.6415000000000015
+            ],
+            "tgt_property": [
+                4.546420000000003
+            ],
+            "improvement": [
+                0.9049200000000015
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_73",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring (C1=CC=CN1) fused to a benzene ring with a methoxy substituent. A carbamate group (NC(=O)) is attached to the pyrrole, and an ethoxy group (COC-) is linked to the adjacent carbon. The pyrrole nitrogen is also substituted with a hydrogen.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar carbamate group (NC(=O)) and the moderately polar ethoxy group (COC-). The"
+            ],
+            "pred_smiles": [
+                "CC(C)Oc1cc2cc(OC)ccc2[nH]1C(=O)NCC(C)C"
+            ],
+            "source_smiles": [
+                "COCC(C)NC(=O)c1cc2cc(OC)ccc2[nH]1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_74",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a methyl group, a urea group (C(=O)N), a guanidine group (N(C)=O), and a piperazine-derived side chain (N2CCOC2=O). The piperazine ring (1,4-diazacyclohexane) is part of the side chain attached to the benzene.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar urea and guanidine groups, which decrease lipophilicity, and the piperazine side chai"
+            ],
+            "pred_smiles": [
+                "CC(Nc1cccc(CN2CCOCC2)c1)C(=O)NC(N)=O"
+            ],
+            "source_smiles": [
+                "CC(Nc1cccc(CN2CCOC2=O)c1)C(=O)NC(N)=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.6341000000000001
+            ],
+            "tgt_property": [
+                0.5141000000000007
+            ],
+            "improvement": [
+                -0.11999999999999944
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.47058823529411764
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_75",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring fused to a thiazole ring. Substituents include an ethoxyethyl chain (CCOCCCN), an amide group (NC=O), and a piperidine ring (N3CCCCCC3) attached via an amine. The molecule has polar groups (amide, heterocycles) and non-polar hydrocarbon chains.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between polar (amide, heterocycles) and non-polar (alkyl chains) groups. The piperidi"
+            ],
+            "pred_smiles": [
+                "CCOCCCNC(=O)c1cnc2sc(C3CCCCC3)nn2c1=O"
+            ],
+            "source_smiles": [
+                "CCOCCCNC(=O)c1cnc2sc(N3CCCCCC3)nn2c1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                1.6878000000000004
+            ],
+            "tgt_property": [
+                2.3551
+            ],
+            "improvement": [
+                0.6672999999999998
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5476190476190477
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_76",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (c1nc(N)ncc1) substituted with a methyl group (CN-), a cyano group (C#N), and a benzylamine group (Nc2ccc(C(=O)N3CCOCC3)cc2OC). The benzylamine group includes a morpholine ring (N3CCOCC3) attached via an amide linkage.\",\n    \"Property Analysis\": \"The morpholine ring (N3CCOCC3) in the benzylamine group is polar and hydrophilic, which likely reduces the LogP (octanol-water partition coefficient) by incr"
+            ],
+            "pred_smiles": [
+                "CNc1nc(Nc2ccc(C(=O)NC3CCCC3)cc2OC)ncc1C#N"
+            ],
+            "source_smiles": [
+                "CNc1nc(Nc2ccc(C(=O)N3CCOCC3)cc2OC)ncc1C#N"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                1.6145799999999997
+            ],
+            "tgt_property": [
+                2.814580000000001
+            ],
+            "improvement": [
+                1.2000000000000015
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.48936170212765956
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_77",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C(N-)) linked to two aromatic systems: (1) a substituted benzene ring with a trifluoromethyl (CF3) and chlorine (Cl) substituents, and (2) a benzene ring connected to an oxygen-linked heterocyclic system (pyrrole fused with an imidazole-like ring). The heterocyclic system includes a pyrrole (C1=CC=CN1) and an NH group in the fused ring.\",\n    \"Property Analysis\": \"The LogP of the source molecul"
+            ],
+            "pred_smiles": [
+                "Nc1ccc(Nc2ccc(C(F)(F)F)cc2Cl)cc1"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ccc(Oc2ncnc3[nH]ncc23)cc1)Nc1ccc(C(F)(F)F)cc1Cl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                5.461400000000002
+            ],
+            "tgt_property": [
+                4.684600000000001
+            ],
+            "improvement": [
+                -0.7768000000000006
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.2
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_78",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring (c2ncc...c(=O)n2) with a carbamate group (C(=O)NC(C)C(=O)O) and a chlorophenyl-methyl substituent (Cc2ccc(Cl)cc2). The left side features a tert-butyl ether-linked benzene (CC(C)Oc1ccc...cc1F) with fluorine and amine substituents.\",\n    \"Property Analysis\": \"The LogP is influenced by the polar carbamate group (high H-bond acceptor), the chlorophenyl (moderate lipophilicity), and the ether-link"
+            ],
+            "pred_smiles": [
+                "CC(C)Oc1ccc(Nc2ncc(C(=O)NCC(C)C)c(=O)n2Cc2ccc(Cl)cc2)cc1F"
+            ],
+            "source_smiles": [
+                "CC(C)Oc1ccc(Nc2ncc(C(=O)NC(C)C(=O)O)c(=O)n2Cc2ccc(Cl)cc2)cc1F"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.817800000000002
+            ],
+            "tgt_property": [
+                5.000700000000004
+            ],
+            "improvement": [
+                1.1829000000000018
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_79",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring (c1nc2cc...n1C) with a thiophene substituent (-sc2c(=O)n1C), a dimethylaminoethyl chain (CN(C)CCCN-), and a methyl-substituted triazole (-c3cnn(C)c3). The triazole is linked to the pyrimidine via a nitrogen atom.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar dimethylaminoethyl chain and the moderately polar triazole group. The methyl-substituted triazol"
+            ],
+            "pred_smiles": [
+                "CN(C)CCCNc1nc2cc(-c3ccc(Cl)cc3)sc2c(=O)n1C"
+            ],
+            "source_smiles": [
+                "CN(C)CCCNc1nc2cc(-c3cnn(C)c3)sc2c(=O)n1C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                1.7590999999999994
+            ],
+            "tgt_property": [
+                3.679000000000002
+            ],
+            "improvement": [
+                1.9199000000000026
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6341463414634146
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_80",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected to a side chain with a secondary amine (CNC=O), a nitro group ([N+](=O)[O-]), and a morpholine ring (N2CCOCC2). The nitro group is electron-withdrawing and polar, which may negatively impact LogP.\",\n    \"Property Analysis\": \"The nitro group contributes to high polarity and poor lipophilicity (low LogP). The morpholine ring and amide group also introduce polarity but are less"
+            ],
+            "pred_smiles": [
+                "COc1ccc(C(CNC(=O)c2cccc(Br)c2)N2CCOCC2)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(C(CNC(=O)c2cccc([N+](=O)[O-])c2)N2CCOCC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.4067000000000007
+            ],
+            "tgt_property": [
+                3.261000000000002
+            ],
+            "improvement": [
+                0.8543000000000012
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_81",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central diketopiperazine scaffold (two fused cyclic urea rings) with a propargyl ether (C#CCO) substituent on the aromatic ring. The structure has high polarity due to multiple amide groups and a ketone.\",\n    \"Property Analysis\": \"The LogP is likely low (hydrophilic) due to the polar amide groups, ketone, and propargyl ether (which can be ionized). The molecule has limited hydrophobic character despite the aromatic "
+            ],
+            "pred_smiles": [
+                "CCCc1cccc2c1C(=O)N1C(=O)CCC2N1C(=O)C1CCC(=O)N1"
+            ],
+            "source_smiles": [
+                "O=C1CCC(N2C(=O)c3cccc(C#CCO)c3C2=O)C(=O)N1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -0.5684
+            ],
+            "tgt_property": [
+                1.4786
+            ],
+            "improvement": [
+                2.0469999999999997
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.48936170212765956
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_82",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methoxy-substituted benzene ring connected via a methylene group to a secondary amide, which is further linked to a dimethyl sulfonamide. The sulfonamide is attached to a bicyclic heteroaromatic system (thieno[2,3-d]pyrimidine core).\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar sulfonamide group and the heteroaromatic system, which may reduce its hydrophobicity. The methoxy g"
+            ],
+            "pred_smiles": [
+                "COc1ccc(CNC(=O)COC(=O)C(C)(C)C)cc1"
+            ],
+            "source_smiles": [
+                "COc1ccc(CNC(=O)CN(C)S(=O)(=O)c2ccc3nc(C)sc3c2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.5502200000000004
+            ],
+            "tgt_property": [
+                1.9006999999999994
+            ],
+            "improvement": [
+                -0.649520000000001
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.06521739130434782
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_83",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thiazole ring (CSc1ncccn1) connected to a dimethylamide group (CN(CC(=O)N...)), a fluorophenyl group (c1ccc(F)cc1), and a carbonyl group (C(=O)). The presence of the polar amide and fluorophenyl groups contributes to its hydrophilicity.\",\n    \"Property Analysis\": \"The LogP of the source molecule is likely low due to the polar amide (-CONH-) and fluorine substituent (-F) on the aromatic ring, which increase wa"
+            ],
+            "pred_smiles": [
+                "CN(C)C(=O)CSc1ncccn1"
+            ],
+            "source_smiles": [
+                "CN(CC(=O)Nc1ccc(F)cc1)C(=O)CSc1ncccn1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                1.8048999999999995
+            ],
+            "tgt_property": [
+                0.6569
+            ],
+            "improvement": [
+                -1.1479999999999995
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.1
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_84",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thioether-linked bicyclic system (thiazole and benzene rings) with an amide group, a phenyl ring, and a furan-substituted amine. Key functional groups include amides, aromatic rings, and a thioether.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between hydrophobic (aromatic rings, thioether) and hydrophilic (amide, furan oxygen) groups. The current structure may have moderate LogP due to "
+            ],
+            "pred_smiles": [
+                "O=C(NCc1ccco1)c1nc2ccccc2c(=O)n1Cc1ccccc1"
+            ],
+            "source_smiles": [
+                "O=C(CSc1nc2ccccc2c(=O)n1Cc1ccccc1)NCc1ccco1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.4463000000000017
+            ],
+            "tgt_property": [
+                2.9678000000000013
+            ],
+            "improvement": [
+                -0.47850000000000037
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7321428571428571
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_85",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an aniline (Nc1ccc...), a methylene-linked imidazo[1,2-a]pyrimidine core (CNc2ncnc3c2ncn3), and a sugar-like tetracyclic oxygenated moiety (C2OC(CO)C(O)C2O). The presence of the primary amine (-NH2) on the benzene ring contributes to hydrophilicity.\",\n    \"Property Analysis\": \"The LogP is likely low due to the polar primary amine (-NH2) and the hydroxyl groups in the tetracyclic moiety, which increase water solubility "
+            ],
+            "pred_smiles": [
+                "CNc1ccc(CNc2ncnc3c2ncn3C2OC(CO)C(O)C2O)cc1"
+            ],
+            "source_smiles": [
+                "Nc1ccc(CNc2ncnc3c2ncn3C2OC(CO)C(O)C2O)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                -0.36790000000000056
+            ],
+            "tgt_property": [
+                0.09159999999999924
+            ],
+            "improvement": [
+                0.4594999999999998
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_86",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyridine ring (ccn1) substituted with a methyl group (c1cc), a thioether-linked triazole (CSc2nnc...), and a benzimidazole moiety (-c3ccc4[nH]cnc4c3). The triazole and benzimidazole groups introduce polarity due to their nitrogen atoms.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between hydrophobic (methyl group, thioether) and hydrophilic (nitrogen atoms in triazole/benzimidazole) groups. The "
+            ],
+            "pred_smiles": [
+                "c1cc(CSc2nnc(-c3ccncc3)o2)ccn1"
+            ],
+            "source_smiles": [
+                "c1cc(CSc2nnc(-c3ccc4[nH]cnc4c3)o2)ccn1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.300200000000001
+            ],
+            "tgt_property": [
+                2.8189
+            ],
+            "improvement": [
+                -0.48130000000000095
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.6086956521739131
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_87",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl ester (COC(=O)), a dimethoxy-substituted benzene ring, an amide linkage (NC(=O)), and a pyrrole ring (c1cnccn1). The pyrrole ring is a 5-membered aromatic heterocycle with one nitrogen atom.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar amide group, the ester group, and the moderately polar pyrrole ring. The dimethoxy benzene contributes to lipophilicity but may not be "
+            ],
+            "pred_smiles": [
+                "COC(=O)c1cc(OC)c(OC)cc1NC(=O)c1cccs1"
+            ],
+            "source_smiles": [
+                "COC(=O)c1cc(OC)c(OC)cc1NC(=O)c1cnccn1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                1.5326999999999997
+            ],
+            "tgt_property": [
+                2.8042000000000007
+            ],
+            "improvement": [
+                1.271500000000001
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.41025641025641024
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_88",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a hydroxyl group (-OH) attached to an ethylene chain (OCCN), a secondary amine (N(CCO)), a propylamine linker (CCCN), and a bicyclic aromatic system (N1c2ccccc2Oc2ccccc21) with a hydroxyl substituent.\",\n    \"Property Analysis\": \"The hydroxyl group (-OH) in the OCCN chain contributes to higher hydrophilicity, reducing the LogP (octanol-water partition coefficient). The aromatic systems and the secondary amine with an et"
+            ],
+            "pred_smiles": [
+                "CCCCCN1c2ccccc2Oc2ccccc21"
+            ],
+            "source_smiles": [
+                "OCCN(CCO)CCCN1c2ccccc2Oc2ccccc21"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.607100000000001
+            ],
+            "tgt_property": [
+                5.120600000000004
+            ],
+            "improvement": [
+                2.513500000000003
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_89",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a complex polycyclic structure with a piperidine ring (C1CCC2C3CCC4N(C)C(=O)CCC4(C)C3CCC21C) and an amide group (N(C=O)). The presence of the tertiary amine (N(C=O)) and the bulky tert-butyl group (CC(C)) may influence solubility and LogP.\",\n    \"Property Analysis\": \"The LogP is likely moderate due to the balance between the hydrophobic polycyclic framework and the polar amide group. The tertiary amine and bulky substi"
+            ],
+            "pred_smiles": [
+                "N=C(C)C(=O)C1CCC2C3CCC4N(C)C(=O)CCC4(C)C3CCC21C"
+            ],
+            "source_smiles": [
+                "CC(C)N(C=O)C1CCC2C3CCC4N(C)C(=O)CCC4(C)C3CCC21C"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                4.085200000000003
+            ],
+            "tgt_property": [
+                4.0747700000000036
+            ],
+            "improvement": [
+                -0.010429999999999495
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_90",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperidine ring (C1CCNCC1) connected to a substituted pyridine ring (c2cc(Cl)c(-c3cccc(NC4CCNCC4)n3)cn2). The pyridine has a chlorine substituent and a phenyl ring linked via a piperazine group (NC4CCNCC4). The molecule has polar groups (hydroxyl, amine) and hydrophobic regions (aromatic rings).\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between polar (hydroxyl, amine) and non-polar gro"
+            ],
+            "pred_smiles": [
+                "CCN(C)CC1CN(C)CCC1c1cc(-c2cccc(NC3CCNCC3)n2)c(Cl)cn1"
+            ],
+            "source_smiles": [
+                "OC1CCC(Nc2cc(-c3cccc(NC4CCNCC4)n3)c(Cl)cn2)CC1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.676300000000002
+            ],
+            "tgt_property": [
+                3.9479000000000024
+            ],
+            "improvement": [
+                0.2716000000000003
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.7446808510638298
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_91",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central bicyclic heteroaromatic core (imidazo[1,2-a]pyrimidine) with a piperazine-like substituent (via Cc3cnccn3), a primary amine (-NH2), and a butylamine chain (CCCCN). The piperazine-like group is likely contributing to higher hydrophilicity.\",\n    \"Property Analysis\": \"The LogP is likely lower (more hydrophilic) than desired due to the polar piperazine-like substituent (Cc3cnccn3) and the primary amine (-NH2). T"
+            ],
+            "pred_smiles": [
+                "CCCCNc1nc(N)c2nc(O)n(CCC)c2n1"
+            ],
+            "source_smiles": [
+                "CCCCNc1nc(N)c2nc(O)n(Cc3cnccn3)c2n1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                1.1643999999999999
+            ],
+            "tgt_property": [
+                1.7360999999999995
+            ],
+            "improvement": [
+                0.5716999999999997
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.2682926829268293
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_92",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (O=S(=O)(N...)) attached to a tetrahydrofuran ring (NCC1CCCO1) and a biphenyl system with a sulfonamide-linked piperidine (S(=O)(=O)N2CCCC2). The presence of polar sulfonamide groups and the tetrahydrofuran ring contributes to its hydrophilicity.\",\n    \"Property Analysis\": \"The LogP of the source molecule is likely low due to the polar sulfonamide groups and the tetrahydrofuran ring, which increase "
+            ],
+            "pred_smiles": [
+                "O=S(=O)(NC1CCCCC1)c1ccc(S(=O)(=O)N2CCCC2)cc1"
+            ],
+            "source_smiles": [
+                "O=S(=O)(NCC1CCCO1)c1ccc(S(=O)(=O)N2CCCC2)cc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.9283999999999994
+            ],
+            "tgt_property": [
+                2.0820999999999996
+            ],
+            "improvement": [
+                1.1537000000000002
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.5106382978723404
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_93",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with: (1) an amide group (O=C(N-)) linked to a second benzene ring with a nitro group ([N+](=O)[O-]) and a morpholine ring (N2CCOCC2), (2) a benzofuran moiety (c1ccco1). The morpholine and nitro groups are polar, while the benzofuran is moderately lipophilic.\",\n    \"Property Analysis\": \"The LogP is likely moderate due to the balance between polar groups (amide, nitro, morpholine) and "
+            ],
+            "pred_smiles": [
+                "O=C(Nc1ccc(-c2csc2)c([N+](=O)[O-])c1)c1ccco1"
+            ],
+            "source_smiles": [
+                "O=C(Nc1ccc(N2CCOCC2)c([N+](=O)[O-])c1)c1ccco1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_94",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl ester (COC(=O)), an amide linkage (NC(=O)), a phenyl ring (c1ccccc1), and a cyclic amide (N1CCC1=O). The ester and amide groups are polar, while the phenyl and cyclic amide contribute to hydrophobicity.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between polar (ester, amide) and non-polar (phenyl, cyclic amide) groups. The ester group (COC(=O)) is more polar and reduces LogP compared to a"
+            ],
+            "pred_smiles": [
+                "CNC(=O)C(c1ccccc1)N1CCC1=O"
+            ],
+            "source_smiles": [
+                "COC(=O)CNC(=O)C(c1ccccc1)N1CCC1=O"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                0.2491999999999992
+            ],
+            "tgt_property": [
+                0.7059999999999997
+            ],
+            "improvement": [
+                0.45680000000000054
+            ],
+            "scaffold_same": [
+                true
+            ],
+            "scaffold_similarity": [
+                1.0
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_95",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiophene ring (c1cc(C)c2c(n1)SCC(=O)N2) with a methyl substituent, a piperazine-like fragment (N2CC(=O)NCCC1=CCCCC1), and a cyclohexenyl group. The presence of polar groups (amide, thioether) and the cyclohexenyl moiety contributes to its hydrophilicity.\",\n    \"Property Analysis\": \"The LogP is likely moderate due to the balance between hydrophobic (methyl, cyclohexenyl) and hydrophilic (amide, thioether) groups. The"
+            ],
+            "pred_smiles": [
+                "CC(C)(C)NC(=O)Cn1c(SCC(=O)N2CC(=O)N2C)cccc1C"
+            ],
+            "source_smiles": [
+                "Cc1cc(C)c2c(n1)SCC(=O)N2CC(=O)NCCC1=CCCCC1"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_96",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperazine ring (N2CCCN12) fused to a bicyclic system (O=C1N...C(c2cccnc2)N...). Key groups include a phenyl ring (c2ccccc2) and a pyrrole ring (c2cccnc2). The molecule has polar amide and tertiary amine groups.\",\n    \"Property Analysis\": \"The LogP is likely moderate due to the balance between polar (amide, tertiary amine) and non-polar (aromatic rings) groups. The piperazine ring and amide group may reduce L"
+            ],
+            "pred_smiles": [
+                "CCN(CC)C1=C(Nc2ccccc2)NC(C)c2cccnc21"
+            ],
+            "source_smiles": [
+                "O=C1N(c2ccccc2)C(c2cccnc2)N2CCCN12"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.6431000000000004
+            ],
+            "tgt_property": [
+                3.8258000000000028
+            ],
+            "improvement": [
+                1.1827000000000023
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.18333333333333332
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_97",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central indole-like bicyclic system (c2c[nH]c3ncc...cc23) with a methoxy-substituted benzene ring (COc1ccc...cc1OC) and a pyridine ring (-c4cncc(N)c4) attached via the bicyclic core. The pyridine ring has an amino group (-NH2).\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the polar amino group (-NH2) on the pyridine ring, which decreases lipophilicity. The methoxy groups (OC) on the be"
+            ],
+            "pred_smiles": [
+                "COc1ccc(-c2c[nH]c3ncc(-c4cncc(F)c4F)c23)cc1OC"
+            ],
+            "source_smiles": [
+                "COc1ccc(-c2c[nH]c3ncc(-c4cncc(N)c4)cc23)cc1OC"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "src_property": [
+                null
+            ],
+            "tgt_property": [
+                null
+            ],
+            "improvement": [
+                null
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_98",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine-like system (C1=NC=CC=N1C2=NC=CC=N2), substituted with a urea group (NC(=O)N) linked to a benzyl group (C1CCCCC1) and a piperazine ring (C1CNCCN1). The pyrrole and pyrimidine cores are hydrophobic, while the urea and piperazine groups introduce polarity.\",\n    \"Property Analysis\": \"The LogP is influenced by the balance between hydrophobic (benzyl, pyrrole, pyrimidine) and hy"
+            ],
+            "pred_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(NC3CCCCC3)c2cn1)c1ccccc1"
+            ],
+            "source_smiles": [
+                "CC(NC(=O)Nc1cc2[nH]nc(NC3CNC3)c2cn1)c1ccccc1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                2.2242999999999995
+            ],
+            "tgt_property": [
+                4.585200000000003
+            ],
+            "improvement": [
+                2.3609000000000036
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.8518518518518519
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_opt_logp_99",
+            "pred_raw": [
+                "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (Nc1nc...cs1) substituted with a trifluoromethylphenyl group (-c2ccccc2C(F)(F)F). The pyrimidine ring has two nitrogen atoms, contributing to its polarity. The trifluoromethyl group is electron-withdrawing and hydrophobic.\",\n    \"Property Analysis\": \"The LogP of the source molecule is influenced by the balance between the polar pyrimidine ring (reducing LogP) and the hydrophobic trifluoromethylphenyl "
+            ],
+            "pred_smiles": [
+                "Nc1cc(-c2ccccc2C(F)(F)F)ccn1"
+            ],
+            "source_smiles": [
+                "Nc1nc(-c2ccccc2C(F)(F)F)cs1"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "src_property": [
+                3.411100000000001
+            ],
+            "tgt_property": [
+                3.3496000000000015
+            ],
+            "improvement": [
+                -0.061499999999999666
+            ],
+            "scaffold_same": [
+                false
+            ],
+            "scaffold_similarity": [
+                0.38461538461538464
+            ],
+            "correct": [
+                false
+            ]
+        }
+    ]
+}

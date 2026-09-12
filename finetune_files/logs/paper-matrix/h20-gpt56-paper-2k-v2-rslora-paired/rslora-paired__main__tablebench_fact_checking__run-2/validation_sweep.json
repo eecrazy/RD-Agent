@@ -1,0 +1,46 @@
+{
+  "baseline_only": false,
+  "benchmark": "tablebench_fact_checking",
+  "candidate_count": 1,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_output__rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501__39f5cf20db0f",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_fact_checking__run-2/validation_sweep/candidates/durable_output__rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501__39f5cf20db0f/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "3e838fd26dd9bc7437dab36a13470871115addc832e33345015ac0b9f57e395c",
+  "completed_count": 1,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/tablebench_fact_checking/run-2",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "3e838fd26dd9bc7437dab36a13470871115addc832e33345015ac0b9f57e395c",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "615c7d1c7e60a95ad00504bec3ba865ed48c7662eae0f8fffe7da6a77aa5b7b2",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501__39f5cf20db0f",
+    "formal_training_evidence_signature": "9a387b74db96703b3a205852001ee47cd737724a2df294f7155ebc6bf70c1293",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_fact_checking__run-2/workspace/.ft_model_checkpoints/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501/output",
+    "selection_metrics": [
+      {
+        "formula": "unweighted mean accuracy across released dataset views",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 79.17
+      }
+    ],
+    "selection_signature": "39f6d584920dd3941e9e8926c6f89a6121df6d472591d1eb3a1ed84c54477829"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:18:22.192446+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

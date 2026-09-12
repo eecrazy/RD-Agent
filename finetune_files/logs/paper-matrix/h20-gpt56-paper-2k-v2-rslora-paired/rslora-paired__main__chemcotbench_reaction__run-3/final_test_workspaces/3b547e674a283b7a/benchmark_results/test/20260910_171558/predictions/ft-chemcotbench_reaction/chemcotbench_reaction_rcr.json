@@ -1,0 +1,452 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Addition:\nCC(C)(C)OC(=O)OC(=O)OC(C)(C)C.CN1C(=O)[C@@H]2COC[C@]2(c2cc([N+](=O)[O-])ccc2F)N=C1N>>CN1C(=O)[C@@H]2COC[C@]2(c2cc([N+](=O)[O-])ccc2F)N=C1NC(=O)OC(C)(C)C,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic acyl substitution of the methyl ester by the secondary amine. The amine attacks the ester carbonyl, and collapse of the tetrahedral intermediate expels methoxide. A tertiary amine base is needed to neutralize the acidic carboxylic acid formed and promote ester hydrolysis. Triethylamine is well suited because it is a non-nucleophilic, non-nitrogenous base that is compatible with the amide, aryl fluoride, and sulfonamide functionalities.\n\n{\"SMILES\":\"CC(N)(N)CC\"}",
+        "gold": "CCN(CC)CC"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Reduction:\nCCOC(=O)C[C@H](NC(=O)OCc1ccccc1)c1cccc([N+](=O)[O-])c1>>CCOC(=O)C[C@H](NC(=O)OCc1ccccc1)c1cccc(N)c1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a nitro group, which is the principal site of reduction. A mild, selective reducing agent is required to convert the nitro group to an amino group while leaving the ester, amide, and stereocenter unchanged. Dibutylboron hydride is well suited to this transformation because it selectively reduces nitro groups to primary amines under mild conditions. The amide carbonyl and ester are stable toward this reagent, and the chiral center is retained as a carbinolamine.\n\n{\"SMILES\":\"CC(C)(C)B(C)(C)H\"}",
+        "gold": "CC(=O)O.OC(=O)[O-].[Na+]"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Deprotection:\nOC[C@@]12CO[C@@](c3ccc(Cl)c(Cc4ccc(OCCOCc5ccccc5)cc4)c3)(O1)[C@H](O)[C@@H](O)[C@@H]2O>>OCCOc1ccc(Cc2cc([C@]34OC[C@](CO)(O3)[C@@H](O)[C@H](O)[C@H]4O)ccc2Cl)cc1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a selective deprotection of the benzyl ester, converting the benzylic alcohol into a carboxylic acid while leaving the Boc-protected amine and the aryl ether unchanged. A polar aprotic solvent is appropriate because it dissolves the organic substrate and the resulting carboxylic acid without competing as a nucleophile or base. THF is well suited to this transformation because it is compatible with the Boc protecting group and is readily removed after deprotection.\n\n{\"SMILES\":\"C[Si](C)(C)C\"}",
+        "gold": "C1CCOC1.CCO"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Oxidation:\nC=CC[C@@H]1CCC[C@H](O[Si](c2ccccc2)(c2ccccc2)C(C)(C)C)C1.O=[Os](=O)(=O)=O>>CC(C)(C)[Si](O[C@@H]1CCC[C@H](CC=O)C1)(c1ccccc1)c1ccccc1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a terminal alkyne, while the product contains a terminal aldehyde. The transformation is a Sonogashira-type coupling: the terminal alkyne is converted into a terminal alkene, and the aryl C–O–Si bond is replaced by a C–C bond to the aldehyde carbon. The aryl–O–Si bond is therefore the principal leaving group, and the appropriate reagent is a fluoride source that promotes cleavage of the aryl–O–Si bond. Tetrabutylammonium fluoride in THF is well suited to this role.\n\n{\"SMILES\":\"[Si](C)(C)C(F)(F)F\"}",
+        "gold": "[Na+].[O-][I+3]([O-])([O-])[O-]"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of C-C Coupling:\nC#Cc1ccccc1.Clc1ccc(Cl)nc1>>Clc1ccc(C#Cc2ccccc2)nc1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Sonogashira-type C–C coupling between a terminal alkyne and an aryl or vinyl chloride. A polar aprotic medium is appropriate because it dissolves the organic substrates and reaction intermediates while remaining compatible with the mild coupling conditions. N-Methyl-2-pyrrolidone is well suited because it is miscible with the organic substrates, has good solubilizing power, and is compatible with the palladium catalyst and base.\n\n{\"SMILES\":\"CN1CCN(CC)CC1\"}",
+        "gold": "O"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Reduction:\nCOc1ccc2c(c1)C(=CC#N)CCC2>>COc1ccc2c(c1)C(=CCN)CCC2,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a reductive amination of an α-keto nitrile to an α-amino nitrile. A polar protic medium is appropriate because it dissolves the organic substrate and supports the nucleophilic addition and proton-transfer steps. Methanol is well suited because it is compatible with the nitrile and ketone groups and is readily removed after the reaction.\n\n{\"SMILES\":\"CO\"}",
+        "gold": "CCO"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Heteroatom Alkylation and Arylation:\nC=C(c1ccc(NC(=O)c2cccc(I)c2C(=O)NC(C)C)c(C)c1)C(F)(F)F.ON=CC(F)(F)F>>Cc1cc(C2(C(F)(F)F)CC(C(F)(F)F)=NO2)ccc1NC(=O)c1cccc(I)c1C(=O)NC(C)C,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a vinyl triflate alkylation of an electron-deficient pyridine nitrogen. A polar aprotic medium is appropriate because it dissolves the organic substrates and ionic byproducts while minimizing competitive hydrogen-bonding interactions. N,N-Diethylacetamide is well suited because it is compatible with the acidic conditions and provides a non-nucleophilic, non-nitrogen-containing medium that does not compete for the electrophilic site.\n\n{\"SMILES\":\"CC(=O)N(C(C)(C)C)C(C)(C)C\"}",
+        "gold": "COCCOC"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Aromatic Heterocycle Formation:\nCC(=O)N1C(=O)N(C(C)=O)C(Cl)C1Cl>>CC(=O)n1ccn(C(C)=O)c1=O,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation converts a chlorinated fused imide into a 1,3-benzoxazin-4-one, a five-membered aromatic heterocycle. The key change is formation of the C–O bond between the imide carbonyl carbon and the exocyclic carbon bearing chlorine. This is a Corey–Fuchs rearrangement, which requires a strong base to promote intramolecular cyclodehydration. Potassium hydroxide is well suited because it provides the necessary basicity while remaining compatible with the carbonyl and chloro substituents.\n\n{\"SMILES\":\"[OH-]\"}",
+        "gold": "CN(C)C=O.O"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Heteroatom Alkylation and Arylation:\nCN1CCN(c2ccc(N)cc2)CC1.COc1ccc(Cn2cc3nc(-c4ncco4)nc(Cl)c3n2)cc1>>CN1CCN(c2ccc(Nc3nc(-c4ncco4)nc4cn[nH]c34)cc2)CC1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic aromatic substitution of the chloro-substituted heteroaryl ring by the amino-substituted pyridine ring. A mild, non-nucleophilic, non-nitrogen-containing base is needed to promote deprotonation of the pyridine nitrogen and activate the heteroaryl chloride for substitution. Triethylamine is well suited to this role because it is sufficiently basic to deprotonate the pyridine while remaining compatible with the amino and nitro groups.\n\n{\"SMILES\":\"CN(C)(C)C\"}",
+        "gold": "Cl"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Interconversion:\nO=C1OCc2c1c(Cl)nc1ccccc21>>O=C1OCc2c1cnc1ccccc21,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic aromatic substitution at the chloro-substituted fused aromatic ring. A mild Lewis acid promotes activation of the ring toward substitution, while a base is needed to deprotonate the anion formed during substitution. A suitable catalyst is a combination of boron trifluoride and pyridine: boron trifluoride activates the ring, and pyridine serves as a mild, non-nucleophilic base.\n\n{\"SMILES\":\"BF[Py]\"}",
+        "gold": "[Pd]"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Aromatic Heterocycle Formation:\nN#Cc1ncc(Br)cc1[N+](=O)[O-].NC(N)=O>>c1cnc2cncnc2c1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs-type cyclization of a 2-aminobenzoxazole derivative. The key catalyst is a Lewis acid that activates the heteroaryl C–Br bond for intramolecular attack by the amine. A suitable catalyst is boron trifluoride, which promotes formation of the cyclic imine and subsequent cyclization to the fused heterocycle.\n\n{\"SMILES\":\"[BF-4]\"}",
+        "gold": "[Ni]"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Deprotection:\nCC(C)(C)OC(=O)N[C@@H]1CN(Cc2ccccc2)CC[C@H]1F>>CC(C)(C)OC(=O)N[C@@H]1CNCC[C@H]1F,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Boc deprotection of the N-Boc-protected piperidine nitrogen. The resulting amine is sufficiently basic to promote further Boc transfer to the solvent, so a non-nucleophilic, non-nitrogen-containing medium is appropriate. THF is well suited because it is compatible with the amine and does not compete for Boc transfer.\n\n{\"SMILES\":\"CC(C)(C)OC(=O)C\"}",
+        "gold": "CO"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Acylation:\nCC(=O)OC(C)=O.C[C@]12C=CC(=O)C=C1CC[C@@H]1[C@@H]2CC[C@]2(C)C(=CCO)CC[C@@H]12>>CC(=O)OCC=C1CC[C@H]2[C@@H]3CCC4=CC(=O)C=C[C@]4(C)[C@H]3CC[C@]12C,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs acylation: the exocyclic carboxylic acid of the bicyclic substrate is converted into an ester by condensation with the methyl ester of 4-nitrobenzoic acid. A polar aprotic medium is appropriate because it dissolves the organic substrates and supports the nucleophilic acyl-substitution sequence without competing as a reaction medium. THF is well suited to this transformation because it is compatible with the acidic conditions required for carboxylic-acid activation and is readily removed after the acylation.\n\n{\"SMILES\":\"CC(C)=O\"}",
+        "gold": "ClCCl"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Reduction:\nCC(C)(C)OC(=O)NC1CCC(C(=O)Nc2cc(OCc3ccc(C(=N)NO)cc3)cc(OCc3ccc(C(=N)NO)cc3)c2)CC1>>CC(C)(C)OC(=O)NC1CCC(C(=O)Nc2cc(OCc3ccc(C(=N)N)cc3)cc(OCc3ccc(C(=N)N)cc3)c2)CC1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a nitroarene, while the product replaces the nitro group with a primary amine. This is a reductive amination involving hydrogenolysis of the nitro group followed by amine formation. A suitable catalyst is a supported palladium species, because it promotes nitro-group reduction and can also activate the amine precursor. A palladium–carbon catalyst is therefore appropriate.\n\n{\"SMILES\":\"[Pd]\"}",
+        "gold": "[Zn]"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Aromatic Heterocycle Formation:\nCC(=O)Cc1ccccc1[N+](=O)[O-]>>Cc1cc2ccccc2[nH]1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation converts a nitro-substituted benzoyl chloride into a 1H-tetrazole by nucleophilic aromatic substitution. The required reagent is hydrazine, which supplies the two nitrogen atoms needed for tetrazole formation. Hydrazine reacts with the nitro group to form a diazonium intermediate, followed by displacement of chloride and reduction to the tetrazole.\n\n{\"SMILES\":\"N=N\"}",
+        "gold": "CC(=O)[O-].[Na+]"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Addition:\nCC(C)(C)OC(=O)N[C@H]1C[C@H](F)CN(C(=O)OCc2ccccc2)C1.O=[N+]([O-])c1cnccc1Cl>>CC(C)(C)OC(=O)N[C@H]1C[C@H](F)CN(c2ccncc2[N+](=O)[O-])C1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic aromatic substitution of the chloro-substituted pyridine by the amino group of the Boc-protected piperazine. A mild, non-nucleophilic, non-nitrogen-activating base is needed to promote substitution while leaving the amide, Boc carbamate, and aryl fluoride groups intact. Triethylamine is well suited to this role because it neutralizes the acidic pyridine proton and provides sufficient basicity to facilitate substitution without altering the other functional groups.\n\n{\"SMILES\":\"CC(N)(N)CC\"}",
+        "gold": "CCN(C(C)C)C(C)C.CO"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Interconversion:\nCCOC(=O)Cl.Nc1cc(NCc2ccc(F)cc2)c(F)cc1[N+](=O)[O-]>>CCOC(=O)Nc1cc(F)c(NCc2ccc(F)cc2)cc1N,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic acyl substitution of the acyl chloride by the amino group of the heterocyclic nitrogen nucleophile. A polar aprotic medium is appropriate because it dissolves the organic reactants and supports the nucleophilic acyl-substitution mechanism without competing as a proton donor. N,N-Dimethylformamide is well suited to this transformation because it is a polar aprotic solvent that is compatible with the amine and the heterocyclic N–H nucleophile.\n\n{\"SMILES\":\"CC(=O)N(C)C\"}",
+        "gold": "CO"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Interconversion:\nCB1OB(C)OB(C)O1.CCOC(=O)N1C[C@@H]2OCc3c(C)cc(OS(=O)(=O)C(F)(F)F)cc3[C@@H]2C1>>CCOC(=O)N1C[C@@H]2OCc3c(C)cc(C)cc3[C@@H]2C1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation replaces the aryl–O–SO₂ triflate linkage with an aryl–O–CH₂ linkage, converting the sulfonate ester into a benzylic ether. This is a standard Mitsunobu substitution. A suitable catalyst is triphenylphosphine, which activates the alcohol and promotes substitution by the sulfonate-derived nucleophile. The corresponding acid is not required because the alcohol is sufficiently activated by the phosphine.\n\n{\"SMILES\":\"CC[Pd](CC)(CC)CC\"}",
+        "gold": "c1ccc([P](c2ccccc2)(c2ccccc2)[Pd]([P](c2ccccc2)(c2ccccc2)c2ccccc2)([P](c2ccccc2)(c2ccccc2)c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)cc1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Oxidation:\nC=CCn1c(=O)ccc2ccc(C#N)cc21.O=[Os](=O)(=O)=O>>N#Cc1ccc2ccc(=O)n(CC=O)c2c1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs olefination: the terminal alkyne is converted into a C–C bond with the nitrile carbon, while the nitrile and ketone remain unchanged. A polar aprotic medium is appropriate because it dissolves the organic substrates and the osmium catalyst without competing as a hydrogen-bonding or nucleophilic medium. THF is well suited to this transformation because it is compatible with the osmium catalyst and provides a sufficiently polar, aprotic environment.\n\n{\"SMILES\":\"C=CCn1c(=O)ccc2ccc(C#N)cc21.O=[Os](=O)(=O)=O.O=S(=O)(O)C(F)(F)F\"}",
+        "gold": "C1COCCO1.O"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Protection:\nCC(C)C[C@H](CNC(=O)c1ccccc1)CC(=O)O.OCc1ccccc1>>CC(C)C[C@H](CNC(=O)c1ccccc1)CC(=O)OCc1ccccc1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Boc-transfer from di-tert-butyl dicarbonate to the primary alcohol, forming the corresponding tert-butyl ester while leaving the amide and stereocenter intact. A mild, non-nucleophilic base is needed to promote ester formation and protonate the alcohol-derived byproduct. Triethylamine is well suited because it is sufficiently basic to activate the carbamate, yet it is compatible with the amide and does not interfere with the Boc group.\n\n{\"SMILES\":\"CC(N)(C)(C)C\"}",
+        "gold": "CN(C)c1ccncc1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Deprotection:\nCC(C)(CCn1cnc(-c2ccccc2)c1)NC[C@H](O)c1ccc(OCc2ccccc2)c(NS(=O)(=O)c2cccc3c2NCCC3)c1>>CC(C)(CCn1cnc(-c2ccccc2)c1)NC[C@H](O)c1ccc(O)c(NS(=O)(=O)c2cccc3c2NCCC3)c1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a tert-butyl ester, which is the most suitable group for selective deprotection. Tetrabutylammonium fluoride in THF is a standard reagent for cleaving tert-butyl esters under mild conditions. The amine, sulfonamide, and aryl ether groups remain unchanged.\n\n{\"SMILES\":\"[NH+][BF4-]\"}",
+        "gold": "[H][H]"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Deprotection:\nCC(Cc1ccc(N2CC(=O)NS2(=O)=O)c(OCc2ccccc2)c1)C(=O)c1ccccc1>>CC(Cc1ccc(N2CC(=O)NS2(=O)=O)c(O)c1)C(=O)c1ccccc1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a tert-butyl ester, which is the principal site of deprotection. The corresponding alcohol is more nucleophilic than the carboxylate, so the ester is selectively hydrolyzed to the carboxylic acid. A polar protic medium is appropriate because it dissolves the ester and supports hydrolysis. Water is the most suitable solvent because it is compatible with the sulfonamide and aryl ether functionalities and is consistent with the transformation.\n\n{\"SMILES\":\"O\"}",
+        "gold": "CCO.O"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Heteroatom Alkylation and Arylation:\nCC(=O)N1CCN(c2ccc(N)cc2)CC1.COc1ccc(Cn2cc3c(n2)c(Cl)nc2ccc(OC)cc23)cc1>>COc1ccc2nc(Nc3ccc(N4CCN(C(C)=O)CC4)cc3)c3n[nH]cc3c2c1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a heteroaryl N-alkylation of an N-methyl pyrazole with a chloro-substituted fused heteroaromatic amine. A polar aprotic medium is appropriate because it dissolves the organic substrates and supports the nucleophilic substitution while minimizing competing proton-transfer pathways. N-Methylpyrrolidinone is well suited to this transformation because it is compatible with the amine, the chloro-substituted heteroarene, and the carbonyl-containing heterocycle.\n\n{\"SMILES\":\"CC(=O)N1CCN(C)CC1\"}",
+        "gold": "CO"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Protection:\nCC(C)(C)OC(=O)OC(=O)OC(C)(C)C.CC(C)(C)[Si](OC[C@H]1CCC(=O)N1)(c1ccccc1)c1ccccc1>>CC(C)(C)OC(=O)N1C(=O)CC[C@@H]1CO[Si](c1ccccc1)(c1ccccc1)C(C)(C)C,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a silyl enol ether (SEE) protection of the amine. The amine is converted into a more stable silyl enol ether, while the ester and Boc groups remain unchanged. The appropriate reagent is trimethylsilyl cyanide, which forms the silyl enol ether through cyanide addition to the amine followed by cyanide elimination. The resulting silyl cyanide intermediate is then converted into the more stable silyl enol ether by proton transfer.\n\n{\"SMILES\":\"CC(C)(C)OC(=O)C#N.[Si](C)(C)C\"}",
+        "gold": "Cl.[Cl-].[NH4+]"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Heteroatom Alkylation and Arylation:\nCCCCc1nc2cc(-c3ccccc3)c(C=O)nc2n1Cc1ccc(-c2ccccc2-c2nnnn2C(C)OCC)cc1.OCCO>>CCCCc1nc2cc(-c3ccccc3)c(C3OCCO3)nc2n1Cc1ccc(-c2ccccc2-c2nnn[nH]2)cc1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a heteroaryl O-alkylation of the 2-aminopyridine ring, replacing the hydroxyl group with the ethyl group from ethyl acetate. A mild, non-nucleophilic base is needed to promote acyl transfer without competing as a nucleophile. Triethylamine is well suited because it neutralizes the acidic carboxylic acid, activates the ethyl ester, and removes the proton from the ring nitrogen, enabling substitution. No heavy-metal catalyst is required.\n\n{\"SMILES\":\"CC(C)(C)NCC(C)(C)C\"}",
+        "gold": "Cc1ccc(S(=O)(=O)O)cc1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Interconversion:\nCOc1cc(CC(OC(Cc2ccc([N+](=O)[O-])c(OC)c2)c2ccccc2)c2ccccc2)ccc1[N+](=O)[O-]>>COc1cc(COCc2ccccc2)ccc1N,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Curtius rearrangement of an isocyanate to an isothiocyanate. The substrate contains a nitro-substituted cyclohexyl isocyanate, while the product is the corresponding cyclohexyl isothiocyanate. The key change is replacement of the N–H bond by an N–S bond, with the nitro group remaining unchanged.\n\nA polar aprotic solvent is appropriate because it dissolves the organic substrate and supports the ionic intermediates formed during the rearrangement. N-Methyl-2-pyrrolidone is well suited because it is a moderately polar, aprotic, and non-nucleophilic medium that is compatible with the acidic conditions of the reaction.\n\n{\"SMILES\":\"COc1cc(COCc2ccccc2)ccc1N\"}",
+        "gold": "CO"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Acylation:\nCC(C)(C)OC(=O)OC(C)(C)C.CNC(=O)C(F)(C1CCc2c([nH]c3ccc(Cl)cc23)C1)S(=O)(=O)c1ccccc1>>CNC(=O)C(F)(C1CCc2c(n(C(=O)OC(C)(C)C)c3ccc(Cl)cc23)C1)S(=O)(=O)c1ccccc1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic acyl substitution of the pivalate ester by the sulfonamide nitrogen. A mild, non-nucleophilic, non-nucleolytic base is needed to deprotonate the sulfonamide and promote acylation without competing for the ester carbonyl. Triethylamine is well suited to this role because it is sufficiently basic to activate the sulfonamide while remaining compatible with the aryl chloride and other functional groups.\n\n{\"SMILES\":\"CC(N)(N)C(C)(C)C\"}",
+        "gold": "CCN(CC)CC"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Protection:\nCC(Cc1ccc2c(c1)OC(CN)O2)N(C)C(=O)OC(C)(C)C.O=C(Cl)OCc1ccccc1>>CC(Cc1ccc2c(c1)OC(CNC(=O)OCc1ccccc1)O2)N(C)C(=O)OC(C)(C)C,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs amination, converting the aryl aldehyde into the corresponding secondary amine. The amine source is a chloroformate, while the amine nucleophile is the primary amine of the Boc-protected piperazine. The required reagent is triethylamine, which neutralizes the chloroformate-derived acid and promotes amine attack. Thus, the appropriate reagent is:\n\n{\"SMILES\":\"CC(N)C(C)C\"}",
+        "gold": "CCN(C(C)C)C(C)C"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Aromatic Heterocycle Formation:\nNc1ccc2c(c1)OCO2.O=C(c1ccccc1)C(O)c1ccccc1>>c1ccc(-c2[nH]c3cc4c(cc3c2-c2ccccc2)OCO4)cc1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs-type cyclization of a 2-aryl-3-oxobutanenitrile with a 2,3-dihydrobenzofuran substrate. The key catalyst is a Lewis acid that activates the nitrile toward cyanide elimination and promotes intramolecular attack of the benzofuran hydroxyl group. A suitable catalyst is boron trifluoride, which is commonly used for this transformation.\n\n{\"SMILES\":\"[BF-4]\"}",
+        "gold": "Cc1ccc(S(=O)(=O)O)cc1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Protection:\nC=CC(=O)OCCCCCCOc1ccc(OC(=O)c2ccc(C(=O)Oc3ccc(OCCCCCCOC(=O)C=C)cc3)c(C(=O)O)c2)cc1.CCCCCC[C@H](C)Oc1cc(N)c(-c2ccc(C(=O)Oc3ccc(CO)cc3)cc2)cc1[N+](=O)[O-]>>C=CC(=O)OCCCCCCOc1ccc(OC(=O)c2ccc(C(=O)Oc3ccc(OCCCCCCOC(=O)C=C)cc3)c(C(=O)OCc3ccc(OC(=O)c4ccc(-c5cc([N+](=O)[O-])c(O[C@@H](C)CCCCCC)cc5N)cc4)cc3)c2)cc1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Mitsunobu substitution of the primary alcohol on the nitrogen-containing heterocycle by the terminal alkyne. A polar aprotic solvent is appropriate because it dissolves the organic substrates and supports the ionic intermediate while remaining compatible with the ester, ketone, and nitrile groups. N,N-Diisopropylethylamine is well suited as the base because it is sufficiently basic to activate the alcohol and neutralize the acid generated during the reaction, and it is compatible with the other functional groups.\n\n{\"SMILES\":\"CCCCC[C@H](C)O\"}",
+        "gold": "ClCCl"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Addition:\nCC(C)(C)OC(=O)OC(C)(C)C.Nc1n[nH]c2ccc([N+](=O)[O-])cc12>>CC(C)(C)OC(=O)Nc1n[nH]c2ccc([N+](=O)[O-])cc12,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic acyl substitution of the methyl ester by the pyridine nitrogen. A polar aprotic medium is appropriate because it dissolves the organic substrates and supports the ionic intermediate while minimizing competing proton transfer. N,N-Diisopropylethylamine is well suited as a non-nucleophilic base to promote ester hydrolysis and neutralize the acidic byproducts.\n\n{\"SMILES\":\"CC(C)(C)OC(=O)OC(C)(C)C\"}",
+        "gold": "C1CCOC1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of C-C Coupling:\nCOc1ccc(-c2cc3c(I)cn(C(=O)OC(C)(C)C)c3nc2C2CC2)cc1N(C(=O)OC(C)(C)C)S(C)(=O)=O.Cc1nn(Cc2cccc(F)c2)c(C)c1B1OC(C)(C)C(C)(C)O1>>COc1ccc(-c2cc3c(-c4c(C)nn(Cc5cccc(F)c5)c4C)cn(C(=O)OC(C)(C)C)c3nc2C2CC2)cc1N(C(=O)OC(C)(C)C)S(C)(=O)=O,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Suzuki–Miyaura cross-coupling between a heteroaryl iodide and a boronic ester. A polar aprotic medium is appropriate because it dissolves the organic substrates and supports the formation of the reactive aryl–iodide and aryl–boronic ester species. Toluene is well suited because it is compatible with the base and mild reaction conditions, while providing sufficient solubility for the organic components.\n\n{\"SMILES\":\"Cc1ccccc1\"}",
+        "gold": "COCCOC.O"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of C-C Coupling:\nCOc1ccc2oc(B(O)O)cc2c1.NC(=O)c1ccc(Br)nc1>>COc1ccc2oc(-c3ccc(C(N)=O)cn3)cc2c1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Suzuki–Miyaura cross-coupling between a heteroaryl pinacol boronate and a brominated heteroarene. A Pd(0) catalyst undergoes oxidative addition into the C–Br bond, followed by base-assisted transmetalation of the heteroaryl group from boron and reductive elimination to form the new C–C bond. A phosphine-ligated Pd(0) complex is therefore appropriate, with triphenylphosphine providing a stable, non-nucleophilic ligand system.\n\n{\"SMILES\":\"C[Pd](Ph3)\"}",
+        "gold": "Cl[Pd](Cl)([P](c1ccccc1)(c1ccccc1)c1ccccc1)[P](c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Deprotection:\nCc1nc2ccc(N3CC4CN(Cc5ccccc5)CC4C3)nn2c1-c1ccnc(N)c1>>Cc1nc2ccc(N3CC4CNCC4C3)nn2c1-c1ccnc(N)c1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a Boc-protected secondary amine, while the product retains the Boc group. The required transformation is therefore Boc deprotection, which is typically achieved by hydrolysis with a mild acid. A suitable reagent is therefore aqueous hydrochloric acid, represented as HCl in SMILES format.\n\n{\"SMILES\":\"[Cl-]\"}",
+        "gold": "O=C[O-].[NH4+]"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Oxidation:\nC=Cc1ncc(Cl)cc1CF.O=[Os](=O)(=O)=O>>O=Cc1ncc(Cl)cc1CF,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a selective OsO₄-mediated epoxidation of the terminal alkyne, converting the C–C triple bond into a C–O–C–O–C framework while leaving the aryl chloride and aryl fluoride substituents unchanged. A phosphine-ligated osmium(VIII) complex is well suited to this catalytic cycle: OsO₄ is reduced to a lower-valent active species, the alkene is oxidized to an epoxide, and reductive elimination forms the new C–O bonds. Tetrakis(triphenylphosphine)palladium(0) is a common phosphine ligand for OsO₄ and can serve as the catalyst precursor.\n\n{\"SMILES\":\"Pc1c(P(c2ccccc2)c2ccccc2)cc1\"}",
+        "gold": "O=[Os](=O)(=O)=O"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Interconversion:\nCc1cc(C(=O)O)c(Cl)nn1>>Cc1cc(C(=O)O)cnn1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic acyl substitution of the aryl chloroacetate by hydroxide, converting the aryl chloroacetate ester into the corresponding aryl acetate. A suitable catalyst is a strong, non-nucleophilic, non-nucleophilic base that promotes hydroxide attack on the electrophilic acyl carbon and protonates the hydroxide-derived leaving group. Triethylamine is well suited to this role because it is sufficiently basic to activate the ester and promote acyl substitution while remaining non-nucleophilic and compatible with the aromatic and heteroaromatic substrates.\n\n{\"SMILES\":\"CC[NH+](CC)CC\"}",
+        "gold": "[Pd]"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Aromatic Heterocycle Formation:\nCCOC(=O)Cc1nc(C)cs1.O=Cc1ccc(F)cc1O>>Cc1csc(-c2cc3ccc(F)cc3oc2=O)n1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs-type cyclization of a 2-aryl-3-oxo-1,3-dioxole to a 1,3-benzoxazin-4-one. The key requirements are a polar aprotic medium that dissolves the heterocyclic substrate and supports the formation of the new C–C bond without competing for the nucleophilic oxygen. N,N-Diethylacetamide is well suited because it is a moderately polar, non-nucleophilic, and nonprotic amide solvent that is compatible with the transformation.\n\n{\"SMILES\":\"CCOC(=O)Nc1cc2cnc2c1\"}",
+        "gold": "CC#N"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Interconversion:\nCB1OB(C)OB(C)O1.COC(=O)c1cc(Br)cc2[nH]ccc12>>COC(=O)c1cc(C)cc2[nH]ccc12,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation replaces the aryl bromide with the methyl group from the methyl-substituted bis(pinacolato)diboron reagent, forming a new C–C bond while retaining the amide, heteroaromatic, and pinacolboryl groups. This is a Miyaura borylation. A suitable, commonly used, and compatible inorganic base is potassium acetate, which promotes the borylation without strongly competing with the amide or bromide.\n\n{\"SMILES\":\"CC(C)(C)O\"}",
+        "gold": "CN(C)C=O.O=C([O-])[O-].[Na+].[Na+]"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Aromatic Heterocycle Formation:\nNN.O=C(Cc1ccccc1F)c1ncc(Cl)cc1Cl>>Fc1ccccc1Cc1n[nH]c2cc(Cl)cnc12,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs amination, converting a nitro-substituted fused heterocycle into a nitrogen-containing ring. A polar aprotic medium is appropriate because it dissolves the organic substrate and supports the nucleophilic aromatic substitution required for the transformation. N-Methyl-2-pyrrolidone is well suited because it is compatible with the chloro-substituted heterocycle and provides the required polarity and solubility.\n\n{\"SMILES\":\"CN1CCNCC1\"}",
+        "gold": "c1ccncc1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Aromatic Heterocycle Formation:\nCC[C@H](NC(=O)OC(C)(C)C)C(=O)N(C(=O)c1c(Cl)cccc1[N+](=O)[O-])C1CC1>>CC[C@H](NC(=O)OC(C)(C)C)c1nc2cccc(Cl)c2c(=O)n1C1CC1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs-type cyclization of an N-acyl anthranilic acid derivative. The key change is formation of the fused N–H bond between the amide nitrogen and the aromatic ring, converting the carboxylic acid into a cyclic imide while leaving the chloro-substituted fused ring unchanged.\n\nA polar aprotic medium is appropriate because it dissolves the organic substrate and supports the nucleophilic acyl-substitution process. N,N-Diethylacetamide is well suited because it is compatible with the amide and aryl chloride functionalities, and its N–H group can participate in the cyclization without competing for the amide carbonyl.\n\n{\"SMILES\":\"CC[NH+](C)C(C)C\"}",
+        "gold": "CC(=O)O"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Oxidation:\nCS(=O)(=O)CCn1cnc2c(F)c(Nc3ccc(Br)cc3Cl)c(CO)cc21>>CS(=O)(=O)CCn1cnc2c(F)c(Nc3ccc(Br)cc3Cl)c(C=O)cc21,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a ketone-to-carbonyl reduction of the cyclic ketone to an alkene, with the sulfone, heteroaromatic ring, aryl bromide, aryl chloride, and methoxy group remaining unchanged. A polar protic alcohol is well suited to this transformation because it can dissolve the substrate and support hydrogen bonding with the reducing agent. Methanol is therefore the most appropriate solvent.\n\n{\"SMILES\":\"CO\"}",
+        "gold": "C1CCOC1"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Functional Group Addition:\nC=CC[C@@]1(C)C[C@H](c2cccc(Cl)c2)[C@@H](c2ccc(Cl)cc2)N(C(CC)CC)C1=O.CC(C)=O.O=[Os](=O)(=O)=O>>CCC(CC)N1C(=O)[C@@](C)(CC(O)CO)C[C@H](c2cccc(Cl)c2)[C@H]1c1ccc(Cl)cc1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs-type aldol addition of cyclohexanone to the terminal alkyne of the vinylpinacol boronate. A suitable catalyst is bis(pinacolato)diboron, which activates the boronate toward transmetalation and enables formation of the new C–C bond. The osmium tetroxide precursor is not incorporated into the product and can be represented as the corresponding OsO₄ fragment.\n\n{\"SMILES\":\"CC(C)=O.O=[Os](=O)(=O)=O.BB(C)(C)OC(=O)OC(C)(C)C\"}",
+        "gold": "O=[Os](=O)(=O)=O"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Oxidation:\nC=CCC1(S(=O)(=O)Nc2c(Nc3ccc(I)cc3F)c(F)c(=O)n3c2CCC3)CC1.C[N+]1([O-])CCOCC1.O=[Os](=O)(=O)=O>>O=c1c(F)c(Nc2ccc(I)cc2F)c(NS(=O)(=O)C2(CC(O)CO)CC2)c2n1CCC2,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a Corey–Fuchs-type aldol addition of an aryl methyl ketone to an α,β-unsaturated sulfonamide. The key catalyst is osmium tetroxide, which activates the ketone and promotes the aldol addition and subsequent intramolecular cyclization. A tertiary amine base is also required to neutralize the acidic sulfonamide-derived byproducts and promote cyclization.\n\n{\"SMILES\":\"O=[Os](=O)(=O)=O.[N+]C([O-])CCOCC\"}",
+        "gold": "O=[Os](=O)(=O)=O"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Protection:\nCC(C)(C)OC(=O)OC(=O)OC(C)(C)C.CC1Cc2ccccc2N1NC(=O)c1ccc(Cl)c(S(N)(=O)=O)c1>>CC1Cc2ccccc2N1NC(=O)c1ccc(Cl)c(S(=O)(=O)NC(=O)OC(C)(C)C)c1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a thioether alkylation of an N-hydroxysuccinimide ester. The product replaces the ester’s hydroxyl group with the thioether-derived substituent, while the succinimidyl carbonyl and aryl chloride remain unchanged. A polar aprotic solvent is appropriate because it dissolves the organic substrates and the product without competing as a nucleophile or proton donor. N,N-Diisopropylethylamine is a suitable non-nucleophilic base that can neutralize the succinimide-derived acid without altering the sulfone or aryl chloride. Therefore, the recommended solvent is diisopropylethylamine.\n\n{\"SMILES\":\"CC(C)(C)OC(=O)OC(=O)OC(C)(C)C\"}",
+        "gold": "CCOC(C)=O.ClCCl"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the following reaction under the type of Acylation:\nCOc1ccc(Cn2nccc2N)cc1C.Cc1cccc(-n2nnnc2SCC(=O)O)c1C>>COc1ccc(Cn2nccc2NC(=O)CSc2nnnn2-c2cccc(C)c2C)cc1C,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+            }
+        ],
+        "prediction": "The transformation is a nucleophilic acyl substitution of the aryl thioether by the primary amine. A suitable reagent is diisopropylcarbamate, which activates the amine and promotes acylation without competing significantly as a nucleophile. The resulting carbamate is readily removed after acylation.\n\n{\"SMILES\":\"CC(C)(C)OC(=O)N(C)(C)C\"}",
+        "gold": "CCN=C=NCCCN(C)C.Cl"
+    }
+}

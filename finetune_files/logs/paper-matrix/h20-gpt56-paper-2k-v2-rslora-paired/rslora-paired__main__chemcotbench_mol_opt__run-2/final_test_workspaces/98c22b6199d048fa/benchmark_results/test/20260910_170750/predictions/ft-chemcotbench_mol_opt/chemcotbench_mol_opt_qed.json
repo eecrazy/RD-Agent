@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCl)Nc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperazine ring (N2CCN...CC2) linked to a substituted benzene ring (Nc1ccc...cc1) with a chloroacetyl group (O=C(CCl)) and a fluorinated benzene ring (c3ccc(F)cc3F). The piperazine is further substituted with a hydroxyl group (CC(O)) and a cyanoguanidine-like group (Cn3cncn3).\",\n    \"Property Analysis\": \"The hydroxyl group (CC(O)) and the cyanoguanidine-like group (Cn3cncn3) may contribute to high polarity and poor lipophilicity, reducing QED. The cyanoguanidine-like group introduces a rigid, polar heterocycle that could hinder drug-likeness due to metabolic instability or excessive polarity.\",\n    \"Limitation in Source Molecule for Property\": \"The cyanoguanidine-like group (Cn3cncn3) is a key limitation. Its high polarity and rigidity reduce membrane permeability, and the guanidine moiety may introduce metabolic liabilities.\",\n    \"Optimization for Source Molecule\": \"Replace the cyanoguanidine-like group (Cn3cncn3) with a tert-butyl group (C(C)(C)C). This substitution enhances lipophilicity, reduces polarity, and improves metabolic stability while retaining steric bulk for hydrophobic interactions.\",\n    \"Final Target Molecule\": \"O=C(CCl)Nc1ccc(N2CCN(CC(O)(C(C)(C)C)c3ccc(F)cc3F)CC2)cc1\"\n}\n{\"output\":\"O=C(CCl)Nc1ccc(N2CCN(CC(O)(C(C)(C)C)c3ccc(F)cc3F)CC2)cc1\"}",
+        "gold": "O=C(CCl)Nc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(Sc1ncccn1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole ring (Sc1ncccn1) linked to a carbonyl group (C=O) and an aniline derivative (Nc1ncc...s1). The aromatic system includes a fused benzene ring (Cc2cccc3ccccc23).\",\n    \"Property Analysis\": \"The thiazole ring (Sc1ncccn1) may contribute to higher lipophilicity (logP) and metabolic instability, both detrimental to QED. The molecule also has multiple hydrogen bond acceptors (N, O, S), which could exceed optimal drug-likeness parameters.\",\n    \"Limitation in Source Molecule for Property\": \"The thiazole ring increases logP and introduces metabolic liabilities. The lack of a saturated nitrogen heterocycle (e.g., piperidine/piperazine) limits bioavailability and QED.\",\n    \"Optimization for Source Molecule\": \"Replace the thiazole ring (Sc1ncccn1) with a pyrrolidine ring (CC1CCNCC1) to reduce logP, improve metabolic stability, and introduce a saturated nitrogen heterocycle. Retain the carbonyl group and aromatic system for target binding.\",\n    \"Final Target Molecule\": \"CC1CCN(C(=O)Nc2ncc(Cc3cccc4ccccc34)s2)CC1\"\n}\n{\"output\":\"CC1CCN(C(=O)Nc2ncc(Cc3cccc4ccccc34)s2)CC1\"}",
+        "gold": "CC(Sc1ncccn1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzene ring substituted with a nitroso group (C=NO) and an amide-linked bicyclic system (N2C(=O)C3CC=C(Cl)CC3C2=O). The bicyclic system includes a chlorine-substituted cyclohexene ring fused to a diketopiperazine-like scaffold.\",\n    \"Property Analysis\": \"The nitroso group (C=NO) is a potential liability for QED due to its metabolic instability and potential toxicity. The molecule also has moderate lipophilicity (logP ~3.5) and a molecular weight of ~358 g/mol, which are within acceptable ranges but could be optimized further.\",\n    \"Limitation in Source Molecule for Property\": \"The nitroso group reduces drug-likeness by increasing metabolic instability and toxicity risk. The unsubstituted benzene ring may contribute to poor solubility or off-target interactions.\",\n    \"Optimization for Source Molecule\": \"Replace the nitroso group (C=NO) with a methyl group (C) to eliminate metabolic liability and improve lipophilicity. Introduce a methoxy group (OCH3) on the benzene ring to enhance solubility and balance logP.\",\n    \"Final Target Molecule\": \"COc1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1\"\n}\n{\"output\":\"COc1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1\"}",
+        "gold": "CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (NS(=O)(=O)) attached to a benzene ring, which is connected via an amino linker (Nc2nccc...) to a second benzene ring substituted with a thiophene-containing side chain (NC(=O)Cc4cccs4). The structure includes a pyrimidine ring (Nc2nccc...) and a thiophene (cccs4).\",\n    \"Property Analysis\": \"The sulfonamide group contributes to high polarity and hydrogen bond acceptor count, potentially reducing membrane permeability. The thiophene (cccs4) may introduce metabolic instability due to its sulfur atom. The molecule has 5 hydrogen bond acceptors (sulfonamide O, pyrimidine N, thiophene S, and two additional acceptors from the side chain).\",\n    \"Limitation in Source Molecule for Property\": \"1) Sulfonamide increases polarity and molecular weight, negatively impacting QED. 2) Thiophene may lead to metabolic issues. 3) High hydrogen bond acceptor count reduces drug-likeness.\",\n    \"Optimization for Source Molecule\": \"1) Replace sulfonamide (NS(=O)(=O)) with a less polar amide (NC(=O)) to reduce molecular weight and hydrogen bond acceptors. 2) Substitute thiophene (cccs4) with a more stable aromatic ring (e.g., benzene) to improve metabolic stability. 3) Retain the pyrimidine and amino linker for target engagement.\",\n    \"Final Target Molecule\": \"O=C(Nc1nccc(-c2ccc(NC(=O)Cc3cccs3)cc2)n1)c1ccccc1\"\n}\n{\"output\":\"O=C(Nc1nccc(-c2ccc(NC(=O)Cc3cccs3)cc2)n1)c1ccccc1\"}",
+        "gold": "NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1c(Cc2cccc([N+](=O)[O-])c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group ([N+](=O)[O-]) on the benzene ring connected to the central core. The core has a methyl group, a ketone, an ester, and a substituted phenyl ring. The nitro group is electron-withdrawing and may contribute to poor solubility and metabolic instability.\",\n    \"Property Analysis\": \"Nitro groups are associated with reduced drug-likeness (QED) due to potential toxicity, metabolic instability, and high molecular weight. The ester group (OC(=O)N(C)C) may also reduce stability.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group ([N+](=O)[O-]) is a key limitation. It increases molecular weight, reduces solubility, and introduces metabolic liabilities. The ester group adds polarity but may hydrolyze, affecting stability.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group with a methoxy group (OCH3) to reduce molecular weight, improve solubility, and eliminate toxicity risks. Retain the ester group to balance polarity and stability.\",\n    \"Final Target Molecule\": \"Cc1c(COC2CCO2)c(=O)oc2cc(OC(=O)N(C)C)ccc12\"\n}\n{\"output\":\"Cc1c(COC2CCO2)c(=O)oc2cc(OC(=O)N(C)C)ccc12\"}",
+        "gold": "Cc1c(Cc2cccc([N+](=O)[O-])c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains an ethoxy group (CCO-), a benzene ring with a sulfonamide group (NS(=O)(=O)), and a substituted phenyl ring linked to a pyrrole (c2cnc(...)o2) via a methylene bridge. The pyrrole is fused to a cyclopropane ring (C3CC3).\",\n    \"Property Analysis\": \"The sulfonamide and aromatic systems contribute to high hydrophobicity (logP), while the ethoxy group may reduce metabolic stability. The fused pyrrole-cyclopropane system introduces rigidity and potential steric hindrance, which could limit solubility and drug-likeness (QED).\",\n    \"Limitation in Source Molecule for Property\": \"1) Ethoxy group (CCO-) is metabolically labile. 2) High aromatic ring count (4 rings) increases logP. 3) Rigid fused pyrrole-cyclopropane system reduces solubility and bioavailability.\",\n    \"Optimization for Source Molecule\": \"1) Replace ethoxy (CCO-) with a methyl group (C) to reduce logP and improve metabolic stability. 2) Simplify the fused pyrrole-cyclopropane to a single pyrrole ring (C1=CC=CN1) to reduce steric hindrance. 3) Retain sulfonamide for polarity balance and target binding.\",\n    \"Final Target Molecule\": \"Cc1cc(CS(=O)(=O)Nc2ccccc2)ccc1-c1cnc(-c2ccc(C)cc2)o1\"\n}\n{\"output\":\"Cc1cc(CS(=O)(=O)Nc2ccccc2)ccc1-c1cnc(-c2ccc(C)cc2)o1\"}",
+        "gold": "CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tertiary amine (CC(N)C...), a nitrooxy group (C(=O)NO), and a propargyl-substituted benzene ring (C#Cc2ccccc2). The tertiary amine and nitrooxy group may contribute to poor drug-likeness.\",\n    \"Property Analysis\": \"QED is hindered by the nitrooxy group (high desolvation penalty, metabolic instability) and the tertiary amine (potential for high basicity and off-target interactions).\",\n    \"Limitation in Source Molecule for Property\": \"The nitrooxy group reduces metabolic stability and increases polarity, while the tertiary amine raises basicity and may reduce membrane permeability.\",\n    \"Optimization for Source Molecule\": \"Replace the nitrooxy group (C(=O)NO) with a carboxylic acid (C(=O)OH) to improve metabolic stability and reduce polarity. Retain the propargyl-benzene motif for target binding and replace the tertiary amine with a secondary amine (CN) to lower basicity and enhance permeability.\",\n    \"Final Target Molecule\": \"O=C(O)CNc1ccc(C#Cc2ccccc2)cc1\"\n}\n{\"output\":\"O=C(O)CNc1ccc(C#Cc2ccccc2)cc1\"}",
+        "gold": "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C(N)) linked to a fluorinated pyridine ring (c1ccnc(F)c1) and a substituted benzene ring. The benzene ring is further substituted with a trifluoromethyl-oxadiazole group (-c2noc(C(F)(F)F)n2). The oxadiazole ring introduces rigidity and polar N atoms.\",\n    \"Property Analysis\": \"The trifluoromethyl-oxadiazole group contributes to high molecular weight (MW = 369.3 g/mol), increased logP (predicted ~3.5), and introduces two hydrogen bond acceptors (oxadiazole N atoms). These factors reduce QED by exceeding ideal ranges for drug-likeness.\",\n    \"Limitation in Source Molecule for Property\": \"The trifluoromethyl-oxadiazole group increases hydrophobicity and molecular weight while introducing polar N atoms, all of which negatively impact QED. The rigid oxadiazole may also limit bioavailability.\",\n    \"Optimization for Source Molecule\": \"Replace the trifluoromethyl-oxadiazole group (-C(F)(F)F) with a smaller, less hydrophobic substituent (e.g., chlorine) to reduce MW and logP. Retain the aromatic ring to maintain π-π interactions while improving drug-likeness.\",\n    \"Final Target Molecule\": \"O=C(Nc1ccnc(F)c1)c1ccc(Cl)cc1\"\n}\n{\"output\":\"O=C(Nc1ccnc(F)c1)c1ccc(Cl)cc1\"}",
+        "gold": "O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc2c(CSCCBr)cc(=O)oc2c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a benzopyran-2-one core (chromone) with a methoxy group (OCH3) and a bromoethylthio group (CSCCBr) at the meta position of the aromatic ring. The bromine atom and sulfur-containing group (ethylthio) may contribute to unfavorable physicochemical properties.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The bromine atom increases molecular weight and lipophilicity (logP), while the ethylthio group may reduce metabolic stability and increase logP.\",\n    \"Limitation in Source Molecule for Property\": \"The bromoethylthio group (CSCCBr) introduces high molecular weight, elevated logP, and potential metabolic instability, reducing drug-likeness (QED).\",\n    \"Optimization for Source Molecule\": \"Replace the bromoethylthio group (CSCCBr) with a methyl group (CH3) to reduce molecular weight, lower logP, and improve metabolic stability while retaining the chromone core and methoxy group for balanced solubility and activity.\",\n    \"Final Target Molecule\": \"COc1ccc2c(C)cc(=O)oc2c1\"\n}\n{\"output\":\"COc1ccc2c(C)cc(=O)oc2c1\"}",
+        "gold": "COc1ccc2c(CSCCBr)cc(=O)oc2c1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide backbone with two benzyl groups (Cc1ccccc1), a propenyl group (C=C) linked to a benzofuran (c1ccco1), and a terminal carboxylic acid (C(=O)O). The structure is highly polar due to multiple amide and carboxylic acid groups.\",\n    \"Property Analysis\": \"The carboxylic acid group (C(=O)O) contributes to high polarity, poor membrane permeability, and low QED. The molecule also has a high topological polar surface area (TPSA) due to multiple hydrogen bond donors/acceptors.\",\n    \"Limitation in Source Molecule for Property\": \"The carboxylic acid group reduces drug-likeness by increasing hydrophilicity, decreasing passive diffusion, and introducing potential metabolic instability. The molecule also has a high molecular weight (MW) due to the bulky benzyl groups and carboxylic acid.\",\n    \"Optimization for Source Molecule\": \"Replace the carboxylic acid (C(=O)O) with a lipophilic aromatic group (e.g., chlorophenyl) to reduce TPSA, improve membrane permeability, and maintain moderate polarity. This modification retains hydrogen bond acceptors while balancing logP and MW.\",\n    \"Final Target Molecule\": \"O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)Cc1ccc(Cl)cc1\"\n}\n{\"output\":\"O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)Cc1ccc(Cl)cc1\"}",
+        "gold": "O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-].\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group ([N+](=O)[O-]) attached to an aromatic ring, a conjugated alkene (C=C), and a substituted benzene ring with three methoxy groups (OC). The nitro group is a strong electron-withdrawing substituent.\",\n    \"Property Analysis\": \"Nitro groups are associated with poor drug-likeness (QED) due to potential toxicity, metabolic instability, and high molecular weight. They also increase the number of hydrogen bond acceptors (HBA), which may reduce membrane permeability.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group ([N+](=O)[O-]) is the primary limitation for QED. It introduces metabolic liabilities and reduces overall drug-likeness.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group with a bioisostere or a neutral substituent to eliminate toxicity risks and improve QED. A phenyl group (c1ccccc1) is introduced to maintain aromaticity while removing the electron-withdrawing nitro group.\",\n    \"Final Target Molecule\": \"COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1c1ccccc1\"\n}\n{\"output\":\"COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1c1ccccc1\"}",
+        "gold": "COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2cccc(OC(=O)c3ccco3)c2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a methoxy group (COc1ccc...), a carbonyl-linked aniline group (C(=O)Nc2...), and a benzoyl-fused furan moiety (OC(=O)c3ccco3). The aniline and benzoyl-fused furan groups contribute to planar rigidity and potential hydrogen bonding.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The benzoyl-fused furan (OC(=O)c3ccco3) increases molecular weight and logP, reducing solubility. The fused ring system may also hinder bioavailability due to excessive rigidity.\",\n    \"Limitation in Source Molecule for Property\": \"The benzoyl-fused furan group (OC(=O)c3ccco3) introduces high hydrophobicity (logP) and molecular weight while reducing metabolic stability. The fused ring lacks hydrogen bond donors, further lowering QED.\",\n    \"Optimization for Source Molecule\": \"Replace the benzoyl-fused furan (OC(=O)c3ccco3) with a carboxylic acid group (O=C(O)) to reduce logP, lower molecular weight, and introduce hydrogen bond donors. This retains the critical pharmacophore (aniline and carbonyl) while improving solubility and drug-likeness.\",\n    \"Final Target Molecule\": \"COc1ccc(C(=O)Nc2cccc(O=C(O))c2)cc1\"\n}\n{\"output\":\"COc1ccc(C(=O)Nc2cccc(O=C(O))c2)cc1\"}",
+        "gold": "COc1ccc(C(=O)Nc2cccc(OC(=O)c3ccco3)c2)cc1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central sulfonamide group (S(=O)(=O)N) linking two aromatic rings. One ring has a nitro group ([N+](=O)[O-]), and the other has an amide group (O=C(N)). The nitro group introduces high polarity and potential metabolic instability.\",\n    \"Property Analysis\": \"The nitro group contributes to poor QED due to its high molecular weight, strong electron-withdrawing nature, and association with toxicity. The amide and sulfonamide groups enhance solubility but may reduce membrane permeability.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group ([N+](=O)[O-]) is a key limitation: it increases molecular weight, reduces drug-likeness (QED), and raises safety concerns.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group with a methyl group (CH3) to reduce polarity, lower molecular weight, and improve metabolic stability while retaining aromaticity. This maintains balanced lipophilicity and avoids nitro-related toxicity.\",\n    \"Final Target Molecule\": \"Cc1ccc(C(=O)Nc2ccc(S(=O)(=O)Nc3ccccn3)cc2)cc1\"\n}\n{\"output\":\"Cc1ccc(C(=O)Nc2ccc(S(=O)(=O)Nc3ccccn3)cc2)cc1\"}",
+        "gold": "O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C-N) linked to a 1,3-oxazolidin-2-one ring (NCC1CCCO1), a conjugated double bond system (C=C), a nitro-substituted benzene ring (c1cccc([N+](=O)[O-])c1), and a benzamide group (NC(=O)c1ccccc1). The nitro group ([N+](=O)[O-]) is a strong electron-withdrawing group on the aromatic ring.\",\n    \"Property Analysis\": \"The nitro group contributes to poor drug-likeness (QED) due to its high molecular weight, metabolic instability, and potential toxicity. It also increases the number of hydrogen bond acceptors (HBA) unfavorably. The conjugated system and amide groups may reduce solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group is a key limitation: it reduces QED by introducing toxicity risks, metabolic liabilities, and unfavorable HBA count. The bulky nitro group also disrupts optimal logP and molecular size for drug-likeness.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group (-NO2) with a methyl group (-CH3) to eliminate toxicity, improve logP, and reduce HBA count. Methyl retains hydrophobic interactions without adding metabolic instability. This substitution aligns with drug-like criteria (e.g., Lipinski’s rule of 5).\",\n    \"Final Target Molecule\": \"Cc1cccc(C=C(C(=O)NCC2CCCO2)NC(=O)c2ccccc2)c1\"\n}\n{\"output\":\"Cc1cccc(C=C(C(=O)NCC2CCCO2)NC(=O)c2ccccc2)c1\"}",
+        "gold": "O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a sulfonyl group (S(=O)(=O)) attached to a benzene ring, an amide linkage, and an ester group (COC(=O)) connected to a phenyl ring. The structure includes a branched alkyl chain (CCC1(CC)) and a polar amide/sulfonamide moiety.\",\n    \"Property Analysis\": \"The ester group (COC(=O)) and the branched alkyl chain may contribute to higher lipophilicity (logP), reducing QED. The sulfonyl group is polar but may increase molecular weight and metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"The ester group (COC(=O)) introduces metabolic liability and increases logP, while the branched alkyl chain (CCC1(CC)) adds hydrophobicity, both negatively impacting drug-likeness (QED).\",\n    \"Optimization for Source Molecule\": \"Replace the ester group (COC(=O)) with a more stable and less lipophilic amine (-NH2) to reduce logP and metabolic instability. Retain the sulfonyl group for polarity balance and the bicyclic core for structural integrity.\",\n    \"Final Target Molecule\": \"CCS(=O)(=O)c1ccccc1NC(=O)C1(CC)CCC1=O\"\n}\n{\"output\":\"CCS(=O)(=O)c1ccccc1NC(=O)C1(CC)CCC1=O\"}",
+        "gold": "CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)CN1C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazolidinone core (N1C(=O)SC(=C)C1=O) with a carboxylic acid group (O=C(O)) and a substituted phenyl ring (c2cccc([N+](=O)[O-])c2) linked via a propenyl group (C=C). The nitro group ([N+](=O)[O-]) on the phenyl ring introduces polarity and potential metabolic instability.\",\n    \"Property Analysis\": \"The nitro group contributes to high molecular weight, increased topological polar surface area (TPSA), and potential toxicity, all of which negatively impact QED (drug-likeness). Nitro groups are also prone to reduction, potentially leading to bioactivation and toxicity.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group on the phenyl ring is a key limitation. It increases TPSA (unfavorable for membrane permeability) and introduces a toxicophore (nitro groups are associated with mutagenicity).\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group (-NO2) with a methyl group (-CH3) to reduce molecular weight, TPSA, and toxicity. Methyl maintains lipophilicity balance while eliminating nitro-related liabilities.\",\n    \"Final Target Molecule\": \"O=C(O)CN1C(=O)SC(=Cc2cccc(C)c2)C1=O\"\n}\n{\"output\":\"O=C(O)CN1C(=O)SC(=Cc2cccc(C)c2)C1=O\"}",
+        "gold": "O=C(O)CN1C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(N)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-].\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a methoxy group (COc1...), an amino group (N...), and a nitro group ([N+](=O)[O-]). A conjugated ene (C=C) connects to a second benzene ring with three methoxy groups (OC).\",\n    \"Property Analysis\": \"The nitro group ([N+](=O)[O-]) negatively impacts QED due to its high desolvation penalty, metabolic instability, and association with toxicity. The molecule also has moderate hydrophobicity (logP ~3.5) and a molecular weight of ~328 g/mol, which are within acceptable ranges but could be optimized.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group reduces drug-likeness (QED) by introducing metabolic liabilities and increasing polar surface area. The amino group (N) may also contribute to excessive basicity and poor membrane permeability.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group (-NO2) with a methyl group (-CH3) to eliminate metabolic instability and reduce polar surface area. Retain the methoxy-substituted benzene and conjugated ene to preserve aromatic interactions and synthetic feasibility.\",\n    \"Final Target Molecule\": \"Cc1ccccc1C=Cc1cc(OC)c(OC)c(OC)c1\"\n}\n{\"output\":\"Cc1ccccc1C=Cc1cc(OC)c(OC)c(OC)c1\"}",
+        "gold": "COc1cc(N)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cn(C2CC(NC(=O)CC(=O)O)C(CO)O2)c(=O)[nH]c1=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyridone core (c(=O)[nH]c1=O) with a methyl-substituted benzene ring (Cc1...), a piperazine-like bridged ring system (C2CC...O2), and a carboxylic acid group (NC(=O)CC(=O)O). The pyridone and methyl groups dominate the aromatic region.\",\n    \"Property Analysis\": \"The carboxylic acid (CC(=O)O) contributes to high polarity, poor membrane permeability, and metabolic instability, reducing QED. The pyridone and methyl groups increase molecular weight and logP unfavorably.\",\n    \"Limitation in Source Molecule for Property\": \"The carboxylic acid group (CC(=O)O) is the primary limitation due to its negative impact on drug-likeness (high polarity, poor absorption).\",\n    \"Optimization for Source Molecule\": \"Replace the carboxylic acid (CC(=O)O) with a lipophilic aromatic group (e.g., chlorophenyl) to reduce polarity, improve logP, and retain metabolic stability while maintaining molecular interactions.\",\n    \"Final Target Molecule\": \"Cc1cn(C2CC(Nc3ccc(Cl)cc3)C(CO)O2)c(=O)[nH]c1=O\"\n}\n{\"output\":\"Cc1cn(C2CC(Nc3ccc(Cl)cc3)C(CO)O2)c(=O)[nH]c1=O\"}",
+        "gold": "Cc1cn(C2CC(NC(=O)CC(=O)O)C(CO)O2)c(=O)[nH]c1=O"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1cnc(-c2ccc(-c3ccccc3CSc3ccncn3)cc2F)cn1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (Nc1cnc...cn1) linked to a fluorophenyl group (-c2ccc(F)cc2) and a thioether-substituted benzimidazole (-CSc3ccncn3). The thioether (C-S-C) and benzimidazole (aromatic heterocycle) may contribute to metabolic instability and high lipophilicity.\",\n    \"Property Analysis\": \"QED is limited by high molecular weight (due to benzimidazole and thioether), elevated logP (from hydrophobic groups like benzimidazole and fluorophenyl), and potential metabolic liabilities (thioether oxidation).\",\n    \"Limitation in Source Molecule for Property\": \"1) Thioether (C-S-C) increases logP and metabolic susceptibility. 2) Benzimidazole adds molecular weight and rigidity, reducing solubility. 3) Pyrimidine core lacks optimal hydrogen-bonding capacity for drug-likeness.\",\n    \"Optimization for Source Molecule\": \"1) Replace thioether (-S-) with a secondary amine (-NH-) to reduce logP and improve metabolic stability. 2) Substitute benzimidazole with a piperazine ring (1,4-diazacyclohexane) to enhance solubility and hydrogen-bonding capacity. 3) Retain fluorophenyl and pyrimidine core for target engagement but adjust connectivity.\",\n    \"Final Target Molecule\": \"Nc1ncc(-c2ccc(Nc3nccnc3)cc2F)c1\"\n}\n{\"output\":\"Nc1ncc(-c2ccc(Nc3nccnc3)cc2F)c1\"}",
+        "gold": "Nc1cnc(-c2ccc(-c3ccccc3CSc3ccncn3)cc2F)cn1"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)C(=N)N.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central tertiary amine (N) connected to: (1) a methyl group, (2) a carbonyl-linked aniline derivative with a sulfonamide group (S(N)(=O)=O), and (3) a guanidine group (C(=N)N). The sulfonamide and guanidine groups contribute to high polarity and hydrogen bonding.\",\n    \"Property Analysis\": \"QED is limited by high hydrogen bond donors (NH groups: guanidine and sulfonamide NH) and high polarity from the sulfonamide and guanidine moieties. These reduce membrane permeability and drug-likeness.\",\n    \"Limitation in Source Molecule for Property\": \"The guanidine group (C(=N)N) introduces 2 H-bond donors and strong basicity, increasing polarity. The sulfonamide (S(N)(=O)=O) adds 1 H-bond donor and metabolic instability.\",\n    \"Optimization for Source Molecule\": \"Replace the guanidine group (C(=N)N) with a carboxylic acid (C(=O)O) to reduce H-bond donors (from 3 to 1) and improve solubility. Retain the sulfonamide for target binding but reposition it to reduce polarity impact.\",\n    \"Final Target Molecule\": \"O=C(O)CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)\"\n}\n{\"output\":\"O=C(O)CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)\"}",
+        "gold": "CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)C(=N)N"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(COC(=O)c1ccccc1)Nc1ccc(Cl)cc1C(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a urea core (O=C-N-C=O) with two aromatic rings (one substituted with Cl and linked via a urea) and a benzyloxycarbonyl group. The structure is highly lipophilic due to the two aromatic rings and the chlorine substituent.\",\n    \"Property Analysis\": \"The QED is likely low due to high molecular weight (369.4 g/mol), elevated logP (predicted ~3.5), and presence of multiple aromatic rings. The urea groups may contribute to hydrogen bonding but do not offset the lipophilicity.\",\n    \"Limitation in Source Molecule for Property\": \"1) High logP from aromatic rings and lack of polar/ionizable groups. 2) Molecular weight exceeds ideal QED range (>350 g/mol). 3) Limited solubility due to hydrophobic aromatic regions.\",\n    \"Optimization for Source Molecule\": \"1) Replace one urea carbonyl with a sulfonamide (improves solubility, reduces logP). 2) Introduce a piperazine ring (via sulfonamide) to enhance hydrogen bonding capacity. 3) Retain Cl for target engagement but balance lipophilicity with added polar groups.\",\n    \"Final Target Molecule\": \"CC(=O)NS(Cc1ccc(Cl)cc1C(=O)c1ccccc1)c1ccccc1\"\n}\n{\"output\":\"CC(=O)NS(Cc1ccc(Cl)cc1C(=O)c1ccccc1)c1ccccc1\"}",
+        "gold": "O=C(COC(=O)c1ccccc1)Nc1ccc(Cl)cc1C(=O)c1ccccc1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The molecule contains a sulfonamide group (S(=O)(=O)), two aromatic rings with chlorine substituents, and a flexible ethyl-alkylamine chain (CC(CCCN...)). The chain introduces conformational flexibility and increases lipophilicity.\",\n    \"Property Analysis\": \"QED penalizes high molecular weight, excessive flexibility, and elevated logP. The ethyl-alkylamine chain contributes to elevated logP and molecular weight while reducing rigidity.\",\n    \"Limitation in Source Molecule for Property\": \"The flexible ethyl-alkylamine chain (CC(CCCN...)) increases lipophilicity (logP) and molecular weight, negatively impacting QED. It also reduces solubility and drug-likeness.\",\n    \"Optimization for Source Molecule\": \"Replace the flexible ethyl-alkylamine chain with a piperidine ring (C1CCNCC1). Piperidine introduces rigidity, reduces logP, and maintains moderate solubility while retaining basicity for potential salt formation.\",\n    \"Final Target Molecule\": \"CC1CCCCN1C(=O)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1\"\n}\n{\"output\":\"CC1CCCCN1C(=O)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1\"}",
+        "gold": "CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3ncccn3)CC1O2.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The molecule contains a coumarin core (benzopyrone: Cc1cc2c(c(=O)o1)C=C1O2) with a substituted cyclohexane ring and a thiazole-linked side chain (C(C)CSc3ncccn3). The thiazole (Sc3ncccn3) introduces a sulfur atom and a pyrrole-like aromatic system.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The thiazole group increases molecular weight, logP, and may reduce solubility due to hydrophobicity. The sulfur atom in thiazole could introduce metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"The thiazole side chain (C(C)CSc3ncccn3) contributes to elevated logP and metabolic instability, reducing QED. The sulfur atom may also hinder drug-likeness due to potential toxicity risks.\",\n    \"Optimization for Source Molecule\": \"Replace the thiazole-containing side chain (C(C)CSc3ncccn3) with a piperidine group (C(C)CCN3CCCC3). Piperidine improves solubility (via basic nitrogen), reduces logP, and enhances metabolic stability while maintaining steric bulk.\",\n    \"Final Target Molecule\": \"Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CCN3CCCC3)CC1O2\"\n}\n{\"output\":\"Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CCN3CCCC3)CC1O2\"}",
+        "gold": "Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3ncccn3)CC1O2"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a tertiary amine (CC(N)C...), a nitrooxy group (C(=O)NO), and a propargyl-substituted benzene ring (C#Cc2ccccc2). The tertiary amine and nitrooxy group may contribute to poor drug-likeness.\",\n    \"Property Analysis\": \"QED is hindered by the nitrooxy group (high desolvation penalty, metabolic instability) and the tertiary amine (potential for high basicity and off-target interactions).\",\n    \"Limitation in Source Molecule for Property\": \"The nitrooxy group reduces metabolic stability and increases polarity, while the tertiary amine raises basicity and may reduce membrane permeability.\",\n    \"Optimization for Source Molecule\": \"Replace the nitrooxy group (C(=O)NO) with a carboxylic acid (C(=O)OH) to improve metabolic stability and reduce polarity. Retain the propargyl-benzene motif for target binding and replace the tertiary amine with a secondary amine (CN) to lower basicity and enhance permeability.\",\n    \"Final Target Molecule\": \"O=C(O)CNc1ccc(C#Cc2ccccc2)cc1\"\n}\n{\"output\":\"O=C(O)CNc1ccc(C#Cc2ccccc2)cc1\"}",
+        "gold": "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with an amino group (-NH2), a hydroxyl group (-OH), and a propenoyl chain linked to a para-chlorinated aniline moiety. The amino group introduces hydrogen bond donors (HBDs) and polar character.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, HBDs, hydrogen bond acceptors (HBAs), and polar surface area. The amino group (-NH2) increases HBD count (2 total: -NH2 and -OH) and polarity, potentially reducing membrane permeability and QED.\",\n    \"Limitation in Source Molecule for Property\": \"The primary limitation is the polar amino group (-NH2), which elevates HBD count and introduces metabolic instability risks (e.g., oxidation or deamination). This reduces drug-likeness by increasing hydrophilicity and potential toxicity.\",\n    \"Optimization for Source Molecule\": \"Replace the -NH2 group with a methyl (-CH3) group. This substitution reduces HBD count (from 2 to 1), lowers polarity, improves logP, and enhances metabolic stability while retaining the hydroxyl group for moderate solubility.\",\n    \"Final Target Molecule\": \"Cc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O\"\n}\n{\"output\":\"Cc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O\"}",
+        "gold": "Nc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with two methoxy groups (OCH3), a vinyl group (C=C), a cyano group (C#N), and a chlorophenyl ether moiety (OCc1ccccc1Cl). The nitrile group (C#N) and aromatic systems contribute to its hydrophobicity.\",\n    \"Property Analysis\": \"The cyano group (C#N) increases molecular weight and contributes to higher logP (poor solubility) and potential metabolic instability. The chlorophenyl ether (OCc1ccccc1Cl) adds molecular weight and may reduce bioavailability due to lipophilicity.\",\n    \"Limitation in Source Molecule for Property\": \"The cyano group (C#N) and chlorophenyl ether moiety negatively impact QED by increasing logP and molecular weight while reducing solubility and drug-likeness.\",\n    \"Optimization for Source Molecule\": \"Replace the cyano group (C#N) with a hydroxyl group (OH) to reduce logP and molecular weight while improving hydrogen bonding capacity. Remove the chlorophenyl ether (OCc1ccccc1Cl) to decrease lipophilicity and simplify the structure, focusing on the core benzene ring with methoxy groups and a hydroxyl-substituted vinylbenzene moiety.\",\n    \"Final Target Molecule\": \"COc1cc(C=C(c2cccc(O)c2)O)ccc1OCc1ccccc1Cl\"\n}\n{\"output\":\"COc1cc(C=C(c2cccc(O)c2)O)ccc1OCc1ccccc1Cl\"}",
+        "gold": "COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (C(=O)N) linking two methoxy-substituted benzene rings. The substituent on the second benzene ring is a bicyclic system (pyrrole fused to a benzene ring), with a pyrrole (azole) as the smaller ring and a benzene as the larger ring.\",\n    \"Property Analysis\": \"The pyrrole-benzene substituent introduces aromaticity and planar geometry, which may reduce solubility and increase logP, negatively impacting QED (drug-likeness). Pyrrole's hydrogen-bonding capacity is limited compared to saturated heterocycles like piperidine.\",\n    \"Limitation in Source Molecule for Property\": \"The pyrrole-benzene substituent contributes to high aromaticity, potentially reducing solubility and increasing logP. The pyrrole's limited hydrogen-bonding ability may further hinder drug-likeness.\",\n    \"Optimization for Source Molecule\": \"Replace the pyrrole-benzene substituent with a piperidine group. Piperidine introduces a saturated heterocycle with improved solubility, reduced logP, and enhanced hydrogen-bonding capacity while maintaining similar steric bulk.\",\n    \"Final Target Molecule\": \"COc1ccc(C(=O)Nc2ccc(N3CCCC3)cc2)cc1OC\"\n}\n{\"output\":\"COc1ccc(C(=O)Nc2ccc(N3CCCC3)cc2)cc1OC\"}",
+        "gold": "COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl-substituted oxazole ring (Cc1oc(=O)oc1), an ethyl ester linker (COC(=O)), a branched alcohol group (C(C)(C)O), and a substituted benzene ring with a chlorophenyl ester (C(=O)c2ccc(Cl)cc2). The oxazole ring and ester groups contribute to polarity and hydrogen bonding.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The oxazole ring (2 H-bond acceptors) and ester groups (additional H-bond acceptors) may reduce QED due to high polarity and metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"The oxazole ring introduces excessive H-bond acceptors and metabolic liability. The ester groups (COC(=O) and C(=O)) increase polarity and molecular weight, negatively impacting drug-likeness.\",\n    \"Optimization for Source Molecule\": \"1. Replace the oxazole ring (high H-bond acceptors, poor metabolic stability) with a thiophene ring (reduces H-bond acceptors, improves lipophilicity). 2. Remove the ethyl ester linker (COC(=O)) to reduce polarity. 3. Retain the chlorophenyl ester (C(=O)c2ccc(Cl)cc2) for target binding but simplify the alcohol group to a hydroxyl (-OH) to balance logP.\",\n    \"Final Target Molecule\": \"O=C(C(C)(C)O)c1ccc(C(=O)c2ccc(Cl)cc2)cc1O\"\n}\n{\"output\":\"O=C(C(C)(C)O)c1ccc(C(=O)c2ccc(Cl)cc2)cc1O\"}",
+        "gold": "Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(NC(=O)CN2C(=O)SC(=Cc3ccc(-c4ccc(Cl)c(C(=O)O)c4)o3)C2=O)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thiazolidinedione-like scaffold (C2=O, N2C(=O), S) with a methyl-substituted benzene ring (Cc1ccc), a thiophene-linked ketone (SC(=Cc3ccc)), and a chlorinated benzene carboxylic acid (-c4ccc(Cl)c(C(=O)O)c4). The thiophene (c3ccc) and methyl group (Cc1) are key structural features.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The thiophene ring (c3ccc) contributes to high hydrophobicity (logP), and the methyl group (Cc1) adds steric bulk without enhancing solubility. The carboxylic acid (-C(=O)O) improves solubility but may reduce membrane permeability.\",\n    \"Limitation in Source Molecule for Property\": \"1) Thiophene increases logP, reducing drug-likeness. 2) Methyl group offers no therapeutic benefit and contributes to excessive hydrophobicity. 3) The ketone (C(=O)) in the thiazolidinedione core may limit metabolic stability.\",\n    \"Optimization for Source Molecule\": \"1) Replace thiophene (c3ccc) with a piperidine ring (N3CCCC3) to reduce logP and introduce a basic nitrogen for H-bond donation. 2) Remove methyl group (Cc1) to decrease steric hindrance and hydrophobicity. 3) Convert ketone (C(=O)) to a more stable amide (NC(=O)) in the thiazolidinedione core.\",\n    \"Final Target Molecule\": \"NC(=O)CN1C(=O)SC(=Cc2ccc(-c3ccc(Cl)c(C(=O)O)c3)o2)C1=O\"\n}\n{\"output\":\"NC(=O)CN1C(=O)SC(=Cc2ccc(-c3ccc(Cl)c(C(=O)O)c3)o2)C1=O\"}",
+        "gold": "Cc1ccc(NC(=O)CN2C(=O)SC(=Cc3ccc(-c4ccc(Cl)c(C(=O)O)c4)o3)C2=O)cc1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic core with a dimethylamine side chain (CN(C)CCC), a thiazole ring substituted with a phenyl group (-c2nc3ccccc3s2), and two cyanomethyl (-C#N) groups attached to the bicyclic system. The dimethylamine chain is flexible and non-aromatic.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and aromaticity. The dimethylamine chain increases molecular weight and logP, reducing drug-likeness. The cyanomethyl groups contribute to high polarity but may hinder membrane permeability.\",\n    \"Limitation in Source Molecule for Property\": \"The flexible dimethylamine chain (CN(C)CCC) raises molecular weight and logP, while the lack of aromaticity in this region reduces optimal QED parameters. The chain’s conformational flexibility may also reduce target binding efficiency.\",\n    \"Optimization for Source Molecule\": \"Replace the dimethylamine chain with an aromatic pyrrole ring (c1c[nH]cn1) to reduce molecular weight, lower logP, and introduce aromaticity. Pyrrole’s planar structure and hydrogen-bonding capability improve drug-likeness while maintaining steric compatibility.\",\n    \"Final Target Molecule\": \"Nc1nc(Nc2ccnc3[nH]ccnc23)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21\"\n}\n{\"output\":\"Nc1nc(Nc2ccnc3[nH]ccnc23)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21\"}",
+        "gold": "CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(=O)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with (1) an ester group (CCC(=O)O-) at position 1, (2) an amide-linked benzene ring (NC(=O)) at position 4, and (3) a sulfonamide group (S(=O)(=O)N3CCCC3) at position 3. The piperidine ring (N3CCCC3) is part of the sulfonamide substituent.\",\n    \"Property Analysis\": \"The sulfonamide group (S(=O)(=O)N3CCCC3) contributes to high polarity and hydrogen bond acceptor count (HBA = 6), which may reduce QED. The ester group (CCC(=O)O-) adds metabolic instability. The molecule has a molecular weight of ~358 g/mol and a topological polar surface area (TPSA) of ~110 Å².\",\n    \"Limitation in Source Molecule for Property\": \"The sulfonamide-piperidine moiety introduces excessive polarity (HBA = 6) and metabolic liability (sulfonamides are prone to hydrolysis), both detrimental to QED. The ester group further increases hydrolytic susceptibility.\",\n    \"Optimization for Source Molecule\": \"1. Replace the sulfonamide-piperidine group with a less polar, more metabolically stable substituent (e.g., a tert-butyl group). 2. Retain the ester group for solubility but reposition it to reduce steric hindrance. 3. Simplify the amide linker to a single bond to reduce molecular weight.\",\n    \"Final Target Molecule\": \"CC(C)(C)c1ccc(NC(=O)c2ccc(C(=O)O)cc2)cc1\"\n}\n{\"output\":\"CC(C)(C)c1ccc(NC(=O)c2ccc(C(=O)O)cc2)cc1\"}",
+        "gold": "CCC(=O)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCCCCCC(=O)Nc1ccccc1)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group (-NO), a 7-carbon aliphatic chain, and a benzamide group. The nitro group is electron-withdrawing and may contribute to metabolic instability. The long aliphatic chain increases hydrophobicity (logP), potentially reducing solubility.\",\n    \"Property Analysis\": \"Nitro groups are associated with poor drug-likeness (QED) due to toxicity risks and high hydrogen bond acceptor count. The long chain increases logP, deviating from the optimal QED range (logP < 5).\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group (-NO) and extended aliphatic chain are major limitations: (1) Nitro reduces QED via toxicity concerns and high H-bond acceptors. (2) The chain length increases logP, lowering solubility and drug-likeness.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group (-NO) with a methyl group (-CH3) to eliminate toxicity risks and reduce H-bond acceptors. Shorten the aliphatic chain from 7 to 5 carbons to lower logP while retaining permeability.\",\n    \"Final Target Molecule\": \"Cc1ccc(C(=O)CCCCCC(=O)Nc2ccccc2)cc1\"\n}\n{\"output\":\"Cc1ccc(C(=O)CCCCCC(=O)Nc2ccccc2)cc1\"}",
+        "gold": "O=C(CCCCCCC(=O)Nc1ccccc1)NO"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cc([N+](=O)[O-])cn2C)CC1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a piperazine ring (C1CNCCN1) connected to a fluorinated aromatic system with a ketone, carboxylic acid, and a nitro-substituted pyrrole ring. The nitro group ([N+](=O)[O-]) on the pyrrole is a strong electron-withdrawing group.\",\n    \"Property Analysis\": \"The nitro group contributes to high molecular weight, increases topological polar surface area (TPSA), and introduces potential metabolic instability, all of which negatively impact QED (drug-likeness).\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group reduces QED by increasing molecular weight, TPSA, and introducing a toxicophore (nitro groups are associated with genotoxicity risks).\",\n    \"Optimization for Source Molecule\": \"Replace the nitro-substituted pyrrole ring with a non-heteroaromatic system (e.g., phenyl) to eliminate the nitro group, reduce molecular weight/TPSA, and improve metabolic stability.\",\n    \"Final Target Molecule\": \"CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccccc2)CC1\"\n}\n{\"output\":\"CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2ccccc2)CC1\"}",
+        "gold": "CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cc([N+](=O)[O-])cn2C)CC1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C#CCCCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a terminal alkyne group (C#C), a pentyl chain, a ketone (=O), a substituted benzene ring with a tert-butyl group (C(C)(C)C), and an oxygen-containing heterocycle (OCC2). The alkyne group is non-drug-like and may reduce QED due to poor solubility and metabolic instability.\",\n    \"Property Analysis\": \"QED penalizes alkynes for poor solubility, metabolic instability, and non-compliance with Lipinski’s rules. The pentyl chain and tert-butyl group contribute to high lipophilicity (logP), while the ketone and oxygen heterocycle provide moderate polarity.\",\n    \"Limitation in Source Molecule for Property\": \"The alkyne group (C#C) is a major limitation: it is metabolically labile, increases logP, and violates Lipinski’s rule of five (alkynes are considered non-drug-like).\",\n    \"Optimization for Source Molecule\": \"Replace the alkyne (C#C) with a propenyl group (C=CC) to improve metabolic stability and reduce logP. Retain the ketone (=O) and tert-butyl group (C(C)(C)C) for target binding and steric bulk. Preserve the oxygen heterocycle (OCC2) for polarity balance.\",\n    \"Final Target Molecule\": \"C=CCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2\"\n}\n{\"output\":\"C=CCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2\"}",
+        "gold": "C#CCCCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine core (Nc1cnc...cn1) linked to a substituted phenyl ring. Key features include: (1) a cyclopropyl group (C3CCC3) on the phenyl ring, (2) a fluorine substituent, (3) an ether-linked side chain with a secondary amine (OCC(O)CN...). The side chain terminates in a 2-aminopyrimidine group (Nc3cc(N)ncn3).\",\n    \"Property Analysis\": \"QED is limited by: (1) High hydrogen bond donors (HBD=3: pyrimidine NH, side chain NH2, and secondary amine). (2) Elevated topological polar surface area (TPSA) from polar groups (NH2, ether oxygen). (3) Potential metabolic instability of the 2-aminopyrimidine moiety.\",\n    \"Limitation in Source Molecule for Property\": \"The 2-aminopyrimidine group contributes excessive HBD (2) and TPSA, reducing drug-likeness. The pyrimidine ring may also introduce undesired polarity or toxicity risks.\",\n    \"Optimization for Source Molecule\": \"Replace the 2-aminopyrimidine (Nc3cc(N)ncn3) with a methyl-substituted pyrrole (Cc3ccnc3). This reduces HBD (from 2 to 1), lowers TPSA, and improves lipophilicity while retaining aromatic stacking potential.\",\n    \"Final Target Molecule\": \"Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNCc3ccnc3)c2F)cn1\"\n}\n{\"output\":\"Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNCc3ccnc3)c2F)cn1\"}",
+        "gold": "Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccccc1)N1CCN(Cc2ccc(C=Cc3ccccc3)cc2)CC1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperazine ring (N1CCNCC1) substituted with a benzyl group (Cc2ccc(C=Cc3ccccc3)cc2) and an amide-linked phenyl ring (O=C(Nc1ccccc1)N). The benzyl group includes a conjugated enone system (C=Cc3ccccc3).\",\n    \"Property Analysis\": \"The conjugated enone (C=Cc3ccccc3) introduces high planarity, increases molecular weight, and may reduce metabolic stability. The enone's ketone group could contribute to poor solubility or high logP, negatively impacting QED (drug-likeness).\",\n    \"Limitation in Source Molecule for Property\": \"The enone group (C=Cc3ccccc3) is a key limitation: (1) It increases molecular rigidity and planarity, reducing bioavailability. (2) The ketone may lead to metabolic instability or toxicity. (3) It adds unnecessary hydrogen bond acceptors, lowering QED.\",\n    \"Optimization for Source Molecule\": \"Replace the enone (C=Cc3ccccc3) with a non-planar, metabolically stable branched alkyl chain (CCC(C)=C). This retains hydrophobicity while improving solubility, reducing molecular weight, and eliminating the ketone liability.\",\n    \"Final Target Molecule\": \"O=C(Nc1ccccc1)N1CCN(Cc2ccc(CCC(C)=C)cc2)CC1\"\n}\n{\"output\":\"O=C(Nc1ccccc1)N1CCN(Cc2ccc(CCC(C)=C)cc2)CC1\"}",
+        "gold": "O=C(Nc1ccccc1)N1CCN(Cc2ccc(C=Cc3ccccc3)cc2)CC1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)C=Cc1cn(Cc2ccc([N+](=O)[O-])cc2)c2ccccc12.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group ([N+](=O)[O-]) attached to a benzyl group (Cc2ccc([N+](=O)[O-])cc2) and a conjugated ketone system (O=C(O)C=C). The core structure includes a bicyclic aromatic system (c1cn...c2ccccc12).\",\n    \"Property Analysis\": \"The nitro group contributes to high molecular weight, poor solubility (high logP), and potential toxicity, all of which negatively impact QED (drug-likeness). The conjugated ketone may increase metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group is a major liability for QED due to its undesirable physicochemical and ADMET properties. The benzyl-nitro group also adds unnecessary bulk.\",\n    \"Optimization for Source Molecule\": \"Replace the nitrobenzyl group (Cc2ccc([N+](=O)[O-])cc2) with a smaller, more drug-like substituent (e.g., methyl, Cc2ccccc2) to reduce molecular weight, improve solubility, and eliminate toxicity risks. Retain the conjugated ketone and bicyclic aromatic system for target binding.\",\n    \"Final Target Molecule\": \"O=C(O)C=Cc1cn(Cc2ccccc2)c2ccccc12\"\n}\n{\"output\":\"O=C(O)C=Cc1cn(Cc2ccccc2)c2ccccc12\"}",
+        "gold": "O=C(O)C=Cc1cn(Cc2ccc([N+](=O)[O-])cc2)c2ccccc12"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a morpholine ring (C1CN(C(=O)O1) with an acetyl group (CC(=O)N) and a substituted benzene ring (c2ccc(C(C)=NO)cc2) attached via a methylene linker. The benzene substituent includes a methyl-oxime group (C(C)=NO).\",\n    \"Property Analysis\": \"The oxime group (C(C)=NO) introduces potential metabolic instability and polarity mismatches, which may reduce QED. The methyl-oxime may also increase molecular weight and hinder drug-likeness by violating common Lipinski/Veber rule guidelines.\",\n    \"Limitation in Source Molecule for Property\": \"The oxime group is a non-classical bioisostere and may contribute to poor solubility, metabolic clearance, or off-target interactions. Its presence reduces QED by violating ideal ranges for logP and hydrogen bond acceptors.\",\n    \"Optimization for Source Molecule\": \"Replace the methyl-oxime (C(C)=NO) with a piperidine ring (N2CCCC2) to enhance stability, improve solubility, and reduce polarity. Piperidine retains hydrogen-bonding capability while providing a rigid, bioisosteric replacement that aligns with QED-optimal parameters.\",\n    \"Final Target Molecule\": \"CC(=O)NCC1CN(c2ccc(N3CCCC3)cc2)C(=O)O1\"\n}\n{\"output\":\"CC(=O)NCC1CN(c2ccc(N3CCCC3)cc2)C(=O)O1\"}",
+        "gold": "CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1nc(OCC(=N)NO)nc(N2CCOCC2)n1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a pyrimidine ring with substituents: methoxy (OCH3), a morpholine ring (N2CCOCC2), and an O-linked ethyl group with a nitrosoimine moiety (OCC(=N)NO. The morpholine and pyrimidine core are drug-like, but the OCC(=N)NO group introduces instability and poor QED properties.\",\n    \"Property Analysis\": \"The nitrosoimine group (OCC(=N)NO) increases molecular weight, adds excessive hydrogen bond acceptors (HBA = 8), and introduces reactive/toxicity risks. These factors lower QED (ideal HBA ≤5).\",\n    \"Limitation in Source Molecule for Property\": \"The OCC(=N)NO group destabilizes the molecule, reduces metabolic stability, and contributes to high polar surface area (PSA), impairing permeability and drug-likeness.\",\n    \"Optimization for Source Molecule\": \"Replace the unstable OCC(=N)NO group with a saturated piperidine ring (C1CCNCC1). Piperidine reduces HBA (from 8 to 7), lowers PSA, improves lipophilicity (logP), and enhances metabolic stability while retaining nitrogen-based interactions.\",\n    \"Final Target Molecule\": \"COc1nc(C2CCNCC2)nc(N2CCOCC2)n1\"\n}\n{\"output\":\"COc1nc(C2CCNCC2)nc(N2CCOCC2)n1\"}",
+        "gold": "COc1nc(OCC(=N)NO)nc(N2CCOCC2)n1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central bicyclic urea core (two fused carbonyl groups) with a benzyl-substituted nitrogen and a propenylamine chain (C=CCN) terminating in a carbamate group (NC(=O)O). The structure includes two aromatic benzyl rings and multiple hydrogen bond acceptors/donors.\",\n    \"Property Analysis\": \"QED is limited by high molecular weight (due to two benzyl rings), elevated logP (from hydrophobic benzyl groups and propenyl chain), and excessive hydrogen bond acceptors (six carbonyl groups). The propenyl chain may also reduce metabolic stability.\",\n    \"Limitation in Source Molecule for Property\": \"1) Two benzyl rings increase logP and molecular weight. 2) Propenyl chain adds hydrophobicity and metabolic liability. 3) Excessive carbonyl groups (carbamate, urea) raise hydrogen bond acceptor count.\",\n    \"Optimization for Source Molecule\": \"1) Replace one benzyl ring with a smaller alkyl group (methyl) to reduce logP and molecular weight. 2) Remove propenyl chain to eliminate metabolic instability and hydrophobicity. 3) Simplify carbamate to a primary amide to reduce hydrogen bond acceptors and molecular complexity.\",\n    \"Final Target Molecule\": \"CC(NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O)c1ccccc1\"\n}\n{\"output\":\"CC(NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O)c1ccccc1\"}",
+        "gold": "C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CSc1ncccn1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central amide group (O=C-N) linked to a thioether (C-S) and a pyrrole ring (Sc1ncccn1). The other side of the amide is connected to a sulfonamide-substituted benzene ring (N2CCCCC2, likely piperidine, is the sulfonamide's nitrogen).\",\n    \"Property Analysis\": \"The pyrrole ring (Sc1ncccn1) contributes to high aromaticity and potential metabolic instability. The thioether (C-S) may increase lipophilicity (logP), reducing QED. Pyrrole's electron-rich nature and sulfur atom could hinder optimal drug-likeness.\",\n    \"Limitation in Source Molecule for Property\": \"1) Pyrrole's high aromaticity and metabolic susceptibility. 2) Thioether increasing logP. 3) Lack of hydrogen bond donors/acceptors optimization in the current substituents.\",\n    \"Optimization for Source Molecule\": \"Replace the pyrrole-thioether group (CSc1ncccn1) with a piperazine-linked ethyl group (NCCN1CCNCC1). Piperazine introduces two hydrogen bond donors/acceptors, improves solubility, and reduces aromaticity. The ethyl spacer enhances flexibility and balances logP.\",\n    \"Final Target Molecule\": \"O=C(NCCN1CCNCC1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1\"\n}\n{\"output\":\"O=C(NCCN1CCNCC1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1\"}",
+        "gold": "O=C(CSc1ncccn1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(c1ccc(C=CC(=O)NO)cc1)S(=O)(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (S(=O)(=O)) attached to a benzene ring, a methyl group (CN) on the sulfonamide nitrogen, and a propenoyl chain (C=CC(=O)) terminating in a nitrooxy group (NO). The nitrooxy group is a potential liability due to metabolic instability and poor drug-likeness.\",\n    \"Property Analysis\": \"The nitrooxy group (NO) contributes to high molecular weight, increases hydrogen bond acceptors (HBA = 6), and may reduce metabolic stability. These factors negatively impact QED (e.g., logP, HBA, and molecular complexity).\",\n    \"Limitation in Source Molecule for Property\": \"The nitrooxy group is metabolically labile and introduces unfavorable QED parameters. It also increases the number of hydrogen bond acceptors, which may reduce membrane permeability.\",\n    \"Optimization for Source Molecule\": \"Replace the nitrooxy group (NO) with a hydroxyl group (OH) to eliminate metabolic instability, reduce molecular weight, and improve logP. This retains the hydrogen bond donor capacity while lowering HBA count and enhancing drug-likeness.\",\n    \"Final Target Molecule\": \"CN(c1ccc(C=CC(=O)O)cc1)S(=O)(=O)c1ccccc1\"\n}\n{\"output\":\"CN(c1ccc(C=CC(=O)O)cc1)S(=O)(=O)c1ccccc1\"}",
+        "gold": "CN(c1ccc(C=CC(=O)NO)cc1)S(=O)(=O)c1ccccc1"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3[nH]2)cc1OC.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring with two methoxy groups (OCH3) and a carbonyl-linked aniline group. The aniline is attached to a bicyclic system: a pyrrole ring (C1=CC=CN1) fused to a benzene ring. The pyrrole nitrogen has an NH group.\",\n    \"Property Analysis\": \"QED is influenced by molecular weight, logP, hydrogen bond donors/acceptors, and polar surface area. The pyrrole NH and aniline NH contribute to high hydrogen bonding, while the fused bicyclic system increases molecular weight and logP, reducing drug-likeness.\",\n    \"Limitation in Source Molecule for Property\": \"1) High hydrogen bond donors (2 NH groups). 2) Increased molecular weight and logP from the fused pyrrole-benzene system. 3) Limited solubility due to aromatic stacking.\",\n    \"Optimization for Source Molecule\": \"1) Replace the fused pyrrole-benzene system with a single benzene ring to reduce molecular weight and logP. 2) Remove the pyrrole NH to eliminate one hydrogen bond donor. 3) Retain methoxy groups for solubility. 4) Simplify the linker to a single bond to reduce complexity.\",\n    \"Final Target Molecule\": \"COc1ccc(C(=O)Nc2ccccc2)cc1OC\"\n}\n{\"output\":\"COc1ccc(C(=O)Nc2ccccc2)cc1OC\"}",
+        "gold": "COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3[nH]2)cc1OC"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1nccc(C#Cc2ccc(CC(C)NC(C)=O)cc2)n1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a thiazole ring (CSc1nccc...n1) linked to a propargyl group (C#C) and a substituted benzene ring. The benzene ring has an ethyl side chain with a secondary amide (NC(C)=O) and an isopropyl group.\",\n    \"Property Analysis\": \"The secondary amide (NC(C)=O) contributes to hydrogen bond donors (HBD=1) and may increase polarity, potentially reducing membrane permeability. The thiazole ring and propargyl group introduce rigidity and metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"The amide group (NC(C)=O) introduces metabolic liability (e.g., hydrolysis) and excessive polarity, lowering QED. The thiazole ring may contribute to poor solubility.\",\n    \"Optimization for Source Molecule\": \"Replace the polar amide (NC(C)=O) with a non-polar, metabolically stable branched alkyl chain (e.g., CC(C)C) to reduce HBD, improve logP, and enhance metabolic stability.\",\n    \"Final Target Molecule\": \"CSc1nccc(C#Cc2ccc(CC(C)CC(C)C)cc2)n1\"\n}\n{\"output\":\"CSc1nccc(C#Cc2ccc(CC(C)CC(C)C)cc2)n1\"}",
+        "gold": "CSc1nccc(C#Cc2ccc(CC(C)NC(C)=O)cc2)n1"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central thioamide group (-NC(=S)N-) linking two aromatic rings. One ring is a benzofuran (from SMILES 'c1ccco1'), and the other is a nitro-substituted benzene ring ([N+](=O)[O-]).\",\n    \"Property Analysis\": \"The nitro group ([N+](=O)[O-]) introduces high polarity, metabolic instability, and potential toxicity, which negatively impacts QED (drug-likeness). Nitro groups are generally undesirable in drug candidates due to their association with mutagenicity and poor pharmacokinetic properties.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group reduces QED by increasing molecular weight, polar surface area, and introducing a known toxicophore. It also decreases metabolic stability and increases the risk of off-target interactions.\",\n    \"Optimization for Source Molecule\": \"Replace the nitro group (-NO2) with a methyl group (-CH3) to eliminate toxicity risks, reduce polarity, and improve lipophilicity. Methyl is a bioisostere that maintains steric bulk while enhancing metabolic stability and drug-likeness.\",\n    \"Final Target Molecule\": \"Cc1ccc(C(=O)NC(=S)NCc2ccco2)cc1\"\n}\n{\"output\":\"Cc1ccc(C(=O)NC(=S)NCc2ccco2)cc1\"}",
+        "gold": "O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)NC(=O)c2ccccc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with a methyl group, a urea-linked propenyl chain, and a nitro-substituted benzene ring. The urea groups (NC(=O)) and conjugated carbonyl system (C=O) contribute to polarity and hydrogen bonding.\",\n    \"Property Analysis\": \"The nitro group ([N+](=O)[O-]) introduces high polarity, metabolic instability, and potential toxicity, negatively impacting QED. The molecule has moderate hydrophobicity (logP ~3.5) but excessive polar surface area (PSA ~50 Å²) due to urea and nitro groups.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group reduces drug-likeness by increasing PSA, molecular weight (MW=366 g/mol), and introducing metabolic liabilities. The propenyl chain (C=C) may also contribute to instability.\",\n    \"Optimization for Source Molecule\": \"1. Remove the nitro group to eliminate toxicity and reduce PSA/MW. 2. Shorten the propenyl chain to a direct urea linkage (NC(=O)C(=O)) to improve stability. 3. Retain the methyl group for balanced hydrophobicity.\",\n    \"Final Target Molecule\": \"Cc1ccc(NC(=O)C(=O)Nc2ccccc2)cc1\"\n}\n{\"output\":\"Cc1ccc(NC(=O)C(=O)Nc2ccccc2)cc1\"}",
+        "gold": "Cc1ccc(NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)NC(=O)c2ccccc2)cc1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrimidine ring (c1nc(C#Cc2cnc(...)cs1) with a methyl group, a thioether-linked tert-butyl group (S-C(C)(C)C), and an alkyne-linked pyrimidine-thiol substituent. The structure is planar with potential rigidity from the alkyne and aromatic rings.\",\n    \"Property Analysis\": \"QED is limited by high molecular weight (due to the bulky tert-butyl group), elevated logP (from hydrophobic tert-butyl and alkyne), and lack of hydrogen bond donors. The thioether (S) contributes to metabolic instability.\",\n    \"Limitation in Source Molecule for Property\": \"1) Bulky tert-butyl group increases logP and molecular weight. 2) Absence of hydrogen bond donors reduces solubility. 3) Thioether may lead to oxidative metabolism.\",\n    \"Optimization for Source Molecule\": \"1) Replace tert-butyl with a piperazine ring (introduces H-bond donors/acceptors, reduces logP). 2) Substitute thioether with a stable linker (e.g., -CH2-). 3) Introduce a secondary amine (NH) to enhance solubility and comply with Lipinski's rules.\",\n    \"Final Target Molecule\": \"CC(Nc1nccc(C#Cc2cnc(SC(C)(C)C)nc2)n1)c1ccncc1\"\n}\n{\"output\":\"CC(Nc1nccc(C#Cc2cnc(SC(C)(C)C)nc2)n1)c1ccncc1\"}",
+        "gold": "Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central carbon chain with two nitrooxy (O-NO) groups and a hexyl linker connecting to a bicyclic indole-like system (two fused pyrrole rings). The structure has high aromaticity and polar nitrooxy groups.\",\n    \"Property Analysis\": \"The nitrooxy groups contribute to poor QED due to high polarity, metabolic instability, and potential toxicity. The long aliphatic chain (hexyl) increases logP, reducing solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The nitrooxy groups are a major liability for drug-likeness (QED) due to metabolic and safety risks. The linear hexyl chain may also reduce bioavailability.\",\n    \"Optimization for Source Molecule\": \"Replace nitrooxy groups with a piperidine ring (C1CCNCC1) to eliminate metabolic instability, reduce polarity, and improve solubility. Retain the indole-like core for aromatic interactions and replace the hexyl chain with a branched alkyl (e.g., pentyl-piperidine) to optimize logP and rigidity.\",\n    \"Final Target Molecule\": \"CCCCCN1CCCCC1c1c[nH]c2ccccc12\"\n}\n{\"output\":\"CCCCCN1CCCCC1c1c[nH]c2ccccc12\"}",
+        "gold": "O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with an ester group (CCCCOC(=O)) and an amide-linked side chain (NC(=O)C2(c3cccs3)CCOCC2). The side chain includes a thiophene ring (c3cccs3) and a morpholine-like oxygen-containing ring (CCOCC2).\",\n    \"Property Analysis\": \"The thiophene ring (c3cccs3) contributes to high lipophilicity (logP), which negatively impacts QED. The morpholine-like ring (CCOCC2) introduces a polar oxygen atom but may increase molecular weight and reduce membrane permeability.\",\n    \"Limitation in Source Molecule for Property\": \"The thiophene ring increases logP, reducing drug-likeness (QED). The morpholine-like ring may contribute to excessive polarity and molecular weight.\",\n    \"Optimization for Source Molecule\": \"Replace the thiophene ring (c3cccs3) with a fluorine atom (F) to reduce logP and improve lipophilicity. Retain the morpholine-like ring (CCOCC2) to maintain solubility while optimizing other parameters.\",\n    \"Final Target Molecule\": \"CCCCOC(=O)c1ccc(NC(=O)C2(Cc3ccccc3F)CCOCC2)cc1\"\n}\n{\"output\":\"CCCCOC(=O)c1ccc(NC(=O)C2(Cc3ccccc3F)CCOCC2)cc1\"}",
+        "gold": "CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(C=Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a nitro group (-NO), a conjugated α,β-unsaturated ketone (O=C-C=C), and a benzannulated aromatic system (naphthalene-like core with a pyrrole ring). The nitro group and conjugated ketone may contribute to poor drug-likeness.\",\n    \"Property Analysis\": \"The nitro group (-NO) is a known liability for QED due to potential toxicity and metabolic instability. The conjugated α,β-unsaturated ketone could also reduce QED by increasing molecular rigidity and introducing reactive motifs.\",\n    \"Limitation in Source Molecule for Property\": \"The nitro group and conjugated ketone negatively impact QED by introducing metabolic instability, high polar surface area, and potential toxicity risks.\",\n    \"Optimization for Source Molecule\": \"1) Replace the nitro group (-NO) with a bioisostere (e.g., thioether or ether). 2) Reduce conjugation by hydrogenating the α,β-unsaturated ketone to a single-bonded propene. 3) Retain the benzannulated aromatic system for target binding.\",\n    \"Final Target Molecule\": \"CSCCC(=O)c1ccc(C(=O)c2ccc3ccccc3n2)cc1\"\n}\n{\"output\":\"CSCCC(=O)c1ccc(C(=O)c2ccc3ccccc3n2)cc1\"}",
+        "gold": "O=C(C=Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1)NO"
+    }
+}

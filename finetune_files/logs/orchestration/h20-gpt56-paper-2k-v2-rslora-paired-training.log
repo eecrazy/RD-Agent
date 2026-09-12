@@ -1,0 +1,1144 @@
+2026-09-09T20:26:44.838087+08:00 START stage=paired_preflight command=/data/github/RD-Agent/.cache/python311/bin/python3.11 /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --preflight-only
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 19, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+2026-09-09T20:26:44.892896+08:00 END stage=paired_preflight return_code=1
+2026-09-09T20:30:34.950574+08:00 START stage=paired_preflight command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --preflight-only
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+2026-09-09T20:30:51.807485+08:00 END stage=paired_preflight return_code=0
+2026-09-09T20:30:51.808970+08:00 START stage=paired_training_attempt_1 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+Paired training: 43 pending; GPUs=0,1,2,3,4,5,6,7; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+START gpu=0 rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+START gpu=1 rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+START gpu=2 rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+START gpu=3 rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+START gpu=4 rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+START gpu=5 rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+START gpu=6 rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+START gpu=7 rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+_GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=CancelledError()>
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 772, in run_workers
+    await workers
+          ^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 428, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 535, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 969, in <module>
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 932, in main
+    success = True
+                   
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 476, in wait_for
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 763, in worker
+    except asyncio.QueueEmpty:
+                       ^^^^^^^^
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 700, in run_one
+    )
+      
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/subprocess.py", line 137, in wait
+    return await self._transport._wait()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/base_subprocess.py", line 230, in _wait
+    return await waiter
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+2026-09-09T20:40:34.172127+08:00 END stage=paired_training_attempt_1 return_code=130
+2026-09-09T20:41:04.174186+08:00 START stage=paired_training_attempt_2 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+Paired training: 43 pending; GPUs=0,1,2,3,4,5,6,7; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+START gpu=0 rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+START gpu=1 rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+START gpu=2 rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+START gpu=3 rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+START gpu=4 rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+START gpu=5 rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+START gpu=6 rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+START gpu=7 rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+_GatheringFuture exception was never retrieved
+future: <_GatheringFuture finished exception=CancelledError()>
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 775, in run_workers
+    run_root: Path,
+              ^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 428, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 535, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 972, in <module>
+    success = True
+                   
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 935, in main
+    raise SystemExit(f"Unsafe run name: {run_name!r}")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 476, in wait_for
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 766, in worker
+    "error": f"{type(error).__name__}: {error}",
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py", line 703, in run_one
+    "PYTHONUNBUFFERED": "1",
+                      ^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/tasks.py", line 479, in wait_for
+    return fut.result()
+           ^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/subprocess.py", line 137, in wait
+    return await self._transport._wait()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/github/RD-Agent/.cache/python311/lib/python3.11/asyncio/base_subprocess.py", line 230, in _wait
+    return await waiter
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+2026-09-09T20:51:58.717782+08:00 END stage=paired_training_attempt_2 return_code=130
+2026-09-09T20:52:28.719786+08:00 START stage=paired_training_attempt_3 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+Paired training: 43 pending; GPUs=0,1,2,3,4,5,6,7; schedule=longest-source-runtime-first; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+  QUEUE 01 estimated_seconds=65351.2 rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+  QUEUE 02 estimated_seconds=65188.1 rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+  QUEUE 03 estimated_seconds=65166.0 rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+  QUEUE 04 estimated_seconds=36621.3 rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+  QUEUE 05 estimated_seconds=17080.5 rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+  QUEUE 06 estimated_seconds=15029.3 rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+  QUEUE 07 estimated_seconds=14288.0 rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+  QUEUE 08 estimated_seconds=6493.3 rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+  QUEUE 09 estimated_seconds=5400.2 rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+  QUEUE 10 estimated_seconds=3231.3 rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+  QUEUE 11 estimated_seconds=3144.0 rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+  QUEUE 12 estimated_seconds=3119.9 rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+  QUEUE 13 estimated_seconds=2785.5 rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+  QUEUE 14 estimated_seconds=2752.5 rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+  QUEUE 15 estimated_seconds=2693.1 rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+  QUEUE 16 estimated_seconds=2675.8 rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+  QUEUE 17 estimated_seconds=2640.8 rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+  QUEUE 18 estimated_seconds=2566.1 rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+  QUEUE 19 estimated_seconds=2533.0 rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+  QUEUE 20 estimated_seconds=2455.9 rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+  QUEUE 21 estimated_seconds=2455.2 rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+  QUEUE 22 estimated_seconds=2448.9 rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+  QUEUE 23 estimated_seconds=2448.4 rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+  QUEUE 24 estimated_seconds=2287.3 rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+  QUEUE 25 estimated_seconds=2214.9 rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+  QUEUE 26 estimated_seconds=2026.0 rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+  QUEUE 27 estimated_seconds=1914.9 rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+  QUEUE 28 estimated_seconds=1789.6 rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+  QUEUE 29 estimated_seconds=1604.7 rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+  QUEUE 30 estimated_seconds=1522.7 rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+  QUEUE 31 estimated_seconds=1508.5 rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+  QUEUE 32 estimated_seconds=1402.1 rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+  QUEUE 33 estimated_seconds=1307.1 rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+  QUEUE 34 estimated_seconds=1256.3 rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+  QUEUE 35 estimated_seconds=1164.0 rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+  QUEUE 36 estimated_seconds=991.1 rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+  QUEUE 37 estimated_seconds=847.1 rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+  QUEUE 38 estimated_seconds=835.1 rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+  QUEUE 39 estimated_seconds=834.9 rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+  QUEUE 40 estimated_seconds=810.2 rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+  QUEUE 41 estimated_seconds=769.1 rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+  QUEUE 42 estimated_seconds=732.5 rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+  QUEUE 43 estimated_seconds=667.7 rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+START gpu=0 rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+START gpu=1 rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+START gpu=2 rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+START gpu=3 rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+START gpu=4 rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+START gpu=5 rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+START gpu=6 rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+START gpu=7 rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+DONE  gpu=7 rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+START gpu=7 rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+DONE  gpu=7 rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+START gpu=7 rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+DONE  gpu=6 rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+START gpu=6 rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+DONE  gpu=5 rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+START gpu=5 rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+DONE  gpu=7 rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+START gpu=7 rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+DONE  gpu=4 rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+START gpu=4 rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+DONE  gpu=6 rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+START gpu=6 rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+DONE  gpu=5 rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+START gpu=5 rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+DONE  gpu=7 rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+START gpu=7 rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+DONE  gpu=4 rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+START gpu=4 rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+DONE  gpu=6 rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+START gpu=6 rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+DONE  gpu=5 rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+START gpu=5 rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+DONE  gpu=7 rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+START gpu=7 rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+DONE  gpu=4 rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+START gpu=4 rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+DONE  gpu=6 rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+START gpu=6 rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+DONE  gpu=5 rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+START gpu=5 rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+DONE  gpu=7 rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+START gpu=7 rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+DONE  gpu=4 rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+START gpu=4 rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+DONE  gpu=6 rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+START gpu=6 rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+DONE  gpu=5 rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+START gpu=5 rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+DONE  gpu=7 rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+START gpu=7 rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+DONE  gpu=4 rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+START gpu=4 rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+DONE  gpu=6 rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+START gpu=6 rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+DONE  gpu=5 rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+START gpu=5 rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+DONE  gpu=7 rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+START gpu=7 rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+DONE  gpu=4 rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+START gpu=4 rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+DONE  gpu=7 rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+START gpu=7 rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+DONE  gpu=6 rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+START gpu=6 rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+DONE  gpu=5 rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+START gpu=5 rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+DONE  gpu=5 rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+START gpu=5 rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+DONE  gpu=6 rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+START gpu=6 rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+DONE  gpu=4 rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+START gpu=4 rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+DONE  gpu=7 rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+START gpu=7 rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+DONE  gpu=5 rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+START gpu=5 rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+DONE  gpu=6 rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+START gpu=6 rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+DONE  gpu=7 rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+DONE  gpu=4 rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+DONE  gpu=5 rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+DONE  gpu=6 rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+DONE  gpu=3 rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+DONE  gpu=2 rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+DONE  gpu=1 rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+DONE  gpu=0 rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+Paired matrix complete: tasks=0/39, workspaces=43/43
+2026-09-10T15:10:56.540278+08:00 END stage=paired_training_attempt_3 return_code=1
+2026-09-10T15:19:03.006183+08:00 START stage=paired_preflight command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --preflight-only
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+2026-09-10T15:19:19.776408+08:00 END stage=paired_preflight return_code=0
+2026-09-10T15:19:19.777696+08:00 START stage=paired_training_attempt_1 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+REUSE rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+REUSE rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+REUSE rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+REUSE rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+REUSE rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+REUSE rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+REUSE rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+REUSE rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+REUSE rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+REUSE rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+REUSE rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+REUSE rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+REUSE rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+REUSE rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+REUSE rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+REUSE rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+REUSE rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+REUSE rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+REUSE rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+REUSE rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+REUSE rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+REUSE rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+REUSE rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+REUSE rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+REUSE rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+REUSE rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+REUSE rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+Paired training: 0 pending; GPUs=0,1,2,3,4,5,6,7; schedule=longest-source-runtime-first; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+Paired matrix complete: tasks=39/39, workspaces=43/43
+2026-09-10T15:21:17.026018+08:00 END stage=paired_training_attempt_1 return_code=0
+2026-09-10T17:42:32.105660+08:00 START stage=paired_preflight command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --preflight-only
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+2026-09-10T17:42:48.715403+08:00 END stage=paired_preflight return_code=0
+2026-09-10T17:42:48.716764+08:00 START stage=paired_training_attempt_1 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+REUSE rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+REUSE rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+REUSE rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+REUSE rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+REUSE rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+REUSE rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+REUSE rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+REUSE rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+REUSE rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+REUSE rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+REUSE rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+REUSE rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+REUSE rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+REUSE rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+REUSE rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+REUSE rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+REUSE rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+REUSE rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+REUSE rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+REUSE rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+REUSE rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+REUSE rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+REUSE rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+REUSE rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+REUSE rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+REUSE rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+REUSE rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+Paired training: 0 pending; GPUs=0,1,2,3,4,5,6,7; schedule=longest-source-runtime-first; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+Paired matrix complete: tasks=39/39, workspaces=43/43
+2026-09-10T17:44:46.130297+08:00 END stage=paired_training_attempt_1 return_code=0
+2026-09-10T18:13:49.126904+08:00 START stage=paired_preflight command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --preflight-only
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+2026-09-10T18:14:05.238768+08:00 END stage=paired_preflight return_code=0
+2026-09-10T18:14:05.240195+08:00 START stage=paired_training_attempt_1 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+REUSE rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+REUSE rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+REUSE rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+REUSE rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+REUSE rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+REUSE rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+REUSE rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+REUSE rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+REUSE rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+REUSE rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+REUSE rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+REUSE rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+REUSE rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+REUSE rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+REUSE rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+REUSE rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+REUSE rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+REUSE rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+REUSE rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+REUSE rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+REUSE rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+REUSE rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+REUSE rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+REUSE rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+REUSE rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+REUSE rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+REUSE rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+Paired training: 0 pending; GPUs=0,1,2,3,4,5,6,7; schedule=longest-source-runtime-first; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+Paired matrix complete: tasks=39/39, workspaces=43/43
+2026-09-10T18:16:00.989198+08:00 END stage=paired_training_attempt_1 return_code=0
+2026-09-10T18:45:16.990128+08:00 START stage=paired_preflight command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --preflight-only
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+2026-09-10T18:45:33.321003+08:00 END stage=paired_preflight return_code=0
+2026-09-10T18:45:33.322450+08:00 START stage=paired_training_attempt_1 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+REUSE rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+REUSE rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+REUSE rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+REUSE rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+REUSE rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+REUSE rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+REUSE rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+REUSE rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+REUSE rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+REUSE rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+REUSE rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+REUSE rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+REUSE rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+REUSE rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+REUSE rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+REUSE rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+REUSE rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+REUSE rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+REUSE rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+REUSE rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+REUSE rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+REUSE rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+REUSE rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+REUSE rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+REUSE rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+REUSE rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+REUSE rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+Paired training: 0 pending; GPUs=0,1,2,3,4,5,6,7; schedule=longest-source-runtime-first; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+Paired matrix complete: tasks=39/39, workspaces=43/43
+2026-09-10T18:47:30.008100+08:00 END stage=paired_training_attempt_1 return_code=0
+2026-09-10T19:09:30.364960+08:00 START stage=paired_preflight command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --preflight-only
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+2026-09-10T19:09:46.994526+08:00 END stage=paired_preflight return_code=0
+2026-09-10T19:09:46.996031+08:00 START stage=paired_training_attempt_1 command=/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/reproduction/ft_agent/run_rslora_paired.py --source-matrix /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2 --run-name h20-gpt56-paper-2k-v2-rslora-paired --gpus 0,1,2,3,4,5,6,7 --max-parallel 8 --require-exclusive-gpus --resume
+Source audit OK: 39/39 tasks; ordinary-LoRA tasks=39; paired workspaces=43
+  main/aime25/run-1/5d1061d3d5cc4ce89e18ac6e44fa8b8c -> rslora-paired/main/aime25/run-1/rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd contract=caf0c3e47ef9
+  main/panorama_par4pc/run-1/073af76ba8b44a63847bbcac3bf05420 -> rslora-paired/main/panorama_par4pc/run-1/rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0 contract=ba3e152db1a8
+  main/panorama_noc4pc/run-1/244a353b00b24eb5b96224d73eb2f191 -> rslora-paired/main/panorama_noc4pc/run-1/rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5 contract=df7e02b623d4
+  main/panorama_pi4pc/run-1/8c0d7b3c0dcab9f711effd452cf5c926 -> rslora-paired/main/panorama_pi4pc/run-1/rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee contract=dd81dcbad1b4
+  main/chemcotbench_mol_und/run-1/6f365674cebacf12682be924dbdc2ce0 -> rslora-paired/main/chemcotbench_mol_und/run-1/rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38 contract=927623b6c66c
+  main/chemcotbench_mol_edit/run-1/56a89ae4c4bb4985935c3610df11723b -> rslora-paired/main/chemcotbench_mol_edit/run-1/rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea contract=bc69fb3f5ddd
+  main/chemcotbench_mol_opt/run-1/93b422671cb74e74b076ad9e45ae41cd -> rslora-paired/main/chemcotbench_mol_opt/run-1/rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c contract=91068168d403
+  main/chemcotbench_reaction/run-1/0087c1c9f2fd4c25baf344d76087f4be -> rslora-paired/main/chemcotbench_reaction/run-1/rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb contract=630e59ae97c1
+  main/FinanceIQ_gen/run-1/9afb3a9bff57034002cf1d182e0dbf47 -> rslora-paired/main/FinanceIQ_gen/run-1/rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70 contract=f5655d721074
+  main/tablebench_data_analysis/run-1/6c2e11bd4579126d5eb8b44ac7bbb49e -> rslora-paired/main/tablebench_data_analysis/run-1/rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c contract=2a7a022ace23
+  main/tablebench_fact_checking/run-1/09d3a9c0791a419bbe3f53b6bdc2b542 -> rslora-paired/main/tablebench_fact_checking/run-1/rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056 contract=702cc4033e19
+  main/tablebench_numerical_reasoning/run-1/5a9d14f080c34aea9c5ab7a050d99463 -> rslora-paired/main/tablebench_numerical_reasoning/run-1/rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321 contract=46b1a5cd722e
+  main/tablebench_visualization/run-1/bff0d73c7ec170e13c23df36c1d4d994 -> rslora-paired/main/tablebench_visualization/run-1/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33 contract=0c729a2aab83
+  main/aime25/run-2/9c3b6c5ab08f4870b09c2ba2790243d0 -> rslora-paired/main/aime25/run-2/rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c contract=841de521e749
+  main/panorama_par4pc/run-2/d372572e7a4f36f84bef3d14c85a061f -> rslora-paired/main/panorama_par4pc/run-2/rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b contract=724c54d25a30
+  main/panorama_noc4pc/run-2/34381f41067c41729fe1e1d34fe9c711 -> rslora-paired/main/panorama_noc4pc/run-2/rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07 contract=60d252e7f7ca
+  main/panorama_pi4pc/run-2/92739247514f498fb5ebf0921106ebfb -> rslora-paired/main/panorama_pi4pc/run-2/rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0 contract=f38bca0f931f
+  main/chemcotbench_mol_und/run-2/61e567d6babe4dfcafccc7ba5f4f5b67 -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060 contract=efd986bcae34
+  main/chemcotbench_mol_und/run-2/ee13a5f350394f458b1c7f4f91055f6f -> rslora-paired/main/chemcotbench_mol_und/run-2/rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539 contract=4aa0f659d90f
+  main/chemcotbench_mol_edit/run-2/5c7be5f4995943f2b2ced2092c4109f0 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33 contract=8e921503201b
+  main/chemcotbench_mol_edit/run-2/dd4ccfae55b14310bd3c3732859ca684 -> rslora-paired/main/chemcotbench_mol_edit/run-2/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc contract=d35cd8b35a3e
+  main/chemcotbench_mol_opt/run-2/687117bc6bcb4bff9cf47abeff30bc79 -> rslora-paired/main/chemcotbench_mol_opt/run-2/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61 contract=735687badf4e
+  main/chemcotbench_reaction/run-2/3527d34256004efabe7858c08197c802 -> rslora-paired/main/chemcotbench_reaction/run-2/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7 contract=f28e65e07e4b
+  main/FinanceIQ_gen/run-2/8491abf8b4ee00bb01f01b1701df695d -> rslora-paired/main/FinanceIQ_gen/run-2/rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c contract=a1962c477f8b
+  main/tablebench_data_analysis/run-2/12ac0c194c460d219dd8753a8e7ec395 -> rslora-paired/main/tablebench_data_analysis/run-2/rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a contract=311a75caa4db
+  main/tablebench_fact_checking/run-2/f207bcd1a17c4594b941a4d411afa53e -> rslora-paired/main/tablebench_fact_checking/run-2/rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501 contract=af47bbb33846
+  main/tablebench_numerical_reasoning/run-2/44054002f3b643c9ae9a5c8f9126ca91 -> rslora-paired/main/tablebench_numerical_reasoning/run-2/rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a contract=c169b2c7c213
+  main/tablebench_visualization/run-2/e9824c0d04cd49c5aca4ce2ae6ebe731 -> rslora-paired/main/tablebench_visualization/run-2/rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e contract=cdeb9d8bf360
+  main/aime25/run-3/1664ee835e457741920723de28814cf5 -> rslora-paired/main/aime25/run-3/rslora__1664ee835e457741920723de28814cf5__d09c872a321e contract=1997222132c6
+  main/panorama_par4pc/run-3/43ea613355eb71e72b5f59d6db7bffd4 -> rslora-paired/main/panorama_par4pc/run-3/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417 contract=5b00b4010bd0
+  main/panorama_noc4pc/run-3/e99740f1378c4a2191d5293ed8b6e081 -> rslora-paired/main/panorama_noc4pc/run-3/rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160 contract=0ed8ce2977e2
+  main/panorama_pi4pc/run-3/d4ae9fb4f2044059a8af39faf1b961fe -> rslora-paired/main/panorama_pi4pc/run-3/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8 contract=af350aa94b48
+  main/chemcotbench_mol_und/run-3/00f23b27df5a4877afefe701d18225c7 -> rslora-paired/main/chemcotbench_mol_und/run-3/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7 contract=09ecf83b2fa5
+  main/chemcotbench_mol_edit/run-3/b86e7fa79da145e597196d87d64d5fde -> rslora-paired/main/chemcotbench_mol_edit/run-3/rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3 contract=ca8cecc8eb7c
+  main/chemcotbench_mol_opt/run-3/393a42ebead54b59b021e6f4b6bac914 -> rslora-paired/main/chemcotbench_mol_opt/run-3/rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199 contract=694581cd28e6
+  main/chemcotbench_reaction/run-3/257e016df3394a86be2e0af87c66185e -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399 contract=1dc101a7890d
+  main/chemcotbench_reaction/run-3/66a67991e91e4b81a21eaee1a9f60241 -> rslora-paired/main/chemcotbench_reaction/run-3/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6 contract=1b67f52a9ba1
+  main/FinanceIQ_gen/run-3/08a60e438bcf417fbead4b0f5b56efd6 -> rslora-paired/main/FinanceIQ_gen/run-3/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30 contract=3f4cdf8db664
+  main/tablebench_data_analysis/run-3/2951a9f61d214a86a4e61b8dc77378e3 -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d contract=d949c4618064
+  main/tablebench_data_analysis/run-3/537be1bf254847ebb3a67714aa5ab40b -> rslora-paired/main/tablebench_data_analysis/run-3/rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839 contract=f2a45e98135d
+  main/tablebench_fact_checking/run-3/aa4538eafd7c4b2e839731041a6c47cb -> rslora-paired/main/tablebench_fact_checking/run-3/rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734 contract=1110bbb5b213
+  main/tablebench_numerical_reasoning/run-3/1e53c372bdef4f1d91dc77a19fb087c3 -> rslora-paired/main/tablebench_numerical_reasoning/run-3/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214 contract=b05ff28a0d0d
+  main/tablebench_visualization/run-3/0b0ad9ad35294494945d11600beb7f13 -> rslora-paired/main/tablebench_visualization/run-3/rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d contract=63de14093072
+REUSE rslora-paired/main/aime25/run-1 workspace=rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd
+REUSE rslora-paired/main/panorama_par4pc/run-1 workspace=rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0
+REUSE rslora-paired/main/panorama_noc4pc/run-1 workspace=rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5
+REUSE rslora-paired/main/panorama_pi4pc/run-1 workspace=rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee
+REUSE rslora-paired/main/chemcotbench_mol_und/run-1 workspace=rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-1 workspace=rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-1 workspace=rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c
+REUSE rslora-paired/main/chemcotbench_reaction/run-1 workspace=rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb
+REUSE rslora-paired/main/FinanceIQ_gen/run-1 workspace=rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70
+REUSE rslora-paired/main/tablebench_data_analysis/run-1 workspace=rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c
+REUSE rslora-paired/main/tablebench_fact_checking/run-1 workspace=rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-1 workspace=rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321
+REUSE rslora-paired/main/tablebench_visualization/run-1 workspace=rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33
+REUSE rslora-paired/main/aime25/run-2 workspace=rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c
+REUSE rslora-paired/main/panorama_par4pc/run-2 workspace=rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b
+REUSE rslora-paired/main/panorama_noc4pc/run-2 workspace=rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07
+REUSE rslora-paired/main/panorama_pi4pc/run-2 workspace=rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060
+REUSE rslora-paired/main/chemcotbench_mol_und/run-2 workspace=rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-2 workspace=rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-2 workspace=rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61
+REUSE rslora-paired/main/chemcotbench_reaction/run-2 workspace=rslora__3527d34256004efabe7858c08197c802__59e66068a6d7
+REUSE rslora-paired/main/FinanceIQ_gen/run-2 workspace=rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c
+REUSE rslora-paired/main/tablebench_data_analysis/run-2 workspace=rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a
+REUSE rslora-paired/main/tablebench_fact_checking/run-2 workspace=rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-2 workspace=rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a
+REUSE rslora-paired/main/tablebench_visualization/run-2 workspace=rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e
+REUSE rslora-paired/main/aime25/run-3 workspace=rslora__1664ee835e457741920723de28814cf5__d09c872a321e
+REUSE rslora-paired/main/panorama_par4pc/run-3 workspace=rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417
+REUSE rslora-paired/main/panorama_noc4pc/run-3 workspace=rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160
+REUSE rslora-paired/main/panorama_pi4pc/run-3 workspace=rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8
+REUSE rslora-paired/main/chemcotbench_mol_und/run-3 workspace=rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7
+REUSE rslora-paired/main/chemcotbench_mol_edit/run-3 workspace=rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3
+REUSE rslora-paired/main/chemcotbench_mol_opt/run-3 workspace=rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399
+REUSE rslora-paired/main/chemcotbench_reaction/run-3 workspace=rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6
+REUSE rslora-paired/main/FinanceIQ_gen/run-3 workspace=rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d
+REUSE rslora-paired/main/tablebench_data_analysis/run-3 workspace=rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839
+REUSE rslora-paired/main/tablebench_fact_checking/run-3 workspace=rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734
+REUSE rslora-paired/main/tablebench_numerical_reasoning/run-3 workspace=rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214
+REUSE rslora-paired/main/tablebench_visualization/run-3 workspace=rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d
+Paired training: 0 pending; GPUs=0,1,2,3,4,5,6,7; schedule=longest-source-runtime-first; output=/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired
+Paired matrix complete: tasks=39/39, workspaces=43/43
+2026-09-10T19:11:42.724489+08:00 END stage=paired_training_attempt_1 return_code=0

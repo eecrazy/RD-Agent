@@ -1,0 +1,43 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 01:53:42 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_und/test/20260828_015342
+08/28 01:53:42 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 01:53:42 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_fg_count] on GPU 0
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:32<02:09, 32.37s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_ring_count] on GPU 0
+ 20%|██        | 1/5 [00:33<02:09, 32.37s/it] 40%|████      | 2/5 [01:06<01:39, 33.11s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_Murcko_scaffold] on GPU 0
+ 40%|████      | 2/5 [01:06<01:39, 33.11s/it] 60%|██████    | 3/5 [01:39<01:06, 33.46s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_ring_system_scaffold] on GPU 0
+ 60%|██████    | 3/5 [01:40<01:06, 33.46s/it] 80%|████████  | 4/5 [02:13<00:33, 33.47s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_equivalence] on GPU 0
+ 80%|████████  | 4/5 [02:14<00:33, 33.47s/it]100%|██████████| 5/5 [02:49<00:00, 34.41s/it]100%|██████████| 5/5 [02:49<00:00, 33.89s/it]
+08/28 01:56:31 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 01:56:31 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_fg_count] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_ring_count] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_Murcko_scaffold] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_ring_system_scaffold] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_und/chemcotbench_mol_und_equivalence] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:10<00:43, 10.97s/it] 40%|████      | 2/5 [00:12<00:16,  5.35s/it] 80%|████████  | 4/5 [00:13<00:02,  2.20s/it]100%|██████████| 5/5 [00:13<00:00,  1.76s/it]100%|██████████| 5/5 [00:13<00:00,  2.76s/it]
+dataset                                    version    metric                                   mode      base-qwen2.5-7b-instruct-chemcotbench_mol_und
+-----------------------------------------  ---------  ---------------------------------------  ------  -----------------------------------------------
+chemcotbench_mol_und_fg_count              1fe37c     mae                                      gen                                                0.26
+chemcotbench_mol_und_ring_count            1fe37c     mae                                      gen                                                0.90
+chemcotbench_mol_und_Murcko_scaffold       1fe37c     tanimoto_similarity_larger_means_better  gen                                                0.13
+chemcotbench_mol_und_ring_system_scaffold  1fe37c     accuracy                                 gen                                               63.33
+chemcotbench_mol_und_equivalence           1fe37c     accuracy                                 gen                                               62.00
+08/28 01:56:45 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_und/test/20260828_015342/summary/summary_20260828_015342.txt
+08/28 01:56:45 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_und/test/20260828_015342/summary/summary_20260828_015342.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-chemcotbench_mol_und |
+|----- | ----- | ----- | ----- | -----|
+| chemcotbench_mol_und_fg_count | 1fe37c | mae | gen | 0.26 |
+| chemcotbench_mol_und_ring_count | 1fe37c | mae | gen | 0.90 |
+| chemcotbench_mol_und_Murcko_scaffold | 1fe37c | tanimoto_similarity_larger_means_better | gen | 0.13 |
+| chemcotbench_mol_und_ring_system_scaffold | 1fe37c | accuracy | gen | 63.33 |
+| chemcotbench_mol_und_equivalence | 1fe37c | accuracy | gen | 62.00 |
+
+08/28 01:56:45 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_und/test/20260828_015342/summary/summary_20260828_015342.md

@@ -1,0 +1,102 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: Cc1ccc([N+](=O)[O-])c(N2CC[C@H](C(N)=O)C2)c1, Functional Group to add: nitro.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a benzene ring with substituents: a methyl group, a nitro group ([N+](=O)[O-]), and a morpholine-derived ring (N2CC[C@H](C(N)=O)C2). The morpholine ring includes a secondary amine (N) and a carbonyl (C=O) group.\nEdit strategy: The nitro group (-NO2) is best added to the methyl-substituted benzene ring. Replacing the methyl group (C) with a nitro-substituted methyl group (C(NO2)) retains aromaticity and avoids steric clashes. This substitution occurs at the position previously occupied by the methyl group.\nChemical feasibility: Substituting a methyl group with a nitro-substituted methyl group is chemically viable. Nitro groups are stable on aromatic systems, and the methyl group’s position is sterically accessible for functionalization. The modification preserves the molecule’s overall stability.\n{\"output\":\"[N+](=O)[O-]c1ccc(C(NO2))c(N2CC[C@H](C(N)=O)C2)c1\"}",
+        "gold": "Cc1ccc([N+](=O)[O-])c(N2CC[C@H](C(N)=O)C2)c1C(=O)[N+](=O)[O-]"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CC1, Functional Group to add: amine.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a central tertiary carbon connected to: (1) a methyl group, (2) a protonated amine ([NH+]) with a cyclopropane ring (C1CC1), and (3) a chain with an amide group (NC(=O)NCc1ccncc1). The cyclopropane is a strained three-membered ring.\nEdit strategy: The amine group (-NH2) can be added to the cyclopropane ring. Replacing one hydrogen on the cyclopropane's carbon adjacent to the [NH+] with -NH2 maintains structural stability and avoids steric clashes. This position allows conjugation with the existing [NH+] to form a protonated secondary amine ([NH+]-NH2).\nChemical feasibility: Adding -NH2 to the cyclopropane is chemically viable. The strained ring can accommodate the substitution, and the resulting structure avoids significant steric or electronic conflicts. The protonated amine ([NH+]-NH2) is stable under physiological conditions.\n{\"output\":\"C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CC1N\"}",
+        "gold": "C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CNC1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccccc3)c2)C1, Functional Group to add: halo.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a bicyclic structure with a sulfonamide group (S(=O)(=O)), an amide (C(=O)N), and an ether (Oc3ccccc3). The bicyclic system includes a cyclohexane-like ring with substituents. The amide group is attached to a benzene ring via an ether-linked ethyl chain (NCCOc3ccccc3).\nEdit strategy: The halo group (e.g., fluorine) can be added to the benzene ring in the amide substituent (Oc3ccccc3). This position is chemically accessible and avoids steric clashes with existing substituents. The ether oxygen (O) in the chain is replaced with a fluorine atom (O -> F), forming a C-F bond.\nChemical feasibility: Substituting an ether oxygen with fluorine is chemically viable via nucleophilic aromatic substitution (if activated) or directed C-H fluorination. The amide group is electron-withdrawing, which may facilitate such substitution. The modification preserves the overall structural integrity and avoids conflicting functional groups.\n{\"output\":\"C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccccc3F)c2)C1\"}",
+        "gold": "C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccc(Cl)cc3)c2)C1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)c1, Functional Group to add: thiol.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a benzene ring with substituents: methyl groups, a sulfonamide group (S=O), a secondary alcohol (C[S@@](=O)[C@@H](C)), and a nitrile (CC#N). The sulfonamide is part of a bicyclic system with a bridgehead carbon.\nEdit strategy: The thiol (-SH) group is best added to the bridgehead carbon of the sulfonamide-containing bicyclic system. This carbon is chemically accessible and avoids steric clashes with existing substituents. The thiol replaces a hydrogen atom on the bridgehead carbon, forming a stable sulfenic acid derivative (S=O adjacent to SH).\nChemical feasibility: The modification is chemically viable. Bridgehead thiols are known in sulfenic acid derivatives, and the sulfonamide's electron-withdrawing effect stabilizes the adjacent thiol. No steric or electronic conflicts arise from this addition.\n{\"output\":\"Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)cc1S\"}",
+        "gold": "Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)c1S"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1)NS(C)(=O)=O, Functional Group to add: amide.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a central tertiary carbon connected to a methyl group, a complex bicyclic system (including a piperazine-like ring with a tertiary amine), and a sulfonamide group. The bicyclic system includes a fluorinated benzyl group (CC(F)(F)F) attached to the nitrogen in the ring.\nEdit strategy: The amide group (-CONH-) is best added to the tertiary carbon (central carbon) via substitution of one of its methyl groups. This carbon is sterically accessible and chemically inert, allowing stable attachment of the amide without disrupting existing functional groups.\nChemical feasibility: Substituting a methyl group on the tertiary carbon with an amide is chemically viable. The tertiary carbon’s stability supports this modification, and the amide’s polarity does not conflict with the molecule’s existing hydrophobic regions.\n{\"output\":\"CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1)NS(C)(=O)=OCONC(C)(C)C\"}",
+        "gold": "CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1(C(=O)N))NS(C)(=O)=O"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: O=C(c1cccc(-c2ccoc2)c1)N1CCCC[C@H]1C1OCCO1, Functional Group to add: amine.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a central carbonyl group (O=C) connected to a benzene ring substituted with a furan (-c2ccoc2). The nitrogen atom in the carbonyl group is part of a six-membered ring (N1CCCC[C@H]1) with a hydroxyl-ether group (C1OCCO1). The molecule has no existing amine (-NH2) groups.\nEdit strategy: The amine group can be added to the six-membered ring containing the nitrogen atom. The carbon adjacent to the nitrogen in the ring (position 2 of the ring) is chemically suitable for substitution, as it allows retention of the ring structure while introducing the amine without steric clashes.\nChemical feasibility: Adding an amine to the carbon adjacent to the nitrogen in the ring is chemically viable. The substitution preserves the ring's stability, and the amine's basicity is compatible with the molecule's existing functional groups (e.g., the carbonyl and ether).\n{\"output\":\"O=C(c1cccc(-c2ccoc2)c1)N1CCCC[NH]1C1OCCO1\"}",
+        "gold": "O=C(c1ccc(N)c(-c2ccoc2)c1)N1CCCC[C@H]1C1OCCO1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3)o2)cc1Cl, Functional Group to add: nitro.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a central benzene ring substituted with a methyl group, a chlorine atom, and a complex aromatic substituent. The substituent includes a second benzene ring connected via a furan-like oxygen-containing ring, a thiophene-like sulfur-containing ring, and a thiourea-like group (C(=O)NC(=S)N). The molecule also features a sulfonamide group (S(N)(=O)=O) attached to the sulfur-containing ring.\nEdit strategy: The nitro group (-NO2) is best added to the methyl-substituted benzene ring (first aromatic system) via electrophilic aromatic substitution. The methyl group is ortho/para-directing, and the chlorine atom (ortho/para-directing) is adjacent. The nitro group can be introduced at the meta position relative to the methyl group and ortho to the chlorine atom, leveraging the directing effects of substituents.\nChemical feasibility: The proposed modification is chemically viable. Nitro groups are commonly added to aromatic rings via nitration reactions, and the directing effects of the methyl and chlorine groups favor substitution at the specified position. Steric hindrance is minimal, and the sulfonamide/thiourea groups are unlikely to interfere with the reaction.\n{\"output\":\"Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3)o2)cc1ClNO\"}",
+        "gold": "Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3[N+](=O)[O-])o2)cc1Cl"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: COc1cccc(C(=O)N[C@@H](c2ccco2)c2c(O)ccc3ccccc23)c1, Functional Group to add: aldehyde.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a methoxy group (COc1...), a central benzene ring substituted with a carbonyl group (C=O), an amide-linked bicyclic system (N[C@@H](c2ccco2)c2c(O)ccc3ccccc23), and a hydroxyl group (c2c(O)...). The bicyclic system includes a furan-like oxygen-containing ring (c2ccco2).\nEdit strategy: The aldehyde group (-CHO) is best added to the furan-like oxygen-containing ring (c2ccco2) in the bicyclic system. This ring has a hydrogen atom that can be replaced by a formyl group (-CHO) without disrupting aromaticity. The aldehyde is introduced at the terminal carbon of the furan ring to maintain stability.\nChemical feasibility: Adding an aldehyde to the furan ring is chemically viable. The oxygen in the ring activates adjacent positions for electrophilic substitution, and the aldehyde's electron-withdrawing effect is compatible with the existing bicyclic system. Steric hindrance is minimal at the chosen site.\n{\"output\":\"COc1cccc(C(=O)N[C@@H](c2cc(C=O)co2)c2c(O)ccc3ccccc23)c1\"}",
+        "gold": "COc1cccc(C(=O)N[C@@H](c2ccco2)c2c(O)ccc3ccccc23)c1C=O"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: CN1C(=O)NC(=O)[C@@]12CCC[NH2+]C2, Functional Group to add: hydroxyl.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a bicyclic structure with a lactam ring (two adjacent carbonyl groups), a tertiary amine ([NH2+]), and a bridged cyclohexane-like ring. The lactam is part of a bicyclic system where the nitrogen is part of the ring closure.\nEdit strategy: The hydroxyl group is best added to the carbon adjacent to the lactam's carbonyl group (C=O) in the ring. This position allows for minimal steric hindrance and maintains the ring's stability. The hydroxyl is introduced via substitution of a hydrogen atom on the carbon adjacent to the lactam's carbonyl.\nChemical feasibility: Adding a hydroxyl group to the carbon adjacent to the lactam's carbonyl is chemically viable. The carbon is part of a saturated system, and hydroxylation at this position is feasible under mild oxidative or substitution conditions. The resulting structure retains the lactam's stability and avoids clashes with the bridged cyclohexane ring.\n{\"output\":\"CN1C(=O)NC(=O)[C@@]12CCC[NH2+]C2O\"}",
+        "gold": "CN1C(=O)NC(=O)[C@@]12CC(O)C[NH2+]C2"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me add a specified functional group and output the improved SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\n\nInput Molecule: O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccccc2)C1, Functional Group to add: carboxyl.\n"
+            }
+        ],
+        "prediction": "Molecule analysis: The input molecule contains a central amide group (O=C-N) connected to a fluorinated benzene ring (Cc1ccc(F)c(F)c1) and a bicyclic sulfide system (N1CCS[C@@H](c2ccccc2)C1). The bicyclic system includes a cyclopropane-like ring with a sulfur atom and a hydroxyl-bearing carbon (C@H).\nEdit strategy: The carboxyl group (-COOH) is best added to the hydroxyl-bearing carbon in the bicyclic system (C@H). This carbon is already part of a strained ring but can accommodate the carboxyl group without disrupting aromaticity. The carboxyl is introduced by replacing the hydroxyl (-OH) with a -C(=O)OH group, forming a carboxylic acid derivative.\nChemical feasibility: The modification is chemically viable. The hydroxyl-bearing carbon in the bicyclic system is a plausible site for carboxyl group addition via oxidation or substitution reactions. The resulting structure maintains valency and avoids steric clashes, as the carboxyl group extends away from the strained ring.\n{\"output\":\"O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccccc2)C1C(=O)[OH]\"}",
+        "gold": "O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccc(cc2)C(=O)O)C1"
+    }
+}

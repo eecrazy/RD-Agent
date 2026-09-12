@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "state": "succeeded",
+  "run_kind": "ordinary_lora_to_rslora",
+  "experiment_id": "rslora-paired/main/FinanceIQ_gen/run-3",
+  "source_experiment_id": "main/FinanceIQ_gen/run-3",
+  "suite": "main-rslora-paired",
+  "benchmark": "FinanceIQ_gen",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": "gpt-5.2",
+  "data_limit": 2000,
+  "timeout": "12h",
+  "benchmark_dataset_path": "pinned/financeiq",
+  "training_policy": "rslora",
+  "formal_expected_samples": 2000,
+  "formal_method_lock_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__FinanceIQ_gen__run-3/formal_training_method.json",
+  "formal_training_method": "rslora",
+  "formal_training_method_lock": {
+    "created_at": "2026-09-09T20:53:31.446154+00:00",
+    "experiment_id": "rslora-paired/main/FinanceIQ_gen/run-3",
+    "schema_version": 1,
+    "training_method": "rslora",
+    "training_policy": "rslora"
+  },
+  "formal_training_evidence": [
+    {
+      "workspace_id": "rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30",
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__FinanceIQ_gen__run-3/workspace/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30",
+      "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__FinanceIQ_gen__run-3/workspace/.ft_model_checkpoints/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30/formal_training",
+      "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__FinanceIQ_gen__run-3/workspace/.ft_model_checkpoints/rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30/output",
+      "evidence_signature": "d613a90b969ddc1a85d96b4f730891521895445dd214901e2d495b3574ca6ac9",
+      "training_method": "rslora",
+      "expected_samples": 2000,
+      "global_step": 189,
+      "max_steps": 189,
+      "formal_training_method_lock": {
+        "created_at": "2026-09-09T20:53:31.446154+00:00",
+        "experiment_id": "rslora-paired/main/FinanceIQ_gen/run-3",
+        "schema_version": 1,
+        "training_method": "rslora",
+        "training_policy": "rslora"
+      }
+    }
+  ],
+  "pairing_artifact_signature": "4c66f6ddbdc7fa365b0010dbdd32b7994292534d8f3921c5180636d286aadd89",
+  "expected_pair_count": 1,
+  "started_at": "2026-09-09T20:31:08.545931+08:00",
+  "finished_at": "2026-09-10T17:44:42.572325+08:00",
+  "pair_runs": [
+    {
+      "schema_version": 1,
+      "state": "succeeded",
+      "source_experiment_id": "main/FinanceIQ_gen/run-3",
+      "paired_experiment_id": "rslora-paired/main/FinanceIQ_gen/run-3",
+      "source_workspace_id": "08a60e438bcf417fbead4b0f5b56efd6",
+      "paired_workspace_id": "rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30",
+      "input_contract_signature": "3f4cdf8db66442e077de788587e3ef0ee125d369de7b5d86775d5ce840b5e7a2",
+      "expected_samples": 2000,
+      "prepared_at": "2026-09-09T20:52:59.044514+08:00",
+      "gpu": "6",
+      "started_at": "2026-09-10T04:53:31.376163+08:00",
+      "finished_at": "2026-09-10T05:10:32.417656+08:00",
+      "return_code": 0,
+      "outer_timeout": false,
+      "formal_training_evidence_signature": "d613a90b969ddc1a85d96b4f730891521895445dd214901e2d495b3574ca6ac9",
+      "global_step": 189,
+      "max_steps": 189
+    }
+  ],
+  "formal_training_validation_errors": []
+}

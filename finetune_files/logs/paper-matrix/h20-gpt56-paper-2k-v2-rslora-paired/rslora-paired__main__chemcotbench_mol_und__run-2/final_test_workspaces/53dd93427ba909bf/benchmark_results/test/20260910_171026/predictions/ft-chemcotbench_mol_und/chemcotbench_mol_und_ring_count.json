@@ -1,0 +1,102 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC1CN(c2cc(-c3cnc(N)c(OC(F)F)c3)nc(N3CCC3)n2)C1, Ring Structure: C1CNC1.\n"
+            }
+        ],
+        "prediction": "The specified ring structure is a five-membered saturated nitrogen heterocycle, `C1CNC1`.\n\n- One occurs in the `N3CCC3` substituent.\n- One occurs in the fused bicyclic scaffold, counted as a single ring structure under the benchmark convention.\n- The aromatic heterocycles do not match the specified ring structure.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCN1c2ncc(COc3cc[n+]([O-])cc3)cc2C(=O)N(C)c2cccnc21, Ring Structure: c1ccncc1.\n"
+            }
+        ],
+        "prediction": "The specified ring structure is a six-membered aromatic ring containing one nitrogen (`c1ccncc1`). The molecule contains two such rings: one pyridine-like ring and one fused nitrogen-containing ring. The fused benzene ring does not match the specified structure.\n{\"output\":\"2\"}",
+        "gold": "3"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(O)CCCC1C2CCCN3CCCC(CN1CCO)C23, Ring Structure: C1CCNCC1.\n"
+            }
+        ],
+        "prediction": "The molecule contains two six-membered saturated nitrogen heterocycles matching the specified `C1CCNCC1` ring structure. The fused benzene ring is not counted because it does not match the specified ring structure.\n{\"output\":\"2\"}",
+        "gold": "3"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1nc2ccc3nc(NC(=O)c4ccco4)sc3c2s1, Ring Structure: c1cscn1.\n"
+            }
+        ],
+        "prediction": "The specified ring structure is a five-membered aromatic thiophene ring, `c1cscn1`. The molecule contains two such rings: one in the fused bicyclic scaffold and one in the thiophene substituent. The fused benzene ring is not counted because it does not match the specified ring structure.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)N1CCN(c2ccc(NCc3ccc(C)cc3)cc2)CC1, Ring Structure: c1ccccc1.\n"
+            }
+        ],
+        "prediction": "The molecule contains two separate benzene rings:\n\n1. One directly attached to the piperazine ring.\n2. One attached to the piperazine through the side chain.\n\nThey are not fused, bridged, or spiro-connected. The piperazine ring is not counted because it does not match the specified `c1ccccc1` ring structure.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)c1ccccc1, Ring Structure: c1ccncc1.\n"
+            }
+        ],
+        "prediction": "The specified ring structure is a six-membered aromatic ring containing one nitrogen (`c1ccncc1`). The molecule contains two such pyridine-like rings: one attached through the amide nitrogen and one attached through the amino group. The fused bicyclic heteroaromatic scaffold is not counted separately under this benchmark convention.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO, Ring Structure: c1cc[nH]c1.\n"
+            }
+        ],
+        "prediction": "The molecule contains two separate six-membered pyridine rings. They are connected through a long alkene chain and are neither fused, bridged, nor spiro. The carbonyl, amide, and alkyl groups do not form additional rings.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCc1ccc(OC(C)=O)c(C(=O)c2ccc(C)cc2)c1, Ring Structure: c1ccccc1.\n"
+            }
+        ],
+        "prediction": "The molecule contains two separate benzene rings:\n\n1. The `c1...c1` ring.\n2. The `c2ccc(C)cc2` ring.\n\nThey are connected through acyclic linkers and are not fused, bridged, or spiro. Therefore, the ring count is 2.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CN1CCC2(CC1)CCN(C(=O)c1cccc(F)c1)CC2, Ring Structure: C1CCNCC1.\n"
+            }
+        ],
+        "prediction": "The molecule contains two six-membered saturated nitrogen-containing rings. The aromatic phenyl ring is not counted because it does not match the specified ring structure.\n{\"output\":\"2\"}",
+        "gold": "2"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1, Ring Structure: C1CCNC1.\n"
+            }
+        ],
+        "prediction": "The molecule contains two separate five-membered saturated nitrogen heterocycles:\n\n1. `C2CCN(...)C2`\n2. `N4CCCC4C`\n\nThey are connected through an ether oxygen and are not fused, bridged, or spiro. The aromatic benzene ring is not counted because it does not match the specified ring structure.\n{\"output\":\"2\"}",
+        "gold": "2"
+    }
+}

@@ -1,0 +1,168 @@
+TABLEBENCH_HF_PATH="Multilingual-Multimodal-NLP/TableBench"
+datasets=[
+    dict(abbr="tablebench_visualization",
+        eval_cfg=dict(
+            evaluator=dict(
+                timeout=10,
+                type="opencompass.datasets.tablebench.TableBenchVisualizationEvaluator")),
+        infer_cfg=dict(
+            inferencer=dict(
+                max_out_len=16384,
+                type="opencompass.openicl.icl_inferencer.GenInferencer"),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='Generate Python code to create the requested visualization from the table below.\n\nTable:\n{table}\n\nQuestion: {question}\n\nInstructions: {instruction}\n\nImportant:\n- The table will be saved as \'table.csv\' with the first column as row labels\n- Use pd.read_csv(\'table.csv\') to load the data\n- The first column contains row names (like "Record high °F (°C)")\n- Use df.iloc[row_index, 1:] or df[df.iloc[:, 0] == \'row_name\'] to access rows\n\nRequired code structure:\n```python\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv(\'table.csv\')\n...\nplt.show()\n```\nProvide only the Python code without any explanation.\nAnswer:',
+                            role="HUMAN"),
+                        ]),
+                type="opencompass.openicl.icl_prompt_template.PromptTemplate"),
+            retriever=dict(
+                type="opencompass.openicl.icl_retriever.ZeroRetriever")),
+        instruction_type="TCoT",
+        path="/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench",
+        qtype="Visualization",
+        reader_cfg=dict(
+            input_columns=[
+                "table",
+                "question",
+                "instruction",
+                ],
+            output_column="answer",
+            test_range="[-min(100, len(index_list)//2):]"),
+        type="opencompass.datasets.tablebench.TableBenchDataset"),
+    ]
+ds=dict(
+    abbr="tablebench_visualization",
+    eval_cfg=dict(
+        evaluator=dict(
+            timeout=10,
+            type="opencompass.datasets.tablebench.TableBenchVisualizationEvaluator")),
+    infer_cfg=dict(
+        inferencer=dict(
+            max_out_len=16384,
+            type="opencompass.openicl.icl_inferencer.GenInferencer"),
+        prompt_template=dict(
+            template=dict(
+                round=[
+                    dict(prompt='Generate Python code to create the requested visualization from the table below.\n\nTable:\n{table}\n\nQuestion: {question}\n\nInstructions: {instruction}\n\nImportant:\n- The table will be saved as \'table.csv\' with the first column as row labels\n- Use pd.read_csv(\'table.csv\') to load the data\n- The first column contains row names (like "Record high °F (°C)")\n- Use df.iloc[row_index, 1:] or df[df.iloc[:, 0] == \'row_name\'] to access rows\n\nRequired code structure:\n```python\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv(\'table.csv\')\n...\nplt.show()\n```\nProvide only the Python code without any explanation.\nAnswer:',
+                        role="HUMAN"),
+                    ]),
+            type="opencompass.openicl.icl_prompt_template.PromptTemplate"),
+        retriever=dict(
+            type="opencompass.openicl.icl_retriever.ZeroRetriever")),
+    instruction_type="TCoT",
+    path="/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench",
+    qtype="Visualization",
+    reader_cfg=dict(
+        input_columns=[
+            "table",
+            "question",
+            "instruction",
+            ],
+        output_column="answer",
+        test_range="[-min(100, len(index_list)//2):]"),
+    type="opencompass.datasets.tablebench.TableBenchDataset")
+eval=dict(
+    partitioner=dict(
+        type="NaivePartitioner"),
+    runner=dict(
+        max_num_workers=16,
+        task=dict(
+            dump_details=True,
+            type="OpenICLEvalTask"),
+        type="LocalRunner"))
+infer=dict(
+    partitioner=dict(
+        type="NaivePartitioner"),
+    runner=dict(
+        max_num_workers=16,
+        task=dict(
+            type="OpenICLInferTask"),
+        type="LocalRunner"))
+models=[
+    dict(abbr="base-qwen2.5-7b-instruct-tablebench_visualization",
+        batch_size=16,
+        generation_kwargs=dict(
+            temperature=0.0,
+            top_k=1,
+            top_p=1.0),
+        max_out_len=8192,
+        max_seq_len=32768,
+        model_kwargs=dict(
+            dtype="bfloat16",
+            gpu_memory_utilization=0.3,
+            max_model_len=32768,
+            tensor_parallel_size=1,
+            trust_remote_code=True),
+        path="/data/github/RD-Agent/finetune_files/models/Qwen/Qwen2.5-7B-Instruct",
+        run_cfg=dict(
+            num_gpus=1,
+            num_procs=1),
+        type="opencompass.models.VLLMwithChatTemplate"),
+    ]
+pinned_dataset_path="/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench"
+tablebench_base_reader_cfg=dict(
+    input_columns=[
+        "table",
+        "question",
+        "instruction",
+        ],
+    output_column="answer")
+tablebench_visualization_datasets=[
+    dict(abbr="tablebench_visualization",
+        eval_cfg=dict(
+            evaluator=dict(
+                timeout=10,
+                type="opencompass.datasets.tablebench.TableBenchVisualizationEvaluator")),
+        infer_cfg=dict(
+            inferencer=dict(
+                max_out_len=16384,
+                type="opencompass.openicl.icl_inferencer.GenInferencer"),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='Generate Python code to create the requested visualization from the table below.\n\nTable:\n{table}\n\nQuestion: {question}\n\nInstructions: {instruction}\n\nImportant:\n- The table will be saved as \'table.csv\' with the first column as row labels\n- Use pd.read_csv(\'table.csv\') to load the data\n- The first column contains row names (like "Record high °F (°C)")\n- Use df.iloc[row_index, 1:] or df[df.iloc[:, 0] == \'row_name\'] to access rows\n\nRequired code structure:\n```python\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv(\'table.csv\')\n...\nplt.show()\n```\nProvide only the Python code without any explanation.\nAnswer:',
+                            role="HUMAN"),
+                        ]),
+                type="opencompass.openicl.icl_prompt_template.PromptTemplate"),
+            retriever=dict(
+                type="opencompass.openicl.icl_retriever.ZeroRetriever")),
+        instruction_type="TCoT",
+        path="/data/github/RD-Agent/finetune_files/benchmarks/pinned/tablebench",
+        qtype="Visualization",
+        reader_cfg=dict(
+            input_columns=[
+                "table",
+                "question",
+                "instruction",
+                ],
+            output_column="answer",
+            test_range="[-min(100, len(index_list)//2):]"),
+        type="opencompass.datasets.tablebench.TableBenchDataset"),
+    ]
+tablebench_viz_eval_cfg=dict(
+    evaluator=dict(
+        timeout=10,
+        type="opencompass.datasets.tablebench.TableBenchVisualizationEvaluator"))
+tablebench_viz_infer_cfg=dict(
+    inferencer=dict(
+        max_out_len=16384,
+        type="opencompass.openicl.icl_inferencer.GenInferencer"),
+    prompt_template=dict(
+        template=dict(
+            round=[
+                dict(prompt='Generate Python code to create the requested visualization from the table below.\n\nTable:\n{table}\n\nQuestion: {question}\n\nInstructions: {instruction}\n\nImportant:\n- The table will be saved as \'table.csv\' with the first column as row labels\n- Use pd.read_csv(\'table.csv\') to load the data\n- The first column contains row names (like "Record high °F (°C)")\n- Use df.iloc[row_index, 1:] or df[df.iloc[:, 0] == \'row_name\'] to access rows\n\nRequired code structure:\n```python\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndf = pd.read_csv(\'table.csv\')\n...\nplt.show()\n```\nProvide only the Python code without any explanation.\nAnswer:',
+                    role="HUMAN"),
+                ]),
+        type="opencompass.openicl.icl_prompt_template.PromptTemplate"),
+    retriever=dict(
+        type="opencompass.openicl.icl_retriever.ZeroRetriever"))
+tablebench_viz_reader_cfg=dict(
+    input_columns=[
+        "table",
+        "question",
+        "instruction",
+        ],
+    output_column="answer")
+test_range_override="[-min(100, len(index_list)//2):]"
+work_dir="/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_visualization/test/20260828_020550"

@@ -1,0 +1,114 @@
+{
+  "candidate_id": "durable_checkpoint__rslora__1664ee835e457741920723de28814cf5__d09c872a321e__step-375__f8d44c0f423f",
+  "source": "durable_checkpoint",
+  "workspace_id": "rslora__1664ee835e457741920723de28814cf5__d09c872a321e",
+  "checkpoint_step": 375,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__aime25__run-3/workspace/.ft_model_checkpoints/rslora__1664ee835e457741920723de28814cf5__d09c872a321e/output/checkpoint-375",
+  "selection_signature": "6ff9dc6ef28d19ef4598d05c0fec5f39855edd0a09ce6b537f2ed1c81813b7fd",
+  "formal_training_evidence_signature": "38a42d7499c70201e776db4848d825d0f6168577db95b5c9f09c0e155393ddd1",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/aime25/run-3",
+  "benchmark": "aime25",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "3f1d5a743885846ce3ca508fae128a9f608fb3524a97ef19a8463b053a1c9666",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/aime2025/aime2025.jsonl",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:29:26.164621+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:31:53.070095+08:00",
+  "result": {
+    "accuracy_summary": {
+      "aime2025": {
+        "accuracy": 0.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "588",
+        "model_output": "Place \\(A\\) at the origin, and let \\(\\mathbf u\\) be the unit vector directed from \\(A\\) toward \\(B\\). Since\n\\[\nAB=AD+DE+EB=4+16+8=28,\n\\]\nwe may write\n\\[\nB=28\\mathbf u.\n\\]\nBecause \\(D\\) lies on \\(\\overline{AB}\\) between \\(A\\) and \\(E\\),\n\\[\nD=t\\mathbf u\n\\]\nfor some \\(0<t<1\\). The given distances imply\n\\[\n|D-A|=4,\\qquad |E-D|=16,\n\\]\nso\n\\[\nt=4,\\qquad 28-t=16,\n\\]\nand hence\n\\[\nD=4\\mathbf u,\\qquad E=24\\mathbf u.\n\\]\n\nSince \\(F\\) lies on \\(\\overline{AC}\\) between \\(A\\) and \\(G\\),\n\\[\nF=s\\mathbf u\n\\]\nfor some \\(0<s<1\\). The given distances yield\n\\[\n|F-A|=13,\\qquad |G-F|=52,\n\\]\nso\n\\[\ns=13,\\qquad 13+s=52,\n\\]\nand therefore\n\\[\nF=13\\mathbf u,\\qquad G=65\\mathbf u.\n\\]\n\nReflections through \\(F\\) and \\(E\\) send \\(\\mathbf u\\) to \\(-\\mathbf u\\). Thus\n\\[\nM=-4\\mathbf u,\\qquad N=-24\\mathbf u.\n\\]\n\nThe vertices of the heptagon in boundary order are therefore\n\\[\nA,\\mathbf u,\\quad F,\\quad G,\\quad N,\\quad E,\\quad M,\\quad -\\mathbf u.\n\\]\nUsing the shoelace formula and taking \\(A\\) as the origin, its signed diagonal terms are\n\\[\n\\begin{aligned}\n\\mathbf u\\cdot\\mathbf u&=1,\\\\\nF\\cdot G&=(13\\mathbf u)\\cdot(65\\mathbf u)=845,\\\\\nG\\cdot N&=(65\\mathbf u)\\cdot(-24\\mathbf u)=-1560,\\\\\nN\\cdot E&=(-24\\mathbf u)\\cdot(24\\mathbf u)=-576,\\\\\nE\\cdot M&=(24\\mathbf u)\\cdot(-4\\mathbf u)=-96,\\\\\nM\\cdot\\mathbf u&=(-4\\mathbf u)\\cdot\\mathbf u=-4,\\\\\n\\mathbf u\\cdot A&=0.\n\\end{aligned}\n\\]\nHence the heptagon’s area is\n\\[\n\\frac12\\left|1+845-1560-576-96-4\\right|\n=\\frac12\\left|-1390\\right|\n=695.\n\\]\n\n\\boxed{695}",
+        "question": "On $\\triangle ABC$ points $A,D,E$, and $B$ lie that order on side $\\overline{AB}$ with $AD=4, DE=16$, and $EB=8$. Points $A,F,G$, and $C$ lie in that order on side $\\overline{AC}$ with $AF=13, FG=52$, and $GC=26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "70",
+        "model_output": "Let \\(S\\) be the sum of all such bases. We first determine the divisibility condition.\n\nUsing the usual positional notation,\n\\[\n97_b=9b+7,\\qquad 17_b=b+7.\n\\]\nSince \\(b>9\\), the base-\\(b\\) digits are valid, and \\(b+7>0\\). Thus \\(17_b\\) divides \\(97_b\\) exactly when\n\\[\nb+7\\mid 9b+7.\n\\]\nWriting \\(d=b+7\\), we obtain \\(b=d-7\\), so\n\\[\nd\\mid 9(d-7)+7=9d-56,\n\\]\nand hence \\(d\\mid 56\\).\n\nConversely, if \\(d\\mid56\\), taking \\(b=d-7\\) gives \\(d=b+7>0\\), so \\(b>9\\). Moreover,\n\\[\n9(d-7)+7=9d-56=9\\left(\\frac{56}{d}\\right),\n\\]\nwhich is divisible by \\(d\\). Therefore \\(d=b+7\\) indeed divides \\(9b+7\\), so every base of the form\n\\[\nb=d-7,\\qquad d\\mid56,\\qquad d>7\n\\]\nis valid.\n\nThe positive divisors of \\(56\\) are\n\\[\n1,2,4,7,8,14,28,56.\n\\]\nThose greater than \\(7\\) are \\(8,14,28,56\\), giving the bases\n\\[\n1,7,21,49.\n\\]\nTheir sum is\n\\[\n1+7+21+49=78.\n\\]\n\n\\boxed{78}",
+        "question": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "510",
+        "model_output": "Let\n\\[\nA=x-yz,\\qquad B=y-zx,\\qquad C=z-xy.\n\\]\nThe strict inequalities imply that exactly one of \\(A,B,C\\) is positive. We first classify the signs.\n\nIf \\(A>0\\), then\n\\[\nx>yz.\n\\]\nSince \\(B-C=(x-yz)-(y-zx)=x-y\\), the strict inequalities give\n\\[\nx-y>0,\\qquad y-z>0.\n\\]\nThus \\(x>y>z\\).\n\nIf \\(B>0\\), then\n\\[\ny>zx.\n\\]\nThe strict inequalities now give\n\\[\ny-z>0,\\qquad z-x>0,\n\\]\nso \\(y>z>x\\).\n\nIf \\(C>0\\), then\n\\[\nz>xy.\n\\]\nThe strict inequalities give\n\\[\nz-y>0,\\qquad y-x>0,\n\\]\nso \\(z>y>x\\).\n\nHence the three disjoint regions are\n\\[\nR_1=\\{(x,y,z):x>y>z,\\ x-yz>0\\},\n\\]\n\\[\nR_2=\\{(x,y,z):y>z>x,\\ y-zx>0\\},\n\\]\nand\n\\[\nR_3=\\{(x,y,z):z>y>x,\\ z-xy>0\\}.\n\\]\n\nWe now determine which has finite area. Project each region onto the \\(xy\\)-plane by forgetting the coordinate \\(z\\). The projections are respectively\n\\[\nP_1=\\{(x,y):x>y>0,\\ x-y>0\\},\n\\]\n\\[\nP_2=\\{(x,y):y>x>0,\\ y-x>0\\},\n\\]\nand\n\\[\nP_3=\\{(x,y):x>y>0,\\ y-x>0\\}.\n\\]\n\nFor \\(P_1\\), the conditions \\(x>y>0\\) and \\(x-y>0\\) are equivalent to\n\\[\nx>0,\\qquad y>0,\\qquad x>2y.\n\\]\nThus its boundary consists of the positive coordinate axes and the line \\(x=2y\\). It is unbounded, so \\(R_1\\) has infinite area.\n\nFor \\(P_2\\), the conditions \\(y>x>0\\) and \\(y-x>0\\) are equivalent to\n\\[\nx>0,\\qquad y>0,\\qquad y>2x.\n\\]\nIts boundary consists of the positive coordinate axes and the line \\(y=2x\\). It is unbounded, so \\(R_2\\) also has infinite area.\n\nFinally,\n\\[\nP_3=\\{(x,y):x>y>0,\\ y-x>0\\}\n=\\{(x,y):x>0,\\ y>0,\\ x<2y\\},\n\\]\nwhose boundary consists of the positive coordinate axes and the line \\(x=2y\\). This is a right triangle with intercepts \\(2\\) on the \\(y\\)-axis and \\(1\\) on the \\(x\\)-axis. Therefore\n\\[\nR_3\n=\\{(x,y,z):x>0,\\ y>0,\\ x<2y,\\ z>xy\\}.\n\\]\nIts projection onto the \\(xy\\)-plane has area\n\\[\n\\frac12(2)(1)=1.\n\\]\n\nTo check that the height condition \\(z>xy\\) does not enlarge this area, parametrize the triangular region by\n\\[\n(x,y)\\longmapsto (x,y,xy).\n\\]\nIts Jacobian determinant is \\(1\\), so the original region \\(R_3\\) has the same area as its projection. Thus its finite area is \\(1\\), and \\(a=1\\), \\(b=1\\). Consequently,\n\\[\n\\boxed{2}\n\\]",
+        "question": "The set of points in 3-dimensional coordinate space that lie in the plane $x+y+z=75$ whose coordinates satisfy the inequalities $x-yz<y-zx<z-xy$ forms three disjoint convex regions. Exactly one of those regions has finite area. The area of this finite region can be expressed in the form $a\\sqrt{b}$, where $a$ and $b$ are positive integers and $b$ is not divisible by the square of any prime. Find $a+b$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "279",
+        "model_output": "An eight-digit integer is divisible by \\(22\\) exactly when it is divisible by both \\(2\\) and \\(11\\).\n\nSince all eight digits are distinct, its final digit must be even for divisibility by \\(2\\). Thus the final digit is one of\n\\[\n2,4,6,8.\n\\]\n\nModulo \\(11\\), the sum of all eight digits is\n\\[\n1+2+3+4+5+6+7+8=36\\equiv 3\\pmod{11}.\n\\]\nTherefore, to make the entire number divisible by \\(11\\), the sum of its first seven digits must be congruent to \\(3\\) modulo \\(11\\). Since those digits are distinct integers from \\(1\\) through \\(7\\), their sum is\n\\[\n1+2+\\cdots+7=28\\equiv 6\\pmod{11}.\n\\]\nConsequently, the eighth digit must be \\(9\\equiv -2\\pmod{11}\\). Among the even possible final digits, only \\(8\\) satisfies this condition.\n\nFix the final digit as \\(8\\). The remaining digits are \\(1,2,3,4,5,6,7\\). Their sum is \\(27\\equiv 5\\pmod{11}\\), so the first seven digits must sum to \\(2\\pmod{11}\\). The possible pairs of digits with this sum are\n\\[\n\\{1,7\\},\\qquad \\{2,6\\},\\qquad \\{3,5\\}.\n\\]\nFor each pair, the remaining five digits can be arranged in \\(5!\\) ways. Hence the number of valid integers with final digit \\(8\\) is\n\\[\n3\\cdot 5!=3\\cdot 120=360.\n\\]\n\nBy interchanging the roles of the first seven digits and the final digit, the same count applies to each of the other three possible final digits. Thus\n\\[\nN=4\\cdot360=1440.\n\\]\nTherefore,\n\\[\n2025-N=2025-1440=\\boxed{585}\n\\]",
+        "question": "There are $8!=40320$ eight-digit positive integers that use each of the digits $1,2,3,4,5,6,7,8$ exactly once. Let $N$ be the number of these integers that are divisible by 22. Find the difference between $N$ and 2025.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "117",
+        "model_output": "Factor the equation:\n\\[\n12x^2-xy-6y^2=(3x-2y)(4x+3y)=0.\n\\]\nThus, for each integer \\(y\\), the possible integer values of \\(x\\) are\n\\[\nx=\\frac{2y}{3}\\quad\\text{or}\\quad x=-\\frac{3y}{4}.\n\\]\n\nBecause \\(x\\) must be an integer, the first possibility requires \\(3\\mid y\\), while the second requires \\(4\\mid y\\). Since \\(\\gcd(3,4)=1\\), these two conditions are disjoint.\n\nWrite \\(y=3k\\). The first branch gives\n\\[\nx=2k,\\qquad -100\\le 2k\\le 100,\n\\]\nso \\(-50\\le k\\le 50\\), giving \\(101\\) values of \\(k\\), and hence \\(101\\) pairs.\n\nFor the second branch with \\(y=4t\\),\n\\[\nx=-3t,\\qquad -100\\le -3t\\le 100,\n\\]\nso \\(-33\\le t\\le 33\\), giving \\(67\\) values of \\(t\\), and hence \\(67\\) pairs.\n\nThe branches produce different integers \\(x\\), so the total number of ordered pairs is\n\\[\n101+67=\\boxed{168}\n\\]",
+        "question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "259",
+        "model_output": "Periodicity and the two given pieces imply\n\\[\nf(x)=\n\\begin{cases}\nx,&x\\in[0,2),\\\\\n2-x,&x\\in[2,4).\n\\end{cases}\n\\]\nMoreover, the function is \\(4\\)-periodic, so its graph repeats on each interval \\([4k,4k+4)\\).\n\nThe parabola \\(x=34y^2\\) is symmetric about the \\(y\\)-axis. Thus, if \\(y_0\\) is a \\(y\\)-coordinate of an intersection, then \\(-y_0\\) is also an intersection. Consequently, the sum of all \\(y\\)-coordinates is automatically zero whenever there is an odd number of intersections. We therefore only need to determine whether the number of intersections is odd or even.\n\nOn \\([0,2)\\), the intersection condition is\n\\[\n34y^2\\le 2,\n\\]\nor\n\\[\n|y|\\le \\frac1{\\sqrt{17}}.\n\\]\nHence this interval contributes two intersection points, of opposite signs.\n\nOn \\([2,4)\\), we have \\(x=34y^2\\in[2,32)\\). The function \\(f\\) is strictly decreasing here, so the intersection equation\n\\[\n2-x=34y^2\n\\]\nhas at most one solution. It has a solution precisely when\n\\[\n0\\le 34y^2\\le 1,\n\\]\nor\n\\[\n|y|\\le \\frac1{\\sqrt{34}}.\n\\]\nThus this interval contributes either one or two intersection points, according to whether\n\\[\n\\frac1{\\sqrt{34}}\n\\]\nlies in \\([0,1)\\) or \\([1,\\sqrt{34})\\). Since\n\\[\n\\frac1{\\sqrt{34}}<\\frac1{\\sqrt{17}}<1,\n\\]\nthe total number of distinct \\(y\\)-coordinates is odd. Therefore their sum is nonzero and equals zero by symmetry.\n\nThe intersections in \\([0,4)\\) are\n\\[\ny_1=\\frac1{\\sqrt{17}},\\qquad\ny_2=-\\frac1{\\sqrt{17}},\\qquad\ny_3=\\frac1{\\sqrt{34}}.\n\\]\nThe remaining intersections occur in the translated intervals\n\\[\n[4k,4k+4)\\quad(k\\ne0).\n\\]\nFor an intersection in \\([4k,4k+4)\\), the corresponding \\(y\\)-coordinate is \\(y_0+2k\\), where \\(y_0\\in\\{y_1,y_2,y_3\\}\\). Its sign is the same as that of \\(y_0\\), and its contribution to the sum is\n\\[\n(y_0+2k)+(-y_0+2(-k))+\\cdots\n+(-y_0+2(-k))+y_0+2k=0.\n\\]\nHence all nontrivial contributions cancel, leaving only the three listed \\(y\\)-coordinates. Their sum is\n\\[\n\\frac1{\\sqrt{17}}-\\frac1{\\sqrt{17}}+\\frac1{\\sqrt{34}}\n=\\frac1{\\sqrt{34}}\n=\\frac{\\sqrt{34}}{34}.\n\\]\nThus \\(a=1\\), \\(b=1\\), \\(c=34\\), and \\(d=34\\). These integers have the required properties, so\n\\[\na+b+c+d=1+1+34+34=\\boxed{70}\n\\]",
+        "question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "16",
+        "model_output": "Let \\(c,v,s\\) be the numbers of players choosing chocolate, vanilla, and strawberry, respectively. Since every player chose one of the three flavors,\n\\[\nc+v+s=9.\n\\]\nThe strict inequalities require\n\\[\nc>v>s.\n\\]\n\nBecause \\(c+v+s=9\\) and \\(c>v\\), we must have \\(v\\le 4\\). Also, \\(s\\ge1\\), so \\(v\\ge3\\). Thus the possible values of \\(v\\) are \\(3\\) and \\(4\\).\n\nFor \\(v=3\\), we need \\(c+s=6\\) with \\(c>s>0\\). The possibilities are\n\\[\n(c,s)=(5,1)\\quad\\text{or}\\quad(4,2).\n\\]\nFor \\(v=4\\), we need \\(c+s=5\\) with \\(c>s>0\\). The possibilities are\n\\[\n(c,s)=(4,1)\\quad\\text{or}\\quad(3,2).\n\\]\nHence there are four unordered flavor distributions.\n\nFor each distribution, the three distinct flavors can be assigned to the three cone types in\n\\[\n3!=6\n\\]\nways. Therefore\n\\[\nN=4\\cdot 6=24.\n\\]\nThe remainder when \\(N\\) is divided by \\(1000\\) is \\(\\boxed{24}\\)",
+        "question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "735",
+        "model_output": "Work modulo \\(3^7=2187\\). For each fixed pair \\((b,c)\\), the condition\n\\[\na^3\\equiv -(b^3+c^3)\\pmod{2187}\n\\]\nhas exactly one solution \\(a\\pmod{2187}\\), since \\(x\\mapsto x^3\\) is a bijection on the nonzero residues modulo \\(2187\\). Thus there are \\(2187\\) possible values of \\(a\\), and the same count applies to each of the other two variables.\n\nIt remains to determine when two distinct pairs \\((b,c)\\) can produce the same residue for \\(a\\). If\n\\[\nb^3+c^3\\equiv d^3+e^3\\pmod{2187}\n\\]\nwith \\((b,c)\\neq(d,e)\\), then\n\\[\n(b-d)(b^2+bd+d^2+c^2+cd+e^2)\\equiv0\\pmod{2187}.\n\\]\nBecause \\(2187\\) is a power of \\(3\\), the second factor is nonzero modulo \\(3\\), so \\(b\\equiv d\\pmod3\\). Similarly, \\(c\\equiv e\\pmod3\\).\n\nConversely, if \\(b\\equiv d\\pmod3\\) and \\(c\\equiv e\\pmod3\\), then\n\\[\nb^3+c^3\\equiv d^3+e^3\\pmod{27}.\n\\]\nSince \\(27\\mid2187\\), distinct pairs satisfying these congruences cannot produce the same value of \\(a\\pmod{2187}\\). Hence the map\n\\[\n(b,c)\\longmapsto a\\equiv-(b^3+c^3)\\pmod{2187}\n\\]\nis injective on the \\(3^6\\) pairs with \\(b,c\\leq3^6\\).\n\nTherefore the total number of ordered triples is\n\\[\nN=3^6\\cdot3^6=3^{12}=531441.\n\\]\nIts remainder upon division by \\(1000\\) is thus \\(\\boxed{141}\\)",
+        "question": "Let $N$ denote the number of ordered triples of positive integers $(a,b,c)$ such that $a,b,c\\leq3^6$ and $a^3+b^3+c^3$ is a multiple of $3^7$. Find the remainder when $N$ is divided by $1000$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "504",
+        "model_output": "Let the tangent lengths from the vertices on the shorter base \\(s\\) to the points of tangency be \\(u\\) and \\(v\\). At the two vertices on the longer base \\(r\\), the corresponding tangent lengths are \\(u+v\\) each, since the tangents from a point to a circle have equal lengths.\n\nThus the four tangent lengths are\n\\[\nu,\\quad v,\\quad u+v,\\quad u+v.\n\\]\nBecause the circle is inscribed, the sum of the lengths of the opposite tangents is equal. Hence\n\\[\nu+v=u+v,\n\\]\nwhich is consistent but does not give new information, and\n\\[\nu+v=s,\\qquad 2(u+v)=r.\n\\]\nTherefore\n\\[\nu+v=s,\\qquad u+v=\\frac r2.\n\\]\nSince the trapezoid’s area is \\(72\\) and its altitude is \\(2\\cdot 3=6\\),\n\\[\n\\frac{s+r}{2}\\cdot 6=72,\n\\]\nso\n\\[\ns+r=24.\n\\]\nAlso,\n\\[\nr=2s.\n\\]\nSubstituting gives\n\\[\n3s=24,\n\\qquad s=8,\\qquad r=16.\n\\]\nConsequently,\n\\[\nr^2+s^2=16^2+8^2=256+64=\\boxed{320}\n\\]",
+        "question": "An isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is 3, and the area of the trapezoid is 72. Let the parallel sides of the trapezoid have lengths $r$ and $s$, with $r \\neq s$. Find $r^{2}+s^{2}$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "821",
+        "model_output": "Each pair is formed by selecting two distinct letters and arranging them alphabetically. Thus the order within each pair is fixed, and the six two-letter words are automatically listed alphabetically.\n\nFor a fixed letter \\(G\\), consider the pairs containing \\(G\\). There are \\(11\\) other letters, so \\(G\\) can be paired with any one of them. Once the partner of \\(G\\) is chosen, the remaining \\(10\\) letters can be divided into five pairs in\n\\[\n\\frac{10!}{2^5\\cdot 5!}\n\\]\nways. Hence the number of pairings containing a fixed \\(G\\)-pair is\n\\[\n10\\cdot \\frac{10!}{2^5\\cdot 5!}.\n\\]\n\nThere are \\(\\binom{12}{2}\\) choices for the partner of \\(G\\), and the remaining \\(10\\) letters can be paired in \\(\\frac{10!}{2^5\\cdot 5!}\\) ways. Therefore, the total number of pairings containing \\(G\\) is\n\\[\n\\binom{11}{1}\\frac{10!}{2^5\\cdot 5!}\n=\\frac{11!\\,10!}{2^5\\cdot5!\\,10!}\n=\\frac{11!}{2^5\\cdot5!}.\n\\]\n\nThe total number of pairings of all twelve letters is\n\\[\n\\frac{12!}{2^6\\cdot6!}.\n\\]\nConsequently, the probability that a randomly chosen pairing has a last word containing \\(G\\) is\n\\[\n\\frac{\\frac{11!}{2^5\\cdot5!}}{\\frac{12!}{2^6\\cdot6!}}\n=\\frac{11!\\,6!\\,2}{12!\\,5!}\n=\\frac{12}{11}.\n\\]\nThus \\(m=12\\), \\(n=11\\), and \\(m+n=23\\).\n\n\\boxed{23}",
+        "question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.\nRemember to put your final answer within \\boxed{}.\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "aime2025": {
+      "accuracy": 0.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 0.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mean accuracy across configured views",
+      "components": [
+        {
+          "dataset": "aime2025",
+          "metric": "accuracy",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__aime25__run-3/validation_sweep/candidates/durable_checkpoint__rslora__1664ee835e457741920723de28814cf5__d09c872a321e__step-375__f8d44c0f423f/workspace"
+}

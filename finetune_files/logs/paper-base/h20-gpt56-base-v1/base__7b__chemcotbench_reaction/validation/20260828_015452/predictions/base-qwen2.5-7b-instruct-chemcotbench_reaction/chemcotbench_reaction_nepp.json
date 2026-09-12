@@ -1,0 +1,422 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'CO2H-tBu deprotection', starting reactants are 'CC(C)(C)OC(=O)CCc1ccc(OC(C)(C)C)cc1', reagents are 'CO.O', and reaction condition is 'Deprotection with OH-').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O[K].CC(C)(C)OC(=O)CCc1ccc(OC(C)(C)C)cc1,\n    \"products\": CC(C)(C)Oc1ccc(CCC([O-])(O)OC(C)(C)C)cc1.[K+],\n    \"step annotation\": Hydroxide addition,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(C)(C)Oc1ccc(CCC([O-])(O)OC(C)(C)C)cc1,\n    \"step annotation\": Alkoxide leaves,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(C)(C)OC(=O)CCc1ccc(O)cc1\"\n}\n```",
+        "gold": "CC(C)(C)[O-].CC(C)(C)Oc1ccc(CCC(=O)O)cc1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Alcohol + amine condensation', starting reactants are 'COc1ccc(Cn2nc(-c3nc4c(CO)cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1.NCC1CC1', reagents are 'CCO.[Cl-].ClCCl.[NH4+].CS(=O)(=O)[O-].O.O', and reaction condition is 'React with SOCl2 or POCl3').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CCN(C(C)C)C(C)C.COc1ccc(Cn2nc(-c3nc4c(C[NH2+]CC5CC5)cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1,\n    \"products\": CC[NH+](C(C)C)C(C)C.COc1ccc(Cn2nc(-c3nc4c(CNCC5CC5)cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1,\n    \"step annotation\": Deprotonation of protonated amine,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": COc1ccc(Cn2nc(-c3nc4c(CO)cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1.[OH-],\n    \"products\": O.COc1ccc(Cn2nc(-c3nc4c(C[O-])cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1,\n    \"step annotation\": Deprotonation of alcohol,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CS(=O)(=O)Cl.COc1ccc(Cn2nc(-c3nc4c(C[O-])cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1,\n    \"step annotation\": Addition of alkoxide,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(OC(=O)O)C(=O)O.COc1ccc(Cn2nc(-c3nc4c(C[O-])cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1\"\n}\n```",
+        "gold": "COc1ccc(Cn2nc(-c3nc4c(COS(C)(=O)([O-])Cl)cccc4[nH]3)c3cc(-c4cncc5ccccc45)ccc32)cc1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'CO2H-Me deprotection', starting reactants are 'COC(=O)c1ccccc1-c1ccc(Cl)c(C(=O)NCC2(C)CCCCCC2)c1', reagents are 'CO.C1CCOC1.O', and reaction condition is 'Deprotection with OH-').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O[K].COC(=O)c1ccccc1-c1ccc(Cl)c(C(=O)NCC2(C)CCCCCC2)c1,\n    \"products\": COC([O-])(O)c1ccccc1-c1ccc(Cl)c(C(=O)NCC2(C)CCCCCC2)c1.[K+],\n    \"step annotation\": Hydroxide addition,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": COC([O-])(O)c1ccccc1-c1ccc(Cl)c(C(=O)NCC2(C)CCCCCC2)c1,\n    \"step annotation\": Alkoxide leaves,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"COC(=O)c1ccccc1-c1ccc(Cl)c(C(=O)NCC2(C)CCCCCC2)c1\"\n}\n```",
+        "gold": "C[O-].CC1(CNC(=O)c2cc(-c3ccccc3C(=O)O)ccc2Cl)CCCCCC1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Wohl-Ziegler bromination', starting reactants are 'C/C=C/C(=O)OCC.O=C1CCC(=O)N1Br', reagents are '[C-]#[O+].C/C=C/C(=O)OCC.ClC(Cl)(Cl)Cl', and reaction condition is 'Reaction with NBS').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O=C1CCC(=O)N1Br,\n    \"products\": Br.O=C1CCC(=O)N1,\n    \"step annotation\": Radical formation,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": Br.CC=CC(=O)OCC,\n    \"step annotation\": Termination,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"Br.CC=CC(=O)OCC.ClC(Cl)(Cl)Cl\"\n}\n```",
+        "gold": "CCOC(=O)C=CCBr"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Pinner reaction', starting reactants are 'Cl.N#Cc1ccc2[nH]ncc2c1.NO', reagents are 'CO.NO.O=C(O)O[Na]', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": Cl.N#Cc1ccc2[nH]ncc2c1,\n    \"products\": [Cl-].[NH+]#Cc1ccc2[nH]ncc2c1,\n    \"step annotation\": Protonation of nitrile,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": NO.[NH+]#Cc1ccc2[nH]ncc2c1,\n    \"products\": N=C([NH2+]O)c1ccc2[nH]ncc2c1,\n    \"step annotation\": Addition of alcohol or amine,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": N=C([NH2+]O)c1ccc2[nH]ncc2c1.O=C(O)O[Na],\n    \"step annotation\": Deprotonation or proton exchange,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"N=C([NH2]O)c1ccc2[nH]ncc2c1.O=C(O)O\"\n}\n```",
+        "gold": "N=C(NO)c1ccc2[nH]ncc2c1.O=C(O)O.[Na+]"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Chloro Buchwald-Hartwig amination', starting reactants are 'O=C(NCCCn1ccc2cnc(Cl)nc21)C1CCC1.Cn1ncc2cc(N)ccc21', reagents are 'CC(C)(C)O[Na].C1COCCO1.Cn1ncc2cc(N)ccc21.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(NCCCn1ccc2cnc(Cl)nc21)C1CCC1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.[Pd]', and reaction condition is 'Reaction with element Pd and P-ligand').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CC1(C)c2cccc(P(c3ccccc3)c3ccccc3)c2Oc2c(P(c3ccccc3)c3ccccc3)cccc21.[Pd],\n    \"products\": CC1(C)c2cccc(P(c3ccccc3)c3ccccc3)c2Oc2c1cccc2[PH]([Pd])(c1ccccc1)c1ccccc1,\n    \"step annotation\": First Pd-P ligand formation,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CC1(C)c2cccc(P(c3ccccc3)c3ccccc3)c2Oc2c1cccc2[PH]([Pd])(c1ccccc1)c1ccccc1,\n    \"products\": CC1(C)c2cccc3c2Oc2c1cccc2[PH](c1ccccc1)(c1ccccc1)[Pd][PH]3(c1ccccc1)c1ccccc1,\n    \"step annotation\": Second Pd-P ligand formation,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": CC1(C)c2cccc3c2Oc2c1cccc2[PH](c1ccccc1)(c1ccccc1)[Pd][PH]3(c1ccccc1)c1ccccc1.O=C(NCCCn1ccc2cnc(Cl)nc21)C1CCC1,\n    \"products\": CC1(C)c2cccc3c2Oc2c1cccc2[PH](c1ccccc1)(c1ccccc1)[Pd](Cl)(c1ncc2ccn(CCCNC(=O)C4CCC4)c2n1)[PH]3(c1ccccc1)c1ccccc1,\n    \"step annotation\": Oxidative addition,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": CC(C)(C)O[Na].CC1(C)c2cccc3c2Oc2c1cccc2[PH](c1ccccc1)(c1ccccc1)[Pd](Cl)(c1ncc2ccn(CCCNC(=O)C4CCC4)c2n1)[PH]3(c1ccccc1)c1ccccc1,\n    \"products\": [Cl-].CC(C)(C)O[Pd]1(c2ncc3ccn(CCCNC(=O)C4CCC4)c3n2)[PH](c2ccccc2)(c2ccccc2)c2cccc3c2Oc2c(cccc2[PH]1(c1ccccc1)c1ccccc1)C3(C)C.[Na+],\n    \"step annotation\": Halide leaving,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": Cn1ncc2cc(N)ccc21.CC(C)(C)O[Pd]1(c2ncc3ccn(CCCNC(=O)C4CCC4)c3n2)[PH](c2ccccc2)(c2ccccc2)c2cccc3c2Oc2c(cccc2[PH]1(c1ccccc1)c1ccccc1)C3(C)C,\n    \"step annotation\": Transmetalation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"Cn1ncc2cc(N)ccc21.CC(C)(C)O[Pd]1(c2ncc3ccn(CCCNC(=O)C4CCC4)c3n2)[PH](c2ccccc2)(c2ccccc2)c2cccc3c2Oc2c(cccc2[PH]1(c1ccccc1)c1ccccc1)C3(C)C.C1CCC1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.[Pd]\"\n}\n```",
+        "gold": "CC(C)(C)O.Cn1ncc2cc(N[Pd]3(c4ncc5ccn(CCCNC(=O)C6CCC6)c5n4)[PH](c4ccccc4)(c4ccccc4)c4cccc5c4Oc4c(cccc4[PH]3(c3ccccc3)c3ccccc3)C5(C)C)ccc21"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'O-TBDPS deprotection', starting reactants are 'COc1ccc(NCc2ccc(C(=O)Nc3cc(C#CCO[Si](c4ccccc4)(c4ccccc4)C(C)(C)C)ccc3[N+](=O)[O-])cc2)cc1OC', reagents are 'CCCC[N+](CCCC)(CCCC)CCCC.CCOC(C)=O.C1CCOC1.[F-].N#N.c1ccncc1', and reaction condition is 'Fluoride condition').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": F.COc1ccc(NCc2ccc(C(=O)Nc3cc(C#CCO[Si](c4ccccc4)(c4ccccc4)C(C)(C)C)ccc3[N+](=O)[O-])cc2)cc1OC,\n    \"products\": [F-].COc1ccc([NH2+]Cc2ccc(C(=O)Nc3cc(C#CCO[Si](c4ccccc4)(c4ccccc4)C(C)(C)C)ccc3[N+](=O)[O-])cc2)cc1OC,\n    \"step annotation\": HF deprotonation,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": COc1ccc([NH2+]Cc2ccc(C(=O)Nc3cc(C#CCO[Si-](F)(c4ccccc4)(c4ccccc4)C(C)(C)C)ccc3[N+](=O)[O-])cc2)cc1OC,\n    \"products\": CC(C)(C)[Si](F)(c1ccccc1)c1ccccc1.COc1ccc([NH2+]Cc2ccc(C(=O)Nc3cc(C#CC[O-])ccc3[N+](=O)[O-])cc2)cc1OC,\n    \"step annotation\": Si group leaves,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": COc1ccc(NCc2ccc(C(=O)[NH2+]c3cc(C#CCO[Si-](F)(c4ccccc4)(c4ccccc4)C(C)(C)C)ccc3[N+](=O)[O-])cc2)cc1OC,\n    \"step annotation\": Si group leaves,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(C)(C)[Si](F)(c1ccccc1)c1ccccc1.COc1ccc(NCc2ccc(C(=O)Nc3cc(C#CCO[Si-](F)(c4ccccc4)(c4ccccc4)C(C)(C)C)ccc3[N+](=O)[O-])cc2)cc1OC\"\n}\n```",
+        "gold": "CC(C)(C)[Si](F)(c1ccccc1)c1ccccc1.COc1ccc(NCc2ccc(C(=O)[NH2+]c3cc(C#CC[O-])ccc3[N+](=O)[O-])cc2)cc1OC"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Ketone reductive amination', starting reactants are 'CC(=O)c1nn(C)c(=O)c2cc(F)c(F)cc12.NCCCO', reagents are '[BH4-].CC(C)O[Ti](OC(C)C)(OC(C)C)OC(C)C.C1CCOC1.CO.[Na+]', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": NCCCO.CC(=O)c1nn(C)c(=O)c2cc(F)c(F)cc12,\n    \"products\": Cn1nc(C(C)([O-])[NH2+]CCCO)c2cc(F)c(F)cc2c1=O,\n    \"step annotation\": Amine addition,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": Cn1nc(C(C)([O-])[NH2+]CCCO)c2cc(F)c(F)cc2c1=O,\n    \"step annotation\": Proton exchange,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"Cn1nc(c2cc(F)c(F)cc2c1=O)C(C)([O-])[NH2+]CCCO\"\n}\n```",
+        "gold": "Cn1nc(C(C)(O)NCCCO)c2cc(F)c(F)cc2c1=O"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Iodo Sonogashira coupling', starting reactants are 'C#CC1(OC2CCCCO2)CC1.OCc1cccc(I)c1', reagents are 'C#CC1(OC2CCCCO2)CC1.C1COCCO1.[Cu]I.N#N.OCc1cccc(I)c1', and reaction condition is 'Reaction with PdX2, PPh3, and water').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": Cl[Pd](Cl)([PH](c1ccccc1)(c1ccccc1)c1ccccc1)[PH](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"products\": Cl[Pd](Cl)[PH](c1ccccc1)(c1ccccc1)c1ccccc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"step annotation\": Palladium-ligand dissociation,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": OCc1cccc([Pd](I)(C#CC2(OC3CCCCO3)CC2)([P+](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)c1,\n    \"products\": OCc1cccc(C#CC2(OC3CCCCO3)CC2)c1.I[Pd]([P+](c1ccccc1)(c1ccccc1)c1ccccc1)[PH](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Reductive elimination,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": Cl[Pd](Cl)[PH](c1ccccc1)(c1ccccc1)c1ccccc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"products\": [Cl-].Cl[Pd]([P+](c1ccccc1)(c1ccccc1)c1ccccc1)[PH](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Palladium-ligand formation,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": [Cu]I.C#CC1(OC2CCCCO2)CC1,\n    \"products\": [Cu]C#CC1(OC2CCCCO2)CC1.I,\n    \"step annotation\": Copper activation,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": OCc1cccc(I)c1.Cl[Pd]([P+](c1ccccc1)(c1ccccc1)c1ccccc1)[PH](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Oxidative addition,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"OCc1cccc(C#CC1(OC2CCCCO2)CC1)c1.I[Pd]([P+](c1ccccc1)(c1ccccc1)c1ccccc1)[PH](c1ccccc1)(c1ccccc1)c1ccccc1\"\n}\n```",
+        "gold": "OCc1cccc([Pd](Cl)(I)([P+](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)c1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Bromo Buchwald-Hartwig amination', starting reactants are 'Nc1cc(-c2cccc(-c3cccc(C(=O)NC4CC4)c3)c2)nc2c1C(=O)NCC2.Brc1cncc2ccccc12', reagents are 'Brc1cncc2ccccc12.Nc1cc(-c2cccc(-c3cccc(C(=O)NC4CC4)c3)c2)nc2c1C(=O)NCC2.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(O[Cs])O[Cs].O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.[Pd]', and reaction condition is 'Reaction with element Pd and P-ligand').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CC1(C)c2ccccc2Oc2ccc(P(c3ccccc3)c3ccccc3)c(P(c3ccccc3)c3ccccc3)c21.[Pd],\n    \"products\": CC1(C)c2ccccc2Oc2ccc(P(c3ccccc3)c3ccccc3)c([PH]([Pd])(c3ccccc3)c3ccccc3)c21,\n    \"step annotation\": First Pd-P ligand formation,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CC1(C)c2ccccc2Oc2ccc(P(c3ccccc3)c3ccccc3)c(P(c3ccccc3)c3ccccc3)c21.[Pd],\n    \"products\": CC1(C)c2ccccc2Oc2ccc([PH]([Pd])(c3ccccc3)c3ccccc3)c(P(c3ccccc3)c3ccccc3)c21,\n    \"step annotation\": First Pd-P ligand formation,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": CC1(C)c2ccccc2Oc2ccc(P(c3ccccc3)c3ccccc3)c([PH]([Pd])(c3ccccc3)c3ccccc3)c21,\n    \"products\": CC1(C)c2ccccc2Oc2ccc3c(c21)[PH](c1ccccc1)(c1ccccc1)[Pd][PH]3(c1ccccc1)c1ccccc1,\n    \"step annotation\": Second Pd-P ligand formation,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": CC1(C)c2ccccc2Oc2ccc([PH]([Pd])(c3ccccc3)c3ccccc3)c(P(c3ccccc3)c3ccccc3)c21,\n    \"products\": CC1(C)c2ccccc2Oc2ccc3c(c21)[PH](c1ccccc1)(c1ccccc1)[Pd][PH]3(c1ccccc1)c1ccccc1,\n    \"step annotation\": Second Pd-P ligand formation,\n} \n\nElementary Step 5: \n\n{\n    \"reactants\": CC1(C)c2ccccc2Oc2ccc3c(c21)[PH](c1ccccc1)(c1ccccc1)[Pd][PH]3(c1ccccc1)c1ccccc1.Brc1cncc2ccccc12,\n    \"products\": CC1(C)c2ccccc2Oc2ccc3c(c21)[PH](c1ccccc1)(c1ccccc1)[Pd](Br)(c1cncc2ccccc12)[PH]3(c1ccccc1)c1ccccc1,\n    \"step annotation\": Oxidative addition,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": O=C(O[Cs])O[Cs].CC1(C)c2ccccc2Oc2ccc3c(c21)[PH](c1ccccc1)(c1ccccc1)[Pd](Br)(c1cncc2ccccc12)[PH]3(c1ccccc1)c1ccccc1,\n    \"step annotation\": Halide leaving,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"O=C(O[Cs])O[Cs].CC1(C)c2ccccc2Oc2ccc3c(c21)[PH](c1ccccc1)(c1ccccc1)[Pd](c1cncc2ccccc12)[PH]3(c1ccccc1)c1ccccc1\"\n}\n```",
+        "gold": "[Br-].[Cs+].CC1(C)c2ccccc2Oc2ccc3c(c21)[PH](c1ccccc1)(c1ccccc1)[Pd](OC(=O)O[Cs])(c1cncc2ccccc12)[PH]3(c1ccccc1)c1ccccc1"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Iodo Buchwald-Hartwig amination', starting reactants are 'Fc1ccc(-c2nc3ccc(I)nc3n2-c2ccncc2)cc1.C1C[C@H]2CNCCN2C1', reagents are 'Cc1ccccc1.CC(C)(C)O[Na].C1C[C@H]2CNCCN2C1.Fc1ccc(-c2nc3ccc(I)nc3n2-c2ccncc2)cc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.O=C(/C=C/c1ccccc1)/C=C/c1ccccc1.[Pd]', and reaction condition is 'Reaction with element Pd and P-ligand').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": c1ccc(P(c2ccccc2)c2ccc3ccccc3c2-c2c(P(c3ccccc3)c3ccccc3)ccc3ccccc23)cc1.[Pd],\n    \"products\": [Pd][PH](c1ccccc1)(c1ccccc1)c1ccc2ccccc2c1-c1c(P(c2ccccc2)c2ccccc2)ccc2ccccc12,\n    \"step annotation\": First Pd-P ligand formation,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": [Pd][PH](c1ccccc1)(c1ccccc1)c1ccc2ccccc2c1-c1c(P(c2ccccc2)c2ccccc2)ccc2ccccc12,\n    \"products\": c1ccc([PH]2(c3ccccc3)[Pd][PH](c3ccccc3)(c3ccccc3)c3ccc4ccccc4c3-c3c2ccc2ccccc32)cc1,\n    \"step annotation\": Second Pd-P ligand formation,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": c1ccc([PH]2(c3ccccc3)[Pd][PH](c3ccccc3)(c3ccccc3)c3ccc4ccccc4c3-c3c2ccc2ccccc32)cc1.Fc1ccc(-c2nc3ccc(I)nc3n2-c2ccncc2)cc1,\n    \"products\": Fc1ccc(-c2nc3ccc([Pd]4(I)[PH](c5ccccc5)(c5ccccc5)c5ccc6ccccc6c5-c5c(ccc6ccccc56)[PH]4(c4ccccc4)c4ccccc4)nc3n2-c2ccncc2)cc1,\n    \"step annotation\": Oxidative addition,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(C)(C)O[Na].Fc1ccc(-c2nc3ccc([Pd]4(I)[PH](c5ccccc5)(c5ccccc5)c5ccc6ccccc6c5-c5c(ccc6ccccc56)[PH]4(c4ccccc4)c4ccccc4)nc3n2-c2ccncc2)cc1,\n    \"step annotation\": Halide leaving,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"Fc1ccc(-c2nc3ccc(Pd)(c4ccccc4)(c4ccccc4)c4ccc5ccccc5c4-c4c(ccc5ccccc45)[Na]c4ccccc4)nc3n2-c2ccncc2)cc1\"\n}\n```",
+        "gold": "CC(C)(C)O[Pd]1(c2ccc3nc(-c4ccc(F)cc4)n(-c4ccncc4)c3n2)[PH](c2ccccc2)(c2ccccc2)c2ccc3ccccc3c2-c2c(ccc3ccccc23)[PH]1(c1ccccc1)c1ccccc1.[I-].[Na+]"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Chloro Stille reaction', starting reactants are 'CCCC[Sn](CCCC)(CCCC)c1cn(C)cn1.O=[N+]([O-])c1ccc(Oc2ccnc(Cl)c2)cn1', reagents are 'CN(C)C=O.CCCC[Sn](CCCC)(CCCC)c1cn(C)cn1.N#N.O=[N+]([O-])c1ccc(Oc2ccnc(Cl)c2)cn1.c1ccc(P(c2ccccc2)c2ccccc2)cc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1', and reaction condition is 'Reaction with element Pd and P-ligand').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": c1ccc(P(c2ccccc2)c2ccccc2)cc1.[Pd],\n    \"products\": [Pd][PH](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": First Pd-P ligand formation,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": [Pd][PH](c1ccccc1)(c1ccccc1)c1ccccc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"step annotation\": Second Pd-P ligand formation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"[Pd](c1ccccc1)(c1ccccc1)c1ccccc1[Pd].c1ccc(P(c2ccccc2)c2ccccc2)cc1\"\n}",
+        "gold": "c1ccc([PH]([Pd][PH](c2ccccc2)(c2ccccc2)c2ccccc2)(c2ccccc2)c2ccccc2)cc1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Methoxy to hydroxy', starting reactants are 'COc1cc(F)cc(N2CCc3cc(OC)ncc3C2C)c1', reagents are 'CC(=O)O', and reaction condition is 'Ether acidic cleavage').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": Br.COc1cc(F)cc(N2CCc3cc(OC)ncc3C2C)c1,\n    \"products\": [Br-].COc1cc(F)cc(N2CCc3cc([OH+]C)ncc3C2C)c1,\n    \"step annotation\": Proton exchange between ether and hydrohalic acid,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": [Br-].COc1cc(F)cc(N2CCc3cc([OH+]C)ncc3C2C)c1,\n    \"step annotation\": Cleavage of ether,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"COc1cc(F)cc(N2CCc3cc(O)nc3C2C)c1\"\n}\n```",
+        "gold": "CBr.COc1cc(F)cc(N2CCc3cc(O)ncc3C2C)c1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Weinreb ketone synthesis', starting reactants are 'CON(C)C(=O)[C@H]1CCCN1C(=O)OC(C)(C)C.C[Mg]Br', reagents are 'CC(C)(C)OC(=O)N1CCC[C@@H]1C(=O)O.CC(C)COC(=O)Cl.CCN(CC)CC.CCOC(C)=O.C1CCOC1.CNOC.ClCCl.Cl.Cl.N#N', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CON(C)C(=O)[C@H]1CCCN1C(=O)OC(C)(C)C.C[Mg]Br,\n    \"products\": CN1[O+](C)[Mg-](Br)OC1(C)[C@H]1CCCN1C(=O)OC(C)(C)C,\n    \"step annotation\": Nucleophilic addition,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CN1[O+](C)[Mg-](Br)OC1(C)[C@H]1CCCN1C(=O)OC(C)(C)C.Cl,\n    \"products\": [Cl-].CON(C)C(C)(O)[C@H]1CCCN1C(=O)OC(C)(C)C.[Mg+]Br,\n    \"step annotation\": Protonation and metal leaving,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": Cl.CON(C)C(C)(O)[C@H]1CCCN1C(=O)OC(C)(C)C,\n    \"step annotation\": Protonation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CN1[O+](C)[Mg-]OC1(C)[C@H]1CCCN1C(=O)OC(C)(C)C.[Cl-]\"\n}\n```",
+        "gold": "[Cl-].CO[NH+](C)C(C)(O)[C@H]1CCCN1C(=O)OC(C)(C)C"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Chloro Grignard + ester reaction', starting reactants are 'COC(=O)c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1.C[Mg]Cl', reagents are 'C1CCOC1.C[Mg]Cl.O', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": C[Mg]Cl.COC(=O)c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1,\n    \"products\": COC(C)([O-])c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1.[Mg+]Cl,\n    \"step annotation\": Addition,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": O.CC(C)([O-])c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1,\n    \"products\": CC(C)(O)c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1.[OH-],\n    \"step annotation\": Leaving or workup,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": COC(C)([O-])c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1,\n    \"products\": C[O-].CC(=O)c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1,\n    \"step annotation\": Leaving or workup,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": C[Mg]Cl.CC(=O)c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1,\n    \"step annotation\": Addition,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(C)(O)c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1.[Mg+].Cl\"\n}\n```",
+        "gold": "CC(C)([O-])c1ccc(-c2cn3cccc3c(=O)[nH]2)cc1.[Mg+]Cl"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'N-Cbz deprotection', starting reactants are 'COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCCN4C(=O)OCc4ccccc4)n4ccncc34)cc2)c1F', reagents are 'CC(=O)O.Br.O.O[Na]', and reaction condition is 'Acidic condition').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": Br.COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCCN4C(=O)OCc4ccccc4)n4ccncc34)cc2)c1F,\n    \"products\": [Br-].COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCCN4C(=[OH+])OCc4ccccc4)n4ccncc34)cc2)c1F,\n    \"step annotation\": Proton exchange,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCC[NH+]4C(=O)O)n4ccncc34)cc2)c1F.O[Na],\n    \"products\": O.COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCC[NH+]4C(=O)[O-])n4ccncc34)cc2)c1F.[Na+],\n    \"step annotation\": Deprotonation of carboxylic acid,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCC[NH+]4C(=O)[O-])n4ccncc34)cc2)c1F,\n    \"products\": O=C=O.COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCCN4)n4ccncc34)cc2)c1F,\n    \"step annotation\": CO2 evolution,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": [Br-].COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCCN4C(=[OH+])OCc4ccccc4)n4ccncc34)cc2)c1F,\n    \"step annotation\": Sn2 / Sn1 type reaction,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCCN4)n4ccncc34)cc2)c1F\"\n}",
+        "gold": "COc1cccc(Oc2ccc(-c3nc([C@@H]4CCCCN4C(=O)O)n4ccncc34)cc2)c1F.BrCc1ccccc1"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Carboxylic acid + amine condensation', starting reactants are 'O=C(O)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1.NCC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1', reagents are 'CCN(C(C)C)C(C)C.CN(C)C=O.Cl.NCC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1.O=C(O)C(F)(F)F.O', and reaction condition is 'Condensation using DCC and HOBt').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": On1nnc2ccccc21.CCNC(=NCCCN(C)C)OC(=O)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"products\": CCNC(=O)NCCCN(C)C.O=C(On1nnc2ccccc21)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"step annotation\": Addition of HOBt (1-hydroxybenzotriazole) into carboxylic acid-DCC complex,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": On1nnc2ccccc21.CCN=C(NCCCN(C)C)OC(=O)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"products\": CCNC(=O)NCCCN(C)C.O=C(On1nnc2ccccc21)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"step annotation\": Addition of HOBt (1-hydroxybenzotriazole) into carboxylic acid-DCC complex,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": NCC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1.O=C(On1nnc2ccccc21)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"products\": O=C([NH2+]CC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1.[O-]n1nnc2ccccc21,\n    \"step annotation\": Amine attacks HOBt-carboxylic acid complex,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": CCN=C=NCCCN(C)C.O=C(O)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"products\": CC[NH+]=C=NCCCN(C)C.O=C([O-])c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"step annotation\": Proton exchange,\n} \n\nElementary Step 5: \n\n{\n    \"reactants\": O=C([NH2+]CC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1.[O-]n1nnc2ccccc21,\n    \"products\": On1nnc2ccccc21.O=C(NCC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"step annotation\": Proton exchange between amide and HOBt,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CCN=C=NCCCN(C)C.O=C(O)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1,\n    \"step annotation\": Proton exchange,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"O=C(NCC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1)c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1.NCC(=O)N1CCN(C(=O)c2ccccc2C(F)(F)F)CC1\"\n}\n```",
+        "gold": "CCN=C=[NH+]CCCN(C)C.O=C([O-])c1ccc(Oc2ccc(OCc3ccccc3)cc2)cc1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Aldehyde reductive amination', starting reactants are 'Cl.CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC=O)c1.NCC(O)c1ccc(O)c2[nH]c(=O)sc12', reagents are 'CO.CC(=O)O.NCC(O)c1ccc(O)c2[nH]c(=O)sc12.[BH3-]C#N.[Na+]', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC=O)c1.Cl,\n    \"products\": [Cl-].CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC=[OH+])c1,\n    \"step annotation\": Protonation of aldehyde,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": NCC(O)c1ccc(O)c2[nH]c(=O)sc12.CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC=[OH+])c1,\n    \"products\": CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC(O)[NH2+]CC(O)c2ccc(O)c3[nH]c(=O)sc23)c1,\n    \"step annotation\": Addition of amine,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC(O)[NH2+]CC(O)c2ccc(O)c3[nH]c(=O)sc23)c1,\n    \"products\": CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC([OH2+])NCC(O)c2ccc(O)c3[nH]c(=O)sc23)c1,\n    \"step annotation\": Proton exchange within the molecule,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC([OH2+])NCC(O)c2ccc(O)c3[nH]c(=O)sc23)c1,\n    \"step annotation\": Water leaves,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1ccccNCC(O)c2ccc(O)c3[nH]c(=O)sc23-c1\"\n}",
+        "gold": "O.CC(C)(C)OC(=O)N(CCCc1ccccn1)Cc1cccc(CC=[NH+]CC(O)c2ccc(O)c3[nH]c(=O)sc23)c1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Sulfanyl to sulfonyl', starting reactants are 'CCn1cnc2c(Nc3ccc(Cl)cc3)nc(SC)nc21.O=C(OO)c1cccc(Cl)c1', reagents are 'CCO.CCOC(C)=O.O=C(OO)c1cccc(Cl)c1', and reaction condition is 'Reaction using peroxide').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O=C(OO)c1cccc(Cl)c1.CCn1cnc2c(Nc3ccc(Cl)cc3)nc(SC)nc21,\n    \"products\": O=C(O)c1cccc(Cl)c1.CCn1cnc2c(Nc3ccc(Cl)cc3)nc(S(C)=O)nc21,\n    \"step annotation\": Oxidation,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": O=C(OO)c1cccc(Cl)c1.CCn1cnc2c(Nc3ccc(Cl)cc3)nc(S(C)=O)nc21,\n    \"step annotation\": Additional oxidation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"O=C(C(=O)O)c1cccc(Cl)c1.CCn1cnc2c(Nc3ccc(Cl)cc3)nc(S(C(=O)O)O)nc21\"\n}\n```",
+        "gold": "O=C(O)c1cccc(Cl)c1.CCn1cnc2c(Nc3ccc(Cl)cc3)nc(S(C)(=O)=O)nc21"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Ketone to alcohol reduction', starting reactants are 'CC(C)(C)OC(=O)Nc1nc(/C=C2\\CN(C(c3ccccc3)(c3ccccc3)c3ccccc3)CCC2=O)cs1', reagents are 'CCO.ClCCl.[Na+]', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CC(C)(C)OC(=O)Nc1nc(/C=C2\\CN(C(c3ccccc3)(c3ccccc3)c3ccccc3)CCC2=O)cs1.[BH4-],\n    \"products\": B.CC(C)(C)OC(=O)Nc1nc(C=C2CN(C(c3ccccc3)(c3ccccc3)c3ccccc3)CCC2[O-])cs1,\n    \"step annotation\": Hydride transfer,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(C)(C)OC(=O)Nc1nc(C=C2CN(C(c3ccccc3)(c3ccccc3)c3ccccc3)CCC2[O-])cs1.CCO,\n    \"step annotation\": Protonation of alcohol,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(C)(C)OC(=O)Nc1nc(C=C2CN(C(c3ccccc3)(c3ccccc3)c3ccccc3)CCC2O)cs1\"\n}\n```",
+        "gold": "CC[O-].CC(C)(C)OC(=O)Nc1nc(C=C2CN(C(c3ccccc3)(c3ccccc3)c3ccccc3)CCC2O)cs1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Mitsunobu aryl ether synthesis', starting reactants are 'COc1cc2c(=O)n(COC(=O)C(C)(C)C)cnc2cc1O.COCCOCCO', reagents are 'COc1cc2c(=O)n(COC(=O)C(C)(C)C)cnc2cc1O.COCCOCCO.ClCCl', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CCOC(=O)N=NC(=O)OCC.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"products\": CCOC(=O)[N-]N(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Reaction between phosphine and diethylazodicarboxylate (DEAD),\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": COc1cc2c(=O)n(COC(=O)C(C)(C)C)cnc2cc1O.CCOC(=O)[N-]N(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"products\": CCOC(=O)NN(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1.COc1cc2c(=O)n(COC(=O)C(C)(C)C)cnc2cc1[O-],\n    \"step annotation\": Proton exchange,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": COCCOCCO.CCOC(=O)NN(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"products\": CCOC(=O)NN(C(=O)OCC)P([OH+]CCOCCOC)(c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Forming a complex,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": CCOC(=O)NN(C(=O)OCC)P([OH+]CCOCCOC)(c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"products\": CCOC(=O)N[NH+](C(=O)OCC)P(OCCOCCOC)(c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Intramolecular proton transfer,\n} \n\nElementary Step 5: \n\n{\n    \"reactants\": CCOC(=O)N[NH+](C(=O)OCC)P(OCCOCCOC)(c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"products\": CCOC(=O)NNC(=O)OCC.COCCOCC[O+]=P(c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Bond cleavage,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": COCCOCC[O+]=P(c1ccccc1)(c1ccccc1)c1ccccc1.COc1cc2c(=O)n(COC(=O)C(C)(C)C)cnc2cc1[O-],\n    \"step annotation\": SN2 type reaction,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"COCCOCCO.COC(=O)Nc1cc2c(=O)n(COC(=O)C(C)(C)C)cnc2cc11\"\n}",
+        "gold": "COCCOCCOc1cc2ncn(COC(=O)C(C)(C)C)c(=O)c2cc1OC.O=P(c1ccccc1)(c1ccccc1)c1ccccc1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'SNAr ether synthesis', starting reactants are 'O=C(O)c1cn(C2CCCC2)c2cc(NC3CCCCC3)c(F)c(F)c2c1=O.OCc1ccccc1', reagents are 'Cc1ccccc1.C1CCOC1.Cl.O=C(O)c1cn(C2CCCC2)c2cc(NC3CCCCC3)c(F)c(F)c2c1=O', and reaction condition is 'reaction with alcohol group').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": [Li]CCCC.OCc1ccccc1,\n    \"products\": CCCC.[O-]Cc1ccccc1.[Li+],\n    \"step annotation\": Deprotonation of alcohol,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": O=C(O)c1cn(C2CCCC2)c2c(c1=O)C(F)(OCc1ccccc1)[C-](F)C(NC1CCCCC1)=C2,\n    \"step annotation\": Halide leaving,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"O=C(O)c1cn(C2CCCC2)c2cc(NC3CCCCC3)c(F)c(F)c2c1=O.C1CCOC1.Cl\"\n}",
+        "gold": "[F-].O=C(O)c1cn(C2CCCC2)c2cc(NC3CCCCC3)c(F)c(OCc3ccccc3)c2c1=O"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Sulfonic ester Schotten-Baumann', starting reactants are 'Cc1ccc(S(=O)(=O)Cl)cc1.COCCO', reagents are 'c1ccncc1', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": COCCO.Cc1ccc(S(=O)(=O)Cl)cc1,\n    \"products\": COCC[OH+]S(=O)([O-])(Cl)c1ccc(C)cc1,\n    \"step annotation\": Amine addition,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": COCC[OH+]S(=O)([O-])(Cl)c1ccc(C)cc1,\n    \"products\": [Cl-].COCC[OH+]S(=O)(=O)c1ccc(C)cc1,\n    \"step annotation\": Halide leaves,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": COCC[OH+]S(=O)(=O)c1ccc(C)cc1.c1ccncc1,\n    \"step annotation\": Deprotonation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"COCC[N+](C)([O-])S(=O)(=O)c1ccc(C)cc1\"\n}\n```",
+        "gold": "COCCOS(=O)(=O)c1ccc(C)cc1.c1cc[nH+]cc1"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Keto alpha-alkylation', starting reactants are 'CCOC(=O)Cc1ccc(OC)c(OC)c1.CI', reagents are 'CI.CN(C)P(=O)(N(C)C)N(C)C.C1CCOC1', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": [Li]N(C(C)C)C(C)C.CCOC(=O)Cc1ccc(OC)c(OC)c1,\n    \"products\": CC(C)NC(C)C.CCOC(=O)[CH-]c1ccc(OC)c(OC)c1.[Li+],\n    \"step annotation\": Deprotonation of alpha position carbon,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CI.CCOC(=O)[CH-]c1ccc(OC)c(OC)c1,\n    \"step annotation\": Substitution,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(C)NC(C)C.CCOC(=O)c1ccc(OC)c(OC)c1\"\n}\n```",
+        "gold": "CCOC(=O)C(C)c1ccc(OC)c(OC)c1.[I-]"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Carboxylic ester + amine reaction', starting reactants are 'CCOC(=O)c1cc(-c2cccc(F)c2)nn1C(CN)CO', reagents are 'CCO.[NH4+].[OH-]', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CCOC(=O)c1cc(-c2cccc(F)c2)nn1C(CN)CO,\n    \"products\": CCOC1([O-])[NH2+]CC(CO)n2nc(-c3cccc(F)c3)cc21,\n    \"step annotation\": Addition of amine to carbonyl,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CCOC1([O-])[NH2+]CC(CO)n2nc(-c3cccc(F)c3)cc21.[OH-],\n    \"products\": CCOC1([O-])NCC(CO)n2nc(-c3cccc(F)c3)cc21.O,\n    \"step annotation\": Deprotonation of amine,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CCOC1([O-])NCC(CO)n2nc(-c3cccc(F)c3)cc21,\n    \"step annotation\": Alkoxide leaving,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CCOC1N(CC(CO)n2nc(-c3cccc(F)c3)cc21)C(F)=O\"\n}\n```",
+        "gold": "CC[O-].O=C1NCC(CO)n2nc(-c3cccc(F)c3)cc21"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Steglich esterification', starting reactants are 'O=C(O)[C@H](O)CO.C(=NC1CCCCC1)=NC1CCCCC1', reagents are 'CC#N.NC=Cc1ccccc1', and reaction condition is 'Condensation using DCC').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": C(=NC1CCCCC1)=NC1CCCCC1.O=C(O)[C@H](O)CO,\n    \"products\": O=C([O-])[C@H](O)CO.C(=NC1CCCCC1)=[NH+]C1CCCCC1,\n    \"step annotation\": Proton exchange,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": O=C([O-])[C@H](O)CO.C(=NC1CCCCC1)=[NH+]C1CCCCC1,\n    \"products\": O=C(OC(=NC1CCCCC1)NC1CCCCC1)[C@H](O)CO,\n    \"step annotation\": Formation of a single bond between carboxylic acid and protonated DCC,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": NC=Cc1ccccc1.O=C(OC(=NC1CCCCC1)NC1CCCCC1)[C@H](O)CO,\n    \"step annotation\": Addition of amine (thiol) into carboxylic acid-DCC complex,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"O=C(O)[C@H](O)CO.C(=NC1CCCCC1)NC1CCCCC1S(=O)(=O)N\"\n}",
+        "gold": "[O-]C([NH2+]C=Cc1ccccc1)(OC(=NC1CCCCC1)NC1CCCCC1)[C@H](O)CO"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Ester to alcohol reduction', starting reactants are 'COC(=O)CCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21', reagents are 'CO.C1CCOC1.Cl.B.B.O', and reaction condition is 'Borane/THF').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": B.COC(=O)CCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21,\n    \"products\": [BH3-][O+]=C(CCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21)OC,\n    \"step annotation\": First coordination,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": B[O+]1[BH2-][O+]([BH3-])C1CCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21,\n    \"products\": BO[BH2-][O+](B)CCCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21,\n    \"step annotation\": Second Hydride transfer,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": BO[BH2-][O+](B)CCCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21,\n    \"products\": BOB.BOCCCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21,\n    \"step annotation\": BOB leaving,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": O.BOCCCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21,\n    \"products\": BO.COC(=O)c1c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc2n1CCCO,\n    \"step annotation\": Workup,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": B.[BH3-][O+]=C(CCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21)OC,\n    \"step annotation\": Second coordination,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"O[BH2-].[BH4-]=C(CCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21)OC\"\n}\n```",
+        "gold": "[BH3-][O+]=C(CCn1c(C(=O)OC)c(C)c2c(-c3c(CN(C)Cc4cc(CSc5cc(O)c6ccccc6c5)n(C)n4)nn4c3CCCC4)c(Cl)ccc21)[O+]([BH3-])C"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Ester hydrolysis', starting reactants are 'CC(O)C1C(=O)N2C(C(=O)OCc3ccc([N+](=O)[O-])cc3)=C(SC3COC(COP(=O)(O)OC(C)[N+](C)(C)C)C3)C(C)C12.O.[OH-]', reagents are 'C1COCCO1.O.O=C(O)O[Na].[Pd]', and reaction condition is 'Deprotection with OH-').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CC(O)C1C(=O)N2C(C(=O)OCc3ccc([N+](=O)[O-])cc3)=C(SC3COC(COP(=O)(O)OC(C)[N+](C)(C)C)C3)C(C)C12.[OH-],\n    \"products\": CC(O)C1C(=O)N2C(C([O-])(O)OCc3ccc([N+](=O)[O-])cc3)=C(SC3COC(COP(=O)(O)OC(C)[N+](C)(C)C)C3)C(C)C12,\n    \"step annotation\": Hydroxide addition,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(O)C1C(=O)N2C(C([O-])(O)OCc3ccc([N+](=O)[O-])cc3)=C(SC3COC(COP(=O)(O)OC(C)[N+](C)(C)C)C3)C(C)C12,\n    \"step annotation\": Alkoxide leaves,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(O)C1C(=O)N2C(C(=O)OCc3ccc([N+](=O)[O-])cc3)=C(SC3COC(COP(=O)(O)OC(C)[N+](C)(C)C)C3)C(C)C12.O.[OH-]\"\n}\n```",
+        "gold": "CC(O)C1C(=O)N2C(C(=O)O)=C(SC3COC(COP(=O)(O)OC(C)[N+](C)(C)C)C3)C(C)C12.O=[N+]([O-])c1ccc(C[O-])cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Darzens chlorination', starting reactants are 'COC(=O)[C@H](Cc1cc(CO)ccn1)NC(C)=O.O=S(Cl)Cl', reagents are 'COC(=O)[C@H](Cc1cc(CO)ccn1)NC(C)=O.ClCCl.ClC(Cl)Cl.O=C(O)O[Na]', and reaction condition is 'Reaction using DMF/SOCl2').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O=S(Cl)Cl.CN(C)C=O,\n    \"products\": [Cl-].C[N+](C)=COS(=O)Cl,\n    \"step annotation\": Reaction of DMF and SOCl2,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": [Cl-].C[N+](C)=COS(=O)Cl,\n    \"products\": O=S=O.[Cl-].C[N+](C)=CCl,\n    \"step annotation\": Vilsmeier-Haack reagent formation,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": C[N+](C)=CCl.COC(=O)[C@H](Cc1cc(CO)ccn1)NC(C)=O,\n    \"products\": [Cl-].COC(=O)[C@H](Cc1cc(C[OH+]C=[N+](C)C)ccn1)NC(C)=O,\n    \"step annotation\": Addition,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": COC(=O)[C@H](Cc1cc(C[OH+]C=[N+](C)C)ccn1)NC(C)=O.O=C(O)O[Na],\n    \"step annotation\": Deprotonation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"O=C(O)O[Na].[C@H](Cc1cc(CO)ccn1)NC(C)=O.COC(=O)[C@H](Cc1cc(C[OH])ccn1)NC(C)=O\"\n}\n```",
+        "gold": "COC(=O)[C@H](Cc1cc(COC=[N+](C)C)ccn1)NC(C)=O.O=C(O)O.[Na+]"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Bromo Grignard + ester reaction', starting reactants are 'CCOC(=O)CCC(C)(C)c1cccs1.C[Mg]Br', reagents are 'CCOCC.[Cl-].C[Mg]Br.[NH4+].O', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": C[Mg]Br.CCOC(=O)CCC(C)(C)c1cccs1,\n    \"products\": CCOC(C)([O-])CCC(C)(C)c1cccs1.[Mg+]Br,\n    \"step annotation\": Addition,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CCOC(C)([O-])CCC(C)(C)c1cccs1,\n    \"products\": CC[O-].CC(=O)CCC(C)(C)c1cccs1,\n    \"step annotation\": Leaving or workup,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": C[Mg]Br.CC(=O)CCC(C)(C)c1cccs1,\n    \"step annotation\": Addition,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CCOC(C)(O)CCC(C)(C)c1cccs1\"\n}\n```",
+        "gold": "CC(C)([O-])CCC(C)(C)c1cccs1.[Mg+]Br"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Chloro Sonogashira coupling', starting reactants are 'COc1ccccc1C1CCN(c2nc(Cl)nc3ccc([N+](=O)[O-])cc23)CC1.C#CC1CC1', reagents are 'CN(C)C=O.COc1ccccc1C1CCN(c2nc(Cl)nc3ccc([N+](=O)[O-])cc23)CC1.C#CC1CC1.[Cu]I.N#N', and reaction condition is 'Reaction with Pd coordinated with 3 or 4 ligands').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": c1ccc([PH](c2ccccc2)(c2ccccc2)[Pd]([PH](c2ccccc2)(c2ccccc2)c2ccccc2)([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)cc1,\n    \"products\": c1ccc([PH](c2ccccc2)(c2ccccc2)[Pd]([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)cc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"step annotation\": Ligand leaving,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": c1ccc([PH](c2ccccc2)(c2ccccc2)[Pd]([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)cc1,\n    \"step annotation\": Ligand leaving,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"C1CCC(COc2ccccc2C1)C1CCN(c2nc(Cl)nc3ccc([N+](=O)[O-])cc23)CC1.C#CC1CC1.[Pd]([PH](c2ccccc2)(c2ccccc2)c2ccccc2)([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2\"\n}",
+        "gold": "c1ccc([PH]([Pd][PH](c2ccccc2)(c2ccccc2)c2ccccc2)(c2ccccc2)c2ccccc2)cc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Amide Schotten-Baumann', starting reactants are 'CC(C)(O)[C@H](N)c1ccccc1.O=C(Cl)C(Cl)(Cl)Cl', reagents are 'c1ccncc1', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O=C(Cl)C(Cl)(Cl)Cl.CC(C)(O)[C@H](N)c1ccccc1,\n    \"products\": CC(C)(O)[C@H]([NH2+]C([O-])(Cl)C(Cl)(Cl)Cl)c1ccccc1,\n    \"step annotation\": Amine addition,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CC(C)(O)[C@H]([NH2+]C([O-])(Cl)C(Cl)(Cl)Cl)c1ccccc1,\n    \"products\": [Cl-].CC(C)(O)[C@H]([NH2+]C(=O)C(Cl)(Cl)Cl)c1ccccc1,\n    \"step annotation\": Halide leaves,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(C)(O)[C@H]([NH2+]C(=O)C(Cl)(Cl)Cl)c1ccccc1.c1ccncc1,\n    \"step annotation\": Deprotonation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(C)(O)[C@H]([NH2+]C(=O)C(Cl)(Cl)Cl)c1ccccc1.Cl\"\n}\n```",
+        "gold": "CC(C)(O)[C@H](NC(=O)C(Cl)(Cl)Cl)c1ccccc1.c1cc[nH+]cc1"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Mesyloxy N-alkylation', starting reactants are 'CCNc1ccc(-n2ccnc2)cc1.CS(=O)(=O)OCC1CCN(CC2CC2)C1', reagents are 'CC(CCN1CCOCC1)Oc1ccc([N+](=O)[O-])cc1', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CS(=O)(=O)OCC1CCN(CC2CC2)C1.CCNc1ccc(-n2ccnc2)cc1,\n    \"products\": CS(=O)(=O)[O-].CC[NH+](CC1CCN(CC2CC2)C1)c1ccc(-n2ccnc2)cc1,\n    \"step annotation\": Substitution,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(CCN1CCOCC1)Oc1ccc([N+](=O)[O-])cc1.CC[NH+](CC1CCN(CC2CC2)C1)c1ccc(-n2ccnc2)cc1,\n    \"step annotation\": Deprotonation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(CCN1CCOCC1)Oc1ccc(NCc1ccc(-n2ccnc2)cc1)[N+](=O)[O-]\"\n}\n```",
+        "gold": "CC(CC[NH+]1CCOCC1)Oc1ccc([N+](=O)[O-])cc1.CCN(CC1CCN(CC2CC2)C1)c1ccc(-n2ccnc2)cc1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'N-Boc deprotection', starting reactants are 'CCOC(=O)/C(C)=C/[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H](N(C)C(=O)OC(C)(C)C)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1', reagents are 'C1COCCO1', and reaction condition is 'Acidic condition').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CCOC(=O)/C(C)=C/[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H](N(C)C(=O)OC(C)(C)C)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1.Cl,\n    \"products\": [Cl-].CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H](N(C)C(=[OH+])OC(C)(C)C)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1,\n    \"step annotation\": Protonation of ester or carbonyl oxygen,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H](N(C)C(=[OH+])OC(C)(C)C)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1,\n    \"products\": C[C+](C)C.CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H](N(C)C(=O)O)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1,\n    \"step annotation\": Carbocation leaves,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H](N(C)C(=O)O)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1,\n    \"products\": CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H]([N-]C)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1.O=C=[OH+],\n    \"step annotation\": HOCO leaves,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H]([N-]C)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1.O=C=[OH+],\n    \"step annotation\": Proton exchange,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H]([N-]C)C(C)(C)c1ccccc1)C(C)(C)c1ccc(O)cc1\"\n}\n```",
+        "gold": "O=C=O.CCOC(=O)C(C)=C[C@@H](C(C)C)N(C)C(=O)[C@@H](NC(=O)[C@@H](NC)C(C)(C)c1ccccc1)C(C)(C)c1ccc(OC)cc1"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Iodo N-methylation', starting reactants are 'CNC(=O)c1cc(Oc2ccc(NC(=O)c3nc(S(C)(=O)=O)[nH]c3-c3ccc(F)cc3)cc2)ccn1.CI', reagents are 'CN(C)C=O.[I-]', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O=C(O[K])O[K].CNC(=O)c1cc(Oc2ccc(NC(=O)C3=C(c4ccc(F)cc4)[NH+](C)C(S(C)(=O)=O)=N3)cc2)ccn1,\n    \"products\": O=C(O)O[K].CNC(=O)c1cc(Oc2ccc(NC(=O)c3nc(S(C)(=O)=O)n(C)c3-c3ccc(F)cc3)cc2)ccn1.[K+],\n    \"step annotation\": Deprotonation of amine,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CI.CNC(=O)c1cc(Oc2ccc(NC(=O)c3nc(S(C)(=O)=O)[nH]c3-c3ccc(F)cc3)cc2)ccn1,\n    \"step annotation\": Nucleophilic substitution,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"CNC(=O)c1cc(Oc2ccc(NC(=O)c3nc(S(C)(=O)=O)[nH]c3-c3ccc(F)cc3)cc2)ccn1.CN(C)C=O\"\n}",
+        "gold": "CNC(=O)c1cc(Oc2ccc(NC(=O)C3=C(c4ccc(F)cc4)[NH+](C)C(S(C)(=O)=O)=N3)cc2)ccn1.[I-]"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Hydroxy to chloro', starting reactants are 'CCOc1cc2c(O)cc(C)nc2nc1C.O=P(Cl)(Cl)Cl', reagents are '', and reaction condition is 'SOCl2 or POCl3').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O=P(Cl)(Cl)Cl.CCOc1cc2c(O)cc(C)nc2nc1C,\n    \"products\": CCOc1cc2c([OH+]P([O-])(Cl)(Cl)Cl)cc(C)nc2nc1C,\n    \"step annotation\": Addition of alkoxide,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CCOc1cc2c([OH+]P([O-])(Cl)(Cl)Cl)cc(C)nc2nc1C,\n    \"products\": [Cl-].CCOc1cc2c([OH+]P(=O)(Cl)Cl)cc(C)nc2nc1C,\n    \"step annotation\": Chloride leaves,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": [Cl-].CCOc1cc2c([OH+]P(=O)(Cl)Cl)cc(C)nc2nc1C,\n    \"products\": CCOC1=C[C-]2C(=NC(C)=CC2(Cl)[OH+]P(=O)(Cl)Cl)N=C1C,\n    \"step annotation\": Nucleophilic substitution,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": [Cl-].CCOc1cc2c([OH+]P(=O)(Cl)Cl)cc(C)nc2nc1C,\n    \"products\": CCOc1cc2c(nc1C)N=C(C)[CH-]C2(Cl)[OH+]P(=O)(Cl)Cl,\n    \"step annotation\": Nucleophilic substitution,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CCOC1=C[C-]2C(=NC(C)=CC2(Cl)[OH+]P(=O)(Cl)Cl)N=C1C,\n    \"step annotation\": Meisenheimer complex collapse,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CCOc1cc2c(nc1C)N=C(C)[CH-]C2(Cl)[OH+]P(=O)(Cl)Cl\"\n}\n```",
+        "gold": "[Cl-].O=P(=[OH+])Cl.CCOc1cc2c(Cl)cc(C)nc2nc1C"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Bromo Stille reaction', starting reactants are 'COc1cccc(Br)c1C(=O)N[C@H]1CCC[C@@H]1COc1ccc(F)cc1.CCCC[Sn](CCCC)(CCCC)c1cnccn1', reagents are 'CCOC(C)=O.CN(C)C=O.COc1cccc(Br)c1C(=O)N[C@H]1CCC[C@@H]1COc1ccc(F)cc1.CCCC[Sn](CCCC)(CCCC)c1cnccn1.F[Cs].O', and reaction condition is 'Reaction with Pd coordinated with 3 or 4 ligands').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": c1ccc([PH](c2ccccc2)(c2ccccc2)[Pd]([PH](c2ccccc2)(c2ccccc2)c2ccccc2)([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)cc1,\n    \"products\": c1ccc([PH](c2ccccc2)(c2ccccc2)[Pd]([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)cc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"step annotation\": Ligand leaving,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": c1ccc([PH](c2ccccc2)(c2ccccc2)[Pd]([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)cc1,\n    \"products\": c1ccc([PH]([Pd][PH](c2ccccc2)(c2ccccc2)c2ccccc2)(c2ccccc2)c2ccccc2)cc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"step annotation\": Ligand leaving,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": COc1cccc(Br)c1C(=O)N[C@H]1CCC[C@@H]1COc1ccc(F)cc1.c1ccc([PH]([Pd][PH](c2ccccc2)(c2ccccc2)c2ccccc2)(c2ccccc2)c2ccccc2)cc1,\n    \"step annotation\": Oxidative addition,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"COc1cccc(Br)c1C(=O)N[C@H]1CCC[C@@H]1COc1ccc(F)cc1.C1CCC[C@@H]1COc1cccc(Br)c1C(=O)N[C@H]1CCC[C@@H]1COc1ccc(F)cc1\"\n}\n```",
+        "gold": "COc1cccc([Pd](Br)([PH](c2ccccc2)(c2ccccc2)c2ccccc2)[PH](c2ccccc2)(c2ccccc2)c2ccccc2)c1C(=O)N[C@H]1CCC[C@@H]1COc1ccc(F)cc1"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Aldehyde Dess-Martin oxidation', starting reactants are 'OCc1ccnc(C(F)(F)F)c1', reagents are 'Ic1c(I)c(I)c2c(c1I)C(I)(I)C(I)(I)C2(I)I.OCc1ccnc(C(F)(F)F)c1.O.c1ccncc1', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21,\n    \"products\": CC(=O)[O-].CC(=O)O[I+]1(OC(C)=O)OC(=O)c2ccccc21,\n    \"step annotation\": Ionization,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": OCc1ccnc(C(F)(F)F)c1.CC(=O)O[I+]1(OC(C)=O)OC(=O)c2ccccc21,\n    \"products\": CC(=O)OI1(OC(C)=O)([OH+]Cc2ccnc(C(F)(F)F)c2)OC(=O)c2ccccc21,\n    \"step annotation\": Substitution,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(=O)[O-].CC(=O)O[I+]1(OCc2ccnc(C(F)(F)F)c2)OC(=O)c2ccccc21,\n    \"step annotation\": E2 type oxidation,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"CC(=O)OCC(=O)c1ccccc1.CC(=O)O[I+]1(OCc2ccnc(C(F)(F)F)c2)OC(=O)c2ccccc21\"\n}",
+        "gold": "O=Cc1ccnc(C(F)(F)F)c1.CC(=O)O.CC(=O)OI1OC(=O)c2ccccc21"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'N-Boc protection', starting reactants are 'NCc1nnc(C2CCN(c3ccccn3)CC2)o1.CC(C)(C)OC(=O)OC(=O)OC(C)(C)C', reagents are 'ClCCl.O', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CC(C)(C)OC(=O)OC(=O)OC(C)(C)C.NCc1nnc(C2CCN(c3ccccn3)CC2)o1,\n    \"products\": CC(C)(C)OC(=O)[O-].CC(C)(C)OC(=O)[NH2+]Cc1nnc(C2CCN(c3ccccn3)CC2)o1,\n    \"step annotation\": Amine reacted with dicarbonate,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CC(C)(C)OC(=O)[O-],\n    \"products\": O=C=O.CC(C)(C)[O-],\n    \"step annotation\": Carbon dioxide released,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CC(C)(C)[O-].CC(C)(C)OC(=O)[NH2+]Cc1nnc(C2CCN(c3ccccn3)CC2)o1,\n    \"step annotation\": Proton exchange,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CC(C)(C)OC(=O)OC(=O)OC(C)(C)C.NCc1nnc(C2CCN(c3ccccn3)CC2)o1\"\n}\n```",
+        "gold": "CC(C)(C)O.CC(C)(C)OC(=O)NCc1nnc(C2CCN(c3ccccn3)CC2)o1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Darzens bromination', starting reactants are 'O=S(Br)Br.OCc1c(F)cncc1F', reagents are 'OCc1c(F)cncc1F', and reaction condition is 'Reaction using DMF/SOCl2').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": O=S(Br)Br.CN(C)C=O,\n    \"products\": [Br-].C[N+](C)=COS(=O)Br,\n    \"step annotation\": Reaction of DMF and SOCl2,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": [Br-].C[N+](C)=COS(=O)Br,\n    \"products\": O=S=O.[Br-].C[N+](C)=CBr,\n    \"step annotation\": Vilsmeier-Haack reagent formation,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": C[N+](C)=CBr.OCc1c(F)cncc1F,\n    \"step annotation\": Addition,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"C[N+](C)=CBr.COC(F)1ncnc1\"\n}",
+        "gold": "[Br-].C[N+](C)=C[OH+]Cc1c(F)cncc1F"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Bromo Grignard reaction', starting reactants are 'CCC=C(C)C=O.CCC(C)[Mg]Br', reagents are 'CCOCC.C1CCOC1.[Cl-].Cl.CCC=C(C)C=O.CCC(C)[Mg]Br.[NH4+].O', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CCC=C(C)C=O.CCC(C)[Mg]Br,\n    \"products\": CCC=C(C)C([O-])C(C)CC.[Mg+]Br,\n    \"step annotation\": Addition,\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": CCC=C(C)C([O-])C(C)CC.Cl,\n    \"products\": [Cl-].CCC=C(C)C(O)C(C)CC,\n    \"step annotation\": Leaving or workup,\n} \n\nElementary Step 3: \n\n{\n    \"reactants\": CCC=C(C)C([O-])C(C)CC.O,\n    \"products\": CCC=C(C)C(O)C(C)CC.[OH-],\n    \"step annotation\": Leaving or workup,\n} \n\nElementary Step 4: \n\n{\n    \"reactants\": CCC=C(C)C=O.CCC(C)[Mg]Br,\n    \"products\": CCC=C(C)C([O-])C(C)CC.[Mg+]Br,\n    \"step annotation\": Addition,\n} \n\nElementary Step 5: \n\n{\n    \"reactants\": CCC=C(C)C=O.CCC(C)[Mg]Br,\n    \"products\": CCC=C(C)C([O-])C(C)CC.[Mg+]Br,\n    \"step annotation\": Addition,\n} \n\nElementary Step 6: \n\n{\n    \"reactants\": CCC=C(C)C([O-])C(C)CC.O,\n    \"products\": CCC=C(C)C(O)C(C)CC.[OH-],\n    \"step annotation\": Leaving or workup,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": CCC=C(C)C([O-])C(C)CC.Cl.CCC=C(C)C(O)C(C)CC,\n    \"step annotation\": Leaving or workup,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "```json\n{\n    \"pred_smi\": \"CCC=C(C)C(Cl)C(C)CC.CCC=C(C)C(OH)C(C)CC\"\n}\n```",
+        "gold": "[Cl-].CCC=C(C)C(O)C(C)CC.CCC=C(C)C(O)C(C)CC"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "We have one typical reaction (reaction class: 'Mitsunobu ester synthesis', starting reactants are 'Cc1ccc(S(=O)(=O)OC[C@@H](O)CCc2cccnc2)cc1.O=C(O)c1ccccc1', reagents are 'Cc1ccc(S(=O)(=O)OC[C@@H](O)CCc2cccnc2)cc1.C1CCOC1.O=C(O)c1ccccc1', and reaction condition is 'Reaction').\n\nHere are the previous elementary reaction steps:\n\nElementary Step 1: \n\n{\n    \"reactants\": CCOC(=O)N=NC(=O)OCC.c1ccc(P(c2ccccc2)c2ccccc2)cc1,\n    \"products\": CCOC(=O)[N-]N(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Reaction between phosphine and diethylazodicarboxylate (DEAD),\n} \n\nElementary Step 2: \n\n{\n    \"reactants\": O=C(O)c1ccccc1.CCOC(=O)[N-]N(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"products\": O=C([O-])c1ccccc1.CCOC(=O)NN(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Proton exchange,\n} \n\n\n\nNow, we want to predict the next elementary reaction step. Currently we know the basic information: \n\"current_step_info\": {\n    \"reactants\": Cc1ccc(S(=O)(=O)OC[C@@H](O)CCc2cccnc2)cc1.CCOC(=O)NN(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,\n    \"step annotation\": Forming a complex,\n}\n\n\nUnder the same reaction condition and reagents, please give me the products of the next step element reaction. Just return the SMILES of prediction. Your response must contains directly parsable JSON format: \n\n{\n    \"pred_smi\": str\n}\n"
+            }
+        ],
+        "prediction": "{\n    \"pred_smi\": \"C1CCCCC1.CCOC(=O)NN(C(=O)OCC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1.O=C([O-])c1ccccc1\"\n}",
+        "gold": "CCOC(=O)NN(C(=O)OCC)P([OH+][C@@H](CCc1cccnc1)COS(=O)(=O)c1ccc(C)cc1)(c1ccccc1)(c1ccccc1)c1ccccc1"
+    }
+}

@@ -1,0 +1,127 @@
+2026-09-10 15:41:31.018 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:350 - Running benchmark 'chemcotbench_mol_und' on model: /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/candidates/durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4/workspace/checkpoint_model
+2026-09-10 15:41:31.019 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:351 - Base model: Qwen/Qwen2.5-7B-Instruct, LoRA?: True
+2026-09-10 15:41:31.019 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:352 - Workspace: /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/candidates/durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4/workspace
+2026-09-10 15:41:31.020 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:353 - Benchmark work_dir: ./benchmark_results/validation/durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4
+2026-09-10 15:41:31.020 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:355 - Dataset range: [:min(100, len(index_list)//2)]
+───────────────────────────── LocalEnv Logs Begin ──────────────────────────────
+                                    Run Info                                    
+┌────────────┬─────────────────────────────────────────────────────────────────┐
+│ Entry      │ /bin/sh -c 'timeout --kill-after=10 10800 opencompass           │
+│            │ ./config.py --work-dir                                          │
+│            │ ./benchmark_results/validation/durable_output__rslora__ee13a5f… │
+│            │ entry_exit_code=$?; exit $entry_exit_code'                      │
+│ Local Path │ /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt… │
+│ Env        │ COMPASS_DATA_CACHE:./benchmarks/opencompass_data                │
+│            │ OC_JUDGE_MODEL:gpt-5                                            │
+│            │ OC_JUDGE_API_KEY:local-no-key-required                          │
+│            │ OC_JUDGE_API_BASE:http://127.0.0.1:45145/v1                     │
+│            │ OC_JUDGE_RETRY:10                                               │
+│            │ CUDA_VISIBLE_DEVICES:5                                          │
+│            │ PATH:/usr/local/lib/node_modules/@openai/codex/node_modules/@o… │
+│ Volumes    │ /data/github/RD-Agent/finetune_files/benchmarks:                │
+│            │   /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-g… │
+│            │ /tmp/full:                                                      │
+│            │   /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-g… │
+└────────────┴─────────────────────────────────────────────────────────────────┘
+Waiting for any GPU lease (requested=5; pool=5,0,1,2,3,4,6,7)
+Acquired GPU leases: 4 (requested=5; limit=5)
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-
+packages/transformers/utils/hub.py:110: FutureWarning: Using 
+`TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. 
+Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-
+packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an 
+API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The 
+pkg_resources package is slated for removal as early as 2025-11-30. Refrain from
+using this package or pin to Setuptools<81.
+  import pkg_resources
+09/10 15:42:14 - OpenCompass - INFO - Current exp folder: 
+./benchmark_results/validation/durable_output__rslora__ee13a5f350394f458b1c7f4f9
+1055f6f__8aa14a27b539__bec9a17426a4/20260910_154214
+09/10 15:42:14 - OpenCompass - WARNING - SlurmRunner is not used, so the 
+partition argument is ignored.
+09/10 15:42:14 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                       0%|          | 0/5 [00:00<?, ?it/s]launch OpenICLInfer[ft-chemcotbench_mol_und/chemcotbench_mol_und_fg_count] on 
+GPU 4
+ 20%|██        | 1/5 [01:05<04:21, 65.29s/it]                                              20%|██        | 1/5 [01:06<04:21, 65.29s/it]launch OpenICLInfer[ft-chemcotbench_mol_und/chemcotbench_mol_und_ring_count] on 
+GPU 4
+ 40%|████      | 2/5 [01:55<02:49, 56.65s/it]                                              40%|████      | 2/5 [01:56<02:49, 56.65s/it]launch OpenICLInfer[ft-chemcotbench_mol_und/chemcotbench_mol_und_equivalence] on
+GPU 4
+ 60%|██████    | 3/5 [02:49<01:50, 55.27s/it]                                              60%|██████    | 3/5 [02:50<01:50, 55.27s/it]launch 
+OpenICLInfer[ft-chemcotbench_mol_und/chemcotbench_mol_und_ring_system_scaffold] 
+on GPU 4
+ 80%|████████  | 4/5 [03:42<00:54, 54.54s/it]                                              80%|████████  | 4/5 [03:43<00:54, 54.54s/it]launch 
+OpenICLInfer[ft-chemcotbench_mol_und/chemcotbench_mol_und_Murcko_scaffold] on 
+GPU 4
+100%|██████████| 5/5 [04:34<00:00, 53.29s/it]100%|██████████| 5/5 [04:34<00:00, 54.81s/it]
+09/10 15:46:48 - OpenCompass - WARNING - Default to dump eval details, it might 
+take extraspace to save all the evaluation details. Set --dump-eval-details 
+False to skip the details dump
+09/10 15:46:48 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[ft-chemcotbench_mol_und/chemcotbench_mol_und_fg_count] on CPU
+  0%|          | 0/5 [00:00<?, ?it/s]                                       0%|          | 0/5 [00:00<?, ?it/s]launch OpenICLEval[ft-chemcotbench_mol_und/chemcotbench_mol_und_ring_count] on 
+CPU 
+                                       0%|          | 0/5 [00:00<?, ?it/s]launch OpenICLEval[ft-chemcotbench_mol_und/chemcotbench_mol_und_Murcko_scaffold]
+on CPU 
+                                     launch 
+OpenICLEval[ft-chemcotbench_mol_und/chemcotbench_mol_und_ring_system_scaffold] 
+on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[ft-chemcotbench_mol_und/chemcotbench_mol_und_equivalence] on 
+CPU 
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:11<00:47, 11.93s/it] 40%|████      | 2/5 [00:12<00:16,  5.45s/it] 60%|██████    | 3/5 [00:13<00:06,  3.07s/it]100%|██████████| 5/5 [00:14<00:00,  1.63s/it]dataset                                    version    metric                    
+mode      ft-chemcotbench_mol_und
+-----------------------------------------  ---------  
+---------------------------------------  ------  -------------------------
+chemcotbench_mol_und_fg_count              1fe37c     mae                       
+gen                          0.16
+chemcotbench_mol_und_ring_count            1fe37c     mae                       
+gen                          0.40
+chemcotbench_mol_und_Murcko_scaffold       1fe37c     
+tanimoto_similarity_larger_means_better  gen                          0.24
+chemcotbench_mol_und_ring_system_scaffold  1fe37c     accuracy                  
+gen                         60.00
+chemcotbench_mol_und_equivalence           1fe37c     accuracy                  
+gen                         62.00
+100%|██████████| 5/5 [00:14<00:00,  2.83s/it]
+09/10 15:47:02 - OpenCompass - INFO - write summary to 
+/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rsl
+ora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/can
+didates/durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__
+bec9a17426a4/workspace/benchmark_results/validation/durable_output__rslora__ee13
+a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4/20260910_154214/summary
+/summary_20260910_154214.txt
+09/10 15:47:02 - OpenCompass - INFO - write csv to 
+/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rsl
+ora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/can
+didates/durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__
+bec9a17426a4/workspace/benchmark_results/validation/durable_output__rslora__ee13
+a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4/20260910_154214/summary
+/summary_20260910_154214.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | ft-chemcotbench_mol_und |
+|----- | ----- | ----- | ----- | -----|
+| chemcotbench_mol_und_fg_count | 1fe37c | mae | gen | 0.16 |
+| chemcotbench_mol_und_ring_count | 1fe37c | mae | gen | 0.40 |
+| chemcotbench_mol_und_Murcko_scaffold | 1fe37c | 
+tanimoto_similarity_larger_means_better | gen | 0.24 |
+| chemcotbench_mol_und_ring_system_scaffold | 1fe37c | accuracy | gen | 60.00 |
+| chemcotbench_mol_und_equivalence | 1fe37c | accuracy | gen | 62.00 |
+
+09/10 15:47:02 - OpenCompass - INFO - write markdown summary to 
+/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rsl
+ora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/can
+didates/durable_output__rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539__
+bec9a17426a4/workspace/benchmark_results/validation/durable_output__rslora__ee13
+a5f350394f458b1c7f4f91055f6f__8aa14a27b539__bec9a17426a4/20260910_154214/summary
+/summary_20260910_154214.md
+────────────────────────────── LocalEnv Logs End ───────────────────────────────
+2026-09-10 15:47:04.915 | INFO     | rdagent.utils.env:__run_with_retry:340 - Running time: 333.89395236968994 seconds
+2026-09-10 15:47:04.924 | INFO     | rdagent.oai.backend.litellm:__init__:55 - backend='rdagent.oai.backend.LiteLLMAPIBackend' chat_model='openai/gpt-5.2' embedding_model='text-embedding-3-small' reasoning_effort=None enable_response_schema=True reasoning_think_rm=False log_llm_chat_content=True use_azure=False chat_use_azure=False embedding_use_azure=False chat_use_azure_token_provider=False embedding_use_azure_token_provider=False managed_identity_client_id=None max_retry=10 retry_wait_seconds=1 dump_chat_cache=False use_chat_cache=False dump_embedding_cache=False use_embedding_cache=False prompt_cache_path='/data/github/RD-Agent/prompt_cache.db' max_past_message_include=10 timeout_fail_limit=10 violation_fail_limit=1 use_auto_chat_cache_seed_gen=False init_chat_cache_seed=42 openai_api_key='local-no-key-required' openai_api_base='http://127.0.0.1:45145/v1' chat_openai_api_key=None chat_openai_base_url=None chat_azure_api_base='' chat_azure_api_version='' chat_max_tokens=None chat_temperature=1.0 chat_stream=True chat_seed=None chat_frequency_penalty=0.0 chat_presence_penalty=0.0 chat_token_limit=100000 default_system_prompt="You are an AI assistant who helps to answer user's questions." system_prompt_role='system' embedding_openai_api_key='' embedding_openai_base_url='' embedding_azure_api_base='' embedding_azure_api_version='' embedding_max_str_num=50 embedding_max_length=8192 use_llama2=False llama2_ckpt_dir='Llama-2-7b-chat' llama2_tokenizer_path='Llama-2-7b-chat/tokenizer.model' llams2_max_batch_size=8 use_gcr_endpoint=False gcr_endpoint_type='llama2_70b' llama2_70b_endpoint='' llama2_70b_endpoint_key='' llama2_70b_endpoint_deployment='' llama3_70b_endpoint='' llama3_70b_endpoint_key='' llama3_70b_endpoint_deployment='' phi2_endpoint='' phi2_endpoint_key='' phi2_endpoint_deployment='' phi3_4k_endpoint='' phi3_4k_endpoint_key='' phi3_4k_endpoint_deployment='' phi3_128k_endpoint='' phi3_128k_endpoint_key='' phi3_128k_endpoint_deployment='' gcr_endpoint_temperature=0.7 gcr_endpoint_top_p=0.9 gcr_endpoint_do_sample=False gcr_endpoint_max_token=100 chat_use_azure_deepseek=False chat_azure_deepseek_endpoint='' chat_azure_deepseek_key='' chat_model_map={}
+2026-09-10 15:47:04.926 | INFO     | rdagent.oai.backend.litellm:_calculate_token_from_messages:68 - [96mToken count: [0m 2553
+2026-09-10 15:47:04.934 | INFO     | rdagent.oai.backend.litellm:_calculate_token_from_messages:68 - [96mToken count: [0m 2242
+2026-09-10 15:47:04.935 | INFO     | rdagent.scenarios.finetune.benchmark.benchmark:run_benchmark:412 - Detailed results CSV: 20260910_154214/summary/summary_20260910_154214.csv
+2026-09-10 15:47:04.950 | INFO     | rdagent.scenarios.finetune.benchmark.data.default:extract_error_samples:290 - Extracted 10 error samples from benchmark results

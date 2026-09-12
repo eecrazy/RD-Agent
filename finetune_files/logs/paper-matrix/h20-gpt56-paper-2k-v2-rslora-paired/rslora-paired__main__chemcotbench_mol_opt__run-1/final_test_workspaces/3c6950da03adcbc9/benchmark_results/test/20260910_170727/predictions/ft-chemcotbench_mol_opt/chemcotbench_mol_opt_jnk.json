@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ncc(C(=O)Nc2cccc(C(C)Nc3ncnc4c(C(N)=O)cccc34)c2)s1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (Cc1ncc...s1) with a methyl substituent. It features a urea-linked aniline group (C(=O)Nc2cccc...) bearing a bicyclic system (ncnc4c(C(N)=O)ccc...) and a secondary amine (C(C)N...). The bicyclic system includes a carbamoyl group (C(N)=O).\nProperty Analysis: The urea and carbamoyl groups may contribute to hydrogen bonding with JNK3. The thiazole and bicyclic systems provide aromatic stacking potential. However, the secondary amine (C(C)N...) and methyl-thiazole may limit solubility or introduce off-target interactions.\nOptimization for Source Molecule: Replace the thiazole core with a pyridine ring to enhance aromatic stacking and solubility. Substitute the secondary amine (C(C)N...) with a tertiary amine (N(C)C) to improve solubility and reduce off-target effects. Retain the urea and carbamoyl groups for hydrogen bonding.\n{\"Final Target Molecule\": \"CN(C)Cc1ccnc(Nc2cccc(C(C)Nc3ncnc4c(C(N)=O)cccc34)c2)c1\"}",
+        "gold": "Cc1ncc(C(=O)Nc2cccc(C(C)Nc3ncnc4c(C(N)=O)cccc34)c2)s1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC1CCCN(c2nccc(N3CCC(Oc4ccc(C(C)NC(C)=O)cc4)C3)n2)C1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyrimidine ring substituted with a piperidine (C1CCCNC1) and a morpholine-derived group (N3CCC(O...)C3). The morpholine subunit is part of a four-membered azetidine ring (N-C-C-C-O), which may limit conformational flexibility. The tertiary amide (C(C)NC(C)=O) is present on the benzene ring.\nProperty Analysis: JNK3 inhibition often requires optimal hydrogen bonding, steric fit, and interaction with the kinase's hydrophobic pocket. Piperidine/piperazine rings enhance binding via hydrophobic interactions and hydrogen bonding, while rigid/small rings (e.g., azetidine) may reduce affinity.\nOptimization for Source Molecule: Replace the azetidine ring (N3CCC(O...)C3) with a six-membered piperidine (N3CCN(C)CC3) to improve conformational flexibility and hydrophobic interactions. Retain the tertiary amide (C(C)NC(C)=O) for hydrogen bonding with the hinge region of JNK3.\n{\"Final Target Molecule\": \"COC1CCCN(c2nccc(N3CCN(C)CC3)n2)C1\"}",
+        "gold": "COC1CCCN(c2nccc(N3CCC(Oc4ccc(C(C)NC(C)=O)cc4)C3)n2)C1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1ccc(Nc2nc(-c3ccc(Cl)cc3)cs2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with an amino group (-NH2) linked to a thiazole ring (c2nc(-c3ccc(Cl)cc3)cs2). The thiazole is further substituted with a chlorophenyl group (-c3ccc(Cl)cc3). The -NH2 group is a hydrogen donor, and the thiazole and chlorophenyl groups contribute to aromatic stacking and hydrophobic interactions.\nProperty Analysis: JNK3 inhibition often requires hydrogen bonding with the kinase hinge region (via NH groups) and hydrophobic interactions with the ATP-binding pocket. The -NH2 group in the source molecule may limit hydrogen bonding diversity, and the thiazole's sulfur may reduce optimal hydrophobic interactions.\nOptimization for Source Molecule: Replace the -NH2 group with a pyridine ring (c1ccncc1) to enhance hydrogen bonding via pyridine's nitrogen and improve solubility. Retain the chlorophenyl group for hydrophobic interactions but adjust the linker to optimize spatial alignment with the hinge region.\n{\"Final Target Molecule\": \"O=c1nc(-c2ccc(Cl)cc2)cs1-c1ccc(Nc2ccncc2)cc1\"}",
+        "gold": "Nc1ccc(Nc2nc(-c3ccc(Cl)cc3)cs2)cc1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc2ncnc(Nc3cc(Cl)ccc3Cl)c2cc1OCCCCCC(=O)NO.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a dichlorophenyl group (Nc3cc(Cl)ccc3Cl) attached to a bicyclic aromatic core (ncnc) via an amine linker. The side chain includes a methoxy group (COc1...), a long aliphatic chain (OCCCCCC), and a terminal nitrate ester group (=O)NO.\nProperty Analysis: The dichlorophenyl group may contribute to hydrophobic interactions and target binding. However, the para-dichlorination pattern (Nc3cc(Cl)ccc3Cl) could limit optimal electronic or steric complementarity with the JNK3 active site.\nOptimization for Source Molecule: Replace one para-chlorine with fluorine at the meta-position to enhance electronic effects (e.g., halogen bonding, dipole interactions) while maintaining steric bulk. The new group (Nc3ccc(F)c(Cl)c3) improves hydrophobic/electronic balance for JNK3 inhibition.\n{\"Final Target Molecule\": \"COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCCCCC(=O)NO.\"}",
+        "gold": "COc1cc2ncnc(Nc3cc(Cl)ccc3Cl)c2cc1OCCCCCC(=O)NO"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OCc3ccccc3)c2)[nH]1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (CSc1nc...nH1) with two substituents: (1) a fluorophenyl group (-c2ccc(F)cc2) and (2) a pyridyl group linked to a benzyl ether (-c2ccnc(OCc3ccccc3)c2). The benzyl ether (OCc3ccccc3) may contribute to metabolic instability.\nProperty Analysis: JNK3 inhibition often benefits from (1) hydrogen-bond donors/acceptors (e.g., NH groups), (2) hydrophobic/aromatic interactions, and (3) metabolic stability. The fluorophenyl and pyridyl groups provide aromatic stacking, while the thiazole NH may act as a hydrogen-bond donor.\nOptimization for Source Molecule: Replace the benzyl ether (OCc3ccccc3) with a tert-butylamine (CC(C)N3) to enhance hydrogen-bond donation, metabolic stability, and steric complementarity with the JNK3 active site.\n{\"Final Target Molecule\": CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(CC(C)N3)c2)[nH]1}",
+        "gold": "CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OCc3ccccc3)c2)[nH]1"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a bicyclic purine-like core (n1cnc2...nc21) with a tert-butyl group (CC(C)), an aniline-substituted piperazine (NCc3ccccc3), and an iodine atom (I) as substituents. The piperazine group (1,4-diazacyclohexane) is linked to a benzene ring via an amine linker.\nProperty Analysis: JNK3 inhibition often benefits from hydrophobic interactions, hydrogen bonding, and optimal steric fit. The tert-butyl group may enhance lipophilicity, while the iodine provides halogen bonding. The aniline-piperazine system may contribute to solubility and target engagement.\nOptimization for Source Molecule: 1. Replace the tert-butyl group with a smaller alkyl or aryl group to reduce steric bulk. 2. Introduce a polar substituent (e.g., hydroxyl or amine) on the benzene ring to improve solubility and hydrogen bonding. 3. Modify the piperazine to a piperidine or morpholine to adjust basicity and ring strain.\n{\"Final Target Molecule\": \"CC(C)Nc1nc(Nc2ccccc2)nc2c1nc2I\"}",
+        "gold": "CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)CCSc1ccc2ccccc2n1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a benzothiophene core (fused aromatic system) with a carboxylic acid group attached via an ethylthio (-S-CH2-CH2-) linker. The planar benzothiophene provides aromatic stacking potential, while the carboxylic acid offers hydrogen-bonding capability.\nProperty Analysis: JNK3 inhibitors often require optimal spatial positioning of hydrogen-bond acceptors/donors and hydrophobic groups to interact with the ATP-binding pocket. The ethylthio linker may introduce excessive flexibility, misaligning the carboxylic acid for effective interactions.\nOptimization for Source Molecule: Replace the ethylthio linker with a thioamide (-S-CN-) group to rigidify the structure and improve hydrogen-bonding geometry. The thioamide retains sulfur for hydrophobic interactions while introducing a polar amide group (N-H) for enhanced hydrogen-bond donation.\n{\"Final Target Molecule\": \"O=C(O)CNC(=S)Cc1ccc2ccccc2n1\"}",
+        "gold": "O=C(O)CCSc1ccc2ccccc2n1"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc2c(Nc3ccc4c(c3)OCO4)ncnc2c(OC)c1OC.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central bicyclic aromatic system (purine-like core) with methoxy groups (OCH3) at multiple positions. A benzodioxole-substituted aniline group (Nc3ccc4c(c3)OCO4) is attached to the central core. The core features a pyrimidine-like ring (ncnc) fused to a benzene ring.\nProperty Analysis: The benzodioxole group (OCO) in the aniline substituent may contribute to steric bulk and potential metabolic instability. The methoxy groups (OCH3) on the aromatic rings could influence solubility and binding interactions with JNK3.\nOptimization for Source Molecule: Replace the benzodioxole group (OCO) with a simpler phenyl group to reduce steric hindrance and improve metabolic stability. Remove one methoxy group from the aniline substituent to enhance solubility and reduce steric bulk. Retain methoxy groups on the central core to maintain favorable binding interactions.\n{\"Final Target Molecule\": \"COc1cc2ncnc(Nc3ccc4c(c3)OCO4)c2cc1OC\"}",
+        "gold": "COc1cc2c(Nc3ccc4c(c3)OCO4)ncnc2c(OC)c1OC"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)n1cnc2c(NCc3ccccc3)nc(N)nc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a bicyclic purine-like core (n1cnc2...nc21) with a tert-butyl group (CC(C)), a benzyl-substituted piperazine (NCc3ccccc3), and a primary amine (NH2) as key functional groups. The benzyl-piperazine moiety introduces hydrophobicity and potential metabolic instability.\nProperty Analysis: JNK3 inhibition often benefits from hydrogen-bond donors/acceptors (e.g., NH2) and balanced hydrophobicity. The tert-butyl group may enhance lipophilicity but could reduce solubility. The benzyl-piperazine may limit target engagement due to steric bulk or suboptimal electronic effects.\nOptimization for Source Molecule: 1. Replace tert-butyl (CC(C)) with a smaller alkyl group (e.g., ethyl) to improve solubility. 2. Substitute benzyl-piperazine with a pyrrole ring (c3cccnc3) to reduce steric bulk and enhance π-π stacking. 3. Retain the primary amine (NH2) for hydrogen bonding. 4. Introduce a polar substituent (e.g., -OH or -NH2) on the pyrrole for additional H-bonding.\n{\"Final Target Molecule\": \"CCc1nc(N)c2nc(NCc3ccccc3)nc2c1N\"}",
+        "gold": "CC(C)n1cnc2c(NCc3ccccc3)nc(N)nc21"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1nc(N)cc(-c2c(-c3ccc(F)cc3)ncn2CCCN2CCOCC2)n1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (CSc1nc(N)cc) with a fluorophenyl group (-c2c(-c3ccc(F)cc3)ncn2) and a piperazine ring (CCCN2CCOCC2) attached via a methylene linker. The piperazine (1,4-diazacyclohexane) is a flexible, basic nitrogen-containing group.\nProperty Analysis: JNK3 inhibition often benefits from optimal hydrogen bonding, steric fit, and reduced flexibility. Piperazine's two basic nitrogens may lead to off-target interactions or suboptimal binding due to excessive flexibility.\nOptimization for Source Molecule: Replace the piperazine ring with a piperidine (azinane) to reduce flexibility, decrease basicity (lowering potential for off-target interactions), and improve steric complementarity with the hydrophobic pocket of JNK3.\n{\"Final Target Molecule\": \"CSc1nc(N)cc(-c2c(-c3ccc(F)cc3)ncn2CCN2CCCC2)n1\"}",
+        "gold": "CSc1nc(N)cc(-c2c(-c3ccc(F)cc3)ncn2CCCN2CCOCC2)n1"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: OC1CCCC(c2nccnc2Oc2ccc(Nc3ccccn3)cc2)C1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central cyclohexane ring (OC1CCCC) connected to a pyrimidine ring (c2nccnc2) via an ether linkage. The pyrimidine is substituted with a hydroxyl group and a phenyl ring (c2ccc(Nc3ccccn3)cc2), which is further substituted with an aniline group (Nc3ccccn3) containing a pyridine ring.\nProperty Analysis: The pyridine ring (Nc3ccccn3) in the aniline group may contribute to JNK3 inhibition due to its aromaticity and potential hydrogen bonding with the kinase's ATP-binding pocket. However, the unsubstituted pyridine may limit interactions with specific residues in the binding site.\nOptimization for Source Molecule: To improve JNK3 inhibition, the pyridine ring (Nc3ccccn3) can be substituted with a pyrimidine (Nc3ncncn3) to enhance aromatic stacking and hydrogen bonding. The pyrimidine's additional nitrogen atoms provide more opportunities for interactions with the kinase's hydrophobic and polar regions.\n{\"Final Target Molecule\": \"OC1CCCC(c2nccnc2Oc2ccc(Nc3ncncn3)cc2)C1\"}",
+        "gold": "OC1CCCC(c2nccnc2Oc2ccc(Nc3ccccn3)cc2)C1"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)n1cnc2c(Nc3cccc(Cl)c3)ncnc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a bicyclic purine-like core with a tert-butyl group, a chlorophenyl-substituted aniline, and a methyl group on the nitrogen of the bicyclic system. The chlorophenyl group introduces hydrophobicity and potential steric bulk.\nProperty Analysis: JNK3 inhibition often benefits from balanced hydrophobicity, hydrogen bonding, and steric complementarity. The chlorophenyl group may reduce solubility or create unfavorable interactions with the hydrophobic pocket of JNK3.\nOptimization for Source Molecule: Replace the chlorophenyl group with a pyridine ring (cyclohexylamine) to enhance hydrogen bonding (via the NH group) and reduce steric bulk. This modification improves solubility and target engagement while maintaining aromatic stacking potential.\n{\"Final Target Molecule\": \"CC(C)n1cnc2c(Nc3ccccn3)ncnc21\"}",
+        "gold": "CC(C)n1cnc2c(Nc3cccc(Cl)c3)ncnc21"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCC(O)C3)nc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a trifluoromethyl-substituted aryl ether group and a piperazine ring (N3CCC(O)C3) as a substituent. The piperazine group introduces a hydroxyl group, which may contribute to polarity and potential hydrogen bonding.\nProperty Analysis: JNK3 inhibition often benefits from balanced lipophilicity and steric complementarity. The hydroxyl group on the piperazine may reduce membrane permeability or create unfavorable interactions with the hydrophobic pocket of JNK3.\nOptimization for Source Molecule: Replace the hydroxyl-containing piperazine (N3CCC(O)C3) with a non-hydroxylated piperidine (N3CCCC3) to enhance lipophilicity, reduce polarity, and improve binding to JNK3's hydrophobic regions.\n{\"Final Target Molecule\": \"Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCCC3)nc21.\"}",
+        "gold": "Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCC(O)C3)nc21"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a tert-butylamine group (CCC(C)(C)N-), a cyano group (C#N), and a substituted piperazine ring (via NCC3cccnc3). The piperazine (1,4-diazacyclohexane) is linked to a pyridine ring, which may contribute to hydrogen bonding and aromatic interactions.\nProperty Analysis: JNK3 inhibition often requires optimal hydrogen bonding, steric fit, and hydrophobic interactions. The cyano group enhances binding via dipole interactions, while the tert-butylamine and piperazine groups may improve solubility and target engagement.\nOptimization for Source Molecule: To enhance JNK3 inhibition, the pyridine ring in the piperazine side chain can be replaced with a pyrimidine ring (two adjacent nitrogen atoms). This modification increases hydrogen bonding capacity (two potential H-bond donors vs. one in pyridine) and improves aromatic stacking in the hydrophobic pocket.\n{\"Final Target Molecule\": \"CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cncnc3)cc12.\"}",
+        "gold": "CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccco3)cc2)C1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central piperidine ring (C1CC(C)CN(C)C1) substituted with a sulfonamide group (S(=O)(=O)) linked to a substituted benzene ring. The benzene ring has a ketone (C=O) connected to an aniline group (NCc3ccco3), which is attached to a furan ring (ccco3).\nProperty Analysis: The sulfonamide and ketone groups may contribute to JNK3 inhibition, but the piperidine ring and furan moiety could limit activity or introduce metabolic instability. The aniline linker (NCc3ccco3) may also reduce binding efficiency due to conformational flexibility.\nOptimization for Source Molecule: Replace the piperidine ring with a piperazine (C1CNCCN1) to enhance solubility and hydrogen bonding potential. Substitute the furan ring (ccco3) with a pyridine ring (ccnc3) to improve aromatic stacking and reduce metabolic susceptibility. Retain the sulfonamide and ketone groups for JNK3 binding.\n{\"Final Target Molecule\": \"O=C(c1ccc(S(=O)(=O)Nc2ccnc2)cc1)NCc1ccnc1\"}",
+        "gold": "CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccco3)cc2)C1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=c1cc(-c2ccccc2Cl)oc2c1ccc1ccccc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring fused to a naphthalene-like structure with a chlorine-substituted phenyl ring attached via an oxygen atom. The core scaffold includes a ketone group (O=C) and aromatic systems.\nProperty Analysis: The ketone and chlorine substituent may contribute to JNK3 inhibition, but the chlorine's steric bulk and electron-withdrawing effects could hinder optimal binding interactions. The rigid aromatic system may limit conformational adaptability for target engagement.\nOptimization for Source Molecule: Replace the chlorine atom with a pyridine ring (-c3ccncc3) to introduce hydrogen-bonding capability, improve solubility, and enhance π-π stacking interactions. This modification retains aromaticity while increasing polarity and reducing steric hindrance.\n{\"Final Target Molecule\": \"O=c1cc(-c2ccccc2-c2ccncc2)oc2c1ccc1ccccc12\"}",
+        "gold": "O=c1cc(-c2ccccc2Cl)oc2c1ccc1ccccc12"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCC(O)C3)nc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a trifluoromethyl-substituted aryl ether group and a piperazine ring (N3CCC(O)C3) as a substituent. The piperazine group introduces a hydroxyl group, which may contribute to polarity and potential hydrogen bonding.\nProperty Analysis: JNK3 inhibition often benefits from balanced lipophilicity and steric complementarity. The hydroxyl group on the piperazine may reduce membrane permeability or create unfavorable interactions with the hydrophobic pocket of JNK3.\nOptimization for Source Molecule: Replace the hydroxyl-containing piperazine (N3CCC(O)C3) with a non-hydroxylated piperidine (N3CCCC3) to enhance lipophilicity, reduce polarity, and improve binding to JNK3's hydrophobic regions.\n{\"Final Target Molecule\": \"Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCCC3)nc21.\"}",
+        "gold": "Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCC(O)C3)nc21"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Fc1ccc(-c2nc[nH]c2-c2ccncc2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) attached to a benzene ring, with a fluorine substituent on the benzene ring. The pyrrole is part of a pyrrole-imidazole hybrid core (c2nc[nH]c2), and the benzene ring is connected to a pyridine ring (c2ccncc2).\nProperty Analysis: The pyrrole-imidazole core provides hydrogen-bonding potential, but the fluorine substituent may reduce solubility and introduce steric/electronic hindrance. The pyridine ring (c2ccncc2) may limit optimal interactions with the hydrophobic pocket of JNK3.\nOptimization for Source Molecule: Replace the fluorine substituent with a pyridine ring (c2ccncc2) to enhance solubility, improve hydrogen-bonding via the pyridine nitrogen, and optimize hydrophobic interactions. This modification retains aromaticity while introducing a bioisostere with favorable pharmacokinetic properties.\n{\"Final Target Molecule\": \"c1ccc(-c2nc[nH]c2-c2ccncc2)cc1\"}",
+        "gold": "Fc1ccc(-c2nc[nH]c2-c2ccncc2)cc1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCN(CC)CCn1c(NC(=O)c2ccc(C)cc2)nc2ccccc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyrimidine ring substituted with a diethylamine group (CCN(CC)), a benzylamine group (NC(=O)c2ccc(C)cc2), and a phenyl ring (nc2ccccc21). The benzylamine group includes a carbonyl-linked phenyl ring with a methyl substituent.\nProperty Analysis: The diethylamine and phenyl groups may contribute to moderate JNK3 inhibition, but the benzylamine group (NC(=O)c2ccc(C)cc2) lacks strong hydrogen-bonding or hydrophobic interactions with the JNK3 active site. The methyl group on the phenyl ring may reduce solubility.\nOptimization for Source Molecule: Replace the benzylamine group (NC(=O)c2ccc(C)cc2) with a pyridine-amine group (NC(=O)c2ccccn2). The pyridine ring introduces a hydrogen-bond-accepting nitrogen and enhances hydrophobic interactions with JNK3. The amine group maintains solubility while improving target engagement.\n{\"Final Target Molecule\": \"CCN(CC)CCn1c(NC(=O)c2ccccn2)nc2ccccc21.\"}",
+        "gold": "CCN(CC)CCn1c(NC(=O)c2ccc(C)cc2)nc2ccccc21"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(C)Nc1ncnc2cc(OC)c(OC)cc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core (ncnc) with a tert-butylamine group (CCC(C)N-) attached to the nitrogen. The aromatic ring is substituted with two methoxy groups (OC). The tert-butylamine group introduces steric bulk and potential metabolic instability.\nProperty Analysis: JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and optimal steric compatibility with the ATP-binding pocket. The tert-butylamine group may reduce solubility and hinder interactions due to excessive hydrophobicity or steric clash.\nOptimization for Source Molecule: Replace the tert-butylamine (CCC(C)N-) with a piperazine group (CCN(C)CCN-) to enhance hydrogen-bonding capacity, solubility, and conformational flexibility. Piperazine maintains basicity for salt bridge formation while reducing steric bulk.\n{\"Final Target Molecule\": \"CCN(C)CCNc1ncnc2cc(OC)c(OC)cc12\"}",
+        "gold": "CCC(C)Nc1ncnc2cc(OC)c(OC)cc12"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)(C)c1cnc(CSc2cnc(NC(=O)c3ccccc3)s2)o1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central oxazole ring (o1) substituted with a tert-butyl group (CC(C)(C)), a thioether-linked thiazole (CSc2cnc...), and a benzamide (NC(=O)c3ccccc3). The thiazole and benzamide groups are critical for binding interactions.\nProperty Analysis: The benzamide (NC(=O)c3ccccc3) may contribute to moderate JNK3 inhibition via hydrogen bonding and hydrophobic interactions. However, the unsubstituted phenyl ring (c3ccccc3) lacks additional functional groups that could enhance binding affinity or selectivity.\nOptimization for Source Molecule: To improve JNK3 inhibition, the benzamide's phenyl ring can be substituted with a pyridine group (c3cccnc3). Pyridine introduces a hydrogen bond acceptor (N) and a planar aromatic system, which may strengthen interactions with the kinase's ATP-binding pocket.\n{\"Final Target Molecule\": \"CC(C)(C)c1cnc(CSc2cnc(NC(=O)c3cccnc3)s2)o1\"}",
+        "gold": "CC(C)(C)c1cnc(CSc2cnc(NC(=O)c3ccccc3)s2)o1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COCCn1c(=O)c(-c2ccc(OC)cc2)nc2cnc(OCc3ccccc3)nc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a hydroxyl group (-OH) on the N1 position, a methoxy-substituted benzene ring, and a benzyl-ether-linked oxygen. The hydroxyl group on the N1 position may contribute to hydrogen bonding with JNK3 but could also increase polarity and reduce membrane permeability.\nProperty Analysis: The hydroxyl group on the N1 position may enhance JNK3 binding via hydrogen bonding, but its polarity could hinder bioavailability. The methoxy and benzyl-ether groups may improve lipophilicity and solubility, respectively, but the overall balance between hydrophilicity and hydrophobicity needs optimization for optimal JNK3 inhibition.\nOptimization for Source Molecule: Replace the hydroxyl group (-OH) on the N1 position with a trifluoromethyl (-CF3) group to reduce polarity, improve lipophilicity, and maintain hydrogen bonding potential via the CF3-H bond. Retain the methoxy and benzyl-ether groups to preserve solubility and target engagement.\n{\"Final Target Molecule\": \"Oc1nc(-c2ccc(OC)cc2)nc2cnc(CF)nc(OCc3ccccc3)nc21\"}",
+        "gold": "COCCn1c(=O)c(-c2ccc(OC)cc2)nc2cnc(OCc3ccccc3)nc21"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCNC(=O)Cc1c(OC)ccc2cc(Br)ccc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzodioxole scaffold with a bromine substituent, a methyl ether group, and a butyl chain attached to an amide nitrogen. The bromine and ether groups may contribute to steric bulk and potential metabolic instability.\nProperty Analysis: JNK3 inhibition often benefits from planar aromatic systems for ATP-binding pocket interaction, hydrogen bond donors/acceptors (e.g., amides), and reduced steric hindrance. The bromine and butyl chain in the source molecule may disrupt optimal binding.\nOptimization for Source Molecule: 1. Replace bromine with a smaller hydrogen to reduce steric bulk. 2. Shorten the butyl chain to a propyl group to improve conformational flexibility. 3. Retain the amide and methyl ether for hydrogen bonding and solubility. 4. Introduce a fused aromatic system (e.g., benzodioxole) to enhance planarity.\n{\"Final Target Molecule\": \"Oc1ccc2cc(C(=O)NCc3ccc(C)cc3)ccc2c1O\"}",
+        "gold": "CCCCNC(=O)Cc1c(OC)ccc2cc(Br)ccc12"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cc(C)n(-c2ccc(C(=O)Nc3sccc3C(N)=O)cc2)n1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a methyl group, a thiazole-like substituent (sccc3C(N)=O), and a benzene ring linked via a carbonyl group. The thiazole substituent includes a sulfonyl group (S=O) and an amide (C(N)=O).\nProperty Analysis: JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and hydrophobic interactions. The thiazole substituent may enhance binding via π-π stacking, while the amide and sulfonyl groups could act as hydrogen-bond donors/acceptors.\nOptimization for Source Molecule: Replace the thiazole substituent (sccc3C(N)=O) with a pyridine ring (c3ccncc3) to reduce steric bulk and improve solubility. Retain the amide (C(N)=O) for hydrogen-bonding potential and the methyl group for hydrophobic interactions.\n{\"Final Target Molecule\": \"Cc1cc(C)n(-c2ccc(C(=O)Nc3ccncc3)cc2)n1\"}",
+        "gold": "Cc1cc(C)n(-c2ccc(C(=O)Nc3sccc3C(N)=O)cc2)n1"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1cnc(-c2c[nH]c3ncnc(N4CCOCC4)c23)cn1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core (c1cnc...cn1) with a pyrrole ring (c2c[nH]c3...) attached. The pyrrole is fused to a triazole ring (ncnc), which is substituted with a morpholine group (N4CCOCC4). The morpholine (1,4-oxazinane) is a six-membered ring with one oxygen and one nitrogen atom.\nProperty Analysis: JNK3 inhibition often benefits from hydrogen bond donors/acceptors and optimal steric fit. Morpholine provides a hydroxyl group (OH) for hydrogen bonding, but its oxygen atom may limit basicity, reducing potential interactions with acidic residues in the JNK3 active site.\nOptimization for Source Molecule: Replace morpholine (N4CCOCC4) with piperazine (N4CCN(C)CC4). Piperazine introduces a tertiary amine (N4CCN(C)CC4) with increased basicity and two hydrogen bond donor sites (NH groups), enhancing interactions with the JNK3 binding pocket while maintaining ring size and conformational flexibility.\n{\"Final Target Molecule\": \"c1cnc(-c2c[nH]c3ncnc(N4CCN(C)CC4)c23)cn1\"}",
+        "gold": "c1cnc(-c2c[nH]c3ncnc(N4CCOCC4)c23)cn1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NC(=O)c1cccc2c(NCc3cccc(Nc4nccs4)c3)ncnc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a fused bicyclic core (benzene fused to a pyrimidine ring) with an amide group (NC=O) and a piperazine-linked aromatic substituent (NCC6H4-piperazine). The piperazine (C1CNCCN1) is a 1,4-diazacyclohexane ring, which is a flexible, basic nitrogen-containing group. The thiazole-like sulfur-containing heterocycle (c4nccs4) is attached to the piperazine.\nProperty Analysis: The amide group (NC=O) may contribute to hydrogen bonding with JNK3, but its polarity could reduce membrane permeability. The piperazine's flexibility and basicity may hinder optimal binding to the kinase's hydrophobic pocket. The thiazole-like heterocycle (c4nccs4) may engage in π-π stacking but could limit metabolic stability.\nOptimization for Source Molecule: Replace the amide (NC=O) with a ketone (O=) to reduce polarity while retaining hydrogen-bond acceptor capacity. Substitute the piperazine with a piperidine (C1CCNCC1) to enhance rigidity and reduce basicity. Replace the thiazole-like heterocycle (c4nccs4) with a pyridine (c4ccncc4) to improve metabolic stability and maintain π-π interactions.\n{\"Final Target Molecule\": \"O=c1ncnc2cc1c(NCc3cccc(Nc4ccncc4)c3)cc2\"}",
+        "gold": "NC(=O)c1cccc2c(NCc3cccc(Nc4nccs4)c3)ncnc12"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc2ncnc(N(C)c3ccc(F)c(Cl)c3)c2cc1OC.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a dichlorophenyl group (c3ccc(F)c(Cl)c3) attached to a pyrimidine core via an N-methyl aniline linker. The dichlorophenyl group introduces steric bulk and potential metabolic instability.\nProperty Analysis: JNK3 inhibition often benefits from balanced hydrophobicity, hydrogen-bonding interactions, and reduced steric hindrance. The dichlorophenyl group may disrupt optimal binding due to excessive hydrophobicity or steric clashes.\nOptimization for Source Molecule: Replace the dichlorophenyl group with a fluorophenyl group (c3ccc(F)c3) to reduce steric bulk while retaining halogen bonding. The N-methyl group is retained for solubility and conformational flexibility.\n{\"Final Target Molecule\": \"COc1cc2ncnc(N(C)c3ccc(F)c3)c2cc1OC.\"}",
+        "gold": "COc1cc2ncnc(N(C)c3ccc(F)c(Cl)c3)c2cc1OC"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CS(=O)(=O)Nc1ccc(-c2cnc3cccc(Nc4ncccc4Cl)c3c2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a sulfonamide group (CS(=O)(=O)N-) attached to a biphenyl-like scaffold. The central core includes a pyrimidine ring (c2cnc3) with a chloropyridine substituent (Nc4ncccc4Cl) at position 3. The pyridine ring (c4ncccc4) is a 5-membered aromatic ring with two nitrogen atoms, one of which is part of the pyrimidine core.\nProperty Analysis: JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and hydrophobic interactions. The chloropyridine group (Nc4ncccc4Cl) may contribute to hydrophobic interactions but lacks strong hydrogen-bonding capability. The chlorine atom (Cl) in the pyridine ring may also introduce steric/electronic hindrance.\nOptimization for Source Molecule: Replace the chloropyridine (Nc4ncccc4Cl) with a pyridine ring containing a hydroxyl group (Nc4cccc(C(=O)O)n4). The hydroxyl group enhances hydrogen-bonding potential, while the pyridine maintains aromaticity and planar geometry. This modification improves solubility and target engagement without significant steric bulk.\n{\"Final Target Molecule\": \"CS(=O)(=O)Nc1ccc(-c2cnc3cccc(Nc4cccc(C(=O)O)n4)c3c2)cc1\"}",
+        "gold": "CS(=O)(=O)Nc1ccc(-c2cnc3cccc(Nc4ncccc4Cl)c3c2)cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCONC(=O)c1ccccc1Sc1ccc2c(C=Cc3ccccn3)n[nH]c2c1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a carbamate group (O=C-O-) attached to a butyl chain (CCCC-), a central benzene-sulfur-thiazole scaffold, and a pyrrole-containing substituent (C=Cc3ccccn3). The pyrrole (C1=CC=CN1) is a 5-membered aromatic heterocycle with one nitrogen atom.\nProperty Analysis: JNK3 inhibition often benefits from hydrogen-bond donors/acceptors and planar aromatic systems for target binding. The pyrrole in the source molecule may limit hydrogen-bonding capacity due to its lone pair delocalization in the aromatic system.\nOptimization for Source Molecule: Replace the pyrrole (C1=CC=CN1) with a pyridine (C1=CC=CN1) to introduce a hydrogen-bond-accepting nitrogen atom. Pyridine also enhances planarity and π-π stacking potential while maintaining aromaticity.\n{\"Final Target Molecule\": \"CCCCOc1ccccc1Sc1ccc2c(C=Cc3ccccn3)n[nH]c2c1\"}",
+        "gold": "CCCONC(=O)c1ccccc1Sc1ccc2c(C=Cc3ccccn3)n[nH]c2c1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CSc1nc2ccccc2c(=O)n1CCCO)NCc1ccccc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (S and N atoms) with a benzene ring fused to a pyridone ring (C=O and N atoms). A thioether (S-C) and an amide (C=O-N) group are present, along with a piperazine-like fragment (CCCO). A benzyl group (Cc1ccccc1) is attached to the amide nitrogen.\nProperty Analysis: The thiazole and pyridone rings may contribute to JNK3 binding, but the thioether (S-C) and amide (C=O-N) groups could limit metabolic stability or hydrogen bonding interactions. The piperazine-like fragment (CCCO) may enhance solubility but reduce target specificity.\nOptimization for Source Molecule: Replace the thioether (S-C) with a carbonyl (C=O) to improve hydrogen bonding and metabolic stability. Convert the amide (C=O-N) to a urea (N-H-C=O) to enhance hydrogen bonding and solubility. Retain the piperazine-like fragment (CCCO) for solubility but optimize its position. Replace the benzyl group (Cc1ccccc1) with a pyridine ring (c1ccncc1) to improve aromatic stacking in JNK3.\n{\"Final Target Molecule\": \"NC(=O)c1ccncc1c1cc2ccccc2c(=O)n1CCCO\"}",
+        "gold": "O=C(CSc1nc2ccccc2c(=O)n1CCCO)NCc1ccccc1"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(-n2c(=O)cnc3cnc(Oc4cccc(Cl)c4)nc32)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central pyrimidine core with a substituted phenyl ring (COc1ccc...cc1) and a chlorinated aniline group (Oc4cccc(Cl)c4). The pyrimidine core is part of a bicyclic system with a carbonyl group (n2c(=O)) and two nitrogen atoms.\nProperty Analysis: The chlorinated aniline group (Oc4cccc(Cl)c4) may contribute to off-target interactions or metabolic instability. The carbonyl group (n2c(=O)) introduces polarity, potentially affecting membrane permeability.\nOptimization for Source Molecule: Replace the chlorinated aniline group (Oc4cccc(Cl)c4) with a non-chlorinated aniline (Oc4ccccc4) to reduce metabolic liability and improve target selectivity. Retain the pyrimidine core and phenyl ring for JNK3 binding while simplifying the substituents.\n{\"Final Target Molecule\": \"COc1ccc(-n2c(=O)cnc3cnc(Oc4ccccc4)nc32)cc1.\"}",
+        "gold": "COc1ccc(-n2c(=O)cnc3cnc(Oc4cccc(Cl)c4)nc32)cc1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring fused to a naphthalene-like structure with a hydroxyl group (-OH) on the phenyl ring (c2cccc(O)c2). The core scaffold includes a ketone (O=c1) and a fused bicyclic system (oc2c1ccc1ccccc12).\nProperty Analysis: The hydroxyl group (-OH) on the phenyl ring may contribute to hydrogen bonding with JNK3, but its polarity could reduce membrane permeability. The rigid fused aromatic system may limit conformational adaptability for optimal binding.\nOptimization for Source Molecule: Replace the hydroxyl group (-OH) with a trifluoromethyl (-CF3) group to enhance lipophilicity, improve membrane permeability, and maintain steric/electronic properties. Retain the ketone and fused aromatic system for core binding interactions.\n{\"Final Target Molecule\": \"O=c1cc(-c2cccc(C(F)(F)F)c2)oc2c1ccc1ccccc12.\"}",
+        "gold": "O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCCC(F)(F)C4)n3)C2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with an acetamide group (CC(=O)NC(C)), an ether-linked morpholine derivative (OC2CCN...C2), and a pyrimidine ring (c3ccnc...) with a fluorinated piperazine (N4CCCC(F)(F)C4) as a substituent. The fluorinated piperazine introduces steric and electronic effects.\nProperty Analysis: JNK3 inhibition often benefits from balanced hydrophobicity, hydrogen bonding, and steric compatibility. The fluorinated piperazine may reduce binding due to excessive hydrophobicity or steric bulk, limiting solubility and target engagement.\nOptimization for Source Molecule: Replace the fluorinated piperazine (N4CCCC(F)(F)C4) with a non-fluorinated piperidine (N4CCCC4). Piperidine enhances solubility, reduces steric hindrance, and improves hydrogen bonding potential while maintaining basicity for salt bridge formation with JNK3.\n{\"Final Target Molecule\": \"CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCCC4)n3)C2)cc1.\"}",
+        "gold": "CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCCC(F)(F)C4)n3)C2)cc1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1[nH]c(C=C2C(=O)Nc3ccccc32)c(C)c1Br.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a bicyclic system with a bromine substituent. The bicyclic system includes a ketone (C=O) and an aniline group (Nc3ccccc3). The pyrrole and bromine groups are potential pharmacophores, but the aniline group (Nc3ccccc3) may limit solubility and target binding.\nProperty Analysis: JNK3 inhibition often requires hydrogen bonding with the kinase hinge region (via NH groups) and hydrophobic interactions with substituents. The pyrrole NH and ketone C=O may participate in H-bonding, while the bromine and aniline groups contribute to hydrophobicity. However, the aniline group (Nc3ccccc3) may reduce solubility and introduce steric hindrance.\nOptimization for Source Molecule: Replace the aniline group (Nc3ccccc3) with a piperazine (N3CCN(C)CC3) to enhance solubility, improve H-bonding via secondary amines, and reduce steric bulk. Piperazine also introduces a basic nitrogen, which may aid in salt bridge formation with acidic residues in JNK3.\n{\"Final Target Molecule\": \"Cc1[nH]c(C=C2C(=O)Nc3ccc(N3CCN(C)CC3)cc32)c(C)c1Br.\"}",
+        "gold": "Cc1[nH]c(C=C2C(=O)Nc3ccccc32)c(C)c1Br"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COCCNC1CCC(Nc2cc(-c3nc(NCC4CCOCC4)ccc3Cl)c(Cl)cn2)CC1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central cyclohexane ring connected to a pyridine moiety via an amine linker. The pyridine ring is substituted with a chlorinated benzene group (via a methylene bridge) and a morpholine-ethylamine side chain. A chlorine atom is present at the 4-position of the pyridine ring.\nProperty Analysis: The morpholine-ethylamine side chain likely enhances solubility and target engagement. The chlorine substituent on the pyridine may contribute to steric/electronic hindrance, potentially reducing JNK3 binding affinity.\nOptimization for Source Molecule: Remove the chlorine atom at the 4-position of the pyridine ring to reduce steric bulk and improve interactions with the hydrophobic pocket of JNK3. Retain the morpholine-ethylamine side chain to maintain solubility and critical hydrogen-bonding interactions.\n{\"Final Target Molecule\": \"COCCNC1CCC(Nc2cc(-c3nc(NCC4CCOCC4)ccc3Cl)ccn2)CC1\"}",
+        "gold": "COCCNC1CCC(Nc2cc(-c3nc(NCC4CCOCC4)ccc3Cl)c(Cl)cn2)CC1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccc2c(c1)OCO2)C1CC(c2c(F)cccc2Cl)=NO1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzodioxole ring (OCO2) attached to an aniline group (Nc1ccc2c(c1)), a nitroso group (=NO1), and a fluorinated chlorinated benzene ring (c2c(F)cccc2Cl). The nitroso group and the fluorinated chlorinated benzene ring may contribute to metabolic instability or off-target interactions.\nProperty Analysis: The nitroso group (=NO1) is a potential toxicophore and mutagenic risk. The fluorinated chlorinated benzene ring (c2c(F)cccc2Cl) may increase lipophilicity, reducing solubility and potentially causing off-target effects. The benzodioxole ring (OCO2) provides aromaticity but may limit solubility.\nOptimization for Source Molecule: 1. Replace the nitroso group (=NO1) with a stable amide (NC(=O)O) to enhance metabolic stability. 2. Substitute the fluorinated chlorinated benzene ring (c2c(F)cccc2Cl) with a piperazine ring (CCN2CCOCC2) to improve solubility and reduce toxicity. 3. Retain the benzodioxole ring (OCO2) for aromatic interactions but optimize its position.\n{\"Final Target Molecule\": \"O=C(Nc1ccc2c(c1)OCO2)C1CC(CCN2CCOCC2)NC(=O)O1.\"}",
+        "gold": "O=C(Nc1ccc2c(c1)OCO2)C1CC(c2c(F)cccc2Cl)=NO1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NC(=O)c1cccc2c(NCc3cccc(F)c3)ncnc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a bicyclic aromatic core (benzene fused to a pyrimidine ring) with an amide group (NC=O) and a fluorophenyl-substituted piperazine moiety (via -NH- linkage). The pyrimidine core and amide group may contribute to JNK3 binding, while the fluorophenyl and bicyclic system enhance hydrophobic interactions.\nProperty Analysis: The amide group (NC=O) may act as a hydrogen bond donor/acceptor for JNK3 binding. The fluorophenyl group improves lipophilicity and π-π stacking. However, the amide's polarity and hydrogen-bonding capacity may reduce membrane permeability or cause metabolic instability.\nOptimization for Source Molecule: Replace the amide (NC=O) with a nitrile (C≡N) to eliminate hydrogen-bond donation while retaining strong electron-withdrawing effects. This enhances lipophilicity, metabolic stability, and maintains π-π interactions. The nitrile also introduces a bioisostere for amide in kinase inhibitors.\n{\"Final Target Molecule\": \"N#Cc1cccc2c(NCc3cccc(F)c3)ncnc12.\"}",
+        "gold": "NC(=O)c1cccc2c(NCc3cccc(F)c3)ncnc12"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(Nc2nccc(N3CCN(C)CC3)n2)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central benzene ring substituted with a methoxy group (COc1ccc...cc1) and an aniline-linked heterocyclic system (Nc2nccc(N3CCN(C)CC3)n2). The heterocyclic system includes a piperazine ring (N3CCN(C)CC3) with a methyl substituent.\nProperty Analysis: The piperazine ring in the source molecule may contribute to moderate JNK3 inhibition due to its basicity and hydrogen-bonding potential. However, the methyl group on the piperazine may limit optimal interactions with the hydrophobic pocket of JNK3.\nOptimization for Source Molecule: To improve JNK3 inhibition, the methyl group on the piperazine can be replaced with a pyrrole ring (c1ccc2[nH]ccc2c1). This modification introduces a hydrogen-bond donor (NH in pyrrole) and enhances hydrophobic interactions with the target enzyme.\n{\"Final Target Molecule\": \"COc1ccc(Nc2nccc(N3CCN(c4ccc5[nH]ccc5c4)CC3)n2)cc1\"}",
+        "gold": "COc1ccc(Nc2nccc(N3CCN(C)CC3)n2)cc1"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCC2)n1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrrole ring (C1=CC=CN1) fused to a benzene ring with a chlorine substituent. The pyrrole is connected to a pyridine ring (c1ccncn1) via a single bond. The pyridine ring is substituted with a piperidine group (N2CCCC2).\nProperty Analysis: The pyrrole and pyridine rings may contribute to JNK3 inhibition, but the chlorine substituent on the benzene ring and the piperidine group on the pyridine ring may limit activity or introduce off-target effects.\nOptimization for Source Molecule: 1. Replace the chlorine atom with a hydrogen atom to reduce steric/electronic hindrance. 2. Replace the piperidine group with a piperazine group (N2CCN(C)CC2) to enhance solubility and hydrogen bonding potential. 3. Introduce a methyl group on the pyrrole ring to improve binding affinity.\n{\"Final Target Molecule\": \"Cc1cc(C)c[nH]c2ccc(N3CCN(C)CC3)cc2c1\"}",
+        "gold": "Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCC2)n1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)N(CCO)c1nc(Nc2cccc(Cl)c2)c2ncn(C(C)C)c2n1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with substituents: isopropyl (C(C)C), ethoxy (CCO), and a para-chlorophenyl group (Nc2cccc(Cl)c2). The isopropyl group is a bulky, hydrophobic substituent that may hinder interactions with the JNK3 active site.\nProperty Analysis: JNK3 inhibition often benefits from balanced hydrophobicity and steric compatibility with the ATP-binding pocket. The isopropyl group in the source molecule introduces excessive hydrophobicity and steric bulk, potentially reducing binding affinity.\nOptimization for Source Molecule: Replace the isopropyl group (C(C)C) with a smaller, less bulky substituent (e.g., methyl, CH3) to reduce steric hindrance while retaining necessary hydrophobic interactions. This modification maintains lipophilicity without compromising solubility.\n{\"Final Target Molecule\": \"CNC(C)N(CCO)c1nc(Nc2cccc(Cl)c2)c2ncn(C(C)C)c2n1.\"}",
+        "gold": "CC(C)N(CCO)c1nc(Nc2cccc(Cl)c2)c2ncn(C(C)C)c2n1"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(-n2c(=O)c(C)nc3cnc(N4CCNCC4)nc32)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a methoxy-substituted benzene ring connected to a pyrimidine core with a piperazine ring (N4CCNCC4) as a substituent. The pyrimidine core has a methyl group and a carbonyl group, and the piperazine is a flexible, basic nitrogen-containing group.\nProperty Analysis: JNK3 inhibition often benefits from (1) hydrogen-bond donors/acceptors (e.g., carbonyls, amines) to interact with the kinase hinge region and (2) hydrophobic/aromatic groups to occupy the ATP-binding pocket. The piperazine may enhance solubility but could reduce target binding due to excessive flexibility.\nOptimization for Source Molecule: Replace the piperazine (N4CCNCC4) with a piperidine (N4CCCC4) to reduce flexibility and improve hydrogen-bonding potential. Introduce a carbonyl-linked pyrrole (C(=O)Nc4ccc...cc4) to enhance π-π stacking and hydrogen-bonding with the hinge region. Retain the methoxy group for solubility and the methyl group for hydrophobic interactions.\n{\"Final Target Molecule\": \"COc1ccc(-n2c(=O)c(C)nc3cnc(C(=O)Nc4cccnc4)nc32)cc1\"}",
+        "gold": "COc1ccc(-n2c(=O)c(C)nc3cnc(N4CCNCC4)nc32)cc1"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1nc(N2CCCCC2)c2cc[nH]c2n1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a piperidine ring (N2CCCCC2) attached to the nitrogen at position 1. The piperidine is a saturated 6-membered ring with one nitrogen, which is a basic amine. The molecule also has a pyrrole ring (indole-like structure) fused to the pyrimidine core.\nProperty Analysis: The piperidine group in the source molecule may contribute to basicity and potential off-target interactions due to its amine functionality. The pyrrole ring provides aromaticity and potential hydrogen bonding via the NH group.\nOptimization for Source Molecule: To improve JNK3 inhibition, the piperidine ring can be replaced with a piperazine ring (N2CCNCC2), which is a more polar and less basic amine. This modification reduces the risk of off-target interactions while maintaining the spatial occupancy of the substituent. The pyrrole ring is retained for its aromatic and hydrogen-bonding properties.\n{\"Final Target Molecule\": \"c1nc(N2CCNCC2)c2cc[nH]c2n1\"}",
+        "gold": "c1nc(N2CCCCC2)c2cc[nH]c2n1"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a bicyclic purine-like core (O=c1cnc2cnc...n1) with a methoxy-substituted aryl group (OCc3ccccc3) and a fluorophenylmethyl substituent (Cc1ccc(F)cc1). The methoxy group (OCc3ccccc3) may contribute to moderate lipophilicity and steric bulk.\nProperty Analysis: JNK3 inhibition often benefits from balanced hydrophobicity, hydrogen-bonding interactions, and optimal steric fit. The methoxy group may reduce solubility or introduce unfavorable steric clashes with the hydrophobic pocket of JNK3.\nOptimization for Source Molecule: Replace the methoxy-substituted aryl group (OCc3ccccc3) with a carboxylic acid (O=C(O)c3ccccc3) to enhance hydrogen-bonding capacity and solubility. The carboxylic acid group introduces polar interactions with the kinase hinge region while maintaining aromatic stacking potential.\n{\"Final Target Molecule\": \"O=C1cnc2cnc(O=C(O)c3ccccc3)nc2n1Cc1ccc(F)cc1\"}",
+        "gold": "O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1nccc(-c2ccc3ccccc3c2)n1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core (Nc1nccc) linked to a biphenyl system (-c2ccc3ccccc3c2). The pyrimidine has an amino group (-NH2) at position 2, which may contribute to hydrogen bonding but could limit metabolic stability.\nProperty Analysis: JNK3 inhibition often benefits from hydrophobic interactions and optimal steric fit. The amino group on the pyrimidine may reduce membrane permeability or induce off-target interactions due to excessive polarity.\nOptimization for Source Molecule: Replace the amino group (-NH2) with a thioether-linked benzyl group (-S-CH2-Ph) to enhance hydrophobicity, improve metabolic stability, and maintain hydrogen bonding via the thioether oxygen. This modification balances polarity and lipophilicity.\n{\"Final Target Molecule\": \"O=S(Cc1ccccc1)Nc1nccc(-c2ccc3ccccc3c2)n1\"}",
+        "gold": "Nc1nccc(-c2ccc3ccccc3c2)n1"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1c(=O)c(-c2c(Cl)cccc2Cl)cc2cnc(O)nc21.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a dichlorophenyl group, a methyl group, and a hydroxyl group. The dichlorophenyl group is attached to the pyrimidine ring via a single bond, and the hydroxyl group is on the adjacent nitrogen.\nProperty Analysis: The hydroxyl group on the pyrimidine nitrogen may contribute to hydrogen bonding with JNK3, but the dichlorophenyl group introduces steric bulk and potential metabolic instability due to chlorine atoms.\nOptimization for Source Molecule: Replace the dichlorophenyl group with a pyridine ring to reduce steric bulk and improve solubility. Retain the hydroxyl group for hydrogen bonding and the methyl group for hydrophobic interactions. Introduce a carbonyl group on the pyridine to enhance binding affinity.\n{\"Final Target Molecule\": \"Cc1ccnc(Nc2ncc3cc(-c4c(Cl)cccc4Cl)cc23)c1\"}",
+        "gold": "Cn1c(=O)c(-c2c(Cl)cccc2Cl)cc2cnc(O)nc21"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CNc1cc(N(CCCN(C)C)C(=O)Nc2c(Cl)cccc2Cl)ncn1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a piperazine ring (1,4-diazacyclohexane) substituted with a methyl group. The piperazine is connected to a carbonyl group and a chlorinated benzene ring. The pyrimidine and chlorinated benzene are linked via an amine bridge.\nProperty Analysis: The piperazine group introduces high polarity and potential metabolic instability. The methyl group on the piperazine may reduce solubility and limit hydrogen bonding interactions with JNK3. The carbonyl group and chlorinated benzene may contribute to hydrophobic interactions but could hinder optimal binding.\nOptimization for Source Molecule: Replace the polar piperazine with a piperidine (azinane) to reduce polarity and improve metabolic stability. Introduce a hydroxyl group on the piperidine to enhance hydrogen bonding with JNK3. Retain the chlorinated benzene and pyrimidine core for hydrophobic interactions.\n{\"Final Target Molecule\": \"CNc1cc(N(CCCN1CC(O)CN1)C(=O)Nc2c(Cl)cccc2Cl)ncn1.\"}",
+        "gold": "CNc1cc(N(CCCN(C)C)C(=O)Nc2c(Cl)cccc2Cl)ncn1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OC(C)C)c2)[nH]1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a thiazole core (CSc1nc...nH1) with two substituents: (1) a fluorophenyl group (-c2ccc(F)cc2) and (2) a pyridyl group linked to a dimethoxyethyl ether (-c2ccnc(OC(C)C)c2). The ether group (OC(C)C) is a flexible alkyl chain with two methoxy groups.\nProperty Analysis: JNK3 inhibition often benefits from (1) optimal steric/electronic interactions with the kinase's ATP-binding pocket and (2) reduced metabolic instability. The ether group (OC(C)C) may contribute to metabolic susceptibility due to its hydrophilic oxygen atom and flexible chain.\nOptimization for Source Molecule: Replace the ether group (OC(C)C) with a thioether-linked isopropyl group (S-CH2-CH(CH3)-CH3). This modification (1) enhances lipophilicity (improving cell permeability) and (2) introduces a thioether (S) to increase metabolic stability. The isopropyl group maintains steric bulk while reducing flexibility.\n{\"Final Target Molecule\": CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(SCC(C)C)c2)[nH]1}",
+        "gold": "CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OC(C)C)c2)[nH]1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NC(=O)c1cccc2c(NCc3cccc(Nc4ncccn4)c3)ncnc12.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a fused bicyclic core (benzene fused to a pyrimidine ring) with an amide group (NC=O) and a piperazine-linked aromatic substituent (NCC6H4-piperazine). The piperazine (C1CNCCN1) is a 1,4-diazacyclohexane ring, which is a flexible, basic nitrogen-containing group.\nProperty Analysis: JNK3 inhibition often benefits from (1) hydrogen-bond donors/acceptors (e.g., amides, amines) for kinase binding, (2) planar aromatic systems for hydrophobic interactions, and (3) rigid substituents to reduce entropy penalties. The amide and pyrimidine core provide hydrogen-bonding potential, but the piperazine may reduce target affinity due to excessive flexibility and basicity.\nOptimization for Source Molecule: Replace the piperazine with a piperidine (C1CCNCC1) to reduce flexibility and basicity while retaining nitrogen-based interactions. Introduce a pyrrole (C1=CC=CN1) as a substituent on the aromatic ring to enhance π-π stacking and hydrogen-bonding capacity. The pyrrole's planar structure and lone pair on nitrogen improve binding complementarity.\n{\"Final Target Molecule\": \"NC(=O)c1cccc2c(NCc3cccc(-c4cccnc4)cc3)ncnc12.\"}",
+        "gold": "NC(=O)c1cccc2c(NCc3cccc(Nc4ncccn4)c3)ncnc12"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C=CCn1c(SCC(=O)NCc2ccco2)nc2sc(C)c(C)c2c1=O.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a pyrimidine core with a thioether-linked benzyl group (SCC(=O)NCc2ccco2), a ketone (C=O), and a thiazole-like ring (n1c...nc2). The benzyl group includes a furan ring (ccco2).\nProperty Analysis: The thioether (S) and ketone (C=O) may contribute to metabolic instability or suboptimal binding. The furan ring (ccco2) may limit solubility or introduce steric hindrance.\nOptimization for Source Molecule: Replace the thioether (S) with a thioamide (C(=S)N) to enhance stability and hydrogen bonding. Remove the ketone (C=O) to reduce metabolic liability. Replace the furan (ccco2) with a pyridine (cccn2) to improve solubility and reduce steric bulk.\n{\"Final Target Molecule\": \"C(=S)Nc1ncc(C(=O)c2sc(C)c(C)c(=O)n2C)n1ccn2\"}",
+        "gold": "C=CCn1c(SCC(=O)NCc2ccco2)nc2sc(C)c(C)c2c1=O"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCCc1ccccc1)Nc1ccc(O)cc1.\n"
+            }
+        ],
+        "prediction": "Structural Analysis of Source Molecule: The source molecule contains a central amide group (O=C-N) connected to a benzyl group (CCCc1ccccc1) and a para-hydroxyphenyl ring (Nc1ccc(O)cc1). The hydroxyl group (-OH) on the phenyl ring may contribute to hydrogen bonding but could limit metabolic stability.\nProperty Analysis: JNK3 inhibition often benefits from hydrophobic interactions and optimal hydrogen bonding. The hydroxyl group may reduce membrane permeability or introduce metabolic instability, potentially reducing bioavailability.\nOptimization for Source Molecule: Replace the hydroxyl group (-OH) with a trifluoromethyl (-CF3) group to enhance lipophilicity, metabolic stability, and hydrophobic interactions with the JNK3 binding pocket. Retain the amide and benzyl groups for hydrogen bonding and steric compatibility.\n{\"Final Target Molecule\": \"O=C(CCCc1ccccc1)Nc1ccc(C(F)(F)F)cc1.\"}",
+        "gold": "O=C(CCCc1ccccc1)Nc1ccc(O)cc1"
+    }
+}

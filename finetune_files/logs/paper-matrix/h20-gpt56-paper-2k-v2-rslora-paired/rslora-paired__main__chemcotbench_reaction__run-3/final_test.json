@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-3",
+  "benchmark": "chemcotbench_reaction",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "selection_profile": "main",
+  "state": "succeeded",
+  "evaluation_mode": "post_selection",
+  "selection": {
+    "source": "validation_sweep",
+    "candidate_source": "durable_output",
+    "training_policy": "rslora",
+    "history_index": null,
+    "loop_id": null,
+    "candidate_id": "durable_output__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__b28aa7d974b3",
+    "checkpoint_step": null,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/workspace/.ft_model_checkpoints/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6/output",
+    "signature": "3b547e674a283b7aa9687d1fd6b618b98fd9d59385b978014e9e230f28c23ac8",
+    "expected_samples": 2000,
+    "formal_training_evidence_signature": "a87cffb95be0c0dc4088e739ed0fc108d7bc03ffcfc85cf9b769b7b00b5e7478",
+    "validation_selection_artifact_signature": "d0980fac861a0a86e97edf235d57eb9b9fc51327a5b772b1638e09b3e8ed8c05",
+    "pairing_artifact_signature": "a4838bc86a66e79e906f705d463c46fd4632de7cc79b84049223ec6e668f8bd3",
+    "selection_profile": "main"
+  },
+  "test_range": "[-min(100, len(index_list)//2):]",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "pairing_artifact_signature": "a4838bc86a66e79e906f705d463c46fd4632de7cc79b84049223ec6e668f8bd3",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:36711/v1"
+  },
+  "started_at": "2026-09-10T17:15:05.095519+08:00",
+  "finished_at": "2026-09-10T17:20:55.389680+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_reaction_fs": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 50.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      },
+      "chemcotbench_reaction_mechsel": {
+        "accuracy": 70.0,
+        "correct_count": 35.0,
+        "total_count": 50.0
+      },
+      "chemcotbench_reaction_nepp": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 1.1,
+        "maccs_sims": 0.13,
+        "morgan_sims": 0.04,
+        "rdk_sims": 0.01,
+        "total_count": 42.0,
+        "valid_count": 1.0,
+        "validity": 2.38
+      },
+      "chemcotbench_reaction_rcr": {
+        "exact_count": 0.0,
+        "exact_match": 0.0,
+        "total_count": 45.0
+      },
+      "chemcotbench_reaction_retro": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 50.0,
+        "valid_count": 1.0,
+        "validity": 2.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "[Zn]",
+        "model_output": "The substrate contains a nitroarene, while the product replaces the nitro group with a primary amine. This is a reductive amination involving hydrogenolysis of the nitro group followed by amine formation. A suitable catalyst is a supported palladium species, because it promotes nitro-group reduction and can also activate the amine precursor. A palladium–carbon catalyst is therefore appropriate.\n\n{\"SMILES\":\"[Pd]\"}",
+        "question": "Given the following reaction under the type of Reduction:\nCC(C)(C)OC(=O)NC1CCC(C(=O)Nc2cc(OCc3ccc(C(=N)NO)cc3)cc(OCc3ccc(C(=N)NO)cc3)c2)CC1>>CC(C)(C)OC(=O)NC1CCC(C(=O)Nc2cc(OCc3ccc(C(=N)N)cc3)cc(OCc3ccc(C(=N)N)cc3)c2)CC1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "C",
+        "model_output": "The alcohol is first deprotonated to generate a more nucleophilic alkoxide. This oxygen then attacks the electrophilic phosphorus or sulfur center of SOCl₂ or POCl₃, forming a phosphorus or sulfur ylide-type intermediate. Deprotonation of the alcohol/phenol gives the strongly nucleophilic oxygen species, which adds to the electrophile. Chloride departure and subsequent nucleophilic substitution at phosphorus or sulfur convert the ylide into the chlorinated product. Collapse of the Meisenheimer-type intermediate is not required for this hydroxy-to-chloro transformation.\n\n{\"choice\": \"B\"}",
+        "question": "For reaction class: 'Hydroxy to chloro', under the condition of 'SOCl2 or POCl3' and given reagents (writtin in SMARTS format) 'O=[S,P](-[Cl])-[Cl].[O]', which following description is the correct elementary reaction stages description, considering the mechanism of this type of reaction?\n\nChoices:\nA: Deprotonation of alcohol | Addition of alkoxide | Nucleophilic substitution | Deprotonation\nB: Reaction of DMF and SOCl2 | Vilsmeier-Haack reagent formation | Deprotonation of alcohol | Addition | Deprotonation | Nucleophilic substitution\nC: Deprotonation of alcohol/phenol | Addition of alkoxide | Chloride leaves | Nucleophilic substitution | Meisenheimer complex collapse | Deprotonation\n\nReturn the choice (capital letter) in JSON format:\n{\n    \"choice\": str # (e.g. 'A'/'B')\n}\n"
+      },
+      {
+        "gold": "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F",
+        "model_output": "The substrate contains a methyl ester, a secondary alcohol, and a tertiary alcohol. Sodium hydroxide in ethanol promotes ester saponification, converting the ester into the corresponding carboxylate. The secondary alcohol is then deprotonated by the hydroxide, giving the corresponding secondary alcoholate. The tertiary alcohol is not sufficiently nucleophilic to undergo saponification under these conditions. The resulting carboxylate is represented as its sodium salt, with the remaining aromatic and heteroaromatic framework unchanged.\n\n{\"Major Product\": CCOC(=O)[O-].Na\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12\nReagents: O.O[Na].C1COCCO1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "C=Cc1ccc([Mg]Cl)cc1Brc1ccccc1",
+        "model_output": "The product is a vinyl-substituted naphthalene bearing a 2,6-dimethylphenyl group. Retrosynthetic cleavage of the vinyl C–C bond gives the corresponding naphthalene bearing a terminal alkyne and a terminal aldehyde. The palladium catalyst, bulky bisphosphine ligand, and ammonium chloride support a Sonogashira coupling: the alkyne carbon forms the new C–C bond to the naphthalene carbon bearing the 2,6-dimethylphenyl group, while the aldehyde is converted into the vinyl group. The naphthalene core and the 2,6-dimethylphenyl substituent remain unchanged.\n\n{\"C#Cc1ccc(-c2ccccc2)cc1.C=CCc1ccc(-c2ccccc2)cc1\"}",
+        "question": "Given the product SMILES and reagents SMILES, your task is to predict the reactants SMILES using your experienced chemical Retrosynthesis knowledge.\n\nInput:\nProduct SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nReactants SMILES separated by '.'\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes only the reactants SMILES:\n\nQuestion:\nProducts: C=Cc1ccc(-c2ccccc2)cc1\nReagents: c1ccc([B-](c2ccccc2)(c2ccccc2)c2ccccc2)cc1.CC(C)(C)[PH+](C(C)(C)C)C(C)(C)C.CC(=O)O[Pd]OC(C)=O.C1CCOC1.[NH4+].O.[Cl-]\n\nAnswer:\n{\n    \"Reactants\": ...\n}\n\n"
+      },
+      {
+        "gold": "CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)CO=S(=O)(OC1=CCC2(CC1)OCCO2)C(F)(F)F",
+        "model_output": "The product is a biaryl ether formed by coupling a phenylboronic acid with a 2-(2,6-dimethylphenyl)ethyl alcohol. Retrosynthetic cleavage of the aryl–O–aryl bond gives the corresponding phenyl pinacol boronate and 2-(2,6-dimethylphenyl)ethanol. The palladium complex, bulky bisphosphine ligand, potassium acetate, and THF are characteristic of a Suzuki–Miyaura cross-coupling. The aryl–O–aryl bond is replaced by a C(sp²)–C(sp²) bond, while the alcohol and boronic acid groups remain unchanged.\n\n{\"CC1(C)OB1.CC1(C)OC(C)(C)CCO1\"}",
+        "question": "Given the product SMILES and reagents SMILES, your task is to predict the reactants SMILES using your experienced chemical Retrosynthesis knowledge.\n\nInput:\nProduct SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nReactants SMILES separated by '.'\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes only the reactants SMILES:\n\nQuestion:\nProducts: CC1(C)OB(C2=CCC3(CC2)OCCO3)OC1(C)C\nReagents: C1=CC([Fe]C2(P(c3ccccc3)c3ccccc3)C=CC=C2)(P(c2ccccc2)c2ccccc2)C=C1.C1COCCO1.CC(=O)O[K].Cl[Pd]Cl.[Na]Br\n\nAnswer:\n{\n    \"Reactants\": ...\n}\n\n"
+      },
+      {
+        "gold": "O=[Os](=O)(=O)=O",
+        "model_output": "The transformation is a Corey–Fuchs-type aldol addition of an aryl methyl ketone to an α,β-unsaturated sulfonamide. The key catalyst is osmium tetroxide, which activates the ketone and promotes the aldol addition and subsequent intramolecular cyclization. A tertiary amine base is also required to neutralize the acidic sulfonamide-derived byproducts and promote cyclization.\n\n{\"SMILES\":\"O=[Os](=O)(=O)=O.[N+]C([O-])CCOCC\"}",
+        "question": "Given the following reaction under the type of Oxidation:\nC=CCC1(S(=O)(=O)Nc2c(Nc3ccc(I)cc3F)c(F)c(=O)n3c2CCC3)CC1.C[N+]1([O-])CCOCC1.O=[Os](=O)(=O)=O>>O=c1c(F)c(Nc2ccc(I)cc2F)c(NS(=O)(=O)C2(CC(O)CO)CC2)c2n1CCC2,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "[H][H]",
+        "model_output": "The substrate contains a tert-butyl ester, which is the most suitable group for selective deprotection. Tetrabutylammonium fluoride in THF is a standard reagent for cleaving tert-butyl esters under mild conditions. The amine, sulfonamide, and aryl ether groups remain unchanged.\n\n{\"SMILES\":\"[NH+][BF4-]\"}",
+        "question": "Given the following reaction under the type of Deprotection:\nCC(C)(CCn1cnc(-c2ccccc2)c1)NC[C@H](O)c1ccc(OCc2ccccc2)c(NS(=O)(=O)c2cccc3c2NCCC3)c1>>CC(C)(CCn1cnc(-c2ccccc2)c1)NC[C@H](O)c1ccc(O)c(NS(=O)(=O)c2cccc3c2NCCC3)c1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "CCOC(=O)c1cccc2nc(C)ccc12",
+        "model_output": "The substrate contains a carboxylic acid, while ethanol provides an alcohol group. The sulfuric acid promotes esterification: the acid hydroxyl is replaced by the ethoxy group from ethanol, forming the ethyl ester. The aromatic ring, carbonyl, and nitro substituent remain unchanged.\n\n{\"CCOC(=O)Cc1ccc2c(C(=O)O)cccc2n1\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCO.Cc1ccc2c(C(=O)O)cccc2n1\nReagents: O=S(=O)(O)O.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "CO",
+        "model_output": "The transformation is a Boc deprotection of the N-Boc-protected piperidine nitrogen. The resulting amine is sufficiently basic to promote further Boc transfer to the solvent, so a non-nucleophilic, non-nitrogen-containing medium is appropriate. THF is well suited because it is compatible with the amine and does not compete for Boc transfer.\n\n{\"SMILES\":\"CC(C)(C)OC(=O)C\"}",
+        "question": "Given the following reaction under the type of Deprotection:\nCC(C)(C)OC(=O)N[C@@H]1CN(Cc2ccccc2)CC[C@H]1F>>CC(C)(C)OC(=O)N[C@@H]1CNCC[C@H]1F,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "CC1(C)c2ccccc2Oc2c(-c3cc(-n4c5ccccc5c5ccccc54)cc4c3Oc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21",
+        "model_output": "The substrate contains a primary benzylic alcohol, while the aryl pinacol boronate provides a readily activated aryl group. The palladium catalyst promotes a Miyaura borylation, replacing the alcohol-derived hydrogen on the benzyl carbon with the aryl group from boron. The resulting product is the corresponding aryl-substituted benzyl ether, with the methoxy, phenyl, and silyl-protected phenyl groups unchanged.\n\n{\"Major Product\": CC1(C)c2ccccc2Oc2c(Cc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Ic1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1.CC1(C)c2ccccc2Oc2c(B(O)O)cccc21\nReagents: c1ccc([P](c2ccccc2)(c2ccccc2)[Pd]([P](c2ccccc2)(c2ccccc2)c2ccccc2)([P](c2ccccc2)(c2ccccc2)c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)cc1.Cc1ccccc1.O=C(O[K])O[K].CCO.O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      }
+    ]
+  },
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/final_test_workspaces/3b547e674a283b7a"
+}

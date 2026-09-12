@@ -1,0 +1,1808 @@
+{
+    "ROUGE-L": 37.4141359542898,
+    "accuracy": 37.4141359542898,
+    "correct_count": 26.0,
+    "total_count": 100.0,
+    "details": [
+        {
+            "example_abbr": "tablebench_analysis_other_243",
+            "pred": [
+                "1. Most entries in the `whenbuilt` column contain year-only values ranging from 1948 to 1951.\n2. Row 17, `145 squadron`, contains `1234` instead of a year, making it a clear anomaly.\n3. Row 34, `lydfo"
+            ],
+            "pred_extracted": [
+                "The two anomalies are row 17 with 145 squadron having an unusually formatted date 1234 in the whenbuilt column, and row 34 with lydford having an unusually formatted date march 1950 in the whenbuilt column."
+            ],
+            "answer": [
+                "The two anomalies, found in rows 5 and 15 with 'whenbuilt' values 'abc' and '1234', deviate from the 'YYYY' or 'Month YYYY' format."
+            ],
+            "rouge_l": [
+                22.22222172444446
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_244",
+            "pred": [
+                "1. Compare the “total usaaf” and “overseas” columns across the listed dates.\n2. As total personnel rises, overseas personnel generally rises as well, including the peak values of 2,329,534 total and 1"
+            ],
+            "pred_extracted": [
+                "Yes, an increase in the total number of USAAF personnel causes an increase in the number of personnel stationed overseas (correlation coefficient of 0.97)."
+            ],
+            "answer": [
+                "Yes, an increase in the total number of USAAF personnel correlates strongly (0.92) with an increase in the number of personnel stationed overseas."
+            ],
+            "rouge_l": [
+                70.58823479411767
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_245",
+            "pred": [
+                "1. Compare the “typhus” and “typhoid fever” columns across the years.\n2. The correlation coefficient is 0.21, indicating only a very weak positive association.\n3. This weak positive relationship does "
+            ],
+            "pred_extracted": [
+                "No, the analysis reveals a negligible positive correlation (0.21), suggesting that an increase in typhus cases does not causally influence the increase in typhoid fever cases."
+            ],
+            "answer": [
+                "No, an increase in typhus cases does not causally influence typhoid fever cases in the same year (correlation coefficient of 0.13)."
+            ],
+            "rouge_l": [
+                60.46511578150352
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_246",
+            "pred": [
+                "1. Compare the population densities listed in the table.\n2. Tondo has the highest density at 72602.5 per km2.\n3. Calculate the average density by summing all listed densities and dividing by the numbe"
+            ],
+            "pred_extracted": [
+                "Tondo, 184.5"
+            ],
+            "answer": [
+                "tondo, 39868.49"
+            ],
+            "rouge_l": [
+                33.33333283333334
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_247",
+            "pred": [
+                "1. Filter the table to peaks in Greece: Mount Ida, Taygetus, Lefka Ori, Mount Kyllini, and Dikti.\n2. Their elevations are 2456, 2404, 2453, 2376, and 2148 meters.\n3. Sorted, the elevations are 2148, 2"
+            ],
+            "pred_extracted": [
+                "2404"
+            ],
+            "answer": [
+                "2262"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_248",
+            "pred": [
+                "1. The Catholic percentage was 40.5% in 1970 and 39.5% in 1980.\n2. It then generally declined, reaching 27.0% in 2005, 25.0% in 2010, 22.9% in 2015, and 22.4% in 2016.\n3. Although it rose slightly to "
+            ],
+            "pred_extracted": [
+                "Decreasing trend"
+            ],
+            "answer": [
+                "19.08"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_249",
+            "pred": [
+                "1. The number of Conservative councillors in 1947 was 3, and in 1972 it was 10.\n2. The time span is 1972 − 1947 = 25 years.\n3. The average annual change is \\((10 − 3) ÷ 25 = 7 ÷ 25 = 0.28\\) councillor"
+            ],
+            "pred_extracted": [
+                "0.28"
+            ],
+            "answer": [
+                "0.29"
+            ],
+            "rouge_l": [
+                49.99999950000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_250",
+            "pred": [
+                "1. Total votes increased from 3,078 in 1983 to 197,231 in 2001, 161,842 in 2005, 134,570 in 2009, and 146,607 in 2013.\n2. The percentage of the popular vote rose from 0.19% in 1983 to 12.39% in 2001, "
+            ],
+            "pred_extracted": [
+                "200000, 10"
+            ],
+            "answer": [
+                "204988, 12.0%"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_251",
+            "pred": [
+                "1. Compare the “p1 diameter (mm)” and “p max ( bar )” columns across the 10 ammunition types.\n2. As diameter increases, maximum pressure generally rises, from 3,800 bar for 10.0 mm to 4,700 bar for 14"
+            ],
+            "pred_extracted": [
+                "Yes, the maximum pressure (p max) of the ammunition increases with increasing projectile diameter (correlation coefficient of 0.78)."
+            ],
+            "answer": [
+                "The maximum pressure (p max) of the ammunition exhibits no causal effect (-0.01) with increasing projectile diameter (p1 diameter)."
+            ],
+            "rouge_l": [
+                61.11111061265434
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_252",
+            "pred": [
+                "1. Indians: The numbers fluctuate, but the overall direction is upward, especially after 2006. The latest values are 24,965 in 2011 and 28,943 in 2012, supporting a higher forecast for 2013.\n2. Bangla"
+            ],
+            "pred_extracted": [
+                "Increasing trend, No clear trend"
+            ],
+            "answer": [
+                "27227, 3338"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_253",
+            "pred": [
+                "1. **Runs scored** and **balls faced** are the most directly relevant factors for calculating average and strike rate. Average is runs scored divided by innings, while strike rate is runs scored divid"
+            ],
+            "pred_extracted": [
+                "runs scored, balls faced"
+            ],
+            "answer": [
+                "innings, runs scored"
+            ],
+            "rouge_l": [
+                28.57142808163266
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_254",
+            "pred": [
+                "1. The table lists 18 counties in Hungary, providing information about each county’s county seat, area, population, population density, and number of towns and villages.\n2. The county seats are mostly"
+            ],
+            "pred_extracted": [
+                "The table presents data on various counties in Hungary, including the county seat, area in square kilometers, population, population density, and the number of towns and villages. Notable trends include significant variations in county size, population density, and the number of towns and villages."
+            ],
+            "answer": [
+                "The table summarizes Hungarian counties by seat, area, population, density, and number of towns/villages. Pest leads in population and density due to Budapest. Komárom-Esztergom has the highest density among smaller counties, while Bács-Kiskun, the largest by area, shows lower density, suggesting a more spread-out population."
+            ],
+            "rouge_l": [
+                33.33333284067953
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_255",
+            "pred": [
+                "1. Filter the table to buildings with more than 10 floors: the Confederation Building, National Bank Building, Electric Railway Chambers, Hotel Fort Garry, and Marlbourgh Hotel.\n2. Their heights are 4"
+            ],
+            "pred_extracted": [
+                "48.4"
+            ],
+            "answer": [
+                "47.67"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_256",
+            "pred": [
+                "1. The table contains data on a regional or country-level measure, likely representing some form of economic, social, or environmental indicator, across four five-year periods: 1985–1990, 1990–1995, 1"
+            ],
+            "pred_extracted": [
+                "The table presents data on a regional or country-level measure across four time periods: 1985-1990, 1990-1995, 1995-2000, and 2000-2005. The regions listed are Asia, South-East Asia, East Asia, China, Europe, North America, and Oceania. The data indicates a general trend of decreasing values over time, with Europe showing the most significant reduction and China experiencing the most significant increase. North America consistently has the highest values, while Oceania consistently has the lowest values."
+            ],
+            "answer": [
+                "The table displays growth rates for various regions and countries over four five-year periods from 1985 to 2005. It illustrates trends including a general decrease in Asian growth rates, consistent stability in Oceania, a notable decline in Europe, and variable patterns in North America."
+            ],
+            "rouge_l": [
+                23.91304299338375
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_257",
+            "pred": [
+                "1. Compare population with surface area: Santiago Metropolitan is an outlier with 7,003,122 people on only 15,349 km², while most other regions have populations between 254,336 and 1,861,562 on much l"
+            ],
+            "pred_extracted": [
+                "The three anomalies are row 6 with Metro Region (MR) - Santiago Metropolitan having an unusually low surface area of 15349 km² for its population of 7003122, row 7 with VII - Maule having an unusually high average annual rainfall of 1377.0 mm compared to its average annual runoff of 784.0 mm, and row 8 with VIII - Biobío having an unusually high per capita average annual renewable water resources of 23270 m³."
+            ],
+            "answer": [
+                "The two anomalies are the extraordinarily high average annual rainfall in the 'iii - atacama' region, and the excessively large per capita average annual renewable water resources in the 'vii - maule' region."
+            ],
+            "rouge_l": [
+                33.766233327711255
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_258",
+            "pred": [
+                "1. The table contains 10 columns and 8 rows, providing data on couples participating in a competition.\n2. The columns identify each couple by order and name, record individual scores from judges named"
+            ],
+            "pred_extracted": [
+                "The table presents the performance of 8 different couples in a competition, including their individual scores from judges, total scores, song choices, public vote percentages, and competition results. The data indicates that \"chris & frankie\" received the highest total score and secured the 1st position, while \"aggie & sergey\" were eliminated with the lowest total score. Most couples were marked as 'safe', with one couple placed in the 'bottom two'."
+            ],
+            "answer": [
+                "The table details the performance metrics of dance couples in a competition, encompassing scores from five judges, cumulative scores, rankings, song selections, public voting percentages, and competition outcomes. It elucidates the interplay between judges' scores and public votes in determining the final results for each couple."
+            ],
+            "rouge_l": [
+                38.29787185491173
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_259",
+            "pred": [
+                "1. The table contains 11 rows, representing the seasons from 2000–01 through 2009–10, plus a summary row labeled “totals.”\n2. The columns are:\n   - **season:** The academic year, from 2000–01 to 2009–"
+            ],
+            "pred_extracted": [
+                "The table presents the total touchdowns, two-point conversions, and safety touchdowns recorded each season from 2000-01 to 2009-10, along with the strongest storm and deaths attributed to that storm. The data indicates that the number of touchdowns and two-point conversions varied across seasons, with a total of 160 touchdowns and 60 two-point conversions recorded. The strongest storm mentioned was Zoe, and the total number of deaths attributed to these storms was 111."
+            ],
+            "answer": [
+                "The table summarizes tropical storm data from 2000 to 2010, detailing the counts of tropical depressions, tropical cyclones, and severe tropical cyclones, as well as the strongest storm and associated fatalities per season. Key observations include the consistent number of tropical depressions and the significant impact of the 2002 - 03 season, which had the highest fatalities and featured the strongest storm, \"Zoe.\""
+            ],
+            "rouge_l": [
+                19.04761854790251
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_260",
+            "pred": [
+                "1. Compare the correlation between seats won and candidates nominated: the coefficient is 0.28.\n2. Compare the correlation between seats won and total votes: the coefficient is 0.56.\n3. Since 0.56 is "
+            ],
+            "pred_extracted": [
+                "The total number of votes received has a greater causal impact on the number of seats won in an election (correlation coefficient of 0.56) compared to the number of candidates nominated (correlation coefficient of 0.28)."
+            ],
+            "answer": [
+                "The total number of votes received has a significantly greater causal impact (0.84) on the number of seats won in an election compared to the number of candidates nominated (0.04)."
+            ],
+            "rouge_l": [
+                82.35294067666283
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_261",
+            "pred": [
+                "1. Use the 13 paired values in the “starting weight (kg)” and “percentage lost” columns.\n2. Apply the Pearson correlation formula to these paired observations.\n3. The resulting coefficient is approxim"
+            ],
+            "pred_extracted": [
+                "No correlation, 0.19"
+            ],
+            "answer": [
+                "No correlation, -0.03"
+            ],
+            "rouge_l": [
+                49.99999950000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_262",
+            "pred": [
+                "1. The table shows a general upward trend over time, despite fluctuations.\n2. Using the latest available yearly values, the increases from 2000 to 2005 were 841,002 to 1,122,257, and from 2005 to 2010"
+            ],
+            "pred_extracted": [
+                "Increasing trend, 1350000"
+            ],
+            "answer": [
+                "1298789"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_263",
+            "pred": [
+                "1. Convert the UN budget percentages to numeric values by removing the “%” sign.\n2. Pair each numeric UN budget value with its corresponding international trade value across all 13 countries.\n3. Calcu"
+            ],
+            "pred_extracted": [
+                "No correlation, -0.19"
+            ],
+            "answer": [
+                "Strong positive correlation, 0.91"
+            ],
+            "rouge_l": [
+                22.222221728395073
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_264",
+            "pred": [
+                "1. Filter the table to regions with a GDP (% of national total) above 5%.\n2. Compare their GDP (€, billions) with GDP per capita (€).\n3. The correlation coefficient is 0.89, indicating a strong positi"
+            ],
+            "pred_extracted": [
+                "Yes, Higher interest positively influences deposit balances change (correlation coefficient of 0.89)."
+            ],
+            "answer": [
+                "GDP per capita (€) shows a strong positive correlation (0.80) with increasing regional GDP (€, billions) for regions where GDP exceeds 5% of the national total."
+            ],
+            "rouge_l": [
+                5.263157444598377
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_265",
+            "pred": [
+                "1. Use the 13 paired observations in the table: temperature, speed of sound, and density of air.\n2. Compare the speed of sound and density columns using the Pearson correlation coefficient.\n3. The res"
+            ],
+            "pred_extracted": [
+                "Strong positive correlation, 0.99"
+            ],
+            "answer": [
+                "Strong negative correlation, -1"
+            ],
+            "rouge_l": [
+                44.44444395061729
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_266",
+            "pred": [
+                "1. The table contains eight election records, spanning 1983 through 2013.\n2. The columns are:\n   - **election:** The year of the election.\n   - **candidates fielded:** The number of candidates the par"
+            ],
+            "pred_extracted": [
+                "The table presents the election results of a political party from 1983 to 2013, including the number of candidates fielded, seats won, total votes, percentage of popular vote, and the party's place. The data indicates a significant increase in the percentage of popular vote and the number of candidates fielded over the years, with the party securing its first seat in 2013."
+            ],
+            "answer": [
+                "The table details the electoral performance of a political entity across various elections spanning from 1983 to 2013. It includes data on the number of candidates fielded, seats secured, total votes garnered, the percentage of the popular vote, and electoral positioning. The data reveals a progressive trend of escalating political influence, culminating in the entity's inaugural seat victory in 2013."
+            ],
+            "rouge_l": [
+                48.27586156956005
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_267",
+            "pred": [
+                "1. The table contains six columns: `year`, `design`, `issue`, `artist`, `mintage`, and `issue price`.\n2. `year` lists the year each coin was issued, ranging from 2003 to 2005.\n3. `design` identifies t"
+            ],
+            "pred_extracted": [
+                "The table presents information about coin issues from 2003 to 2005, including the year of issue, design theme, production technique, artist, number of mintage, and issue price. The data indicates that the \"diamonds\" issue had the highest mintage, while the \"northern lights\" issue had the highest issue price."
+            ],
+            "answer": [
+                "The table presents data on collectible items issued from 2003 to 2005, detailing their year of issue, design, special features, artist, production quantity, and issue price. It highlights the recurring involvement of artist José Osio and shows a variation in mintage and pricing based on the complexity of the design features."
+            ],
+            "rouge_l": [
+                41.5584410652724
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_268",
+            "pred": [
+                "1. Select the rows where the rank is 10 or higher.\n2. The televotes values are: 3319, 38642, 10454, 4453, 5441, 908, 828, 1100, 764, 694, 681, 2459, 4210, 862, 3834, 1339, 23615, 8866, 10454, and 3864"
+            ],
+            "pred_extracted": [
+                "13037"
+            ],
+            "answer": [
+                "7153.5"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_269",
+            "pred": [
+                "1. Most peaks have elevations between 1,955 m and 3,323 m, while prominence generally ranges from 1,577 m to 3,323 m.\n2. Monte anomaly1 has an elevation of 10,000 m and a prominence of 9,000 m, both f"
+            ],
+            "pred_extracted": [
+                "The two anomalies are row 6 with Monte Anomaly1 having an unusually high elevation 10000 m and prominence 9000 m, and row 10 with Monte Anomaly2 having an unusually low elevation 100 m and prominence 50 m."
+            ],
+            "answer": [
+                "The two anomalies in the tabular data are `monte anomaly1` with an extremely high elevation and prominence (10000m, 9000m) and `monte anomaly2` with an extremely low elevation and prominence (100m, 50m)."
+            ],
+            "rouge_l": [
+                46.808510140334995
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_270",
+            "pred": [
+                "1. Compare the population density and annual growth-rate values across the metropolitan rings and sections.\n2. The correlation coefficient is 0.21, indicating only a very weak positive association.\n3."
+            ],
+            "pred_extracted": [
+                "No, a higher population density does not causally influence the annual population growth rate (correlation coefficient of 0.21)."
+            ],
+            "answer": [
+                "No, Population density (per km²) exhibits no causal effect on annual population growth rate (correlation coefficient of -0.15)."
+            ],
+            "rouge_l": [
+                49.99999950000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_271",
+            "pred": [
+                "1. Treat each judge’s column as a separate set of scores.\n2. Calculate the standard deviation for each judge’s scores.\n3. The largest standard deviation indicates the judge with the most variation.\n\nF"
+            ],
+            "pred_extracted": [
+                "The judge with the most variation in scores is \"veronika portsmuth\" with a standard deviation of 3.0."
+            ],
+            "answer": [
+                "noorkuu"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_272",
+            "pred": [
+                "1. The table contains 31 entries, each representing a building or structure.\n2. The main columns are:\n   - **rank:** The numerical rank of the entry, with equal signs (=) indicating tied positions.\n  "
+            ],
+            "pred_extracted": [
+                "The table presents information about 31 different buildings or structures, including their rank, name, height in feet and meters, number of floors, and the year they were constructed. The data spans various heights and construction years, providing a historical and physical comparison of the listed structures."
+            ],
+            "answer": [
+                "The table presents a list of buildings ranked by height, detailing each building's name, height in feet and meters, number of floors, and year of completion. It provides insights into the architectural and developmental history of a region."
+            ],
+            "rouge_l": [
+                42.857142363673475
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_273",
+            "pred": [
+                "1. Energy is primarily derived from carbohydrates, fat, and protein, with smaller contributions from other nutrients.\n2. The table shows that energy rises substantially with carbohydrate content: maiz"
+            ],
+            "pred_extracted": [
+                "The amount of carbohydrates exhibits a strong positive correlation with energy content (correlation coefficient of 0.92), indicating that it is more closely related to the increase in energy content of staple foods compared to fat and protein."
+            ],
+            "answer": [
+                "Energy content in staple foods is most significantly influenced by carbohydrates (correlation coefficient of 0.96), compared to protein (correlation coefficient of 0.69)."
+            ],
+            "rouge_l": [
+                42.307691834319535
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_274",
+            "pred": [
+                "1. Compare the “episodes” and “viewers (in millions)” columns across the nine seasons.\n2. The correlation coefficient is 0.21, indicating only a very weak positive association.\n3. Because the coeffici"
+            ],
+            "pred_extracted": [
+                "No, an increase in the number of episodes in a season does not significantly influence viewership (correlation coefficient of 0.21)."
+            ],
+            "answer": [
+                "No, the correlation coefficient of -0.13 indicates that an increase in the number of episodes per season does not causally increase viewership."
+            ],
+            "rouge_l": [
+                66.66666616699541
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_275",
+            "pred": [
+                "1. The issue price was 39.95 in 2002, 2004, and 2005.\n2. It then rose to 44.95 in 2006, 45.95 in 2007, and 47.95 in 2008 and 2009.\n3. Although it remained at 49.95 in 2010–2012, the overall direction "
+            ],
+            "pred_extracted": [
+                "Increasing trend"
+            ],
+            "answer": [
+                "Increasing trend"
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_276",
+            "pred": [
+                "1. The table lists 22 component pairs, each with two substances identified by name and boiling-point (bp) values in degrees Celsius.\n2. The components span a wide range of boiling points, from acetyle"
+            ],
+            "pred_extracted": [
+                "The table presents data on various chemical component pairs, including their names, boiling points, azeotropic boiling points, and weight percentages. The data indicates that the azeotropic boiling point is often between the boiling points of the two components, and the weight percentages sum up to 100% for each pair."
+            ],
+            "answer": [
+                "The table compares various chemical components in binary mixtures, focusing on their boiling points and compositions within azeotropic mixtures. It emphasizes the variability in azeotropic boiling points and compositions, illustrating how the proximity or disparity of individual component boiling points influences the properties of the resulting azeotrope."
+            ],
+            "rouge_l": [
+                28.571428071428578
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_277",
+            "pred": [
+                "1. The Total Workers row shows 143 males and 1000 females, totaling 1143, which is inconsistent with the 194 total listed.\n2. The Male and Female columns sum to 150% for Literacy, exceeding the 100% t"
+            ],
+            "pred_extracted": [
+                "The three anomalies are row 8 with an unusually high number 1000 in the Female column of the Total Workers row, row 7 with an unusually high percentage 150% in the Male column of the Literacy row, and row 9 with an unusually high number 0 in both Male and Female columns of the Main Worker row."
+            ],
+            "answer": [
+                "The two anomalies include the 'Male' literacy rate at 150%, which exceeds the maximum possible value of 100%, and the 'Female' total workers count at 1000, an outlier compared to other values."
+            ],
+            "rouge_l": [
+                20.3389825521402
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_278",
+            "pred": [
+                "1. Use the population and Catholic counts for each year from 1970 to 2017.\n2. Calculate the population growth as the year-to-year change in population.\n3. Calculate the decline in Catholics as the yea"
+            ],
+            "pred_extracted": [
+                "No correlation, -0.22"
+            ],
+            "answer": [
+                "Strong negative correlation, 0.85"
+            ],
+            "rouge_l": [
+                22.222221728395073
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_279",
+            "pred": [
+                "1. The table lists 27 European Union member states, including the European Union itself.\n2. The population densities are already provided for each member state.\n3. Sorted in ascending order, the middl"
+            ],
+            "pred_extracted": [
+                "84.0"
+            ],
+            "answer": [
+                "103.5"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_280",
+            "pred": [
+                "1. The table lists various subway lines and their associated terminal districts, commencement and newest extension dates, lengths in kilometers, and station counts.\n2. The first six rows represent ind"
+            ],
+            "pred_extracted": [
+                "The table presents information about various subway lines, including their terminal districts, commencement and newest extension dates, lengths in kilometers, and the number of stations. The data helps in understanding the geographical coverage and development timeline of the subway network."
+            ],
+            "answer": [
+                "The table details various aspects of a city's metro lines, encompassing their terminal stations, inception and expansion dates, lengths, and station counts. This data offers a comprehensive view of the metro network's geographical reach, developmental chronology, and overall magnitude."
+            ],
+            "rouge_l": [
+                31.249999500488286
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_281",
+            "pred": [
+                "1. The table shows population and urban percentages for 1959, 1970, 1979, and 1989.\n2. In 1959, the population was 9,295 with 44% urban.\n3. By 1979, the population rose to 14,685 with 54% urban.\n4. In"
+            ],
+            "pred_extracted": [
+                "Yes, the urban percentage increases with population size (correlation coefficient of 0.82)."
+            ],
+            "answer": [
+                "Urban percentage consistently increases with population size from 1959 to 1989 (correlation coefficient of 1.0)."
+            ],
+            "rouge_l": [
+                62.06896502259216
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_282",
+            "pred": [
+                "1. Compare each member state’s **population % of EU** with its **area km 2** and **area % of EU**: their correlation coefficients are 0.02 and 0.08, respectively. These are very weak positive associat"
+            ],
+            "pred_extracted": [
+                "No clear impact"
+            ],
+            "answer": [
+                "area km 2, area % of eu"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_283",
+            "pred": [
+                "1. The table contains nine rows and eight columns, representing the top nine drivers in a motorsports competition.\n2. The columns are:\n   - **position:** The numerical rank of each driver.\n   - **driv"
+            ],
+            "pred_extracted": [
+                "The table presents the top nine drivers in a motorsports competition, including their position, driver name, points, starts, wins, top 5 finishes, top 10 finishes, and winnings. Andrew Ranger leads with 2190 points and $87100 in winnings, while DJ Kennington and Ron Beauchamp, Jr. are tied for second place with 2023 points each. The data shows a general trend where higher points and winnings are associated with more wins and top finishes."
+            ],
+            "answer": [
+                "The table provides a comprehensive summary of driver performance metrics in a racing series, encompassing rankings, accumulated points, race starts, victories, top 5 and top 10 placements, and total earnings. The data reveals a correlation relationship between race success and both points accrued and financial winnings, with Andrew Ranger notably topping both categories in points and wins."
+            ],
+            "rouge_l": [
+                32.32323182736456
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_284",
+            "pred": [
+                "1. In row 117, the viewers count is 2000000, which is far above the next-highest value of 524440 in row 131. This makes it a clear outlier.\n2. In row 125, the original airing time is 3:00 am - 4:00 am"
+            ],
+            "pred_extracted": [
+                "The two anomalies are row 117 with an unusually high number of viewers 2000000 in the viewers column, and row 125 with an unusually early original airing time 3:00 am - 4:00 am in the original airing column."
+            ],
+            "answer": [
+                "The two anomalies are episode 117: \"don't walk on the grass\" with an unusually high viewership of 2,000,000, significantly exceeding the average of 400,000-500,000, and episode 125: \"the glamorous life,\" airing at an unusual timeslot of 3:00 am - 4:00 am, deviating from the typical 8:30 pm - 9:30 pm slot."
+            ],
+            "rouge_l": [
+                40.57970966855703
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_285",
+            "pred": [
+                "1. Compare the frequency and resistance values across the six rows.\n2. As frequency increases from 1 Hz to 2 MHz, resistance generally increases from 172.24 î/km to 643.14 î/km.\n3. The correlation coe"
+            ],
+            "pred_extracted": [
+                "Yes, an increase in frequency (hz) strongly influences the increase of resistance (r î / km) in the circuit (correlation coefficient of 0.99)."
+            ],
+            "answer": [
+                "No, an increase in frequency (Hz) causally influences a decrease in resistance (R î / km) in the circuit, with a strong negative correlation (-0.93)."
+            ],
+            "rouge_l": [
+                55.813952990805845
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_286",
+            "pred": [
+                "1. Pair each district’s “area ( ha )” value with its corresponding “pop density (per km²)” value.\n2. Calculate the Pearson correlation coefficient across all 17 district pairs.\n3. The resulting coeffi"
+            ],
+            "pred_extracted": [
+                "Weak negative correlation, -0.68"
+            ],
+            "answer": [
+                "Weak positive correlation, 0.63"
+            ],
+            "rouge_l": [
+                39.99999950000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_287",
+            "pred": [
+                "1. The number of examinees increased from 314 in 2005 to 364 in 2010.\n2. Pass percentages were 67.75% in 2005, 72.37% in 2006, 68.62% in 2007, 75.54% in 2008, 78.35% in 2009, and 79.68% in 2010.\n3. Th"
+            ],
+            "pred_extracted": [
+                "No clear impact"
+            ],
+            "answer": [
+                "Positive impact"
+            ],
+            "rouge_l": [
+                39.99999952000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_288",
+            "pred": [
+                "1. Compare companies within the same industry using sales and market value.\n2. In banking, the correlation is approximately 0.68, indicating that higher sales generally correspond to a higher market v"
+            ],
+            "pred_extracted": [
+                "Positive impact, Weak positive impact, No clear impact, Weak negative impact"
+            ],
+            "answer": [
+                "No clear impact"
+            ],
+            "rouge_l": [
+                59.999999579999994
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_289",
+            "pred": [
+                "1. The table contains 15 counties and seven columns: county, Starky votes and percentage, Hancock votes and percentage, McCain votes and percentage, and total votes.\n2. Each county’s row lists its nam"
+            ],
+            "pred_extracted": [
+                "The table presents the distribution of votes for three candidates (Starky, Hancock, and McCain) across 15 different counties, along with the total votes cast in each county. The data includes the county name, the number and percentage of votes each candidate received, and the total votes cast. McCain received the highest number of votes overall, while Starky and Hancock had lower percentages of the total votes. Maricopa county had the highest total votes cast."
+            ],
+            "answer": [
+                "The table displays voting statistics from various counties, outlining the number of votes and percentage share for candidates Starky, Hancock, and McCain, as well as the total votes in each county. The data reveals a predominant preference for McCain, who consistently received a higher percentage of votes across the counties compared to the other candidates."
+            ],
+            "rouge_l": [
+                41.46341413444379
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_290",
+            "pred": [
+                "1. Compare each company’s market value with its sales, profits, assets, and market value.\n2. Market value does not consistently rise or fall with sales. For example, General Electric has high sales ($"
+            ],
+            "pred_extracted": [
+                "profits"
+            ],
+            "answer": [
+                "profits"
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_291",
+            "pred": [
+                "1. Most values in the decimal32, decimal64, and decimal128 columns are positive, while row 10 in the decimal32 column is −95 and row 11 is −101. These are the only negative values and stand out from t"
+            ],
+            "pred_extracted": [
+                "The two anomalies are row 10 with an unusually low score -95 in the decimal32 column and row 11 with an unusually low score -101 in the decimal32 column, both of which are negative values in a predominantly positive table."
+            ],
+            "answer": [
+                "No anomalies are detected in the table."
+            ],
+            "rouge_l": [
+                28.57142825142857
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_292",
+            "pred": [
+                "1. The total number of students rises overall from 337,660 in 1995–96 to 361,432 in 1999–2000 and remains generally high through 2006–2007.\n2. The percentage learning Latvian increases consistently fr"
+            ],
+            "pred_extracted": [
+                "The proportion of students learning Latvian increases significantly with the total number of students (correlation coefficient of 0.97), indicating a strong positive relationship. The proportion of students learning Russian decreases significantly with the total number of students (correlation coefficient of -0.97), indicating a strong negative relationship. Therefore, both proportions are strongly influenced by the total number of students, but in opposite directions."
+            ],
+            "answer": [
+                "The proportion of students learning Latvian (correlation coefficient of 0.85) is more significantly influenced by an increase in the total number of students over the school years compared to Russian (correlation coefficient of 0.49)."
+            ],
+            "rouge_l": [
+                44.44444395464853
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_293",
+            "pred": [
+                "1. Use the 21 paired values in the “elevation (m)” and “prominence (m)” columns.\n2. Calculate the Pearson correlation coefficient across these pairs.\n3. The resulting coefficient is 0.97, which is clo"
+            ],
+            "pred_extracted": [
+                "Strong positive correlation, 0.97"
+            ],
+            "answer": [
+                "Strong positive correlation, 0.78"
+            ],
+            "rouge_l": [
+                79.99999950000002
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_294",
+            "pred": [
+                "1. Compare systems with the same number of stations but different numbers of lines.\n2. For example, a system with 13 stations has 4 lines and 70,548,400 riders, while a system with 13 stations and 3 l"
+            ],
+            "pred_extracted": [
+                "No clear impact"
+            ],
+            "answer": [
+                "Positive impact"
+            ],
+            "rouge_l": [
+                39.99999952000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_295",
+            "pred": [
+                "1. The table contains seven columns: region, total population, Manchu population, percentage of the Manchu population, and regional percentage of the total population.\n2. The first two rows are summar"
+            ],
+            "pred_extracted": [
+                "The table presents data on the total population, Manchu population, and the percentage of the Manchu population in various regions. The Manchu population is predominantly distributed in the northeastern and northern regions, with Liaoning having the highest percentage of Manchu population at 12.2%."
+            ],
+            "answer": [
+                "The table summarizes the Manchu population across Chinese regions, detailing total and Manchu populations, their national share, and regional proportion. It highlights a strong concentration in the northeast, especially Liaoning, with much lower numbers elsewhere."
+            ],
+            "rouge_l": [
+                27.11864356908935
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_296",
+            "pred": [
+                "1. The top 10 airports by passengers are ranked 1 through 10.\n2. Their aircraft movements are 1,465; 1,157; 734; 768; 585; 303; 416; 201; 214; and 306.\n3. Sorted, these values are 201, 214, 303, 306, "
+            ],
+            "pred_extracted": [
+                "495.5"
+            ],
+            "answer": [
+                "500.5"
+            ],
+            "rouge_l": [
+                49.99999950000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_297",
+            "pred": [
+                "1. The table contains 19 London boroughs, ranked from 1 to 19.\n2. It lists the borough’s name, rank, and the populations of five Asian ethnic groups: Indian, Pakistani, Bangladeshi, Chinese, and Other"
+            ],
+            "pred_extracted": [
+                "The table presents data on the populations of different Asian ethnic groups (Indian, Pakistani, Bangladeshi, Chinese, and Other Asian) across various London boroughs, ranked from 1 to 19. The boroughs with the highest total Asian populations are Newham, Redbridge, and Tower Hamlets. Each borough's population is broken down by ethnic group, providing insights into the distribution and composition of Asian populations across London."
+            ],
+            "answer": [
+                "The table shows Asian population distribution across London boroughs, listing counts for Indian, Pakistani, Bangladeshi, Chinese, and other Asian groups. Boroughs are ranked by total Asian population, with Newham, Redbridge, and Brent leading. The data highlights both diversity and uneven distribution within London's Asian communities."
+            ],
+            "rouge_l": [
+                36.78160870339543
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_298",
+            "pred": [
+                "1. Catholic population: The figures generally decline from 5,320,000 in 1970 to 3,769,000 in 2017, despite some fluctuations. The latest figures are 3,832,000 in 2016 and 3,769,000 in 2017, indicating"
+            ],
+            "pred_extracted": [
+                "3500000, 20.5"
+            ],
+            "answer": [
+                "17854340, 19.08%"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_299",
+            "pred": [
+                "1. The percentage of students learning in Latvian increased from 60.3% in 1995–1996 to 73.0% in 2006–2007.\n2. Since the total percentage must equal 100%, the percentage learning in Russian would gener"
+            ],
+            "pred_extracted": [
+                "13.5"
+            ],
+            "answer": [
+                "55555"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_300",
+            "pred": [
+                "1. Use the eight paired values in the “p1 diameter (mm)” and “p max (bar)” columns.\n2. Calculate the Pearson correlation coefficient across these pairs.\n3. The resulting coefficient is 0.82, which fal"
+            ],
+            "pred_extracted": [
+                "Strong positive correlation, 0.82"
+            ],
+            "answer": [
+                "Weak positive correlation, 0.40"
+            ],
+            "rouge_l": [
+                59.999999500000015
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_301",
+            "pred": [
+                "1. **Total passengers** is the outcome variable, while **annual entry/exit** and **annual interchanges** directly contribute to it: total passengers equal entry/exit plus interchanges.\n2. **Location**"
+            ],
+            "pred_extracted": [
+                "annual entry / exit (millions) 2011 - 12, annual interchanges (millions) 2011 - 12"
+            ],
+            "answer": [
+                "annual entry / exit (millions) 2011 - 12"
+            ],
+            "rouge_l": [
+                88.88888839506174
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_302",
+            "pred": [
+                "1. The table contains 31 entries in the “size (cents)” column.\n2. Compute the arithmetic mean of these values.\n3. Subtract the mean from each value, square the differences, and sum them.\n4. Divide by "
+            ],
+            "pred_extracted": [
+                "61.97"
+            ],
+            "answer": [
+                "185.85"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_303",
+            "pred": [
+                "1. Compare the population density values: most range from 2 to 337, while Hong Kong’s value is 6390, making it a clear outlier.\n2. Compare the HDI values: most range from 0.653 to 0.901, while Macau’s"
+            ],
+            "pred_extracted": [
+                "The three anomalies are row 2 with Hong Kong having an unusually high population density 6390 in the Population Density per km square column, row 4 with Macau having no data in the HDI (2011) column, and row 6 with North Korea having no data in the Capital column."
+            ],
+            "answer": [
+                "No anomalies are detected in the table."
+            ],
+            "rouge_l": [
+                19.999999711250002
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_304",
+            "pred": [
+                "1. Compare the “viewers (m)” and “rating” columns across the 12 episodes with numeric ratings.\n2. The correlation coefficient is 0.82, indicating a strong positive relationship: higher viewer counts g"
+            ],
+            "pred_extracted": [
+                "Yes, an increase in viewers (m) positively influences the rating (correlation coefficient of 0.82)."
+            ],
+            "answer": [
+                "Yes, a strong positive correlation (0.99) indicates that an increase in viewers causally influences the rating."
+            ],
+            "rouge_l": [
+                49.999999501953134
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_305",
+            "pred": [
+                "1. The issue price was 489.95 in 2005 and remained at 489.95 in 2006.\n2. It then rose to 579.95 in 2007, 619.95 in 2008, 697.95 in 2009, and reached 999.95 in 2010.\n3. Although there were small fluctu"
+            ],
+            "pred_extracted": [
+                "Increasing trend"
+            ],
+            "answer": [
+                "Increasing trend"
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_306",
+            "pred": [
+                "1. The table shows that earnings per share (p) generally rise as revenue increases. For example, revenue of 2,438 million corresponds to earnings of 30.7 p and 28.7 p, while revenue of 5,110 million c"
+            ],
+            "pred_extracted": [
+                "revenue (million), profit / (loss) before tax (m)"
+            ],
+            "answer": [
+                "revenue"
+            ],
+            "rouge_l": [
+                22.22222202469136
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_307",
+            "pred": [
+                "1. The table shows large fluctuations and no consistent long-term growth or decline.\n2. Recent values are 841,002 in 2000, 1,122,257 in 2005, and 1,042,625 in 2010.\n3. Using a simple linear trend acro"
+            ],
+            "pred_extracted": [
+                "1200000"
+            ],
+            "answer": [
+                "1298789"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_308",
+            "pred": [
+                "1. The table shows that higher viewer totals generally correspond to better (lower-numbered) rankings: episode 1 has 6,700,000 viewers and ranks 6th, while episode 2 has 5,820,000 viewers and ranks 11"
+            ],
+            "pred_extracted": [
+                "total viewers, Negtive impact, No clear impact"
+            ],
+            "answer": [
+                "total viewers, share"
+            ],
+            "rouge_l": [
+                39.99999958
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_309",
+            "pred": [
+                "1. The table categorizes body mass index (BMI) ranges and corresponding BMI Prime values, providing a classification system for different weight statuses.\n2. The first column, “Category,” identifies t"
+            ],
+            "pred_extracted": [
+                "The table categorizes different weight statuses based on BMI and BMI Prime, providing ranges for BMI (kg/m2) and BMI Prime. It highlights how BMI and BMI Prime increase with higher weight categories, indicating greater body fat."
+            ],
+            "answer": [
+                "The table categorizes various weight statuses according to BMI and BMI Prime values, spanning from \"Very severely underweight\" to \"Hyper Obese.\" It delineates specific numerical ranges for each category, facilitating the evaluation of an individual's weight in relation to their height. The table's arrangement from lower to higher values reflects escalating health risks linked with greater body weight."
+            ],
+            "rouge_l": [
+                31.168830713442407
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_310",
+            "pred": [
+                "1. The table lists conflicts in Mandatory Palestine and Israel, focusing on casualties and casualties plus wounded.\n2. The columns identify each conflict, record military deaths, civilian deaths, tota"
+            ],
+            "pred_extracted": [
+                "The table presents data on conflicts in Mandatory Palestine and Israel, including the \"conflicts prior to israel 's independence\", \"military deaths\", \"civilian deaths\", \"total deaths\", \"military and / or civilian wounded\", and \"total casualties\". The 1947 - 48 civil war stands out with the highest number of military deaths (895), civilian deaths (408), total deaths (1303+), wounded (2000), and total casualties (3303)."
+            ],
+            "answer": [
+                "The table provides an overview of conflicts preceding Israel's establishment, detailing military and civilian fatalities, overall deaths, injuries, and total casualties for each incident. It highlights the human cost of these conflicts and shows a trend of increasing severity and impact as the date of independence approached."
+            ],
+            "rouge_l": [
+                20.930232064899958
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_311",
+            "pred": [
+                "1. Most values range from 0.4 to 50.0, making row 4, column 3, with 50.0 in the January Term column, a clear high outlier.\n2. Most quarter-year values range from 0.5 to 1.3, making row 6, column 8, wi"
+            ],
+            "pred_extracted": [
+                "The two anomalies are row 4 with an unusually high score 50.0 in the January Term column, and row 6 with an unusually high score 100.0 in the 2005 / 06 column."
+            ],
+            "answer": [
+                "The two anomalies are the unusually high value of 50.0 in the '2002 / 03' column for 'january term' and the excessively large figure of 100.0 in the '2008 / 09' column for 'two quarters'."
+            ],
+            "rouge_l": [
+                50.98039165859286
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_312",
+            "pred": [
+                "1. The “total support and revenue” values rise from 80,129 in 2003/2004 to 38,479,665 in 2011/2012.\n2. Although there are fluctuations, the overall direction is upward.\n3. Extending this historical in"
+            ],
+            "pred_extracted": [
+                "Increasing trend, 52000000"
+            ],
+            "answer": [
+                "33210952"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_313",
+            "pred": [
+                "1. Banks with many branches generally have high total assets: Türkiye İş Bankası has 1,294 branches and 210,535 million TL, while Ziraat Bankası has 1,510 branches and 207,871 million TL.\n2. Banks wit"
+            ],
+            "pred_extracted": [
+                "Positive impact"
+            ],
+            "answer": [
+                "Positive impact"
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_314",
+            "pred": [
+                "1. The table lists 21 election results.\n2. The corresponding national-vote percentages are: 39.7, 41.2, 46.4, 47.2, 46.7, 44.5, 44.3, 35.8, 43.3, 35.3, 38.58, 30.70, 45.23, 25.40, 30.45, 41.04, 30.03,"
+            ],
+            "pred_extracted": [
+                "5.92"
+            ],
+            "answer": [
+                "0.07"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_315",
+            "pred": [
+                "1. Use the 19 rows with numeric values in both the “total fertility rate” and “natural growth” columns, excluding the aggregate “1990 - 2009” row and the four rows with “na”.\n2. Pair each fertility-ra"
+            ],
+            "pred_extracted": [
+                "Weak positive correlation, 0.67"
+            ],
+            "answer": [
+                "Weak positive correlation, 0.49"
+            ],
+            "rouge_l": [
+                79.99999950000002
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_316",
+            "pred": [
+                "1. The table contains six columns: one for the metric name and five for yearly data from 2013 to 2017.\n2. **Applications** shows the number of applications received each year, increasing from 33,825 i"
+            ],
+            "pred_extracted": [
+                "The table presents the number of applications, offer rate, enrolments, yield, applicant/enrolled ratio, and average entry tariff from 2013 to 2017. The data indicates an increasing trend in applications and enrolments, a higher yield percentage in recent years, and a decreasing trend in the average entry tariff."
+            ],
+            "answer": [
+                "The table displays data spanning from 2013 to 2017, encompassing applications, offer rates, enrolments, yield percentages, applicant-to-enrolled ratios, and average entry tariffs for a specific entity. It reveals a rise in both applications and enrolments, accompanied by fluctuating offer rates and yields, suggesting a changing landscape in admissions."
+            ],
+            "rouge_l": [
+                34.66666617102223
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_317",
+            "pred": [
+                "1. Use the nine paired values in the `elevation (m)` and `prominence (m)` columns.\n2. The Pearson correlation coefficient for these pairs is approximately 0.98.\n3. Because 0.98 is close to +1, it indi"
+            ],
+            "pred_extracted": [
+                "Strong positive correlation, 0.98"
+            ],
+            "answer": [
+                "Strong positive correlation, 0.81"
+            ],
+            "rouge_l": [
+                79.99999950000002
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_318",
+            "pred": [
+                "1. Compare the eight province-level pairs of DC and each candidate influencing factor.\n2. The correlations with DC are: PSDI 0.12, PSI 0.15, and PCI 0.21.\n3. These are very weak positive associations,"
+            ],
+            "pred_extracted": [
+                "No clear impact"
+            ],
+            "answer": [
+                "PSI, PCI"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_319",
+            "pred": [
+                "1. Bötzow’s population rose from 2.785 in 2004 to 2.981 in 2010, an increase of 0.201.\n2. The values fluctuate slightly within this upward direction: they rise to 2.973 in 2006, fall to 2.937 in 2008,"
+            ],
+            "pred_extracted": [
+                "Increasing trend"
+            ],
+            "answer": [
+                "Increasing trend, 3.12"
+            ],
+            "rouge_l": [
+                33.3333328888889
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_320",
+            "pred": [
+                "1. Filter the table to the Third Division North rows: Lincoln City 1946–47, Lincoln City 1947–48, and Oldham Athletic 1948–49.\n2. Their total goals are 15, 32, and 3.\n3. The mean is \\((15 + 32 + 3) / "
+            ],
+            "pred_extracted": [
+                "16.33"
+            ],
+            "answer": [
+                "211"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_321",
+            "pred": [
+                "1. States with finalists have high average scores: Iowa 9.513, Oklahoma 9.341, Kansas 9.474, Alabama 9.262, and North Carolina 9.262.\n2. Their swimsuit, interview, and evening gown scores are also hig"
+            ],
+            "pred_extracted": [
+                "Swimsuit, Interview, Evening Gown"
+            ],
+            "answer": [
+                "Evening Gown"
+            ],
+            "rouge_l": [
+                66.66666622222223
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_322",
+            "pred": [
+                "1. Most rows contain no unusual values. The totals generally sum correctly, and individual season entries are within reasonable ranges.\n2. Row 13 for Millonarios contains several entries marked with “"
+            ],
+            "pred_extracted": [
+                "The three anomalies are row 13 with Millonarios having unusually high scores 38? and 36? in the Continental columns, row 14 with Real Madrid having an unusually high score 282 in the League column and a total of 396 in the Total column, and row 15 with Espanyol having an unusually high score -10 in the League column."
+            ],
+            "answer": [
+                "The two anomalies include the implausible 100 goals in a season, and the -10 appearances."
+            ],
+            "rouge_l": [
+                21.276595344499782
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_323",
+            "pred": [
+                "1. **Laps:** Every driver completed 46 laps, except those who completed fewer laps, earning 0 points. Thus, completing all 46 laps is associated with the maximum points, indicating a positive influenc"
+            ],
+            "pred_extracted": [
+                "laps, grid, team"
+            ],
+            "answer": [
+                "No clear impact"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_324",
+            "pred": [
+                "1. The result is “safe” for every couple except “danniella and matthew,” who are “bottom two.”\n2. The only clear difference between the two groups is their total score: the bottom couple has 7, while "
+            ],
+            "pred_extracted": [
+                "No clear impact"
+            ],
+            "answer": [
+                "public"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_325",
+            "pred": [
+                "1. The table contains 13 records, each representing a location in a Russian region.\n2. The columns identify the region, location, date of an event, and counts of depots, routes, and vehicles associate"
+            ],
+            "pred_extracted": [
+                "The table presents data on various regions in Russia, including the location, date of an event, number of depots, routes, and vehicles associated with each location. The data spans from 1955 to 1984 and provides insights into the distribution and number of vehicles in different regions."
+            ],
+            "answer": [
+                "The table provides transportation logistics data for various regions and locations in Russia, specifying the number of depots, routes, and vehicles as of December 9th in an unspecified year. Notable observations indicate that larger cities or regional capitals, such as Novosibirsk, exhibit more extensive transportation operations, evidenced by higher numbers of vehicles and routes."
+            ],
+            "rouge_l": [
+                32.91139191475725
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_326",
+            "pred": [
+                "1. Compare the population values: most range from 10,000 to 77,513, while sampaloc has 241,528, making it a clear high outlier.\n2. Compare the area values: most range from 51.37 to 315.28 hectares, wh"
+            ],
+            "pred_extracted": [
+                "The three anomalies are row 9 with sampaloc having an unusually high population 241528 in the population column, row 12 with sta. teresa having an unusually high area 1000.0 in the area column, and row 6 with san lorenzo having an unusually high population density 1000000.0 in the pop density column."
+            ],
+            "answer": [
+                "The two anomalies include 'san lorenzo' with an excessively high population density of 1,000,000 per km2 and 'sta. teresa' with an abnormally low population of just 100."
+            ],
+            "rouge_l": [
+                26.41509384834461
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_327",
+            "pred": [
+                "1. The table lists the top 10 teams in a league, ranked by position.\n2. **Position:** The numerical rank of each team.\n3. **Team:** The name of the team.\n4. **Points:** Total points earned by the team"
+            ],
+            "pred_extracted": [
+                "The table presents the top 10 teams in a league, ranking them by points earned. Each row includes the team's position, team name, total points, matches played, draws, losses, goals against, and goal difference. Notable trends include Palmeiras leading with 27 points and a strong goal difference, while America - RJ has the lowest points and a negative goal difference."
+            ],
+            "answer": [
+                "The table outlines the standings of a football league, providing details on each team's position, points, games played, draws, losses, goals against, and goal difference. Notable trends include Palmeiras leading with a significant positive goal difference, and America - RJ at the bottom with the most negative goal difference."
+            ],
+            "rouge_l": [
+                61.36363586776861
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_328",
+            "pred": [
+                "1. The eight viewer figures are 9.43, 9.89, 9.40, 9.14, 8.35, 7.38, 9.62, and 11.47 million.\n2. Their sum is 72.88 million, so the average is \\(72.88 \\div 8 = 9.11\\) million.\n3. Using the sample stand"
+            ],
+            "pred_extracted": [
+                "9.11, 1.06"
+            ],
+            "answer": [
+                "9.34, 1.18"
+            ],
+            "rouge_l": [
+                49.99999950000001
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_329",
+            "pred": [
+                "1. The table defines points as \\(3 \\times \\text{wins} + \\text{draws}\\).\n2. Every team’s points equal three times its wins plus its draws. For example, Olimpia has \\(3 \\times 4 + 4 = 16\\) points, while"
+            ],
+            "pred_extracted": [
+                "wins, draws"
+            ],
+            "answer": [
+                "wins"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_330",
+            "pred": [
+                "1. Compare municipalities with similar areas but different HDI values. For example, Arroyo Seco (731.17 km², HDI 0.7029, density 17.1) and Cadereyta de Montes (1,131.0 km², HDI 0.7074, density 50.6) h"
+            ],
+            "pred_extracted": [
+                "Positive impact"
+            ],
+            "answer": [
+                "Positive impact"
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_331",
+            "pred": [
+                "1. **Apps:** The number of appearances fluctuates between 20 and 30, with no consistent upward or downward trend.\n2. **Tries:** It rises from 0 in 2004 to 24 in 2005, then falls to 8, 19, and 10 over "
+            ],
+            "pred_extracted": [
+                "Increasing trend, Increasing trend"
+            ],
+            "answer": [
+                "No clear trend"
+            ],
+            "rouge_l": [
+                33.33333283333334
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_332",
+            "pred": [
+                "1. Review the “highest viewers (millions)” column: most values range from 8.84 to 14.99 million, while row 10 has 13.48 million, which is within that range.\n2. Review the “lowest viewers (millions)” c"
+            ],
+            "pred_extracted": [
+                "No anomalies are detected in the table."
+            ],
+            "answer": [
+                "No anomalies are detected in the table."
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_333",
+            "pred": [
+                "1. Compare each party’s First Duma and Fourth Duma seat totals, using the listed values and treating “–” as zero.\n2. Calculate the percentage increase as \\((\\text{Fourth Duma seats} - \\text{First Duma"
+            ],
+            "pred_extracted": [
+                "Rightists"
+            ],
+            "answer": [
+                "Rightists"
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_334",
+            "pred": [
+                "1. The top 5 ranked countries are China, Italy, the United States, France, and Spain.\n2. Calculate each country’s annual growth rate from 2010 to 2011:\n   - China: \\((9,174,280 - 8,651,831) / 8,651,83"
+            ],
+            "pred_extracted": [
+                "2081.67"
+            ],
+            "answer": [
+                "-0.75%"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_335",
+            "pred": [
+                "1. The table contains six countries or territories: Cuba, the Cayman Islands (UK), the Dominican Republic, Haiti, Jamaica, and Puerto Rico (USA).\n2. The main columns are:\n   - **country with flag:** I"
+            ],
+            "pred_extracted": [
+                "The table presents data on the area, estimated population, population density, and capital of six countries or territories: Cuba, the Cayman Islands (UK), the Dominican Republic, Haiti, Jamaica, and Puerto Rico (USA). The Cayman Islands have the smallest area but the highest population density, while Cuba is the largest in area and Jamaica has the lowest population density. The Dominican Republic has the largest population, and Haiti has the highest population density among these territories."
+            ],
+            "answer": [
+                "The table provides comprehensive data on various Caribbean countries and territories, encompassing their area, population estimates as of July 2005, population density, and capitals. This dataset includes both independent nations and territories governed by other countries, with significant variations in size, population, and density across the regions listed."
+            ],
+            "rouge_l": [
+                22.22222172320989
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_336",
+            "pred": [
+                "1. Use the 23 county rows, excluding the aggregate “united states” and “new mexico” rows.\n2. Pair each county’s median household income with its population.\n3. Calculate the Pearson correlation coeffi"
+            ],
+            "pred_extracted": [
+                "Weak negative correlation, -0.22"
+            ],
+            "answer": [
+                "No correlation, 0.15"
+            ],
+            "rouge_l": [
+                22.222221728395073
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_337",
+            "pred": [
+                "1. **Location:** Schools in Belfast have the most outright titles, ranging from 1 to 35, while schools in other locations generally have 0–9 outright titles. This is the clearest location-based patter"
+            ],
+            "pred_extracted": [
+                "Location, Shared Titles, Runners-Up"
+            ],
+            "answer": [
+                "Total Finals"
+            ],
+            "rouge_l": [
+                0.0
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_338",
+            "pred": [
+                "1. The table lists eight crime categories: Murder, Rape, Robbery, Aggravated Assault, Violent Crime, Burglary, Larceny – theft, Motor Vehicle Theft, and Non-violent Crime.\n2. For each crime, it report"
+            ],
+            "pred_extracted": [
+                "The table presents the reported offenses and crime rates per 100,000 residents for various crimes in Killeen, Texas, and the United States. Killeen has higher reported offenses and rates for most crimes compared to Texas and the U.S., with the highest discrepancies observed in larceny and aggravated assault."
+            ],
+            "answer": [
+                "The table displays crime statistics for Killeen, Texas, in comparison to the U.S., encompassing various categories such as Murder, Rape, Robbery, and others. It details the number of reported offenses and the rates per 100,000 inhabitants. Notably, Killeen exhibits higher crime rates across most categories compared to both Texas and the U.S. averages, with a notable exception in Motor vehicle theft, where Killeen's rate is lower."
+            ],
+            "rouge_l": [
+                52.17391256710776
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_339",
+            "pred": [
+                "1. Use the five yearly application counts and their corresponding offer rates.\n2. The application counts are 41,000, 42,335, 39,670, 37,280, and 33,825.\n3. The offer rates are 89.7%, 86.4%, 90.8%, 88."
+            ],
+            "pred_extracted": [
+                "Weak positive correlation, 0.22"
+            ],
+            "answer": [
+                "No correlation, 0.22"
+            ],
+            "rouge_l": [
+                66.66666617283951
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_340",
+            "pred": [
+                "1. **Area:** The table shows no consistent relationship between area and population. For example, Port Harcourt has the largest area (109 km²) but the highest population (541,115), while smaller LGAs "
+            ],
+            "pred_extracted": [
+                "No clear impact"
+            ],
+            "answer": [
+                "No clear impact"
+            ],
+            "rouge_l": [
+                99.9999995
+            ],
+            "correct": [
+                true
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_341",
+            "pred": [
+                "1. The table contains data on 27 member states, including their population in millions, number of Members of the European Parliament (MEPs), inhabitants per MEP, and influence score.\n2. The population"
+            ],
+            "pred_extracted": [
+                "The table presents data on 27 member states of the European Union, including their population in millions, number of Members of the European Parliament (MEPs), inhabitants per MEP, and influence score. The data helps in understanding the population distribution, MEP allocation, and relative influence of each member state."
+            ],
+            "answer": [
+                "The table presents data on the representation of various member states in a legislative body, detailing each state's population, number of MEPs, inhabitants per MEP, and a calculated influence score. It highlights the balance of representation and influence among member states, showing that smaller states have fewer inhabitants per MEP, potentially increasing their per capita influence in legislative decisions."
+            ],
+            "rouge_l": [
+                42.1052626634349
+            ],
+            "correct": [
+                false
+            ]
+        },
+        {
+            "example_abbr": "tablebench_analysis_other_342",
+            "pred": [
+                "1. The table lists 32 council areas in Scotland, ranking them by the number of speakers associated with each area.\n2. It includes four columns: rank, council area, number of speakers, and population.\n"
+            ],
+            "pred_extracted": [
+                "The table presents the distribution of speakers across 32 different council areas in Scotland, ranked by the number of speakers. The data includes the rank, council area, number of speakers, and population. The table shows that the City of Glasgow has the highest number of speakers, while several smaller council areas have a relatively high number of speakers per capita."
+            ],
+            "answer": [
+                "The table provides an overview of language speaker distribution across 32 council areas, ranked by speaker count. It details the total population of each area and the corresponding percentage of speakers. The data highlights significant variations in language speaker distribution, with \"na h - eileanan siar\" having the highest concentration of speakers."
+            ],
+            "rouge_l": [
+                32.911391905784335
+            ],
+            "correct": [
+                false
+            ]
+        }
+    ]
+}

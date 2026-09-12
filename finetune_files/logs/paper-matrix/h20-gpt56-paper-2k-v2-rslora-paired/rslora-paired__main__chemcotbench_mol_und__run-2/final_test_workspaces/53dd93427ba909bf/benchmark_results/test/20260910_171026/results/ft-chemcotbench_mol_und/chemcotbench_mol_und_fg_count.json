@@ -1,0 +1,556 @@
+{
+    "mae": 0.06,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CNc1ncnc(-c2cccnc2Oc2cc(C(=O)Nc3cccc(C(F)(F)F)c3)ccc2C)n1, Fragment Name: side-chain aldehydes or ketones.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one carbonyl group, `C(=O)N`, which is an amide and is not counted as a side-chain aldehyde or ketone. No other carbonyl groups are present.\n{\"output\":\"0\"}",
+            "predictions": "The molecule contains one carbonyl group, `C(=O)N`, which is an amide and is not counted as a side-chain aldehyde or ketone. No other carbonyl groups are present.\n{\"output\":\"0\"}",
+            "references": "1"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC(=O)c1cn(Cc2ccc3c(-c4ccc(F)cc4)cc(C(N)=O)nc3c2)cn1, Fragment Name: carbonyl methyl ester.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one carbonyl methyl ester group: the terminal `COC(=O)` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one carbonyl methyl ester group: the terminal `COC(=O)` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COC(=O)c1cccc(-c2cccc(OCC(O)CN3CCc4ccccc4C3)c2)c1, Fragment Name: carbonyl methyl ester.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one carbonyl methyl ester group: the single `C(=O)O–CH3` unit. The other carbonyl belongs to a ketone and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one carbonyl methyl ester group: the single `C(=O)O–CH3` unit. The other carbonyl belongs to a ketone and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCCCCNc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1, Fragment Name: halogens.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains two chlorine atoms, each attached to a benzene ring. Therefore, there are 2 halogen occurrences.\n{\"output\":\"2\"}",
+            "predictions": "The molecule contains two chlorine atoms, each attached to a benzene ring. Therefore, there are 2 halogen occurrences.\n{\"output\":\"2\"}",
+            "references": "2"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCC1OC(C(C)=CC(C)C=CC2C(C)C2C=CC2OC(CC(C)=O)CC(O)C2O)CC=C1C, Fragment Name: terminal aldehyde.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one terminal aldehyde group: the single `C(=O)` at the end of the side chain `CC(C)=O`. The other carbonyl is part of an ether and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one terminal aldehyde group: the single `C(=O)` at the end of the side chain `CC(C)=O`. The other carbonyl is part of an ether and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1ccccc1-c1ccc(CC(NC(=O)Cn2cnnn2)C(=O)O)cc1, Fragment Name: methoxy.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one methoxy group, represented by the single `O–CH3` unit attached to the aromatic ring. No other oxygen atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one methoxy group, represented by the single `O–CH3` unit attached to the aromatic ring. No other oxygen atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C, Fragment Name: cyclopropyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one cyclopropyl group, represented by the ring `C3CC3`. The other ring is a phenyl ring and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one cyclopropyl group, represented by the ring `C3CC3`. The other ring is a phenyl ring and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1, Fragment Name: primary amines.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one primary amine: the terminal `–NH₂` group attached to the aromatic ring. The other nitrogen atoms are aromatic nitrogens or are part of a heterocycle and are not counted as amines.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one primary amine: the terminal `–NH₂` group attached to the aromatic ring. The other nitrogen atoms are aromatic nitrogens or are part of a heterocycle and are not counted as amines.\n{\"output\":\"1\"}",
+            "references": "2"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1, Fragment Name: nitro.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one nitro group, represented by `[N+](=O)[O-]`. The other nitrogen atoms belong to amide and sulfonamide groups and are not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one nitro group, represented by `[N+](=O)[O-]`. The other nitrogen atoms belong to amide and sulfonamide groups and are not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#Cc1ccc(Oc2ccc(NC(=O)CC(CC(=O)O)c3ccccc3)cc2)cc1, Fragment Name: carboxylic acids.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one carboxylic acid group, represented by the terminal `CC(=O)O` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one carboxylic acid group, represented by the terminal `CC(=O)O` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)CC1, Fragment Name: carboxylic acids.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one carboxylic acid group, represented by the terminal `C(=O)O` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one carboxylic acid group, represented by the terminal `C(=O)O` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOC(=O)c1cc2cc(C3(Cc4ccccc4)CCNC3)ccc2[nH]1, Fragment Name: ethoxy.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one ethoxy group, represented by the single `CCO–C(=O)` unit. The other oxygen is part of a phenolic hydroxyl group and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one ethoxy group, represented by the single `CCO–C(=O)` unit. The other oxygen is part of a phenolic hydroxyl group and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C#Cc1cc(Oc2cnc(NCC(C)O)nc2N)c(C(C)C)cc1OC, Fragment Name: acetylenes.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one acetylene group, identified by the single carbon–carbon triple bond (`C#C`). No other triple bonds occur.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one acetylene group, identified by the single carbon–carbon triple bond (`C#C`). No other triple bonds occur.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C[C@H](NC(=O)NCCC[S@](C)=O)c1ccc(Cl)s1, Fragment Name: methyl sulfinyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one sulfur center with an implicit hydrogen and one single bond to carbon, corresponding to one methyl sulfinyl group (–S(=O)–CH₃). No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one sulfur center with an implicit hydrogen and one single bond to carbon, corresponding to one methyl sulfinyl group (–S(=O)–CH₃). No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=S1(=O)C[C@@H](Nc2ccccc2)[C@@H](S(=O)(=O)[O-])C1, Fragment Name: sulfonic acid.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one sulfonic acid group, `S(=O)(=O)[O-]`, with two S=O bonds and a negative oxygen. The other sulfur is a sulfonyl group, `S(=O)`, and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one sulfonic acid group, `S(=O)(=O)[O-]`, with two S=O bonds and a negative oxygen. The other sulfur is a sulfonyl group, `S(=O)`, and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COCCNC1CCC(Nc2cc(-c3nc(NCC4CCOCC4)ccc3Cl)c(Cl)cn2)CC1, Fragment Name: methoxy.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one methoxy group: the terminal methyl group attached to the ether oxygen, `–O–CH3`. No other oxygen atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one methoxy group: the terminal methyl group attached to the ether oxygen, `–O–CH3`. No other oxygen atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#[N+]c1[nH]nc2nnc(-c3ccccc3)c(-c3ccccc3)c12, Fragment Name: diazo.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one diazo group, represented by the single N#[N+] unit. The two aromatic phenyl rings are not diazo groups.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one diazo group, represented by the single N#[N+] unit. The two aromatic phenyl rings are not diazo groups.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: N#Cc1cc2cnc(NCc3ccccc3)nc2n(C2CCCC2)c1=O, Fragment Name: nitriles.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one nitrile group, identified by the single terminal **N#C** unit. No other carbon–nitrogen triple bonds occur.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one nitrile group, identified by the single terminal **N#C** unit. No other carbon–nitrogen triple bonds occur.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1c(N2CCCC(N)C2)c(F)c(N)c2c(=O)c(C(=O)O)cn(C3CC3)c12, Fragment Name: cyclopropyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one cyclopropyl group, represented by the ring `C3CC3`. The other nitrogen-containing ring is not cyclopropane.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one cyclopropyl group, represented by the ring `C3CC3`. The other nitrogen-containing ring is not cyclopropane.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc(N)c(Cl)cc1C(=O)OCCN1CCC(C(N)=O)CC1, Fragment Name: ester.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one ester group: the terminal `C(=O)OCC–` unit. The other carbonyl is an amide (`C(N)=O`), so it is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one ester group: the terminal `C(=O)OCC–` unit. The other carbonyl is an amide (`C(N)=O`), so it is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "20": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3ccnc(N4CCCC(F)(F)C4)n3)C2)cc1, Fragment Name: carbonyl methyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one carbonyl group, `CC(=O)N`, where the carbonyl carbon is bonded to an ethyl group. Therefore, there is one carbonyl methyl occurrence.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one carbonyl group, `CC(=O)N`, where the carbonyl carbon is bonded to an ethyl group. Therefore, there is one carbonyl methyl occurrence.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "21": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(S(C)(=O)=O)c2cn1)c1ccccc1, Fragment Name: methyl sulfonyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one methyl sulfonyl group, represented by the single `S(C)(=O)=O` linkage. The other sulfur is part of the fused heteroaromatic ring and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one methyl sulfonyl group, represented by the single `S(C)(=O)=O` linkage. The other sulfur is part of the fused heteroaromatic ring and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "22": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1nn(C(C)C)cc1S(=O)(=O)Cl, Fragment Name: sulfonyl chloride.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one sulfonyl chloride group, represented by the single `S(=O)(=O)Cl` unit. No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one sulfonyl chloride group, represented by the single `S(=O)(=O)Cl` unit. No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "23": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1, Fragment Name: primary sulfonamide.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one primary sulfonamide group, `NS(=O)(=O)c1...cc1`. The sulfur is bonded to two oxygens and one aromatic carbon, with no other sulfur atoms. The other sulfonyl groups are not counted as primary sulfonamides.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one primary sulfonamide group, `NS(=O)(=O)c1...cc1`. The sulfur is bonded to two oxygens and one aromatic carbon, with no other sulfur atoms. The other sulfonyl groups are not counted as primary sulfonamides.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "24": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCC(C(=O)NC(C#N)CC(N)=O)N(Cc1ccc(-c2cccc(F)c2F)cc1)S(C)(=O)=O, Fragment Name: nitriles.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one nitrile group, identified by the single carbon–nitrogen triple bond (`C#N`). The other nitrogen atoms are amine or amide groups and are not nitriles.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one nitrile group, identified by the single carbon–nitrogen triple bond (`C#N`). The other nitrogen atoms are amine or amide groups and are not nitriles.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "25": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOc1cc(NC(=O)c2ccccc2)c(OCC)cc1[N+]#N, Fragment Name: diazo.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one diazo group, represented by `[N+]#N`. The other nitrogen is part of an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one diazo group, represented by `[N+]#N`. The other nitrogen is part of an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "26": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(CCCCCCc1ccccc1)c1ncc(-c2cc([N+](=O)[O-])ccn2)o1, Fragment Name: oximes.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one oxime group, represented by the single `c2cc([N+](=O)[O-])ccn2` unit. The other nitrogen is part of a pyridine ring and is not an oxime.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one oxime group, represented by the single `c2cc([N+](=O)[O-])ccn2` unit. The other nitrogen is part of a pyridine ring and is not an oxime.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "27": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOCn1oc(=O)c(-c2ccc(F)cc2)c1-c1ccnc(Oc2ccccc2O)n1, Fragment Name: ethoxy.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one ethoxy group, represented by the terminal `CCO–` unit attached to the heteroaromatic ring. The other oxygen atoms belong to phenolic hydroxyl groups and are not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one ethoxy group, represented by the terminal `CCO–` unit attached to the heteroaromatic ring. The other oxygen atoms belong to phenolic hydroxyl groups and are not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "28": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OCc3ccccc3)c2)[nH]1, Fragment Name: methylthio.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one methylthio group: the terminal sulfur is single-bonded to a methyl carbon (C–S–H) and to the ring carbon. No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one methylthio group: the terminal sulfur is single-bonded to a methyl carbon (C–S–H) and to the ring carbon. No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "29": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C[C@@H]1CCC/C(=N/[NH+]=C(/[S-])NCc2ccccc2)C1, Fragment Name: thiols.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one terminal sulfur atom, written as `[S-]`, bonded to the aromatic ring. This is the only sulfur occurrence and is a negatively charged thiolate group, so it counts as one thiol occurrence.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one terminal sulfur atom, written as `[S-]`, bonded to the aromatic ring. This is the only sulfur occurrence and is a negatively charged thiolate group, so it counts as one thiol occurrence.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "30": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(NC(=S)NC(=O)c2cccc([N+](=O)[O-])c2)cc1, Fragment Name: thiocarbonyls.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one thiocarbonyl group, represented by the single sulfur center in the `NC(=S)N` unit. The other sulfur is a sulfonamide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one thiocarbonyl group, represented by the single sulfur center in the `NC(=S)N` unit. The other sulfur is a sulfonamide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "31": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1cc(=O)oc2cc(NC(=O)Cc3ccc(Br)cc3)ccc12, Fragment Name: halogens.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one halogen atom: a single bromine substituent on the phenyl ring. Therefore, the halogen count is 1.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one halogen atom: a single bromine substituent on the phenyl ring. Therefore, the halogen count is 1.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "32": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21, Fragment Name: nitriles.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains two nitrile groups, each represented by a single carbon–nitrogen triple bond (`C#N`). No other nitrile occurrences are present.\n{\"output\":\"2\"}",
+            "predictions": "The molecule contains two nitrile groups, each represented by a single carbon–nitrogen triple bond (`C#N`). No other nitrile occurrences are present.\n{\"output\":\"2\"}",
+            "references": "2"
+        },
+        "33": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1cc(C#N)cc(C(=O)c2c(C(C)C)c(=O)[nH]c(=O)n2Cc2cc(N)nc(F)c2F)c1, Fragment Name: primary amines.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one primary amine: the terminal `–CH2–NH–` group attached to the aromatic ring. The other nitrogen atoms are ring nitrogens and are not amines.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one primary amine: the terminal `–CH2–NH–` group attached to the aromatic ring. The other nitrogen atoms are ring nitrogens and are not amines.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "34": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)N1c2ccc(S(=O)(=O)N3CCC(C(=O)Nc4ncccc4C)CC3)cc2CC1C, Fragment Name: terminal aldehyde.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one terminal aldehyde group: the single `C(=O)` at the end of the side chain `C(=O)Nc4ncccc4C`. The other carbonyl is an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one terminal aldehyde group: the single `C(=O)` at the end of the side chain `C(=O)Nc4ncccc4C`. The other carbonyl is an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "35": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1, Fragment Name: methyl amide.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one methyl amide group, `CC(=O)N`, where the carbonyl carbon is bonded to a methyl group and an aminomethyl nitrogen. The other nitrogen is part of a heterocycle and is not counted as a methyl amide.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one methyl amide group, `CC(=O)N`, where the carbonyl carbon is bonded to a methyl group and an aminomethyl nitrogen. The other nitrogen is part of a heterocycle and is not counted as a methyl amide.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "36": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(NC(Cc1ccccc1)c1nc2ccccc2[nH]1)c1cccc([N+](=O)[O-])c1, Fragment Name: nitro.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one nitro group, represented by `[N+](=O)[O-]`. The other nitrogen is part of an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one nitro group, represented by `[N+](=O)[O-]`. The other nitrogen is part of an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "37": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CSc1ncc(C(=O)Nc2ccc(C)c(Cl)c2)c(-c2ccccc2)n1, Fragment Name: methylthio.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one methylthio group: the terminal sulfur is single-bonded to a methyl carbon (C–S) and to the ring carbon, giving `C–S–ring`. No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one methylthio group: the terminal sulfur is single-bonded to a methyl carbon (C–S) and to the ring carbon, giving `C–S–ring`. No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "38": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: NS(=O)(=O)c1ccc(NC(=O)CN2CCN(c3ccccc3)CC2)cc1, Fragment Name: primary sulfonamide.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one sulfonamide group, `NS(=O)(=O)c1...cc1`, where sulfur is bonded to two oxygens and a carbon. This is a sulfonyl group, not a primary sulfonamide. No other sulfonamide occurrences are present.\n{\"output\":\"0\"}",
+            "predictions": "The molecule contains one sulfonamide group, `NS(=O)(=O)c1...cc1`, where sulfur is bonded to two oxygens and a carbon. This is a sulfonyl group, not a primary sulfonamide. No other sulfonamide occurrences are present.\n{\"output\":\"0\"}",
+            "references": "1"
+        },
+        "39": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC1(C)[C@H]2CC[C@]1(C)C(=O)[C@@H]2N=C=S, Fragment Name: isothiocyanate.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one isothiocyanate group, represented by the single `N=C=S` unit. The other nitrogen is part of a cyclic amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one isothiocyanate group, represented by the single `N=C=S` unit. The other nitrogen is part of a cyclic amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "40": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(C(=O)Nc1ncc(SCc2ncc(C(C)(C)C)o2)s1)c1ccccc1, Fragment Name: t-butyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one tert-butyl group, represented by the single `C(C)(C)C` unit attached to the heteroaromatic ring. No other t-butyl groups occur.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one tert-butyl group, represented by the single `C(C)(C)C` unit attached to the heteroaromatic ring. No other t-butyl groups occur.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "41": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc2ncnc(Nc3ccc(C(F)(F)F)cc3)c2c(OC)c1OC, Fragment Name: trifluoromethyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one trifluoromethyl group, represented by the single `C(F)(F)F` substituent on the aromatic ring. No other fluorine atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one trifluoromethyl group, represented by the single `C(F)(F)F` substituent on the aromatic ring. No other fluorine atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "42": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: C=CCn1c(SCc2nnc([S-])n2-c2ccccc2)nnc1-c1ccccc1, Fragment Name: thiols.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one terminal sulfur atom, written as `S`, bonded to the ring carbon. This sulfur has an implicit hydrogen, forming one thiol group (`–SH`). No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one terminal sulfur atom, written as `S`, bonded to the ring carbon. This sulfur has an implicit hydrogen, forming one thiol group (`–SH`). No other sulfur atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "43": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCOC(=O)C1(C(=O)NC(Cc2ccc(-c3ccccc3OC)cc2)C(=O)O)CCCO1, Fragment Name: ethoxy.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one ethoxy group, represented by the terminal `CCOC(=O)–` unit. The other oxygens belong to ester or ether linkages and are not counted as ethoxy groups.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one ethoxy group, represented by the terminal `CCOC(=O)–` unit. The other oxygens belong to ester or ether linkages and are not counted as ethoxy groups.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "44": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1, Fragment Name: trifluoromethyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one trifluoromethyl group, represented by the single `C(F)(F)F` substituent on the heteroaromatic ring. No other fluorine atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one trifluoromethyl group, represented by the single `C(F)(F)F` substituent on the heteroaromatic ring. No other fluorine atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "45": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COS(=O)(=O)[C@@H]1C(=O)[C@]2(C)CC[C@H]1C2(C)C, Fragment Name: methyl ester sulfonyl.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one sulfonyl group, `C(=O)(=O)S`, attached to the ring carbon. It is bonded to a methyl group, forming one methyl ester sulfonyl occurrence. No other sulfonyl groups are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one sulfonyl group, `C(=O)(=O)S`, attached to the ring carbon. It is bonded to a methyl group, forming one methyl ester sulfonyl occurrence. No other sulfonyl groups are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "46": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC12CCN(C(=O)C3CCC(C(=O)O)CC3)C(Cc3c(O)cccc31)C2(C)C, Fragment Name: carboxylic acids.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one carboxylic acid group, represented by the `C(=O)O` unit attached to the ring. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one carboxylic acid group, represented by the `C(=O)O` unit attached to the ring. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "47": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCc1n[nH]c2c([O-])nc(-c3cc(S(=O)(=O)Cl)ccc3OCC)nc12, Fragment Name: sulfonyl chloride.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one sulfonyl chloride group, `S(=O)(=O)Cl`, attached to the aromatic ring. The two double-bonded oxygens belong to the same sulfonyl center and are not counted separately.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one sulfonyl chloride group, `S(=O)(=O)Cl`, attached to the aromatic ring. The two double-bonded oxygens belong to the same sulfonyl center and are not counted separately.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "48": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1, Fragment Name: ester.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one ester group: the terminal `C(=O)OCC–` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one ester group: the terminal `C(=O)OCC–` unit. The other carbonyl belongs to an amide and is not counted.\n{\"output\":\"1\"}",
+            "references": "1"
+        },
+        "49": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: COc1cc2ncnc(Nc3ccc(F)c(Cl)c3)c2cc1OCCNC(C)C, Fragment Name: methoxy.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains one methoxy group, represented by the single `O–CH3` unit attached to the aromatic ring. No other oxygen atoms are present.\n{\"output\":\"1\"}",
+            "predictions": "The molecule contains one methoxy group, represented by the single `O–CH3` unit attached to the aromatic ring. No other oxygen atoms are present.\n{\"output\":\"1\"}",
+            "references": "1"
+        }
+    }
+}

@@ -1,0 +1,293 @@
+{
+  "candidate_id": "durable_checkpoint__rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61__step-252__f213f653db27",
+  "source": "durable_checkpoint",
+  "workspace_id": "rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61",
+  "checkpoint_step": 252,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-2/workspace/.ft_model_checkpoints/rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61/output/checkpoint-252",
+  "selection_signature": "38d5a9ea355f3c20e907d5e586899e0c3c154e68a7c2d11370a67337b6b17582",
+  "formal_training_evidence_signature": "6c73704201c6e182e9a69bc3af399b4f966973a23291df3d2b2fe3e7a22dbb81",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-2",
+  "benchmark": "chemcotbench_mol_opt",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "f27ef36d551230aa23704839e71de627c5a9fa80efcf5c94da27f04068056d12",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:34:59.920215+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:42:08.275906+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_mol_opt_drd": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 46.0,
+        "scaffold_soft": 70.04,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 90.0
+      },
+      "chemcotbench_mol_opt_gsk": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 10.0,
+        "scaffold_soft": 38.85,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 66.0
+      },
+      "chemcotbench_mol_opt_jnk": {
+        "best_rate": 0.0,
+        "mean_improvement": 0.0,
+        "scaffold_hard": 20.0,
+        "scaffold_soft": 54.48,
+        "success_rate": 0.0,
+        "total_count": 50.0,
+        "valid_score_rate": 0.0,
+        "valid_smiles_rate": 86.0
+      },
+      "chemcotbench_mol_opt_logp": {
+        "best_rate": 58.0,
+        "mean_improvement": 0.91,
+        "scaffold_hard": 20.0,
+        "scaffold_soft": 56.29,
+        "success_rate": 70.0,
+        "total_count": 50.0,
+        "valid_score_rate": 82.0,
+        "valid_smiles_rate": 82.0
+      },
+      "chemcotbench_mol_opt_qed": {
+        "best_rate": 20.0,
+        "mean_improvement": 0.15,
+        "scaffold_hard": 32.0,
+        "scaffold_soft": 55.35,
+        "success_rate": 68.0,
+        "total_count": 50.0,
+        "valid_score_rate": 72.0,
+        "valid_smiles_rate": 72.0
+      },
+      "chemcotbench_mol_opt_solubility": {
+        "best_rate": 44.0,
+        "mean_improvement": 0.52,
+        "scaffold_hard": 32.0,
+        "scaffold_soft": 54.53,
+        "success_rate": 62.0,
+        "total_count": 50.0,
+        "valid_score_rate": 74.0,
+        "valid_smiles_rate": 74.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCC3CCOCC3)c2cn1)c1ccccc1",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine core. Key substituents include a urea group (NC(=O)N), a morpholine-derived ether (OCC3CCOCC3), and a benzyl group (c1ccccc1). The morpholine-like group (OCC3CCOCC3) is a non-aromatic, flexible ether ring.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from aromatic/hydrophobic interactions and hydrogen-bond donors/acceptors. The morpholine group (OCC3CCOCC3) may reduce binding due to excessive flexibility, lack of π-interactions, and suboptimal hydrogen-bonding capacity.\",\n    \"Limitation in Source Molecule for Property\": \"The morpholine-derived ether (OCC3CCOCC3) lacks aromaticity and rigid π-systems, limiting hydrophobic/stacking interactions with the target. Its oxygen atom may also reduce membrane permeability compared to nitrogen-containing heterocycles.\",\n    \"Optimization for Source Molecule\": \"Replace the morpholine ether (OCC3CCOCC3) with a pyrrole ring (c3ccncc3) to introduce aromaticity, rigidity, and hydrogen-bonding capability. Pyrrole’s smaller size and lower basicity may better fit the hydrophobic pocket of GSK3-beta.\",\n    \"Final Target Molecule\": \"CC(NC(=O)Nc1cc2[nH]nc(-c3ccncc3)c2cn1)c1ccccc1\"\n}\n{\"output\":\"CC(NC(=O)Nc1cc2[nH]nc(-c3ccncc3)c2cn1)c1ccccc1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCC3CCOCC3)c2cn1)c1ccccc1.\n"
+      },
+      {
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyrrole ring fused to a pyrimidine core. Key substituents include a urea group (NC(=O)N), a difluoromethyl-piperazine-like chain (CNCC(F)F), and a benzyl group (c1ccccc1). The difluoromethyl-piperazine-like chain is a flexible, polar moiety attached to the pyrrole system.\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from rigid, planar heterocycles that enhance target binding via π-π stacking and hydrogen bonding. The urea group provides hydrogen-bonding capacity, but the flexible difluoromethyl-piperazine-like chain may reduce binding affinity due to conformational entropy and suboptimal hydrophobic interactions.\",\n    \"Limitation in Source Molecule for Property\": \"The difluoromethyl-piperazine-like chain (CNCC(F)F) introduces excessive flexibility, limiting optimal positioning in the binding pocket. Its polar nature may also reduce membrane permeability or disrupt hydrophobic interactions critical for inhibition.\",\n    \"Optimization for Source Molecule\": \"Replace the flexible difluoromethyl-piperazine-like chain with a rigid, fluorinated aromatic heterocycle (e.g., fluoropyridine) to enforce planar geometry and enhance hydrophobic/π-π interactions. This retains hydrogen-bonding potential via the pyrrole urea while improving binding pose stability.\",\n    \"Final Target Molecule\": \"CC(NC(=O)Nc1cc2[nH]nc(-c3ccncc3)c2cn1)c1ccccc1\"\n}\n{\"output\":\"CC(NC(=O)Nc1cc2[nH]nc(-c3ccncc3)c2cn1)c1ccccc1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1.\n"
+      },
+      {
+        "gold": "COC(=O)c1ccc(=O)n(Cc2ccc3c(c2)OCO3)c1",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a methyl carbonate group (COC(=O)), a benzene ring with a ketone (=O), and a substituted amine group connected to a benzodioxole moiety (OCO3) via a methylene linker. The benzodioxole contributes to aromaticity and potential metabolic stability.\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding interactions (e.g., with hinge region residues) and optimal steric fit. The ketone and benzodioxole may provide binding affinity, but the methyl carbonate group (COC(=O)) is metabolically labile and may hinder interactions.\",\n    \"Limitation in Source Molecule for Property\": \"The methyl carbonate group (COC(=O)) is prone to hydrolysis, reducing metabolic stability. The absence of a strong hydrogen bond acceptor/donor in the amine region may limit JNK3 binding affinity.\",\n    \"Optimization for Source Molecule\": \"Replace the methyl carbonate (COC(=O)) with a morpholine ring (N4CCOCC4), a bioisostere that enhances metabolic stability and introduces a hydrogen bond acceptor (oxygen). Retain the benzodioxole and ketone for aromatic stacking and hydrophobic interactions.\",\n    \"Final Target Molecule\": \"O=c1c(-c2ccc3c(c2)OCO3)cc(CN4CCOCC4)n1\"\n}\n{\"output\":\"O=c1c(-c2ccc3c(c2)OCO3)cc(CN4CCOCC4)n1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC(=O)c1ccc(=O)n(Cc2ccc3c(c2)OCO3)c1.\n"
+      },
+      {
+        "gold": "CN1CCc2cccc3c2C1Cc1cccc(O)c1-3",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a bicyclic system with a piperidine ring (C1CCNCC1 derivative) fused to a benzene ring. The substituent at the meta-position of the fused benzene ring is a hydroxyl group (-O). The structure lacks rigid heterocycles (e.g., piperazine, pyrrole) and has limited substituent diversity.\",\n    \"Property Analysis\": \"DRD2 activity often benefits from aromatic/hydrophobic substituents and hydrogen-bond acceptors/donors. Piperidine-based scaffolds are common in DRD2 ligands due to their conformational flexibility and interactions with the receptor's hydrophobic pockets.\",\n    \"Limitation in Source Molecule for Property\": \"The hydroxyl group (-O) may contribute to excessive polarity, reducing bioavailability. The lack of electron-withdrawing or hydrophobic substituents limits affinity for DRD2. The piperidine ring’s single nitrogen may restrict optimal charge interactions with the receptor.\",\n    \"Optimization for Source Molecule\": \"1) Replace the hydroxyl group (-O) with a fluorine atom (-F) to enhance lipophilicity and introduce an electron-withdrawing group. 2) Retain the piperidine scaffold for conformational flexibility. 3) Fluorine improves metabolic stability and binding affinity via halogen bonding.\",\n    \"Final Target Molecule\": \"CN1CCc2cccc3c2C1Cc1cccc(F)c1-3\"\n}\n{\"output\":\"CN1CCc2cccc3c2C1Cc1cccc(F)c1-3\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the DRD2 property (Dopamine D2 Receptor Activity) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CCc2cccc3c2C1Cc1cccc(O)c1-3.\n"
+      },
+      {
+        "gold": "C=CCN(c1ccc(C(=O)NCCCn2ccnc2)cc1)S(C)(=O)=O",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a sulfonamide group (S(=O)(=O)C), a vinyl group (C=C), an aromatic ring with a carbonyl (C=O) linked to a piperazine-like chain (NCCCn2ccnc2), and a methylsulfonyl group (C(S)(=O)=O). The piperazine-like chain terminates in a pyridine ring (n2ccnc2).\",\n    \"Property Analysis\": \"The molecule has moderate solubility due to the sulfonamide and polar groups. However, the pyridine ring (n2ccnc2) and the vinyl group (C=C) are hydrophobic, reducing water solubility. The piperazine-like chain (NCCCn2ccnc2) is partially polar but may not sufficiently offset the hydrophobicity.\",\n    \"Limitation in Source Molecule for Property\": \"The pyridine ring (n2ccnc2) and vinyl group (C=C) are hydrophobic, limiting solubility. The piperazine-like chain (NCCCn2ccnc2) is not fully optimized for polarity or hydrogen bonding.\",\n    \"Optimization for Source Molecule\": \"Replace the pyridine ring (n2ccnc2) with a more polar and hydrogen-bonding group, such as a morpholine (N2CCOCC2), which introduces an oxygen atom for enhanced hydrophilicity. Retain the sulfonamide and carbonyl groups for solubility. The vinyl group (C=C) could be retained or modified based on activity, but here it is kept.\",\n    \"Final Target Molecule\": \"C=CCN(c1ccc(C(=O)NCCCN2CCOCC2)cc1)S(C)(=O)=O.\"\n}\n{\"output\":\"C=CCN(c1ccc(C(=O)NCCCN2CCOCC2)cc1)S(C)(=O)=O.\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C=CCN(c1ccc(C(=O)NCCCn2ccnc2)cc1)S(C)(=O)=O.\n"
+      },
+      {
+        "gold": "CCC(O)c1ccc(OC)c(OC)c1",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzene ring substituted with three methoxy (-OCH3) groups and a hydroxyethyl (-OCH2CH3) group. The hydroxyethyl group is attached to the benzene ring via an ether linkage.\",\n    \"Property Analysis\": \"The solubility of the source molecule in water is limited due to the presence of hydrophobic groups (methyl and benzene rings) and the relatively non-polar hydroxyethyl group. The hydroxyethyl group provides some hydrophilicity but is insufficient for good aqueous solubility.\",\n    \"Limitation in Source Molecule for Property\": \"The hydroxyethyl group is not optimally polar or ionizable to enhance water solubility. The ether oxygen has limited hydrogen-bonding capacity compared to amines or carboxylic acids.\",\n    \"Optimization for Source Molecule\": \"Replace the hydroxyethyl group (-OCH2CH3) with a more polar and ionizable group, such as an amine (-NH2). This modification increases hydrogen-bonding potential and potential for salt formation, both of which improve water solubility.\",\n    \"Final Target Molecule\": \"CCCNc1ccc(OC)c(OC)c1\"\n}\n{\"output\":\"CCCNc1ccc(OC)c(OC)c1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(O)c1ccc(OC)c(OC)c1.\n"
+      },
+      {
+        "gold": "Cn1ccc(Oc2ccc3cc(NC(=O)C4CC4)ncc3c2)n1",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central piperazine ring (C1CNCCN1) substituted with a methyl group and linked via an ether to a biphenyl system. The biphenyl system has an amide group (NC(=O)) connected to a cyclopropane ring (C1CC1).\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from planar aromatic systems for target binding and hydrogen-bonding groups (e.g., amides). The cyclopropane in the source molecule introduces steric strain and rigidity, potentially reducing binding affinity.\",\n    \"Limitation in Source Molecule for Property\": \"The cyclopropane group (C1CC1) is conformationally rigid and sterically strained, which may hinder optimal interactions with the target's binding pocket. It lacks aromatic π-system complementarity for π-π stacking.\",\n    \"Optimization for Source Molecule\": \"Replace the cyclopropane with a planar aromatic pyrrole ring (C1=CC=CN1) to enhance π-π stacking and reduce steric strain. Pyrrole’s electron-rich nature and planar geometry improve target binding while retaining hydrogen-bonding capability via the amide.\",\n    \"Final Target Molecule\": \"Cn1ccc(Oc2ccc3cc(NC(=O)C4=CC=CN4)ncc3c2)n1\"\n}\n{\"output\":\"Cn1ccc(Oc2ccc3cc(NC(=O)C4=CC=CN4)ncc3c2)n1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1ccc(Oc2ccc3cc(NC(=O)C4CC4)ncc3c2)n1.\n"
+      },
+      {
+        "gold": "c1ccc(Nc2ccc(Oc3nccnc3C3CCOC3)cc2)nc1",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central pyridine ring (c1nc(Nc2ccc(Oc3nccnc3C3CCOC3)cc2)c1) with two aromatic substituents. The left substituent is an aniline group (N-linked to a benzene ring), and the right substituent includes a methoxy-linked pyrrole ring fused to a dioxane-like ring (Oc3nccnc3C3CCOC3).\",\n    \"Property Analysis\": \"JNK3 inhibition often requires hydrogen bonding with the kinase's hinge region and hydrophobic interactions with the ATP-binding pocket. The pyrrole ring (azole) in the right substituent may lack sufficient hydrogen-bonding capacity, and the dioxane-like ring (C3CCOC3) introduces excessive hydrophobicity without strategic polar interactions.\",\n    \"Limitation in Source Molecule for Property\": \"1) Pyrrole (azole) lacks strong hydrogen-bonding donors for hinge interaction. 2) Dioxane-like ring lacks directed polarity for optimal binding. 3) No electron-deficient aromatic system (e.g., pyrimidine) to enhance π-stacking or charge complementarity with JNK3.\",\n    \"Optimization for Source Molecule\": \"1) Replace pyrrole (C1=CC=CN1) with pyrimidine (electron-deficient, C1=CN=CN1) for hinge-region interactions. 2) Substitute dioxane-like ring with a morpholine (CCOCC) via an oxygen linker to balance hydrophobicity and introduce a hydrogen-bonding oxygen. 3) Retain aniline for basicity and solubility.\",\n    \"Final Target Molecule\": \"CCOCC1OC2CCN(c2nc(-c3ccccc3N)cc2C1)C2OC1C1CCOC1\"\n}\n{\"output\":\"CCOCC1OC2CCN(c2nc(-c3ccccc3N)cc2C1)C2OC1C1CCOC1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1ccc(Nc2ccc(Oc3nccnc3C3CCOC3)cc2)nc1.\n"
+      },
+      {
+        "gold": "Cc1ccccc1-c1ccc(CC2NC(=O)c3cc(Cl)ccc3N(C)C2=O)cc1",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a biphenyl scaffold with a methyl group on one benzene ring and a substituted cyclohexane-linked amide group on the other. The amide group includes a chlorinated benzene ring and a dimethylamino group (N(C)C2=O).\",\n    \"Property Analysis\": \"GSK3-beta inhibition often benefits from hydrogen-bond donors/acceptors and aromatic/heterocyclic motifs that engage the ATP-binding pocket. The dimethylamino group (N(C)C2=O) may limit hydrogen-bonding interactions due to its tertiary nature.\",\n    \"Limitation in Source Molecule for Property\": \"The dimethylamino group (N(C)C2=O) lacks a free NH group, reducing potential hydrogen-bond donor capacity. This may weaken binding affinity to GSK3-beta.\",\n    \"Optimization for Source Molecule\": \"Replace the dimethylamino group (N(C)C2=O) with a secondary amine-linked pyrrole (NCC2=CNC2). The pyrrole introduces a aromatic heterocycle for π-stacking and a secondary amine for hydrogen-bond donation, enhancing interactions with the kinase's hydrophobic pocket and catalytic site.\",\n    \"Final Target Molecule\": \"Cc1ccccc1-c1ccc(CC2NC(=O)c3cc(Cl)ccc3NCC2=CNC2)cc1\"\n}\n{\"output\":\"Cc1ccccc1-c1ccc(CC2NC(=O)c3cc(Cl)ccc3NCC2=CNC2)cc1\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccccc1-c1ccc(CC2NC(=O)c3cc(Cl)ccc3N(C)C2=O)cc1.\n"
+      },
+      {
+        "gold": "CCOc1ccc(CC(=O)Nc2c(C(N)=O)oc3ccc(Br)cc23)cc1OCC",
+        "model_output": "{\n    \"Structural Analysis of Source Molecule\": \"The source molecule contains a central benzoxazole core (C(N)=O attached to an oxygen-containing heterocycle) linked via an amide group to a substituted benzene ring. The benzoxazole has a brominated benzene substituent (Br), and the main benzene ring has ethoxy (OCC) groups at positions 1 and 4.\",\n    \"Property Analysis\": \"JNK3 inhibition often benefits from hydrophobic interactions, halogen bonding (e.g., Br), and planar aromatic systems for target binding. The ethoxy groups may introduce excessive polarity or steric bulk, potentially reducing membrane permeability or binding affinity.\",\n    \"Limitation in Source Molecule for Property\": \"The ethoxy groups (OCC) at positions 1 and 4 of the benzene ring may hinder optimal binding due to steric hindrance or high polarity. The bromine substituent (Br) on the benzoxazole's benzene ring may disrupt electronic balance or cause metabolic instability.\",\n    \"Optimization for Source Molecule\": \"1. Remove ethoxy groups (OCC) to reduce steric bulk and polarity. 2. Replace bromine (Br) on the benzoxazole's benzene ring with a hydrogen atom to improve electronic compatibility and metabolic stability. 3. Retain the central benzoxazole-amide scaffold to preserve core binding interactions.\",\n    \"Final Target Molecule\": \"CC(=O)Nc1c(C(N)=O)oc2ccc(Br)cc12\"\n}\n{\"output\":\"CC(=O)Nc1c(C(N)=O)oc2ccc(Br)cc12\"}",
+        "question": "You are a chemical assistent, Optimize the Source Molecule to improve the JNK3 property (c-Jun N-terminal kinase 3 inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOc1ccc(CC(=O)Nc2c(C(N)=O)oc3ccc(Br)cc23)cc1OCC.\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_mol_opt_drd": {
+      "best_rate": 0.0,
+      "mean_improvement": 0.0,
+      "scaffold_hard": 46.0,
+      "scaffold_soft": 70.04,
+      "success_rate": 0.0,
+      "total_count": 50.0,
+      "valid_score_rate": 0.0,
+      "valid_smiles_rate": 90.0
+    },
+    "chemcotbench_mol_opt_gsk": {
+      "best_rate": 0.0,
+      "mean_improvement": 0.0,
+      "scaffold_hard": 10.0,
+      "scaffold_soft": 38.85,
+      "success_rate": 0.0,
+      "total_count": 50.0,
+      "valid_score_rate": 0.0,
+      "valid_smiles_rate": 66.0
+    },
+    "chemcotbench_mol_opt_jnk": {
+      "best_rate": 0.0,
+      "mean_improvement": 0.0,
+      "scaffold_hard": 20.0,
+      "scaffold_soft": 54.48,
+      "success_rate": 0.0,
+      "total_count": 50.0,
+      "valid_score_rate": 0.0,
+      "valid_smiles_rate": 86.0
+    },
+    "chemcotbench_mol_opt_logp": {
+      "best_rate": 58.0,
+      "mean_improvement": 0.91,
+      "scaffold_hard": 20.0,
+      "scaffold_soft": 56.29,
+      "success_rate": 70.0,
+      "total_count": 50.0,
+      "valid_score_rate": 82.0,
+      "valid_smiles_rate": 82.0
+    },
+    "chemcotbench_mol_opt_qed": {
+      "best_rate": 20.0,
+      "mean_improvement": 0.15,
+      "scaffold_hard": 32.0,
+      "scaffold_soft": 55.35,
+      "success_rate": 68.0,
+      "total_count": 50.0,
+      "valid_score_rate": 72.0,
+      "valid_smiles_rate": 72.0
+    },
+    "chemcotbench_mol_opt_solubility": {
+      "best_rate": 44.0,
+      "mean_improvement": 0.52,
+      "scaffold_hard": 32.0,
+      "scaffold_soft": 54.53,
+      "success_rate": 62.0,
+      "total_count": 50.0,
+      "valid_score_rate": 74.0,
+      "valid_smiles_rate": 74.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "success_rate",
+      "label": "SR",
+      "value": 33.333333333333336,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "unweighted mean success_rate across six optimization views",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_opt_drd",
+          "metric": "success_rate",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_gsk",
+          "metric": "success_rate",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_jnk",
+          "metric": "success_rate",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_logp",
+          "metric": "success_rate",
+          "value": 70.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_qed",
+          "metric": "success_rate",
+          "value": 68.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_solubility",
+          "metric": "success_rate",
+          "value": 62.0
+        }
+      ]
+    },
+    {
+      "metric": "valid_smiles_rate",
+      "label": "VS",
+      "value": 78.33333333333333,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "unweighted mean valid_smiles_rate across six optimization views",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_opt_drd",
+          "metric": "valid_smiles_rate",
+          "value": 90.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_gsk",
+          "metric": "valid_smiles_rate",
+          "value": 66.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_jnk",
+          "metric": "valid_smiles_rate",
+          "value": 86.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_logp",
+          "metric": "valid_smiles_rate",
+          "value": 82.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_qed",
+          "metric": "valid_smiles_rate",
+          "value": 72.0
+        },
+        {
+          "dataset": "chemcotbench_mol_opt_solubility",
+          "metric": "valid_smiles_rate",
+          "value": 74.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_opt__run-2/validation_sweep/candidates/durable_checkpoint__rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61__step-252__f213f653db27/workspace"
+}

@@ -1,0 +1,114 @@
+{
+  "candidate_id": "durable_output__rslora__1664ee835e457741920723de28814cf5__d09c872a321e__b7d8144ac344",
+  "source": "durable_output",
+  "workspace_id": "rslora__1664ee835e457741920723de28814cf5__d09c872a321e",
+  "checkpoint_step": null,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__aime25__run-3/workspace/.ft_model_checkpoints/rslora__1664ee835e457741920723de28814cf5__d09c872a321e/output",
+  "selection_signature": "c4783c9012d04111909e048e72e22f0f0a991b5f03f2a04603082174c4124bc3",
+  "formal_training_evidence_signature": "38a42d7499c70201e776db4848d825d0f6168577db95b5c9f09c0e155393ddd1",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/aime25/run-3",
+  "benchmark": "aime25",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "3f1d5a743885846ce3ca508fae128a9f608fb3524a97ef19a8463b053a1c9666",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/aime2025/aime2025.jsonl",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:29:26.410956+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:31:41.703164+08:00",
+  "result": {
+    "accuracy_summary": {
+      "aime2025": {
+        "accuracy": 0.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "588",
+        "model_output": "Let \\(A=(0,0)\\) and \\(B=(100,0)\\). Since \\(D\\) lies on \\(\\overline{AB}\\) and \\(AD=4\\), we may take\n\\[\nD=(4,0).\n\\]\nBecause \\(E\\) lies on \\(\\overline{AB}\\) and \\(EB=8\\), we have \\(E=(100,0)\\).\n\nThe points \\(A,F,G,C\\) lie in that order on \\(\\overline{AC}\\). Since \\(AF=13\\) and \\(FG=52\\), we obtain\n\\[\nF=(13,0),\\qquad G=(65,0),\\qquad C=(91,0).\n\\]\nThus \\(AC=91\\), and the given lengths \\(FG=52\\) and \\(GC=26\\) are consistent with this.\n\nThe reflection of \\(D=(4,0)\\) through \\(F=(13,0)\\) is\n\\[\nM=(26,0).\n\\]\nSimilarly, the reflection of \\(G=(65,0)\\) through \\(E=(100,0)\\) is\n\\[\nN=(35,0).\n\\]\n\nThe quadrilateral \\(DEGF\\) has area \\(288\\). Its base \\(DE=96\\) and its perpendicular distance from \\(F\\) to \\(DE\\) is \\(h\\), so\n\\[\n\\frac12(96)h=288,\n\\]\ngiving \\(h=6\\). Hence \\(F\\) lies on the line \\(DE\\), and the quadrilateral is a trapezoid. Its height is therefore \\(6\\), and its area is\n\\[\n\\frac{DE+FG}{2}\\cdot 6\n=\\frac{96+52}{2}\\cdot 6\n=288.\n\\]\n\nThe heptagon \\(AFNBCEM\\) consists of the triangle \\(AFN\\) and the trapezoid \\(DEGF\\). Since \\(F\\) lies on \\(DE\\), the triangle has base \\(FN=21\\) and height \\(6\\), so its area is\n\\[\n\\frac12(21)(6)=63.\n\\]\nTherefore the heptagon’s area is\n\\[\n63+288=\\boxed{351}\n\\]",
+        "question": "On $\\triangle ABC$ points $A,D,E$, and $B$ lie that order on side $\\overline{AB}$ with $AD=4, DE=16$, and $EB=8$. Points $A,F,G$, and $C$ lie in that order on side $\\overline{AC}$ with $AF=13, FG=52$, and $GC=26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "70",
+        "model_output": "Let\n\\[\nN=97_b=9b+7.\n\\]\nWe require \\(17_b\\) to divide \\(N\\). Since \\(17_b=17\\), this is equivalent to\n\\[\n17\\mid 9b+7.\n\\]\nBecause \\(17\\) is prime, this is equivalent to\n\\[\n9b+7\\equiv 0\\pmod{17},\n\\]\nor\n\\[\n9b\\equiv -7\\equiv 10\\pmod{17}.\n\\]\nSince \\(9^{-1}\\equiv13\\pmod{17}\\), we obtain\n\\[\nb\\equiv13\\cdot10=130\\equiv15\\pmod{17}.\n\\]\nThus \\(b=15+17k\\) for some integer \\(k\\).\n\nFor \\(b>9\\), the smallest possible value is \\(b=15\\). For \\(b=15\\),\n\\[\n97_{15}=9\\cdot15+7=142,\n\\]\nand\n\\[\n17_{15}=17.\n\\]\nSince \\(17\\mid142\\), \\(b=15\\) is a valid base.\n\nFor \\(b=32\\),\n\\[\n97_{32}=9\\cdot32+7=295,\n\\]\nand\n\\[\n17_{32}=17.\n\\]\nSince \\(17\\mid295\\), \\(b=32\\) is also valid.\n\nFor \\(b=49\\),\n\\[\n97_{49}=9\\cdot49+7=445,\n\\]\nand\n\\[\n17_{49}=17.\n\\]\nSince \\(17\\mid445\\), \\(b=49\\) is valid.\n\nFor \\(b=66\\),\n\\[\n97_{66}=9\\cdot66+7=607,\n\\]\nand\n\\[\n17_{66}=17.\n\\]\nSince \\(17\\mid607\\), \\(b=66\\) is valid.\n\nFor \\(b=83\\),\n\\[\n97_{83}=9\\cdot83+7=755,\n\\]\nand\n\\[\n17_{83}=17.\n\\]\nSince \\(17\\mid755\\), \\(b=83\\) is valid.\n\nFor \\(b=100\\),\n\\[\n97_{100}=9\\cdot100+7=907,\n\\]\nand\n\\[\n17_{100}=17.\n\\]\nSince \\(17\\nmid907\\), \\(b=100\\) is not valid. For every \\(b>100\\), \\(b\\) is at least \\(101\\), so\n\\[\n97_b=9b+7\\ge9\\cdot101+7=907,\n\\]\nwhile\n\\[\n17_b=17.\n\\]\nThus \\(b>100\\) is never valid.\n\nTherefore the required sum is\n\\[\n15+32+49+66+83=\\boxed{283}\n\\]",
+        "question": "Find the sum of all integer bases $b>9$ for which $17_{b}$ is a divisor of $97_{b}$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "510",
+        "model_output": "Let\n\\[\nu=x,\\qquad v=yz,\\qquad w=zx.\n\\]\nThe plane equation becomes\n\\[\nu+v+w=75.\n\\]\nThe inequalities are equivalent to\n\\[\nu-v<w<u+w.\n\\]\nSince \\(v\\) and \\(w\\) are symmetric, it suffices to consider \\(v<w\\). Then\n\\[\nu-w<u-v<u+w,\n\\]\nso\n\\[\nw-u<u-v<u+w.\n\\]\nThus the three regions are\n\\[\n\\begin{aligned}\nR_1:&\\quad u-v<w<u+w,\\quad v<w,\\\\\nR_2:&\\quad u-v<w<u+w,\\quad w<u,\\\\\nR_3:&\\quad u-v<w<u+w,\\quad u<w.\n\\end{aligned}\n\\]\n\nFor \\(R_1\\), the inequalities give\n\\[\nu-v<w<u+w,\\qquad v<w,\n\\]\nhence\n\\[\nu<w<u+w,\\qquad v<w.\n\\]\nTherefore\n\\[\nu-v<w<u+w,\\qquad v<w<u+w.\n\\]\nConsequently,\n\\[\nu-v<u+w,\\qquad u-w<u+w,\\qquad v-w<u+w.\n\\]\nThese are precisely the inequalities for the tetrahedron\n\\[\nu+v+w=75,\\qquad u<w<u+w,\\qquad v<w<u+w.\n\\]\nHence \\(R_1\\) is a tetrahedron.\n\nFor \\(R_2\\), the inequalities give\n\\[\nu-v<w<u+w,\\qquad w<u,\n\\]\nso\n\\[\nu-v<w<u+w,\\qquad w<u<u+w.\n\\]\nThus\n\\[\nu-v<u+w,\\qquad u-w<u+w,\\qquad w<u+w.\n\\]\nThese are the inequalities for the tetrahedron\n\\[\nu+v+w=75,\\qquad u<w<u+w,\\qquad w<u<u+w.\n\\]\nHence \\(R_2\\) is a tetrahedron.\n\nFor \\(R_3\\), the inequalities give\n\\[\nu-v<w<u+w,\\qquad u<w,\n\\]\nso\n\\[\nu-v<u+w,\\qquad u-w<u+w,\\qquad u<w<u+w.\n\\]\nThese are the inequalities for the tetrahedron\n\\[\nu+v+w=75,\\qquad u-v<w<u+w,\\qquad u<w<u+w.\n\\]\nHence \\(R_3\\) is a tetrahedron.\n\nThe three tetrahedra are disjoint, and their union is the tetrahedron\n\\[\nu+v+w=75,\\qquad u<w<u+w,\\qquad v<w<u+w.\n\\]\nIts vertices are\n\\[\n(0,0,75),\\quad (0,75,0),\\quad (75,0,0),\\quad (25,25,25).\n\\]\nThe three edges from \\((25,25,25)\\) have lengths\n\\[\n\\sqrt{50},\\quad \\sqrt{50},\\quad \\sqrt{100}.\n\\]\nThus its volume is\n\\[\nV=\\frac16\\left|\\det\n\\begin{pmatrix}\n25&25&25\\\\\n-25&50&-25\\\\\n-25&-25&50\n\\end{pmatrix}\\right|\n=\\frac{12500}{6}.\n\\]\nIts three mutually perpendicular face areas are\n\\[\n\\frac{12500}{6},\\quad \\frac{12500}{6},\\quad \\frac{12500}{3}.\n\\]\nTherefore its surface area is\n\\[\nS=2\\left(\\frac{12500}{6}\\right)+\\frac{12500}{3}\n=\\frac{12500}{3}.\n\\]\nHence the finite region has area\n\\[\n\\frac{2V}{S}=\\frac{2\\cdot\\frac{12500}{6}}{\\frac{12500}{3}}\n=\\frac53\\sqrt{12500}\n=\\frac{125\\sqrt{50}}3\n=\\frac{250\\sqrt2}{3}.\n\\]\nThus \\(a=250\\), \\(b=2\\), and \\(a+b=252\\).\n\n\\boxed{252}",
+        "question": "The set of points in 3-dimensional coordinate space that lie in the plane $x+y+z=75$ whose coordinates satisfy the inequalities $x-yz<y-zx<z-xy$ forms three disjoint convex regions. Exactly one of those regions has finite area. The area of this finite region can be expressed in the form $a\\sqrt{b}$, where $a$ and $b$ are positive integers and $b$ is not divisible by the square of any prime. Find $a+b$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "279",
+        "model_output": "A number is divisible by \\(22\\) exactly when it is divisible by both \\(2\\) and \\(11\\).\n\n### 1. Divisibility by \\(2\\)\n\nThe last digit must be even. Among the digits \\(1,2,3,4,5,6,7,8\\), the even ones are\n\\[\n2,4,6,8.\n\\]\nThus there are \\(4\\) choices for the last digit.\n\n### 2. Divisibility by \\(11\\)\n\nLet the digits be \\(a_1,a_2,\\ldots,a_8\\), and let\n\\[\nS=a_1+a_2+\\cdots+a_8.\n\\]\nSince \\(1+2+\\cdots+8=36\\), we have \\(S=36-S\\), so\n\\[\n2S=36 \\quad\\Longrightarrow\\quad S=18.\n\\]\nTherefore the sum of the digits in the odd positions must equal the sum of the digits in the even positions.\n\nThe odd positions contain four digits, while the even positions contain four digits. The only even digit among \\(1,2,3,4,5,6,7,8\\) is \\(2\\). Hence the digit \\(2\\) must occupy an even position.\n\nThe remaining seven digits have sum\n\\[\n36-2=34.\n\\]\nThe four odd-position digits therefore have sum\n\\[\n\\frac{34}{2}=17,\n\\]\nwhile the four even-position digits have sum\n\\[\n\\frac{34}{2}=17.\n\\]\n\n### 3. Counting valid permutations\n\nFix the last digit. There are \\(3\\) choices for the even-position digit \\(2\\). The remaining six digits are divided into two groups of three, each summing to \\(17\\).\n\nThe only unordered pairs of distinct digits summing to \\(17\\) are\n\\[\n(8,9),\\qquad (7,10),\\qquad (6,11),\\qquad (5,12),\\qquad (4,13),\\qquad (3,14),\\qquad (2,15),\\qquad (1,16).\n\\]\nSince the digits must be \\(1,2,\\ldots,8\\), the only possible pairs are\n\\[\n(8,9),\\qquad (7,10),\\qquad (6,11),\\qquad (5,12),\\qquad (4,13),\\qquad (3,14),\\qquad (2,15),\\qquad (1,16).\n\\]\nThe digit \\(16\\) is impossible, so the only valid pairs are\n\\[\n(8,9),\\qquad (7,10),\\qquad (6,11),\\qquad (5,12),\\qquad (4,13),\\qquad (3,14),\\qquad (2,15).\n\\]\n\nFor each pair \\(\\{a,b\\}\\), the remaining four digits can be arranged in \\(4!\\) ways. The digit \\(2\\) can be placed in any of the four even positions, giving \\(4\\) choices. The remaining three positions can be filled in \\(3!\\) ways. Thus the number of valid permutations for each pair is\n\\[\n4\\cdot4\\cdot6=96.\n\\]\nThere are \\(3\\) choices for the even-position digit \\(2\\), and \\(4\\) choices for the last digit, giving\n\\[\nN=3\\cdot7\\cdot96=2016.\n\\]\nTherefore the required difference is\n\\[\nN-2025=2016-2025=\\boxed{-9}\n\\]",
+        "question": "There are $8!=40320$ eight-digit positive integers that use each of the digits $1,2,3,4,5,6,7,8$ exactly once. Let $N$ be the number of these integers that are divisible by 22. Find the difference between $N$ and 2025.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "117",
+        "model_output": "Let\n\\[\na=12,\\qquad b=-1,\\qquad c=-6.\n\\]\nThe equation factors as\n\\[\nax^2-bxy+cy^2=0\n\\iff\n\\left(x-\\frac{b}{2a}y\\right)^2+\\frac{ac-b^2}{4a}y^2=0.\n\\]\nSince \\(ac-b^2=12(-6)-(-1)^2=-73\\), this becomes\n\\[\n\\left(x-\\frac{y}{24}\\right)^2-\\frac{73}{48}y^2=0.\n\\]\nThus\n\\[\n\\left(x-\\frac{y}{24}\\right)^2=\\frac{73}{48}y^2.\n\\]\nBecause \\(73\\) is not a square, the right-hand side is a square exactly when \\(y=0\\). Indeed, if \\(y\\ne0\\), then\n\\[\n\\frac{73}{48}y^2\n=\\left(x-\\frac{y}{24}\\right)^2\n\\]\nwould imply \\(73\\) is a square modulo \\(48\\), which is impossible. Hence \\(y=0\\), and then \\(x=0\\).\n\nTherefore the only ordered pair is \\((0,0)\\), so the number of ordered pairs is\n\\[\n\\boxed{1}\n\\]",
+        "question": "Find the number of ordered pairs $(x,y)$, where both $x$ and $y$ are integers between $-100$ and $100$, inclusive, such that $12x^{2}-xy-6y^{2}=0$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "259",
+        "model_output": "Let \\(y=f(x)\\). Since \\(x=34y^2\\), the equation \\(y=f(x)\\) becomes\n\\[\ny=f(34y^2).\n\\]\n\nFor \\(y\\in[-1,1)\\), we have \\(34y^2\\in[0,34)\\), so\n\\[\nf(34y^2)=34y^2.\n\\]\nThus\n\\[\ny=34y^2,\n\\]\ngiving \\(y=0\\) or \\(y=\\frac1{34}\\).\n\nFor \\(y\\in[1,3)\\), we have \\(34y^2\\in[34,306)\\). The function \\(f\\) is periodic with period \\(4\\), so\n\\[\nf(34y^2)=f(34y^2-4\\lfloor 34y^2/4\\rfloor).\n\\]\nThe possible values of \\(34y^2-4\\lfloor34y^2/4\\rfloor\\) are\n\\[\n0,1,2,3.\n\\]\nHence\n\\[\nf(34y^2)=\\begin{cases}\n34y^2&\\text{if }34y^2\\in[34,306),\\\\\n34y^2-1&\\text{if }34y^2\\in[306,308),\\\\\n34y^2-2&\\text{if }34y^2\\in[308,310),\\\\\n34y^2-3&\\text{if }34y^2\\in[310,312).\n\\end{cases}\n\\]\nTherefore\n\\[\ny=34y^2-1,\\qquad y=34y^2-2,\\qquad\\text{or}\\qquad y=34y^2-3.\n\\]\nThese give\n\\[\ny=\\frac1{33},\\quad y=\\frac1{32},\\quad\\text{or}\\quad y=\\frac1{31}.\n\\]\n\nThe corresponding \\(x\\)-coordinates are\n\\[\nx=34\\left(\\frac1{34}\\right)^2=\\frac1{34},\n\\]\n\\[\nx=34\\left(\\frac1{33}\\right)^2=\\frac{34}{1089},\n\\]\nand\n\\[\nx=34\\left(\\frac1{32}\\right)^2=\\frac{34}{1024}.\n\\]\nThe last two are not in \\([0,306)\\), so they are not in the relevant period. Thus the only valid intersection points are\n\\[\n\\left(\\frac1{34},\\frac1{34}\\right),\\qquad\n\\left(\\frac{34}{1089},\\frac1{33}\\right),\\qquad\n\\left(\\frac{34}{1024},\\frac1{32}\\right).\n\\]\nTheir \\(y\\)-coordinates sum to\n\\[\n\\frac1{34}+\\frac1{33}+\\frac1{32}\n=\\frac{33\\cdot32+34\\cdot32+34\\cdot33}{34\\cdot33\\cdot32}\n=\\frac{1056+1088+1122}{34\\cdot33\\cdot32}\n=\\frac{3266}{34\\cdot33\\cdot32}.\n\\]\nSince\n\\[\n3266=2\\cdot1633,\\qquad 1633=13\\cdot125+3,\\qquad 125=13\\cdot9+8,\n\\]\nwe have \\(1633=13\\cdot97\\), and therefore\n\\[\n3266=2\\cdot13\\cdot97.\n\\]\nAlso,\n\\[\n34\\cdot33\\cdot32=34\\cdot1056=36864=2^7\\cdot3^2\\cdot13.\n\\]\nHence the sum is\n\\[\n\\frac{3266}{36864}\n=\\frac{1633}{18432}\n=\\frac{1633}{2^7\\cdot3^2\\cdot13}.\n\\]\nThe numerator and denominator are relatively prime, and \\(1633\\) is not divisible by the square of any prime. Thus\n\\[\na=1633,\\qquad b=1,\\qquad c=13,\\qquad d=18432,\n\\]\nso\n\\[\na+b+c+d=1633+1+13+18432=\\boxed{24889}\n\\]",
+        "question": "A piecewise linear periodic function is defined by $f(x)=\\begin{cases}x&\\text{if }x\\in[-1,1)\\\\2-x&\\text{if }x\\in[1,3)\\end{cases}$ and $f(x+4)=f(x)$ for all real numbers $x$. The graph of $f(x)$ has the sawtooth pattern. The parabola $x=34y^2$ intersects the graph of $f(x)$ at finitely many points. The sum of the $y$-coordinates of these intersection points can be expressed in the form $\\frac{a+b\\sqrt{c}}{d}$, where $a,b,c,$ and $d$ are positive integers, $a,b,$ and $d$ have greatest common divisor equal to 1, and $c$ is not divisible by the square of any prime. Find $a+b+c+d$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "16",
+        "model_output": "Let \\(c,v,s\\) be the numbers of players choosing chocolate, vanilla, and strawberry, respectively. Since every player chose one flavor and all three flavors were used,\n\n\\[\nc+v+s=9.\n\\]\n\nThe ordering condition gives\n\n\\[\nc>v>s.\n\\]\n\nBecause \\(s>0\\), we must have \\(s\\ge 1\\). Also, \\(v\\ge s\\), so \\(v\\ge1\\). Since \\(c>v\\), we have \\(c\\ge v+1\\). Thus\n\n\\[\nc\\ge v+1,\\qquad v\\ge s,\\qquad s\\ge1.\n\\]\n\nConsequently,\n\n\\[\nc+v+s\\ge (v+1)+v+s=2v+s+1\\ge10.\n\\]\n\nThis is impossible, since \\(c+v+s=9\\). Therefore no such assignment exists, so \\(N=0\\). Hence the remainder when \\(N\\) is divided by \\(1000\\) is\n\n\\[\n\\boxed{000}\n\\]",
+        "question": "The 9 members of a baseball team went to an ice cream parlor after their game. Each player had a singlescoop cone of chocolate, vanilla, or strawberry ice cream. At least one player chose each flavor, and the number of players who chose chocolate was greater than the number of players who chose vanilla, which was greater than the number of players who chose strawberry. Let $N$ be the number of different assignments of flavors to players that meet these conditions. Find the remainder when $N$ is divided by 1000.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "735",
+        "model_output": "Let\n\\[\nS=a^3+b^3+c^3.\n\\]\nSince \\(3^7\\) is odd, \\(S\\) is divisible by \\(3^7\\) exactly when\n\\[\na^3+b^3+c^3\\equiv0\\pmod{3^7}.\n\\]\n\nWe first determine the possible values of \\(a^3\\pmod{3^7}\\). The multiplicative group of units modulo \\(3^7\\) has order\n\\[\n\\varphi(3^7)=2\\cdot3^6=1458.\n\\]\nThe cube map is a homomorphism from this group to itself, so its kernel has order\n\\[\n\\frac{1458}{3}=486.\n\\]\nThus the possible values of \\(a^3\\pmod{3^7}\\) are precisely the \\(486\\) elements of the subgroup of order \\(486\\).\n\nFor each such value \\(r\\), the equation\n\\[\nx^3\\equiv r\\pmod{3^7}\n\\]\nhas exactly three solutions modulo \\(3^7\\). Indeed, if \\(x\\) is a solution, then\n\\[\nx^3-r=3^7q\n\\]\nfor some integer \\(q\\), so \\(3^7\\mid x^3-r\\). Since \\(3^7\\) is prime, Hensel’s lemma gives a unique solution modulo \\(3^7\\). The other two solutions are obtained by adding \\(3^7\\) to this solution and then reducing modulo \\(3^7\\).\n\nTherefore, for each \\(r\\), there are exactly three choices for \\(a\\). The same holds for \\(b\\) and \\(c\\), independently. Hence the total number of ordered triples is\n\\[\nN=3^3\\cdot486^3=3^9\\cdot486^3.\n\\]\nNow\n\\[\n486=2\\cdot3^5,\n\\]\nso\n\\[\nN=3^9\\cdot2^3\\cdot3^{15}=2^3\\cdot3^{24}.\n\\]\nModulo \\(1000\\), we have\n\\[\n3^{24}\\equiv3^{20}3^4\n\\equiv12288\\equiv288\\pmod{1000},\n\\]\nand\n\\[\n2^3\\cdot288=1824\\equiv824\\pmod{1000}.\n\\]\nThus the remainder is\n\\[\n\\boxed{824}\n\\]",
+        "question": "Let $N$ denote the number of ordered triples of positive integers $(a,b,c)$ such that $a,b,c\\leq3^6$ and $a^3+b^3+c^3$ is a multiple of $3^7$. Find the remainder when $N$ is divided by $1000$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "504",
+        "model_output": "Let the parallel sides have lengths \\(r\\) and \\(s\\), and let the legs have lengths \\(a\\) and \\(b\\). Since the trapezoid is isosceles, \\(a=b\\).\n\nThe circle is tangent to the two parallel sides at points \\(P\\) and \\(Q\\), and to the legs at points \\(R\\) and \\(S\\). The tangents from a point to a circle have equal lengths, so\n\\[\nPR=PS,\\qquad QR=QS.\n\\]\nThus the trapezoid is divided into two congruent right triangles and a rectangle. The rectangle has side lengths \\(r-s\\) and \\(3\\), while each right triangle has legs \\(3\\) and \\(a\\). Therefore\n\\[\nr+s=2a,\\qquad r-s=6.\n\\]\nHence\n\\[\nr=a+3,\\qquad s=a-3.\n\\]\n\nThe area of the trapezoid is\n\\[\n\\frac{r+s}{2}\\cdot 3=72,\n\\]\nso\n\\[\n3(a+3+a-3)=72,\n\\]\nand therefore\n\\[\n6a=72,\\qquad a=12.\n\\]\nConsequently,\n\\[\nr=15,\\qquad s=9.\n\\]\nIndeed, the right triangles have legs \\(3\\) and \\(12\\), so their area is \\(18\\), while the rectangle has area \\(18\\), giving total area \\(72\\). Thus\n\\[\nr^2+s^2=15^2+9^2=225+81=\\boxed{306}\n\\]",
+        "question": "An isosceles trapezoid has an inscribed circle tangent to each of its four sides. The radius of the circle is 3, and the area of the trapezoid is 72. Let the parallel sides of the trapezoid have lengths $r$ and $s$, with $r \\neq s$. Find $r^{2}+s^{2}$.\nRemember to put your final answer within \\boxed{}.\n"
+      },
+      {
+        "gold": "821",
+        "model_output": "Let the six pairs be\n\\[\n(a_1,b_1),\\ldots,(a_6,b_6),\n\\]\nwhere each pair is ordered so that \\(a_i<b_i\\). The six resulting two-letter words are listed alphabetically, so the last word is\n\\[\na_6b_6.\n\\]\nThus the last word contains \\(G\\) exactly when \\(G\\) is the larger letter of its pair.\n\nThere are\n\\[\n\\binom{12}{2}=66\n\\]\nequally likely pairs for \\(G\\). For a fixed pair \\(\\{G,H\\}\\), the other ten letters are divided into five unordered pairs. The number of such divisions in which \\(G\\) is the larger letter of its pair is\n\\[\n\\frac{1}{2}\\binom{10}{2}=25.\n\\]\nHence the probability is\n\\[\n\\frac{25}{66}.\n\\]\nSince \\(25\\) and \\(66\\) are relatively prime, \\(m=25\\) and \\(n=66\\), so\n\\[\nm+n=25+66=\\boxed{91}\n\\]",
+        "question": "The twelve letters $A,B,C,D,E,F,G,H,I,J,K$, and $L$ are randomly grouped into six pairs of letters. The two letters in each pair are placed next to each other in alphabetical order to form six two-letter words, and those six words are listed alphabetically. For example, a possible result is $AB,CJ,DG,EK,FL,HI$. The probability that the last word listed contains $G$ is $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. Find $m+n$.\nRemember to put your final answer within \\boxed{}.\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "aime2025": {
+      "accuracy": 0.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 0.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mean accuracy across configured views",
+      "components": [
+        {
+          "dataset": "aime2025",
+          "metric": "accuracy",
+          "value": 0.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__aime25__run-3/validation_sweep/candidates/durable_output__rslora__1664ee835e457741920723de28814cf5__d09c872a321e__b7d8144ac344/workspace"
+}

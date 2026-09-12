@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "state": "succeeded",
+  "run_kind": "ordinary_lora_to_rslora",
+  "experiment_id": "rslora-paired/main/panorama_pi4pc/run-3",
+  "source_experiment_id": "main/panorama_pi4pc/run-3",
+  "suite": "main-rslora-paired",
+  "benchmark": "panorama_pi4pc",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": "gpt-5.2",
+  "data_limit": 2000,
+  "timeout": "12h",
+  "benchmark_dataset_path": "pinned/panorama",
+  "training_policy": "rslora",
+  "formal_expected_samples": 2000,
+  "formal_method_lock_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_pi4pc__run-3/formal_training_method.json",
+  "formal_training_method": "rslora",
+  "formal_training_method_lock": {
+    "created_at": "2026-09-09T12:53:00.330730+00:00",
+    "experiment_id": "rslora-paired/main/panorama_pi4pc/run-3",
+    "schema_version": 1,
+    "training_method": "rslora",
+    "training_policy": "rslora"
+  },
+  "formal_training_evidence": [
+    {
+      "workspace_id": "rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8",
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_pi4pc__run-3/workspace/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8",
+      "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_pi4pc__run-3/workspace/.ft_model_checkpoints/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8/formal_training",
+      "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_pi4pc__run-3/workspace/.ft_model_checkpoints/rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8/output",
+      "evidence_signature": "8ff88a2575df2259cc20268688fea8342adf849d7f6ecf99d785459769fb9790",
+      "training_method": "rslora",
+      "expected_samples": 2000,
+      "global_step": 250,
+      "max_steps": 250,
+      "formal_training_method_lock": {
+        "created_at": "2026-09-09T12:53:00.330730+00:00",
+        "experiment_id": "rslora-paired/main/panorama_pi4pc/run-3",
+        "schema_version": 1,
+        "training_method": "rslora",
+        "training_policy": "rslora"
+      }
+    }
+  ],
+  "pairing_artifact_signature": "dcec0c779e9f19089e2a09cb2a2558e9120d7d06090e000aab4b41d34ada68ce",
+  "expected_pair_count": 1,
+  "started_at": "2026-09-09T20:31:08.545268+08:00",
+  "finished_at": "2026-09-10T17:44:34.356333+08:00",
+  "pair_runs": [
+    {
+      "schema_version": 1,
+      "state": "succeeded",
+      "source_experiment_id": "main/panorama_pi4pc/run-3",
+      "paired_experiment_id": "rslora-paired/main/panorama_pi4pc/run-3",
+      "source_workspace_id": "d4ae9fb4f2044059a8af39faf1b961fe",
+      "paired_workspace_id": "rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8",
+      "input_contract_signature": "af350aa94b48e8bf5cd67451f86f0f514a32d78df043ca76170a6140154116d0",
+      "expected_samples": 2000,
+      "prepared_at": "2026-09-09T20:52:58.721060+08:00",
+      "gpu": "3",
+      "started_at": "2026-09-09T20:52:59.624014+08:00",
+      "finished_at": "2026-09-10T07:07:20.600643+08:00",
+      "return_code": 0,
+      "outer_timeout": false,
+      "formal_training_evidence_signature": "8ff88a2575df2259cc20268688fea8342adf849d7f6ecf99d785459769fb9790",
+      "global_step": 250,
+      "max_steps": 250
+    }
+  ],
+  "formal_training_validation_errors": []
+}

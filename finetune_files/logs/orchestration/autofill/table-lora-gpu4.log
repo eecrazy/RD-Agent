@@ -1,0 +1,1645 @@
+2026-09-09 07:04:41 +0800 CHECK seed=46 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-08T23:21:10.028723+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed46-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "75c6dd46c0bc2644081b3103128742e4bc2b408c21905911a51726dbfaedae9b",
+      "seed": 46,
+      "data_seed": 46,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-08T23:04:42.113524+00:00",
+      "started_at": "2026-09-08T23:04:42.113757+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-08T23:21:10.025120+00:00",
+      "duration_seconds": 987.9105502935126,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.062886357307434,
+        "eval_runtime": 22.2999,
+        "eval_samples_per_second": 7.937,
+        "eval_steps_per_second": 7.937,
+        "total_flos": 7.649858000289792e+16,
+        "train_loss": 0.8624356710910797,
+        "train_runtime": 732.0589,
+        "train_samples_per_second": 2.182,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.062886357307434,
+        "last_eval_loss": 1.062886357307434,
+        "min_eval_loss": 1.062886357307434
+      },
+      "gpu": {
+        "4": {
+          "samples": 792,
+          "peak_memory_mib": 87329.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.69823232323232,
+          "mean_power_watts": 315.9195075757572
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed46-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 07:21:10 +0800 END seed=46 rc=0
+2026-09-09 07:21:18 +0800 CHECK seed=47 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-08T23:34:13.510634+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed47-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "c94ba4f0eb00f694df59023fbaecf89f64c380760c9e12725c5ea682f0e40716",
+      "seed": 47,
+      "data_seed": 47,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-08T23:21:18.773277+00:00",
+      "started_at": "2026-09-08T23:21:18.773491+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-08T23:34:13.506998+00:00",
+      "duration_seconds": 774.7327447235584,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0633254051208496,
+        "eval_runtime": 22.3261,
+        "eval_samples_per_second": 7.928,
+        "eval_steps_per_second": 7.928,
+        "total_flos": 7.704281586187469e+16,
+        "train_loss": 0.8573450648784637,
+        "train_runtime": 734.5984,
+        "train_samples_per_second": 2.174,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0633254051208496,
+        "last_eval_loss": 1.0633254051208496,
+        "min_eval_loss": 1.0633254051208496
+      },
+      "gpu": {
+        "4": {
+          "samples": 618,
+          "peak_memory_mib": 95839.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.77508090614887,
+          "mean_power_watts": 310.0028640776701
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed47-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 07:34:13 +0800 END seed=47 rc=0
+2026-09-09 07:34:21 +0800 CHECK seed=48 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-08T23:47:17.979702+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed48-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "edf9afb3728f415ac8dbfc2eb269a3871498cd021b583eb1b6e3b12ed776b989",
+      "seed": 48,
+      "data_seed": 48,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-08T23:34:22.116537+00:00",
+      "started_at": "2026-09-08T23:34:22.116722+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-08T23:47:17.976055+00:00",
+      "duration_seconds": 775.8584844758734,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0625182390213013,
+        "eval_runtime": 22.3504,
+        "eval_samples_per_second": 7.919,
+        "eval_steps_per_second": 7.919,
+        "total_flos": 7.673997220235674e+16,
+        "train_loss": 0.8668877375125885,
+        "train_runtime": 734.1007,
+        "train_samples_per_second": 2.175,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0625182390213013,
+        "last_eval_loss": 1.0625182390213013,
+        "min_eval_loss": 1.0625182390213013
+      },
+      "gpu": {
+        "4": {
+          "samples": 621,
+          "peak_memory_mib": 95671.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.31078904991948,
+          "mean_power_watts": 309.10621578099847
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed48-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 07:47:17 +0800 END seed=48 rc=0
+2026-09-09 07:47:26 +0800 CHECK seed=49 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T00:00:28.967881+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed49-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "b58eace11e85082ac6f2039545d03cff2ce4ec5c3f6461d6f93407f57d9b086a",
+      "seed": 49,
+      "data_seed": 49,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-08T23:47:26.666487+00:00",
+      "started_at": "2026-09-08T23:47:26.666701+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T00:00:28.964384+00:00",
+      "duration_seconds": 782.296941823326,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0624184608459473,
+        "eval_runtime": 22.4815,
+        "eval_samples_per_second": 7.873,
+        "eval_steps_per_second": 7.873,
+        "total_flos": 7.741729630632346e+16,
+        "train_loss": 0.8610141623020172,
+        "train_runtime": 740.4793,
+        "train_samples_per_second": 2.157,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0624184608459473,
+        "last_eval_loss": 1.0624184608459473,
+        "min_eval_loss": 1.0624184608459473
+      },
+      "gpu": {
+        "4": {
+          "samples": 633,
+          "peak_memory_mib": 96875.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.36808846761454,
+          "mean_power_watts": 308.31317535544986
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed49-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 08:00:28 +0800 END seed=49 rc=0
+2026-09-09 08:00:37 +0800 CHECK seed=50 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T00:13:33.714699+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed50-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "8b41becc1d792eaa6553b2382370f1af69818bb489614ed1fa55d941bde1a078",
+      "seed": 50,
+      "data_seed": 50,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T00:00:37.570928+00:00",
+      "started_at": "2026-09-09T00:00:37.571124+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T00:13:33.711041+00:00",
+      "duration_seconds": 776.1390662211925,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0621236562728882,
+        "eval_runtime": 22.3608,
+        "eval_samples_per_second": 7.916,
+        "eval_steps_per_second": 7.916,
+        "total_flos": 7.69362094615511e+16,
+        "train_loss": 0.8625703918933868,
+        "train_runtime": 735.0606,
+        "train_samples_per_second": 2.173,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0621236562728882,
+        "last_eval_loss": 1.0621236562728882,
+        "min_eval_loss": 1.0621236562728882
+      },
+      "gpu": {
+        "4": {
+          "samples": 620,
+          "peak_memory_mib": 93967.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.73548387096774,
+          "mean_power_watts": 308.69803225806453
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed50-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 08:13:33 +0800 END seed=50 rc=0
+2026-09-09 08:13:42 +0800 CHECK seed=51 keep=31
+2026-09-09 08:22:15 +0800 SUCCESSOR_WAIT parent=1284786 prefix=h20-autofill-table-lora-gpu4
+2026-09-09 08:22:49 +0800 SUCCESSOR_SESSION pid=1649464 parent=1284786 prefix=h20-autofill-table-lora-gpu4
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T00:26:43.234822+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed51-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "622516851dbd5cf91a8360532b634a579bcf96139b8b71ed181058822fa5d6af",
+      "seed": 51,
+      "data_seed": 51,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T00:13:42.322004+00:00",
+      "started_at": "2026-09-09T00:13:42.322192+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T00:26:43.231175+00:00",
+      "duration_seconds": 780.9081940865144,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.064480185508728,
+        "eval_runtime": 22.5419,
+        "eval_samples_per_second": 7.852,
+        "eval_steps_per_second": 7.852,
+        "total_flos": 7.73005045811282e+16,
+        "train_loss": 0.8643919646739959,
+        "train_runtime": 739.5624,
+        "train_samples_per_second": 2.159,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.064480185508728,
+        "last_eval_loss": 1.064480185508728,
+        "min_eval_loss": 1.064480185508728
+      },
+      "gpu": {
+        "4": {
+          "samples": 626,
+          "peak_memory_mib": 79531.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.64856230031948,
+          "mean_power_watts": 310.18707667731644
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed51-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 08:26:43 +0800 END seed=51 rc=0
+2026-09-09 08:26:51 +0800 CHECK seed=52 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T00:39:48.189405+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed52-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "fc96be195802f4679ddf944bfd2e0b8dbf01852eebdcf5542b4cf24e8e1e71ec",
+      "seed": 52,
+      "data_seed": 52,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T00:26:52.005397+00:00",
+      "started_at": "2026-09-09T00:26:52.005589+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T00:39:48.185822+00:00",
+      "duration_seconds": 776.1792541593313,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0632413625717163,
+        "eval_runtime": 22.5395,
+        "eval_samples_per_second": 7.853,
+        "eval_steps_per_second": 7.853,
+        "total_flos": 7.65318520641454e+16,
+        "train_loss": 0.865658198595047,
+        "train_runtime": 734.6185,
+        "train_samples_per_second": 2.174,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0632413625717163,
+        "last_eval_loss": 1.0632413625717163,
+        "min_eval_loss": 1.0632413625717163
+      },
+      "gpu": {
+        "4": {
+          "samples": 624,
+          "peak_memory_mib": 74977.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.05128205128206,
+          "mean_power_watts": 310.5597275641028
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed52-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 08:39:48 +0800 END seed=52 rc=0
+2026-09-09 08:39:56 +0800 CHECK seed=53 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T00:52:58.675930+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed53-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "76301e36ff411122e4fb662c370f44938ca9b46bdc17976074b94f4ff4411b29",
+      "seed": 53,
+      "data_seed": 53,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T00:39:56.917969+00:00",
+      "started_at": "2026-09-09T00:39:56.918188+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T00:52:58.672263+00:00",
+      "duration_seconds": 781.7532295919955,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0632035732269287,
+        "eval_runtime": 22.5279,
+        "eval_samples_per_second": 7.857,
+        "eval_steps_per_second": 7.857,
+        "total_flos": 7.675898480878387e+16,
+        "train_loss": 0.8604753875732422,
+        "train_runtime": 736.0535,
+        "train_samples_per_second": 2.17,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0632035732269287,
+        "last_eval_loss": 1.0632035732269287,
+        "min_eval_loss": 1.0632035732269287
+      },
+      "gpu": {
+        "4": {
+          "samples": 629,
+          "peak_memory_mib": 79785.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 92.60095389507154,
+          "mean_power_watts": 309.6187758346583
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed53-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 08:52:58 +0800 END seed=53 rc=0
+2026-09-09 08:53:07 +0800 CHECK seed=54 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T01:06:04.262778+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed54-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "a7666eb286ada081bbd97b7ac150be91efb240ece773b778325929ab2e3dc22f",
+      "seed": 54,
+      "data_seed": 54,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T00:53:07.285955+00:00",
+      "started_at": "2026-09-09T00:53:07.286169+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T01:06:04.259450+00:00",
+      "duration_seconds": 776.9722806550562,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0629138946533203,
+        "eval_runtime": 22.5404,
+        "eval_samples_per_second": 7.853,
+        "eval_steps_per_second": 7.853,
+        "total_flos": 7.660009374078566e+16,
+        "train_loss": 0.8704906380176545,
+        "train_runtime": 735.219,
+        "train_samples_per_second": 2.172,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0629138946533203,
+        "last_eval_loss": 1.0629138946533203,
+        "min_eval_loss": 1.0629138946533203
+      },
+      "gpu": {
+        "4": {
+          "samples": 628,
+          "peak_memory_mib": 75607.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.37579617834395,
+          "mean_power_watts": 309.87178343949057
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed54-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 09:06:04 +0800 END seed=54 rc=0
+2026-09-09 09:06:12 +0800 CHECK seed=55 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T01:19:10.399298+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed55-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "dc77e7ea05836248900083fc9dce19f7fc4c69df6e65e1473ed97f8cdbd8d7f9",
+      "seed": 55,
+      "data_seed": 55,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T01:06:13.016553+00:00",
+      "started_at": "2026-09-09T01:06:13.016793+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T01:19:10.395687+00:00",
+      "duration_seconds": 777.3779542595148,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0640342235565186,
+        "eval_runtime": 22.5729,
+        "eval_samples_per_second": 7.841,
+        "eval_steps_per_second": 7.841,
+        "total_flos": 7.689648669455155e+16,
+        "train_loss": 0.859984358549118,
+        "train_runtime": 735.7476,
+        "train_samples_per_second": 2.171,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0640342235565186,
+        "last_eval_loss": 1.0640342235565186,
+        "min_eval_loss": 1.0640342235565186
+      },
+      "gpu": {
+        "4": {
+          "samples": 630,
+          "peak_memory_mib": 95193.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.73809523809524,
+          "mean_power_watts": 310.1543809523806
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed55-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 09:19:10 +0800 END seed=55 rc=0
+2026-09-09 09:19:18 +0800 CHECK seed=56 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T01:32:19.487220+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed56-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "a0136ca1e1adc628ac897a1b867d08a8769178a5eb1cb701ffc758508e4de452",
+      "seed": 56,
+      "data_seed": 56,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T01:19:19.041494+00:00",
+      "started_at": "2026-09-09T01:19:19.041697+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T01:32:19.483540+00:00",
+      "duration_seconds": 780.4409672478214,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0635565519332886,
+        "eval_runtime": 22.5904,
+        "eval_samples_per_second": 7.835,
+        "eval_steps_per_second": 7.835,
+        "total_flos": 7.697661125020877e+16,
+        "train_loss": 0.8601924359798432,
+        "train_runtime": 738.4261,
+        "train_samples_per_second": 2.163,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0635565519332886,
+        "last_eval_loss": 1.0635565519332886,
+        "min_eval_loss": 1.0635565519332886
+      },
+      "gpu": {
+        "4": {
+          "samples": 627,
+          "peak_memory_mib": 74521.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.40510366826156,
+          "mean_power_watts": 309.7524401913879
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed56-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 09:32:19 +0800 END seed=56 rc=0
+2026-09-09 09:32:28 +0800 CHECK seed=57 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T01:45:26.222060+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed57-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "5be2a49a0652a841ecb0b0f9c7d9ba1479e733ca9729ba430f189a9d25f7db58",
+      "seed": 57,
+      "data_seed": 57,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T01:32:28.478477+00:00",
+      "started_at": "2026-09-09T01:32:28.478688+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T01:45:26.218431+00:00",
+      "duration_seconds": 777.7389064244926,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0640232563018799,
+        "eval_runtime": 22.5567,
+        "eval_samples_per_second": 7.847,
+        "eval_steps_per_second": 7.847,
+        "total_flos": 7.669176166463078e+16,
+        "train_loss": 0.8630274963378907,
+        "train_runtime": 736.3005,
+        "train_samples_per_second": 2.169,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0640232563018799,
+        "last_eval_loss": 1.0640232563018799,
+        "min_eval_loss": 1.0640232563018799
+      },
+      "gpu": {
+        "4": {
+          "samples": 619,
+          "peak_memory_mib": 78755.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.48788368336025,
+          "mean_power_watts": 310.86499192245543
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed57-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 09:45:26 +0800 END seed=57 rc=0
+2026-09-09 09:45:34 +0800 CHECK seed=58 keep=31
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T01:58:41.972168+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed58-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "4e9b0a30c4b58d9b2f67e7c5d0bd7cfcbdc63b93bd4923c4ac5e0da0d853da3f",
+      "seed": 58,
+      "data_seed": 58,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T01:45:34.853075+00:00",
+      "started_at": "2026-09-09T01:45:34.853266+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T01:58:41.968498+00:00",
+      "duration_seconds": 787.1143720252439,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0640852451324463,
+        "eval_runtime": 22.3508,
+        "eval_samples_per_second": 7.919,
+        "eval_steps_per_second": 7.919,
+        "total_flos": 7.735856093289677e+16,
+        "train_loss": 0.8640399205684662,
+        "train_runtime": 741.1653,
+        "train_samples_per_second": 2.155,
+        "train_steps_per_second": 0.067,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0640852451324463,
+        "last_eval_loss": 1.0640852451324463,
+        "min_eval_loss": 1.0640852451324463
+      },
+      "gpu": {
+        "4": {
+          "samples": 629,
+          "peak_memory_mib": 86845.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 92.76470588235294,
+          "mean_power_watts": 309.53492845786957
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed58-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 09:58:41 +0800 END seed=58 rc=0
+2026-09-09 09:58:51 +0800 CHECK seed=59 keep=32
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T02:11:50.982339+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed59-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "624006ba59d5ff9cfca1617ad83aa94ca4f5733c25a6a4e2875e53593758a555",
+      "seed": 59,
+      "data_seed": 59,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T01:58:51.309616+00:00",
+      "started_at": "2026-09-09T01:58:51.309813+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T02:11:50.978993+00:00",
+      "duration_seconds": 779.6682591941208,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0627946853637695,
+        "eval_runtime": 22.5674,
+        "eval_samples_per_second": 7.843,
+        "eval_steps_per_second": 7.843,
+        "total_flos": 7.698849412922573e+16,
+        "train_loss": 0.8575102424621582,
+        "train_runtime": 737.5396,
+        "train_samples_per_second": 2.165,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0627946853637695,
+        "last_eval_loss": 1.0627946853637695,
+        "min_eval_loss": 1.0627946853637695
+      },
+      "gpu": {
+        "4": {
+          "samples": 625,
+          "peak_memory_mib": 93307.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 92.8688,
+          "mean_power_watts": 311.1627840000001
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed59-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 10:11:50 +0800 END seed=59 rc=0
+2026-09-09 10:12:00 +0800 CHECK seed=60 keep=32
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T02:25:01.854181+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed60-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "6349a4268c1d27787354f5d790c06c5da1ee3aa2bec71656b41201497ab41cd3",
+      "seed": 60,
+      "data_seed": 60,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T02:12:00.316776+00:00",
+      "started_at": "2026-09-09T02:12:00.316976+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T02:25:01.850835+00:00",
+      "duration_seconds": 781.5329976044595,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0638706684112549,
+        "eval_runtime": 22.3344,
+        "eval_samples_per_second": 7.925,
+        "eval_steps_per_second": 7.925,
+        "total_flos": 7.724584333765018e+16,
+        "train_loss": 0.8663812756538392,
+        "train_runtime": 740.4762,
+        "train_samples_per_second": 2.157,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0638706684112549,
+        "last_eval_loss": 1.0638706684112549,
+        "min_eval_loss": 1.0638706684112549
+      },
+      "gpu": {
+        "4": {
+          "samples": 629,
+          "peak_memory_mib": 89041.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.637519872814,
+          "mean_power_watts": 310.7501271860098
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed60-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 10:25:01 +0800 END seed=60 rc=0
+2026-09-09 10:25:23 +0800 SUCCESSOR_CHECK seed=61 keep=32
+2026-09-09 10:25:31 +0800 SUCCESSOR_START seed=61
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T02:38:35.959068+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed61-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "1156053430273bcfe755d8d52848d548bb0a0e298654f9db94d88c93be0e8088",
+      "seed": 61,
+      "data_seed": 61,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T02:25:32.219767+00:00",
+      "started_at": "2026-09-09T02:25:32.219953+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T02:38:35.955629+00:00",
+      "duration_seconds": 783.7348997937515,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0629624128341675,
+        "eval_runtime": 22.4537,
+        "eval_samples_per_second": 7.883,
+        "eval_steps_per_second": 7.883,
+        "total_flos": 7.733411615320474e+16,
+        "train_loss": 0.8584320855140686,
+        "train_runtime": 740.4001,
+        "train_samples_per_second": 2.157,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0629624128341675,
+        "last_eval_loss": 1.0629624128341675,
+        "min_eval_loss": 1.0629624128341675
+      },
+      "gpu": {
+        "4": {
+          "samples": 626,
+          "peak_memory_mib": 76101.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.3594249201278,
+          "mean_power_watts": 309.9411022364216
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed61-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 10:38:35 +0800 SUCCESSOR_END seed=61 rc=0
+2026-09-09 10:38:46 +0800 SUCCESSOR_CHECK seed=62 keep=32
+2026-09-09 10:38:55 +0800 SUCCESSOR_START seed=62
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T02:51:51.977438+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed62-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "64dc09ffb688704aa5102df2ef4c008053537e9b1b7f8620b0d14be72d7713da",
+      "seed": 62,
+      "data_seed": 62,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T02:38:56.086013+00:00",
+      "started_at": "2026-09-09T02:38:56.086222+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T02:51:51.973747+00:00",
+      "duration_seconds": 775.8866285998374,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0611013174057007,
+        "eval_runtime": 22.3041,
+        "eval_samples_per_second": 7.936,
+        "eval_steps_per_second": 7.936,
+        "total_flos": 7.7068958195712e+16,
+        "train_loss": 0.8642708802223206,
+        "train_runtime": 735.8324,
+        "train_samples_per_second": 2.17,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0611013174057007,
+        "last_eval_loss": 1.0611013174057007,
+        "min_eval_loss": 1.0611013174057007
+      },
+      "gpu": {
+        "4": {
+          "samples": 620,
+          "peak_memory_mib": 74261.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.49516129032259,
+          "mean_power_watts": 311.65562903225793
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed62-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 10:51:51 +0800 SUCCESSOR_END seed=62 rc=0
+2026-09-09 10:52:03 +0800 SUCCESSOR_CHECK seed=63 keep=32
+2026-09-09 10:52:12 +0800 SUCCESSOR_START seed=63
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T03:05:16.299289+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed63-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "6e8686909cdf161489a43963807292431e2ea1b1296eaa7e4a419c0088caef43",
+      "seed": 63,
+      "data_seed": 63,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T02:52:12.525509+00:00",
+      "started_at": "2026-09-09T02:52:12.525714+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T03:05:16.295920+00:00",
+      "duration_seconds": 783.7692795079201,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0628211498260498,
+        "eval_runtime": 22.3896,
+        "eval_samples_per_second": 7.905,
+        "eval_steps_per_second": 7.905,
+        "total_flos": 7.70156549955502e+16,
+        "train_loss": 0.8612523686885833,
+        "train_runtime": 737.7157,
+        "train_samples_per_second": 2.165,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0628211498260498,
+        "last_eval_loss": 1.0628211498260498,
+        "min_eval_loss": 1.0628211498260498
+      },
+      "gpu": {
+        "4": {
+          "samples": 635,
+          "peak_memory_mib": 88285.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.0267716535433,
+          "mean_power_watts": 310.2578110236218
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed63-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 11:05:16 +0800 SUCCESSOR_END seed=63 rc=0
+2026-09-09 11:05:27 +0800 SUCCESSOR_CHECK seed=64 keep=32
+2026-09-09 11:05:36 +0800 SUCCESSOR_START seed=64
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T03:18:34.602145+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed64-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "26563aab24ce057a5eaf31f10b9d97e3ed0fc13ff6d26d9b516fb757a21d224a",
+      "seed": 64,
+      "data_seed": 64,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T03:05:36.386496+00:00",
+      "started_at": "2026-09-09T03:05:36.386682+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T03:18:34.598552+00:00",
+      "duration_seconds": 778.2109433617443,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0638024806976318,
+        "eval_runtime": 22.3081,
+        "eval_samples_per_second": 7.934,
+        "eval_steps_per_second": 7.934,
+        "total_flos": 7.688698039133798e+16,
+        "train_loss": 0.8639988327026367,
+        "train_runtime": 737.3166,
+        "train_samples_per_second": 2.166,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0638024806976318,
+        "last_eval_loss": 1.0638024806976318,
+        "min_eval_loss": 1.0638024806976318
+      },
+      "gpu": {
+        "4": {
+          "samples": 622,
+          "peak_memory_mib": 84769.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.35369774919614,
+          "mean_power_watts": 311.11512861736304
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed64-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 11:18:34 +0800 SUCCESSOR_END seed=64 rc=0
+2026-09-09 11:18:45 +0800 SUCCESSOR_CHECK seed=65 keep=32
+2026-09-09 11:18:54 +0800 SUCCESSOR_START seed=65
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T03:31:57.580709+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed65-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "2958c533f171112b88cbbf858d1d9771c5c7e90e7dd15d7cc41b2b714343a4cf",
+      "seed": 65,
+      "data_seed": 65,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T03:18:54.793074+00:00",
+      "started_at": "2026-09-09T03:18:54.793268+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T03:31:57.577025+00:00",
+      "duration_seconds": 782.7828641775995,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0631556510925293,
+        "eval_runtime": 22.5187,
+        "eval_samples_per_second": 7.86,
+        "eval_steps_per_second": 7.86,
+        "total_flos": 7.716605829282202e+16,
+        "train_loss": 0.8633534681797027,
+        "train_runtime": 739.282,
+        "train_samples_per_second": 2.16,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0631556510925293,
+        "last_eval_loss": 1.0631556510925293,
+        "min_eval_loss": 1.0631556510925293
+      },
+      "gpu": {
+        "4": {
+          "samples": 629,
+          "peak_memory_mib": 96329.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 92.69316375198729,
+          "mean_power_watts": 311.55400635930056
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed65-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}
+2026-09-09 11:31:57 +0800 SUCCESSOR_END seed=65 rc=0
+2026-09-09 11:32:08 +0800 SUCCESSOR_CHECK seed=66 keep=33
+2026-09-09 11:33:42 +0800 SUCCESSOR_START seed=66
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T03:47:55.136487+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed66-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "4"
+      ],
+      "config_sha256": "b6fdc155911e69c772abce8946a6bc9d09a41fd830e78894d8019a33daeeb3e4",
+      "seed": 66,
+      "data_seed": 66,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T03:33:42.278168+00:00",
+      "started_at": "2026-09-09T03:33:42.278369+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T03:47:55.133082+00:00",
+      "duration_seconds": 852.8539335802197,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0617812871932983,
+        "eval_runtime": 22.3445,
+        "eval_samples_per_second": 7.921,
+        "eval_steps_per_second": 7.921,
+        "total_flos": 7.776223930864435e+16,
+        "train_loss": 0.8618379044532776,
+        "train_runtime": 741.6614,
+        "train_samples_per_second": 2.153,
+        "train_steps_per_second": 0.067,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0617812871932983,
+        "last_eval_loss": 1.0617812871932983,
+        "min_eval_loss": 1.0617812871932983
+      },
+      "gpu": {
+        "4": {
+          "samples": 696,
+          "peak_memory_mib": 89267.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 87.75287356321839,
+          "mean_power_watts": 300.22469827586207
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu4-seed66-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}

@@ -1,0 +1,336 @@
+{
+    "accuracy": 76.66666666666667,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(NC(=O)CCC(=O)N2CCN(S(=O)(=O)c3ccc(C)cc3)CC2)cc1, Ring System Structure: C1CNNCN1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: Cc1ccc(NC(=O)CCC(=O)N2CCN(S(=O)(=O)c3ccc(C)cc3)CC2)cc1\n2. Molecule structure analysis: Contains a benzene ring (with methyl group) connected to a piperidine (6-membered ring: N-C-C-C-C-N) with a sulfonamide substituent (sulfonamide linked to another benzene).\n3. Scaffold analysis: C1CNNCN1 is a 6-membered ring with two nitrogens and four carbons.\n4. Matching analysis: The molecule's piperidine has two nitrogens and four carbons in its ring system, matching the scaffold's structure.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: Cc1ccc(NC(=O)CCC(=O)N2CCN(S(=O)(=O)c3ccc(C)cc3)CC2)cc1\n2. Molecule structure analysis: Contains a benzene ring (with methyl group) connected to a piperidine (6-membered ring: N-C-C-C-C-N) with a sulfonamide substituent (sulfonamide linked to another benzene).\n3. Scaffold analysis: C1CNNCN1 is a 6-membered ring with two nitrogens and four carbons.\n4. Matching analysis: The molecule's piperidine has two nitrogens and four carbons in its ring system, matching the scaffold's structure.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(CCCCCCc1ccccc1)c1ncc(-c2cc([N+](=O)[O-])ccn2)o1, Ring System Structure: c1ccc(-c2cnco2)nc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: O=C(CCCCCCc1ccccc1)c1ncc(-c2cc([N+](=O)[O-])ccn2)o1\n2. Molecule structure analysis: Contains a benzene ring, a pyridine ring (with a nitro substituent), and a furan ring connected through a linker chain.\n3. Scaffold analysis: A benzene ring connected to a pyridine ring (c1ccc(-c2cnco2)nc1).\n4. Matching analysis: The molecule has a benzene-pyridine-furan system, but the scaffold only requires benzene-pyridine. The furan is not part of the scaffold definition.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: O=C(CCCCCCc1ccccc1)c1ncc(-c2cc([N+](=O)[O-])ccn2)o1\n2. Molecule structure analysis: Contains a benzene ring, a pyridine ring (with a nitro substituent), and a furan ring connected through a linker chain.\n3. Scaffold analysis: A benzene ring connected to a pyridine ring (c1ccc(-c2cnco2)nc1).\n4. Matching analysis: The molecule has a benzene-pyridine-furan system, but the scaffold only requires benzene-pyridine. The furan is not part of the scaffold definition.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(c1ccc(Br)o1)N1CCc2ccccc21, Ring System Structure: c1ccc2c(c1)CCN2\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: O=C(c1ccc(Br)o1)N1CCc2ccccc21\n2. Molecule structure analysis: Contains a brominated furan ring (c1ccc(Br)o1) and a benzene-linked piperidine (N1CCc2ccccc21) with a carbonyl group.\n3. Scaffold analysis: A benzene ring (c1) connected to a piperidine (CCN2) via a single bond.\n4. Matching analysis: The molecule includes a benzene-piperidine system (c2ccccc21), but the scaffold requires a direct single bond (c1-c2). The molecule has an additional benzene-furan system and a carbonyl group, altering the direct bond topology.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: O=C(c1ccc(Br)o1)N1CCc2ccccc21\n2. Molecule structure analysis: Contains a brominated furan ring (c1ccc(Br)o1) and a benzene-linked piperidine (N1CCc2ccccc21) with a carbonyl group.\n3. Scaffold analysis: A benzene ring (c1) connected to a piperidine (CCN2) via a single bond.\n4. Matching analysis: The molecule includes a benzene-piperidine system (c2ccccc21), but the scaffold requires a direct single bond (c1-c2). The molecule has an additional benzene-furan system and a carbonyl group, altering the direct bond topology.\n{\"output\":\"No\"}",
+            "references": "Yes"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: NC(=O)OC(CCN1CCN(c2ccc([N+](=O)[O-])cc2)CC1)c1ccccc1, Ring System Structure: c1ccc(N2CCNCC2)cc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: NC(=O)OC(CCN1CCN(c2ccc([N+](=O)[O-])cc2)CC1)c1ccccc1\n2. Molecule structure analysis: Contains a benzene ring (c1ccccc1) and a piperazine ring (N1CCN(c2ccc([N+](=O)[O-])cc2)CC1) connected through a methylene group.\n3. Scaffold analysis: Scaffold is a benzene ring (c1ccc...cc1) with a piperazine substituent (N2CCNCC2) at position 4.\n4. Matching analysis: Molecule's benzene has a piperazine substituent, but the scaffold specifies the piperazine at position 4. In the molecule, the piperazine is attached at position 3. Substituent position mismatch.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: NC(=O)OC(CCN1CCN(c2ccc([N+](=O)[O-])cc2)CC1)c1ccccc1\n2. Molecule structure analysis: Contains a benzene ring (c1ccccc1) and a piperazine ring (N1CCN(c2ccc([N+](=O)[O-])cc2)CC1) connected through a methylene group.\n3. Scaffold analysis: Scaffold is a benzene ring (c1ccc...cc1) with a piperazine substituent (N2CCNCC2) at position 4.\n4. Matching analysis: Molecule's benzene has a piperazine substituent, but the scaffold specifies the piperazine at position 4. In the molecule, the piperazine is attached at position 3. Substituent position mismatch.\n{\"output\":\"No\"}",
+            "references": "Yes"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: COc1cccc(CN2CCC(NC(=O)CNC(=O)c3cccc(C(F)(F)F)c3)C2)c1, Ring System Structure: c1ccccc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: COc1cccc(CN2CCC(NC(=O)CNC(=O)c3cccc(C(F)(F)F)c3)C2)c1\n2. Molecule structure analysis: Contains a benzene ring (c1cccc...c1) substituted with methoxy (CO-) and a piperidine ring (C2...C2) linked to a piperidine-acetamide chain (NC(=O)CNC(=O)) with a trifluoromethyl-substituted benzene (c3cccc(C(F)(F)F)c3).\n3. Scaffold analysis: The scaffold c1ccccc1 represents a benzene ring.\n4. Matching analysis: The molecule includes a benzene ring (c1cccc...c1) matching the scaffold structure.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: COc1cccc(CN2CCC(NC(=O)CNC(=O)c3cccc(C(F)(F)F)c3)C2)c1\n2. Molecule structure analysis: Contains a benzene ring (c1cccc...c1) substituted with methoxy (CO-) and a piperidine ring (C2...C2) linked to a piperidine-acetamide chain (NC(=O)CNC(=O)) with a trifluoromethyl-substituted benzene (c3cccc(C(F)(F)F)c3).\n3. Scaffold analysis: The scaffold c1ccccc1 represents a benzene ring.\n4. Matching analysis: The molecule includes a benzene ring (c1cccc...c1) matching the scaffold structure.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1, Ring System Structure: c1cc2[nH]ncc2cn1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1\n2. Molecule structure analysis: Contains a benzene ring (c1ccccc1), a fused bicyclic system (c1cc2[nH]nc(CNCC(F)F)c2cn1) with a pyrazole core and fluoromethylamine substituent, and a propylamine chain (CC(NC(=O)N-)).\n3. Scaffold analysis: A fused bicyclic system (c1cc2[nH]ncc2cn1) with a pyrazole core.\n4. Matching analysis: The molecule's fused bicyclic system matches the scaffold's pyrazole core and ring connectivity, ignoring substituents.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)F)c2cn1)c1ccccc1\n2. Molecule structure analysis: Contains a benzene ring (c1ccccc1), a fused bicyclic system (c1cc2[nH]nc(CNCC(F)F)c2cn1) with a pyrazole core and fluoromethylamine substituent, and a propylamine chain (CC(NC(=O)N-)).\n3. Scaffold analysis: A fused bicyclic system (c1cc2[nH]ncc2cn1) with a pyrazole core.\n4. Matching analysis: The molecule's fused bicyclic system matches the scaffold's pyrazole core and ring connectivity, ignoring substituents.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(-c2csc3ncnc(NCCCC(=O)O)c23)cc1C, Ring System Structure: c1ccc(-c2csc3ncncc23)cc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: Cc1ccc(-c2csc3ncnc(NCCCC(=O)O)c23)cc1C\n2. Molecule structure analysis: Contains a benzene ring (with methyl group) connected to a thiophene ring (c2csc3ncnc(NCCCC(=O)O)c23) via a single bond.\n3. Scaffold analysis: A benzene ring (c1ccc...cc1) connected to a thiophene ring (c2csc3ncncc23) via a single bond.\n4. Matching analysis: The molecule's thiophene ring has an additional N-linked chain (NCCCC(=O)O), which is absent in the scaffold. The core ring system (benzene + thiophene) matches, but the scaffold's simplified structure does not fully represent the molecule's retained ring system.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: Cc1ccc(-c2csc3ncnc(NCCCC(=O)O)c23)cc1C\n2. Molecule structure analysis: Contains a benzene ring (with methyl group) connected to a thiophene ring (c2csc3ncnc(NCCCC(=O)O)c23) via a single bond.\n3. Scaffold analysis: A benzene ring (c1ccc...cc1) connected to a thiophene ring (c2csc3ncncc23) via a single bond.\n4. Matching analysis: The molecule's thiophene ring has an additional N-linked chain (NCCCC(=O)O), which is absent in the scaffold. The core ring system (benzene + thiophene) matches, but the scaffold's simplified structure does not fully represent the molecule's retained ring system.\n{\"output\":\"No\"}",
+            "references": "Yes"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1cccc2[nH]c(-c3ccccn3)nc12, Ring System Structure: C1=C=c2[nH]c(-c3ccccn3)nc2=CC=1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: Cc1cccc2[nH]c(-c3ccccn3)nc12\n2. Molecule structure analysis: Contains a benzene ring (6-membered, all carbons) substituted with a pyridine group and a 5-membered diazole ring (2 nitrogen atoms).\n3. Scaffold analysis: C1=C=c2[nH]c(-c3ccccn3)nc2=CC=1 represents a 5-membered ring with alternating double bonds and a pyridine substituent.\n4. Matching analysis: The molecule's 5-membered diazole ring has two adjacent single bonds, while the scaffold requires alternating double bonds. Substituent positions and bond orders do not match.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: Cc1cccc2[nH]c(-c3ccccn3)nc12\n2. Molecule structure analysis: Contains a benzene ring (6-membered, all carbons) substituted with a pyridine group and a 5-membered diazole ring (2 nitrogen atoms).\n3. Scaffold analysis: C1=C=c2[nH]c(-c3ccccn3)nc2=CC=1 represents a 5-membered ring with alternating double bonds and a pyridine substituent.\n4. Matching analysis: The molecule's 5-membered diazole ring has two adjacent single bonds, while the scaffold requires alternating double bonds. Substituent positions and bond orders do not match.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1, Ring System Structure: C1=C=CC=CC=1\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a phenyl ring, a thiophene ring, and a pyridine ring, connected through amide and sulfonyl linkers. The proposed scaffold contains only a cyclohexene ring and omits the other rings and connecting linkers, so the retained ring-system scaffolds are not equivalent.\n{\"output\":\"No\"}",
+            "predictions": "The molecule contains three ring systems: a phenyl ring, a thiophene ring, and a pyridine ring, connected through amide and sulfonyl linkers. The proposed scaffold contains only a cyclohexene ring and omits the other rings and connecting linkers, so the retained ring-system scaffolds are not equivalent.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CCOC(=O)c1cnc2ccnn2c1SCC, Ring System Structure: c1cnc2ccnn2c1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CCOC(=O)c1cnc2ccnn2c1SCC\n2. Molecule structure analysis: Contains a pyrazine ring (c1cnc2ccnn2c1) with substituents: ethyl ester (CCOC(=O)-), methyl (CH3-), and thiophenyl (SCC-).\n3. Scaffold analysis: Pyrazine ring system (c1cnc2ccnn2c1).\n4. Matching analysis: Molecule includes the pyrazine ring system as a core structure, despite substituents.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CCOC(=O)c1cnc2ccnn2c1SCC\n2. Molecule structure analysis: Contains a pyrazine ring (c1cnc2ccnn2c1) with substituents: ethyl ester (CCOC(=O)-), methyl (CH3-), and thiophenyl (SCC-).\n3. Scaffold analysis: Pyrazine ring system (c1cnc2ccnn2c1).\n4. Matching analysis: Molecule includes the pyrazine ring system as a core structure, despite substituents.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(CCCC1CCN(S(=O)(=O)c2ccc3c(c2)CCO3)CC1)NO, Ring System Structure: c1ccc2c(c1)CCO2\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: O=C(CCCC1CCN(S(=O)(=O)c2ccc3c(c2)CCO3)CC1)NO\n2. Molecule structure analysis: Contains a piperidine ring (6-membered with N) linked to a sulfonyl group attached to a fused benzodioxane ring system (c2ccc3c(c2)CCO3).\n3. Scaffold analysis: A benzodioxane scaffold (c1ccc2c(c1)CCO2) with a benzene fused to a 1,4-dioxane ring.\n4. Matching analysis: The molecule's fused benzodioxane ring system matches the scaffold's structure (benzene fused to 1,4-dioxane).\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: O=C(CCCC1CCN(S(=O)(=O)c2ccc3c(c2)CCO3)CC1)NO\n2. Molecule structure analysis: Contains a piperidine ring (6-membered with N) linked to a sulfonyl group attached to a fused benzodioxane ring system (c2ccc3c(c2)CCO3).\n3. Scaffold analysis: A benzodioxane scaffold (c1ccc2c(c1)CCO2) with a benzene fused to a 1,4-dioxane ring.\n4. Matching analysis: The molecule's fused benzodioxane ring system matches the scaffold's structure (benzene fused to 1,4-dioxane).\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1c(NC(=O)c2ccc(S(=O)(=O)Nc3ccccc3F)cc2)c(=O)n(-c2ccccc2)n1C, Ring System Structure: c1ccc(-n2cccn2)cc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: Cc1c(NC(=O)c2ccc(S(=O)(=O)Nc3ccccc3F)cc2)c(=O)n(-c2ccccc2)n1C\n2. Molecule structure analysis: Contains a pyrazole core (n1c...n1) with substituents: 2-aminobenzamide, 2,5-disulfonatobenzoate, and 2-phenyl group.\n3. Scaffold analysis: Benzene ring (c1ccc...cc1) connected to a pyrazole (n2cccn2).\n4. Matching analysis: Molecule's pyrazole is connected to a benzene (via -c2ccccc2), matching the scaffold's structure.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: Cc1c(NC(=O)c2ccc(S(=O)(=O)Nc3ccccc3F)cc2)c(=O)n(-c2ccccc2)n1C\n2. Molecule structure analysis: Contains a pyrazole core (n1c...n1) with substituents: 2-aminobenzamide, 2,5-disulfonatobenzoate, and 2-phenyl group.\n3. Scaffold analysis: Benzene ring (c1ccc...cc1) connected to a pyrazole (n2cccn2).\n4. Matching analysis: Molecule's pyrazole is connected to a benzene (via -c2ccccc2), matching the scaffold's structure.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: C#Cc1cc(Oc2cnc(NCC(C)O)nc2N)c(C(C)C)cc1OC, Ring System Structure: C1=C=CC=CC=1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: C#Cc1cc(Oc2cnc(NCC(C)O)nc2N)c(C(C)C)cc1OC\n2. Molecule structure analysis: Contains a benzene ring with substituents: allyloxy, 2-(N-methyl-2-hydroxyacetamido)pyridine, and tert-butyl.\n3. Scaffold analysis: C1=C=CC=CC=1 represents a five-membered ring with alternating double bonds.\n4. Matching analysis: The molecule's benzene ring lacks the required five-membered, alternating double-bonded structure. Substituents do not form the specified scaffold.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: C#Cc1cc(Oc2cnc(NCC(C)O)nc2N)c(C(C)C)cc1OC\n2. Molecule structure analysis: Contains a benzene ring with substituents: allyloxy, 2-(N-methyl-2-hydroxyacetamido)pyridine, and tert-butyl.\n3. Scaffold analysis: C1=C=CC=CC=1 represents a five-membered ring with alternating double bonds.\n4. Matching analysis: The molecule's benzene ring lacks the required five-membered, alternating double-bonded structure. Substituents do not form the specified scaffold.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Fc1cccc(CNc2cccc(-c3cc(NCCC4CCCNC4)ncc3Cl)n2)c1, Ring System Structure: c1ccc(-c2ccccn2)cc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: Fc1cccc(CNc2cccc(-c3cc(NCCC4CCCNC4)ncc3Cl)n2)c1\n2. Molecule structure analysis: Contains a fluorobenzene ring connected to a pyrrolidine ring (via NH) and a pyridine ring (substituted with a piperidine).\n3. Scaffold analysis: A benzene ring (c1ccc...cc1) connected to a pyridine ring (c2ccccn2).\n4. Matching analysis: The molecule's benzene-pyridine segment matches the scaffold. Substituents (fluorine, NH, piperidine) are not part of the scaffold definition.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: Fc1cccc(CNc2cccc(-c3cc(NCCC4CCCNC4)ncc3Cl)n2)c1\n2. Molecule structure analysis: Contains a fluorobenzene ring connected to a pyrrolidine ring (via NH) and a pyridine ring (substituted with a piperidine).\n3. Scaffold analysis: A benzene ring (c1ccc...cc1) connected to a pyridine ring (c2ccccn2).\n4. Matching analysis: The molecule's benzene-pyridine segment matches the scaffold. Substituents (fluorine, NH, piperidine) are not part of the scaffold definition.\n{\"output\":\"Yes\"}",
+            "references": "No"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN1CCN(CC(=O)Nc2ccc(Sc3ccc(Cl)cc3)cc2)CC1, Ring System Structure: C1CNCCN1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CN1CCN(CC(=O)Nc2ccc(Sc3ccc(Cl)cc3)cc2)CC1\n2. Molecule structure analysis: Contains a piperazine ring (6-membered with two N atoms) linked to a benzamide group and a benzene ring substituted with a thiophene group (containing a benzene ring).\n3. Scaffold analysis: C1CNCCN1 is a 6-membered ring with two N atoms (piperazine-like).\n4. Matching analysis: The molecule's piperazine ring matches the scaffold's structure (6-membered with two N atoms).\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CN1CCN(CC(=O)Nc2ccc(Sc3ccc(Cl)cc3)cc2)CC1\n2. Molecule structure analysis: Contains a piperazine ring (6-membered with two N atoms) linked to a benzamide group and a benzene ring substituted with a thiophene group (containing a benzene ring).\n3. Scaffold analysis: C1CNCCN1 is a 6-membered ring with two N atoms (piperazine-like).\n4. Matching analysis: The molecule's piperazine ring matches the scaffold's structure (6-membered with two N atoms).\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1CCCCN1CCC(CCN(C(C)C)C(C)C)(C(N)=O)c1ccccc1F, Ring System Structure: C1CCNCC1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC1CCCCN1CCC(CCN(C(C)C)C(C)C)(C(N)=O)c1ccccc1F\n2. Molecule structure analysis: Contains a piperidine ring (6-membered with one N) and a phenyl ring (6-membered aromatic) connected through a side chain.\n3. Scaffold analysis: C1CCNCC1 is a 6-membered piperidine ring scaffold.\n4. Matching analysis: The molecule's piperidine ring matches the scaffold structure.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CC1CCCCN1CCC(CCN(C(C)C)C(C)C)(C(N)=O)c1ccccc1F\n2. Molecule structure analysis: Contains a piperidine ring (6-membered with one N) and a phenyl ring (6-membered aromatic) connected through a side chain.\n3. Scaffold analysis: C1CCNCC1 is a 6-membered piperidine ring scaffold.\n4. Matching analysis: The molecule's piperidine ring matches the scaffold structure.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccco3)cc2)C1, Ring System Structure: C1CCNCC1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccco3)cc2)C1\n2. Molecule structure analysis: Contains a cyclohexane ring (CC1CC(C)C1) with substituents: methyl, sulfonyl group (with benzene and amide), and aminomethyl group (with furan).\n3. Scaffold analysis: C1CCNCC1 is a six-membered ring with one nitrogen atom.\n4. Matching analysis: The molecule's cyclohexane ring (CC1CC(C)C1) has no nitrogen. The scaffold C1CCNCC1 requires a nitrogen in the ring, which is absent.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: CC1CC(C)CN(S(=O)(=O)c2ccc(C(=O)NCc3ccco3)cc2)C1\n2. Molecule structure analysis: Contains a cyclohexane ring (CC1CC(C)C1) with substituents: methyl, sulfonyl group (with benzene and amide), and aminomethyl group (with furan).\n3. Scaffold analysis: C1CCNCC1 is a six-membered ring with one nitrogen atom.\n4. Matching analysis: The molecule's cyclohexane ring (CC1CC(C)C1) has no nitrogen. The scaffold C1CCNCC1 requires a nitrogen in the ring, which is absent.\n{\"output\":\"No\"}",
+            "references": "Yes"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(C)n1cnc2c(NCc3ccc(-c4ccccc4)cc3)nc(N(CCO)CCO)nc21, Ring System Structure: c1ccc(-c2ccccc2)cc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC(C)n1cnc2c(NCc3ccc(-c4ccccc4)cc3)nc(N(CCO)CCO)nc21\n2. Molecule structure analysis: Contains a fused bicyclic quinoline core (n1cnc2...nc21) with a benzyl group (NCCc3ccc...cc3) and a 2-hydroxyethylamino group (N(CCO)CCO) attached.\n3. Scaffold analysis: The scaffold c1ccc(-c2ccccc2)cc1 represents a benzene ring connected to another benzene ring via a single bond.\n4. Matching analysis: The molecule's benzyl group (NCCc3ccc...cc3) includes a benzene ring (c3ccc...cc3) directly attached to the quinoline core. This matches the scaffold's benzene-benzene connectivity.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CC(C)n1cnc2c(NCc3ccc(-c4ccccc4)cc3)nc(N(CCO)CCO)nc21\n2. Molecule structure analysis: Contains a fused bicyclic quinoline core (n1cnc2...nc21) with a benzyl group (NCCc3ccc...cc3) and a 2-hydroxyethylamino group (N(CCO)CCO) attached.\n3. Scaffold analysis: The scaffold c1ccc(-c2ccccc2)cc1 represents a benzene ring connected to another benzene ring via a single bond.\n4. Matching analysis: The molecule's benzyl group (NCCc3ccc...cc3) includes a benzene ring (c3ccc...cc3) directly attached to the quinoline core. This matches the scaffold's benzene-benzene connectivity.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(NC1CCCC1)C(c1cccnc1)N(C(=O)c1csnn1)C1CCCC1, Ring System Structure: C1=C=NC=CC=1\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains a fused bicyclic imide ring system, but its ring atoms and connectivity do not match the specified `C1=C=NC=CC=1` scaffold. The scaffold requires a five-membered ring with alternating double bonds, whereas the molecule’s imide ring has single bonds and different ring topology.\n{\"output\":\"No\"}",
+            "predictions": "The molecule contains a fused bicyclic imide ring system, but its ring atoms and connectivity do not match the specified `C1=C=NC=CC=1` scaffold. The scaffold requires a five-membered ring with alternating double bonds, whereas the molecule’s imide ring has single bonds and different ring topology.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Fc1ccccc1C1CCN(Cc2nc(CC3CC3)no2)C1, Ring System Structure: C1=C(c2ccccc2)CCN1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: Fc1ccccc1C1CCN(Cc2nc(CC3CC3)no2)C1\n2. Molecule structure analysis: Contains a fluorophenyl ring (Fc1ccccc1) and a piperazine ring (C1CCN...C1) attached to a pyrazole ring (c2nc(CC3CC3)no2) via a methylene group.\n3. Scaffold analysis: C1=C(c2ccccc2)CCN1 represents a benzene ring (c2ccccc2) connected to a piperazine ring (CCN1) via a double bond (C1=C).\n4. Matching analysis: The molecule's benzene-piperazine linkage is a single bond (C1CCN), not a double bond (C1=C) as in the scaffold. Connectivity mismatch.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: Fc1ccccc1C1CCN(Cc2nc(CC3CC3)no2)C1\n2. Molecule structure analysis: Contains a fluorophenyl ring (Fc1ccccc1) and a piperazine ring (C1CCN...C1) attached to a pyrazole ring (c2nc(CC3CC3)no2) via a methylene group.\n3. Scaffold analysis: C1=C(c2ccccc2)CCN1 represents a benzene ring (c2ccccc2) connected to a piperazine ring (CCN1) via a double bond (C1=C).\n4. Matching analysis: The molecule's benzene-piperazine linkage is a single bond (C1CCN), not a double bond (C1=C) as in the scaffold. Connectivity mismatch.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "20": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(OC(F)F)c2cn1)c1ccccc1, Ring System Structure: c1cc2[nH]ncc2cn1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC(NC(=O)Nc1cc2[nH]nc(OC(F)F)c2cn1)c1ccccc1\n2. Molecule structure analysis: Contains a benzene ring (c1ccccc1), a fused bicyclic system (c1cc2[nH]nc(OC(F)F)c2cn1) with a pyrazole core and fluorinated hydroxy group, and a butyl chain (CC(NC(=O)N-)).\n3. Scaffold analysis: The scaffold is a fused bicyclic system (c1cc2[nH]ncc2cn1) with a pyrazole core.\n4. Matching analysis: The molecule's fused bicyclic system (c1cc2[nH]nc(OC(F)F)c2cn1) has a pyrazole core matching the scaffold (c1cc2[nH]ncc2cn1), despite the fluorinated hydroxy substituent.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CC(NC(=O)Nc1cc2[nH]nc(OC(F)F)c2cn1)c1ccccc1\n2. Molecule structure analysis: Contains a benzene ring (c1ccccc1), a fused bicyclic system (c1cc2[nH]nc(OC(F)F)c2cn1) with a pyrazole core and fluorinated hydroxy group, and a butyl chain (CC(NC(=O)N-)).\n3. Scaffold analysis: The scaffold is a fused bicyclic system (c1cc2[nH]ncc2cn1) with a pyrazole core.\n4. Matching analysis: The molecule's fused bicyclic system (c1cc2[nH]nc(OC(F)F)c2cn1) has a pyrazole core matching the scaffold (c1cc2[nH]ncc2cn1), despite the fluorinated hydroxy substituent.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "21": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1=C(CC(=O)OCCCCO)c2cc(F)ccc2C1=Cc1ccc(S(C)(=O)=O)cc1, Ring System Structure: C1=[SH]Cc2ccccc21\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC1=C(CC(=O)OCCCCO)c2cc(F)ccc2C1=Cc1ccc(S(C)(=O)=O)cc1\n2. Molecule structure analysis: Contains a benzene ring with substituents: prop-2-en-1-one, hexan-6-ol, and a 4-fluorophenyl group. Another benzene ring with a methylsulfonyl group.\n3. Scaffold analysis: C1=[SH]Cc2ccccc21 represents a benzene ring with a methylthio substituent at position 1.\n4. Matching analysis: The molecule has a benzene ring with a methylsulfonyl group (S=O), not a methylthio group (S-H). Substituent types do not match.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: CC1=C(CC(=O)OCCCCO)c2cc(F)ccc2C1=Cc1ccc(S(C)(=O)=O)cc1\n2. Molecule structure analysis: Contains a benzene ring with substituents: prop-2-en-1-one, hexan-6-ol, and a 4-fluorophenyl group. Another benzene ring with a methylsulfonyl group.\n3. Scaffold analysis: C1=[SH]Cc2ccccc21 represents a benzene ring with a methylthio substituent at position 1.\n4. Matching analysis: The molecule has a benzene ring with a methylsulfonyl group (S=O), not a methylthio group (S-H). Substituent types do not match.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "22": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1, Ring System Structure: c1cnc2ncncc2n1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1\n2. Molecule structure analysis: Contains a fused bicyclic quinazoline core (two fused six-membered rings: one pyrimidine-like, one pyridine-like) with substituents: hydroxyl, phenyl, and trifluoromethyl groups.\n3. Scaffold analysis: A fused bicyclic system (c1cnc2ncncc2n1) with two six-membered rings sharing one bond.\n4. Matching analysis: The molecule's quinazoline core matches the scaffold's fused bicyclic structure (ignoring substituents).\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1\n2. Molecule structure analysis: Contains a fused bicyclic quinazoline core (two fused six-membered rings: one pyrimidine-like, one pyridine-like) with substituents: hydroxyl, phenyl, and trifluoromethyl groups.\n3. Scaffold analysis: A fused bicyclic system (c1cnc2ncncc2n1) with two six-membered rings sharing one bond.\n4. Matching analysis: The molecule's quinazoline core matches the scaffold's fused bicyclic structure (ignoring substituents).\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "23": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1, Ring System Structure: C1=C=c2ccncc2=CC=1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1\n2. Molecule structure analysis: Contains a benzene ring (with methyl and propenyl groups), a pyridine ring (with a cyclopropylcarboxamide substituent), and a pyridine ring (with a methyl group).\n3. Scaffold analysis: C1=C=c2ccncc2=CC=1 represents a six-membered aromatic ring with alternating double and single bonds, including a nitrogen atom.\n4. Matching analysis: The molecule's pyridine rings do not match the scaffold's specific bond pattern (aromatic with alternating double bonds). The benzene ring also does not match.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1\n2. Molecule structure analysis: Contains a benzene ring (with methyl and propenyl groups), a pyridine ring (with a cyclopropylcarboxamide substituent), and a pyridine ring (with a methyl group).\n3. Scaffold analysis: C1=C=c2ccncc2=CC=1 represents a six-membered aromatic ring with alternating double and single bonds, including a nitrogen atom.\n4. Matching analysis: The molecule's pyridine rings do not match the scaffold's specific bond pattern (aromatic with alternating double bonds). The benzene ring also does not match.\n{\"output\":\"No\"}",
+            "references": "No"
+        },
+        "24": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: COc1cc2ncnc(Nc3cc(Cl)ccc3Cl)c2cc1OCCCCCC(=O)NO, Ring System Structure: c1ccc2ncncc2c1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: COc1cc2ncnc(Nc3cc(Cl)ccc3Cl)c2cc1OCCCCCC(=O)NO\n2. Molecule structure analysis: Contains a fused bicyclic quinazoline core (benzene fused to pyrimidine) with substituents: methoxy, amino, 2,5-dichlorophenyl, and a long alkyl chain with hydroxamic acid.\n3. Scaffold analysis: A fused bicyclic system: benzene ring connected to a pyrimidine ring (c1ccc2ncncc2c1).\n4. Matching analysis: The molecule's quinazoline core matches the scaffold's fused benzene-pyrimidine structure, ignoring substituents.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: COc1cc2ncnc(Nc3cc(Cl)ccc3Cl)c2cc1OCCCCCC(=O)NO\n2. Molecule structure analysis: Contains a fused bicyclic quinazoline core (benzene fused to pyrimidine) with substituents: methoxy, amino, 2,5-dichlorophenyl, and a long alkyl chain with hydroxamic acid.\n3. Scaffold analysis: A fused bicyclic system: benzene ring connected to a pyrimidine ring (c1ccc2ncncc2c1).\n4. Matching analysis: The molecule's quinazoline core matches the scaffold's fused benzene-pyrimidine structure, ignoring substituents.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "25": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1, Ring System Structure: c1ccc(-c2cnc3ncncc3c2)cc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1\n2. Molecule structure analysis: Contains a pyrazine ring (c1ncc2ccn1c2) with a benzene substituent (-c3c(Cl)cccc3Cl) and a pyridine substituent (c2n1).\n3. Scaffold analysis: A benzene ring (c1ccc...cc1) connected to a pyrazine ring (c2cnc3ncncc3c2) via a single bond.\n4. Matching analysis: The molecule's benzene-pyrazine system matches the scaffold's structure, ignoring substituents (Cl groups).\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1\n2. Molecule structure analysis: Contains a pyrazine ring (c1ncc2ccn1c2) with a benzene substituent (-c3c(Cl)cccc3Cl) and a pyridine substituent (c2n1).\n3. Scaffold analysis: A benzene ring (c1ccc...cc1) connected to a pyrazine ring (c2cnc3ncncc3c2) via a single bond.\n4. Matching analysis: The molecule's benzene-pyrazine system matches the scaffold's structure, ignoring substituents (Cl groups).\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "26": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1C2Cc3ccc(N)cc3C1(C)CCN2, Ring System Structure: c1ccc2c(c1)CC1CC2CCN1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CC1C2Cc3ccc(N)cc3C1(C)CCN2\n2. Molecule structure analysis: Contains a benzene ring (c3ccc(N)cc3) connected to a cyclohexane (C1(C)CCN2) via a methylene group (C2) and a methyl group (CC1).\n3. Scaffold analysis: A benzene ring (c1ccc2c(c1)) connected to a cyclohexane (CC1CC2CCN1) via a methylene group (c2).\n4. Matching analysis: The molecule's benzene-cyclohexane system matches the scaffold's connectivity and ring sizes. The methyl substituent on the cyclohexane does not affect the core scaffold definition.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CC1C2Cc3ccc(N)cc3C1(C)CCN2\n2. Molecule structure analysis: Contains a benzene ring (c3ccc(N)cc3) connected to a cyclohexane (C1(C)CCN2) via a methylene group (C2) and a methyl group (CC1).\n3. Scaffold analysis: A benzene ring (c1ccc2c(c1)) connected to a cyclohexane (CC1CC2CCN1) via a methylene group (c2).\n4. Matching analysis: The molecule's benzene-cyclohexane system matches the scaffold's connectivity and ring sizes. The methyl substituent on the cyclohexane does not affect the core scaffold definition.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "27": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(C(=NO)NCCN2CCOCC2)c(Oc2cccc(F)c2)n1, Ring System Structure: C1COCCN1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: Cc1ccc(C(=NO)NCCN2CCOCC2)c(Oc2cccc(F)c2)n1\n2. Molecule structure analysis: Contains a benzene ring (with methyl and hydroxyl groups), a 1,3,5-triazine ring (with hydroxamic acid and morpholine substituents), and a fluorophenyl group.\n3. Scaffold analysis: C1COCCN1 is a five-membered ring with oxygen, carbon, carbon, oxygen, and nitrogen atoms.\n4. Matching analysis: The molecule's morpholine ring (N2CCOCC2) matches the scaffold C1COCCN1 after renumbering atoms.\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: Cc1ccc(C(=NO)NCCN2CCOCC2)c(Oc2cccc(F)c2)n1\n2. Molecule structure analysis: Contains a benzene ring (with methyl and hydroxyl groups), a 1,3,5-triazine ring (with hydroxamic acid and morpholine substituents), and a fluorophenyl group.\n3. Scaffold analysis: C1COCCN1 is a five-membered ring with oxygen, carbon, carbon, oxygen, and nitrogen atoms.\n4. Matching analysis: The molecule's morpholine ring (N2CCOCC2) matches the scaffold C1COCCN1 after renumbering atoms.\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "28": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1, Ring System Structure: c1ccc2sccc2c1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1\n2. Molecule structure analysis: Contains a piperidine ring (6-membered with one N) linked to a thiophene (5-membered with one S) substituted with a 2,5-disubstituted furan.\n3. Scaffold analysis: c1ccc2sccc2c1 is a 5-membered ring with one S and two adjacent C atoms.\n4. Matching analysis: The molecule's furan substituent (c3ccccc23) matches the scaffold's connectivity (5-membered with S and two adjacent C atoms).\n{\"output\":\"Yes\"}",
+            "predictions": "1. Input structure: CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1\n2. Molecule structure analysis: Contains a piperidine ring (6-membered with one N) linked to a thiophene (5-membered with one S) substituted with a 2,5-disubstituted furan.\n3. Scaffold analysis: c1ccc2sccc2c1 is a 5-membered ring with one S and two adjacent C atoms.\n4. Matching analysis: The molecule's furan substituent (c3ccccc23) matches the scaffold's connectivity (5-membered with S and two adjacent C atoms).\n{\"output\":\"Yes\"}",
+            "references": "Yes"
+        },
+        "29": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN1C(=O)C(Cc2ccc(-c3ccccc3[N+](=O)[O-])cc2)NC(=O)c2cc(Cl)ccc21, Ring System Structure: c1ccc(-c2ccccc2)cc1\n"
+                }
+            ],
+            "origin_prediction": "1. Input structure: CN1C(=O)C(Cc2ccc(-c3ccccc3[N+](=O)[O-])cc2)NC(=O)c2cc(Cl)ccc21\n2. Molecule structure analysis: Contains a fused benzene ring system (two benzene rings sharing one bond) with substituents: N-methyl group, amide chain, chloro-substituted benzene, and nitro-substituted benzene.\n3. Scaffold analysis: The scaffold is a benzene ring (c1ccc...cc1) connected to another benzene ring (c2ccccc2) via a single bond.\n4. Matching analysis: The molecule's fused benzene system (two rings sharing one bond) does not match the scaffold's two separate benzene rings connected by a single bond. Substituents and ring connectivity differ.\n{\"output\":\"No\"}",
+            "predictions": "1. Input structure: CN1C(=O)C(Cc2ccc(-c3ccccc3[N+](=O)[O-])cc2)NC(=O)c2cc(Cl)ccc21\n2. Molecule structure analysis: Contains a fused benzene ring system (two benzene rings sharing one bond) with substituents: N-methyl group, amide chain, chloro-substituted benzene, and nitro-substituted benzene.\n3. Scaffold analysis: The scaffold is a benzene ring (c1ccc...cc1) connected to another benzene ring (c2ccccc2) via a single bond.\n4. Matching analysis: The molecule's fused benzene system (two rings sharing one bond) does not match the scaffold's two separate benzene rings connected by a single bond. Substituents and ring connectivity differ.\n{\"output\":\"No\"}",
+            "references": "Yes"
+        }
+    }
+}

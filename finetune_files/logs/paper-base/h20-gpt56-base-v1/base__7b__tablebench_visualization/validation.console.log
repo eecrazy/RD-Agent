@@ -1,0 +1,33 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 02:04:31 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_visualization/validation/20260828_020431
+08/28 02:04:31 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 02:04:31 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-tablebench_visualization/tablebench_visualization] on GPU 4
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:45<00:00, 45.33s/it]100%|██████████| 1/1 [00:45<00:00, 45.33s/it]
+08/28 02:05:16 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 02:05:16 - OpenCompass - INFO - Partitioned into 1 tasks.
+  0%|          | 0/1 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-tablebench_visualization/tablebench_visualization] on CPU 
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:23<00:00, 23.87s/it]100%|██████████| 1/1 [00:23<00:00, 23.87s/it]
+dataset                   version    metric       mode      base-qwen2.5-7b-instruct-tablebench_visualization
+------------------------  ---------  -----------  ------  ---------------------------------------------------
+tablebench_visualization  a165a3     Pass@1       gen                                                    8.00
+tablebench_visualization  a165a3     ECR@1        gen                                                   40.00
+tablebench_visualization  a165a3     Parse@1      gen                                                  100.00
+tablebench_visualization  a165a3     total_count  gen                                                   25.00
+08/28 02:05:40 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_visualization/validation/20260828_020431/summary/summary_20260828_020431.txt
+08/28 02:05:40 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_visualization/validation/20260828_020431/summary/summary_20260828_020431.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-tablebench_visualization |
+|----- | ----- | ----- | ----- | -----|
+| tablebench_visualization | a165a3 | Pass@1 | gen | 8.00 |
+| tablebench_visualization | a165a3 | ECR@1 | gen | 40.00 |
+| tablebench_visualization | a165a3 | Parse@1 | gen | 100.00 |
+| tablebench_visualization | a165a3 | total_count | gen | 25.00 |
+
+08/28 02:05:40 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_visualization/validation/20260828_020431/summary/summary_20260828_020431.md

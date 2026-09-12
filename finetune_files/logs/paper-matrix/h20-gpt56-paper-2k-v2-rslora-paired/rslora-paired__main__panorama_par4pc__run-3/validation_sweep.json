@@ -1,0 +1,46 @@
+{
+  "baseline_only": false,
+  "benchmark": "panorama_par4pc",
+  "candidate_count": 1,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_output__rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417__941ccfc7d34e",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_par4pc__run-3/validation_sweep/candidates/durable_output__rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417__941ccfc7d34e/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "ae2e5e2cac844d2eb920d1376cdb3b87c29ac20a8418e32ae80701b6e6e01dbb",
+  "completed_count": 1,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/panorama_par4pc/run-3",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "ae2e5e2cac844d2eb920d1376cdb3b87c29ac20a8418e32ae80701b6e6e01dbb",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "568c51559b7f7d22cfd4a982c7ded2ce5fc1e392a7307c2e592045004361c65f",
+  "provisional_selection": {
+    "candidate_id": "durable_output__rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417__941ccfc7d34e",
+    "formal_training_evidence_signature": "16b5d11407aced53ddb66549676612fe494b23e54126181daa7c6e13b5e21a80",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__panorama_par4pc__run-3/workspace/.ft_model_checkpoints/rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417/output",
+    "selection_metrics": [
+      {
+        "formula": "mean macro_f1 across configured views",
+        "higher_is_better": true,
+        "label": "F1",
+        "metric": "macro_f1",
+        "unit": "percent",
+        "value": 75.0
+      }
+    ],
+    "selection_signature": "87cc2b79d0914b690b4dd96e698881a0038f5c3db7454c427128a6ed296077fa"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:17:45.981610+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

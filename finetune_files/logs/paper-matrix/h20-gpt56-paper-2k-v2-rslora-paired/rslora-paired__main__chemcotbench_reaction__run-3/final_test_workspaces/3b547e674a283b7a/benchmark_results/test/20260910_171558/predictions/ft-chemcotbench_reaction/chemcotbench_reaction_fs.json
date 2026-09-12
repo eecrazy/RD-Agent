@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)OC(=O)OC(C)(C)C.NCCN\nReagents: ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is di-tert-butyl dicarbonate, a Boc-transfer reagent, while the second is an N–H heterocycle. The principal transformation is Boc protection of the nitrogen: the amine attacks the electrophilic carbonyl of the dicarbonate, and collapse of the tetrahedral intermediate expels tert-butoxycarbonate. The resulting product is the N-Boc heterocycle together with tert-butoxycarbonate as the accompanying byproduct.\n\n{\"Major Product\": CC(C)(C)OC(=O)OC(=O)OC1CCNCC1.CC(C)(C)OC(=O)O\"}",
+        "gold": "CC(C)(C)OC(=O)NCCN"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)C(=O)c1ccccc1.C=CC[Si](C)(C)C\nReagents: Cl[Sn](Cl)(Cl)Cl.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a methyl ester, while the second is a vinyl trimethylsilane. The organotin reagent promotes ester alkylation by a chain transfer process. The vinyl carbon attacks the ester carbonyl, and collapse of the tetrahedral intermediate expels methoxide. The resulting product is the corresponding vinyl methyl ketone, with the trimethylsilyl group remaining attached to the vinyl carbon. The methyl ester and aryl framework are unchanged.\n\n{\"Major Product\": CC(C)=CC(=O)c1ccccc1\"}",
+        "gold": "C=CCC(O)(C(=O)OCC)c1ccccc1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Br.CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while bromine provides electrophilic bromination. The alcohol oxygen attacks bromine to form a C–Br bond, with cleavage of the bromine–bromine bond. The amide, heteroaromatic ring, and other functional groups remain unchanged.\n\n{\"CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1C(=O)OCc1ccccc1\"}",
+        "gold": "CC(Nc1nccc(-n2cnc3ccccc32)n1)C1CN(C(=O)Nc2cccc3ccccc23)CCN1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)N[C@H](C=O)CC1CCC1.[C-]#[N+]C1CC1.CC(=O)O\nReagents: CCOC(C)=O.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary alcohol, while the other reactants are a nitrile and acetic acid. The alcohol is converted into its acetoxy derivative by esterification with acetic acid, replacing the hydroxyl group with acetate. The nitrile, stereocenter, and methyl ester remain unchanged.\n\n{\"CC(C)(C)OC(=O)N[C@H](C(=O)O)CC1CCC1\"}",
+        "gold": "CC(=O)OC(C(=O)NC1CC1)[C@H](CC1CCC1)NC(=O)OC(C)(C)C"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)Cc1cncnc1Cl.C#C[Si](CC)(CC)CC\nReagents: c1ccc(P(c2ccccc2)c2ccccc2)cc1.CCN(CC)CC.CN(C)C=O.N#N\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while trimethylsilylacetylene provides a terminal alkynyl group. The reaction is a Sonogashira-type coupling: the alcohol is converted into a more reactive benzyl Grignard reagent, which adds to the terminal alkyne. The resulting alkynylmagnesium species then undergoes palladium-mediated coupling with the chloropyridine C–Cl bond, replacing the C–Cl bond with a C–C bond to the terminal carbon of the alkynyl group. The pyridine ring, methoxy group, and chloro substituent remain unchanged.\n\n{\"CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC\"}",
+        "gold": "CCOC(=O)Cc1cncnc1C#C[Si](CC)(CC)CC"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(=O)Nc1ccc(C=O)cc1.N#CCC#N\nReagents: CCO.C1CCNCC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a primary amine, while the second is an α,β-unsaturated nitrile. The amine attacks the nitrile carbon by an SN2 process, displacing cyanide and forming a new C–N bond. This converts the nitrile into the corresponding α-aminonitrile without changing the ketone or aromatic framework. The amine nitrogen therefore becomes the principal functional group, with the nitrile carbon bearing hydrogen and the terminal carbon bearing both a methyl group and a cyano group.\n\n{\"CC(=O)Nc1ccc(C#CC#CN)cc1\"}",
+        "gold": "CC(=O)Nc1ccc(C=C(C#N)C#N)cc1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CN1CC(=O)N(C)C(C)(Cc2ccccc2)C1=O.Clc1cccc(CBr)c1Cl\nReagents: O.CN(C)C=O.[NaH]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the heteroaryl chloride is the principal electrophilic site. Sodium hydride generates a strongly nucleophilic hydride reagent in THF, promoting substitution at the carbon bearing chlorine. The alcohol oxygen replaces chloride to form the corresponding aryl ether, with the amide, tertiary amine, and aryl bromide groups unchanged. The resulting product is the chloro-substituted heteroaryl ether.\n\n{\"Clc1cccc(CO)c1Cl\"}",
+        "gold": "CN1C(=O)C(C)(Cc2ccccc2)N(C)C(=O)C1Cc1cccc(Cl)c1Cl"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCCCC[P+](c1ccccc1)(c1ccccc1)c1ccccc1.COC(=O)CCCCCCC=O\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary alcohol, while hexamethylphosphoramide serves as a phosphonium base. The alcohol oxygen attacks the phosphonium center, and proton transfer gives the corresponding phosphonium alkoxide. The alkoxide oxygen then attacks the ketone carbonyl carbon, forming a new C–O bond and converting the carbonyl into a tertiary alkoxide. The resulting tetrahedral intermediate collapses with loss of water, giving the tertiary alcohol without changing the alkane chain or the aromatic ring.\n\n{\"Major Product\": CCCCCCOC(=O)CCCCCCCOC1CCOCC1\"}",
+        "gold": "CCCCCC=CCCCCCCC(=O)OC"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13.Brc1ccccc1\nReagents: O=C(C=Cc1ccccc1)C=Cc1ccccc1.O=C(C=Cc1ccccc1)C=Cc1ccccc1.O=C(C=Cc1ccccc1)C=Cc1ccccc1.CC(C)(C)P(C(C)(C)C)C(C)(C)C.Cc1ccccc1C.CC(C)(C)O[Na].[Pd].[Pd]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while bromobenzene provides a C–Br electrophile. The palladium catalyst and bulky phosphine ligand support a Buchwald–Hartwig amination: the alcohol is replaced by the benzylic C–N bond of the aryl bromide, forming a new C(sp²)–N bond. The fused heterocycle, methoxy group, and other substituents remain unchanged.\n\n{\"CC1(C)c2ccccc2-c2cc3c(cc21)[nH]c1ccc(-c2ccc4c(c2)c2cc5c(cc2n4-c2ccccc2)oc2ccccc25)cc13.Nc1ccccc1\"}",
+        "gold": "CC1(C)c2ccccc2-c2cc3c4cc(-c5ccc6c(c5)c5cc7c(cc5n6-c5ccccc5)oc5ccccc57)ccc4n(-c4ccccc4)c3cc21"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: O.C=CC#N.C=C(C)C\nReagents: COC.O=S(=O)(O)O.Oc1ccc(O)cc1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a terminal alkyne, while methanol provides a primary alcohol. The reaction is a Sonogashira-type coupling: the terminal alkyne is converted into a terminal aryl or vinyl C–C bond with the methyl-substituted vinyl carbon, replacing the terminal alkynyl hydrogen. The methoxy group, methyl substituent, and nitrile remain unchanged.\n\n{\"C=C(C)COC=CC#N\"}",
+        "gold": "C=CC(=O)NC(C)(C)C"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1ccc(-n2nc(C(C)(C)C)cc2N)cc1.O=C(Cl)OCC(Cl)(Cl)Cl\nReagents: c1ccncc1.O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while N-chlorosuccinimide serves as an electrophilic chlorine-transfer reagent. The alcohol oxygen attacks the electrophilic sulfur of NCS, forming an S–O bond and cleaving the S–Cl bond. The resulting N-chlorosuccinimide-derived species is the corresponding N-chlorosuccinimide sulfonamide, with the alcohol and fused heteroaromatic framework unchanged.\n\n{\"Major Product\": O=S(=O)(Nc1ccc(-n2nc(C(C)(C)C)cc2N)cc1)C(=O)C(Cl)OCC(Cl)(Cl)Cl\"}",
+        "gold": "Cc1ccc(-n2nc(C(C)(C)C)cc2NC(=O)OCC(Cl)(Cl)Cl)cc1"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21.O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is Dess–Martin periodinane, a hypervalent iodine(V) oxidant. The substrate contains a secondary alcohol, while the other functional groups are stable toward oxidation. Dess–Martin oxidation converts the alcohol carbon from an –OH group to a carbonyl, forming the corresponding ketone. The methoxy, trifluoromethyl, and heteroaromatic groups remain unchanged.\n\n{\"Major Product\": O=C(C1CCC(O)c2nn(Cc3ccc(C(F)(F)F)nc3)c(=O)n21)N1CCC(F)C1\"}",
+        "gold": "O=C1CCC(C(=O)N2CCC(F)C2)n2c1nn(Cc1ccc(C(F)(F)F)nc1)c2=O"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCC(C)(C)C(=O)O.CNOC\nReagents: Cl.CCN=C=NCCCN(C)C.CN1CCOCC1.On1nnc2ccccc21.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a primary alcohol, while the second is an N-methylated oxazolidinone bearing a secondary amine. The alcohol is activated by thionyl chloride and then reacts with the amine by an SN2 process, replacing the alcohol’s hydroxyl group with the amine to form the corresponding N-alkylated oxazolidinone. The amide, methyl ester, and other functional groups remain unchanged.\n\n{\"Major Product\": CC(C)(C)C(=O)N(C)C(=O)OCC\"}",
+        "gold": "CCCC(C)(C)C(=O)N(C)OC"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1cccc([N+](=O)[O-])c1C.O=C1CCC(=O)N1Br\nReagents: CC(C)(C)OO\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the nitrophenylacetic acid provides a carboxylic acid and a Boc-protected amine. Di-tert-butyl dicarbonate serves as the carbamate-forming reagent. The alcohol is converted into a tert-butoxycarbonyl group by esterification with the dicarbonate, replacing the hydroxyl group with a Boc unit. The nitro group, carbonyl, and bromine substituent remain unchanged.\n\n{\"Major Product\": COc1cccc([N+](=O)[O-])c1C.O=C1CCC(=O)N1C(OC(C)(C)C)C\"}",
+        "gold": "COc1cccc([N+](=O)[O-])c1CBr"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: O=C(Cl)OCc1ccccc1.OCC1Cc2ccccc2CN1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a chloroformate, while the second is a primary alcohol. Their condensation forms the corresponding ethyl ester by replacing the alcohol hydroxyl group with the formate group. The aryl chloride and pyridine nitrogen remain unchanged.\n\n{\"O=C(OCC1Cc2ccccc2CN1)OCc1ccccc1\"}",
+        "gold": "O=C(OCc1ccccc1)N1Cc2ccccc2CC1CO"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CON(C)C(=O)Cc1ccc(Cl)cc1Cl.C[Mg]Br\nReagents: Cc1ccccc1.C1CCOC1.C1CCOC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a methyl ester, while the second is methylmagnesium bromide, a Grignard reagent. The ester carbonyl carbon is a good electrophile for addition of the methyl group from the Grignard reagent. The resulting alkoxide is protonated to give the corresponding methyl ketone, with the aryl chloride substituents unchanged.\n\n{\"Major Product\": C[CH](=O)Cc1ccc(Cl)cc1Cl\"}",
+        "gold": "CC(=O)Cc1ccc(Cl)cc1Cl"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C(C)(CCBr)c1ccc(Cl)c(Cl)c1.CC(=O)N(C)C1CCNCC1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a methyl ester, while the second contains a primary amine. The amine attacks the ester carbonyl, and collapse of the tetrahedral intermediate cleaves the acyl–methoxy bond. The resulting methyl carboxylate is protonated to the corresponding carboxylic acid, with the amine substituent becoming the carboxamide. The aryl bromide, aryl chlorides, and cyclopropyl group remain unchanged.\n\n{\"COC(=O)N(C)C1CCNCC1\"}",
+        "gold": "COC(=O)C(C)(CCN1CCC(N(C)C(C)=O)CC1)c1ccc(Cl)c(Cl)c1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1=O.C1CNC1\nReagents: CC(=O)O[BH-](OC(C)=O)OC(C)=O.ClCCCl.O.[Na+]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the cyclic secondary amine is not a suitable electrophile for reduction. Sodium triacetoxyborohydride is a hydride donor that transfers hydride to the alcohol carbon, converting the –CH₂OH group into –CH₂–. The carbonyl, amide, and fused-ring systems remain unchanged.\n\n{\"COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1=O\"}",
+        "gold": "COC(=O)C1CN(C(=O)OC(C)(C)C)CCC1N1CCC1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1cccc2c1Sc1ccccc1CC2\nReagents: O.Cl.c1ccncc1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the other functional groups are relatively unreactive. Methyl iodide provides an electrophilic methyl carbon, and the alcohol oxygen attacks it by an SN2 process. The benzylic C–O bond is replaced by C–CMe, forming the corresponding methyl ether. The fused heteroaromatic ring, thiophene, and aryl ether remain unchanged.\n\n{\"COc1cccc2c1Sc1ccccc1CC2\"}",
+        "gold": "Oc1cccc2c1Sc1ccccc1CC2"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C.COc1ncnc(OC)c1I\nReagents: C1=CC([Fe]C2(P(c3ccccc3)c3ccccc3)C=CC=C2)(P(c2ccccc2)c2ccccc2)C=C1.C1COCCO1.CC(=O)O[K].Cl[Pd]Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains an aryl iodide, while bis(pinacolato)diboron supplies a pinacolboryl group. The palladium complex and potassium acetate promote Miyaura borylation, replacing the aryl C–I bond with a C–B(pin) bond. The fused heteroaromatic ring, methoxy substituent, and methyl group remain unchanged.\n\n{\"Major Product\": CC1(C)OB(c2ncnc(OC)c2I)OC1(C)C\"}",
+        "gold": "COc1ncnc(OC)c1B1OC(C)(C)C(C)(C)O1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(O)C1CCNC1.CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CO)cc32)CC1.O=S(Cl)Cl\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the cyclic amine provides a secondary amine nucleophile. The alcohol is converted into an alkoxide by the thionyl chloride reagent, which is consistent with the specified conditions. The alkoxide then attacks the electrophilic carbon of the cyclic amine, forming a new C–N bond. The amide, heteroaromatic ring, aryl fluoride, and methoxy group remain unchanged.\n\n{\"CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CO)cc32)CC1\"}",
+        "gold": "CC(C)NC(=O)C1CCC(n2c(=NC(=O)c3ccc(F)cc3)[nH]c3ccc(CN4CCC(C(C)(C)O)C4)cc32)CC1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Ic1cc(-n2c3ccccc3c3ccccc32)cc2c1Oc1ccccc1[Si]2(c1ccccc1)c1ccccc1.CC1(C)c2ccccc2Oc2c(B(O)O)cccc21\nReagents: c1ccc([P](c2ccccc2)(c2ccccc2)[Pd]([P](c2ccccc2)(c2ccccc2)c2ccccc2)([P](c2ccccc2)(c2ccccc2)c2ccccc2)[P](c2ccccc2)(c2ccccc2)c2ccccc2)cc1.Cc1ccccc1.O=C(O[K])O[K].CCO.O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the aryl pinacol boronate provides a readily activated aryl group. The palladium catalyst promotes a Miyaura borylation, replacing the alcohol-derived hydrogen on the benzyl carbon with the aryl group from boron. The resulting product is the corresponding aryl-substituted benzyl ether, with the methoxy, phenyl, and silyl-protected phenyl groups unchanged.\n\n{\"Major Product\": CC1(C)c2ccccc2Oc2c(Cc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21\"}",
+        "gold": "CC1(C)c2ccccc2Oc2c(-c3cc(-n4c5ccccc5c5ccccc54)cc4c3Oc3ccccc3[Si]4(c3ccccc3)c3ccccc3)cccc21"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)=O.COc1ccc(C=O)cc1\nReagents: O=[Zn]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a terminal alkyne, while methanol provides a primary alcohol. Zinc promotes a Sonogashira-type coupling: the terminal alkynyl hydrogen is replaced by the aryl group from the aldehyde-containing heteroaryl fragment. The resulting product is the corresponding terminal alkynyl alcohol, with the ketone and methoxy groups unchanged.\n\n{\"CC(C)=O.CC(C)=C1CCOc2ccc(C=O)cc21\"}",
+        "gold": "COc1ccc(C=CC(C)=O)cc1"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Nc1c(C(=O)O)ccc(Br)c1F.O=C1CCC(=O)N1Cl\nReagents: CN(C)C=O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a carboxylic acid, while the heterocyclic amine provides a primary amine nucleophile. Di-tert-butyl dicarbonate serves as the carbamate-forming reagent. The amine attacks the acid carbonyl, and collapse of the tetrahedral intermediate expels hydroxyl to form the corresponding tert-butoxycarbonyl (Boc) carbamate. The bromo and fluoro substituents remain unchanged, and the fused heterocycle is also unaffected.\n\n{\"Major Product\": Nc1c(C(=O)OC(C)(C)C)ccc(Br)c1F\"}",
+        "gold": "Nc1c(C(=O)O)cc(Cl)c(Br)c1F"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCC1\nReagents: CC(=O)OI1(OC(C)=O)(OC(C)=O)OC(=O)c2ccccc21\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the heteroaromatic ring and chloro-substituted fused ring remain unchanged. Dess–Martin periodinane is a hypervalent iodine oxidant that converts primary alcohols to aldehydes. Oxidation of the benzylic CH₂OH group to a carbonyl gives the corresponding aromatic aldehyde, with the methoxy, cyclohexyl, and ethoxy substituents also retained.\n\n{\"Major Product\": COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CCO)c2c1OC1CCCC1\"}",
+        "gold": "COc1ccc2c(Nc3c(Cl)cncc3Cl)cc(=O)n(CC=O)c2c1OC1CCCC1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Fc1ccc(Br)cc1\nReagents: [Mg]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a brominated fused aromatic system, while magnesium serves as a reducing agent. The principal transformation is reduction of the aryl C–Br bond to a C–H bond, giving the corresponding brominated fused aromatic hydrocarbon. The fused ring system and methyl substituent remain unchanged.\n\n{\"Fc1ccc(Br)cc1\"}",
+        "gold": "Fc1ccc([Mg]Br)cc1"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12\nReagents: [Na+].CO.[Li]Cl.[BH4-]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the other functional groups are relatively unreactive under the reducing conditions. Lithium triacetoxyborohydride transfers hydride to the alcohol carbon, converting the –CH₂OH group into –CH₂–. The resulting product is the corresponding secondary benzylic alcohol, with the rest of the molecular framework unchanged.\n\n{\"COC(=O)C(C)(C)C(c1nc(Cl)cs1)c1[nH]c(-c2ccccc2)c2c(=O)n(C)c(=O)n(C)c12\"}",
+        "gold": "Cn1c(=O)c2c(-c3ccccc3)[nH]c(C(c3nc(Cl)cs3)C(C)(C)CO)c2n(C)c1=O"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)COc1ccc(C(=O)O)cc1OCC(=O)OC(C)(C)C.NNC(=O)OCc1ccccc1\nReagents: CCN=C=NCCCN(C)C.On1nnc2ccccc21.CCN(C(C)C)C(C)C.CN(C)C=O.Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a cyclic ester, while the second is a primary amine. The amine attacks the ester carbonyl, and collapse of the tetrahedral intermediate cleaves the acyl–oxygen bond and expels the corresponding hydroxyl group. The resulting product is the corresponding primary amide, with the cyclic ether and methyl ester groups unchanged.\n\n{\"CC(C)(C)OC(=O)COc1ccc(C(=O)N1)cc1OCC(=O)OC(C)(C)C\"}",
+        "gold": "CC(C)(C)OC(=O)COc1ccc(C(=O)NNC(=O)OCc2ccccc2)cc1OCC(=O)OC(C)(C)C"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCSC(SCCC)=C(C#N)C#N.C1CCNC1\nReagents: CCCSC(=C(C#N)C#N)N1CCOCC1.CCO\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a terminal alkyne, while the cyclic secondary amine provides a nucleophilic nitrogen for a Sonogashira-type coupling. The terminal alkynyl hydrogen is replaced by the β-carbon of the aryl propargyl group, forming a new C(sp)–C(sp²) bond. The nitrile, sulfonyl, and methoxy groups remain unchanged, giving the corresponding propargyl-substituted cyclic amine.\n\n{\"Major Product\": CCCSC(SCCC)=C(C#N)C#N.C1CCNCC1\"}",
+        "gold": "CCCSC(=C(C#N)C#N)N1CCCC1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)CC(O)(CCCC(C)(C)O)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4.O=S(Cl)Cl\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a tert-butyl ester, an ethyl ester, and a tertiary alcohol. Thionyl chloride activates the alcohol and the ester, converting the alcohol into a chlorosulfite-type leaving group and the ester into a more electrophilic acyl chloride. The resulting acyl chloride undergoes nucleophilic acyl substitution at the activated alcohol, forming the corresponding tertiary alkyl chloride while retaining the ethyl ester and the tert-butyl ester.\n\n{\"COC(=O)CC(Cl)(CCCC(C)(C)O)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4\"}",
+        "gold": "COC(=O)CC(O)(CCCC(C)(C)Cl)C(=O)OC1C(OC)=CC23CCCN2CCc2cc4c(cc2C13)OCO4"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)N1CCC(C=O)C1.C[Mg]I\nReagents: C1CCOC1.[C-]#[O+]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a methyl ester of a cyclic amide, while the second is methylmagnesium iodide, a Grignard reagent. The amide carbonyl is a poor electrophile for addition, so the ester carbonyl is the principal site of nucleophilic acyl substitution. Methylmagnesium iodide adds to the ester carbonyl, followed by collapse of the tetrahedral intermediate and loss of methoxide to form the corresponding methyl ketone. The cyclic amide and tertiary amine remain unchanged.\n\n{\"CC(C)(C)OC(=O)N1CCC(C=O)C1\"}",
+        "gold": "CC(O)C1CCN(C(=O)OC(C)(C)C)C1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1OC.CO\nReagents: Nc1c(/N=N/c2ccc(-c3ccc(/N=N/c4cc(S(=O)(=O)O)c5ccccc5c4N)cc3)cc2)cc(S(=O)(=O)O)c2ccccc12.CCOCC.O[Na].Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the second reactant is a cyclic ketone bearing a sulfonamide and a nitro group. The principal transformation is a Corey–Chaykovsky aziridination: the alcohol oxygen attacks the electrophilic ketone carbon, followed by intramolecular attack of the resulting tetrahedral intermediate at the ketone carbonyl. Collapse of the aziridine expels the sulfonamide-derived nitrogen nucleophile, converting the ketone into a three-membered aziridine ring. The nitro group, sulfonate, and fused heteroaromatic framework remain unchanged.\n\n{\"COc1cc2nc(N3CCN(C#N)CC3)nc(N)c2cc1Nc1ccccc1\"}",
+        "gold": "COC(=N)N1CCN(c2nc(N)c3cc(OC)c(OC)cc3n2)CC1"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: [C-]#[N+]C1CCCCC1.CC(=O)Cl.CC=O.Nc1ncccn1\nReagents: O=Cl(=O)(=O)O\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while acryloyl chloride provides an electrophilic acryloyl carbon. The alcohol oxygen attacks this acryloyl carbon by an SN2 process, forming a new C–C bond and converting the acryloyl chloride into the corresponding acrylate. The nitrile, fused heteroaromatic ring, and carbonyl remain unchanged.\n\n{\"CC(C)=C(=O)Oc1ncccn1\"}",
+        "gold": "[Cl-]CC(=O)[n+]1c(C)c(NC2CCCCC2)n2cccnc21"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)Cl)ccc2N2CCCC2)cc2ccccc21.CNCCN1CCOCC1\nReagents: ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the cyclic amine provides a secondary alcohol. Dichloromethane is the solvent and does not participate in the transformation. The alcohol oxygen attacks the electrophilic sulfur of the sulfonyl chloride, forming an S–O bond and displacing chloride. The resulting sulfoxide retains the existing aryl chloride, N-methyl group, and fused heterocycle. The amine and cyclohexyl substituent remain unchanged.\n\n{\"CC(C)(C)OC(=O)n1c(-c2cc(S(=O)(=O)O)ccc2N2CCCC2)cc2ccccc21.CCl\"}",
+        "gold": "CN(CCN1CCOCC1)S(=O)(=O)c1ccc(N2CCCC2)c(-c2cc3ccccc3n2C(=O)OC(C)(C)C)c1"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CN(C)c1ccc(C=Cc2ccc(S(=O)(=O)CCCO)cc2)cc1.O=S(=O)(CCCOC1CCCOC1)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the second reactant is a cyclic sulfone bearing a hydroxyl group. The alcohol oxygen attacks the electrophilic sulfur of the sulfone, forming a new S–O bond and a tetrahedral intermediate. Collapse of this intermediate expels the sulfone hydroxyl group and gives the corresponding benzylic sulfone. The remaining functional groups, including the aryl thioether, are unchanged.\n\n{\"Major Product\": CN(C)c1ccc(C=Cc2ccc(S(=O)(=O)CCCO)cc2)cc1\"}",
+        "gold": "O=S(=O)(CCCO)c1ccc(C=Cc2ccc3c(c2)OCCO3)cc1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCCCc1ccc(Br)cc1.C#CC(C)(C)O\nReagents: Cl[Pd](Cl)([P](c1ccccc1)(c1ccccc1)c1ccccc1)[P](c1ccccc1)(c1ccccc1)c1ccccc1.c1ccc(P(c2ccccc2)c2ccccc2)cc1.CCN(CC)CC.[C-]#[O+].[Cu]I\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a terminal alkyne, while the heteroaryl bromide provides an electrophilic C–Br bond. The palladium complex, bulky phosphine ligand, and copper(I) iodide promote a Sonogashira-type coupling. The terminal alkynyl hydrogen is replaced by the brominated carbon, forming a new C(sp)–C(sp²) bond. The aryl bromide is converted into a bromoethyl substituent, and the methoxy, methyl, and cyclopropyl groups remain unchanged.\n\n{\"CCCCCc1ccc(C#CC(C)(C)O)cc1\"}",
+        "gold": "CCCCCc1ccc(C#CC(C)(C)O)cc1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCO.Cc1ccc2c(C(=O)O)cccc2n1\nReagents: O=S(=O)(O)O.ClCCl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a carboxylic acid, while ethanol provides an alcohol group. The sulfuric acid promotes esterification: the acid hydroxyl is replaced by the ethoxy group from ethanol, forming the ethyl ester. The aromatic ring, carbonyl, and nitro substituent remain unchanged.\n\n{\"CCOC(=O)Cc1ccc2c(C(=O)O)cccc2n1\"}",
+        "gold": "CCOC(=O)c1cccc2nc(C)ccc12"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)c1c(C)nc2c(OCc3c(F)ccc(OC)c3F)cc(C)cn12\nReagents: O.O[Na].C1COCCO1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a methyl ester, a secondary alcohol, and a tertiary alcohol. Sodium hydroxide in ethanol promotes ester saponification, converting the ester into the corresponding carboxylate. The secondary alcohol is then deprotonated by the hydroxide, giving the corresponding secondary alcoholate. The tertiary alcohol is not sufficiently nucleophilic to undergo saponification under these conditions. The resulting carboxylate is represented as its sodium salt, with the remaining aromatic and heteroaromatic framework unchanged.\n\n{\"Major Product\": CCOC(=O)[O-].Na\"}",
+        "gold": "COc1ccc(F)c(COc2cc(C)cn3c(C(=O)O)c(C)nc23)c1F"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC1(C)OB(B2OC(C)(C)C(C)(C)O2)OC1(C)C.Cc1cc(-c2ccccc2)nc2cc(Cl)ccc12\nReagents: CCCc1cccc(CCC)c1-n1cc[n+](-c2c(CCC)cccc2CCC)c1.CC(=O)O[Pd]OC(C)=O.CC(=O)O[K].C1CCOC1.[Cl-]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The aryl pinacol boronate and the chloro-substituted heteroaryl substrate are consistent with a palladium-catalyzed Miyaura borylation. The heteroaryl chloride is replaced by the pinacol boron group, giving the corresponding aryl–Bpin derivative while retaining the methyl, chloro, and fused-ring substituents. The palladium acetate, potassium acetate, and triphenylphosphine components are characteristic of a standard Buchwald–Hartwig borylation, and the bulky bis(pinacolato)diboron reagent supplies the Bpin group.\n\n{\"Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12\"}",
+        "gold": "Cc1cc(-c2ccccc2)nc2cc(B3OC(C)(C)C(C)(C)O3)ccc12"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. If no reagents information provided, just give one potential product. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1=O.CCCN\nReagents: CN(C)c1ccncc1.CCN(CC)CC.C1CCOC1.N#N\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary alcohol, while the cyclic amine provides a secondary amine nucleophile. The reaction is an intramolecular Ugi condensation: the alcohol and amine condense to form an imine or iminium intermediate, the carboxylic acid-derived group supplies the carbonyl, and the aniline-derived component supplies the nitrogen-containing heterocycle. The resulting product is a five-membered saturated heterocycle bearing the two chlorophenyl groups, the methyl ester, and the N-methylpiperidine substituent.\n\n{\"CNC(=O)c1cc(C(=O)Oc2c(Cl)cc(Cl)cc2Cl)cn(Cc2ccccc2)c1\"}",
+        "gold": "CCCNC(=O)c1cc(C(=O)NC)c(=O)n(Cc2ccccc2)c1"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC.Clc1nccc2ccccc12\nReagents: c1ccc(P(c2ccccc2)c2ccc3ccccc3c2-c2c(P(c3ccccc3)c3ccccc3)ccc3ccccc23)cc1.CC(=O)O[Pd]OC(C)=O.Cc1ccccc1.O=C(O[Cs])O[Cs].N#N\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the heteroaryl pinacol boronate provides a Bpin group. The palladium source, bulky phosphine ligand, and cesium carbonate base are characteristic of a Miyaura borylation. The alcohol is converted into the corresponding benzylic boronate, replacing the C–OH group with a C–Bpin bond. The amide, tertiary amine, and fused heteroaromatic ring remain unchanged.\n\n{\"Major Product\": COc1ccc(-c2noc(C3CCN(C(=O)CN)CC3)n2)cc1OC.CClc1nccc2ccccc12\"}",
+        "gold": "COc1ccc(-c2noc(C3CCN(C(=O)CNc4nccc5ccccc45)CC3)n2)cc1OC"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)CC(c1ccc(C)c(CO)c1)c1ccc2c(nnn2C)c1C.O=S1(=O)NCCOc2ccncc21\nReagents: O=C(N=NC(=O)N1CCCCC1)N1CCCCC1.CCCCP(CCCC)CCCC.C1CCOC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the cyclic sulfonamide provides a suitable electrophilic sulfur center. The alcohol is activated by di-tert-butyl azodicarboxylate and triphenylphosphine, enabling Mitsunobu substitution. The alcohol oxygen replaces the sulfonamide N–H bond, forming a new N–CH₂ bond at the benzylic carbon. The ester, aryl ether, and fused heteroaromatic ring remain unchanged.\n\n{\"Major Product\": CCOC(=O)CC(c1ccc(C)c(CN2CCOc3ccncc32)c1)c1ccc2c(nnn2C)c1C\"}",
+        "gold": "CCOC(=O)CC(c1ccc(C)c(CN2CCOc3ccncc3S2(=O)=O)c1)c1ccc2c(nnn2C)c1C"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CN1C(=O)C(N)N=C(c2ccccc2)c2ccccc21.O=C(O)C(Cc1ccc(Cl)c(Cl)c1)c1ccccc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The first reactant is a primary amine, while the second is a chlorinated N-acyl anthranilic acid. The amine attacks the acid chloride carbonyl, and chloride is displaced to form the corresponding amide. The amide carbonyl remains unchanged, and the anthranilic acid side chain and chlorinated aromatic ring are retained.\n\n{\"Major Product\": Cc1ccc(Cl)c(Cl)c1C(=O)N1C(=O)C(N)N=C(c2ccccc2)c2ccccc21\"}",
+        "gold": "CN1C(=O)C(NC(=O)C(Cc2ccc(Cl)c(Cl)c2)c2ccccc2)N=C(c2ccccc2)c2ccccc21"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1ccc(C)c2c(C(C)C)cc(O)nc12.O=P(Cl)(Cl)Cl\nReagents: Cc1ccccc1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a phenolic hydroxyl group, while phosphorus oxychloride acts as an electrophilic oxygen-transfer reagent. The phenolic oxygen attacks the electrophilic phosphorus center, forming a phosphorus–oxygen bond and converting the phenol into a phenylphosphinate. The aromatic ring, methyl substituent, and tertiary butyl group remain unchanged.\n\n{\"Major Product\": Cc1ccc(C)c2c(C(C)C)cc(P(=O)(Cl)O)nc12\"}",
+        "gold": "Cc1ccc(C)c2c(C(C)C)cc(Cl)nc12"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C.CCCI\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while methyl iodide provides an electrophilic methyl carbon. The alcohol oxygen attacks the methyl carbon by an SN2 process, forming a new C–C bond and displacing iodide. The resulting product is the corresponding methyl ether, with the alcohol, fused heterocyclic, aryl fluoride, and cyclohexyl substituents unchanged. Iodide is the expected leaving-group byproduct.\n\n{\"Major Product\": CC12CCC(c3c1[nH]n(-c1ccccc1F)c3=O)C2(C)C.CI\"}",
+        "gold": "CCCn1c2c(c(=O)n1-c1ccccc1F)C1CCC2(C)C1(C)C"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1cc(OCC(=O)O)cc(C)c1Cc1ccc(O)c(C(C)C)c1.CO.N\nReagents: O=S(=O)(O)O.ClCCl.CO.CO.O[Na]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a tert-butyl ester, an aryl ether, and a phenolic hydroxyl group. Methanol provides an alcohol nucleophile, while sulfuric acid promotes ester hydrolysis. The ester is converted to the corresponding carboxylic acid, with the tert-butoxy group and aryl ether remaining unchanged. The phenolic hydroxyl group is not expected to participate under these conditions.\n\n{\"Major Product\": Cc1cc(OCC(=O)O)cc(C)c1Cc1ccc(O)c(C(C)C)c1\"}",
+        "gold": "Cc1cc(OCC(N)=O)cc(C)c1Cc1ccc(O)c(C(C)C)c1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCCCCCCCCCOC(C)c1ccc(C(=O)OCCCC)cc1\nReagents: O[Na].C1CCOC1\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the other functional groups remain unchanged. Sodium hydroxide in THF promotes saponification of the ester, converting the ethyl ester into the corresponding benzoic acid. The alcohol is protonated to the corresponding benzoic acid, and the ethoxide is deprotonated to ethylene oxide. Thus, the principal change is replacement of the ethyl ester by a carboxylic acid group.\n\n{\"Major Product\": CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1\"}",
+        "gold": "CCCCCCCCCCOC(C)c1ccc(C(=O)O)cc1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CCOC(=O)N=NC(=O)OCC.O=C1NC(=O)c2ccccc21.OC1CC2CCC1C2.c1ccc(P(c2ccccc2)c2ccccc2)cc1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the other reactants are a carboxylic acid, an N-hydroxysulfonamide coupling reagent, and triphenylphosphine. The alcohol is activated by triphenylphosphine and undergoes Mitsunobu substitution at the benzylic carbon. The carboxylic acid is converted into its activated O-acylisourea derivative, and the alcohol oxygen replaces the isourea nitrogen, forming the corresponding amide. The sulfonamide, benzyl group, and cyclohexyl substituent remain unchanged.\n\n{\"Major Product\": CCOC(=O)N(C(=O)Nc1ccccc1)C(=O)OCC\"}",
+        "gold": "O=C1c2ccccc2C(=O)N1C1CC2CCC1C2"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(C=O)cnc12.NCC1CC1\nReagents: CC(=O)O[BH-](OC(C)=O)OC(C)=O.CN1CCCC1=O.CC(=O)O.O[Na].O.[Na+]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the cyclic ether is a less reactive alcohol. Sodium triacetoxyborohydride transfers hydride to the benzylic carbon, reducing the alcohol to a secondary alcohol without altering the ketone or ether. The resulting product is the corresponding benzyl-substituted tetrahydropyridine bearing a secondary benzylic alcohol and a ketone.\n\n{\"Major Product\": Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(C=O)cnc12\"}",
+        "gold": "Cc1c(NC(=O)c2ccc(OCC3CCCO3)cc2)ccc2cc(CNCC3CC3)cnc12"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Oc1ccc(OCc2ccccc2)cc1.CC(C)C(=O)Cl\nReagents: c1ccncc1.c1ccncc1.CCOCC.O[K].O.Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+            }
+        ],
+        "prediction": "The substrate contains a primary benzylic alcohol, while the acyl chloride provides an electrophilic acyl carbon. The alcohol oxygen attacks the acyl chloride carbonyl, followed by chloride displacement, forming the corresponding benzylic ester. The fused lactone, phenolic, and methyl-substituted benzyl groups remain unchanged.\n\n{\"CC(C)C(=O)OCc1ccccc1C1CCC(=O)C(C)C\"}",
+        "gold": "CC(C)C(=O)Oc1ccc(OCc2ccccc2)cc1"
+    }
+}

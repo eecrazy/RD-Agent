@@ -1,0 +1,102 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Sc1sccc1/C=N/c1ccc2ccccc2c1, Functional Group to delete: thiol.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"Sc1sccc1/C=N/c1ccc2ccccc2c1\"\n}",
+        "gold": "c1sccc1/C=N/c1ccc2ccccc2c1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Nc1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-], Functional Group to delete: amine.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"Nc1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-]\"\n}",
+        "gold": "c1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-]"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@]2(O)CCCC[C@@H]2C1, Functional Group to delete: hydroxyl.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@]2OC[C@@H]2C1\"\n}",
+        "gold": "O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@H]2CCCC[C@@H]2C1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: COC(=O)c1ccc(NC(=O)C2CCN(C(=O)O)CC2)cc1, Functional Group to delete: carboxyl.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"OCC(=O)c1ccc(NC(=O)C2CCN(C(=O)O)CC2)cc1\"\n}",
+        "gold": "COC(=O)c1ccc(NC(=O)C2CCNCC2)cc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(Cn1nnc(-c2ccccc2Cl)n1)N/N=C/c1cc(Cl)ccc1O, Functional Group to delete: amide.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"O=C(Cn1nnc(-c2ccccc2Cl)n1)N/N=c1cc(Cl)ccc1O\"\n}",
+        "gold": "Cn1nnc(-c2ccccc2Cl)n1.N/N=C/c1cc(Cl)ccc1O"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(Nc1ccc(Nc2ccccc2)cc1)c1ccc(O)nc1, Functional Group to delete: amine.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"O=C(Nc1ccc(O)cc1)c1ccc(O)nc1\"\n}",
+        "gold": "O=C(Nc1ccccc1)c1ccc(O)nc1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: SCC1(COC2CCCC2)CC1, Functional Group to delete: thiol.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"SCC1(COC2CCCC2)CC1\"\n}",
+        "gold": "CC1(COC2CCCC2)CC1"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Cc1ccc(O[C@@H](C)C(=O)NC(N)=O)c(C=O)n1, Functional Group to delete: aldehyde.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"Cc1ccc(O[C@@H](C)NC(N)=O)c(C=O)n1\"\n}",
+        "gold": "Cc1ccc(O[C@@H](C)C(=O)NC(N)=O)cn1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: N#CCC[C@H](C#N)CN1CCc2c(cccc2N2CCOC2=O)C1, Functional Group to delete: nitrile.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"C=C[C@H](C#N)CN1CCc2c(cccc2N2CCOC2=O)C1\"\n}",
+        "gold": "N#CCC[C@H](C)CN1CCc2c(cccc2N2CCOC2=O)C1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(NCc1nncn1C1CC1)Nc1cccc(Cl)c1F, Functional Group to delete: halo.\n"
+            }
+        ],
+        "prediction": "{\n    \"output\": \"O=C(NCc1nncn1C1CC1)Nc1ccccN)c1F\"\n}",
+        "gold": "O=C(NCc1nncn1C1CC1)Nc1cccc(Cl)c1"
+    }
+}

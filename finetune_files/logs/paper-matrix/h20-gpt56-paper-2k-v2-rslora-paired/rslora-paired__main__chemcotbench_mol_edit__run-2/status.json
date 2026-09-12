@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "state": "succeeded",
+  "run_kind": "ordinary_lora_to_rslora",
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+  "source_experiment_id": "main/chemcotbench_mol_edit/run-2",
+  "suite": "main-rslora-paired",
+  "benchmark": "chemcotbench_mol_edit",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": "gpt-5.2",
+  "data_limit": 2000,
+  "timeout": "12h",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "training_policy": "rslora",
+  "formal_expected_samples": 2000,
+  "formal_method_lock_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/formal_training_method.json",
+  "formal_training_method": "rslora",
+  "formal_training_method_lock": {
+    "created_at": "2026-09-09T19:20:42.518504+00:00",
+    "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+    "schema_version": 1,
+    "training_method": "rslora",
+    "training_policy": "rslora"
+  },
+  "formal_training_evidence": [
+    {
+      "workspace_id": "rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33",
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33",
+      "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33/formal_training",
+      "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33/output",
+      "evidence_signature": "9ff3831063992cef2f6650ae79778c72ef5b8b15bc2687875604a0978a0f34e0",
+      "training_method": "rslora",
+      "expected_samples": 2000,
+      "global_step": 500,
+      "max_steps": 500,
+      "formal_training_method_lock": {
+        "created_at": "2026-09-09T19:20:42.518504+00:00",
+        "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+        "schema_version": 1,
+        "training_method": "rslora",
+        "training_policy": "rslora"
+      }
+    },
+    {
+      "workspace_id": "rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc",
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc",
+      "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc/formal_training",
+      "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc/output",
+      "evidence_signature": "73dde5578d535b811c759f8dbb5456349ab2a7c00b0f985ea81d734ad07a7b66",
+      "training_method": "rslora",
+      "expected_samples": 2000,
+      "global_step": 1250,
+      "max_steps": 1250,
+      "formal_training_method_lock": {
+        "created_at": "2026-09-09T19:20:42.518504+00:00",
+        "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+        "schema_version": 1,
+        "training_method": "rslora",
+        "training_policy": "rslora"
+      }
+    }
+  ],
+  "pairing_artifact_signature": "ed67f45e1487d030c9143e9efbfa4b7f523ae4dc3ba93b1753689977eb5d2363",
+  "expected_pair_count": 2,
+  "started_at": "2026-09-09T20:31:08.543844+08:00",
+  "finished_at": "2026-09-10T17:44:13.463440+08:00",
+  "pair_runs": [
+    {
+      "schema_version": 1,
+      "state": "succeeded",
+      "source_experiment_id": "main/chemcotbench_mol_edit/run-2",
+      "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+      "source_workspace_id": "5c7be5f4995943f2b2ced2092c4109f0",
+      "paired_workspace_id": "rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33",
+      "input_contract_signature": "8e921503201b2377e4213de0866521da9f0c8ff5a3adb965761b8dbb34905418",
+      "expected_samples": 2000,
+      "prepared_at": "2026-09-09T20:52:54.269403+08:00",
+      "gpu": "5",
+      "started_at": "2026-09-10T03:59:16.215802+08:00",
+      "finished_at": "2026-09-10T04:29:37.306571+08:00",
+      "return_code": 0,
+      "outer_timeout": false,
+      "formal_training_evidence_signature": "9ff3831063992cef2f6650ae79778c72ef5b8b15bc2687875604a0978a0f34e0",
+      "global_step": 500,
+      "max_steps": 500
+    },
+    {
+      "schema_version": 1,
+      "state": "succeeded",
+      "source_experiment_id": "main/chemcotbench_mol_edit/run-2",
+      "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+      "source_workspace_id": "dd4ccfae55b14310bd3c3732859ca684",
+      "paired_workspace_id": "rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc",
+      "input_contract_signature": "d35cd8b35a3eee9a7340fd910f8f05fe340e1d33b865b9706fff31db903e6b36",
+      "expected_samples": 2000,
+      "prepared_at": "2026-09-09T20:52:54.317899+08:00",
+      "gpu": "5",
+      "started_at": "2026-09-10T03:20:42.442343+08:00",
+      "finished_at": "2026-09-10T03:59:16.215361+08:00",
+      "return_code": 0,
+      "outer_timeout": false,
+      "formal_training_evidence_signature": "73dde5578d535b811c759f8dbb5456349ab2a7c00b0f985ea81d734ad07a7b66",
+      "global_step": 1250,
+      "max_steps": 1250
+    }
+  ],
+  "formal_training_validation_errors": []
+}

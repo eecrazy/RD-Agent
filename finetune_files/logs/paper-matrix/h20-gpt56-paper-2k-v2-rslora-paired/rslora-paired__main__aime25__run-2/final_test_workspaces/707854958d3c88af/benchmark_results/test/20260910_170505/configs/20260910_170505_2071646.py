@@ -1,0 +1,296 @@
+GRADER_TEMPLATE='Please as a grading expert, judge whether the final answers given by the candidates below are consistent with the standard answers, that is, whether the candidates answered correctly. \n    \n    Here are some evaluation criteria:\n    1. Please refer to the given standard answer. You don\'t need to re-generate the answer to the question because the standard answer has been given. You only need to judge whether the candidate\'s answer is consistent with the standard answer according to the form of the question. Don\'t try to answer the original question. You can assume that the standard answer is definitely correct.\n    2. Because the candidate\'s answer may be different from the standard answer in the form of expression, before making a judgment, please understand the question and the standard answer first, and then judge whether the candidate\'s answer is correct, but be careful not to try to answer the original question.\n    3. Some answers may contain multiple items, such as multiple-choice questions, multiple-select questions, fill-in-the-blank questions, etc. As long as the answer is the same as the standard answer, it is enough. For multiple-select questions and multiple-blank fill-in-the-blank questions, the candidate needs to answer all the corresponding options or blanks correctly to be considered correct.\n    4. Some answers may be expressed in different ways, such as some answers may be a mathematical expression, some answers may be a textual description, as long as the meaning expressed is the same. And some formulas are expressed in different ways, but they are equivalent and correct.\n    5. If the prediction is given with \\boxed{}, please ignore the \\boxed{} and only judge whether the candidate\'s answer is consistent with the standard answer.\n\n    Please judge whether the following answers are consistent with the standard answer based on the above criteria. Grade the predicted answer of this new question as one of:\n    A: CORRECT \n    B: INCORRECT\n    Just return the letters "A" or "B", with no text around it.\n\n    Here is your task. Simply reply with either CORRECT, INCORRECT. Don\'t apologize or correct yourself if there was a mistake; we are just trying to grade the answer.\n\n\n    <Original Question Begin>: \n{question}\n<Original Question End>\n\n\n    <Gold Target Begin>: \n{answer}\n<Gold Target End>\n\n\n    <Predicted Answer Begin>: \n{prediction}\n<Predicted End>\n\n\n    \n    Judging the correctness of candidates\' answers:'
+aime2025_datasets=[
+    dict(abbr='aime2025',
+        eval_cfg=dict(
+            evaluator=dict(
+                llm_evaluator=dict(
+                    dataset_cfg=dict(
+                        path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/aime2025/aime2025.jsonl',
+                        reader_cfg=dict(
+                            input_columns=[
+                                'question',
+                                ],
+                            output_column='answer',
+                            test_range='[-min(100, len(index_list)//2):]'),
+                        type='opencompass.datasets.CustomDataset'),
+                    dict_postprocessor=dict(
+                        type='opencompass.datasets.generic_llmjudge_postprocess'),
+                    judge_cfg=dict(
+                        ),
+                    prompt_template=dict(
+                        template=dict(
+                            begin=[
+                                dict(fallback_role='HUMAN',
+                                    prompt="You are a helpful assistant who evaluates the correctness and quality of models' outputs.",
+                                    role='SYSTEM'),
+                                ],
+                            round=[
+                                dict(prompt='Please as a grading expert, judge whether the final answers given by the candidates below are consistent with the standard answers, that is, whether the candidates answered correctly. \n    \n    Here are some evaluation criteria:\n    1. Please refer to the given standard answer. You don\'t need to re-generate the answer to the question because the standard answer has been given. You only need to judge whether the candidate\'s answer is consistent with the standard answer according to the form of the question. Don\'t try to answer the original question. You can assume that the standard answer is definitely correct.\n    2. Because the candidate\'s answer may be different from the standard answer in the form of expression, before making a judgment, please understand the question and the standard answer first, and then judge whether the candidate\'s answer is correct, but be careful not to try to answer the original question.\n    3. Some answers may contain multiple items, such as multiple-choice questions, multiple-select questions, fill-in-the-blank questions, etc. As long as the answer is the same as the standard answer, it is enough. For multiple-select questions and multiple-blank fill-in-the-blank questions, the candidate needs to answer all the corresponding options or blanks correctly to be considered correct.\n    4. Some answers may be expressed in different ways, such as some answers may be a mathematical expression, some answers may be a textual description, as long as the meaning expressed is the same. And some formulas are expressed in different ways, but they are equivalent and correct.\n    5. If the prediction is given with \\boxed{}, please ignore the \\boxed{} and only judge whether the candidate\'s answer is consistent with the standard answer.\n\n    Please judge whether the following answers are consistent with the standard answer based on the above criteria. Grade the predicted answer of this new question as one of:\n    A: CORRECT \n    B: INCORRECT\n    Just return the letters "A" or "B", with no text around it.\n\n    Here is your task. Simply reply with either CORRECT, INCORRECT. Don\'t apologize or correct yourself if there was a mistake; we are just trying to grade the answer.\n\n\n    <Original Question Begin>: \n{question}\n<Original Question End>\n\n\n    <Gold Target Begin>: \n{answer}\n<Gold Target End>\n\n\n    <Predicted Answer Begin>: \n{prediction}\n<Predicted End>\n\n\n    \n    Judging the correctness of candidates\' answers:',
+                                    role='HUMAN'),
+                                ]),
+                        type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+                    type='opencompass.evaluator.GenericLLMEvaluator'),
+                parallel=False,
+                rule_evaluator=dict(
+                    type='opencompass.evaluator.MATHVerifyEvaluator'),
+                type='opencompass.evaluator.CascadeEvaluator')),
+        infer_cfg=dict(
+            inferencer=dict(
+                type='opencompass.openicl.icl_inferencer.GenInferencer'),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='{question}\nRemember to put your final answer within \\boxed{}.',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            retriever=dict(
+                type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+        n=1,
+        path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/aime2025/aime2025.jsonl',
+        reader_cfg=dict(
+            input_columns=[
+                'question',
+                ],
+            output_column='answer',
+            test_range='[-min(100, len(index_list)//2):]'),
+        type='opencompass.datasets.CustomDataset'),
+    ]
+aime2025_eval_cfg=dict(
+    evaluator=dict(
+        llm_evaluator=dict(
+            dataset_cfg=dict(
+                path='opencompass/aime2025',
+                reader_cfg=dict(
+                    input_columns=[
+                        'question',
+                        ],
+                    output_column='answer'),
+                type='opencompass.datasets.CustomDataset'),
+            dict_postprocessor=dict(
+                type='opencompass.datasets.generic_llmjudge_postprocess'),
+            judge_cfg=dict(
+                ),
+            prompt_template=dict(
+                template=dict(
+                    begin=[
+                        dict(fallback_role='HUMAN',
+                            prompt="You are a helpful assistant who evaluates the correctness and quality of models' outputs.",
+                            role='SYSTEM'),
+                        ],
+                    round=[
+                        dict(prompt='Please as a grading expert, judge whether the final answers given by the candidates below are consistent with the standard answers, that is, whether the candidates answered correctly. \n    \n    Here are some evaluation criteria:\n    1. Please refer to the given standard answer. You don\'t need to re-generate the answer to the question because the standard answer has been given. You only need to judge whether the candidate\'s answer is consistent with the standard answer according to the form of the question. Don\'t try to answer the original question. You can assume that the standard answer is definitely correct.\n    2. Because the candidate\'s answer may be different from the standard answer in the form of expression, before making a judgment, please understand the question and the standard answer first, and then judge whether the candidate\'s answer is correct, but be careful not to try to answer the original question.\n    3. Some answers may contain multiple items, such as multiple-choice questions, multiple-select questions, fill-in-the-blank questions, etc. As long as the answer is the same as the standard answer, it is enough. For multiple-select questions and multiple-blank fill-in-the-blank questions, the candidate needs to answer all the corresponding options or blanks correctly to be considered correct.\n    4. Some answers may be expressed in different ways, such as some answers may be a mathematical expression, some answers may be a textual description, as long as the meaning expressed is the same. And some formulas are expressed in different ways, but they are equivalent and correct.\n    5. If the prediction is given with \\boxed{}, please ignore the \\boxed{} and only judge whether the candidate\'s answer is consistent with the standard answer.\n\n    Please judge whether the following answers are consistent with the standard answer based on the above criteria. Grade the predicted answer of this new question as one of:\n    A: CORRECT \n    B: INCORRECT\n    Just return the letters "A" or "B", with no text around it.\n\n    Here is your task. Simply reply with either CORRECT, INCORRECT. Don\'t apologize or correct yourself if there was a mistake; we are just trying to grade the answer.\n\n\n    <Original Question Begin>: \n{question}\n<Original Question End>\n\n\n    <Gold Target Begin>: \n{answer}\n<Gold Target End>\n\n\n    <Predicted Answer Begin>: \n{prediction}\n<Predicted End>\n\n\n    \n    Judging the correctness of candidates\' answers:',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            type='opencompass.evaluator.GenericLLMEvaluator'),
+        parallel=False,
+        rule_evaluator=dict(
+            type='opencompass.evaluator.MATHVerifyEvaluator'),
+        type='opencompass.evaluator.CascadeEvaluator'))
+aime2025_infer_cfg=dict(
+    inferencer=dict(
+        type='opencompass.openicl.icl_inferencer.GenInferencer'),
+    prompt_template=dict(
+        template=dict(
+            round=[
+                dict(prompt='{question}\nRemember to put your final answer within \\boxed{}.',
+                    role='HUMAN'),
+                ]),
+        type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+    retriever=dict(
+        type='opencompass.openicl.icl_retriever.ZeroRetriever'))
+aime2025_reader_cfg=dict(
+    input_columns=[
+        'question',
+        ],
+    output_column='answer')
+cascade_evaluator=dict(
+    llm_evaluator=dict(
+        dataset_cfg=dict(
+            path='opencompass/aime2025',
+            reader_cfg=dict(
+                input_columns=[
+                    'question',
+                    ],
+                output_column='answer'),
+            type='opencompass.datasets.CustomDataset'),
+        dict_postprocessor=dict(
+            type='opencompass.datasets.generic_llmjudge_postprocess'),
+        judge_cfg=dict(
+            ),
+        prompt_template=dict(
+            template=dict(
+                begin=[
+                    dict(fallback_role='HUMAN',
+                        prompt="You are a helpful assistant who evaluates the correctness and quality of models' outputs.",
+                        role='SYSTEM'),
+                    ],
+                round=[
+                    dict(prompt='Please as a grading expert, judge whether the final answers given by the candidates below are consistent with the standard answers, that is, whether the candidates answered correctly. \n    \n    Here are some evaluation criteria:\n    1. Please refer to the given standard answer. You don\'t need to re-generate the answer to the question because the standard answer has been given. You only need to judge whether the candidate\'s answer is consistent with the standard answer according to the form of the question. Don\'t try to answer the original question. You can assume that the standard answer is definitely correct.\n    2. Because the candidate\'s answer may be different from the standard answer in the form of expression, before making a judgment, please understand the question and the standard answer first, and then judge whether the candidate\'s answer is correct, but be careful not to try to answer the original question.\n    3. Some answers may contain multiple items, such as multiple-choice questions, multiple-select questions, fill-in-the-blank questions, etc. As long as the answer is the same as the standard answer, it is enough. For multiple-select questions and multiple-blank fill-in-the-blank questions, the candidate needs to answer all the corresponding options or blanks correctly to be considered correct.\n    4. Some answers may be expressed in different ways, such as some answers may be a mathematical expression, some answers may be a textual description, as long as the meaning expressed is the same. And some formulas are expressed in different ways, but they are equivalent and correct.\n    5. If the prediction is given with \\boxed{}, please ignore the \\boxed{} and only judge whether the candidate\'s answer is consistent with the standard answer.\n\n    Please judge whether the following answers are consistent with the standard answer based on the above criteria. Grade the predicted answer of this new question as one of:\n    A: CORRECT \n    B: INCORRECT\n    Just return the letters "A" or "B", with no text around it.\n\n    Here is your task. Simply reply with either CORRECT, INCORRECT. Don\'t apologize or correct yourself if there was a mistake; we are just trying to grade the answer.\n\n\n    <Original Question Begin>: \n{question}\n<Original Question End>\n\n\n    <Gold Target Begin>: \n{answer}\n<Gold Target End>\n\n\n    <Predicted Answer Begin>: \n{prediction}\n<Predicted End>\n\n\n    \n    Judging the correctness of candidates\' answers:',
+                        role='HUMAN'),
+                    ]),
+            type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+        type='opencompass.evaluator.GenericLLMEvaluator'),
+    parallel=False,
+    rule_evaluator=dict(
+        type='opencompass.evaluator.MATHVerifyEvaluator'),
+    type='opencompass.evaluator.CascadeEvaluator')
+datasets=[
+    dict(abbr='aime2025',
+        eval_cfg=dict(
+            evaluator=dict(
+                llm_evaluator=dict(
+                    dataset_cfg=dict(
+                        path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/aime2025/aime2025.jsonl',
+                        reader_cfg=dict(
+                            input_columns=[
+                                'question',
+                                ],
+                            output_column='answer',
+                            test_range='[-min(100, len(index_list)//2):]'),
+                        type='opencompass.datasets.CustomDataset'),
+                    dict_postprocessor=dict(
+                        type='opencompass.datasets.generic_llmjudge_postprocess'),
+                    judge_cfg=dict(
+                        ),
+                    prompt_template=dict(
+                        template=dict(
+                            begin=[
+                                dict(fallback_role='HUMAN',
+                                    prompt="You are a helpful assistant who evaluates the correctness and quality of models' outputs.",
+                                    role='SYSTEM'),
+                                ],
+                            round=[
+                                dict(prompt='Please as a grading expert, judge whether the final answers given by the candidates below are consistent with the standard answers, that is, whether the candidates answered correctly. \n    \n    Here are some evaluation criteria:\n    1. Please refer to the given standard answer. You don\'t need to re-generate the answer to the question because the standard answer has been given. You only need to judge whether the candidate\'s answer is consistent with the standard answer according to the form of the question. Don\'t try to answer the original question. You can assume that the standard answer is definitely correct.\n    2. Because the candidate\'s answer may be different from the standard answer in the form of expression, before making a judgment, please understand the question and the standard answer first, and then judge whether the candidate\'s answer is correct, but be careful not to try to answer the original question.\n    3. Some answers may contain multiple items, such as multiple-choice questions, multiple-select questions, fill-in-the-blank questions, etc. As long as the answer is the same as the standard answer, it is enough. For multiple-select questions and multiple-blank fill-in-the-blank questions, the candidate needs to answer all the corresponding options or blanks correctly to be considered correct.\n    4. Some answers may be expressed in different ways, such as some answers may be a mathematical expression, some answers may be a textual description, as long as the meaning expressed is the same. And some formulas are expressed in different ways, but they are equivalent and correct.\n    5. If the prediction is given with \\boxed{}, please ignore the \\boxed{} and only judge whether the candidate\'s answer is consistent with the standard answer.\n\n    Please judge whether the following answers are consistent with the standard answer based on the above criteria. Grade the predicted answer of this new question as one of:\n    A: CORRECT \n    B: INCORRECT\n    Just return the letters "A" or "B", with no text around it.\n\n    Here is your task. Simply reply with either CORRECT, INCORRECT. Don\'t apologize or correct yourself if there was a mistake; we are just trying to grade the answer.\n\n\n    <Original Question Begin>: \n{question}\n<Original Question End>\n\n\n    <Gold Target Begin>: \n{answer}\n<Gold Target End>\n\n\n    <Predicted Answer Begin>: \n{prediction}\n<Predicted End>\n\n\n    \n    Judging the correctness of candidates\' answers:',
+                                    role='HUMAN'),
+                                ]),
+                        type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+                    type='opencompass.evaluator.GenericLLMEvaluator'),
+                parallel=False,
+                rule_evaluator=dict(
+                    type='opencompass.evaluator.MATHVerifyEvaluator'),
+                type='opencompass.evaluator.CascadeEvaluator')),
+        infer_cfg=dict(
+            inferencer=dict(
+                type='opencompass.openicl.icl_inferencer.GenInferencer'),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='{question}\nRemember to put your final answer within \\boxed{}.',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            retriever=dict(
+                type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+        n=1,
+        path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/aime2025/aime2025.jsonl',
+        reader_cfg=dict(
+            input_columns=[
+                'question',
+                ],
+            output_column='answer',
+            test_range='[-min(100, len(index_list)//2):]'),
+        type='opencompass.datasets.CustomDataset'),
+    ]
+ds=dict(
+    abbr='aime2025',
+    eval_cfg=dict(
+        evaluator=dict(
+            llm_evaluator=dict(
+                dataset_cfg=dict(
+                    path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/aime2025/aime2025.jsonl',
+                    reader_cfg=dict(
+                        input_columns=[
+                            'question',
+                            ],
+                        output_column='answer',
+                        test_range='[-min(100, len(index_list)//2):]'),
+                    type='opencompass.datasets.CustomDataset'),
+                dict_postprocessor=dict(
+                    type='opencompass.datasets.generic_llmjudge_postprocess'),
+                judge_cfg=dict(
+                    ),
+                prompt_template=dict(
+                    template=dict(
+                        begin=[
+                            dict(fallback_role='HUMAN',
+                                prompt="You are a helpful assistant who evaluates the correctness and quality of models' outputs.",
+                                role='SYSTEM'),
+                            ],
+                        round=[
+                            dict(prompt='Please as a grading expert, judge whether the final answers given by the candidates below are consistent with the standard answers, that is, whether the candidates answered correctly. \n    \n    Here are some evaluation criteria:\n    1. Please refer to the given standard answer. You don\'t need to re-generate the answer to the question because the standard answer has been given. You only need to judge whether the candidate\'s answer is consistent with the standard answer according to the form of the question. Don\'t try to answer the original question. You can assume that the standard answer is definitely correct.\n    2. Because the candidate\'s answer may be different from the standard answer in the form of expression, before making a judgment, please understand the question and the standard answer first, and then judge whether the candidate\'s answer is correct, but be careful not to try to answer the original question.\n    3. Some answers may contain multiple items, such as multiple-choice questions, multiple-select questions, fill-in-the-blank questions, etc. As long as the answer is the same as the standard answer, it is enough. For multiple-select questions and multiple-blank fill-in-the-blank questions, the candidate needs to answer all the corresponding options or blanks correctly to be considered correct.\n    4. Some answers may be expressed in different ways, such as some answers may be a mathematical expression, some answers may be a textual description, as long as the meaning expressed is the same. And some formulas are expressed in different ways, but they are equivalent and correct.\n    5. If the prediction is given with \\boxed{}, please ignore the \\boxed{} and only judge whether the candidate\'s answer is consistent with the standard answer.\n\n    Please judge whether the following answers are consistent with the standard answer based on the above criteria. Grade the predicted answer of this new question as one of:\n    A: CORRECT \n    B: INCORRECT\n    Just return the letters "A" or "B", with no text around it.\n\n    Here is your task. Simply reply with either CORRECT, INCORRECT. Don\'t apologize or correct yourself if there was a mistake; we are just trying to grade the answer.\n\n\n    <Original Question Begin>: \n{question}\n<Original Question End>\n\n\n    <Gold Target Begin>: \n{answer}\n<Gold Target End>\n\n\n    <Predicted Answer Begin>: \n{prediction}\n<Predicted End>\n\n\n    \n    Judging the correctness of candidates\' answers:',
+                                role='HUMAN'),
+                            ]),
+                    type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+                type='opencompass.evaluator.GenericLLMEvaluator'),
+            parallel=False,
+            rule_evaluator=dict(
+                type='opencompass.evaluator.MATHVerifyEvaluator'),
+            type='opencompass.evaluator.CascadeEvaluator')),
+    infer_cfg=dict(
+        inferencer=dict(
+            type='opencompass.openicl.icl_inferencer.GenInferencer'),
+        prompt_template=dict(
+            template=dict(
+                round=[
+                    dict(prompt='{question}\nRemember to put your final answer within \\boxed{}.',
+                        role='HUMAN'),
+                    ]),
+            type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+        retriever=dict(
+            type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+    n=1,
+    path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/aime2025/aime2025.jsonl',
+    reader_cfg=dict(
+        input_columns=[
+            'question',
+            ],
+        output_column='answer',
+        test_range='[-min(100, len(index_list)//2):]'),
+    type='opencompass.datasets.CustomDataset')
+eval=dict(
+    partitioner=dict(
+        type='NaivePartitioner'),
+    runner=dict(
+        max_num_workers=16,
+        task=dict(
+            dump_details=True,
+            type='OpenICLEvalTask'),
+        type='LocalRunner'))
+infer=dict(
+    partitioner=dict(
+        type='NaivePartitioner'),
+    runner=dict(
+        max_num_workers=16,
+        task=dict(
+            type='OpenICLInferTask'),
+        type='LocalRunner'))
+models=[
+    dict(abbr='ft-aime25',
+        batch_size=16,
+        generation_kwargs=dict(
+            temperature=0.0,
+            top_k=1,
+            top_p=1.0),
+        lora_path='selected_model',
+        max_out_len=8192,
+        max_seq_len=32768,
+        model_kwargs=dict(
+            dtype='bfloat16',
+            enable_lora=True,
+            gpu_memory_utilization=0.9,
+            max_cpu_loras=1,
+            max_lora_rank=64,
+            max_model_len=32768,
+            tensor_parallel_size=1,
+            trust_remote_code=True),
+        path='/data/github/RD-Agent/finetune_files/models/Qwen/Qwen2.5-7B-Instruct',
+        run_cfg=dict(
+            num_gpus=1,
+            num_procs=1),
+        type='opencompass.models.VLLMwithChatTemplate'),
+    ]
+pinned_dataset_path='/data/github/RD-Agent/finetune_files/benchmarks/pinned/aime2025/aime2025.jsonl'
+test_range_override='[-min(100, len(index_list)//2):]'
+work_dir='./benchmark_results/test/20260910_170505'

@@ -1,0 +1,310 @@
+{
+    "correct_rate": 40.0,
+    "valid_rate": 80.0,
+    "tanimoto_similarity": 59.72143386678271,
+    "correct_count": 4.0,
+    "valid_count": 8.0,
+    "total_count": 10.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_10",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a sulfur atom in a thiol group (S-), a vinyl group (C=C), and a fused bicyclic aromatic system. The thiol group is directly attached to the sulfur atom, which is part of a five-membered aromatic ring (Sc1sccc1). The rest of the structure includes a vinyl group (C=N) and a fused benzene ring system.\n2. Functional group identification: The thiol group is located at the sulfur atom in the five-membered aromatic ring (position: Sc1sccc1). The sulfur "
+            ],
+            "pred_smiles": [
+                "Cn1ccc(/C=N/c2ccc3ccccc3c2)cc1"
+            ],
+            "source": [
+                "Sc1sccc1/C=N/c1ccc2ccccc2c1"
+            ],
+            "gold": [
+                "c1sccc1/C=N/c1ccc2ccccc2c1"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_11",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a bicyclic aromatic system with a sulfonamide group (S(=O)(=O)[O-]) and an amine (-NH2) attached to the benzene ring. The bicyclic structure includes two fused aromatic rings with NH and C=O groups.\n2. Functional group identification: The specified functional group 'amine' corresponds to the -NH2 group attached to the benzene ring (first 'N' in the SMILES string). This is a primary amine substituent.\n3. Delete strategy: To delete the amine group,"
+            ],
+            "pred_smiles": [
+                "c1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-]"
+            ],
+            "source": [
+                "Nc1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-]"
+            ],
+            "gold": [
+                "c1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-]"
+            ],
+            "group_a": [
+                "amine"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_12",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains an amide group (O=C-N), a bicyclic system with a fused pyrimidine-like ring (n1nc2c(cc1=O)CCCC2), and a cyclohexane ring substituted with a hydroxyl group (O1CC...). The hydroxyl group is attached to the bridgehead carbon of the cyclohexane ring.\n2. Functional group identification: The hydroxyl group (-OH) is located on the bridgehead carbon of the cyclohexane ring, explicitly represented as [OH] in the SMILES segment O1CC[C@]2(O)CCCC[C@@H]2C1.\n3"
+            ],
+            "pred_smiles": [
+                "O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@]2CCCC[C@@H]2C1"
+            ],
+            "source": [
+                "O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@]2(O)CCCC[C@@H]2C1"
+            ],
+            "gold": [
+                "O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@H]2CCCC[C@@H]2C1"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.7115384615384616
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_13",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a methyl ester (COC(=O)-), an aromatic ring with substituents, and a secondary amide (NC(=O)-) connected to a piperidine ring (C2CCN(C(=O)O)CC2). The piperidine ring includes a tertiary carbon with a carbamate (N-C(=O)-O) group.\n2. Functional group identification: The 'carboxyl' group corresponds to the terminal -COOH in the original SMILES. However, in the provided answer, the carbamate group (C(=O)O) in the piperidine ring is modified. The tert"
+            ],
+            "pred_smiles": [
+                "COC(=O)c1ccc(NC(=O)C2CCN(C(=O)O)CC2)cc1"
+            ],
+            "source": [
+                "COC(=O)c1ccc(NC(=O)C2CCN(C(=O)O)CC2)cc1"
+            ],
+            "gold": [
+                "COC(=O)c1ccc(NC(=O)C2CCNCC2)cc1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.6511627906976745
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_14",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains an amide group (O=C-N), a triazole ring (n1nnc...), a chlorinated benzene ring (-c2ccccc2Cl), and a hydroxylated chlorobenzene ring (c1cc(Cl)ccc1O). The amide is directly attached to the triazole ring.\n2. Functional group identification: The amide group is located at the central carbonyl (O=C) connected to the triazole ring (n1nnc...). The nitrogen of the amide is bonded to the carbonyl carbon, and the other nitrogen is part of the triazole.\n3. D"
+            ],
+            "pred_smiles": [
+                "O=C(Cn1nnc(-c2ccccc2Cl)n1)Nc1cc(Cl)ccc1O"
+            ],
+            "source": [
+                "O=C(Cn1nnc(-c2ccccc2Cl)n1)N/N=C/c1cc(Cl)ccc1O"
+            ],
+            "gold": [
+                "Cn1nnc(-c2ccccc2Cl)n1.N/N=C/c1cc(Cl)ccc1O"
+            ],
+            "group_a": [
+                "amide"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.4461538461538462
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_15",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains an amide group (O=C-N), two aromatic rings, and a hydroxyl group (O) on one of the rings. The amine group to delete is part of the secondary amine (Nc1ccc...) connecting the central aromatic ring to the benzene ring (Nc2ccccc2).\n2. Functional group identification: The specified amine group is the secondary amine at the position where the central aromatic ring (c1ccc...) connects to the benzene ring (Nc2ccccc2). This is part of the amide group (O="
+            ],
+            "pred_smiles": [
+                "O=C(c1ccc(O)nc1)c1ccc(Nc2ccccc2)cc1"
+            ],
+            "source": [
+                "O=C(Nc1ccc(Nc2ccccc2)cc1)c1ccc(O)nc1"
+            ],
+            "gold": [
+                "O=C(Nc1ccccc1)c1ccc(O)nc1"
+            ],
+            "group_a": [
+                "amine"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.6216216216216216
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_16",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule (SCC1(COC2CCCC2)CC1) contains a thiol (-SH) group attached to a cyclopropane ring (C1). The cyclopropane ring also has an ether (-O-) substituent connected to a cyclopentane ring (C2).\n2. Functional group identification: The thiol group is located at the first carbon (C1) of the cyclopropane ring, explicitly represented as 'S' in the SMILES string (SCC1...).\n3. Delete strategy: To delete the thiol group, the sulfur atom (S) directly bonded to C1 is remove"
+            ],
+            "pred_smiles": [
+                "CC1(COC2CCCC2)CC1"
+            ],
+            "source": [
+                "SCC1(COC2CCCC2)CC1"
+            ],
+            "gold": [
+                "CC1(COC2CCCC2)CC1"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_17",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a pyridine ring (indicated by 'n1') with substituents: a methyl group (C), an ether-linked tertiary carbon (O[C@@H](C)), a carbonyl group (C=O), and a urea derivative (NC(N)=O). The aldehyde group (-CHO) is not explicitly present in the SMILES string provided.\n2. Functional group identification: The aldehyde group is not directly represented in the input SMILES. However, the tertiary carbon (C) attached to the oxygen in the ether group (O[C@@H](C"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(O[C@H](C)C(=O)NC(N)=O)c(C=O)n1"
+            ],
+            "source": [
+                "Cc1ccc(O[C@@H](C)C(=O)NC(N)=O)c(C=O)n1"
+            ],
+            "gold": [
+                "Cc1ccc(O[C@@H](C)C(=O)NC(N)=O)cn1"
+            ],
+            "group_a": [
+                "aldehyde"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.5416666666666666
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_18",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a bicyclic structure with a piperidine ring fused to a benzene ring substituted with a morpholine-2,5-dione group. Key functional groups include two nitrile (-C#N) groups attached to the central carbon of the piperidine ring and a ketone (=O) in the morpholine-2,5-dione subunit.\n2. Functional group identification: The nitrile groups are located at the central carbon of the piperidine ring (N#CCC[C@H](C#N)...). These are the targets for deletion. "
+            ],
+            "pred_smiles": [
+                "CCc1c2ccccc2N2CCOC2=O)C1"
+            ],
+            "source": [
+                "N#CCC[C@H](C#N)CN1CCc2c(cccc2N2CCOC2=O)C1"
+            ],
+            "gold": [
+                "N#CCC[C@H](C)CN1CCc2c(cccc2N2CCOC2=O)C1"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_delete_19",
+            "pred_raw": [
+                "1. Molecule analysis: The input molecule contains a urea group (O=C(NR)NR'), with one nitrogen connected to a 1,2,4-triazole ring (via CH2) and the other to a benzene ring substituted with Cl and F. The benzene ring has two halogen atoms (Cl and F) in para positions.\n2. Functional group identification: The 'halo' functional group corresponds to the Cl and F substituents on the benzene ring. The Cl is at position 4, and the F is at position 5 (SMILES ordering).\n3. Delete strategy: To delete the h"
+            ],
+            "pred_smiles": [
+                "O=C(NCc1nncn1C1CC1)Nc1cccc(Cl)c1"
+            ],
+            "source": [
+                "O=C(NCc1nncn1C1CC1)Nc1cccc(Cl)c1F"
+            ],
+            "gold": [
+                "O=C(NCc1nncn1C1CC1)Nc1cccc(Cl)c1"
+            ],
+            "group_a": [
+                "halo"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        }
+    ]
+}

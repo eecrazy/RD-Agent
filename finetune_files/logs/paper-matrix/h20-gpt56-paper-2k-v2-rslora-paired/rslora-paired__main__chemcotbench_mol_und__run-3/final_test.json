@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-3",
+  "benchmark": "chemcotbench_mol_und",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "selection_profile": "main",
+  "state": "succeeded",
+  "evaluation_mode": "post_selection",
+  "selection": {
+    "source": "validation_sweep",
+    "candidate_source": "durable_checkpoint",
+    "training_policy": "rslora",
+    "history_index": null,
+    "loop_id": null,
+    "candidate_id": "durable_checkpoint__rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7__step-57__eb8ddc03edaa",
+    "checkpoint_step": 57,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-3/workspace/.ft_model_checkpoints/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7/output/checkpoint-57",
+    "signature": "0b7c5141fffea40b36bff453513626c1ff685a20bf2add9bb975ff23ca2ecea7",
+    "expected_samples": 2000,
+    "formal_training_evidence_signature": "d073bfd07dc44bed7e089810729abf63e93be615040d174f7ccc67e30e145f18",
+    "validation_selection_artifact_signature": "fc686f15e01442b38ad45c66b18276e25a1b6181419a4618f1ebfc1382305fd0",
+    "pairing_artifact_signature": "a1a2a3ec38aea90e10c7beb3ef508b3b59352ad6edbf7653df1f55993e6fe7e9",
+    "selection_profile": "main"
+  },
+  "test_range": "[-min(100, len(index_list)//2):]",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "pairing_artifact_signature": "a1a2a3ec38aea90e10c7beb3ef508b3b59352ad6edbf7653df1f55993e6fe7e9",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:36711/v1"
+  },
+  "started_at": "2026-09-10T17:13:53.321202+08:00",
+  "finished_at": "2026-09-10T17:17:03.228275+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_mol_und_Murcko_scaffold": {
+        "tanimoto_similarity_larger_means_better": 0.26
+      },
+      "chemcotbench_mol_und_equivalence": {
+        "accuracy": 60.0
+      },
+      "chemcotbench_mol_und_fg_count": {
+        "mae": 0.02
+      },
+      "chemcotbench_mol_und_ring_count": {
+        "mae": 0.3
+      },
+      "chemcotbench_mol_und_ring_system_scaffold": {
+        "accuracy": 86.67
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "Yes",
+        "model_output": "Input structure: CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1\nMolecule structure analysis: Contains a piperidine ring, a thieno[2,3-b]pyridine fused system (benzene fused to a 5-membered ring with S and N), and substituents including methoxy groups.\nScaffold analysis: c1ccc2sccc2c1 is a benzene fused to a 5-membered ring with S and N (thieno[2,3-b]pyridine core).\nMatching analysis: The molecule includes the thieno[2,3-b]pyridine fused system matching the scaffold.\n{\"output\":\"Yes\"}",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CN(C)C1CCN(CCc2c(COc3ccccc3CO)sc3ccccc23)CC1, Ring System Structure: c1ccc2sccc2c1\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "Input structure: Cc1ccc(-c2csc3ncnc(NCCCC(=O)O)c23)cc1C\nMolecule structure analysis: Contains a benzene ring (with methyl substituents) connected to a thieno[2,3-d]pyrimidine system (with a urea group).\nScaffold analysis: Benzene ring connected to a thieno[2,3-d]pyrimidine (without substituents on the pyrimidine ring).\nMatching analysis: The core ring systems (benzene and thieno[2,3-d]pyrimidine) match, ignoring substituents on the pyrimidine ring.\n{\"output\":\"Yes\"}",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Cc1ccc(-c2csc3ncnc(NCCCC(=O)O)c23)cc1C, Ring System Structure: c1ccc(-c2csc3ncncc23)cc1\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "1. Both molecules contain the same aniline-like aromatic ring with a hydroxyl group, nitrile, and a methylamino substituent. 2. Both have the same N-linked piperazine ring with a cyclopropylmethyl group. 3. The amide carbonyl is attached to the same carbon of the piperazine ring in both structures. 4. The SMILES differ only in atom ordering and ring traversal, not molecular connectivity.\n{\"output\":\"Yes\"}",
+        "question": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CNCc1cc(C(=O)N2CCCN(C3CC3)CC2)ccc1Oc1ccccc1C#N, Molecule B: N1(C(=O)c2cc(c(Oc3c(cccc3)C#N)cc2)CNC)CCCN(C2CC2)CC1.\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "1. Both molecules contain a benzodiazepine ring with a carboxamide substituent. 2. Molecule A has a para-chlorophenyl group attached to the benzodiazepine. 3. Molecule B has a meta-chlorophenyl group. 4. Their atom connectivity and molecular formulas therefore differ, so they are not the same molecule.\n{\"output\":\"No\"}",
+        "question": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CN1C(=O)C(Cc2ccc(-c3ccccc3[N+](=O)[O-])cc2)NC(=O)c2cc(Cl)ccc21, Molecule B: c1(c(cccc1)-c1ccc(CC2NC(c3cc(Cl)ccc3N(C2=O)C)=O)cc1)[N+]([O-])=O.\n"
+      },
+      {
+        "gold": "No",
+        "model_output": "1. Molecule A contains a methoxy-substituted benzene ring connected to a 1,3,4-oxadiazole ring. 2. The oxadiazole in Molecule A is substituted with a thiophene-2-sulfinyl group (`SCC#N`). 3. Molecule B contains the same benzene–oxadiazole core and the same thiophene-2-sulfinyl substituent. 4. The SMILES differ only in atom ordering and branch notation, not molecular connectivity.\n{\"output\":\"Yes\"}",
+        "question": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(-c2nnc(SCC#N)o2)cc1, Molecule B: O(c1ccc(cc1)-c1oc(nn1)SCCN)C.\n"
+      },
+      {
+        "gold": "c1ccc2c(c1)Cc1ccccc1-2",
+        "model_output": "Input structure: O=C(O)Cc1ccc2c(c1)C(O)(C(F)(F)F)c1ccccc1-2\nCore ring identification: Two benzene rings connected via a single bond (benzo[a]heptalen system) with a hydroxyl group and trifluoromethyl substituent.\nScaffold analysis: Murcko scaffold is the fused bicyclic system (benzo[a]heptalen) without substituents (hydroxyl, trifluoromethyl).\nMatching analysis: The input molecule's core matches the provided Murcko scaffold after removing side chains (hydroxyl, trifluoromethyl).\n{\"Output Scaffold\":\"c1ccc2c(c1)C1CCc3ccccc3-2\"}",
+        "question": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(O)Cc1ccc2c(c1)C(O)(C(F)(F)F)c1ccccc1-2.\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "Input structure: CC1C2Cc3ccc(N)cc3C1(C)CCN2\nMolecule structure analysis: Contains a fused bicyclic system (benzene fused to a bicyclic amine) with a methyl substituent on the bridged nitrogen.\nScaffold analysis: A fused bicyclic system (benzene fused to a bridged bicyclic amine).\nMatching analysis: The molecule's fused bicyclic core matches the scaffold's structure, ignoring substituents.\n{\"output\":\"Yes\"}",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: CC1C2Cc3ccc(N)cc3C1(C)CCN2, Ring System Structure: c1ccc2c(c1)CC1CC2CCN1\n"
+      },
+      {
+        "gold": "1",
+        "model_output": "Fragment structure: Isothiocyanate (R-N=C=S) contains a sulfur atom bonded to a carbon and a nitrogen, with a terminal C=N group.\nMatching analysis: The input molecule contains a terminal C(=O)[C@@H]2N=C=S group. The C=N and S atoms are present, confirming one isothiocyanate fragment.\n{\"count\":\"1\"}",
+        "question": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC1(C)[C@H]2CC[C@]1(C)C(=O)[C@@H]2N=C=S, Fragment Name: isothiocyanate.\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "Input structure: O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1\nMolecule structure analysis: Contains a bicyclic imidazo[1,2-a]pyridine core with substituents: ketone, phenyl ether, and fluorophenyl groups.\nScaffold analysis: Bicyclic imidazo[1,2-a]pyridine scaffold (c1cnc2ncncc2n1) without substituents.\nMatching analysis: Core bicyclic system matches the scaffold; substituents are ignored per definition.\n{\"output\":\"Yes\"}",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=c1cnc2cnc(OCc3ccccc3)nc2n1Cc1ccc(F)cc1, Ring System Structure: c1cnc2ncncc2n1\n"
+      },
+      {
+        "gold": "3",
+        "model_output": "Input structure: CCN1c2ncc(COc3cc[n+]([O-])cc3)cc2C(=O)N(C)c2cccnc21\nRing identification: The input molecule contains two pyridine rings (c1ccncc1): one in the 1,3,5-triazin-2-yl group and another in the fused bicyclic system.\nCounting: Two pyridine rings match the structure c1ccncc1.\n{\"count\":\"2\"}",
+        "question": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CCN1c2ncc(COc3cc[n+]([O-])cc3)cc2C(=O)N(C)c2cccnc21, Ring Structure: c1ccncc1.\n"
+      }
+    ]
+  },
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-3/final_test_workspaces/0b7c5141fffea40b"
+}

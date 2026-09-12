@@ -1,0 +1,212 @@
+{
+  "experiment_id": "base/7b/FinanceIQ_gen",
+  "paper_group": "base-7b",
+  "method": "Base Model",
+  "benchmark": "FinanceIQ_gen",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": null,
+  "data_limit": null,
+  "timeout": null,
+  "run_index": 1,
+  "runner": "run_base_eval.py",
+  "artifact_status": "reconstructed-from-released-evaluator",
+  "source": "main-results",
+  "gpu": "1",
+  "state": "succeeded",
+  "started_at": "2026-08-28T01:54:51.120482+08:00",
+  "benchmark_asset": "benchmark-financeiq",
+  "benchmark_dataset_path": "pinned/financeiq",
+  "model_asset": "model-qwen2.5-7b-instruct",
+  "task_timeout": 43200,
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:44123/v1"
+  },
+  "splits": {
+    "validation": {
+      "state": "succeeded",
+      "range": "[:min(100, len(index_list)//2)]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/configs/validation.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/configs/validation.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/validation"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/validation/20260828_015458",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/validation/20260828_015458/summary/summary_20260828_015458.csv",
+        "rows": [
+          {
+            "dataset": "FinanceIQ-注册会计师（CPA）",
+            "version": "ff139e",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "72.00"
+          },
+          {
+            "dataset": "FinanceIQ-银行从业资格",
+            "version": "1c33df",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "84.00"
+          },
+          {
+            "dataset": "FinanceIQ-证券从业资格",
+            "version": "c4b0d3",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "76.00"
+          },
+          {
+            "dataset": "FinanceIQ-基金从业资格",
+            "version": "55aa98",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "68.00"
+          },
+          {
+            "dataset": "FinanceIQ-保险从业资格CICE",
+            "version": "fff6fa",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "84.00"
+          },
+          {
+            "dataset": "FinanceIQ-经济师",
+            "version": "936f73",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "92.00"
+          },
+          {
+            "dataset": "FinanceIQ-税务师",
+            "version": "306e2f",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "68.00"
+          },
+          {
+            "dataset": "FinanceIQ-期货从业资格",
+            "version": "24923f",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "74.00"
+          },
+          {
+            "dataset": "FinanceIQ-理财规划师",
+            "version": "5c8119",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "80.00"
+          },
+          {
+            "dataset": "FinanceIQ-精算师-金融数学",
+            "version": "c03c2c",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "45.45"
+          }
+        ]
+      }
+    },
+    "test": {
+      "state": "succeeded",
+      "range": "[-min(100, len(index_list)//2):]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/configs/test.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/configs/test.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/test"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/test/20260828_020122",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__FinanceIQ_gen/test/20260828_020122/summary/summary_20260828_020122.csv",
+        "rows": [
+          {
+            "dataset": "FinanceIQ-注册会计师（CPA）",
+            "version": "ff139e",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "56.00"
+          },
+          {
+            "dataset": "FinanceIQ-银行从业资格",
+            "version": "1c33df",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "72.00"
+          },
+          {
+            "dataset": "FinanceIQ-证券从业资格",
+            "version": "c4b0d3",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "78.00"
+          },
+          {
+            "dataset": "FinanceIQ-基金从业资格",
+            "version": "55aa98",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "80.00"
+          },
+          {
+            "dataset": "FinanceIQ-保险从业资格CICE",
+            "version": "fff6fa",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "76.00"
+          },
+          {
+            "dataset": "FinanceIQ-经济师",
+            "version": "936f73",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "90.00"
+          },
+          {
+            "dataset": "FinanceIQ-税务师",
+            "version": "306e2f",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "50.00"
+          },
+          {
+            "dataset": "FinanceIQ-期货从业资格",
+            "version": "24923f",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "54.00"
+          },
+          {
+            "dataset": "FinanceIQ-理财规划师",
+            "version": "5c8119",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "70.00"
+          },
+          {
+            "dataset": "FinanceIQ-精算师-金融数学",
+            "version": "c03c2c",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-FinanceIQ_gen": "27.27"
+          }
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-08-28T02:07:44.372598+08:00"
+}

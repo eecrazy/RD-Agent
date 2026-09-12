@@ -1,0 +1,220 @@
+{
+  "artifact_signature": "fc686f15e01442b38ad45c66b18276e25a1b6181419a4618f1ebfc1382305fd0",
+  "benchmark": "chemcotbench_mol_und",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "candidate_count": 2,
+  "candidate_discovery": {
+    "candidate_filter": null,
+    "include_baseline": false,
+    "include_final_outputs": true
+  },
+  "candidate_set_signature": "c84a1ceafec0b81c44039c1251f1dfa2e78d55d53689435ea5857e5f28bab12f",
+  "candidates": [
+    {
+      "accuracy_summary": {
+        "chemcotbench_mol_und_Murcko_scaffold": {
+          "tanimoto_similarity_larger_means_better": 0.33
+        },
+        "chemcotbench_mol_und_equivalence": {
+          "accuracy": 60.0
+        },
+        "chemcotbench_mol_und_fg_count": {
+          "mae": 0.14
+        },
+        "chemcotbench_mol_und_ring_count": {
+          "mae": 0.3
+        },
+        "chemcotbench_mol_und_ring_system_scaffold": {
+          "accuracy": 86.67
+        }
+      },
+      "candidate_id": "durable_checkpoint__rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7__step-57__eb8ddc03edaa",
+      "checkpoint_step": 57,
+      "formal_training_evidence_signature": "d073bfd07dc44bed7e089810729abf63e93be615040d174f7ccc67e30e145f18",
+      "mean_ordinal_rank": 1.3333333333333333,
+      "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-3/workspace/.ft_model_checkpoints/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7/output/checkpoint-57",
+      "model_relocation": null,
+      "ordinal_ranks": {
+        "accuracy": 1.5,
+        "mae": 1.5,
+        "tanimoto_similarity": 1.0
+      },
+      "selection_metrics": [
+        {
+          "formula": "mean MAE of fg_count and ring_count",
+          "higher_is_better": false,
+          "label": "MAE",
+          "metric": "mae",
+          "unit": "absolute",
+          "value": 0.22
+        },
+        {
+          "formula": "Murcko scaffold Tanimoto similarity",
+          "higher_is_better": true,
+          "label": "TMS",
+          "metric": "tanimoto_similarity",
+          "unit": "ratio",
+          "value": 0.33
+        },
+        {
+          "formula": "mean accuracy of equivalence and ring_system_scaffold",
+          "higher_is_better": true,
+          "label": "Acc",
+          "metric": "accuracy",
+          "unit": "percent",
+          "value": 73.33500000000001
+        }
+      ],
+      "selection_rank": 1,
+      "selection_signature": "0b7c5141fffea40b36bff453513626c1ff685a20bf2add9bb975ff23ca2ecea7",
+      "source": "durable_checkpoint",
+      "workspace_id": "rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7",
+      "worst_ordinal_rank": 1.5
+    },
+    {
+      "accuracy_summary": {
+        "chemcotbench_mol_und_Murcko_scaffold": {
+          "tanimoto_similarity_larger_means_better": 0.32
+        },
+        "chemcotbench_mol_und_equivalence": {
+          "accuracy": 60.0
+        },
+        "chemcotbench_mol_und_fg_count": {
+          "mae": 0.14
+        },
+        "chemcotbench_mol_und_ring_count": {
+          "mae": 0.3
+        },
+        "chemcotbench_mol_und_ring_system_scaffold": {
+          "accuracy": 86.67
+        }
+      },
+      "candidate_id": "durable_output__rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7__ee153603421a",
+      "checkpoint_step": null,
+      "formal_training_evidence_signature": "d073bfd07dc44bed7e089810729abf63e93be615040d174f7ccc67e30e145f18",
+      "mean_ordinal_rank": 1.6666666666666667,
+      "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-3/workspace/.ft_model_checkpoints/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7/output",
+      "model_relocation": null,
+      "ordinal_ranks": {
+        "accuracy": 1.5,
+        "mae": 1.5,
+        "tanimoto_similarity": 2.0
+      },
+      "selection_metrics": [
+        {
+          "formula": "mean MAE of fg_count and ring_count",
+          "higher_is_better": false,
+          "label": "MAE",
+          "metric": "mae",
+          "unit": "absolute",
+          "value": 0.22
+        },
+        {
+          "formula": "Murcko scaffold Tanimoto similarity",
+          "higher_is_better": true,
+          "label": "TMS",
+          "metric": "tanimoto_similarity",
+          "unit": "ratio",
+          "value": 0.32
+        },
+        {
+          "formula": "mean accuracy of equivalence and ring_system_scaffold",
+          "higher_is_better": true,
+          "label": "Acc",
+          "metric": "accuracy",
+          "unit": "percent",
+          "value": 73.33500000000001
+        }
+      ],
+      "selection_rank": 2,
+      "selection_signature": "b52f45ab161088bded7d98cc6b1f4f45badfb7ee945764459cc805606651d740",
+      "source": "durable_output",
+      "workspace_id": "rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7",
+      "worst_ordinal_rank": 2.0
+    }
+  ],
+  "created_at": "2026-09-10T17:49:20.792317+08:00",
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-3",
+  "held_out_test_used": false,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "a1a2a3ec38aea90e10c7beb3ef508b3b59352ad6edbf7653df1f55993e6fe7e9",
+  "schema_version": 1,
+  "search": {
+    "finished_at": "2026-09-10T15:21:11.816279+08:00",
+    "started_at": "2026-09-09T20:31:08.545409+08:00",
+    "state": "succeeded"
+  },
+  "selection": {
+    "accuracy_summary": {
+      "chemcotbench_mol_und_Murcko_scaffold": {
+        "tanimoto_similarity_larger_means_better": 0.33
+      },
+      "chemcotbench_mol_und_equivalence": {
+        "accuracy": 60.0
+      },
+      "chemcotbench_mol_und_fg_count": {
+        "mae": 0.14
+      },
+      "chemcotbench_mol_und_ring_count": {
+        "mae": 0.3
+      },
+      "chemcotbench_mol_und_ring_system_scaffold": {
+        "accuracy": 86.67
+      }
+    },
+    "candidate_id": "durable_checkpoint__rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7__step-57__eb8ddc03edaa",
+    "checkpoint_step": 57,
+    "formal_training_evidence_signature": "d073bfd07dc44bed7e089810729abf63e93be615040d174f7ccc67e30e145f18",
+    "mean_ordinal_rank": 1.3333333333333333,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-3/workspace/.ft_model_checkpoints/rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7/output/checkpoint-57",
+    "model_relocation": null,
+    "ordinal_ranks": {
+      "accuracy": 1.5,
+      "mae": 1.5,
+      "tanimoto_similarity": 1.0
+    },
+    "selection_metrics": [
+      {
+        "formula": "mean MAE of fg_count and ring_count",
+        "higher_is_better": false,
+        "label": "MAE",
+        "metric": "mae",
+        "unit": "absolute",
+        "value": 0.22
+      },
+      {
+        "formula": "Murcko scaffold Tanimoto similarity",
+        "higher_is_better": true,
+        "label": "TMS",
+        "metric": "tanimoto_similarity",
+        "unit": "ratio",
+        "value": 0.33
+      },
+      {
+        "formula": "mean accuracy of equivalence and ring_system_scaffold",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 73.33500000000001
+      }
+    ],
+    "selection_signature": "0b7c5141fffea40b36bff453513626c1ff685a20bf2add9bb975ff23ca2ecea7",
+    "source": "durable_checkpoint",
+    "workspace_id": "rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7",
+    "worst_ordinal_rank": 1.5
+  },
+  "selection_profile": "main",
+  "selection_rule": {
+    "name": "direction-aware mean average ordinal rank",
+    "primary_metrics": [
+      "mae",
+      "tanimoto_similarity",
+      "accuracy"
+    ],
+    "tie_break": "lowest worst ordinal rank, then stable candidate_id"
+  },
+  "state": "succeeded",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

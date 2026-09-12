@@ -1,0 +1,202 @@
+{
+  "artifact_signature": "943e3b7f1013ea5d992863b13cf304d97b9be5be191e0c221a5bc36f559c9999",
+  "benchmark": "chemcotbench_reaction",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "candidate_count": 1,
+  "candidate_discovery": {
+    "candidate_filter": null,
+    "include_baseline": false,
+    "include_final_outputs": true
+  },
+  "candidate_set_signature": "60013a5e1d3bfe88ef5a26eb47b362ac37544cc11dcf8da573c319fca49e7369",
+  "candidates": [
+    {
+      "accuracy_summary": {
+        "chemcotbench_reaction_fs": {
+          "bleu": 62.01,
+          "exact_match": 10.0,
+          "exact_match_count": 5.0,
+          "levenshtein": 14.42,
+          "maccs_sims": 63.85,
+          "morgan_sims": 51.36,
+          "rdk_sims": 56.81,
+          "total_count": 50.0,
+          "valid_count": 40.0,
+          "validity": 80.0
+        },
+        "chemcotbench_reaction_mechsel": {
+          "accuracy": 8.0,
+          "correct_count": 4.0,
+          "total_count": 50.0
+        },
+        "chemcotbench_reaction_nepp": {
+          "bleu": 0.0,
+          "exact_match": 0.0,
+          "exact_match_count": 0.0,
+          "levenshtein": 0.0,
+          "maccs_sims": 0.0,
+          "morgan_sims": 0.0,
+          "rdk_sims": 0.0,
+          "total_count": 42.0,
+          "valid_count": 0.0,
+          "validity": 0.0
+        },
+        "chemcotbench_reaction_rcr": {
+          "exact_count": 0.0,
+          "exact_match": 0.0,
+          "total_count": 45.0
+        },
+        "chemcotbench_reaction_retro": {
+          "bleu": 29.57,
+          "exact_match": 0.0,
+          "exact_match_count": 0.0,
+          "levenshtein": 7.66,
+          "maccs_sims": 16.71,
+          "morgan_sims": 12.27,
+          "rdk_sims": 13.15,
+          "total_count": 50.0,
+          "valid_count": 28.0,
+          "validity": 56.0
+        }
+      },
+      "candidate_id": "durable_output__rslora__3527d34256004efabe7858c08197c802__59e66068a6d7__dd1ab062acce",
+      "checkpoint_step": null,
+      "formal_training_evidence_signature": "d0cb59550e43430ecf3874f70fa63527746f767c376b04cae1e54abba017e7b8",
+      "mean_ordinal_rank": 1.0,
+      "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-2/workspace/.ft_model_checkpoints/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7/output",
+      "model_relocation": null,
+      "ordinal_ranks": {
+        "accuracy": 1.0,
+        "fingerprint_similarity": 1.0
+      },
+      "selection_metrics": [
+        {
+          "formula": "mean Morgan fingerprint similarity of fs, retro, and nepp",
+          "higher_is_better": true,
+          "label": "FTS",
+          "metric": "fingerprint_similarity",
+          "unit": "percent",
+          "value": 21.209999999999997
+        },
+        {
+          "formula": "mechanism-selection accuracy",
+          "higher_is_better": true,
+          "label": "Acc",
+          "metric": "accuracy",
+          "unit": "percent",
+          "value": 8.0
+        }
+      ],
+      "selection_rank": 1,
+      "selection_signature": "dd29bf243a163228692fd927b82b3481ef1eef0dbc0697bbe114cb663911366f",
+      "source": "durable_output",
+      "workspace_id": "rslora__3527d34256004efabe7858c08197c802__59e66068a6d7",
+      "worst_ordinal_rank": 1.0
+    }
+  ],
+  "created_at": "2026-09-10T17:49:21.413290+08:00",
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-2",
+  "held_out_test_used": false,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "a0aafab566d4cb156f17895720f70be7cfc9e745add17e72717968bfe6ec0785",
+  "schema_version": 1,
+  "search": {
+    "finished_at": "2026-09-10T15:20:45.335108+08:00",
+    "started_at": "2026-09-09T20:31:08.544101+08:00",
+    "state": "succeeded"
+  },
+  "selection": {
+    "accuracy_summary": {
+      "chemcotbench_reaction_fs": {
+        "bleu": 62.01,
+        "exact_match": 10.0,
+        "exact_match_count": 5.0,
+        "levenshtein": 14.42,
+        "maccs_sims": 63.85,
+        "morgan_sims": 51.36,
+        "rdk_sims": 56.81,
+        "total_count": 50.0,
+        "valid_count": 40.0,
+        "validity": 80.0
+      },
+      "chemcotbench_reaction_mechsel": {
+        "accuracy": 8.0,
+        "correct_count": 4.0,
+        "total_count": 50.0
+      },
+      "chemcotbench_reaction_nepp": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 42.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      },
+      "chemcotbench_reaction_rcr": {
+        "exact_count": 0.0,
+        "exact_match": 0.0,
+        "total_count": 45.0
+      },
+      "chemcotbench_reaction_retro": {
+        "bleu": 29.57,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 7.66,
+        "maccs_sims": 16.71,
+        "morgan_sims": 12.27,
+        "rdk_sims": 13.15,
+        "total_count": 50.0,
+        "valid_count": 28.0,
+        "validity": 56.0
+      }
+    },
+    "candidate_id": "durable_output__rslora__3527d34256004efabe7858c08197c802__59e66068a6d7__dd1ab062acce",
+    "checkpoint_step": null,
+    "formal_training_evidence_signature": "d0cb59550e43430ecf3874f70fa63527746f767c376b04cae1e54abba017e7b8",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-2/workspace/.ft_model_checkpoints/rslora__3527d34256004efabe7858c08197c802__59e66068a6d7/output",
+    "model_relocation": null,
+    "ordinal_ranks": {
+      "accuracy": 1.0,
+      "fingerprint_similarity": 1.0
+    },
+    "selection_metrics": [
+      {
+        "formula": "mean Morgan fingerprint similarity of fs, retro, and nepp",
+        "higher_is_better": true,
+        "label": "FTS",
+        "metric": "fingerprint_similarity",
+        "unit": "percent",
+        "value": 21.209999999999997
+      },
+      {
+        "formula": "mechanism-selection accuracy",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 8.0
+      }
+    ],
+    "selection_signature": "dd29bf243a163228692fd927b82b3481ef1eef0dbc0697bbe114cb663911366f",
+    "source": "durable_output",
+    "workspace_id": "rslora__3527d34256004efabe7858c08197c802__59e66068a6d7",
+    "worst_ordinal_rank": 1.0
+  },
+  "selection_profile": "main",
+  "selection_rule": {
+    "name": "direction-aware mean average ordinal rank",
+    "primary_metrics": [
+      "fingerprint_similarity",
+      "accuracy"
+    ],
+    "tie_break": "lowest worst ordinal rank, then stable candidate_id"
+  },
+  "state": "succeeded",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

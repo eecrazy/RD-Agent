@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "state": "succeeded",
+  "run_kind": "ordinary_lora_to_rslora",
+  "experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-3",
+  "source_experiment_id": "main/tablebench_numerical_reasoning/run-3",
+  "suite": "main-rslora-paired",
+  "benchmark": "tablebench_numerical_reasoning",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": "gpt-5.2",
+  "data_limit": 2000,
+  "timeout": "12h",
+  "benchmark_dataset_path": "pinned/tablebench",
+  "training_policy": "rslora",
+  "formal_expected_samples": 2000,
+  "formal_method_lock_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_numerical_reasoning__run-3/formal_training_method.json",
+  "formal_training_method": "rslora",
+  "formal_training_method_lock": {
+    "created_at": "2026-09-09T16:51:48.048829+00:00",
+    "experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-3",
+    "schema_version": 1,
+    "training_method": "rslora",
+    "training_policy": "rslora"
+  },
+  "formal_training_evidence": [
+    {
+      "workspace_id": "rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214",
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_numerical_reasoning__run-3/workspace/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214",
+      "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_numerical_reasoning__run-3/workspace/.ft_model_checkpoints/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214/formal_training",
+      "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_numerical_reasoning__run-3/workspace/.ft_model_checkpoints/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214/output",
+      "evidence_signature": "4d3678b23231d8a25965f38db6bae3dd572d08dfb54b231c76f18dfcd73f2590",
+      "training_method": "rslora",
+      "expected_samples": 2000,
+      "global_step": 375,
+      "max_steps": 375,
+      "formal_training_method_lock": {
+        "created_at": "2026-09-09T16:51:48.048829+00:00",
+        "experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-3",
+        "schema_version": 1,
+        "training_method": "rslora",
+        "training_policy": "rslora"
+      }
+    }
+  ],
+  "pairing_artifact_signature": "720153c76d49b8443b7bc6afe23cab1a31711deff08862183683b777308364f5",
+  "expected_pair_count": 1,
+  "started_at": "2026-09-09T20:31:08.546318+08:00",
+  "finished_at": "2026-09-10T17:44:45.099567+08:00",
+  "pair_runs": [
+    {
+      "schema_version": 1,
+      "state": "succeeded",
+      "source_experiment_id": "main/tablebench_numerical_reasoning/run-3",
+      "paired_experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-3",
+      "source_workspace_id": "1e53c372bdef4f1d91dc77a19fb087c3",
+      "paired_workspace_id": "rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214",
+      "input_contract_signature": "b05ff28a0d0d06ebb257882b056535474841f45cb422ebaec42ec54ca15ee3ea",
+      "expected_samples": 2000,
+      "prepared_at": "2026-09-09T20:52:59.489321+08:00",
+      "gpu": "6",
+      "started_at": "2026-09-10T00:51:47.970499+08:00",
+      "finished_at": "2026-09-10T01:44:30.860631+08:00",
+      "return_code": 0,
+      "outer_timeout": false,
+      "formal_training_evidence_signature": "4d3678b23231d8a25965f38db6bae3dd572d08dfb54b231c76f18dfcd73f2590",
+      "global_step": 375,
+      "max_steps": 375
+    }
+  ],
+  "formal_training_validation_errors": []
+}

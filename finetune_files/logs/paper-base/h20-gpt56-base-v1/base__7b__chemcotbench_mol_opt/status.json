@@ -1,0 +1,744 @@
+{
+  "experiment_id": "base/7b/chemcotbench_mol_opt",
+  "paper_group": "base-7b",
+  "method": "Base Model",
+  "benchmark": "chemcotbench_mol_opt",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": null,
+  "data_limit": null,
+  "timeout": null,
+  "run_index": 1,
+  "runner": "run_base_eval.py",
+  "artifact_status": "reconstructed-from-released-evaluator",
+  "source": "main-results",
+  "gpu": "6",
+  "state": "succeeded",
+  "started_at": "2026-08-28T01:54:02.187717+08:00",
+  "benchmark_asset": "benchmark-chemcotbench",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "model_asset": "model-qwen2.5-7b-instruct",
+  "task_timeout": 43200,
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:44123/v1"
+  },
+  "splits": {
+    "validation": {
+      "state": "succeeded",
+      "range": "[:min(100, len(index_list)//2)]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/configs/validation.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/configs/validation.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/validation"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/validation/20260828_015409",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/validation/20260828_015409/summary/summary_20260828_015409.csv",
+        "rows": [
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "70.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "26.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "47.41"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "56.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "8.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "25.30"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "70.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "16.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "32.05"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "-0.04"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "28.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "14.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "76.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "76.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "44.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "57.52"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.10"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "44.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "12.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "58.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "58.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "22.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "32.60"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.70"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "54.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "42.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "76.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "76.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "20.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "38.38"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          }
+        ]
+      }
+    },
+    "test": {
+      "state": "succeeded",
+      "range": "[-min(100, len(index_list)//2):]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/configs/test.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/configs/test.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/test"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/test/20260828_015923",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/test/20260828_015923/summary/summary_20260828_015923.csv",
+        "rows": [
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "70.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "20.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "40.36"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_drd",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "60.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "28.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "40.23"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_gsk",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "54.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "12.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "22.58"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_jnk",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.07"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "40.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "20.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "74.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "74.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "52.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "64.49"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_logp",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.10"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "52.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "18.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "68.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "68.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "20.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "35.02"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_qed",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "mean_improvement",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "0.49"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "success_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "46.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "best_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "30.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "valid_smiles_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "70.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "valid_score_rate",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "70.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "scaffold_hard",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "20.00"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "scaffold_soft",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "39.33"
+          },
+          {
+            "dataset": "chemcotbench_mol_opt_solubility",
+            "version": "1fe37c",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-chemcotbench_mol_opt": "50.00"
+          }
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-08-28T02:04:13.014261+08:00"
+}

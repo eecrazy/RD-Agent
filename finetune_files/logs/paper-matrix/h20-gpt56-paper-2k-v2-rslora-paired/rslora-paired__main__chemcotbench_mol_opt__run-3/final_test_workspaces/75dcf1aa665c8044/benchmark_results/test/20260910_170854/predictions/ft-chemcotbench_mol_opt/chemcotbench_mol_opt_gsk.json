@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)CC(NC(c1ccc(-c2ccc(C#N)cc2)cc1)C(F)(F)F)C(=O)NCC#N.\n"
+            }
+        ],
+        "prediction": "1. The source contains a substituted benzene bearing a cyanophenyl group, a trifluoromethyl-substituted tertiary amine, and a flexible branched aminoalkyl side chain. The tertiary amine may be protonated under physiological conditions, while the aryl groups provide hydrophobic contacts.\n\n2. The branched aminoalkyl side chain has several rotatable bonds, which can increase the conformational penalty associated with adopting a bound geometry. Its terminal nitrile adds polarity but is not a hydrogen-bond donor or conventional hydrogen-bond acceptor.\n\n3. The demonstrated modification replaces the branched aminoalkyl nitrile substituent with a compact, planar five-membered aromatic diazole ring attached through the same amine. This reduces side-chain flexibility and introduces ring nitrogens that could support kinase hinge-region interactions.\n\n4. The aryl–trifluoromethyl–cyanophenyl framework is retained, preserving potential hydrophobic and aromatic contacts. The change is chemically plausible as a strategy to alter GSK3-beta recognition and physicochemical behavior, but improved inhibition or activity cannot be inferred without experimental data.\n}\n{\"Final Target Molecule\":\"C#Nc1ccc(-c2ccc(C(=O)Nc3cc[nH]n3)cc2)cc1\"}",
+        "gold": "CC(C)CC(NC(c1ccc(-c2ccc(C#N)cc2)cc1)C(F)(F)F)C(=O)NCC#N"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(C(=O)NCC(O)C(F)F)c2cn1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a urea-linked phenyl group, and a carboxamide bearing a difluoroacetate-like side chain. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the amide and fluorinated side chain contribute polarity and steric character.\n\n2. The demonstrated modification replaces the difluoroacetate-like amide substituent with a directly attached 2-hydroxypropan-1-ol motif, while retaining the heteroaromatic core, urea linkage, and phenyl group.\n\n3. This change removes the amide carbonyl and fluorinated ester, reduces hydrogen-bond acceptor count and polarity, and introduces a flexible hydroxyl-containing chain. It may alter side-chain conformation, permeability, and metabolic behavior, but it also removes possible polar contacts that could support GSK3-beta recognition.\n\n4. The modification is chemically plausible as a polarity- and steric-tuning strategy, but improved GSK3-beta inhibition cannot be inferred without binding or inhibition data. The retained urea and heteroaromatic nitrogens still provide hydrogen-bonding functionality, so the effect may depend on the relative orientation and desolvation costs of the modified side chain.\n{\n    \"Final Target Molecule\": \"CC(NC(=O)Nc1cc2[nH]nc(NC(CO)C(CO)O)c2cn1)c1ccccc1.\"\n}",
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(C(=O)NCC(O)C(F)F)c2cn1)c1ccccc1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1ccnc(Nc2ccc(Oc3ccc(Cl)cc3)cc2)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a diazine-like aromatic ring bearing an amino group and a phenyl ring bearing a chlorophenoxy substituent. The amino group can provide hydrogen-bonding interactions, while the aryl and chlorophenoxy groups contribute hydrophobic character.\n\n2. The demonstrated modification replaces the chlorophenoxy group with a directly attached pyridyl ring. This removes the ether oxygen, changes the substituent’s electronics and hydrogen-bond-acceptor pattern, and introduces a ring nitrogen that may support additional polar interactions.\n\n3. The pyridyl group also increases aromatic surface area and may improve hydrophobic or π-mediated contacts if the relevant GSK3-beta region is suitably positioned. However, it is not a rigid, planar biaryl group, so conformational effects should not be assumed.\n\n4. Retention of the amino-diazine core preserves the principal donor/acceptor features of the source. The chlorophenyl group is not replaced by the piperidine proposed in the structured evidence, so the stated piperidine-related effects are not demonstrated by the structures.\n{\"Final Target Molecule\": \"Nc1ccnc(Nc2ccc(-c3ccncc3)cc2)c1\"}",
+        "gold": "Nc1ccnc(Nc2ccc(Oc3ccc(Cl)cc3)cc2)c1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(C(=O)N3CC(=O)N(C)C3)c2cn1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a urea-linked phenyl group, and an N-methyl urea substituent. The heteroaromatic nitrogens and urea groups provide potential hydrogen-bonding interactions relevant to kinase recognition.\n\n2. The N-methyl urea is relatively polar and conformationally flexible. Its methyl substituent contributes little hydrophobic surface area, which may limit favorable contacts in a hydrophobic region of the GSK3-beta ATP-binding site.\n\n3. The demonstrated modification replaces the N-methyl urea with a directly attached cyclohexyl group while retaining the heteroaromatic core and phenyl urea linkage. This removes one carbonyl and the N-methyl group, reduces hydrogen-bonding capacity, and increases hydrophobic and steric bulk.\n\n4. The cyclohexyl group could support hydrophobic or van der Waals contacts and alter substituent orientation, but it also changes polarity, conformational preferences, and solubility. Improved GSK3-beta inhibition is therefore chemically plausible only if the binding pocket accommodates the larger group without disrupting the core binding geometry.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(NC3CCCCC3)c2cn1)c1ccccc1.\"}",
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(C(=O)N3CC(=O)N(C)C3)c2cn1)c1ccccc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(O)COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic heteroaromatic core, a urea-linked 1-phenylethyl group, and a flexible 2-hydroxypropoxy substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the phenyl group can support hydrophobic contacts.\n\n2. The 2-hydroxypropoxy chain adds conformational flexibility and polarity, which could impose an unfavorable conformational penalty or limit productive occupancy of a hydrophobic region. Its alcohol may also introduce a potential oxidation site.\n\n3. The demonstrated modification replaces the 2-hydroxypropoxy group with a directly attached chlorophenyl group, while retaining the bicyclic core and 1-phenylethyl urea substituent. This increases rigidity and aromatic surface area and changes the balance of hydrophobic, π, and polar interactions.\n\n4. The chlorophenyl group could plausibly improve complementarity to a suitably shaped GSK3-beta pocket, but the effect on binding affinity, selectivity, solubility, and metabolic stability would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(Nc3ccccc3)c2cn1)c1ccccc1\"}",
+        "gold": "CCC(O)COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C(=O)Nc1ncc(SCc2ncc(C(C)(C)C)o2)s1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a thioether-linked, methyl-substituted oxazole attached to a thiazole, which is connected through an amide to a phenyl ring. The oxazole and thiazole provide heteroaromatic hydrogen-bond acceptors, while the amide supplies a donor/acceptor pair.\n\n2. The source lacks a hydrogen-bond donor on the terminal phenyl ring, which may limit opportunities for productive interactions within the GSK3-beta ATP-binding site. Its bulky tert-butyl substituent also adds steric volume and lipophilicity, although these effects are context-dependent.\n\n3. The demonstrated modification replaces the phenyl tert-butyl group with a primary amino group while retaining the remaining scaffold unchanged. This introduces a hydrogen-bond donor and reduces steric bulk, potentially enabling additional polar contacts and altering solubility and binding geometry.\n\n4. The change is chemically plausible as a focused side-chain modification, but improved GSK3-beta inhibition cannot be inferred without binding or inhibition data. The amino group may also affect permeability, desolvation, and metabolic behavior, so improved activity or stability is not assured.\n}\n{\"Final Target Molecule\":\"CC(C(=O)Nc1ncc(SCc2ncc(N)o2)s1)c1ccccc1.\"}",
+        "gold": "CC(C(=O)Nc1ncc(SCc2ncc(C(C)(C)C)o2)s1)c1ccccc1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1sc2ncnc(NCCCO)c2c1C.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused sulfur/nitrogen heteroaromatic core bearing a methyl group, a ring-bound isopropyl substituent, and a flexible three-carbon amino side chain.\n\n2. The amino side chain is a plausible hydrogen-bond donor and may support kinase hinge recognition, but its flexibility could impose an unfavorable conformational penalty and may not optimally occupy a hydrophobic region of the GSK3-beta ATP-binding site.\n\n3. The demonstrated modification replaces the amino side chain with a directly attached pyridyl ring, while retaining the fused core and isopropyl group. This increases rigidity and introduces a ring-nitrogen hydrogen-bond acceptor.\n\n4. The pyridyl substituent could provide more defined hydrophobic and polar interactions and reduce side-chain flexibility, which is chemically consistent with improved GSK3-beta binding. However, the actual binding orientation, affinity, permeability, and metabolic behavior would require experimental confirmation.\n{\n    \"Final Target Molecule\": \"Cc1sc2ncnc(-c3ccncc3)c2c1C\",\n}",
+        "gold": "Cc1sc2ncnc(NCCCO)c2c1C"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COCCSc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic heteroaromatic core, a urea-linked 1-phenylethyl group, and a flexible methoxyethylthio substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the phenyl group can support hydrophobic contacts.\n\n2. The methoxyethylthio substituent adds conformational flexibility and lipophilic sulfur content, which could be unfavorable if this region must occupy a constrained kinase pocket. Its ether oxygen also provides only one hydrogen-bond acceptor.\n\n3. The demonstrated modification replaces the methoxyethylthio group with a directly attached pyridyl ring, while retaining the bicyclic core and 1-phenylethyl urea motif. This increases rigidity and introduces a pyridine nitrogen as a directional hydrogen-bond acceptor.\n\n4. The pyridyl group could improve shape complementarity and reduce conformational entropy loss upon binding, making enhanced GSK3-beta recognition chemically plausible. However, the actual binding orientation, protonation state, permeability, and inhibition would require experimental confirmation.\n}\n{\"Final Target Molecule\": \"COc1cc(NC(=O)NC(C)c2ccccc2)n[nH]c2cc(-c3ccncc3)cc21\"}",
+        "gold": "COCCSc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)n1cnc2c(NCc3ccccc3)ncnc21.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing a benzylamino substituent and a branched alkyl group. The heterocyclic nitrogens and benzyl group provide potential hydrogen-bonding and hydrophobic contacts, while the branched alkyl group adds steric bulk and lipophilicity.\n\n2. The branched alkyl substituent may be unfavorable if it sterically interferes with the ATP-binding region or contributes excessive hydrophobicity. Its contribution to GSK3-beta inhibition is therefore uncertain and cannot be inferred from structure alone.\n\n3. The demonstrated modification replaces the branched alkyl group with a cyclopropyl group while retaining the fused heteroaromatic core and benzylamino substituent. This reduces side-chain size and introduces a compact, conformationally constrained hydrophobic ring.\n\n4. The cyclopropyl group could alter steric fit, lipophilicity, and local binding geometry in a chemically plausible way. However, improved GSK3-beta affinity or activity would require experimental confirmation and does not establish enhanced metabolic stability or selectivity.\n}\n{\"Final Target Molecule\":\"O=C(Nc1nc2c(NCc3ccccc3)ncnc21)c1cc1\"}",
+        "gold": "CC(C)n1cnc2c(NCc3ccccc3)ncnc21"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(Cc2cnc(N)nc2N)ccc1OCc1ccc(-c2csnn2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a dimethoxyphenyl–ethyl–aminopyrimidine core, with the aminopyrimidine bearing a directly attached thiazolyl substituent.\n\n2. The thiazole contributes aromatic surface area and a polar, weakly basic heteroaromatic nitrogen, which may influence polarity, solvation, and the positioning of the substituent within the GSK3-beta binding site.\n\n3. The demonstrated modification replaces the thiazolyl group with a pyridyl group while retaining the remaining scaffold and substitution pattern.\n\n4. This change removes sulfur, alters ring electronics and hydrogen-bond-acceptor character, and introduces a more strongly basic ring nitrogen. These differences could affect binding interactions and physicochemical behavior, but improved GSK3-beta inhibition cannot be inferred without experimental or validated computational evidence.\n{\n    \"Final Target Molecule\": \"COc1cc(Cc2cnc(N)nc2N)ccc1OCc1ccc(-c2ccncc2)cc1.\"\n}",
+        "gold": "COc1cc(Cc2cnc(N)nc2N)ccc1OCc1ccc(-c2csnn2)cc1"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(O)(Cn2ccnc2)c2ccc(Br)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxyphenyl group, a hydroxylated tertiary amine, and a brominated phenyl ring. The tertiary amine is likely protonated under physiological conditions, while the phenols and aromatic rings provide hydrogen-bonding and hydrophobic interaction potential.\n\n2. The demonstrated modification replaces the brominated phenyl substituent with a pyridyl ring, while retaining the methoxyphenyl–hydroxylated amine scaffold. This removes the bulky, lipophilic bromine and introduces a ring nitrogen that can act as a hydrogen-bond acceptor.\n\n3. The pyridyl group may alter aromatic packing, polarity, and local electronic character relative to the bromophenyl group. These changes could affect the binding orientation and interactions of the scaffold within the GSK3-beta ATP-binding region.\n\n4. The modification is chemically plausible as a focused heteroaryl substitution, but improved GSK3-beta inhibition cannot be inferred without binding or inhibition data. The pyridyl nitrogen is a hydrogen-bond acceptor, not a hydrogen-bond donor, and the net effect on solubility, permeability, and target activity would require experimental evaluation.\n}\n{\"Final Target Molecule\":\"COc1ccc(C(O)(Cn2ccnc2)c2ccncc2)cc1\"}",
+        "gold": "COc1ccc(C(O)(Cn2ccnc2)c2ccc(Br)cc2)cc1"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC(=O)CSc1nc(-c2ccc(F)cc2)c(-c2ccncc2)[nH]1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methyl thioacetate-substituted pyrazole bearing fluorophenyl and pyridyl groups. The pyrazole [nH] and ring nitrogens provide potential hydrogen-bonding interactions, while the aromatic groups contribute hydrophobic contacts.\n\n2. The methyl thioacetate is a neutral ester and may be susceptible to hydrolysis. Its sulfur atom is a weak hydrogen-bond acceptor, and the ester linkage adds steric bulk and conformational constraints near the pyrazole.\n\n3. The demonstrated modification replaces the methyl thioacetate substituent with a primary amino group while retaining the pyrazole, fluorophenyl, and pyridyl framework. This removes the ester carbonyl and sulfur, lowers molecular size, and introduces a hydrogen-bond donor.\n\n4. The primary amine could support additional kinase-site interactions and may be protonated under relevant conditions, although its effect on GSK3-beta inhibition would depend on binding geometry, protonation state, desolvation, and permeability. The proposed piperazine replacement is not present in the optimized structure.\n}\n{\"Final Target Molecule\":\"Nc1nc(-c2ccc(F)cc2)c(-c2ccncc2)[nH]1.\"}",
+        "gold": "COC(=O)CSc1nc(-c2ccc(F)cc2)c(-c2ccncc2)[nH]1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COCCSc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic heteroaromatic core, a urea-linked 1-phenylethyl group, and a flexible methoxyethylthio substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the phenyl group can support hydrophobic contacts.\n\n2. The methoxyethylthio substituent adds conformational flexibility and lipophilic sulfur content, which could be unfavorable if this region must occupy a constrained kinase pocket. Its ether oxygen also provides only one hydrogen-bond acceptor.\n\n3. The demonstrated modification replaces the methoxyethylthio group with a directly attached pyridyl ring. This removes the flexible ether and thioether-containing chain, increases rigidity, and introduces a pyridine nitrogen as a directional hydrogen-bond acceptor.\n\n4. The pyridyl group could improve shape complementarity and reduce conformational entropy loss while retaining polar interactions. These changes are chemically plausible for modulating GSK3-beta binding, but improved inhibition or activity would require experimental confirmation.\n}\n{\"Final Target Molecule\": \"COc1cc(NC(=O)NC(C)c2ccccc2)n[nH]c2cc(-c3ccncc3)cc21\"}",
+        "gold": "COCCSc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCc3cncs3)c2cn1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a urea-linked benzyl group, and a thiazolylmethyl ether substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the benzyl and thiazole groups contribute hydrophobic character.\n\n2. The ether-linked thiazole may be susceptible to oxidative metabolism and offers limited hydrophobic surface for occupancy of a lipophilic region. Its heteroaromatic nitrogen is a hydrogen-bond acceptor, but the thiazole is not a strong conventional hydrogen-bond donor.\n\n3. The demonstrated modification replaces the thiazolylmethyl ether with a directly attached chlorophenyl group, removing the ether linkage and the thiazole sulfur while retaining a relatively planar aromatic substituent. This increases aromatic surface area and introduces a lipophilic chlorine substituent.\n\n4. The change could favor hydrophobic or aromatic contacts and alter metabolic liability, but it also removes the thiazole nitrogen and ether oxygen. Improved GSK3-beta inhibition is therefore chemically plausible only if the binding site accommodates the larger phenyl group and does not require the removed heteroatoms; no measured improvement or retained activity is established.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(-c3ccccc3Cl)c2cn1)c1ccccc1.\"}",
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCc3cncs3)c2cn1)c1ccccc1"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCC3CCCO3)c2cn1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing a urea-linked benzyl group and a hydroxyethyl-linked tetrahydrofuran substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the benzyl group contributes hydrophobic character.\n\n2. The tetrahydrofuran oxygen is a hydrogen-bond acceptor but not a donor, and its ether linkage adds no hydrogen-bond donor. The flexible hydroxyethyl chain may also introduce conformational freedom and a potentially hydrolysis-sensitive linkage.\n\n3. The demonstrated modification replaces the hydroxyethyl-tetrahydrofuran side chain with a directly attached amino-substituted morpholine ring. This removes the ether linkage, changes the side-chain geometry, and introduces a tertiary amine and an ether oxygen as potential hydrogen-bond acceptors.\n\n4. The morpholine substituent could support additional polar interactions and alter side-chain orientation near the heteroaromatic core. These changes are chemically plausible for modulating GSK3-beta recognition, but improved inhibition or metabolic stability would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(N3CCOCC3)c2cn1)c1ccccc1\"}",
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCC3CCCO3)c2cn1)c1ccccc1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(-c2nnc(SCc3ccccc3)o2)c(O)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methylphenyl-substituted 1,3,4-oxadiazole linked through a methylene thioether to a phenyl ring. The heteroaromatic core provides several hydrogen-bond acceptors, while the phenyl rings offer hydrophobic contacts.\n\n2. The demonstrated modification replaces the methylphenyl group on the oxadiazole with a pyridyl group. This changes the aromatic ring size, geometry, and nitrogen-based hydrogen-bond-acceptor character while retaining the thioether-linked phenyl substituent.\n\n3. The pyridine nitrogen may support a different kinase-site interaction pattern than the methylphenyl ring, and the larger ring could alter pocket occupancy. These changes are chemically plausible for modulating GSK3-beta binding, but improved inhibition cannot be inferred without binding or activity data.\n\n4. The thioether-linked phenyl group is retained, so the proposed structure does not eliminate the potential oxidative metabolic liability associated with the sulfur-containing side chain. The modification is therefore a heteroaryl substitution rather than a direct thioether-to-sulfone replacement.\n}\n{\"Final Target Molecule\": \"c1cc(-c2nnc(SCc3ccccc3)o2)ccn1\"}",
+        "gold": "Cc1ccc(-c2nnc(SCc3ccccc3)o2)c(O)c1"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heterocyclic core bearing a carbonyl, a methyl ketoxime substituent, and a dichlorophenyl group. The oxime provides hydrogen-bonding capacity, while the dichlorophenyl group contributes hydrophobic aromatic character.\n\n2. The demonstrated modification replaces the dichlorophenyl substituent with a pyridyl ring. This removes both chlorine atoms, reduces substituent size and lipophilicity, and introduces a ring nitrogen that can act as a hydrogen-bond acceptor.\n\n3. The pyridyl group may support a different kinase-pocket interaction pattern and alter the orientation of the heteroaromatic ring relative to the core. These changes could affect GSK3-beta binding, although the evidence does not establish improved affinity or activity.\n\n4. The methyl ketoxime and fused heterocyclic carbonyl framework are retained; therefore, the proposed structure does not implement the oxime-to-ketone conversion described in the optimization narrative. The dichlorophenyl-to-pyridyl substitution is chemically plausible, but its effect on GSK3-beta inhibition would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"CC(=O)Nc1ncc2cc(-c3ccncc3)c(=O)n(C)c2n1\"}",
+        "gold": "CC(=O)Nc1ncc2cc(-c3c(Cl)cccc3Cl)c(=O)n(C)c2n1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1nc(C(N)=O)c2c1-c1nc(NCc3ccccc3)ncc1CC2.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic core bearing a carboxamide and a benzylamino substituent, with the amine attached to a phenyl ring.\n\n2. The benzyl group contributes hydrophobic aromatic surface and conformational flexibility, which could limit aqueous solubility and impose an unfavorable steric or conformational penalty in the GSK3-beta binding site.\n\n3. The demonstrated modification replaces the benzyl group with a directly attached phenyl ring, converting the secondary benzylamine into a primary aniline while retaining the bicyclic core and carboxamide.\n\n4. This change reduces side-chain flexibility and removes the benzylic methylene, potentially improving binding geometry and physicochemical behavior. However, it also removes a methylene spacer and may reduce solubility, so improved GSK3-beta inhibition cannot be inferred without experimental data.\n}\n{\"Final Target Molecule\": \"Cn1nc(C(N)=O)c2c1-c1nc(Nc3ccccc3)ncc1CC2.\"}",
+        "gold": "Cn1nc(C(N)=O)c2c1-c1nc(NCc3ccccc3)ncc1CC2"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing a nitrile, a branched alkylamino substituent, and a pyridylmethylamino group. The heteroaromatic nitrogens and nitrile provide potential hydrogen-bond acceptors, while the amino groups can serve as donors.\n\n2. The branched alkylamino substituent adds steric bulk and hydrophobic surface near the heteroaromatic core. This could impede productive positioning in the GSK3-beta ATP-binding region or affect solubility, although the supplied evidence does not establish a specific solubility limitation.\n\n3. The demonstrated modification replaces the branched alkylamino group with a cyclopentylamino group while retaining the nitrile, fused core, and pyridylmethylamino substituent. This removes the branched alkyl chain and introduces a more compact carbocyclic group.\n\n4. The cyclopentylamino substituent may alter steric fit, lipophilicity, and conformational preferences while preserving an exocyclic amino donor. These changes are chemically plausible for modulating GSK3-beta recognition, but improved inhibition or activity cannot be inferred without experimental or validated computational evidence.\n}\n{\"Final Target Molecule\":\"N#Cc1cnc2cnc(NCc3cccnc3)cc2c1N1CCCC1\"}",
+        "gold": "CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cccc2[nH]c(-c3ccccn3)nc12.\n"
+            }
+        ],
+        "prediction": "1. The source is a fused indole-like bicyclic heteroaromatic scaffold bearing a methyl group and a pyridyl substituent. Its pyridine nitrogen provides a hydrogen-bond acceptor, while the fused indole system offers a rigid, planar aromatic surface.\n\n2. The pyridyl group is relatively small and planar, with limited capacity for occupying a hydrophobic region of the GSK3-beta ATP-binding site. Its nitrogen is a hydrogen-bond acceptor but cannot donate a hydrogen bond to the conserved Asp133 residue.\n\n3. The demonstrated modification replaces the pyridyl group with a para-morpholinylphenyl group while retaining the fused core and methyl substituent. This increases aromatic surface area and introduces a tertiary amine that can act as both a hydrogen-bond acceptor and a potential donor.\n\n4. The added morpholine oxygen and protonatable amine could support additional polar or ionic interactions and alter solubility, while the phenyl ring may improve hydrophobic pocket occupancy. These changes are chemically plausible for modulating GSK3-beta binding, but improved inhibition or activity would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"Cc1cccc2[nH]c(-c3cccc(N4CCOCC4)c3)nc12.\"}",
+        "gold": "Cc1cccc2[nH]c(-c3ccccn3)nc12"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccccc1-c1ccc(CC(NC(=O)Cn2cnnn2)C(=O)O)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxyphenyl-substituted benzamide, a carboxylic acid, and a pyrazole carboxamide. The acid and amides provide hydrogen-bonding capacity, while the aromatic rings and methoxy group contribute hydrophobic character.\n\n2. The pyrazole carboxamide is a plausible kinase-binding motif, but its nitrogen-rich ring may affect lipophilicity, solubility, and metabolic behavior. The carboxylic acid can also influence ionization and permeability.\n\n3. The demonstrated modification replaces the pyrazole carboxamide with a para-methoxyphenyl group while retaining the benzamide, carboxylic acid, and methoxyphenyl framework.\n\n4. This change increases aromatic hydrophobic surface and removes the pyrazole nitrogens, potentially altering kinase-pocket complementarity and physicochemical properties. It is chemically plausible as a GSK3-beta optimization strategy, but improved inhibition or activity cannot be inferred without experimental data.\n}\n{\"Final Target Molecule\":\"COc1ccccc1-c1ccc(CC(NC(=O)c2ccc(OC)cc2)C(=O)O)cc1.\"}",
+        "gold": "COc1ccccc1-c1ccc(CC(NC(=O)Cn2cnnn2)C(=O)O)cc1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)C1(C(=O)NC(Cc2ccc(-c3ccccc3OC)cc2)C(=O)O)CCCO1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a tertiary amide bearing a propionic acid side chain, a benzyl-linked phenyl ether, and a terminal hydroxyalkyl group. The amide and acid provide hydrogen-bonding capacity, while the aromatic and alkyl regions contribute hydrophobic character.\n\n2. The demonstrated modification replaces the terminal hydroxyalkyl group with a methyl-substituted pyrrolidinone motif, while retaining the amide, benzyl linker, and phenyl ether framework.\n\n3. This change introduces a lactam carbonyl and an additional ring nitrogen, increasing hydrogen-bond-acceptor character and potentially altering polarity, conformation, and the orientation of the amide. The methyl substituent also preserves a compact hydrophobic element.\n\n4. These features could plausibly support kinase hinge recognition and improve local steric complementarity, but the added lactam may also affect permeability, solubility, and metabolic behavior. Improved GSK3-beta inhibition therefore remains a hypothesis requiring experimental validation.\n{\n    \"Final Target Molecule\": CC1CN(C(=O)C2(C(=O)NC(Cc3ccc(-c4ccccc4OC)cc3)C(=O)O)CCCO2)C1.\n}",
+        "gold": "CCOC(=O)C1(C(=O)NC(Cc2ccc(-c3ccccc3OC)cc2)C(=O)O)CCCO1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ncc(CCNc2ncnc3ccsc23)s1)NC1CCCCC1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a thienopyrimidine core bearing a flexible ethylamino substituent and a cyclohexylamino group. The heteroaromatic core can support kinase hinge recognition, while the cyclohexyl group provides hydrophobic contact potential.\n\n2. The ethylamino substituent lacks a hydrogen-bond donor and offers limited directional interactions. Its ethyl portion may also contribute hydrophobicity, although the actual lipophilicity depends on the ionization and solvation of the entire molecule.\n\n3. The demonstrated modification replaces the ethylamino group with a primary amino group directly attached to the heteroaromatic core. This introduces an NH donor and removes the ethyl-derived hydrophobic contribution while retaining the thienopyrimidine and cyclohexylamino framework.\n\n4. The primary amino group could provide a more favorable hydrogen-bonding pattern and alter substituent orientation near the kinase-binding site. This is chemically plausible as a GSK3-beta-directed change, but improved inhibition or selectivity would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"Nc1ncc(CCNc2ncnc3ccsc23)s1NC1CCCCC1\"}",
+        "gold": "O=C(Nc1ncc(CCNc2ncnc3ccsc23)s1)NC1CCCCC1"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1ccc(Cn2c(-c3ccccc3)nc3ccccc32)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source is a rigid, planar benzimidazole-like fused heteroaromatic scaffold bearing a phenyl substituent and a benzyl group. Its ring nitrogens provide hydrogen-bond acceptors, but it lacks hydrogen-bond donors and has limited conformational flexibility.\n\n2. The demonstrated modification retains the fused heteroaromatic core and benzyl substituent while replacing the pendant phenyl ring with a flexible two-carbon linker terminating in a primary amine.\n\n3. This change introduces a hydrogen-bond donor and increases side-chain flexibility, which could enable alternative interactions with the GSK3-beta binding site. The linker may also help position the amine away from the fused core, although it could also introduce conformational or protonation-related penalties.\n\n4. The modification is chemically plausible as a kinase-focused side-chain design, but improved GSK3-beta inhibition cannot be inferred without binding or activity data; the added flexibility and amine protonation may offset the intended donor contribution.\n}\n{\"Final Target Molecule\": \"NCCc1ccccc1Cn1c(-c2ccccc2)nc2ccccc21\"}",
+        "gold": "c1ccc(Cn2c(-c3ccccc3)nc3ccccc32)cc1"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: OCc1cccc(Nc2nc(-c3cccnc3)nc3ccccc23)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused quinazoline-like heteroaromatic core bearing a pyridyl substituent and a para-methoxyphenylamino group. The heteroaromatic nitrogens and aniline NH provide potential hydrogen-bonding interactions, while the aromatic rings contribute hydrophobic surface.\n\n2. The methoxy group adds a hydrogen-bond acceptor and polarity but may also increase susceptibility to oxidative metabolism. Its positional relationship to the aniline attachment may also influence binding orientation and steric fit.\n\n3. The demonstrated modification replaces the para-methoxy substituent with a meta-fluorophenyl group while retaining the aniline linkage and the remainder of the scaffold unchanged. This removes the methoxy oxygen, increases aromatic surface area, and introduces a smaller, electron-withdrawing fluorine substituent.\n\n4. The fluorophenyl group could alter hydrophobic contacts, lipophilicity, and local electronic character, potentially affecting GSK3-beta binding. However, the larger aryl group may also reduce solubility or introduce steric constraints, so improved inhibition cannot be inferred without experimental or validated computational evidence.\n{\n    \"Final Target Molecule\": \"Nc1nc(-c2cccnc2)nc2ccccc12-c1ccc(F)cc1\",\n}",
+        "gold": "OCc1cccc(Nc2nc(-c3cccnc3)nc3ccccc23)c1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1c(-c2ccnc(Oc3ccccc3)n2)c(-c2ccc(F)cc2)c(=O)n1C.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heterocyclic carbonyl core bearing a fluorophenyl group and a hydroxyaryl substituent. The heterocyclic nitrogens and carbonyl provide potential hydrogen-bonding interactions, while the aryl groups contribute hydrophobic contacts.\n\n2. The hydroxyaryl substituent is a plausible site for modification because its phenol can undergo conjugative metabolism and may introduce a site for conjugative or oxidative metabolism. Its aromatic ring also limits conformational flexibility, although the phenol itself is not a conventional hydrogen-bond acceptor.\n\n3. The demonstrated modification replaces the hydroxyaryl group with a directly attached pyridyl ring. This removes the phenolic hydroxyl, increases heteroaromatic character, and introduces a pyridine nitrogen as a potential hydrogen-bond acceptor.\n\n4. The pyridyl group could support a different kinase-binding interaction pattern and may reduce phenolic susceptibility, but it also changes ring size, electronics, and steric profile. Improved GSK3-beta inhibition is therefore chemically plausible but would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"Cn1c(-c2ccnc(N3CCNcc3)n2)c(-c2ccc(F)cc2)c(=O)n1C.\"}",
+        "gold": "Cn1c(-c2ccnc(Oc3ccccc3)n2)c(-c2ccc(F)cc2)c(=O)n1C"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing an isopropyl group, an N-linked benzylamino substituent, and a bulky iodine atom.\n\n2. The iodine increases steric volume and lipophilicity and may interfere with productive positioning in the GSK3-beta ATP-binding site, although its effect on binding affinity cannot be inferred without structural or experimental data.\n\n3. The demonstrated modification is deiodination of the heteroaromatic core, leaving the fused core, isopropyl group, and benzylamino substituent unchanged.\n\n4. Removing iodine plausibly reduces steric congestion and may permit a more favorable binding geometry. This is a chemically reasonable strategy for improving GSK3-beta recognition, but improved inhibition or activity would require experimental confirmation.\n{\n    \"Final Target Molecule\": CC(C)n1cnc2c(NCc3ccccc3)nc21.\n}",
+        "gold": "CC(C)n1cnc2c(NCc3ccccc3)nc(I)nc21"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(NC(=O)Cc2c(C)n(C(=O)c3ccc(Cl)cc3)c3ccc(OC)cc23)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused N-aryl heterocyclic core bearing a chlorophenyl ketone and a methoxyphenyl urea. The urea provides hydrogen-bonding capacity, while the chlorophenyl and methoxyphenyl groups contribute hydrophobic character.\n\n2. The demonstrated modification replaces the methoxyphenyl urea substituent with a directly attached pyridyl ring. This removes the urea NH and carbonyl, reduces hydrogen-bonding capacity, and introduces a ring nitrogen that can act as a hydrogen-bond acceptor.\n\n3. The fused heterocyclic core, chlorophenyl ketone, and N-aryl substitution pattern are retained. Thus, the change is not a simple replacement of the chlorophenyl group or a broad scaffold simplification.\n\n4. Removing the urea may reduce polarity and alter permeability, while the pyridyl group could support different kinase-pocket interactions. These effects are chemically plausible but do not establish improved GSK3-beta inhibition without experimental or validated computational evidence.\n}\n{\"Final Target Molecule\":\"COc1ccc(Nc2ccncc2)c1C(=O)c1ccc(Cl)cc1\"}",
+        "gold": "COc1ccc(NC(=O)Cc2c(C)n(C(=O)c3ccc(Cl)cc3)c3ccc(OC)cc23)cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCCOC(F)(F)F)c2cn1)c1ccc(F)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a fluorophenyl group, a urea linker, and a fluorinated tetrahydropyran substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the fluorinated ether contributes lipophilicity and steric bulk.\n\n2. The demonstrated modification replaces the fluorinated tetrahydropyran with a cyclopentyl group. This removes the ether oxygen and fluorinated ring while retaining a compact hydrophobic substituent; it is not simply replacement by a cyclohexyl group.\n\n3. Removing the ether oxygen reduces hydrogen-bond-acceptor capacity and may alter polarity and metabolic susceptibility. The cyclopentyl group also changes steric shape and conformational preferences, which could affect how the substituent occupies a GSK3-beta binding region.\n\n4. Retention of the urea-linked fluorophenyl and fused heteroaromatic framework preserves the principal donor/acceptor features of the source. The modification is chemically plausible as a focused side-chain change, but improved GSK3-beta inhibition cannot be inferred without binding or activity data.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(C3CCCC3)c2cn1)c1ccc(F)cc1.\"}",
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCCOC(F)(F)F)c2cn1)c1ccc(F)cc1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC1CN(c2c(F)c(N)c3c(=O)c(C(=O)O)cn(C4CC4)c3c2F)C(C)CN1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a difluorinated, carbonyl- and carboxyl-bearing fused heterocyclic core linked to a cyclopropyl group, with a flexible N,N-diethylamino substituent.\n\n2. The diethylamino group has substantial conformational freedom and is likely protonated near physiological pH, which may affect binding geometry, permeability, and off-target interactions.\n\n3. The demonstrated modification replaces the N,N-diethylamino group with a directly attached cyclopropyl group while retaining the core scaffold and fluorinated substituents.\n\n4. This change reduces flexibility and basicity and increases local hydrophobic character. It could favor a more defined kinase-binding interaction, but improved GSK3-beta inhibition or activity cannot be inferred without experimental or validated computational evidence.\n{\n    \"Final Target Molecule\": \"CC1CN(c2c(F)c(N)c3c(=O)c(C(=O)O)cn(C4CC4)c3c2F)C1C1CC1.\"\n}",
+        "gold": "CC1CN(c2c(F)c(N)c3c(=O)c(C(=O)O)cn(C4CC4)c3c2F)C(C)CN1"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COCCOc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic heteroaromatic core, a urea-linked 1-phenylethyl group, and a flexible methoxyethoxy substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the phenyl group can support hydrophobic contacts.\n\n2. The methoxyethoxy chain adds conformational flexibility and several rotatable bonds, which may increase the conformational penalty associated with adopting a bound geometry. Its ether oxygens also contribute polarity, although the chain is not strongly hydrophilic overall.\n\n3. The demonstrated modification replaces the methoxyethoxy group with a directly attached pyridyl ring. This removes the ether-linked flexible chain and introduces a more rigid, planar aromatic heterocycle with one ring nitrogen.\n\n4. The pyridyl group could provide additional aromatic or polar interactions and reduce conformational freedom while preserving an extended substituent on the heteroaromatic core. These changes are chemically plausible for modulating GSK3-beta binding, but improved inhibition or activity cannot be inferred without experimental data.\n}\n{\"Final Target Molecule\":\"COc1cc(NC(=O)NC(C)c2ccccc2)n[nH]c2cc(-c3ccncc3)cc21\"}",
+        "gold": "COCCOc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1nonc1-c1nc2ccccc2n1Cc1ccncc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic heteroaromatic core bearing a pyridylmethyl substituent and an exocyclic primary amine. The heteroaromatic nitrogens and pyridine nitrogen provide potential hydrogen-bond acceptors, while the primary amine can donate hydrogen bonds.\n\n2. The demonstrated modification replaces the exocyclic primary amine with a secondary aniline bearing a para-methoxyphenyl group. This removes the exocyclic NH donor and adds a more lipophilic, electron-deficient aryl substituent.\n\n3. The fused heteroaromatic core and pyridylmethyl group are retained. Thus, the stated core replacement and pyridylmethyl-to-pyrimidinyl changes are not present in the optimized structure.\n\n4. The added aryl group could increase hydrophobic contacts and alter the orientation of the heteroaromatic core, while the methoxy group adds a hydrogen-bond acceptor. These changes are chemically plausible for modulating GSK3-beta binding, but improved inhibition or activity cannot be inferred without experimental data.\n}\n{\"Final Target Molecule\":\"COc1ccc(Nc2nonc3ccccc3n2)cc1\"}",
+        "gold": "Nc1nonc1-c1nc2ccccc2n1Cc1ccncc1"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NC(Cc1ccc(O)cc1)C(=O)NCC1CC(Br)=NO1)OCc1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a substituted benzamide core bearing a phenol, a brominated isoxazoline-like ring, and a para-benzoylamino group. The amide and phenol provide hydrogen-bonding functionality, while the aromatic rings and brominated heterocycle contribute hydrophobic character.\n\n2. The para-benzoylamino substituent is a rigid, planar benzamide motif. Its amide carbonyl is a hydrogen-bond acceptor, but it offers limited conformational adaptability and no donor on the benzyl ring, which may restrict how the substituent engages the GSK3-beta binding site.\n\n3. The demonstrated modification replaces the para-benzoylamino group with a secondary benzylamine bearing a cyclopropyl group. This removes one carbonyl and introduces a flexible methylene spacer while retaining a basic amine and compact hydrophobic substituent.\n\n4. The change could alter hydrogen-bonding, conformational freedom, lipophilicity, and steric fit in a way that is chemically plausible for kinase recognition. However, improved GSK3-beta inhibition cannot be inferred without binding or activity data, and the added basicity may also affect solubility, permeability, and off-target binding.\n}\n{\"Final Target Molecule\":\"O=C(NC(Cc1ccc(O)cc1)C(=O)NCC1CC(Br)=NO1)Nc1ccccc1C1.\"}",
+        "gold": "O=C(NC(Cc1ccc(O)cc1)C(=O)NCC1CC(Br)=NO1)OCc1ccccc1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)c1ccc(C(=O)NCc2ccccc2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source is a diaryl amide bearing a dimethylamino substituent on one ring and a benzyl group on the other. The amide and benzyl group provide hydrogen-bonding and hydrophobic contacts, while the dimethylamino group is a basic, potentially protonated center.\n\n2. The demonstrated modification replaces the dimethylamino substituent with a pyridinylmethyl group. This removes the basic tertiary amine and introduces a pyridine nitrogen as a hydrogen-bond acceptor, while retaining a methylene linker and extending into the second phenyl ring.\n\n3. The pyridinylmethyl substituent could support additional polar or aromatic interactions and may alter solvation and protonation behavior. These changes are chemically plausible for modulating GSK3-beta binding, but the added aromatic ring also increases size and lipophilicity, so improved inhibition cannot be inferred without experimental data.\n\n4. The benzyl amide and both phenyl rings are retained; therefore, the proposed structure does not actually remove the amide or reduce the number of aromatic rings. The modification is nonetheless a reasonable strategy for exploring kinase-pocket complementarity through altered heteroaromatic and basic-group features.\n}\n{\"Final Target Molecule\":\"O=C(NCc1ccccc1)c1ccc(-c2ccncc2)cc1\"}",
+        "gold": "CN(C)c1ccc(C(=O)NCc2ccccc2)cc1"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CCN(CCCNc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)CC1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heterocyclic lactam core bearing a dichlorophenyl group and a flexible N-linked piperazine. The piperazine introduces multiple protonatable nitrogens and substantial conformational freedom.\n\n2. The demonstrated modification replaces the piperazine substituent with a directly attached pyridyl ring. This removes the flexible methylene spacer, reduces basicity, and increases aromatic rigidity while retaining a ring nitrogen as a potential hydrogen-bond acceptor.\n\n3. The fused core, dichlorophenyl group, lactam carbonyl, and N-methyl substituent are retained. Thus, the proposed structure does not replace the N-methyl group or introduce the piperidine proposed in the supplied optimization narrative.\n\n4. Increased rigidity and reduced protonation could alter kinase-pocket fit, solvation, and off-target binding. These changes are chemically plausible for modulating GSK3-beta inhibition, but improved activity or selectivity cannot be inferred without experimental data.\n}\n{\"Final Target Molecule\":\"CN1Cc2c(-c3c(Cl)cccc3Cl)cc(=O)n2C1-c2ccncc2\"}",
+        "gold": "CN1CCN(CCCNc2ncc3cc(-c4c(Cl)cccc4Cl)c(=O)n(C)c3n2)CC1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(OCc3ccccc3)c2cn1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing a urea-linked benzyl group and a benzyloxy substituent. The urea and heterocyclic nitrogens provide potential hydrogen-bonding interactions, while the benzyl groups contribute hydrophobic surface area.\n\n2. The benzyloxy group is predominantly hydrophobic and offers no hydrogen-bond donor, which may limit polar contacts within the GSK3-beta binding site. Its phenyl ring could also support nonpolar or aromatic interactions, although the actual binding geometry is not established by the supplied evidence.\n\n3. The demonstrated modification replaces the benzyloxy group with a directly attached pyridyl ring, removing the ether linkage and introducing a ring nitrogen. This changes the substituent’s polarity, hydrogen-bond-acceptor character, and aromatic geometry while retaining a similar-sized aryl group.\n\n4. The pyridyl nitrogen could provide a directional polar interaction and alter substituent orientation, which is chemically plausible as a strategy for improving complementarity to the GSK3-beta binding pocket. However, the net effect on inhibition, solubility, permeability, and metabolic stability would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"CC(NC(=O)Nc1cc2[nH]nc(-c3ccncc3)c2cn1)c1ccccc1\"}",
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(OCc3ccccc3)c2cn1)c1ccccc1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1cnc(-c2c[nH]c3ncnc(N4CCOCC4)c23)cn1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic heteroaromatic core bearing a morpholine substituent and a directly attached diazine ring. The heteroaromatic nitrogens and morpholine oxygen provide potential hydrogen-bonding interactions, while the fused aromatic system contributes rigidity.\n\n2. The directly attached diazine adds another ring nitrogen and increases aromatic surface area. This may affect polarity, solvation, and the positioning of the heteroaromatic core within the GSK3-beta binding site, but it also increases molecular size and planarity.\n\n3. The demonstrated modification removes the diazine ring and installs a methoxy substituent at the corresponding core position. This reduces heteroaromatic character and aromatic surface area while retaining a hydrogen-bond acceptor through the methoxy group.\n\n4. The fused bicyclic core and morpholine substituent are otherwise retained. The change is chemically plausible as a way to alter kinase-pocket complementarity and physicochemical properties, although improved GSK3-beta inhibition or selectivity cannot be inferred without experimental or validated computational evidence.\n}\n1. The source contains a fused bicyclic heteroaromatic core bearing a morpholine substituent and a directly attached diazine ring.\n\n2. The demonstrated modification removes the diazine ring and installs a methoxy group at the same core position, while retaining the fused core and morpholine.\n\n3. This change reduces aromatic surface area and increases the relative proportion of the smaller methoxy substituent, which could alter binding geometry, polarity, and metabolic susceptibility.\n\n4. The retained morpholine remains a potential hydrogen-bond acceptor and may support solubility, but the methoxy group offers fewer interaction possibilities. Improved GSK3-beta inhibition or selectivity is therefore chemically plausible but not established by the supplied evidence.\n{\"Final Target Molecule\": COc1cc2[nH]nc(-c3ccnc3)c2c1N1CCOCC1}",
+        "gold": "c1cnc(-c2c[nH]c3ncnc(N4CCOCC4)c23)cn1"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc2ncnc(NC(C)C)c2cc1OC.\n"
+            }
+        ],
+        "prediction": "1. The source is a dimethoxy-substituted quinazoline bearing an exocyclic secondary amine linked to a methyl group. The quinazoline nitrogens can support ATP-site recognition, while the methoxy groups provide hydrogen-bond acceptors and modulate lipophilicity.\n\n2. The demonstrated modification replaces the methyl substituent on the exocyclic amine with a 2,2,2-trifluoroethyl group, leaving the quinazoline core and methoxy substituents unchanged.\n\n3. This change increases steric volume, lipophilicity, and fluorinated electron withdrawal near the amine. It could alter amine basicity, hydrogen-bonding behavior, and the orientation of the substituent within the GSK3-beta binding site.\n\n4. The modification is chemically plausible as a binding-oriented analogue design, but the added fluorinated group may also affect solubility, permeability, and off-target binding. Improved GSK3-beta inhibition therefore remains a hypothesis requiring experimental validation.\n}\n{\"Final Target Molecule\": \"COc1cc2ncnc(NC(C(F)(F)F)C)c2cc1OC.\"}",
+        "gold": "COc1cc2ncnc(NC(C)C)c2cc1OC"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc2nc(NC(=O)CSc3ccccc3)sc2c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused benzothiazole-like heteroaromatic core bearing a methoxy substituent and an amide-linked phenylthio group. The amide and heteroaromatic nitrogens provide potential hydrogen-bonding sites, while the aromatic rings and thioether contribute hydrophobic character.\n\n2. The phenylthio substituent is relatively lipophilic and offers limited directional polar interactions. Its sulfur atom is a weak hydrogen-bond acceptor, and the thioether may be susceptible to oxidative metabolism.\n\n3. The demonstrated modification replaces the phenylthio group with a directly attached pyridyl ring, while retaining the methoxyheteroaromatic core and amide linkage. This removes the thioether sulfur, introduces a pyridine nitrogen, and adds an aromatic ring.\n\n4. The pyridyl group could support additional polar or aromatic contacts and may alter metabolic susceptibility. However, the added heteroaryl ring also increases size and aromatic character, so improved GSK3-beta inhibition is chemically plausible but cannot be inferred without binding and selectivity measurements.\n}\n{\"Final Target Molecule\":\"COc1ccc2nc(NC(=O)c3ccncc3)sc2c1\"}",
+        "gold": "COc1ccc2nc(NC(=O)CSc3ccccc3)sc2c1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)CC1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused fluorinated heteroaromatic core bearing a carboxylic acid, a cyclopropyl substituent, and a piperazine. The piperazine provides a basic, potentially protonatable center, while the carboxylic acid is expected to be substantially ionized near physiological pH.\n\n2. The carboxylic acid may support aqueous solubility but can also introduce ionization-dependent permeability and metabolic liabilities. The piperazine may provide a favorable polarity–ionization profile, although its protonation state and binding orientation are not established by the supplied evidence.\n\n3. The demonstrated modification replaces the carboxylic acid with a methyl group while retaining the fluorinated core, cyclopropyl group, and piperazine. This removes the acidic functionality and lowers hydrogen-bonding capacity, while increasing local hydrophobic character.\n\n4. Retention of the piperazine preserves a basic center that could support solubility and target interactions, but the change in ionization, lipophilicity, and binding geometry could also affect GSK3-beta recognition. Improved inhibition therefore remains chemically plausible but unconfirmed without binding and physicochemical measurements.\n}\n{\"Final Target Molecule\":\"Cc1c(F)cc2c(=O)c(C3CCN4CCN(c3C)CC4)cn2c1OC\"}",
+        "gold": "CCN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)CC1"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CCn1ccc(-c2ccc(F)cc2)cc1=O)(C(=O)NO)S(C)(=O)=O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused aromatic lactam core bearing a fluorophenyl substituent and a side chain with a tertiary amine, an N-hydroxyamide, and a methylsulfone. The amine and carbonyl-containing groups provide potential hydrogen-bonding and polar interactions.\n\n2. The demonstrated modification replaces the fluorophenyl group with a pyridyl ring while retaining the fused core, side-chain amine, N-hydroxyamide, and methylsulfone. This changes the substituent’s size, aromaticity, and ring-nitrogen-based hydrogen-bond acceptor.\n\n3. The pyridyl nitrogen may support a different kinase-site interaction pattern than the fluorophenyl ring, while the retained polar side chain could preserve relevant recognition elements. The change is chemically plausible as a focused aryl-group substitution, but improved GSK3-beta inhibition cannot be inferred without binding or activity data.\n}\n{\"Final Target Molecule\":\"CC(CCn1ccc(-c2ccncc2)cc1=O)(C(=O)NO)S(C)(=O)=O.\"}",
+        "gold": "CC(CCn1ccc(-c2ccc(F)cc2)cc1=O)(C(=O)NO)S(C)(=O)=O"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1ccccc1NC(=O)c1ccc(CNc2ncccn2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a para-aminophenyl group linked through an amide to a second phenyl ring bearing a pyridylmethylamino substituent. The amide and pyridine provide hydrogen-bonding and potential polar interactions, while the aromatic rings contribute hydrophobic surface area.\n\n2. The pyridylmethylamino group is relatively flexible and introduces a basic, potentially protonated amine. These features may affect binding geometry, permeability, and off-target interactions, although their net impact on GSK3-beta inhibition cannot be inferred without experimental data.\n\n3. The demonstrated modification replaces the pyridylmethylamino substituent with a directly attached pyridyl ring, removing the methylene spacer and converting the flexible side chain into a more rigid biaryl arrangement. The aminophenyl-amide core is retained.\n\n4. This change could alter substituent orientation, aromatic contacts, lipophilicity, and conformational entropy. It is chemically plausible as a strategy to improve complementarity with a kinase binding site, but improved GSK3-beta activity or selectivity would require experimental confirmation.\n}\n{\"Final Target Molecule\": \"Nc1ccccc1NC(=O)c1ccc(-c2ccncc2)cc1.\"}",
+        "gold": "Nc1ccccc1NC(=O)c1ccc(CNc2ncccn2)cc1"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1c(N2CCCC(N)C2)c(F)c(N)c2c(=O)c(C(=O)O)cn(C3CC3)c12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused heteroaromatic lactam core bearing a carboxylic acid, a fluorine substituent, a methoxy group, and a flexible N-methylpiperidin-4-yl substituent.\n\n2. The piperidine nitrogen is initially substituted, so its basicity is expected to be lower than that of a free piperidine. The carboxylic acid and ring carbonyl also provide acidic functionality, although their ionization states will depend on pH.\n\n3. The demonstrated modification replaces the N-methylpiperidin-4-yl group with an N-linked, methyl-substituted morpholine ring. This changes the ring size, nitrogen substitution pattern, and three-dimensional shape while retaining a basic tertiary amine.\n\n4. The morpholine oxygen may alter polarity and hydrogen-bond-acceptor interactions relative to the piperidine nitrogen, while the methyl group adds hydrophobic character. These changes could plausibly affect GSK3-beta binding and physicochemical properties, but improved inhibition or activity cannot be inferred without experimental data.\n}\n1. The source contains a fused heteroaromatic lactam core bearing a carboxylic acid, a fluorine substituent, a methoxy group, and a flexible N-methylpiperidin-4-yl substituent.\n\n2. The piperidine nitrogen is initially substituted, so its basicity is expected to be lower than that of a free piperidine. The carboxylic acid and ring carbonyl also provide acidic functionality, although their ionization states will depend on pH.\n\n3. The demonstrated modification replaces the N-methylpiperidin-4-yl group with an N-linked, methyl-substituted morpholine ring. This changes the ring size, nitrogen substitution pattern, and three-dimensional shape while retaining a basic tertiary amine.\n\n4. The morpholine oxygen may alter polarity and hydrogen-bond-acceptor interactions relative to the piperidine nitrogen, while the methyl group adds hydrophobic character. These changes could plausibly affect GSK3-beta binding and physicochemical properties, but improved inhibition or activity cannot be inferred without experimental data.\n}\n1. The source contains a fused heteroaromatic lactam core bearing a carboxylic acid, a fluorine substituent, a methoxy group, and a flexible N-methylpiperidin-4-yl substituent.\n\n2. The piperidine nitrogen is initially substituted, so its basicity is expected to be lower than that of a free piperidine. The carboxylic acid and ring carbonyl also provide acidic functionality, although their ionization states will depend on pH.\n\n3. The demonstrated modification replaces the N-methylpiperidin-4-yl group with an N-linked, methyl-substituted morpholine ring. This changes the ring size, nitrogen substitution pattern, and three-dimensional shape while retaining a basic tertiary amine.\n\n4. The morpholine oxygen may alter polarity and hydrogen-bond-acceptor interactions relative to the piperidine nitrogen, while the methyl group adds hydrophobic character. These changes could plausibly affect GSK3-beta binding and physicochemical properties, but improved inhibition or activity cannot be inferred without experimental data.\n}\n1. The source contains a fused heteroaromatic lactam core bearing a carboxylic acid, a fluorine substituent, a methoxy group, and a flexible N-methylpiperidin-4-yl substituent.\n\n2. The piperidine nitrogen is initially substituted, so its basicity is expected to be lower than that of a free piperidine. The carboxylic acid and ring carbonyl also provide acidic functionality, although their ionization states will depend on pH.\n\n3. The demonstrated modification replaces the N-methylpiperidin-4-yl group with an N-linked, methyl-substituted morpholine ring. This changes the ring size, nitrogen substitution pattern, and three-dimensional shape while retaining a basic tertiary amine.\n\n4. The morpholine oxygen may alter polarity and hydrogen-bond-acceptor interactions relative to the piperidine nitrogen, while the methyl group adds hydrophobic character. These changes could plausibly affect GSK3-beta binding and physicochemical properties, but improved inhibition or activity cannot be inferred without experimental data.\n}\n1. The source contains a fused heteroaromatic lactam core bearing a carboxylic acid, a fluorine substituent, a methoxy group, and a flexible N-methylpiperidin-4-yl substituent.\n\n2. The piperidine nitrogen is initially substituted, so its basicity is expected to be lower than that of a free piperidine. The carboxylic acid and ring carbonyl also provide acidic functionality, although their ionization states will depend on pH.\n\n3. The demonstrated modification replaces the N-methylpiperidin-4-yl group",
+        "gold": "COc1c(N2CCCC(N)C2)c(F)c(N)c2c(=O)c(C(=O)O)cn(C3CC3)c12"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(C)Nc1ncnc2cc(OC)c(OC)cc12.\n"
+            }
+        ],
+        "prediction": "1. The source is a dimethoxy-substituted quinazoline bearing an isopropyl group on the exocyclic amine; it is not a piperidine or tert-butyl substituent.\n\n2. The quinazoline nitrogens can support ATP-site recognition, while the methoxy groups provide hydrogen-bond acceptors and modulate lipophilicity. The isopropyl group contributes hydrophobic character but offers no hydrogen-bonding functionality.\n\n3. The demonstrated modification replaces the isopropyl group with a hydroxylated, branched alkyl chain containing a secondary alcohol. This adds a hydrogen-bond donor and increases polarity while retaining some hydrophobic bulk.\n\n4. The added alcohol could improve aqueous compatibility and enable additional protein or water-mediated interactions, but it may also increase conformational flexibility. Improved GSK3-beta inhibition is therefore chemically plausible but cannot be inferred without binding and selectivity measurements.\n}\n{\"Final Target Molecule\": \"COc1cc2ncnc(NCC(O)C(C)C)c2c1OC\"}",
+        "gold": "CCC(C)Nc1ncnc2cc(OC)c(OC)cc12"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich bicyclic heteroaromatic core, a urea linker, and a benzyl substituent bearing a methoxy group. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the benzyl group contributes hydrophobic character.\n\n2. The methoxybenzyl substituent lacks a hydrogen-bond donor and may be susceptible to oxidative metabolism. Its aromatic surface could support hydrophobic or π interactions, but the supplied evidence does not establish that it is the principal GSK3-beta binding motif.\n\n3. The demonstrated modification replaces the methoxybenzyl group with a directly attached pyridyl ring, removing the methylene spacer and changing the substituent’s size, geometry, and electronics. This introduces a pyridine nitrogen as a hydrogen-bond acceptor and retains an aromatic surface for possible recognition.\n\n4. The fused heteroaromatic core and urea linkage are retained, preserving the proposed kinase-binding scaffold. The pyridyl substitution is chemically plausible as a way to alter polarity, electronics, and pocket complementarity, but improved GSK3-beta inhibition would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"COc1n[nH]c2cc(NC(=O)Nc3ccncc3)ncc12\"}",
+        "gold": "COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COC(C)(C)COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core bearing a branched isopropoxy group and a urea-linked 1-phenylethyl substituent. The urea provides hydrogen-bonding capacity, while the phenyl ring supplies a hydrophobic interaction surface.\n\n2. The branched isopropoxy substituent is bulky and lipophilic, which could impede productive positioning in the GSK3-beta ATP-binding region and may be unfavorable for solubility. Its steric profile is distinct from the more compact branched alkyl groups commonly used in some kinase-focused libraries.\n\n3. The demonstrated modification replaces the isopropoxy group with a branched allyl group while retaining the heteroaromatic core, urea linkage, and 1-phenylethyl substituent. This changes both the steric shape and the terminal group’s interaction profile, including its alkene-mediated electronic character.\n\n4. The change is chemically plausible as a localized analogue design, but improved GSK3-beta inhibition cannot be inferred without binding or inhibition data. The allyl group may alter solubility, conformation, and metabolic behavior, so effects on permeability, off-target binding, and overall activity would require experimental evaluation.\n}\n{\"Final Target Molecule\": \"C=CC(C)COC(=O)Nc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12.\"}",
+        "gold": "COC(C)(C)COc1n[nH]c2cc(NC(=O)NC(C)c3ccccc3)ncc12"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1ccc(-c2nc(-c3ccccc3)c(-c3ccccc3)[nH]2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source is a planar, largely aromatic biaryl-substituted diazine bearing three phenyl rings and one pyrrolic [nH] group. Its extended aromatic surface may support hydrophobic or π interactions, while the ring nitrogens and pyrrolic NH provide potential hydrogen-bonding sites.\n\n2. The source lacks a hydrogen-bond acceptor at the pyrrolic position, which may limit polar contacts within the GSK3-beta ATP-binding site. The three phenyl substituents also create a relatively rigid, lipophilic scaffold with limited conformational adaptability.\n\n3. The demonstrated modification replaces the pyrrolic [nH] with a pyridine nitrogen while retaining the biaryl-diazine core and all three phenyl groups. This introduces a ring-nitrogen acceptor and changes the local electronics and hydrogen-bonding character without substantially increasing molecular size.\n\n4. The pyridyl group could support additional polar or aromatic interactions and may improve complementarity with the kinase binding pocket. However, the remaining three phenyl rings still impose substantial rigidity, and improved GSK3-beta inhibition would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"c1ccc(-c2nc(-c3ccccc3)c(-c3ccncc3)[nH]2)cc1\"}",
+        "gold": "c1ccc(-c2nc(-c3ccccc3)c(-c3ccccc3)[nH]2)cc1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)(F)F)c2cn1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a urea-linked phenyl group, and a trifluoroethylamino substituent. The heteroaromatic nitrogens and urea provide potential hydrogen-bonding interactions, while the phenyl ring can support hydrophobic contacts.\n\n2. The trifluoroethyl group is strongly electron-withdrawing and lipophilic, which may limit aqueous solubility and influence the orientation of the amino substituent. Its steric and electronic profile could also affect how the side chain is accommodated in the GSK3-beta binding site.\n\n3. The demonstrated modification replaces the trifluoroethylamino group with a methoxy group while retaining the heteroaromatic core, phenyl ring, urea linkage, and overall molecular scaffold.\n\n4. This substitution removes the CF3-containing side chain and changes the substituent’s size, polarity, and hydrogen-bond-acceptor character. It could alter binding-pocket complementarity and physicochemical behavior, but improved GSK3-beta inhibition cannot be inferred without comparative biochemical and structural data.\n}\n{\"Final Target Molecule\":\"COc1cc2[nH]nc(NC(=O)NCc3ccccc3)c2cn1\"}",
+        "gold": "CC(NC(=O)Nc1cc2[nH]nc(CNCC(F)(F)F)c2cn1)c1ccccc1"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)c1ccc(-c2cccc(COC3COc4nc([N+](=O)[O-])cn4C3)c2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a para-acetylphenyl group attached to a biaryl system, plus a nitro-substituted diazole ring bearing a cyclopropylmethyl ether. The aromatic framework and acetyl group may support hydrophobic or π interactions, while the nitro group provides strong electron-withdrawing character.\n\n2. The demonstrated modification replaces the para-acetylphenyl substituent with a pyridyl ring. This removes the acetyl group, changes the ring from phenyl to pyridine, and introduces a ring nitrogen that can act as a hydrogen-bond acceptor.\n\n3. The biaryl–diazole core and cyclopropylmethyl ether are retained. Thus, the proposed structure does not replace the ether-linked diazole with a pyrrole or remove the ether substituent, contrary to the stated optimization rationale.\n\n4. Pyridyl substitution could alter lipophilicity, aromatic interactions, and the orientation of the heteroaryl group within the GSK3-beta binding site. These changes are chemically plausible for modulating kinase inhibition, but improved GSK3-beta activity or selectivity cannot be inferred without experimental or validated computational evidence.\n}\n{\"Final Target Molecule\":\"c1cc(-c2cccc(-c3ccncc3)c2)ccn1C1COc2cnc([N+](=O)[O-])c2N1\"}",
+        "gold": "CC(=O)c1ccc(-c2cccc(COC3COc4nc([N+](=O)[O-])cn4C3)c2)cc1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the GSK3-beta property (Glycogen Synthase Kinase 3-beta Inhibition) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCc1[nH]c2ccc(OC)cc2c1C1=CCNCC1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused indole-like bicyclic core bearing a methoxy substituent and a cyclohexenylamino group. Its indole NH is a hydrogen-bond donor, while the ring nitrogen is an acceptor but is not expected to be strongly basic.\n\n2. The cyclohexenyl group contributes hydrophobic surface area and conformational flexibility, which could affect binding geometry and permeability. Its ethylene linker also adds rotatable bonds that may be unfavorable for a rigid kinase-binding motif.\n\n3. The demonstrated modification replaces the cyclohexenylamino substituent with a directly attached pyridyl ring. This removes the ethylene spacer, increases rigidity, and introduces a ring nitrogen that can act as a hydrogen-bond acceptor.\n\n4. The pyridyl group could support additional polar or aromatic contacts and reduce conformational freedom, making it chemically plausible as a GSK3-beta binding motif. However, improved inhibition, selectivity, solubility, or metabolic stability would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"CCc1[nH]c2ccc(OC)cc2c1-c1ccncc1\"}",
+        "gold": "CCc1[nH]c2ccc(OC)cc2c1C1=CCNCC1"
+    }
+}

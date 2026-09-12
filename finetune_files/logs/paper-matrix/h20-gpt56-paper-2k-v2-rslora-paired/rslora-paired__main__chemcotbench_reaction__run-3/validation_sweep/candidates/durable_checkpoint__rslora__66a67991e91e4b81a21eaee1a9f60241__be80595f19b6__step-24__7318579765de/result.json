@@ -1,0 +1,225 @@
+{
+  "candidate_id": "durable_checkpoint__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__step-24__7318579765de",
+  "source": "durable_checkpoint",
+  "workspace_id": "rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6",
+  "checkpoint_step": 24,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/workspace/.ft_model_checkpoints/rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6/output/checkpoint-24",
+  "selection_signature": "02dbcdb993875ffa61bcf696dde4006794c4e9ea52e1bd1c9713fd78cad8225f",
+  "formal_training_evidence_signature": "a87cffb95be0c0dc4088e739ed0fc108d7bc03ffcfc85cf9b769b7b00b5e7478",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-3",
+  "benchmark": "chemcotbench_reaction",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "a4838bc86a66e79e906f705d463c46fd4632de7cc79b84049223ec6e668f8bd3",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:44:45.306664+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:50:32.285134+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_reaction_fs": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 50.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      },
+      "chemcotbench_reaction_mechsel": {
+        "accuracy": 64.0,
+        "correct_count": 32.0,
+        "total_count": 50.0
+      },
+      "chemcotbench_reaction_nepp": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 42.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      },
+      "chemcotbench_reaction_rcr": {
+        "exact_count": 0.0,
+        "exact_match": 0.0,
+        "total_count": 45.0
+      },
+      "chemcotbench_reaction_retro": {
+        "bleu": 0.0,
+        "exact_match": 0.0,
+        "exact_match_count": 0.0,
+        "levenshtein": 0.0,
+        "maccs_sims": 0.0,
+        "morgan_sims": 0.0,
+        "rdk_sims": 0.0,
+        "total_count": 50.0,
+        "valid_count": 0.0,
+        "validity": 0.0
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "CCOCC",
+        "model_output": "The substrate contains a Boc-protected secondary amine, while the product shows the corresponding free amine. The appropriate deprotection is therefore Boc deprotection by trifluoroacetic acid. TFA cleaves the Boc carbamate, liberates the amine, and protonates it to give the neutral amine. The aromatic ring, fused heterocycle, and other amide and methoxy groups remain unchanged.\n\n{\"SMILES\":\"O=C(F)(F)F\"}",
+        "question": "Given the following reaction under the type of Deprotection:\nNC(=O)c1nn(C2CCN(Cc3ccccc3)CC2)c2c1CCc1cnc(NC3CCCC3)nc1-2>>NC(=O)c1nn(C2CCNCC2)c2c1CCc1cnc(NC3CCCC3)nc1-2,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "C",
+        "model_output": "Nitric anhydride is represented as the resonance-stabilized nitronium ion, \\( \\mathrm{NO_2^+} \\), while the aromatic substrate contains a protonated carbon bearing hydrogen. The first stage is proton transfer from the aromatic carbon to the nitronium oxygen, producing a resonance-stabilized arenium ion and protonated nitric anhydride. The second proton transfer gives the nitronium cation and the deprotonated aromatic electrophile. The aromatic π system then attacks the electrophilic nitronium center, forming the new C–N bond and regenerating the aromatic π system. Final deprotonation furnishes the nitro-substituted aromatic product.\n\n{\"choice\": \"B\"}",
+        "question": "For reaction class: 'Nitration', under the condition of 'Nitric anhydride' and given reagents (writtin in SMARTS format) '[*]O[N+]([O-])=O.[c;H1]', which following description is the correct elementary reaction stages description, considering the mechanism of this type of reaction?\n\nChoices:\nA: Protonation of nitrate | Protonation of nitric acid | Formation of nitronium ion | Electrophile aromatic substitution | Deprotonation\nB: Formation of nitric acetic anhydride | Deprotonation of nitric acetic anhydride | Electrophile aromatic substitution | Deprotonation\nC: Electrophile aromatic substitution | Deprotonation\n\nReturn the choice (capital letter) in JSON format:\n{\n    \"choice\": str # (e.g. 'A'/'B')\n}\n"
+      },
+      {
+        "gold": "COC(=O)C=Cc1ccc(CN2CC(C)N(C(=O)Nc3cccc(-n4cccc4)c3)C(C)C2)cc1",
+        "model_output": "The substrate contains a terminal alkyne, while the other reactant is a nitrile-bearing heteroaromatic azide. The transformation is a Sonogashira-type coupling: the terminal alkyne carbon forms a new C–C bond to the carbon bearing the nitrile, replacing the C≡N group with a C–C bond. The alkene, amide, and heteroaromatic framework remain unchanged.\n\n{\"Major Product\": COC(=O)C=Cc1ccc(CN2CC(C)NC(C)C2)cc1.c1cccc(-c2ccccc2)n1\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: COC(=O)C=Cc1ccc(CN2CC(C)NC(C)C2)cc1.O=C=Nc1cccc(-n2cccc2)c1\nReagents: [Not known, ignore it]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "CCC(=O)CC(=O)C(F)(F)FO=Cc1cc(Cl)cc(Cl)c1",
+        "model_output": "The product is a difluoro trifluoromethyl ketone bearing a 2,4-dichlorophenyl group. Retrosynthetic cleavage of the C–C bond between the ketone carbonyl carbon and the trifluoromethyl carbon gives the corresponding 2,4-dichlorophenyl aldehyde and 2,2,2-trifluoroethanol. The aldehyde carbonyl is converted into the ketone carbonyl by condensation with the alcohol, while the aldehyde carbon becomes the methyl group of the ketone. The chlorinated aromatic framework and the two fluorine substituents remain unchanged.\n\n{\"CC(=O)C(=Cc1cc(Cl)cc(Cl)c1)C=O.CC(F)(F)O\"}",
+        "question": "Given the product SMILES and reagents SMILES, your task is to predict the reactants SMILES using your experienced chemical Retrosynthesis knowledge.\n\nInput:\nProduct SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nReactants SMILES separated by '.'\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes only the reactants SMILES:\n\nQuestion:\nProducts: CCC(=O)C(=Cc1cc(Cl)cc(Cl)c1)C(=O)C(F)(F)F\nReagents: CC(=O)C(=Cc1cc(Cl)cc(Cl)c1)C(C)=O\n\nAnswer:\n{\n    \"Reactants\": ...\n}\n\n"
+      },
+      {
+        "gold": "[Cl-].[NH4+]",
+        "model_output": "The substrate contains a nitro group, while the product contains a primary aniline. This is a nitro-to-primary-amino reduction. A suitable reagent is a mild reducing agent that selectively reduces the nitro group without reducing the aromatic C–N bond or the aryl fluoride substituents. Dibutylboron hydride is well suited to this transformation because it selectively reduces nitro groups to primary amines under mild conditions. The resulting boron-containing byproduct can be removed by filtration or workup.\n\n{\"SMILES\":\"B[BH]2\"}",
+        "question": "Given the following reaction under the type of Reduction:\nN#Cc1ccc([N+](=O)[O-])c(Nc2ccc(F)cc2F)c1>>N#Cc1ccc(N)c(Nc2ccc(F)cc2F)c1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "N[C@@H]1CCCC[C@H]1N.O=P([O-])([O-])[O-].[K+].[K+].[K+]",
+        "model_output": "The transformation is a nucleophilic aromatic substitution of the aryl iodide by the piperazine nitrogen. A mild, non-nucleophilic, non-nucleolytic base is needed to promote proton transfer and activate the heteroaryl C–I bond without competing for the piperazine nitrogen. Triethylamine is well suited to this role because it is sufficiently basic to generate the activated heteroaryl iodide while remaining compatible with the amide, aryl chloride, and fused heteroaromatic framework.\n\n{\"SMILES\":\"CC(N)(N)N\"}",
+        "question": "Given the following reaction under the type of Heteroatom Alkylation and Arylation:\nCC1(C)NC(=O)c2ccc(Cl)cc21.Ic1cncc(I)c1>>CC1(C)c2cc(Cl)ccc2C(=O)N1c1cncc(I)c1,\ngive me the most recommended reagent(s) for this reaction. Return the SMILES of the reagent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "O=[Os](=O)(=O)=O",
+        "model_output": "The transformation is a catalytic hydrogenolysis of the aryl–osmate ester, converting the aryl–osmate bond into an aryl–hydrogen bond while leaving the ketone, ester, and Boc-protected amine unchanged. A suitable catalyst is a ruthenium-based hydrogenation catalyst, commonly supported on carbon. The catalyst should be capable of selectively hydrogenating the aryl–osmate bond without reducing the ketone or ester.\n\n{\"SMILES\":\"[Ru]1(C)(C)C(C)(C)C1\"}",
+        "question": "Given the following reaction under the type of Oxidation:\nC=CCC(Cc1ccc(Br)c2ccccc12)C(=O)N1C(=O)OCC1Cc1ccccc1.O=[Os](=O)(=O)=O>>O=CCC(Cc1ccc(Br)c2ccccc12)C(=O)N1C(=O)OCC1Cc1ccccc1,\ngive me the most recommended catalyst(s) for this reaction. Return the SMILES of the catalyst following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "Cc1onc(-c2ccccc2)c1-c1nnc2n1Cc1ccc(OC3CCN(C(=O)OC(C)(C)C)CC3)cc1-2",
+        "model_output": "The substrate contains a primary benzylic alcohol, while the second reactant is a cyclic tertiary amine bearing a Boc-protected piperazine group. The phosphine–dibutylboron reagent promotes reductive amination, replacing the alcohol with an amide carbonyl. The amine nitrogen attacks the alcohol-derived carbonyl carbon, and collapse of the tetrahedral intermediate expels water. The resulting product therefore retains the Boc-protected piperazine, the fused heteroaromatic core, and the methoxyphenyl substituent, but the benzylic hydroxyl group is converted into an amide carbonyl.\n\n{\"CC(C)(C)OC(=O)N1CCC(=O)CC1.Cc1onc(-c2ccccc2)c1-c1nnc2n1Cc1ccc(O)cc1-2\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: Cc1onc(-c2ccccc2)c1-c1nnc2n1Cc1ccc(O)cc1-2.CC(C)(C)OC(=O)N1CCC(O)CC1\nReagents: c1ccc(P(c2ccccc2)c2ccccc2)cc1.CCOC(=O)N=NC(=O)OCC.O=C(O)C(F)(F)F.ClCCl.[C-]#[O+]\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      },
+      {
+        "gold": "O",
+        "model_output": "The transformation is a carbamate protection of a primary alcohol. The alcohol is converted into a tert-butyldimethylsilyl (TBDMS) ether, while the terminal alkyne and nitrile remain unchanged. A polar aprotic, non-nucleophilic solvent is appropriate because it dissolves the organic substrates and products and does not compete with the alcohol for the silyl transfer. THF is well suited to this transformation.\n\n{\"SMILES\":\"C#CC(=O)O\"}",
+        "question": "Given the following reaction under the type of Protection:\nC#CC(=O)O.OCCCCCCCc1ccccc1>>C#CC(=O)OCCCCCCCc1ccccc1,\ngive me the most recommended solvent(s) for this reaction. Return the SMILES of the solvent following the JSON format:\n{\n    \"SMILES\": str\n}\n\n"
+      },
+      {
+        "gold": "CC(Cl)C(=O)c1ccc(F)cc1F",
+        "model_output": "The substrate contains a methyl ester, while the aryl chloride is less reactive toward nucleophilic acyl substitution. The alkylation reagent is methyl 4-methoxybenzoate, whose methoxy group is a poor leaving group. The aryl chloride is therefore replaced by the methyl group from the ester, forming the corresponding aryl methyl ketone. The ester, aryl fluoride, and aryl trifluoromethyl group remain unchanged.\n\n{\"CC(=O)C1CC(F)CC1C(=O)OCC\"}",
+        "question": "Given the reactants SMILES and reagents SMILES, your task is to predict the main product SMILES using your experienced chemical Reaction Prediction knowledge.\n\nInput:\nReactants SMILES separated by '.'\nReagents SMILES separated by '.'\n\nOutput:\nMain product SMILES\n[Optional: Byproduct SMILES separated by '.']\n\nThe output SMILES must be valid and chemically reasonable. Do not provide any additional information beyond the requested SMILES strings. The answer should be a json format that includes the main product SMILES and byproduct SMILES if any:\n\nQuestion:\nReactants: CC(Cl)C(=O)Cl.Fc1cccc(F)c1\nReagents: O.Cl.ClCCCl.Cl[Al](Cl)Cl\n\nAnswer:\n{\n    \"Major Product\": ...\n    \"Byproduct(s)\": ...\n}\n\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_reaction_fs": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.0,
+      "maccs_sims": 0.0,
+      "morgan_sims": 0.0,
+      "rdk_sims": 0.0,
+      "total_count": 50.0,
+      "valid_count": 0.0,
+      "validity": 0.0
+    },
+    "chemcotbench_reaction_mechsel": {
+      "accuracy": 64.0,
+      "correct_count": 32.0,
+      "total_count": 50.0
+    },
+    "chemcotbench_reaction_nepp": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.0,
+      "maccs_sims": 0.0,
+      "morgan_sims": 0.0,
+      "rdk_sims": 0.0,
+      "total_count": 42.0,
+      "valid_count": 0.0,
+      "validity": 0.0
+    },
+    "chemcotbench_reaction_rcr": {
+      "exact_count": 0.0,
+      "exact_match": 0.0,
+      "total_count": 45.0
+    },
+    "chemcotbench_reaction_retro": {
+      "bleu": 0.0,
+      "exact_match": 0.0,
+      "exact_match_count": 0.0,
+      "levenshtein": 0.0,
+      "maccs_sims": 0.0,
+      "morgan_sims": 0.0,
+      "rdk_sims": 0.0,
+      "total_count": 50.0,
+      "valid_count": 0.0,
+      "validity": 0.0
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "fingerprint_similarity",
+      "label": "FTS",
+      "value": 0.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mean Morgan fingerprint similarity of fs, retro, and nepp",
+      "components": [
+        {
+          "dataset": "chemcotbench_reaction_fs",
+          "metric": "morgan_sims",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_reaction_nepp",
+          "metric": "morgan_sims",
+          "value": 0.0
+        },
+        {
+          "dataset": "chemcotbench_reaction_retro",
+          "metric": "morgan_sims",
+          "value": 0.0
+        }
+      ]
+    },
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 64.0,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mechanism-selection accuracy",
+      "components": [
+        {
+          "dataset": "chemcotbench_reaction_mechsel",
+          "metric": "accuracy",
+          "value": 64.0
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_reaction__run-3/validation_sweep/candidates/durable_checkpoint__rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6__step-24__7318579765de/workspace"
+}

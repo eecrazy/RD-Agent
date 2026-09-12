@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCl)Nc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC(CCl)Nc1ccc2NCCN(CC(O)(Cn3cncn3)c3cccFcc3)cc21\"\n}",
+        "gold": "O=C(CCl)Nc1ccc(N2CCN(CC(O)(Cn3cncn3)c3ccc(F)cc3F)CC2)cc1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(Sc1ncccn1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(Cn1cnc2c1ccccn2)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1\"\n}",
+        "gold": "CC(Sc1ncccn1)C(=O)Nc1ncc(Cc2cccc3ccccc23)s1"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1\"\n}",
+        "gold": "CC(=NO)c1ccc(N2C(=O)C3CC=C(Cl)CC3C2=O)cc1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC(=O)NC1=CC=CC=C1C(=O)O\"\n}",
+        "gold": "NS(=O)(=O)c1ccc(Nc2nccc(-c3ccc(NC(=O)Cc4cccs4)cc3)n2)cc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1c(Cc2cccc([N+](=O)[O-])c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1CCC2(C(=O)N(C)C)CC(=O)O2C1C(=O)N+([O-])C\"\n}",
+        "gold": "Cc1c(Cc2cccc([N+](=O)[O-])c2)c(=O)oc2cc(OC(=O)N(C)C)ccc12"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)O2)ccc1C\"\n}",
+        "gold": "CCOc1ccccc1NS(=O)(=O)c1cc(-c2cnc(C3CC3)o2)ccc1C"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)N1CCN(CC1)C\"\n}",
+        "gold": "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=CC(=C1)C1CCNC(=O)C(F)(F)FCC1\"\n}",
+        "gold": "O=C(Nc1ccnc(F)c1)c1ccc(-c2noc(C(F)(F)F)n2)cc1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc2c(CSCCBr)cc(=O)oc2c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1ccc2c(CS)cc(=O)oc2c1\"\n}",
+        "gold": "COc1ccc2c(CSCCBr)cc(=O)oc2c1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O\"\n}",
+        "gold": "O=C(C=Cc1ccco1)NC(Cc1ccccc1)C(=O)NC(Cc1ccccc1)C(=O)O"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-].\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1N(=O)c3ccc(-O)cc3\"\n}",
+        "gold": "COc1ccc(C=C(C)C(=O)c2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2cccc(OC(=O)c3ccco3)c2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1ccc(C(=O)Nc2cccc(O)c2)cc1\"\n}",
+        "gold": "COc1ccc(C(=O)Nc2cccc(OC(=O)c3ccco3)c2)cc1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1CCCC(C(=O)Nc2ccc(S(=O)(=O)Nc3ccccn3)cc2)C(=O)N1\"\n}",
+        "gold": "O=C(Nc1ccc(S(=O)(=O)Nc2ccccn2)cc1)c1cccc([N+](=O)[O-])c1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=C(C(=O)Nc2ccc([N+](=O)[O-])cc2)C=C1N\"\n}",
+        "gold": "O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1(C)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1\"\n}",
+        "gold": "CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)CN1C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC(=O)N(C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O)C(=O)O\"\n}",
+        "gold": "O=C(O)CN1C(=O)SC(=Cc2cccc([N+](=O)[O-])c2)C1=O"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(N)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-].\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1cc(CN)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]\"\n}",
+        "gold": "COc1cc(N)c(C=Cc2cc(OC)c(OC)c(OC)c2)cc1[N+](=O)[O-]"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cn(C2CC(NC(=O)CC(=O)O)C(CO)O2)c(=O)[nH]c1=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1CN(C2CC(NC(=O)CC(=O)O)C(CO)O2)C(=O)N1C(=O)C2=O\"\n}",
+        "gold": "Cc1cn(C2CC(NC(=O)CC(=O)O)C(CO)O2)c(=O)[nH]c1=O"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1cnc(-c2ccc(-c3ccccc3CSc3ccncn3)cc2F)cn1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1=C2C(=C(C(=C1)N)F)C(=O)N2C(=O)C1CCN(CC1)C2=C3C=CC=CC3\"\n}",
+        "gold": "Nc1cnc(-c2ccc(-c3ccccc3CSc3ccncn3)cc2F)cn1"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)C(=N)N.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CN(CC(=O)Nc1ccc(S(N)(=O)C1)cc1)C(=N)N\"\n}",
+        "gold": "CN(CC(=O)Nc1ccc(S(N)(=O)=O)cc1)C(=N)N"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(COC(=O)c1ccccc1)Nc1ccc(Cl)cc1C(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=CC=C1C(=O)Nc1ccc(Cl)cc1C(=O)C1=CC=CC=C1\"\n}",
+        "gold": "O=C(COC(=O)c1ccccc1)Nc1ccc(Cl)cc1C(=O)c1ccccc1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc1cc1\"\n}",
+        "gold": "CC(CCCNc1ccccc1)N(c1cc(Cl)ccc1CO)S(=O)(=O)c1ccc(Cl)cc1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3ncccn3)CC1O2.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1CC(C(C)CSc3ncccn3)C(=O)N1Cc2ccccc2O\"\n}",
+        "gold": "Cc1cc2c(c(=O)o1)C=C1CCC(C(C)CSc3ncccn3)CC1O2"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)N1CCN(CC1)C\"\n}",
+        "gold": "CC(N)C(NC(=O)c1ccc(C#Cc2ccccc2)cc1)C(=O)NO"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=C(C(=O)N1Cc2ccc(Cl)cc2)C(=O)C\"\n}",
+        "gold": "Nc1ccc(C=CC(=O)Nc2cccc(Cl)c2)cc1O"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1C\"\n}",
+        "gold": "COc1cc(C=C(C#N)c2ccccn2)ccc1OCc1ccccc1Cl"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC(=O)O\"\n}",
+        "gold": "COc1ccc(C(=O)Nc2ccc(-c3nc4ncccc4[nH]3)cc2)cc1OC"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1OC(=O)C(C)(C)OC1C(=O)C1CCCN2C=CC=CC=C21\"\n}",
+        "gold": "Cc1oc(=O)oc1COC(=O)C(C)(C)Oc1ccc(C(=O)c2ccc(Cl)cc2)cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(NC(=O)CN2C(=O)SC(=Cc3ccc(-c4ccc(Cl)c(C(=O)O)c4)o3)C2=O)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1CCC2C(C3=CC(=C(C=C3)O)C(=O)N2C(=O)N(C)C1=O)C\"\n}",
+        "gold": "Cc1ccc(NC(=O)CN2C(=O)SC(=Cc3ccc(-c4ccc(Cl)c(C(=O)O)c4)o3)C2=O)cc1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CN(C)CCCn1c(N)c(-c2nc3ccccc3C2)C2nc(C#N)c(C#N)nc21\"\n}",
+        "gold": "CN(C)CCCn1c(N)c(-c2nc3ccccc3s2)c2nc(C#N)c(C#N)nc21"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(=O)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(CO)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1\"\n}",
+        "gold": "CCC(=O)Oc1ccc(NC(=O)c2ccc(S(=O)(=O)N3CCCC3)cc2)cc1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCCCCCC(=O)Nc1ccccc1)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC(CCCCCC(=O)Nc1ccccc1)N\"\n}",
+        "gold": "O=C(CCCCCCC(=O)Nc1ccccc1)NO"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cc([N+](=O)[O-])cn2C)CC1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cncn2C)CC1\"\n}",
+        "gold": "CN1CCN(c2cc3c(cc2F)c(=O)c(C(=O)O)cn3-c2cc([N+](=O)[O-])cn2C)CC1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C#CCCCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(C)(C)C(C(=O)O)c1cc2c(c1)OC2\"\n}",
+        "gold": "C#CCCCC(=O)c1cc2c(c(C(C)(C)C)c1)OCC2"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1=C2C(=C(C(=C1)N)C(=O)N2C(=O)C1CCN(CC1)C(F)F)C1=CC=CC=C1\"\n}",
+        "gold": "Nc1cnc(-c2ccc(C3CCC3)c(OCC(O)CNc3cc(N)ncn3)c2F)cn1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(Nc1ccccc1)N1CCN(Cc2ccc(C=Cc3ccccc3)cc2)CC1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC(=C(C(=O)Nc2ccccc2)N(Cc3ccc(C=Cc4ccccc4)cc3)C1)C(=O)Nc5ccccc5\"\n}",
+        "gold": "O=C(Nc1ccccc1)N1CCN(Cc2ccc(C=Cc3ccccc3)cc2)CC1"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(O)C=Cc1cn(Cc2ccc([N+](=O)[O-])cc2)c2ccccc12.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=CC(C(=O)N2C(=O)NC(=O)N2)C=C1C1CCCCC1\"\n}",
+        "gold": "O=C(O)C=Cc1cn(Cc2ccc([N+](=O)[O-])cc2)c2ccccc12"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)OC1\"\n}",
+        "gold": "CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1nc(OCC(=N)NO)nc(N2CCOCC2)n1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1nc(OCCN(C)C)n1\"\n}",
+        "gold": "COc1nc(OCC(=N)NO)nc(N2CCOCC2)n1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(C)N(C(=O)NC1=CC=CC=C1C(=O)N(C(=O)NC2=CC=CC=C2C(=O)N1C(=O)C)C)C\"\n}",
+        "gold": "C=CCNC(=O)NC(=O)CN1C(=O)NC(c2ccccc2)(c2ccccc2)C1=O"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CSc1ncccn1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=C(CSc2ncccn2)Nc1ccc(S(=O)(=O)N3CCCCN3)cc1\"\n}",
+        "gold": "O=C(CSc1ncccn1)Nc1ccc(S(=O)(=O)N2CCCCC2)cc1"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(c1ccc(C=CC(=O)NO)cc1)S(=O)(=O)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CN(c1ccc(C=CC(=O)N1CCNCC1)cc1)S(=O)(=O)c1ccccc1\"\n}",
+        "gold": "CN(c1ccc(C=CC(=O)NO)cc1)S(=O)(=O)c1ccccc1"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3[nH]2)cc1OC.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3)cc1OC\"\n}",
+        "gold": "COc1ccc(C(=O)Nc2ccccc2-c2nc3ncccc3[nH]2)cc1OC"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1nccc(C#Cc2ccc(CC(C)NC(C)=O)cc2)n1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CCn1c2ccc(C#C)cc2c1C(=O)N(C)C\"\n}",
+        "gold": "CSc1nccc(C#Cc2ccc(CC(C)NC(C)=O)cc2)n1"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=CC(C(=O)N2C(=NNC2=O)C3=CC=CC=C3)C=C1\"\n}",
+        "gold": "O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)NC(=O)c2ccccc2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC1CCC(NC(=O)C(=CC2CCC(=O)N2)NC(=O)C3CCC3)CC1\"\n}",
+        "gold": "Cc1ccc(NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)NC(=O)c2ccccc2)cc1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1\"\n}",
+        "gold": "Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=CC=C1N=C(N)N\"\n}",
+        "gold": "O=C(CCCCCC(c1c[nH]c2ccccc12)c1c[nH]c2ccccc12)NO"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"CC(C)OC(=O)c1ccc2nc3ccccc3C(=O)N2C(=O)CC1\"\n}",
+        "gold": "CCCCOC(=O)c1ccc(NC(=O)C2(c3cccs3)CCOCC2)cc1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the QED property (Drug-likeness) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(C=Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1)NO.\n"
+            }
+        ],
+        "prediction": "{\n    \"Final Target Molecule\": \"OC1=CC=CC(C(=O)N2C(=O)NC(=O)N2)C(=O)N1\"\n}",
+        "gold": "O=C(C=Cc1ccc(C(=O)c2ccc3ccccc3n2)cc1)NO"
+    }
+}

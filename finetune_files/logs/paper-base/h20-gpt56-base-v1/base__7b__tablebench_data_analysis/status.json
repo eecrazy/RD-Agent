@@ -1,0 +1,352 @@
+{
+  "experiment_id": "base/7b/tablebench_data_analysis",
+  "paper_group": "base-7b",
+  "method": "Base Model",
+  "benchmark": "tablebench_data_analysis",
+  "target_model": "Qwen/Qwen2.5-7B-Instruct",
+  "planner": null,
+  "data_limit": null,
+  "timeout": null,
+  "run_index": 1,
+  "runner": "run_base_eval.py",
+  "artifact_status": "reconstructed-from-released-evaluator",
+  "source": "main-results",
+  "gpu": "0",
+  "state": "succeeded",
+  "started_at": "2026-08-28T01:56:47.177864+08:00",
+  "benchmark_asset": "benchmark-tablebench",
+  "benchmark_dataset_path": "pinned/tablebench",
+  "model_asset": "model-qwen2.5-7b-instruct",
+  "task_timeout": 43200,
+  "gpu_memory_utilization": 0.3,
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:44123/v1"
+  },
+  "splits": {
+    "validation": {
+      "state": "succeeded",
+      "range": "[:min(100, len(index_list)//2)]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/configs/validation.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/configs/validation.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/validation"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/validation/20260828_015654",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/validation/20260828_015654/summary/summary_20260828_015654.csv",
+        "rows": [
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "12.00"
+          },
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "EM_with_error_10",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "12.00"
+          },
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "3.00"
+          },
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "32.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "EM_with_error_10",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "32.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "8.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "48.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "EM_with_error_10",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "48.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "12.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "40.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "exact_match",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "40.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "10.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "35.54"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "ROUGE-L",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "35.54"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "21.00"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "100.00"
+          }
+        ]
+      }
+    },
+    "test": {
+      "state": "succeeded",
+      "range": "[-min(100, len(index_list)//2):]",
+      "config": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/configs/test.py",
+      "command": [
+        "/data/github/RD-Agent/finetune_files/conda_envs/opencompass/bin/opencompass",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/configs/test.py",
+        "--work-dir",
+        "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/test"
+      ],
+      "return_code": 0,
+      "outer_timeout": false,
+      "summary": {
+        "timestamp_dir": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/test/20260828_020203",
+        "summary_csv": "/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__tablebench_data_analysis/test/20260828_020203/summary/summary_20260828_020203.csv",
+        "rows": [
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "12.00"
+          },
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "EM_with_error_10",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "12.00"
+          },
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "3.00"
+          },
+          {
+            "dataset": "tablebench_analysis_correlationanalysis",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "40.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "EM_with_error_10",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "40.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "10.00"
+          },
+          {
+            "dataset": "tablebench_analysis_trendforecasting",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "48.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "EM_with_error_10",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "48.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "12.00"
+          },
+          {
+            "dataset": "tablebench_analysis_statisticalanalysis",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "28.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "exact_match",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "28.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "7.00"
+          },
+          {
+            "dataset": "tablebench_analysis_impactanalysis",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "25.00"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "accuracy",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "38.18"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "ROUGE-L",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "38.18"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "correct_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "22.00"
+          },
+          {
+            "dataset": "tablebench_analysis_other",
+            "version": "4f5a08",
+            "metric": "total_count",
+            "mode": "gen",
+            "base-qwen2.5-7b-instruct-tablebench_data_analysis": "100.00"
+          }
+        ]
+      }
+    }
+  },
+  "finished_at": "2026-08-28T02:07:09.791833+08:00"
+}

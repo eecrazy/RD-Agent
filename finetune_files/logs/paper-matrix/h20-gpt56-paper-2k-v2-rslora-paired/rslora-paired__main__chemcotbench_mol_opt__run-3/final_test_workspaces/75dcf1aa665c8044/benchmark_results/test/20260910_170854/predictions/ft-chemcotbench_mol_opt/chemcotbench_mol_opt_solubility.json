@@ -1,0 +1,502 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(c1ccccc1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a dimethylaminoethyl carboxamide, a benzyl-substituted amide, and a benzyl-linked piperidine carboxamide. The amides and tertiary amine provide hydrogen-bonding capacity, while the two phenyl rings contribute substantial hydrophobic surface area.\n\n2. The demonstrated modification replaces the piperidine N-linked benzyl group with a cyclohexylmethyl group, while retaining the remaining scaffold unchanged.\n\n3. This change removes one phenyl ring and reduces aromatic surface area and molecular weight. It may therefore lower lipophilicity and reduce hydrophobic burden, which can favor aqueous solubility.\n\n4. However, the cyclohexyl group remains nonpolar, and the modification does not introduce a new ionizable center or hydrogen-bond donor. Any solubility benefit is therefore chemically plausible but uncertain and may depend on solid-state packing, conformation, and crystallinity.\n{\"Final Target Molecule\": \"CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(C2CCCCC2)c1ccccc1.\"}",
+        "gold": "CNC(C)C(=O)NC(Cc1ccccc1)C(=O)N1CCCC1C(=O)NC(c1ccccc1)c1ccccc1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: N#Cc1cc(S(=O)(=O)Nc2nccs2)ccc1Oc1ccc(Cl)cc1-c1ccnn1CC(F)(F)F.\n"
+            }
+        ],
+        "prediction": "1. The source combines a hydrophobic chlorophenoxyphenyl–trifluoromethylpyridyl region with polar nitrile, sulfonamide, ether, and heteroaromatic functionalities.\n\n2. The sulfonamide contributes two hydrogen-bond acceptors and a strong dipole, but its sulfonyl oxygens are not hydrogen-bond donors. The nitrile and ether also provide polarity, although the nitrile is only a weak hydrogen-bond acceptor.\n\n3. The demonstrated modification replaces the sulfonamide substituent with a primary carboxamide while retaining the nitrile, chlorophenoxyphenyl, and trifluoromethylpyridyl framework.\n\n4. A primary amide is generally more polar and can act as both a hydrogen-bond donor and acceptor, which could improve hydration relative to the sulfonamide. However, amides are not inherently ionizable, and the retained hydrophobic substituents may still limit aqueous solubility.\n{\n    \"Final Target Molecule\": \"N#Cc1cc(C(N)=O)ccc1Oc1ccc(Cl)cc1-c1ccnn1CC(F)(F)F.\"\n}",
+        "gold": "N#Cc1cc(S(=O)(=O)Nc2nccs2)ccc1Oc1ccc(Cl)cc1-c1ccnn1CC(F)(F)F"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(CN1CCCCC1)Nc1ccccc1Oc1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a hydrophobic biphenyl ether and a piperidine ring, with the amide and piperidine nitrogen providing the principal polar functionality.\n\n2. The demonstrated modification replaces the amide substituent on the phenyl ring with a hydroxyl group while retaining the biphenyl ether and piperidine framework.\n\n3. This change removes a carbonyl and an ethyl-containing linker, reducing molecular size and hydrophobic surface area. The introduced hydroxyl adds a hydrogen-bond donor and acceptor and may improve hydration.\n\n4. Improved aqueous solubility is chemically plausible, but the remaining biphenyl system is still largely hydrophobic, and the outcome will depend on solid-state packing, ionization, and crystallinity; no measured solubility improvement is established.\n}\n{\"Final Target Molecule\":\"Oc1ccccc1Nc1ccccc1O=C(O)N1CCCCC1\"}",
+        "gold": "O=C(CN1CCCCC1)Nc1ccccc1Oc1ccccc1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)CCC2CCCC2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains two phenyl rings, a benzamide, a secondary amide, a methoxy group, and a propyl-linked cyclohexyl ester. The aromatic rings and cyclohexyl group contribute substantial hydrophobic surface area.\n\n2. The demonstrated modification replaces the propyl-linked cyclohexyl ester with a methyl ester while retaining the remaining scaffold unchanged.\n\n3. Removing the cyclohexyl ring reduces hydrophobic surface area and molecular size, which could favor aqueous solubility. However, the methyl ester remains neutral and adds no ionizable group.\n\n4. The change is chemically plausible as a solubility-oriented adjustment, but its net effect is uncertain because crystal packing, conformational effects, and the loss of the hydrophobic cyclohexyl group may offset the reduced hydrophobic burden.\n{\"Final Target Molecule\": \"COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)C)cc1.\"}",
+        "gold": "COc1ccccc1NC(=O)c1ccc(NC(=O)COC(=O)CCC2CCCC2)cc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCNc1ccc(NC(=O)c2c(-c3c(Cl)cccc3Cl)noc2C)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a tertiary N-ethyl aniline, a benzamide linker, and a dichlorophenyl-substituted isoxazole. The amide and heteroaromatic nitrogens provide polarity, while the two chlorinated phenyl rings contribute substantial hydrophobic surface area.\n\n2. The demonstrated modification replaces the dichlorophenyl group on the isoxazole with a methyl group, converting the isoxazole substituent from a dichlorophenyl ring to a methyl group while retaining the remaining scaffold.\n\n3. Removing two chlorinated phenyl rings reduces aromatic surface area, molecular size, and likely lipophilicity. This could favor aqueous solubility, although the isoxazole-to-methyl change also removes two hydrogen-bond acceptors and may increase local steric demand near the heterocycle.\n\n4. The tertiary amine remains protonatable, so ionization may support aqueous solubility under suitable pH conditions. The net solubility effect is therefore chemically plausible but cannot be assumed without experimental solubility and solid-state measurements.\n}\n1. The source combines a hydrophobic dichlorophenyl group with polar amide and heteroaromatic functionalities, giving a mixed but predominantly lipophilic profile.\n\n2. The demonstrated modification replaces the dichlorophenyl substituent with a methyl group, substantially reducing aromatic surface area and molecular size while retaining the amide-linked core.\n\n3. This change is expected to lower hydrophobic burden and may improve hydration. However, it also removes two chlorinated aromatic rings and their potential halogen-bonding interactions, so the net solubility effect is not unambiguous and would require experimental confirmation.\n}\n1. The source contains a tertiary N-ethyl aniline, a benzamide linker, and a dichlorophenyl-substituted isoxazole. The amide and heteroaromatic nitrogens provide polarity, while the two chlorinated phenyl rings contribute substantial hydrophobic surface area.\n\n2. The demonstrated modification replaces the dichlorophenyl group on the isoxazole with a methyl group, converting the isoxazole substituent from a dichlorophenyl ring to a methyl group while retaining the remaining scaffold.\n\n3. Removing two chlorinated phenyl rings reduces aromatic surface area, molecular size, and likely lipophilicity. This could favor aqueous solubility, although the isoxazole-to-methyl change also removes two hydrogen-bond acceptors and may increase local steric demand near the heterocycle.\n\n4. The tertiary amine remains protonatable, so ionization may support aqueous solubility under suitable pH conditions. The net solubility effect is therefore chemically plausible but cannot be assumed without experimental solubility and solid-state measurements.\n}\n1. The source combines a hydrophobic dichlorophenyl group with polar amide and heteroaromatic functionalities, giving a mixed but predominantly lipophilic profile.\n\n2. The demonstrated modification replaces the dichlorophenyl substituent with a methyl group, substantially reducing aromatic surface area and molecular size while retaining the amide-linked core.\n\n3. This change is expected to lower hydrophobic burden and may improve hydration. However, it also removes two chlorinated aromatic rings and their potential halogen-bonding interactions, so the net solubility effect is not unambiguous and would require experimental confirmation.\n}\n1. The source contains a tertiary N-ethyl aniline, a benzamide linker, and a dichlorophenyl-substituted isoxazole. The amide and heteroaromatic nitrogens provide polarity, while the two chlorinated phenyl rings contribute substantial hydrophobic surface area.\n\n2. The demonstrated modification replaces the dichlorophenyl group on the isoxazole with a methyl group, converting the isoxazole substituent from a dichlorophenyl ring to a methyl group while retaining the remaining scaffold.\n\n3. Removing two chlorinated phenyl rings reduces aromatic surface area, molecular size, and likely lipophilicity. This could favor aqueous solubility, although the isoxazole-to-methyl change also removes two hydrogen-bond acceptors and may increase local steric demand near the heterocycle.\n\n4. The tertiary amine remains protonatable, so ionization may support aqueous solubility under suitable pH conditions. The net solubility effect is therefore chemically plausible but cannot be assumed without experimental solubility and solid-state measurements.\n}\n1. The source combines a hydrophobic dichlorophenyl group with polar amide and heteroaromatic functionalities, giving a mixed but predominantly lipophilic profile.\n\n2. The demonstrated modification replaces the dichlorophenyl substituent with a methyl group, substantially reducing aromatic surface area and molecular size while retaining the amide-linked core.\n\n3. This change is expected to lower hydrophobic burden and may improve hydration. However, it also removes two chlorinated aromatic rings and their potential halogen",
+        "gold": "CCNc1ccc(NC(=O)c2c(-c3c(Cl)cccc3Cl)noc2C)cc1"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: N#Cc1ncc(F)c(N(Cc2ccc(Cl)cc2)Cc2ccc3c(c2)OCO3)n1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitrile-bearing diazine core, a fluorine substituent, a tertiary amine linked to a chlorophenyl group, and a benzodioxole-substituted phenyl ring. The tertiary amine and ring nitrogens provide hydrogen-bond acceptors, while the aromatic rings and chlorophenyl group contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the chlorophenyl group attached to the tertiary amine with a methyl group, while retaining the nitrile, fluorine, tertiary amine, and benzodioxole-containing framework.\n\n3. Removing the chlorophenyl ring reduces aromatic surface area and molecular size, which could lower hydrophobic burden and potentially improve aqueous solubility. However, it also removes a lipophilic substituent that may support crystal packing or hydrophobic contacts.\n\n4. The tertiary amine remains available for protonation, and the nitrile and benzodioxole oxygens provide additional polarity. The net solubility effect is therefore chemically plausible but uncertain and would depend on ionization state, solid-state packing, and experimental conditions.\n}\n{\"Final Target Molecule\":\"CN(C)Cc1ncc(F)c(N#Cc2ncc(C(=O)O)c2)n1\"}",
+        "gold": "N#Cc1ncc(F)c(N(Cc2ccc(Cl)cc2)Cc2ccc3c(c2)OCO3)n1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1c(Sc2cccc(Cl)c2)n(COCCO)c(=O)[nH]c1=O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methyl-substituted thiazolidinedione-like core, a chlorophenyl thioether, and a hydroxyethyl substituent. The thioether, aromatic ring, and methyl group contribute hydrophobic character, while the carbonyls and ether provide hydrogen-bond acceptors.\n\n2. The demonstrated modification replaces the chlorophenyl thioether with a methyl-substituted pyridyl thioether. This changes the heteroaromatic ring from an aniline-like aryl group to a pyridine ring, removes chlorine, and retains a thioether sulfur.\n\n3. Introducing the pyridine nitrogen adds a hydrogen-bond acceptor and increases polarity relative to the chlorophenyl group. Removing chlorine may also reduce lipophilicity, although the retained methyl and thioether groups still contribute hydrophobic character.\n\n4. This substitution is chemically plausible as a solubility-oriented change, but the net effect on aqueous solubility is not assured because crystal packing, ionization state, and the remaining hydrophobic substituents may offset the added polarity.\n}\n{\"Final Target Molecule\":\"Cc1cc(NC(=O)c2c(C)nc2=O)ccn1Sc1cccc(C)s1\"}",
+        "gold": "Cc1c(Sc2cccc(Cl)c2)n(COCCO)c(=O)[nH]c1=O"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCSc1nnc(NC(=O)C(NC(=O)c2ccccc2F)C(C)C)s1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a thioether-linked, nitrogen-rich five-membered heteroaromatic ring, a tertiary amide, and a fluorophenyl amide. The amides and heteroaromatic nitrogens provide hydrogen-bonding capacity, while the phenyl and thioether contribute hydrophobic character.\n\n2. The demonstrated modification replaces the thioether-linked heteroaromatic ring with a methyl-substituted pyrazole, while retaining the central amide and fluorophenyl amide framework.\n\n3. This change removes the thioether sulfur and reduces the number of ring carbons, which may lower lipophilicity and alter crystal packing. The pyrazole introduces additional ring nitrogens and a pyrazole NH, increasing hydrogen-bond donor/acceptor capacity and potentially improving hydration.\n\n4. Improved aqueous solubility is chemically plausible, but not assured: the retained phenyl ring and fluorine, together with possible crystal-lattice effects, could offset the polarity increase. Experimental solubility and solid-state measurements would be needed to establish any improvement.\n}\n{\"Final Target Molecule\":\"Cc1cc(NC(=O)C(NC(=O)c2ccccc2F)C(C)C)n[nH]1\"}",
+        "gold": "CCSc1nnc(NC(=O)C(NC(=O)c2ccccc2F)C(C)C)s1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1ccc(-c2nc3ccc(C)cn3c2Cc2ccsc2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a methylphenyl substituent, and a thiophene-bearing side chain. The aromatic rings and thiophene contribute hydrophobic surface area, while the ring nitrogens provide limited hydrogen-bond-accepting character.\n\n2. The demonstrated modification replaces the thiophene-containing side chain with a branched alkyl substituent, while retaining the methylphenyl and fused heteroaromatic framework.\n\n3. Removing the thiophene reduces aromatic surface area and polarizability, which could lower hydrophobicity and disrupt crystal packing. However, the alkyl group remains nonpolar, and the change does not introduce a new hydrogen-bond donor or acceptor.\n\n4. This substitution is chemically plausible as a solubility-oriented adjustment, but its net effect is uncertain because reduced aromaticity and altered solid-state packing may offset the loss of thiophene-associated lipophilicity.\n{\"Final Target Molecule\": \"Cc1ccc(-c2nc3ccc(C)cn3c2C(C)C)cc1\"}",
+        "gold": "Cc1ccc(-c2nc3ccc(C)cn3c2Cc2ccsc2)cc1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1COCC2)c1ccc(C#N)cc1Cl.\n"
+            }
+        ],
+        "prediction": "1. The source contains a chlorophenyl–propyl–amide–pyridine core, with a pyridine N-oxide substituent and a terminal nitrile. The amide, ether, and nitrile provide hydrogen-bonding capacity, while the aromatic rings and chlorine contribute hydrophobic character.\n\n2. The demonstrated modification replaces the pyridine N-oxide substituent with a hydroxyl group while retaining the chlorophenyl–propyl–amide–pyridine framework and terminal nitrile.\n\n3. This change removes a heteroaromatic ring and introduces a hydrogen-bond donor/acceptor, potentially increasing polarity and enabling additional hydration. However, it also removes the N-oxide acceptor and may reduce aromatic surface area, so the net solubility effect is not unambiguous.\n\n4. The modification is chemically plausible as a polarity-tuning strategy, but improved water solubility would require experimental confirmation because crystal packing, ionization, and solid-state properties may offset the expected benefit.\n}\n{\"Final Target Molecule\":\"CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1OCC2)c1ccc(C#N)cc1Cl.\"}",
+        "gold": "CCC(NC(=O)c1cc(C(=O)N2CCCC2C)n2c1COCC2)c1ccc(C#N)cc1Cl"
+    },
+    "10": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=c1cc(N2CCOCC2)oc2cc(OCc3ccc(Cl)cc3)ccc12.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused oxygen-containing aromatic core, a morpholine substituent, and a chlorophenyl ether. The morpholine nitrogen is basic and may be protonated under suitable pH conditions, while the ether and aromatic rings contribute hydrophobic character.\n\n2. The demonstrated modification replaces the chlorophenyl group attached through the ether with a methyl group, converting the chlorophenyl ether into a methyl ether while retaining the fused core and morpholine substituent.\n\n3. Removing the chlorophenyl ring reduces aromatic surface area and molecular size, which could lower hydrophobic burden and potentially improve aqueous solubility. However, it also removes the phenyl ring’s hydrogen-bond-accepting character and may reduce crystal-packing interactions.\n\n4. The methyl group remains nonionizable and adds little hydrogen-bonding capacity, so any solubility benefit is chemically plausible mainly from reduced hydrophobic surface area. The actual effect would depend on ionization state, solid form, and lattice energy and is not established by the structural change alone.\n}\n{\"Final Target Molecule\":\"COCc1ccc2c(oc3cc(N4CCOCC4)ccc3c3ccccc3)cc12\"}",
+        "gold": "O=c1cc(N2CCOCC2)oc2cc(OCc3ccc(Cl)cc3)ccc12"
+    },
+    "11": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Brc1ccc(OCCCCN2CCCCC2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a bromophenyl ether linked through a four-methylene spacer to a basic piperidine ring. The ether and amine provide hydrogen-bond acceptors and a potentially protonatable center, while the bromophenyl and alkyl regions contribute hydrophobic character.\n\n2. The demonstrated modification replaces the bromine on the phenyl ring with a hydroxyl group. This removes a strongly lipophilic, polarizable substituent and introduces a hydrogen-bond donor/acceptor while retaining the aromatic ring.\n\n3. The four-methylene ether linker and piperidine-containing side chain are retained; the proposed structure does not actually replace the ether with a carbamate or remove the spacer. The piperidine nitrogen remains basic and may support aqueous solubility through protonation.\n\n4. Replacing bromine with hydroxyl could improve hydration and reduce lipophilicity, but the remaining phenyl ring, alkyl spacer, and neutral piperidine may still limit aqueous solubility. Any improvement would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"Oc1ccc(OCCCCN2CCCCC2)cc1\"}",
+        "gold": "Brc1ccc(OCCCCN2CCCCC2)cc1"
+    },
+    "12": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(Oc2c(Cl)cnn(-c3cccc(Cl)c3)c2=O)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a hydrophobic chlorophenyl group and a methyl group, which contribute lipophilicity, while the ether, carbonyl, and nitrogen-containing heterocycle provide hydrogen-bond acceptors and a possible ionizable center.\n\n2. The demonstrated modification replaces the methyl substituent on the phenyl ring with a hydroxyl group, converting that ring into a phenol. The chlorophenyl group, ether linkage, carbonyl, and heterocyclic core are retained.\n\n3. The phenol adds a hydrogen-bond donor and increases polarity without substantially increasing molecular size. This could improve hydration and lower lipophilicity relative to the methyl analogue, although the retained chlorinated aromatic regions remain hydrophobic.\n\n4. The change is chemically plausible as a solubility-oriented design, but its effect will depend on phenol ionization, crystal packing, and solid-state stability; improved aqueous solubility is therefore not assured.\n{\"Final Target Molecule\": \"O=C1Nc2cc(Oc3ccc(Cl)cc3)nc21\"}",
+        "gold": "COc1ccc(Oc2c(Cl)cnn(-c3cccc(Cl)c3)c2=O)cc1"
+    },
+    "13": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cccc(-c2nnc(SCc3ccc(C#N)cc3)n2Cc2ccco2)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxyphenyl-substituted triazole linked through a methylene thioether to a furan-2-carboxamide. The amide, triazole, ether, and methoxy oxygen provide hydrogen-bonding capacity, while the aromatic rings and thioether contribute hydrophobic surface area.\n\n2. The nitrile substituent adds a compact polar group but is neutral and provides only dipolar interactions; it does not introduce a hydrogen-bond donor or readily ionizable functionality.\n\n3. The demonstrated modification replaces the aryl nitrile with a carboxylic acid while retaining the remaining scaffold unchanged. This increases polarity and introduces a hydrogen-bond donor and a readily ionizable group, which could favor aqueous solubility.\n\n4. The effect remains dependent on pH, solid-state packing, and the balance between neutral and ionized forms, so improved intrinsic solubility cannot be inferred without measurement.\n{\"Final Target Molecule\": \"COc1cccc(-c2nnc(SCc3ccc(C(=O)O)cc3)n2Cc2ccco2)c1\"}",
+        "gold": "COc1cccc(-c2nnc(SCc3ccc(C#N)cc3)n2Cc2ccco2)c1"
+    },
+    "14": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cccc(C(=O)OCC(C)C2CCC3C(O)CCCC23C)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxyphenyl ring, a carboxylic acid, a branched alkyl chain, and a fused hydroxylated carbocyclic substituent. The acid and hydroxyl groups provide hydrogen-bonding capacity, while the aromatic and alkyl regions contribute hydrophobic character.\n\n2. The demonstrated modification replaces the fused hydroxylated carbocyclic group with a smaller cyclohexyl group, removing the ring oxygen and several hydroxylated carbons while retaining a six-membered carbocyclic ring.\n\n3. This change reduces hydrogen-bonding capacity and molecular size, which could lower polar surface area and potentially reduce aqueous solubility. However, it also removes a hydroxyl group and may increase lipophilicity, so the net solubility effect is not unambiguous.\n\n4. The carboxylic acid remains available for ionization, and the methoxyphenyl group retains its aromatic character. The modification is chemically plausible, but improved water solubility would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"COc1cccc(C(=O)OCC(C)C2CCC3CCCCC23)c1.\"}",
+        "gold": "COc1cccc(C(=O)OCC(C)C2CCC3C(O)CCCC23C)c1"
+    },
+    "15": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)C(NC(=O)c1ccccc1)c1ccccc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains two phenyl rings and an amide, giving substantial hydrophobic aromatic surface area. Its ester and amide provide hydrogen-bond acceptors, but neither is strongly ionizable under typical aqueous conditions.\n\n2. The demonstrated modification replaces the aryl ester substituent with a hydroxyl group while retaining the amide linkage and both phenyl rings.\n\n3. The hydroxyl adds a hydrogen-bond donor and acceptor and reduces the hydrophobic character of that aryl position, which could favor hydration and improve aqueous solubility.\n\n4. This is a chemically plausible solubility-oriented change, although the remaining two phenyl rings still impose a significant hydrophobic burden, and actual solubility will also depend on solid-state packing, crystallinity, and pH.\n{\"Final Target Molecule\": \"O=C(NC(=O)c1ccccc1)c1ccccc1\"}",
+        "gold": "CCOC(=O)C(NC(=O)c1ccccc1)c1ccccc1"
+    },
+    "16": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)(C)Cc1nc2cc(S(=O)(=O)CC3CCNCC3)ccc2n1CC1CC1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a methylsulfone-linked piperidine, and a branched alkyl substituent. The sulfone and heteroaromatic nitrogens provide hydrogen-bond acceptors, while the alkyl groups contribute hydrophobic character.\n\n2. The branched alkyl substituent is a plausible solubility limitation because it adds nonpolar surface area without providing hydrogen-bonding functionality. The piperidine nitrogen may be protonated under suitable pH conditions, but the sulfone is neutral and does not provide a hydrogen-bond donor.\n\n3. The demonstrated modification replaces the branched alkyl group with a phenyl ring while retaining the methylsulfone-linked piperidine and fused heteroaromatic scaffold. This increases aromatic surface area and may favor crystal packing, although phenyl is also hydrophobic and adds no new ionizable or hydrogen-bonding group.\n\n4. The change is chemically plausible as a solubility-oriented design hypothesis, but the added aromatic ring could also increase lipophilicity or reduce aqueous solubility through stronger hydrophobic or π-stacking interactions. Improved solubility therefore cannot be inferred without experimental measurement.\n}\n{\"Final Target Molecule\":\"Cc1ccc(S(=O)(=O)CC2CCNCC2)cc1n1nc2ccccc2n1CC1CC1\"}",
+        "gold": "CC(C)(C)Cc1nc2cc(S(=O)(=O)CC3CCNCC3)ccc2n1CC1CC1"
+    },
+    "17": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: c1ccc(Nc2ncnc3ccc(-c4cncs4)cc23)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source is a largely planar, fused aza-aromatic scaffold bearing a methyl group and a thiazolyl substituent. Its extended aromatic surface and limited heteroatom content are consistent with substantial hydrophobic character.\n\n2. The thiazolyl group adds aromatic surface area and a ring nitrogen, but its sulfur atom is not appreciably ionizable under typical aqueous conditions. The fused aza-aromatic system may also support crystal packing that limits dissolution.\n\n3. The demonstrated modification replaces the thiazolyl substituent with a pyridyl ring while retaining the remaining molecular framework and substitution pattern.\n\n4. Pyridine nitrogen provides a hydrogen-bond acceptor and may be protonated under suitable pH conditions, potentially increasing hydration and enabling salt formation. This is a chemically plausible solubility-oriented change, although the outcome will depend on pH, solid-state packing, and the compound’s actual pKa.\n{\"Final Target Molecule\": \"CNc1cc(-c2ccc3ncnc(Nc4ccccc4)c3c2)ccn1\"}",
+        "gold": "c1ccc(Nc2ncnc3ccc(-c4cncs4)cc23)cc1"
+    },
+    "18": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1ccccc1NC(=O)N1CCCC(C(=O)c2ccc3c(c2)OCO3)C1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a phenyl ether, a benzodioxole ring, a thioether, and a piperidine bearing an amide. The aromatic rings and thioether contribute hydrophobic surface area, while the amide and ether oxygens provide hydrogen-bonding capacity.\n\n2. The demonstrated modification replaces the phenyl ether substituent with a directly attached phenyl ring bearing a carboxamide. The benzodioxole, thioether, piperidine, and amide linkage are retained.\n\n3. Removing the ether eliminates one nonpolar aromatic substituent, while the added amide introduces two hydrogen-bond donors and a strong carbonyl acceptor. This may increase hydration and reduce overall lipophilicity, although the added aromatic ring also preserves substantial hydrophobic character.\n\n4. The modification is chemically plausible as a solubility-oriented design, but the competing effects of aromatic surface area, amide polarity, and crystal packing make the net solubility change uncertain; no measured improvement or retained activity can be inferred from the structural change alone.\n}\n{\"Final Target Molecule\":\"NC(=O)c1ccccc1NC(=O)N1CCCC(C(=O)c2ccc3c(c2)OCO3)C1.\"}",
+        "gold": "CSc1ccccc1NC(=O)N1CCCC(C(=O)c2ccc3c(c2)OCO3)C1"
+    },
+    "19": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: FC(F)(F)c1ccccc1-c1nccc(NCc2ccccc2)n1.\n"
+            }
+        ],
+        "prediction": "1. The source is a largely planar, aromatic diazine bearing a trifluoromethylphenyl group and a benzylamino substituent. Its two phenyl rings and CF₃ group contribute substantial hydrophobic surface area, while the ring nitrogens and primary amine provide limited polarity.\n\n2. The demonstrated modification replaces the benzylamino substituent with a directly attached pyridyl ring. This removes the methylene spacer, reduces conformational flexibility, and exchanges the primary amine for a pyridine nitrogen.\n\n3. The pyridine nitrogen is a hydrogen-bond acceptor and may be protonated under suitable pH conditions, potentially increasing hydration and enabling salt formation. However, the added aromatic ring also increases planarity and hydrophobic surface area, so its effect on aqueous solubility is not unambiguous.\n\n4. The trifluoromethylphenyl group is retained unchanged. The modification is chemically plausible as a polarity–hydrophobicity rebalance, but improved solubility would require experimental confirmation because crystal packing and ionization state may dominate the outcome.\n}\n{\"Final Target Molecule\":\"c1ccc(-c2ccncc2)cc1-c1ccccc1C(F)(F)F\"}",
+        "gold": "FC(F)(F)c1ccccc1-c1nccc(NCc2ccccc2)n1"
+    },
+    "20": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1cnc(Oc2ccccc2-c2ccc(-c3cnc(N)cn3)c(F)c2)nc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a hydrophobic biphenyl-like aromatic region, a fluorine substituent, and a methoxy group, which contribute lipophilicity. Its aminopyrimidine and pyridine nitrogens provide hydrogen-bond acceptors, but the molecule has no hydrogen-bond donor.\n\n2. The demonstrated modification replaces the methoxy substituent on the aminopyrimidine ring with a primary amino group while retaining the remaining aromatic and fluorinated scaffold.\n\n3. This change removes a neutral ether acceptor and introduces a hydrogen-bond donor, potentially increasing polarity and enabling additional hydration. However, it also removes an ether oxygen that can accept hydrogen bonds from water.\n\n4. The modification is chemically plausible as a solubility-oriented design, but the retained biphenyl-like aromatic surface and fluorine may still limit aqueous solubility. Any improvement would depend on ionization state, crystal packing, and solid-state properties and is not established by the structural change alone.\n}",
+        "gold": "COc1cnc(Oc2ccccc2-c2ccc(-c3cnc(N)cn3)c(F)c2)nc1"
+    },
+    "21": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C(=O)NCc1ccc(C(F)(F)F)nc1SC1CCCCC1)c1ccc(NS(C)(=O)=O)c(F)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a substituted pyridine, a trifluoromethyl group, a thioether-linked cyclohexyl group, and a sulfonamide. The aromatic rings and CF₃ group contribute hydrophobic surface area, while the amide, sulfonamide, and ring nitrogen provide polar functionality.\n\n2. The demonstrated modification replaces the pyridine ring nitrogen with a carbon–methylene linkage bearing a hydroxyl group, converting the pyridine into a secondary alcohol while retaining the remainder of the molecular scaffold.\n\n3. This change removes one aromatic ring nitrogen and introduces a hydrogen-bond donor/acceptor, potentially increasing hydration and reducing overall aromatic hydrophobicity. However, the added methylene also increases molecular size and conformational flexibility.\n\n4. The modification is chemically plausible as a solubility-oriented design, but the retained CF₃, aromatic rings, and neutral amide and sulfonamide groups may still limit aqueous solubility. Any improvement would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"CC(C(=O)NCc1ccc(C(F)(F)F)nc1SC1CCCCC1)c1ccc(NS(C)(=O)=O)c(F)c1COC\"}",
+        "gold": "CC(C(=O)NCc1ccc(C(F)(F)F)nc1SC1CCCCC1)c1ccc(NS(C)(=O)=O)c(F)c1"
+    },
+    "22": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCNc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, a phenyl substituent, a fluorophenyl group, and a propylamino substituent. The aromatic rings and fluorophenyl group contribute substantial hydrophobic surface area.\n\n2. The propyl chain adds nonpolar surface area and may limit aqueous solubility, although the terminal amino group provides hydrogen-bonding capacity and may be protonated depending on its basicity and the heteroaromatic environment.\n\n3. The demonstrated modification replaces the propylamino substituent with a methoxy group while retaining the heteroaromatic core, phenyl group, and fluorophenyl substituent.\n\n4. Removing the propyl chain reduces hydrophobic surface area and molecular size, while the methoxy group preserves one hydrogen-bond acceptor. This is chemically plausible as a solubility-oriented change, but the remaining aromatic and fluorinated regions may still limit dissolution, and the effect would require experimental confirmation.\n}\n{\"Final Target Molecule\":\"COc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F\"}",
+        "gold": "CCCNc1nc(-c2ccccc2)nc2c1nnn2Cc1ccccc1F"
+    },
+    "23": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cn1c(=O)n(CCOc2ccc(Cl)cc2Cl)c2ccccc21.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-containing heterocyclic carbonyl core, a dichlorophenoxyethyl substituent, and a flexible two-carbon ether side chain. The chlorinated aromatic ring and alkyl linker contribute substantial hydrophobic character.\n\n2. The demonstrated modification replaces the dichlorophenoxyethyl group with a directly attached chlorophenyl group, removing both chlorine atoms and the ether-containing linker while reducing side-chain flexibility.\n\n3. Removing the ether oxygen and chlorinated alkyl chain may lower hydrogen-bond-acceptor capacity and increase lipophilicity, which could be unfavorable for aqueous solubility. Direct aryl attachment may also reduce the extent of hydration around the core.\n\n4. The fused heterocyclic carbonyl core remains unchanged, so the proposed solubility benefit cannot be attributed to that scaffold. Overall, the structural change is chemically plausible, but improved water solubility is not established without experimental or calculated solubility data.\n}",
+        "gold": "Cn1c(=O)n(CCOc2ccc(Cl)cc2Cl)c2ccccc21"
+    },
+    "24": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: C(=Cc1ccccc1)CSc1nnc(-c2cccnc2)o1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a phenyl ring, a thioether, and a nitrogen/oxygen-containing five-membered heteroaromatic ring; the phenyl and thioether contribute hydrophobic character, while the heteroatoms provide limited hydrogen-bond acceptance.\n\n2. The demonstrated modification replaces the phenyl substituent on the thioether sulfur with a hydroxyl group, converting the phenylthio substituent into a hydroxythio substituent while retaining the thioether linkage and the remainder of the scaffold.\n\n3. The hydroxyl adds a hydrogen-bond donor and increases local polarity without adding a strongly hydrophobic aromatic ring. This is chemically consistent with potentially improving aqueous solubility, although the actual effect will depend on ionization, crystal packing, and the compound’s solid-state form.\n\n4. The modification is structurally plausible, but the retained phenyl ring and thioether still contribute hydrophobic surface area, so improved solubility cannot be assumed without measurement.\n}\n{\"Final Target Molecule\":\"C(=Cc1ccccc1)CSc1nnc(O)c1\"}",
+        "gold": "C(=Cc1ccccc1)CSc1nnc(-c2cccnc2)o1"
+    },
+    "25": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCC1(C(=O)Nc2ccc(C#N)c(C(F)(F)F)c2)CC(C(F)(F)F)=NN1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-containing heterocycle, a carboxamide, a phenyl ring, and two aryl trifluoromethyl groups. The amide and ring nitrogens provide hydrogen-bonding capacity, while the CF₃ groups and alkyl substituents contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the aryl trifluoromethyl group with a methyl group and changes the side-chain arrangement around the amide carbonyl. The fused heterocyclic core, carboxamide, and phenyl ring are retained.\n\n3. Removing CF₃ reduces molecular size and fluorinated hydrophobic surface area, which could lower lipophilicity and potentially improve aqueous solubility. However, the added methyl group retains some nonpolar character, and the modification does not introduce a new strongly ionizable or highly polar group.\n\n4. The retained amide and heterocyclic nitrogens may support hydration, but the remaining aromatic and CF₃-free aryl group may still limit solubility. Improved water solubility is therefore chemically plausible but cannot be inferred without experimental solubility and solid-state data.\n}\n{\"Final Target Molecule\":\"CC1(C(=O)Nc2ccc(C#N)c(C)cc2)CC1(C(F)(F)F)=NN1.\"}",
+        "gold": "CCCC1(C(=O)Nc2ccc(C#N)c(C(F)(F)F)c2)CC(C(F)(F)F)=NN1"
+    },
+    "26": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CS1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused sulfur/nitrogen heterocyclic core, a difluorophenyl group, a chlorophenyl substituent, and an N-methyl group. The chlorophenyl and difluorophenyl rings contribute substantial hydrophobic surface area.\n\n2. The demonstrated modification replaces the N-methyl substituent with a hydroxyl group while retaining the fused core, difluorophenyl group, and chlorophenyl substituent.\n\n3. The hydroxyl adds a hydrogen-bond donor and acceptor and reduces the strongly lipophilic character of the methyl group. This may improve hydration and lower overall hydrophobicity, although the retained aromatic rings still impose a significant lipophilic burden.\n\n4. The modification is chemically plausible as a solubility-oriented change, but its net effect will depend on ionization state, crystal packing, and solid-state stability; improved aqueous solubility is therefore not assured.\n}\n{\"Final Target Molecule\":\"O=C1(c2ccc(F)cc2F)COC(c2ccc(Cl)cc2)CC1N1CCOCC1\"}",
+        "gold": "NC1=NC2(c3ccc(F)cc3F)COC(c3ccc(Cl)cc3)CC2CS1"
+    },
+    "27": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: O=C(NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1)c1ccc([N+](=O)[O-])cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a bromophenyl–methylene–amide core, a nitrophenyl ring, and a morpholine substituent. The nitro and amide groups provide hydrogen-bonding capacity, while the aromatic rings and bromine contribute hydrophobic character.\n\n2. The demonstrated modification replaces the aryl bromine with a methyl group. This removes a polarizable, relatively lipophilic substituent and lowers molecular weight, but methyl is also nonpolar and does not add hydrogen-bonding functionality.\n\n3. The amide, nitro, morpholine, and core scaffold are retained; therefore, the proposed structure does not actually replace the nitro group with morpholine or introduce a new amide linkage. The methyl substitution is the principal change.\n\n4. Removing bromine could modestly reduce hydrophobicity, while methyl may offset that effect. Because the molecule remains largely aromatic and lacks a strongly ionizable group, improved aqueous solubility is chemically plausible but not assured without experimental solubility and solid-state data.\n}\n{\"Final Target Molecule\":\"Cc1ccc(C(=O)NC(=O)C(=Cc2ccc([N+](=O)[O-])cc2)cc1\"}",
+        "gold": "O=C(NC(=Cc1ccc(Br)cc1)C(=O)N1CCOCC1)c1ccc([N+](=O)[O-])cc1"
+    },
+    "28": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)N3Cc4ccccc4C3)cc2)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains two aromatic rings, a methoxy group, two amide linkages, and a benzyl-substituted urea. The aromatic and benzyl regions contribute substantial hydrophobic surface area, while the amides and methoxy oxygen provide limited hydrogen-bonding capacity.\n\n2. The demonstrated modification replaces the terminal benzyl group of the urea with a methyl group, converting the urea into a methyl-substituted amide. The methoxy group, central phenyl ring, amide linkage, and urea functionality are retained.\n\n3. Removing the phenyl ring and benzyl phenyl ring reduces aromatic surface area and molecular size, which could lower hydrophobic burden and potentially improve aqueous solubility. However, the methyl substituent remains nonpolar, and the product still lacks a strongly ionizable group.\n\n4. The change is chemically plausible as a solubility-oriented design, but its net effect is uncertain because crystal packing, conformational changes, and the retained hydrophobic aromatic framework may offset the reduced hydrophobic burden.\n}\n{\"Final Target Molecule\": \"COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)C)cc2)c1.\"}",
+        "gold": "COc1ccc(OC)c(NC(=O)c2ccc(NC(=O)N3Cc4ccccc4C3)cc2)c1"
+    },
+    "29": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1ccc(Oc2ncccc2C(=NO)NCc2ccncc2)cc1C.\n"
+            }
+        ],
+        "prediction": "1. The source contains a phenyl ring bearing a methyl thioether, a phenyl ether, a diazine ring, and an amidoxime-like C(=NO)N unit. The phenyl rings and thioether contribute hydrophobic surface area, while the ether, ring nitrogens, and amidoxime provide hydrogen-bonding capacity.\n\n2. The demonstrated modification replaces the phenyl methyl thioether with a phenyl methyl group, removing the sulfur atom and reducing molecular size and polarizability. The phenyl ether, diazine ring, and amidoxime-like functionality are retained.\n\n3. Removing the thioether may lower lipophilicity and reduce susceptibility to sulfur oxidation, but it also removes a polarizable, weakly hydrogen-bond-accepting group. The retained ether and amidoxime-like unit still provide hydrogen-bonding interactions with water.\n\n4. This substitution is chemically plausible as a solubility-oriented change, although its net effect is not assured because aromaticity, crystal packing, and the largely neutral scaffold may offset any gain in hydration.\n}\n1. The source contains a phenyl ring bearing a methyl thioether, a phenyl ether, a diazine ring, and an amidoxime-like C(=NO)N unit.\n\n2. The demonstrated modification replaces the phenyl methyl thioether with a phenyl methyl group, removing the sulfur atom and reducing molecular size and polarizability. The phenyl ether, diazine ring, and amidoxime-like functionality are retained.\n\n3. Removing the thioether may lower lipophilicity and reduce susceptibility to sulfur oxidation, but it also removes a polarizable, weakly hydrogen-bond-accepting group. The retained ether and amidoxime-like unit still provide hydrogen-bonding interactions with water.\n\n4. This substitution is chemically plausible as a solubility-oriented change, although its net effect is not assured because aromaticity, crystal packing, and the largely neutral scaffold may offset any gain in hydration.\n{\"Final Target Molecule\":\"Cc1ccc(Oc2ncccc2C(=NO)NCc2ccncc2)cc1C\"}",
+        "gold": "CSc1ccc(Oc2ncccc2C(=NO)NCc2ccncc2)cc1C"
+    },
+    "30": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN(C)CCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fluorophenyl amide, a fused nitrogen-rich heteroaromatic core, and a dimethylaminoethyl substituent. The amide and heterocyclic nitrogens provide hydrogen-bonding capacity, while the fluorophenyl ring and fused aromatic system contribute hydrophobic surface area.\n\n2. The dimethylaminoethyl chain is flexible and contains a tertiary amine that may be protonated under suitable pH conditions. This can support aqueous solubility through ionization, although the added alkyl chain and aromatic rings may still limit overall solubility.\n\n3. The demonstrated modification replaces the dimethylaminoethyl amide substituent with a shorter, branched aminoalkyl group bearing a hydroxymethyl group. The amide linkage and fluorophenyl–heteroaromatic core are retained.\n\n4. The hydroxymethyl group adds a hydrogen-bond donor and acceptor and reduces side-chain flexibility, which could improve hydration relative to the dimethylaminoethyl chain. However, the retained aromatic rings and possible crystal-packing effects may offset this benefit, so improved aqueous solubility is chemically plausible but not established by the supplied evidence.\n}\n{\"Final Target Molecule\":\"CC(CO)NCCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1\"}",
+        "gold": "CN(C)CCNC(=O)c1cc(F)cc(-c2ccc3ncnc(N)c3n2)c1"
+    },
+    "31": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: Cc1noc(C)c1C(=O)N1CCC2CC(c3ccncn3)OC2C1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methyl-substituted isoxazole carboxamide, a substituted piperidine, and a diazine ring. The amide and ring nitrogens provide hydrogen-bonding capacity, while the aromatic rings and methyl group contribute hydrophobic character.\n\n2. The demonstrated modification replaces the methyl-isoxazolyl portion of the amide substituent with a methylthio group, while retaining the amide-linked piperidine and diazine-containing region.\n\n3. Removing the isoxazole reduces aromatic surface area and introduces a smaller, polarizable thioether. This could alter hydration and reduce crystal-packing interactions, potentially favoring aqueous solubility.\n\n4. The change is chemically plausible as a solubility-oriented design, but the remaining aromatic rings and methyl group still contribute lipophilicity, and the piperidine nitrogen may be protonated. Improved solubility therefore cannot be assumed without measurement.\n{\"Final Target Molecule\": \"CSc1ccc(C(=O)N2CCC3CC(c4ccncn4)OC3C2)cc1\"}",
+        "gold": "Cc1noc(C)c1C(=O)N1CCC2CC(c3ccncn3)OC2C1"
+    },
+    "32": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CN(C)C)Oc1cc(Oc2ccc(S(C)(=O)=O)cc2)cc(C(=O)Nc2nccs2)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a phenyl ring bearing a hydroxyl, a sulfonamide, a methyl ester, and a tertiary amine linked through a methylene group. The sulfonamide, phenol, and amine provide hydrogen-bonding capacity, while the aromatic rings and methyl group contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the branched aminoalkoxy substituent on the phenyl ring with a directly attached pyridyl ring. The phenol, sulfonamide, methyl ester, and amide-linked thiazole are retained; no piperazine or piperidine is introduced.\n\n3. Removing the branched aminoalkoxy group reduces the number of rotatable bonds and changes the substituent’s steric and conformational behavior. The pyridine nitrogen adds a hydrogen-bond acceptor and may increase polarity, although the aromatic ring also preserves substantial nonpolar surface area.\n\n4. This substitution is chemically plausible as a solubility-oriented change because it reduces the flexible, potentially lipophilic branched group and introduces a heteroaromatic ring. However, the retained aromatic rings and methyl group may still limit aqueous solubility, and the actual effect would require experimental measurement.\n}\n{\"Final Target Molecule\":\"CC(=O)Nc1nccs1-c1ccc(S(C)(=O)=O)cc1Oc1cc(-c2ccncc2)cc1.\"}",
+        "gold": "CC(CN(C)C)Oc1cc(Oc2ccc(S(C)(=O)=O)cc2)cc(C(=O)Nc2nccs2)c1"
+    },
+    "33": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCCOC(=O)Cc1ccc2c(c1)C(=O)c1ccccc1CO2.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused aromatic lactone-like core, a phenol, and a benzylic ethyl ester. The phenol and ester provide hydrogen-bonding capacity, while the fused aromatic system and alkyl substituent contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the benzylic ethyl ester with a benzylic primary amine, while retaining the fused core, phenol, and alkyl substituent.\n\n3. This change removes the ester carbonyl and ethyl group, lowers molecular weight and hydrophobic carbon content, and introduces a hydrogen-bond donor. These features could favor aqueous solubility, although the primary amine may also strengthen crystal-lattice hydrogen bonding.\n\n4. The modification is chemically plausible as a solubility-oriented design, but the remaining fused aromatic system and alkyl chain still impose substantial hydrophobic character; improved water solubility or retained activity cannot be inferred without measurement.\n}\n{\"Final Target Molecule\":\"NCCCCCCCCc1ccc2c(c1)C(=O)c1ccccc1CO2.\"}",
+        "gold": "CCCCCOC(=O)Cc1ccc2c(c1)C(=O)c1ccccc1CO2"
+    },
+    "34": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C)cc2C)c(OC)c1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitrile, two phenyl rings, an ether, a ketone, and an amide, giving several hydrogen-bond acceptors but no hydrogen-bond donor.\n\n2. The demonstrated modification replaces the aryl methyl substituent with a hydroxymethyl group while retaining the nitrile, ketone, amide, and diaryl ether framework.\n\n3. The hydroxymethyl group adds a hydrogen-bond donor and increases local polarity, which could improve hydration of the aromatic region and potentially lower overall lipophilicity.\n\n4. This is a chemically plausible solubility-oriented change, although the added alcohol may also strengthen crystal-lattice hydrogen bonding, so improved aqueous solubility cannot be assumed without measurement.\n{\"Final Target Molecule\": \"CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(CO)cc2C)c(OC)c1.\"}",
+        "gold": "CCOC(=O)C(C#N)=Cc1ccc(OCC(=O)Nc2ccc(C)cc2C)c(OC)c1"
+    },
+    "35": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1c(F)cccc1Cl.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused N-heterocyclic carbonyl system, a carboxylic acid, a fluorophenyl ring, and a chloro substituent. The acid and carbonyl groups provide hydrogen-bonding capacity, while the aromatic rings and halogens contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the chloro substituent on the fluorophenyl ring with a hydroxyl group. The remaining scaffold, including the ester, carboxylic acid, and ring connectivity, is retained.\n\n3. Introducing a hydroxyl reduces the halogen-associated lipophilic contribution and adds a hydrogen-bond donor/acceptor. This may improve hydration and alter crystal packing, although the added phenol could also strengthen intermolecular hydrogen bonding and favor a more compact solid form.\n\n4. The modification is chemically plausible as a solubility-oriented change, but its net effect cannot be established from structure alone. Ionization of the carboxylic acid, tautomerism, solid-state packing, and lattice energy would also need to be considered.\n}\n{\"Final Target Molecule\":\"CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1c(F)cccc1O.\"}",
+        "gold": "CCOC(=O)C1=C(C)NC(C)=C(C(=O)OCC)C1c1c(F)cccc1Cl"
+    },
+    "36": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: FC(F)(F)c1ccc2c(c1)nc1n2CCOc2ccccc2-1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-containing bicyclic core, a phenyl ring, a furan ring, and a fluorinated phenyl substituent. The aromatic rings and fluorinated phenyl group contribute substantial hydrophobic surface area.\n\n2. The ether oxygen and ring nitrogens provide hydrogen-bond acceptors, while the furan oxygen is a hydrogen-bond acceptor and may also influence polarity and crystal packing. The source lacks a hydrogen-bond donor.\n\n3. The demonstrated modification replaces the fluorinated phenyl group with a methyl group while retaining the fused heterocyclic core, phenyl ring, and furan substituent.\n\n4. Removing the fluorinated phenyl ring reduces aromatic surface area and molecular size, which could lower hydrophobic burden and potentially improve solubility. However, methyl is also nonpolar, and the change may also reduce crystal-packing interactions, so improved aqueous solubility is chemically plausible but not assured without measurement.\n}\n{\"Final Target Molecule\":\"Cn1c(-c2ccccc2)nc2c1CCOc1ccccc12\"}",
+        "gold": "FC(F)(F)c1ccc2c(c1)nc1n2CCOc2ccccc2-1"
+    },
+    "37": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCCOc1ccccc1NC(=O)NC1CC2CCC(C1)N2C.\n"
+            }
+        ],
+        "prediction": "1. The source contains a hydrophobic phenyl ring and alkyl substituent, partially offset by a tertiary amide, a basic piperidine nitrogen, and a hydroxyl-containing ether side chain.\n\n2. The demonstrated modification replaces the phenyl-bound propoxy substituent with a methoxy group while retaining the phenyl ring, amide linkage, piperidine, and hydroxyl-containing side chain.\n\n3. Removing the propyl segment reduces hydrophobic surface area and molecular size, which could lower lipophilicity and potentially improve aqueous solubility. However, the change also removes a flexible chain that may have helped to access water or disrupt crystal packing.\n\n4. The tertiary amine remains protonatable and is therefore a plausible pH-dependent solubility determinant. The net solubility effect is chemically plausible but cannot be established without ionization, solid-state, and aqueous solubility measurements.\n}\n{\"Final Target Molecule\":\"COc1ccccc1NC(=O)NC1CC2CCC(C1)N2C.\"}",
+        "gold": "CCCCOc1ccccc1NC(=O)NC1CC2CCC(C1)N2C"
+    },
+    "38": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(NC(=O)Nc2nnc(N3CCCC3)s2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxyphenyl group, an amide linker, and a nitrogen-containing five-membered heteroaromatic ring. Its amide and heteroaromatic nitrogens provide hydrogen-bonding capacity, while the methoxyphenyl ring contributes hydrophobic surface area.\n\n2. The source also contains a saturated piperidinyl substituent, which adds a basic tertiary amine and increases molecular size. Protonation of this amine under suitable pH conditions could support aqueous solubility, although the added hydrophobic carbon may offset some of that benefit.\n\n3. The demonstrated modification replaces the piperidinyl group with a smaller methylamino group while retaining the methoxyphenyl–amide–heteroaromatic scaffold. This removes one ring carbon and reduces substituent size, while the methylamino group retains a hydrogen-bond acceptor and introduces a compact, weakly basic center.\n\n4. Reduced hydrophobic burden and altered ionization behavior are chemically plausible ways to favor aqueous solubility. However, the net effect remains uncertain because solubility will also depend on pH, protonation state, solid-state packing, and crystal lattice energy.\n}\n{\"Final Target Molecule\":\"COc1ccc(NC(=O)Nc2nnc(N(C)C)s2)cc1.\"}",
+        "gold": "COc1ccc(NC(=O)Nc2nnc(N3CCCC3)s2)cc1"
+    },
+    "39": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSc1ccc(NC(=O)NC2CCN(Cc3ccccc3)CC2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a phenyl ring bearing a methylthio substituent, an amide-linked piperidine, and a benzyl group. The amide and tertiary amine provide hydrogen-bonding capacity, while the aromatic rings and methylthio group contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the phenyl methylthio group with a phenyl methyl group. The amide, piperidine, benzyl substituent, and overall molecular scaffold are retained.\n\n3. Removing sulfur and the thioether oxidation product lowers molecular weight and may reduce lipophilicity. However, it also removes a polarizable sulfur atom and changes the local electronic character of the aromatic ring, which could alter crystal packing and hydration.\n\n4. This is a chemically plausible solubility-oriented change, but the retained phenyl and benzyl groups remain hydrophobic, and the piperidine nitrogen is likely protonated under aqueous conditions. Any net solubility benefit would therefore require experimental confirmation.\n}\n{\"Final Target Molecule\": \"Cc1ccc(NC(=O)NC2CCN(Cc3ccccc3)CC2)cc1.\"}",
+        "gold": "CSc1ccc(NC(=O)NC2CCN(Cc3ccccc3)CC2)cc1"
+    },
+    "40": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(CCc1ccc(-c2ccc(C#N)cc2)cc1)(C(=O)NO)S(C)(=O)=O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a hydrophobic biphenyl system, a nitrile, a sulfone, a carboxamide, and a methylsulfonamide. The aromatic rings and alkyl substituent contribute substantial nonpolar surface area.\n\n2. The demonstrated modification replaces the branched alkyl substituent on the sulfonamide nitrogen with a linear pentyl chain, while retaining the biphenyl, nitrile, sulfone, and carboxamide features.\n\n3. This change increases hydrophobic carbon content and may reduce the relative polarity of the sulfonamide, potentially lowering hydration and aqueous solubility.\n\n4. The modification is chemically plausible, but the added alkyl chain could also disrupt crystal packing and improve solid-state solubility. Therefore, improved water solubility cannot be inferred without experimental measurement.\n{\"Final Target Molecule\": \"CCCCCCS(=O)(=O)Nc1ccc(-c2ccc(C#N)cc2)cc1C(=O)NO.\"}",
+        "gold": "CC(CCc1ccc(-c2ccc(C#N)cc2)cc1)(C(=O)NO)S(C)(=O)=O"
+    },
+    "41": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CSC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O.\n"
+            }
+        ],
+        "prediction": "1. The source contains a hydroxylated sugar-like ring, a fused nitrogen-rich heterocycle, and a fluorine substituent. The sugar hydroxyls and ring oxygen provide hydrogen-bonding capacity, while the heterocyclic nitrogens can support polarity and potential protonation.\n\n2. The demonstrated modification replaces the fluorine substituent with a hydroxymethyl group while retaining the sugar, heterocyclic core, and overall molecular scaffold.\n\n3. The hydroxymethyl group adds a hydrogen-bond donor and acceptor and increases local polarity without substantially increasing molecular size. This could improve hydration and potentially lower lipophilicity relative to the fluorinated analogue.\n\n4. Improved aqueous solubility is chemically plausible but not assured: the added alcohol may also strengthen crystal-lattice hydrogen bonding, and the outcome will depend on ionization state, solid form, and the compound’s actual hydrophobicity.\n}\n{\"Final Target Molecule\":\"CSC1OC(n2cnc3c(N)nc(CO)nc32)C(O)C1O.\"}",
+        "gold": "CSC1OC(n2cnc3c(N)nc(F)nc32)C(O)C1O"
+    },
+    "42": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: N#Cc1cc(S(=O)(=O)Nc2ccc(F)cn2)ccc1Oc1ccccc1F.\n"
+            }
+        ],
+        "prediction": "1. The source contains a nitrile-bearing phenyl ring, a sulfonamide, a fluorinated pyridine, and a fluorophenyl ether. The sulfonamide and ether provide hydrogen-bonding capacity, while the aromatic rings and fluorinated groups contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the aryl nitrile with a carboxylic acid while retaining the sulfonamide, fluorinated pyridine, and fluorophenyl ether framework.\n\n3. A carboxylic acid is more polar and ionizable than a nitrile and can increase hydration, although its effect on aqueous solubility also depends on ionization state, solid-state packing, and crystal form.\n\n4. This substitution is chemically plausible as a solubility-oriented change, but the retained fluorinated aromatic groups remain lipophilic, so improved water solubility cannot be assumed without measurement.\n{\"Final Target Molecule\": \"O=C(O)c1cc(S(=O)(=O)Nc2ccc(F)cn2)ccc1Oc1ccccc1F\"}",
+        "gold": "N#Cc1cc(S(=O)(=O)Nc2ccc(F)cn2)ccc1Oc1ccccc1F"
+    },
+    "43": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCNc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a tertiary N-methyl aniline, a sulfone linker, and a para-aminophenyl ring. The sulfone and amines provide hydrogen-bonding capacity, while the aromatic rings contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the N-methyl substituent with a hydroxyl group while retaining the sulfone-linked, para-aminophenyl scaffold.\n\n3. The hydroxyl adds a hydrogen-bond donor and acceptor and reduces the strongly lipophilic character of the N-methyl group. This is chemically consistent with improved aqueous compatibility, although the two aromatic rings and sulfone remain hydrophobic features.\n\n4. The change is structurally plausible as a solubility-oriented design, but its effect will depend on ionization state, crystal packing, and solid-state stability; improved water solubility is therefore not assured.\n{\"Final Target Molecule\": \"Oc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1\"}",
+        "gold": "CCNc1ccc(S(=O)(=O)c2ccc(N)cc2)cc1"
+    },
+    "44": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCN(CC)c1n[n+]([O-])c2ccccc2[n+]1[O-].\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused aromatic diazine-like heterocycle with two nitro groups and a tertiary N,N-diethylamino substituent. The nitro groups add strong polarity and hydrogen-bond-accepting character, while the aromatic ring and alkyl groups contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the N,N-diethylamino group with a primary amino group while retaining the fused aromatic core and both nitro substituents.\n\n3. Removing the two ethyl groups reduces nonpolar surface area and molecular size, which could lower hydrophobic burden. However, the primary amino group is only a hydrogen-bond donor and is not expected to be strongly basic or readily protonated under typical aqueous conditions.\n\n4. The change is chemically plausible as a polarity–lipophilicity rebalance, but its net effect on solubility is uncertain because crystal packing, aromaticity, and the persistent nitro groups may offset the reduced alkyl content.\n}\n{\"Final Target Molecule\":\"Nc1n[n+]([O-])c2ccccc2[n+]1[O-]\"}",
+        "gold": "CCN(CC)c1n[n+]([O-])c2ccccc2[n+]1[O-]"
+    },
+    "45": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCNC(=O)Nc1nc2cc(-c3cccnc3)cc(-c3cccnc3)n2n1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused nitrogen-rich heteroaromatic core, two pyridyl substituents, and an N-ethyl-N-methyl amide. The amide and ring nitrogens provide hydrogen-bonding capacity, while the pyridyl rings and ethyl group contribute hydrophobic character.\n\n2. The demonstrated modification replaces the amide N-ethyl substituent with a hydroxymethyl group, converting the tertiary amide into a secondary amide while retaining the amide NH and the remainder of the scaffold unchanged.\n\n3. The hydroxymethyl group adds a hydrogen-bond donor and acceptor and reduces the hydrophobic contribution of the ethyl portion. This is chemically consistent with improved hydration and potentially better aqueous solubility.\n\n4. The change is structurally plausible, but the two pyridyl rings remain strongly lipophilic, and the molecule still lacks a strongly ionizable group. Any solubility benefit would therefore depend on solid-state packing, tautomerism, and pH and cannot be assumed without measurement.\n}\n{\"Final Target Molecule\":\"CC1CCN(CCO)c1c1nc2cc(-c3cccnc3)cc(-c3cccnc3)n2n1\"}",
+        "gold": "CCNC(=O)Nc1nc2cc(-c3cccnc3)cc(-c3cccnc3)n2n1"
+    },
+    "46": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: COc1ccc(C(=O)NO)cc1NC(=O)c1ccccc1Cl.\n"
+            }
+        ],
+        "prediction": "1. The source contains a methoxyphenyl group, an aryl ketone, a primary amide, and a chlorophenyl ring. The amide and ketone provide hydrogen-bonding capacity, while the aromatic rings and chlorine contribute hydrophobic surface area.\n\n2. The demonstrated modification replaces the methoxyphenyl ketone substituent with a directly attached pyridyl ring, while retaining the primary amide and chlorophenyl portions of the molecule.\n\n3. This change removes one methoxy group and one aryl ketone, reducing the number of hydrogen-bond acceptors and potentially altering crystal packing. The pyridine nitrogen introduces a basic, hydrogen-bond-accepting site, although its effect on aqueous solubility will depend on protonation state and solid-state properties.\n\n4. The modification is chemically plausible as a solubility-oriented design, but the retained chlorophenyl and pyridyl rings remain hydrophobic, and the primary amide remains the principal polar functionality. Improved water solubility therefore cannot be assumed without measurement.\n}\n{\"Final Target Molecule\":\"NC(=O)c1ccccc1Clc1ccncc1\"}",
+        "gold": "COc1ccc(C(=O)NO)cc1NC(=O)c1ccccc1Cl"
+    },
+    "47": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)N3CCCC3)ccc21.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused oxygen-containing aromatic core, a carboxamide, a sulfonamide, and a cyclohexyl substituent. The amide and sulfonamide provide hydrogen-bonding capacity, while the aromatic and cyclohexyl regions contribute hydrophobic surface area.\n\n2. The cyclohexyl group is a plausible solubility limitation because it adds nonpolar surface area without providing hydrogen-bond donors or acceptors. Its effect is context-dependent, however, because the sulfonamide and amide groups may support hydration and overall polarity.\n\n3. The demonstrated modification replaces the sulfonamide-linked cyclohexyl group with a methyl-substituted pyrrolidinyl group while retaining the core scaffold, amide, and sulfonamide. This removes one carbocyclic ring and introduces a secondary amine.\n\n4. Removing the cyclohexyl ring may reduce hydrophobic surface area, while the pyrrolidine nitrogen adds a hydrogen-bond acceptor and a potentially protonatable center. These changes are chemically consistent with improved aqueous solubility, although the actual effect would depend on ionization state, solid-state packing, and experimental conditions.\n}\n{\"Final Target Molecule\":\"CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)N3CCN(C)C3)ccc21.\"}",
+        "gold": "CCCNC(=O)Cn1c(=O)oc2cc(S(=O)(=O)N3CCCC3)ccc21"
+    },
+    "48": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CC(C)(C)OC(=O)NC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1.\n"
+            }
+        ],
+        "prediction": "1. The source combines a hydrophobic tert-butyl group and fused nitrogen-rich heteroaromatic system with a polar amide and a hydrophobic cyclohexyl ring. The amide and heterocyclic nitrogens provide hydrogen-bonding capacity, but the tert-butyl and cyclohexyl groups may limit aqueous solubility.\n\n2. The demonstrated modification replaces the tert-butyl ester substituent with a hydroxymethyl group while retaining the amide-linked cyclohexyl scaffold and fused heteroaromatic core.\n\n3. The hydroxymethyl group adds a hydrogen-bond donor and acceptor and reduces hydrophobic bulk, which could improve hydration relative to the tert-butyl group. However, it also removes the ester carbonyl and tert-butyl group, so the net solubility effect cannot be inferred from polarity alone.\n\n4. The modification is chemically plausible as a solubility-oriented change, but the remaining fused aromatic system and cyclohexyl ring still contribute substantial nonpolar surface area. Experimental solubility and ionization measurements would be needed to establish any improvement.\n}\n{\"Final Target Molecule\":\"OCNC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1\"}",
+        "gold": "CC(C)(C)OC(=O)NC1CCC(n2cnc3cnc4[nH]ccc4c32)CC1"
+    },
+    "49": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent, Optimize the Source Molecule to improve the compound's ability to dissolve in water (Solubility) while following a structured intermediate optimization process. \nYour response must be directly parsable JSON format:\n{\n    \"Final Target Molecule\": \"SMILES\",\n}\n\nSource Molecule: CN1CC2C=C(c3cncc(Oc4ccccc4)c3)CC(C2)C1.\n"
+            }
+        ],
+        "prediction": "1. The source contains a fused bicyclic tertiary amine, a pyridine ring, and a phenyl ether. The amine and pyridine provide hydrogen-bonding/basic sites, while the phenyl ring and fused aromatic system contribute hydrophobic surface area.\n\n2. The phenyl ether is a neutral, nonionizable group and adds hydrophobic aromatic surface. Although the ether oxygen provides hydrogen-bond acceptance, it is not strongly basic and may not offset the lipophilicity of the phenyl ring.\n\n3. The demonstrated modification replaces the phenyl ether substituent with a carboxylic acid while retaining the fused amine-containing core and pyridine ring. This removes one aromatic ring and introduces a polar, ionizable group.\n\n4. The carboxylic acid could improve hydration and enable salt formation, potentially favoring aqueous solubility. However, the remaining fused aromatic system and possible crystal-packing effects may still limit solubility, so improvement cannot be assumed without measurement.\n}\n{\"Final Target Molecule\":\"NC(=O)c1ccccc1-c1cncc2c1C1CC(C2)C1C1\"}",
+        "gold": "CN1CC2C=C(c3cncc(Oc4ccccc4)c3)CC(C2)C1"
+    }
+}

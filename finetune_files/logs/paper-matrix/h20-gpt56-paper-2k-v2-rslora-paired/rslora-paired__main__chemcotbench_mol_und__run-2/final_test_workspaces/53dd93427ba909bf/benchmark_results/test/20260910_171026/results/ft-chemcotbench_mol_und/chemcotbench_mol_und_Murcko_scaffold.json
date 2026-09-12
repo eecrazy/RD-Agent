@@ -1,0 +1,226 @@
+{
+    "tanimoto_similarity_larger_means_better": 0.2559710984883667,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1[nH]c2ccc(Cl)cc2c1-c1ccnc(N2CCCC2)n1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains two ring systems: a fused bicyclic heteroaromatic ring and a pyrrolidine ring. The direct bond connecting these rings is retained. Terminal methyl, chlorine, and amino substituents are removed, while the ring `[nH]` is retained.\n{\"output\":\"c1ccc2c(c1)[nH]c1cc2c1\"}",
+            "predictions": "The molecule contains two ring systems: a fused bicyclic heteroaromatic ring and a pyrrolidine ring. The direct bond connecting these rings is retained. Terminal methyl, chlorine, and amino substituents are removed, while the ring `[nH]` is retained.\n{\"output\":\"c1ccc2c(c1)[nH]c1cc2c1\"}",
+            "references": "c1ccc2c(-c3ccnc(N4CCCC4)n3)c[nH]c2c1"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(NCC1CCCO1)C(=Cc1cccc([N+](=O)[O-])c1)NC(=O)c1ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: two phenyl rings and one cyclopropyl ring. The amide-containing chain connects the cyclopropyl ring to one phenyl ring, so it is retained as a scaffold linker. The terminal hydroxymethyl group on the cyclopropyl ring and the exocyclic nitro group on the second phenyl ring are removed. The resulting Murcko scaffold is:\n{\"output\":\"O=C(NCC1CCCO1)C(=Cc1ccccc1)NC(=O)c1ccccc1\"}",
+            "predictions": "The molecule contains three ring systems: two phenyl rings and one cyclopropyl ring. The amide-containing chain connects the cyclopropyl ring to one phenyl ring, so it is retained as a scaffold linker. The terminal hydroxymethyl group on the cyclopropyl ring and the exocyclic nitro group on the second phenyl ring are removed. The resulting Murcko scaffold is:\n{\"output\":\"O=C(NCC1CCCO1)C(=Cc1ccccc1)NC(=O)c1ccccc1\"}",
+            "references": "O=C(NCC1CCCO1)C(=Cc1ccccc1)NC(=O)c1ccccc1"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cn1c(=O)c(Oc2ccc(F)cc2F)cc2cnc(N3CCCC(O)C3)nc21.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a fused bicyclic heteroaromatic core, a phenyl ring, and a piperidine ring. The carbonyl and hydroxyl groups are terminal substituents and are removed. The phenyl ring is directly attached to the heterocycle, while the piperidine is connected through the exocyclic N–CH₂ linker. The resulting scaffold is:\n{\"output\":\"c1ccc2c(c1)N1CCCCC1c2c1ccccc1\"}",
+            "predictions": "The molecule contains three ring systems: a fused bicyclic heteroaromatic core, a phenyl ring, and a piperidine ring. The carbonyl and hydroxyl groups are terminal substituents and are removed. The phenyl ring is directly attached to the heterocycle, while the piperidine is connected through the exocyclic N–CH₂ linker. The resulting scaffold is:\n{\"output\":\"c1ccc2c(c1)N1CCCCC1c2c1ccccc1\"}",
+            "references": "O=c1[nH]c2nc(N3CCCCC3)ncc2cc1Oc1ccccc1"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: COc1cc2nc(N3CCN(C(=O)C(F)=Cc4ccccc4)CC3)nc(N)c2cc1OC.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a fused bicyclic quinoline-like ring, a piperazine ring, and a phenyl ring. The urea linkage between the quinoline and piperazine, and the methylene–fluorine linker between piperazine and phenyl, are retained as ring-connecting linkers. The terminal methoxy substituent on the quinoline is removed, while the piperazine carbonyl remains because it connects ring systems.\n{\"output\":\"O=C(N3CCNCC3)c1cc2nc(Nc3ccccc3)nc(N)c2c1\"}",
+            "predictions": "The molecule contains three ring systems: a fused bicyclic quinoline-like ring, a piperazine ring, and a phenyl ring. The urea linkage between the quinoline and piperazine, and the methylene–fluorine linker between piperazine and phenyl, are retained as ring-connecting linkers. The terminal methoxy substituent on the quinoline is removed, while the piperazine carbonyl remains because it connects ring systems.\n{\"output\":\"O=C(N3CCNCC3)c1cc2nc(Nc3ccccc3)nc(N)c2c1\"}",
+            "references": "O=C(C=Cc1ccccc1)N1CCN(c2ncc3ccccc3n2)CC1"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CCC1(CC)C(=O)N(COC(=O)c2ccccc2)C1S(=O)(=O)c1ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains two phenyl rings and one saturated five-membered ring. The amide and sulfonyl linkers connect these ring systems and are retained. The terminal propyl substituent on the amide nitrogen is removed, converting that nitrogen to `[nH]`.\n{\"output\":\"O=C([nH]C1CCOCC1)c1ccccc1N(COC(=O)c2ccccc2)c1ccccc1\"}",
+            "predictions": "The molecule contains two phenyl rings and one saturated five-membered ring. The amide and sulfonyl linkers connect these ring systems and are retained. The terminal propyl substituent on the amide nitrogen is removed, converting that nitrogen to `[nH]`.\n{\"output\":\"O=C([nH]C1CCOCC1)c1ccccc1N(COC(=O)c2ccccc2)c1ccccc1\"}",
+            "references": "O=C(OCN1C(=O)CC1S(=O)(=O)c1ccccc1)c1ccccc1"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(O)Cc1ccc2c(c1)C(O)(C(F)(F)F)c1ccccc1-2.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three phenyl rings and one fused benzene–oxygen ring system. The methoxy, hydroxy, and trifluoromethyl substituents are removed. The ring carbonyl is retained because it connects the central phenyl ring to the fused oxygen-containing ring. The resulting Murcko scaffold is:\n{\"output\":\"O=C(c1ccccc1)c1ccc2c(c1)ccccc2\"}",
+            "predictions": "The molecule contains three phenyl rings and one fused benzene–oxygen ring system. The methoxy, hydroxy, and trifluoromethyl substituents are removed. The ring carbonyl is retained because it connects the central phenyl ring to the fused oxygen-containing ring. The resulting Murcko scaffold is:\n{\"output\":\"O=C(c1ccccc1)c1ccc2c(c1)ccccc2\"}",
+            "references": "c1ccc2c(c1)Cc1ccccc1-2"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(=O)NCC1CN(c2ccc(C(C)=NO)cc2)C(=O)O1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains a fused benzene–piperidine ring system. The ethyl carbamate, hydroxyacetamide, and nitroethyl substituents are terminal side chains and are removed. Retaining only the fused aromatic and piperidine rings gives the Murcko scaffold.\n{\"output\":\"c1ccc2c(c1)CN2\"}",
+            "predictions": "The molecule contains a fused benzene–piperidine ring system. The ethyl carbamate, hydroxyacetamide, and nitroethyl substituents are terminal side chains and are removed. Retaining only the fused aromatic and piperidine rings gives the Murcko scaffold.\n{\"output\":\"c1ccc2c(c1)CN2\"}",
+            "references": "O=C1OCCN1c1ccccc1"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CCC(C)(C)Nc1c(C#N)cnc2cnc(NCc3cccnc3)cc12.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a fused bicyclic quinoline-like core, a pyridine ring, and a phenyl ring. The direct bond connecting the quinoline core to the phenyl ring is retained. The terminal isopropylamino group, nitrile, and exocyclic amino group are removed as side chains. The resulting scaffold is the fused quinoline–pyridine–phenyl tricyclic system.\n{\"output\":\"c1ccc2c(c1)ccc2c1cnc2ccccc12\"}",
+            "predictions": "The molecule contains three ring systems: a fused bicyclic quinoline-like core, a pyridine ring, and a phenyl ring. The direct bond connecting the quinoline core to the phenyl ring is retained. The terminal isopropylamino group, nitrile, and exocyclic amino group are removed as side chains. The resulting scaffold is the fused quinoline–pyridine–phenyl tricyclic system.\n{\"output\":\"c1ccc2c(c1)ccc2c1cnc2ccccc12\"}",
+            "references": "c1cncc(CNc2cc3cccnc3cn2)c1"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2F)CC1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains two phenyl rings and one saturated nitrogen-containing ring. The carbonyl–amide linker connects the first phenyl ring to the saturated ring, while the second phenyl ring is directly attached to the saturated ring. Terminal fluorine and the carboxylic acid are removed as side chains. The resulting scaffold is:\n{\"output\":\"c1ccc(-c2ccccc2)cc1N1CCN(c2ccccc2)CC1\"}",
+            "predictions": "The molecule contains two phenyl rings and one saturated nitrogen-containing ring. The carbonyl–amide linker connects the first phenyl ring to the saturated ring, while the second phenyl ring is directly attached to the saturated ring. Terminal fluorine and the carboxylic acid are removed as side chains. The resulting scaffold is:\n{\"output\":\"c1ccc(-c2ccccc2)cc1N1CCN(c2ccccc2)CC1\"}",
+            "references": "O=C(c1ccc(-c2ccccc2)cc1)N1CCN(c2ccccc2)CC1"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1ccnc(Oc2ccccc2-c2ccc(-c3cnc(N)nc3)c(F)c2)n1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a pyridine, a phenyl ring, and a pyrimidine. The methoxy group, fluorine, and amino substituent are terminal side chains and are removed. The direct phenyl–pyridine and pyridine–pyrimidine bonds are retained as ring-connecting linkers.\n{\"output\":\"c1ccc(-c2ccncnc2)cc1-c1cncnc1\"}",
+            "predictions": "The molecule contains three ring systems: a pyridine, a phenyl ring, and a pyrimidine. The methoxy group, fluorine, and amino substituent are terminal side chains and are removed. The direct phenyl–pyridine and pyridine–pyrimidine bonds are retained as ring-connecting linkers.\n{\"output\":\"c1ccc(-c2ccncnc2)cc1-c1cncnc1\"}",
+            "references": "c1cnc(Oc2ccccc2-c2ccc(-c3cncnc3)cc2)nc1"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(NC(=O)Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)c1ccccc1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a fused bicyclic heteroaromatic ring, a phenyl ring, and a pyridyl ring. The amide-containing chain connects the heterocycle to the phenyl ring, so it is retained as a scaffold linker. The terminal ethyl and isopropyl substituents are removed, while the heterocyclic `[nH]` is retained.\n{\"output\":\"O=C(Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)NCc1ccccc1\"}",
+            "predictions": "The molecule contains three ring systems: a fused bicyclic heteroaromatic ring, a phenyl ring, and a pyridyl ring. The amide-containing chain connects the heterocycle to the phenyl ring, so it is retained as a scaffold linker. The terminal ethyl and isopropyl substituents are removed, while the heterocyclic `[nH]` is retained.\n{\"output\":\"O=C(Nc1cc2[nH]nc(NC(C)c3ccccn3)c2cn1)NCc1ccccc1\"}",
+            "references": "O=C(NCc1ccccc1)Nc1cc2[nH]nc(NCc3ccccn3)c2cn1"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: COc1ccc(C(=O)NC(C)c2nccs2)cc1OC1CCN(C(C)C)CC1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains two ring systems: a phenyl ring and a thiazole ring. The amide-containing chain connects these rings and is therefore retained as a scaffold linker. The terminal methoxy groups and the isopropyl-substituted piperidine side chain are removed. The resulting Murcko scaffold is:\n{\"output\":\"O=C(NCCc1nccs1)c1ccccc1\"}",
+            "predictions": "The molecule contains two ring systems: a phenyl ring and a thiazole ring. The amide-containing chain connects these rings and is therefore retained as a scaffold linker. The terminal methoxy groups and the isopropyl-substituted piperidine side chain are removed. The resulting Murcko scaffold is:\n{\"output\":\"O=C(NCCc1nccs1)c1ccccc1\"}",
+            "references": "O=C(NCc1nccs1)c1cccc(OC2CCNCC2)c1"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: C=Cc1ccc(C2CC3CCC(C2C(=O)OC)N3C)cc1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains a phenyl ring directly bonded to a bridged bicyclic amine ring system. The terminal alkene and methyl substituents are removed as side chains. The phenyl–bicyclic bond and the ring carbonyl are retained, while the ring nitrogen remains as part of the cyclic amine framework.\n{\"output\":\"c1ccc(C2CC3CCC(C2C(=O)OC)N3C)cc1\"}",
+            "predictions": "The molecule contains a phenyl ring directly bonded to a bridged bicyclic amine ring system. The terminal alkene and methyl substituents are removed as side chains. The phenyl–bicyclic bond and the ring carbonyl are retained, while the ring nitrogen remains as part of the cyclic amine framework.\n{\"output\":\"c1ccc(C2CC3CCC(C2C(=O)OC)N3C)cc1\"}",
+            "references": "c1ccc(C2CC3CCC(C2)N3)cc1"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(=O)NC(C)c1ccc(OC2CCN(c3nc(N4CCCC4C)ncc3F)C2)cc1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a phenyl ring, a saturated piperidine ring, and a fluorinated pyridine ring. The amide-containing chain connects the phenyl ring to piperidine, while the ether oxygen connects piperidine to pyridine. These ring-linking linkers are retained. The terminal methyl ester and fluorine substituent are removed, leaving the core scaffold.\n{\"output\":\"O=C(NCCc1ccc(OC2CCN(c3ccncc3)c2)cc1)N1CCCCC1\"}",
+            "predictions": "The molecule contains three ring systems: a phenyl ring, a saturated piperidine ring, and a fluorinated pyridine ring. The amide-containing chain connects the phenyl ring to piperidine, while the ether oxygen connects piperidine to pyridine. These ring-linking linkers are retained. The terminal methyl ester and fluorine substituent are removed, leaving the core scaffold.\n{\"output\":\"O=C(NCCc1ccc(OC2CCN(c3ccncc3)c2)cc1)N1CCCCC1\"}",
+            "references": "c1ccc(OC2CCN(c3ccnc(N4CCCC4)n3)C2)cc1"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(C)C(=O)NC1CCN(Cc2ccccc2)CC1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains a six-membered piperidine ring directly bonded to a phenyl ring. The ethyl ester and isopropyl groups are terminal substituents and are removed. The phenyl–piperidine bond is retained as the ring-to-ring linker.\n{\"output\":\"c1ccc(N2CCN(Cc3ccccc3)CC2)cc1\"}",
+            "predictions": "The molecule contains a six-membered piperidine ring directly bonded to a phenyl ring. The ethyl ester and isopropyl groups are terminal substituents and are removed. The phenyl–piperidine bond is retained as the ring-to-ring linker.\n{\"output\":\"c1ccc(N2CCN(Cc3ccccc3)CC2)cc1\"}",
+            "references": "c1ccc(CN2CCCCC2)cc1"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1c(-c2ccc(O)cc2)n(Cc2ccc(O)cc2)c2ccc(O)cc12.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three phenyl rings and one pyridyl ring. The methylene groups connecting these rings are retained as scaffold linkers. The terminal methyl and hydroxyl substituents are removed, while the ring nitrogens are preserved.\n{\"output\":\"c1ccc(Cc2ccc(O)cc2)cc1-n(Cc1ccc(O)cc1)c1ccc(O)cc1\"}",
+            "predictions": "The molecule contains three phenyl rings and one pyridyl ring. The methylene groups connecting these rings are retained as scaffold linkers. The terminal methyl and hydroxyl substituents are removed, while the ring nitrogens are preserved.\n{\"output\":\"c1ccc(Cc2ccc(O)cc2)cc1-n(Cc1ccc(O)cc1)c1ccc(O)cc1\"}",
+            "references": "c1ccc(Cn2c(-c3ccccc3)cc3ccccc32)cc1"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=c1cc(-c2cccc(O)c2)oc2c1ccc1ccccc12.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three benzene rings connected through a central five-membered lactone ring. The terminal hydroxyl group on the first phenyl ring is a side chain and is removed. The remaining ring framework and all ring-linking bonds are retained.\n{\"output\":\"O=c1cc(-c2cccc(-c3ccccc3)c2)oc2c1ccc1ccccc12\"}",
+            "predictions": "The molecule contains three benzene rings connected through a central five-membered lactone ring. The terminal hydroxyl group on the first phenyl ring is a side chain and is removed. The remaining ring framework and all ring-linking bonds are retained.\n{\"output\":\"O=c1cc(-c2cccc(-c3ccccc3)c2)oc2c1ccc1ccccc12\"}",
+            "references": "O=c1cc(-c2ccccc2)oc2c1ccc1ccccc12"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: Cc1ccc(-c2nnc(SCc3ccccc3)o2)c(O)c1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a phenyl ring, a five-membered aromatic N/O heterocycle, and a phenyl ring. The methoxy, hydroxy, and methyl substituents are terminal side chains and are removed. The direct phenyl–heterocycle bond and the heterocycle–methylthio–phenyl chain are retained as ring-connecting linkers.\n{\"output\":\"c1ccc(-c2nnc(SCc3ccccc3)o2)c1\"}",
+            "predictions": "The molecule contains three ring systems: a phenyl ring, a five-membered aromatic N/O heterocycle, and a phenyl ring. The methoxy, hydroxy, and methyl substituents are terminal side chains and are removed. The direct phenyl–heterocycle bond and the heterocycle–methylthio–phenyl chain are retained as ring-connecting linkers.\n{\"output\":\"c1ccc(-c2nnc(SCc3ccccc3)o2)c1\"}",
+            "references": "c1ccc(CSc2nnc(-c3ccccc3)o2)cc1"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CC(C)=Cc1ccc2cc(NC(=O)C3CC3)ncc2c1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains two ring systems: a phenyl ring and a five-membered aromatic diazole ring. The phenyl–diazole bond is retained as the ring-linking linker. The terminal isopropenyl group and the exocyclic amide side chain are removed. The resulting Murcko scaffold is benzene fused to a diazole ring.\n{\"output\":\"c1ccc2ncc2c1\"}",
+            "predictions": "The molecule contains two ring systems: a phenyl ring and a five-membered aromatic diazole ring. The phenyl–diazole bond is retained as the ring-linking linker. The terminal isopropenyl group and the exocyclic amide side chain are removed. The resulting Murcko scaffold is benzene fused to a diazole ring.\n{\"output\":\"c1ccc2ncc2c1\"}",
+            "references": "O=C(Nc1cc2ccccc2cn1)C1CC1"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: CCc1ncnc(-c2ccc(C(=O)N3CCN(CCN)CC3)c(Cl)c2)c1C#Cc1ccc(N)nc1.\n"
+                }
+            ],
+            "origin_prediction": "The molecule contains three ring systems: a fused quinazoline, a phenyl ring, and a pyridine ring. The direct phenyl–pyridine bond and the quinazoline ring system are retained. Terminal methyl, chloro, and nitrile substituents are removed. The phenyl–pyridine bond is converted to a single bond, and the remaining amide nitrogen is retained as part of the ring system.\n{\"output\":\"c1ccc(-c2nccnc2c1)cc1cnc2ccccc21\"}",
+            "predictions": "The molecule contains three ring systems: a fused quinazoline, a phenyl ring, and a pyridine ring. The direct phenyl–pyridine bond and the quinazoline ring system are retained. Terminal methyl, chloro, and nitrile substituents are removed. The phenyl–pyridine bond is converted to a single bond, and the remaining amide nitrogen is retained as part of the ring system.\n{\"output\":\"c1ccc(-c2nccnc2c1)cc1cnc2ccccc21\"}",
+            "references": "O=C(c1ccc(-c2ncncc2C#Cc2cccnc2)cc1)N1CCNCC1"
+        }
+    }
+}

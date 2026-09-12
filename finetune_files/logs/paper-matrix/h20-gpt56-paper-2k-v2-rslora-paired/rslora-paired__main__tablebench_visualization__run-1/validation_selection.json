@@ -1,0 +1,103 @@
+{
+  "artifact_signature": "baa8d416d009b6d187c78864bd977cdd75e6bdcb5fab142644002eedc784b9ce",
+  "benchmark": "tablebench_visualization",
+  "benchmark_dataset_path": "pinned/tablebench",
+  "candidate_count": 1,
+  "candidate_discovery": {
+    "candidate_filter": null,
+    "include_baseline": false,
+    "include_final_outputs": true
+  },
+  "candidate_set_signature": "0bfae7b7a1343c08ecf7a6608a286d24cdb87dee8a3c69328b18822fa1652c47",
+  "candidates": [
+    {
+      "accuracy_summary": {
+        "tablebench_visualization": {
+          "ECR@1": 64.0,
+          "Parse@1": 100.0,
+          "Pass@1": 12.0,
+          "total_count": 25.0
+        }
+      },
+      "candidate_id": "durable_output__rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33__db59a7e19fe8",
+      "checkpoint_step": null,
+      "formal_training_evidence_signature": "4b9dadc4e79c0c378dbb7c34220cf1254f440e1c076e665bfd4f16500c2f0593",
+      "mean_ordinal_rank": 1.0,
+      "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_visualization__run-1/workspace/.ft_model_checkpoints/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33/output",
+      "model_relocation": null,
+      "ordinal_ranks": {
+        "pass_at_1": 1.0
+      },
+      "selection_metrics": [
+        {
+          "formula": "mean Pass@1 across configured views",
+          "higher_is_better": true,
+          "label": "P@1",
+          "metric": "pass_at_1",
+          "unit": "percent",
+          "value": 12.0
+        }
+      ],
+      "selection_rank": 1,
+      "selection_signature": "f8711069d73832823db0afa4306d48ba19ff23ecbc465de95df0eb0342fb7dc2",
+      "source": "durable_output",
+      "workspace_id": "rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33",
+      "worst_ordinal_rank": 1.0
+    }
+  ],
+  "created_at": "2026-09-10T17:50:01.745568+08:00",
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/tablebench_visualization/run-1",
+  "held_out_test_used": false,
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "821cb322e43aeeb7a1175827f199c05112033559395a0cd12c43ddb14746193b",
+  "schema_version": 1,
+  "search": {
+    "finished_at": "2026-09-10T15:20:24.932507+08:00",
+    "started_at": "2026-09-09T20:31:08.542729+08:00",
+    "state": "succeeded"
+  },
+  "selection": {
+    "accuracy_summary": {
+      "tablebench_visualization": {
+        "ECR@1": 64.0,
+        "Parse@1": 100.0,
+        "Pass@1": 12.0,
+        "total_count": 25.0
+      }
+    },
+    "candidate_id": "durable_output__rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33__db59a7e19fe8",
+    "checkpoint_step": null,
+    "formal_training_evidence_signature": "4b9dadc4e79c0c378dbb7c34220cf1254f440e1c076e665bfd4f16500c2f0593",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_visualization__run-1/workspace/.ft_model_checkpoints/rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33/output",
+    "model_relocation": null,
+    "ordinal_ranks": {
+      "pass_at_1": 1.0
+    },
+    "selection_metrics": [
+      {
+        "formula": "mean Pass@1 across configured views",
+        "higher_is_better": true,
+        "label": "P@1",
+        "metric": "pass_at_1",
+        "unit": "percent",
+        "value": 12.0
+      }
+    ],
+    "selection_signature": "f8711069d73832823db0afa4306d48ba19ff23ecbc465de95df0eb0342fb7dc2",
+    "source": "durable_output",
+    "workspace_id": "rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33",
+    "worst_ordinal_rank": 1.0
+  },
+  "selection_profile": "main",
+  "selection_rule": {
+    "name": "direction-aware mean average ordinal rank",
+    "primary_metrics": [
+      "pass_at_1"
+    ],
+    "tie_break": "lowest worst ordinal rank, then stable candidate_id"
+  },
+  "state": "succeeded",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

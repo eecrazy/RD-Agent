@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-09T04:49:02.956362+00:00",
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu2-seed217-v1",
+  "selected_run_ids": [
+    "tablebench_fact_checking__lora"
+  ],
+  "all_selected_succeeded": true,
+  "runs": {
+    "tablebench_fact_checking__lora": {
+      "state": "succeeded",
+      "run_id": "tablebench_fact_checking__lora",
+      "benchmark": "tablebench_fact_checking",
+      "method": "lora",
+      "gpus": [
+        "2"
+      ],
+      "config_sha256": "6ceca003d5c32107120115900bf30f8d13be041917a48f4ab8bd9f370d56b46a",
+      "seed": 217,
+      "data_seed": 217,
+      "train_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_train_full.json",
+        "sha256": "a69137bce20d3fc799e44a41f7d0a9760f6e2808193f0566fa9fe8c9e3ddb375",
+        "records": 1597
+      },
+      "validation_data": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-main-rslora-48h-v10/main__tablebench_fact_checking__run-1/workspace/eb316a345fde4af5a4fce8a542668ddb/data_validation_full.json",
+        "sha256": "3686eb97da920389d436902fcdac2749015f60d1c06de1d2fd5ffb77282c0b73",
+        "records": 177
+      },
+      "prepared_at": "2026-09-09T04:36:03.988325+00:00",
+      "started_at": "2026-09-09T04:36:03.988539+00:00",
+      "returncode": 0,
+      "finished_at": "2026-09-09T04:49:02.952616+00:00",
+      "duration_seconds": 778.963304694742,
+      "metrics": {
+        "epoch": 1.0,
+        "eval_loss": 1.0645192861557007,
+        "eval_runtime": 22.4038,
+        "eval_samples_per_second": 7.9,
+        "eval_steps_per_second": 7.9,
+        "total_flos": 7.68683072957399e+16,
+        "train_loss": 0.8596179723739624,
+        "train_runtime": 736.7935,
+        "train_samples_per_second": 2.167,
+        "train_steps_per_second": 0.068,
+        "global_step": 50,
+        "max_steps": 50,
+        "best_metric": 1.0645192861557007,
+        "last_eval_loss": 1.0645192861557007,
+        "min_eval_loss": 1.0645192861557007
+      },
+      "gpu": {
+        "2": {
+          "samples": 340,
+          "peak_memory_mib": 80799.0,
+          "peak_utilization_percent": 100.0,
+          "mean_utilization_percent": 93.20882352941176,
+          "mean_power_watts": 297.7764705882354
+        }
+      },
+      "artifact": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/training-constraint-ablation/h20-autofill-table-lora-gpu2-seed217-v1/tablebench_fact_checking__lora/output",
+        "adapter_config": true,
+        "adapter_weights": true,
+        "full_weights": false,
+        "use_rslora": false,
+        "use_dora": false,
+        "rank": 8,
+        "valid": true
+      },
+      "zero3_configured": false,
+      "zero3_log_evidence": false
+    }
+  }
+}

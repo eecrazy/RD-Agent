@@ -1,0 +1,105 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 01:54:52 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_reaction/validation/20260828_015452
+08/28 01:54:52 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 01:54:52 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_fs] on GPU 4
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:36<02:24, 36.20s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_retro] on GPU 4
+ 20%|██        | 1/5 [00:37<02:24, 36.20s/it] 40%|████      | 2/5 [01:19<02:01, 40.39s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_mechsel] on GPU 4
+ 40%|████      | 2/5 [01:19<02:01, 40.39s/it] 60%|██████    | 3/5 [01:53<01:14, 37.28s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_rcr] on GPU 4
+ 60%|██████    | 3/5 [01:53<01:14, 37.28s/it] 80%|████████  | 4/5 [02:41<00:41, 41.58s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_nepp] on GPU 4
+ 80%|████████  | 4/5 [02:41<00:41, 41.58s/it]100%|██████████| 5/5 [03:17<00:00, 39.74s/it]100%|██████████| 5/5 [03:17<00:00, 39.55s/it]
+08/28 01:58:10 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 01:58:10 - OpenCompass - INFO - Partitioned into 5 tasks.
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_fs] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_retro] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_rcr] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_nepp] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_reaction/chemcotbench_reaction_mechsel] on CPU 
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:11<00:47, 11.90s/it] 40%|████      | 2/5 [00:12<00:15,  5.00s/it] 60%|██████    | 3/5 [00:13<00:06,  3.19s/it] 80%|████████  | 4/5 [00:13<00:01,  1.98s/it]100%|██████████| 5/5 [00:13<00:00,  1.39s/it]100%|██████████| 5/5 [00:13<00:00,  2.72s/it]
+dataset                        version    metric             mode      base-qwen2.5-7b-instruct-chemcotbench_reaction
+-----------------------------  ---------  -----------------  ------  ------------------------------------------------
+chemcotbench_reaction_fs       1fe37c     exact_match        gen                                                 0.00
+chemcotbench_reaction_fs       1fe37c     validity           gen                                                74.00
+chemcotbench_reaction_fs       1fe37c     morgan_sims        gen                                                33.57
+chemcotbench_reaction_fs       1fe37c     maccs_sims         gen                                                48.85
+chemcotbench_reaction_fs       1fe37c     rdk_sims           gen                                                39.31
+chemcotbench_reaction_fs       1fe37c     bleu               gen                                                38.88
+chemcotbench_reaction_fs       1fe37c     levenshtein        gen                                                21.36
+chemcotbench_reaction_fs       1fe37c     exact_match_count  gen                                                 0.00
+chemcotbench_reaction_fs       1fe37c     valid_count        gen                                                37.00
+chemcotbench_reaction_fs       1fe37c     total_count        gen                                                50.00
+chemcotbench_reaction_retro    1fe37c     exact_match        gen                                                 0.00
+chemcotbench_reaction_retro    1fe37c     validity           gen                                                72.00
+chemcotbench_reaction_retro    1fe37c     morgan_sims        gen                                                12.22
+chemcotbench_reaction_retro    1fe37c     maccs_sims         gen                                                21.52
+chemcotbench_reaction_retro    1fe37c     rdk_sims           gen                                                16.88
+chemcotbench_reaction_retro    1fe37c     bleu               gen                                                46.16
+chemcotbench_reaction_retro    1fe37c     levenshtein        gen                                                13.32
+chemcotbench_reaction_retro    1fe37c     exact_match_count  gen                                                 0.00
+chemcotbench_reaction_retro    1fe37c     valid_count        gen                                                36.00
+chemcotbench_reaction_retro    1fe37c     total_count        gen                                                50.00
+chemcotbench_reaction_rcr      1fe37c     exact_match        gen                                                 0.00
+chemcotbench_reaction_rcr      1fe37c     exact_count        gen                                                 0.00
+chemcotbench_reaction_rcr      1fe37c     total_count        gen                                                45.00
+chemcotbench_reaction_nepp     1fe37c     exact_match        gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     validity           gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     morgan_sims        gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     maccs_sims         gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     rdk_sims           gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     bleu               gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     levenshtein        gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     exact_match_count  gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     valid_count        gen                                                 0.00
+chemcotbench_reaction_nepp     1fe37c     total_count        gen                                                42.00
+chemcotbench_reaction_mechsel  1fe37c     accuracy           gen                                                36.00
+chemcotbench_reaction_mechsel  1fe37c     correct_count      gen                                                18.00
+chemcotbench_reaction_mechsel  1fe37c     total_count        gen                                                50.00
+08/28 01:58:23 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_reaction/validation/20260828_015452/summary/summary_20260828_015452.txt
+08/28 01:58:23 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_reaction/validation/20260828_015452/summary/summary_20260828_015452.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-chemcotbench_reaction |
+|----- | ----- | ----- | ----- | -----|
+| chemcotbench_reaction_fs | 1fe37c | exact_match | gen | 0.00 |
+| chemcotbench_reaction_fs | 1fe37c | validity | gen | 74.00 |
+| chemcotbench_reaction_fs | 1fe37c | morgan_sims | gen | 33.57 |
+| chemcotbench_reaction_fs | 1fe37c | maccs_sims | gen | 48.85 |
+| chemcotbench_reaction_fs | 1fe37c | rdk_sims | gen | 39.31 |
+| chemcotbench_reaction_fs | 1fe37c | bleu | gen | 38.88 |
+| chemcotbench_reaction_fs | 1fe37c | levenshtein | gen | 21.36 |
+| chemcotbench_reaction_fs | 1fe37c | exact_match_count | gen | 0.00 |
+| chemcotbench_reaction_fs | 1fe37c | valid_count | gen | 37.00 |
+| chemcotbench_reaction_fs | 1fe37c | total_count | gen | 50.00 |
+| chemcotbench_reaction_retro | 1fe37c | exact_match | gen | 0.00 |
+| chemcotbench_reaction_retro | 1fe37c | validity | gen | 72.00 |
+| chemcotbench_reaction_retro | 1fe37c | morgan_sims | gen | 12.22 |
+| chemcotbench_reaction_retro | 1fe37c | maccs_sims | gen | 21.52 |
+| chemcotbench_reaction_retro | 1fe37c | rdk_sims | gen | 16.88 |
+| chemcotbench_reaction_retro | 1fe37c | bleu | gen | 46.16 |
+| chemcotbench_reaction_retro | 1fe37c | levenshtein | gen | 13.32 |
+| chemcotbench_reaction_retro | 1fe37c | exact_match_count | gen | 0.00 |
+| chemcotbench_reaction_retro | 1fe37c | valid_count | gen | 36.00 |
+| chemcotbench_reaction_retro | 1fe37c | total_count | gen | 50.00 |
+| chemcotbench_reaction_rcr | 1fe37c | exact_match | gen | 0.00 |
+| chemcotbench_reaction_rcr | 1fe37c | exact_count | gen | 0.00 |
+| chemcotbench_reaction_rcr | 1fe37c | total_count | gen | 45.00 |
+| chemcotbench_reaction_nepp | 1fe37c | exact_match | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | validity | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | morgan_sims | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | maccs_sims | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | rdk_sims | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | bleu | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | levenshtein | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | exact_match_count | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | valid_count | gen | 0.00 |
+| chemcotbench_reaction_nepp | 1fe37c | total_count | gen | 42.00 |
+| chemcotbench_reaction_mechsel | 1fe37c | accuracy | gen | 36.00 |
+| chemcotbench_reaction_mechsel | 1fe37c | correct_count | gen | 18.00 |
+| chemcotbench_reaction_mechsel | 1fe37c | total_count | gen | 50.00 |
+
+08/28 01:58:23 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_reaction/validation/20260828_015452/summary/summary_20260828_015452.md

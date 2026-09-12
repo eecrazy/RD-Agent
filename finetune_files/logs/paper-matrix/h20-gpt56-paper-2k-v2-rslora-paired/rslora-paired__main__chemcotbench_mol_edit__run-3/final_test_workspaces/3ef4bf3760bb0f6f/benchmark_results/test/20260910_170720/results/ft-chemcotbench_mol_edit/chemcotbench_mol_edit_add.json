@@ -1,0 +1,310 @@
+{
+    "correct_rate": 50.0,
+    "valid_rate": 50.0,
+    "tanimoto_similarity": 28.10036581569116,
+    "correct_count": 5.0,
+    "valid_count": 5.0,
+    "total_count": 10.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_10",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a benzene ring with substituents: a methyl group, a nitro group ([N+](=O)[O-]), and a morpholine-derived ring (N2CC[C@H](C(N)=O)C2). The morpholine ring includes a secondary amine (N) and a carbonyl (C=O) group.\nEdit strategy: The nitro group (-NO2) is best added to the methyl-substituted benzene ring. Replacing the methyl group (C) with a nitro-substituted methyl group (C(NO2)) retains aromaticity and avoids steric clashes. This substitution occurs"
+            ],
+            "pred_smiles": [
+                "[N+](=O)[O-]c1ccc(C(NO2))c(N2CC[C@H](C(N)=O)C2)c1"
+            ],
+            "source": [
+                "Cc1ccc([N+](=O)[O-])c(N2CC[C@H](C(N)=O)C2)c1"
+            ],
+            "gold": [
+                "Cc1ccc([N+](=O)[O-])c(N2CC[C@H](C(N)=O)C2)c1C(=O)[N+](=O)[O-]"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_11",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central tertiary carbon connected to: (1) a methyl group, (2) a protonated amine ([NH+]) with a cyclopropane ring (C1CC1), and (3) a chain with an amide group (NC(=O)NCc1ccncc1). The cyclopropane is a strained three-membered ring.\nEdit strategy: The amine group (-NH2) can be added to the cyclopropane ring. Replacing one hydrogen on the cyclopropane's carbon adjacent to the [NH+] with -NH2 maintains structural stability and avoids steric clashes. T"
+            ],
+            "pred_smiles": [
+                "C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CC1N"
+            ],
+            "source": [
+                "C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CC1"
+            ],
+            "gold": [
+                "C[C@H](CNC(=O)NCc1ccncc1)[NH+](C)C1CNC1"
+            ],
+            "group_a": [
+                "amine"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.7
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_12",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a bicyclic structure with a sulfonamide group (S(=O)(=O)), an amide (C(=O)N), and an ether (Oc3ccccc3). The bicyclic system includes a cyclohexane-like ring with substituents. The amide group is attached to a benzene ring via an ether-linked ethyl chain (NCCOc3ccccc3).\nEdit strategy: The halo group (e.g., fluorine) can be added to the benzene ring in the amide substituent (Oc3ccccc3). This position is chemically accessible and avoids steric clashes "
+            ],
+            "pred_smiles": [
+                "C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccccc3F)c2)C1"
+            ],
+            "source": [
+                "C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccccc3)c2)C1"
+            ],
+            "gold": [
+                "C[C@H]1C[C@H](C)CN(S(=O)(=O)c2cccc(C(=O)NCCOc3ccc(Cl)cc3)c2)C1"
+            ],
+            "group_a": [
+                "halo"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.703125
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_13",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a benzene ring with substituents: methyl groups, a sulfonamide group (S=O), a secondary alcohol (C[S@@](=O)[C@@H](C)), and a nitrile (CC#N). The sulfonamide is part of a bicyclic system with a bridgehead carbon.\nEdit strategy: The thiol (-SH) group is best added to the bridgehead carbon of the sulfonamide-containing bicyclic system. This carbon is chemically accessible and avoids steric clashes with existing substituents. The thiol replaces a hydrog"
+            ],
+            "pred_smiles": [
+                "Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)cc1S"
+            ],
+            "source": [
+                "Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)c1"
+            ],
+            "gold": [
+                "Cc1cc(C)cc(C[S@@](=O)[C@@H](C)CC#N)c1S"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_14",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central tertiary carbon connected to a methyl group, a complex bicyclic system (including a piperazine-like ring with a tertiary amine), and a sulfonamide group. The bicyclic system includes a fluorinated benzyl group (CC(F)(F)F) attached to the nitrogen in the ring.\nEdit strategy: The amide group (-CONH-) is best added to the tertiary carbon (central carbon) via substitution of one of its methyl groups. This carbon is sterically accessible and ch"
+            ],
+            "pred_smiles": [
+                "CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1)NS(C)(=O)=OCONC(C)(C)C"
+            ],
+            "source": [
+                "CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1)NS(C)(=O)=O"
+            ],
+            "gold": [
+                "CC(C)(CNC(=O)N[C@H]1CCN(CC(F)(F)F)C1(C(=O)N))NS(C)(=O)=O"
+            ],
+            "group_a": [
+                "amide"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_15",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central carbonyl group (O=C) connected to a benzene ring substituted with a furan (-c2ccoc2). The nitrogen atom in the carbonyl group is part of a six-membered ring (N1CCCC[C@H]1) with a hydroxyl-ether group (C1OCCO1). The molecule has no existing amine (-NH2) groups.\nEdit strategy: The amine group can be added to the six-membered ring containing the nitrogen atom. The carbon adjacent to the nitrogen in the ring (position 2 of the ring) is chemica"
+            ],
+            "pred_smiles": [
+                "O=C(c1cccc(-c2ccoc2)c1)N1CCCC[NH]1C1OCCO1"
+            ],
+            "source": [
+                "O=C(c1cccc(-c2ccoc2)c1)N1CCCC[C@H]1C1OCCO1"
+            ],
+            "gold": [
+                "O=C(c1ccc(N)c(-c2ccoc2)c1)N1CCCC[C@H]1C1OCCO1"
+            ],
+            "group_a": [
+                "amine"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_16",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central benzene ring substituted with a methyl group, a chlorine atom, and a complex aromatic substituent. The substituent includes a second benzene ring connected via a furan-like oxygen-containing ring, a thiophene-like sulfur-containing ring, and a thiourea-like group (C(=O)NC(=S)N). The molecule also features a sulfonamide group (S(N)(=O)=O) attached to the sulfur-containing ring.\nEdit strategy: The nitro group (-NO2) is best added to the meth"
+            ],
+            "pred_smiles": [
+                "Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3)o2)cc1ClNO"
+            ],
+            "source": [
+                "Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3)o2)cc1Cl"
+            ],
+            "gold": [
+                "Cc1ccc(-c2ccc(C(=O)NC(=S)Nc3ccc(S(N)(=O)=O)cc3[N+](=O)[O-])o2)cc1Cl"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_17",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a methoxy group (COc1...), a central benzene ring substituted with a carbonyl group (C=O), an amide-linked bicyclic system (N[C@@H](c2ccco2)c2c(O)ccc3ccccc23), and a hydroxyl group (c2c(O)...). The bicyclic system includes a furan-like oxygen-containing ring (c2ccco2).\nEdit strategy: The aldehyde group (-CHO) is best added to the furan-like oxygen-containing ring (c2ccco2) in the bicyclic system. This ring has a hydrogen atom that can be replaced by"
+            ],
+            "pred_smiles": [
+                "COc1cccc(C(=O)N[C@@H](c2cc(C=O)co2)c2c(O)ccc3ccccc23)c1"
+            ],
+            "source": [
+                "COc1cccc(C(=O)N[C@@H](c2ccco2)c2c(O)ccc3ccccc23)c1"
+            ],
+            "gold": [
+                "COc1cccc(C(=O)N[C@@H](c2ccco2)c2c(O)ccc3ccccc23)c1C=O"
+            ],
+            "group_a": [
+                "aldehyde"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.5205479452054794
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_18",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a bicyclic structure with a lactam ring (two adjacent carbonyl groups), a tertiary amine ([NH2+]), and a bridged cyclohexane-like ring. The lactam is part of a bicyclic system where the nitrogen is part of the ring closure.\nEdit strategy: The hydroxyl group is best added to the carbon adjacent to the lactam's carbonyl group (C=O) in the ring. This position allows for minimal steric hindrance and maintains the ring's stability. The hydroxyl is introd"
+            ],
+            "pred_smiles": [
+                "CN1C(=O)NC(=O)[C@@]12CCC[NH2+]C2O"
+            ],
+            "source": [
+                "CN1C(=O)NC(=O)[C@@]12CCC[NH2+]C2"
+            ],
+            "gold": [
+                "CN1C(=O)NC(=O)[C@@]12CC(O)C[NH2+]C2"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.38636363636363635
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_add_19",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central amide group (O=C-N) connected to a fluorinated benzene ring (Cc1ccc(F)c(F)c1) and a bicyclic sulfide system (N1CCS[C@@H](c2ccccc2)C1). The bicyclic system includes a cyclopropane-like ring with a sulfur atom and a hydroxyl-bearing carbon (C@H).\nEdit strategy: The carboxyl group (-COOH) is best added to the hydroxyl-bearing carbon in the bicyclic system (C@H). This carbon is already part of a strained ring but can accommodate the carboxyl g"
+            ],
+            "pred_smiles": [
+                "O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccccc2)C1C(=O)[OH]"
+            ],
+            "source": [
+                "O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccccc2)C1"
+            ],
+            "gold": [
+                "O=C(Cc1ccc(F)c(F)c1)N1CCS[C@@H](c2ccc(cc2)C(=O)O)C1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                ""
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.5
+            ]
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 01:52:58 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_015258
+08/28 01:52:58 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 01:52:58 - OpenCompass - INFO - Partitioned into 3 tasks.
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_add] on GPU 4
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:33<01:06, 33.13s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] on GPU 4
+ 33%|███▎      | 1/3 [00:34<01:06, 33.13s/it]08/28 01:53:57 - OpenCompass - ERROR - /data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/opencompass/runners/local.py - _launch - 241 - task OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] fail, see
+/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_015258/logs/infer/base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete.out
+ 67%|██████▋   | 2/3 [00:58<00:28, 28.69s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_sub] on GPU 4
+ 67%|██████▋   | 2/3 [00:59<00:28, 28.69s/it]100%|██████████| 3/3 [01:32<00:00, 30.94s/it]100%|██████████| 3/3 [01:32<00:00, 30.78s/it]
+08/28 01:54:31 - OpenCompass - ERROR - /data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/opencompass/runners/base.py - summarize - 64 - OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] failed with code 1
+08/28 01:54:31 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 01:54:31 - OpenCompass - INFO - Partitioned into 3 tasks.
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_add] on CPU 
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] on CPU 
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_sub] on CPU 
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:11<00:22, 11.26s/it]08/28 01:54:43 - OpenCompass - ERROR - /data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/opencompass/runners/local.py - _launch - 241 - task OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] fail, see
+/data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_015258/logs/eval/base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete.out
+100%|██████████| 3/3 [00:12<00:00,  3.23s/it]100%|██████████| 3/3 [00:12<00:00,  4.04s/it]
+08/28 01:54:43 - OpenCompass - ERROR - /data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/opencompass/runners/base.py - summarize - 64 - OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] failed with code 1
+dataset                       version    metric               mode    base-qwen2.5-7b-instruct-chemcotbench_mol_edit
+----------------------------  ---------  -------------------  ------  ------------------------------------------------
+chemcotbench_mol_edit_add     1fe37c     correct_rate         gen     10.00
+chemcotbench_mol_edit_add     1fe37c     valid_rate           gen     50.00
+chemcotbench_mol_edit_add     1fe37c     tanimoto_similarity  gen     24.89
+chemcotbench_mol_edit_add     1fe37c     correct_count        gen     1.00
+chemcotbench_mol_edit_add     1fe37c     valid_count          gen     5.00
+chemcotbench_mol_edit_add     1fe37c     total_count          gen     10.00
+chemcotbench_mol_edit_delete  -          -                    -       -
+chemcotbench_mol_edit_sub     1fe37c     correct_rate         gen     26.67
+chemcotbench_mol_edit_sub     1fe37c     valid_rate           gen     70.00
+chemcotbench_mol_edit_sub     1fe37c     tanimoto_similarity  gen     40.80
+chemcotbench_mol_edit_sub     1fe37c     correct_count        gen     8.00
+chemcotbench_mol_edit_sub     1fe37c     valid_count          gen     21.00
+chemcotbench_mol_edit_sub     1fe37c     total_count          gen     30.00
+08/28 01:54:43 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_015258/summary/summary_20260828_015258.txt
+08/28 01:54:43 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_015258/summary/summary_20260828_015258.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-chemcotbench_mol_edit |
+|----- | ----- | ----- | ----- | -----|
+| chemcotbench_mol_edit_add | 1fe37c | correct_rate | gen | 10.00 |
+| chemcotbench_mol_edit_add | 1fe37c | valid_rate | gen | 50.00 |
+| chemcotbench_mol_edit_add | 1fe37c | tanimoto_similarity | gen | 24.89 |
+| chemcotbench_mol_edit_add | 1fe37c | correct_count | gen | 1.00 |
+| chemcotbench_mol_edit_add | 1fe37c | valid_count | gen | 5.00 |
+| chemcotbench_mol_edit_add | 1fe37c | total_count | gen | 10.00 |
+| chemcotbench_mol_edit_delete | - | - | - | - |
+| chemcotbench_mol_edit_sub | 1fe37c | correct_rate | gen | 26.67 |
+| chemcotbench_mol_edit_sub | 1fe37c | valid_rate | gen | 70.00 |
+| chemcotbench_mol_edit_sub | 1fe37c | tanimoto_similarity | gen | 40.80 |
+| chemcotbench_mol_edit_sub | 1fe37c | correct_count | gen | 8.00 |
+| chemcotbench_mol_edit_sub | 1fe37c | valid_count | gen | 21.00 |
+| chemcotbench_mol_edit_sub | 1fe37c | total_count | gen | 30.00 |
+
+08/28 01:54:43 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_015258/summary/summary_20260828_015258.md
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 02:16:55 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_021655
+08/28 02:16:55 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 02:16:55 - OpenCompass - INFO - Partitioned into 3 tasks.
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_add] on GPU 5
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:33<01:06, 33.17s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] on GPU 5
+ 33%|███▎      | 1/3 [00:34<01:06, 33.17s/it] 67%|██████▋   | 2/3 [01:05<00:32, 32.97s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_sub] on GPU 5
+ 67%|██████▋   | 2/3 [01:06<00:32, 32.97s/it]100%|██████████| 3/3 [01:40<00:00, 33.89s/it]100%|██████████| 3/3 [01:40<00:00, 33.66s/it]
+08/28 02:18:36 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 02:18:36 - OpenCompass - INFO - Partitioned into 3 tasks.
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_add] on CPU 
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_delete] on CPU 
+  0%|          | 0/3 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_edit/chemcotbench_mol_edit_sub] on CPU 
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:10<00:21, 10.87s/it]100%|██████████| 3/3 [00:11<00:00,  2.98s/it]100%|██████████| 3/3 [00:11<00:00,  3.77s/it]
+dataset                       version    metric               mode      base-qwen2.5-7b-instruct-chemcotbench_mol_edit
+----------------------------  ---------  -------------------  ------  ------------------------------------------------
+chemcotbench_mol_edit_add     1fe37c     correct_rate         gen                                                10.00
+chemcotbench_mol_edit_add     1fe37c     valid_rate           gen                                                50.00
+chemcotbench_mol_edit_add     1fe37c     tanimoto_similarity  gen                                                24.89
+chemcotbench_mol_edit_add     1fe37c     correct_count        gen                                                 1.00
+chemcotbench_mol_edit_add     1fe37c     valid_count          gen                                                 5.00
+chemcotbench_mol_edit_add     1fe37c     total_count          gen                                                10.00
+chemcotbench_mol_edit_delete  1fe37c     correct_rate         gen                                                30.00
+chemcotbench_mol_edit_delete  1fe37c     valid_rate           gen                                                80.00
+chemcotbench_mol_edit_delete  1fe37c     tanimoto_similarity  gen                                                43.90
+chemcotbench_mol_edit_delete  1fe37c     correct_count        gen                                                 3.00
+chemcotbench_mol_edit_delete  1fe37c     valid_count          gen                                                 8.00
+chemcotbench_mol_edit_delete  1fe37c     total_count          gen                                                10.00
+chemcotbench_mol_edit_sub     1fe37c     correct_rate         gen                                                23.33
+chemcotbench_mol_edit_sub     1fe37c     valid_rate           gen                                                66.67
+chemcotbench_mol_edit_sub     1fe37c     tanimoto_similarity  gen                                                37.81
+chemcotbench_mol_edit_sub     1fe37c     correct_count        gen                                                 7.00
+chemcotbench_mol_edit_sub     1fe37c     valid_count          gen                                                20.00
+chemcotbench_mol_edit_sub     1fe37c     total_count          gen                                                30.00
+08/28 02:18:47 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_021655/summary/summary_20260828_021655.txt
+08/28 02:18:47 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_021655/summary/summary_20260828_021655.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-chemcotbench_mol_edit |
+|----- | ----- | ----- | ----- | -----|
+| chemcotbench_mol_edit_add | 1fe37c | correct_rate | gen | 10.00 |
+| chemcotbench_mol_edit_add | 1fe37c | valid_rate | gen | 50.00 |
+| chemcotbench_mol_edit_add | 1fe37c | tanimoto_similarity | gen | 24.89 |
+| chemcotbench_mol_edit_add | 1fe37c | correct_count | gen | 1.00 |
+| chemcotbench_mol_edit_add | 1fe37c | valid_count | gen | 5.00 |
+| chemcotbench_mol_edit_add | 1fe37c | total_count | gen | 10.00 |
+| chemcotbench_mol_edit_delete | 1fe37c | correct_rate | gen | 30.00 |
+| chemcotbench_mol_edit_delete | 1fe37c | valid_rate | gen | 80.00 |
+| chemcotbench_mol_edit_delete | 1fe37c | tanimoto_similarity | gen | 43.90 |
+| chemcotbench_mol_edit_delete | 1fe37c | correct_count | gen | 3.00 |
+| chemcotbench_mol_edit_delete | 1fe37c | valid_count | gen | 8.00 |
+| chemcotbench_mol_edit_delete | 1fe37c | total_count | gen | 10.00 |
+| chemcotbench_mol_edit_sub | 1fe37c | correct_rate | gen | 23.33 |
+| chemcotbench_mol_edit_sub | 1fe37c | valid_rate | gen | 66.67 |
+| chemcotbench_mol_edit_sub | 1fe37c | tanimoto_similarity | gen | 37.81 |
+| chemcotbench_mol_edit_sub | 1fe37c | correct_count | gen | 7.00 |
+| chemcotbench_mol_edit_sub | 1fe37c | valid_count | gen | 20.00 |
+| chemcotbench_mol_edit_sub | 1fe37c | total_count | gen | 30.00 |
+
+08/28 02:18:47 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_edit/test/20260828_021655/summary/summary_20260828_021655.md

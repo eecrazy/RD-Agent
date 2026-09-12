@@ -1,0 +1,178 @@
+{
+  "candidate_id": "durable_checkpoint__rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060__step-66__7d1cd4152917",
+  "source": "durable_checkpoint",
+  "workspace_id": "rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060",
+  "checkpoint_step": 66,
+  "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/workspace/.ft_model_checkpoints/rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060/output/checkpoint-66",
+  "selection_signature": "2b9683a450dd5151d6948c979e86c0ae1f2de57c8f2580576af408ed9abeeb47",
+  "formal_training_evidence_signature": "b9334aa2a65cd1258c8e7608b345dac2e9114fe5372edfa199a4131f005e7e60",
+  "schema_version": 1,
+  "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-2",
+  "benchmark": "chemcotbench_mol_und",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "training_policy": "rslora",
+  "expected_samples": 2000,
+  "pairing_artifact_signature": "573d4564cfcbf06ea73f8433f3c7765fc265be60bb28438b69468c8ed2407079",
+  "selection_profile": "main",
+  "benchmark_dataset_path": "pinned/chemcotbench",
+  "validation_range": "[:min(100, len(index_list)//2)]",
+  "held_out_test_used": false,
+  "state": "succeeded",
+  "started_at": "2026-09-10T15:40:04.271915+08:00",
+  "api_routing": {
+    "protocol": "responses",
+    "upstream_base": "http://127.0.0.1:8313/v1",
+    "served_model": "gpt-5.6-sol",
+    "aliases_requested_models": true,
+    "fidelity": "model-adapted",
+    "litellm_model_prefix": "openai/",
+    "adapter_base": "http://127.0.0.1:45145/v1"
+  },
+  "finished_at": "2026-09-10T15:45:20.762237+08:00",
+  "result": {
+    "accuracy_summary": {
+      "chemcotbench_mol_und_Murcko_scaffold": {
+        "tanimoto_similarity_larger_means_better": 0.24
+      },
+      "chemcotbench_mol_und_equivalence": {
+        "accuracy": 54.0
+      },
+      "chemcotbench_mol_und_fg_count": {
+        "mae": 0.3
+      },
+      "chemcotbench_mol_und_ring_count": {
+        "mae": 1.0
+      },
+      "chemcotbench_mol_und_ring_system_scaffold": {
+        "accuracy": 53.33
+      }
+    },
+    "error_samples": [
+      {
+        "gold": "No",
+        "model_output": "1. The molecule contains the verified structure `N#CCC1(n2cc(C(N)=O)c(Nc3ccccc3)n2)CCN(C(=O)c2cccc(Cl)c2)CC1`.\n2. The scaffold `C1=C(n2cccn2)CCNC1` has one ring with the formula `C5H5N`.\n3. The molecule includes the verified ring `c1ccncc1`, which matches the scaffold's structure.\n4. Therefore, the molecule contains the specified ring system scaffold.\nOutput: yes\n```json\n{\"output\": \"yes\"}\n```",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: N#CCC1(n2cc(C(N)=O)c(Nc3ccccc3)n2)CCN(C(=O)c2cccc(Cl)c2)CC1, Ring System Structure: C1=C(n2cccn2)CCNC1\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "1. The molecule contains the verified structure `Oc1ccc(Nc2ncnc3scc(-c4ccccc4)c23)cc1`.\n2. The scaffold `c1ccc(-c2csc3ncncc23)cc1` has two ring systems: a benzene ring and a thiadiazole ring.\n3. The molecule includes both a benzene ring and a thiadiazole ring, matching the scaffold's ring types and connectivity.\n4. Therefore, the molecule contains the specified ring system scaffold.\nOutput: yes\n```json\n{\"output\": \"yes\"}\n```",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Oc1ccc(Nc2ncnc3scc(-c4ccccc4)c23)cc1, Ring System Structure: c1ccc(-c2csc3ncncc23)cc1\n"
+      },
+      {
+        "gold": "No",
+        "model_output": "1. Both SMILES canonicalize to the same structure.\n2. Both have the formula C21H17F2N4OS.\n3. Therefore, they are the same molecule.\n{\"output\": \"yes\"}",
+        "question": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(C=CC(=O)Nc2cc(-c3c(-c4ccc(F)cc4)nc(SC)n3C)ccn2)cc1, Molecule B: c1(-c2c(-c3ccc(F)cc3)nc(SC)n2C)cc(NCC=Cc2ccc(cc2)OC)ncc1.\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "1. Both SMILES canonicalize to `Nc1ccnc(Nc2ccc(Oc3ccc(Cl)cc3)cc2)c1`.\n2. Both have the molecular formula `C14H14ClN3O`.\n3. Therefore, they represent the same molecule.\n{\"output\": \"yes\"}",
+        "question": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Nc1ccnc(Nc2ccc(Oc3ccc(Cl)cc3)cc2)c1, Molecule B: c1nc(cc(c1)N)Nc1ccc(Oc2ccc(Cl)cc2)cc1.\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "1. Both SMILES canonicalize to `CC(Nc1cccc(CN2CCOC2=O)c1)C(=O)NC(N)=O`.\n2. Both have the molecular formula `C15H19N3O3`.\n3. Therefore, they are the same molecule.\n{\"output\": \"yes\"}",
+        "question": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC(Nc1cccc(CN2CCOC2=O)c1)C(=O)NC(N)=O, Molecule B: O=C(N)NC(C(C)Nc1cc(ccc1)CN1CCOC1=O)=O.\n"
+      },
+      {
+        "gold": "O=C(NC(=S)NCc1ccco1)c1ccccc1",
+        "model_output": "1. Remove the acyclic substituents and exocyclic modifications.\n2. Retain the ring systems and connecting bonds.\n3. The resulting Murcko scaffold is:\n{\n    \"Output Scaffold\": \"O=C(NC(=S)NCc1ccco1)c1ccccc1\"\n}",
+        "question": "You are a chemistry expert performing Murcko scaffold extraction. Input: a molecule's SMILES string. Output: the Murcko scaffold in SMILES format.\nDefinition: The Murcko scaffold is obtained by removing all side chains, functional groups, and exocyclic modifications, leaving only the ring systems and connecting bonds.\nYour response must be directly parsable JSON format:\n{\n    \"Output Scaffold\": \"SMILES\"\n}\nInput Molecule: O=C(NC(=S)NCc1ccco1)c1ccc([N+](=O)[O-])cc1.\n"
+      },
+      {
+        "gold": "Yes",
+        "model_output": "1. The molecule contains the verified structure `Fc1ccc(-c2nc[nH]c2-c2ccncc2)cc1`.\n2. The scaffold `c1ccc(-c2nc[nH]c2-c2ccncc2)cc1` matches the verified structure.\n3. Therefore, the molecule contains the specified ring system scaffold.\nOutput: yes\n```json\n{\"output\": \"yes\"}\n```",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: Fc1ccc(-c2nc[nH]c2-c2ccncc2)cc1, Ring System Structure: c1ccc(-c2nc[nH]c2-c2ccncc2)cc1\n"
+      },
+      {
+        "gold": "1",
+        "model_output": "The molecule contains one methyl sulfonyl fragment, corresponding to the single S(=O)₂ group. Therefore, the count is 1.\nMark the correct answer: 1.\n```json\n{\"count\": \"1\"}`\n```",
+        "question": "You are a chemical assistent. Giving you an Input Molecule and a Fragment name, help me count the number of the fragment in the Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: CC(CCn1ccc(-c2ccc(F)cc2)cc1=O)(C(=O)NO)S(C)(=O)=O, Fragment Name: methyl sulfonyl.\n"
+      },
+      {
+        "gold": "No",
+        "model_output": "1. The molecule contains the verified structure `O=C(O)c1ccccc1Nc1ccnc(N2CCCCC2)n1`.\n2. The scaffold `C1=CCN(c2ncccn2)CC1` has two rings: one five-membered ring and one six-membered ring.\n3. The molecule includes a five-membered ring (`c1ccncn1`) and a six-membered ring (`c1ccccc1`), matching the scaffold's ring types and connectivity.\n4. Therefore, the molecule contains the specified ring system scaffold.\nOutput: yes\n```json\n{\"output\": \"yes\"}\n```",
+        "question": "You are a chemical assistent. Please Determine whether the ring_system_scaffold is in the Molecule. Input: a molecule's SMILES string, a Ring System Scaffold. Output: yes / no.\nDefinition: The ring system scaffold consists of one or more cyclic (ring-shaped) molecular structures.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nInput Molecule: O=C(O)c1ccccc1Nc1ccnc(N2CCCCC2)n1, Ring System Structure: C1=CCN(c2ncccn2)CC1\n"
+      },
+      {
+        "gold": "2",
+        "model_output": "The molecule contains 3 ring structures. Therefore, the answer is 3.\nMark the answer: 3\nJSON format:\n```json\n{\n    \"count\": \"3\"\n}\n```",
+        "question": "You are a chemistry expert. Help me count the number of ring structure in the Input Molecule.\nYour response must be directly parsable JSON format:\n{\n    \"count\": \"Your Answer Number\"\n}\nInput Molecule: Cc1ccnc(Oc2ccccc2-c2ccc(-c3cnc(N)nc3)c(F)c2)n1, Ring Structure: c1cncnc1.\n"
+      }
+    ]
+  },
+  "accuracy_summary": {
+    "chemcotbench_mol_und_Murcko_scaffold": {
+      "tanimoto_similarity_larger_means_better": 0.24
+    },
+    "chemcotbench_mol_und_equivalence": {
+      "accuracy": 54.0
+    },
+    "chemcotbench_mol_und_fg_count": {
+      "mae": 0.3
+    },
+    "chemcotbench_mol_und_ring_count": {
+      "mae": 1.0
+    },
+    "chemcotbench_mol_und_ring_system_scaffold": {
+      "accuracy": 53.33
+    }
+  },
+  "paper_metrics": [
+    {
+      "metric": "mae",
+      "label": "MAE",
+      "value": 0.65,
+      "higher_is_better": false,
+      "unit": "absolute",
+      "formula": "mean MAE of fg_count and ring_count",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_und_fg_count",
+          "metric": "mae",
+          "value": 0.3
+        },
+        {
+          "dataset": "chemcotbench_mol_und_ring_count",
+          "metric": "mae",
+          "value": 1.0
+        }
+      ]
+    },
+    {
+      "metric": "tanimoto_similarity",
+      "label": "TMS",
+      "value": 0.24,
+      "higher_is_better": true,
+      "unit": "ratio",
+      "formula": "Murcko scaffold Tanimoto similarity",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_und_Murcko_scaffold",
+          "metric": "tanimoto_similarity_larger_means_better",
+          "value": 0.24
+        }
+      ]
+    },
+    {
+      "metric": "accuracy",
+      "label": "Acc",
+      "value": 53.665,
+      "higher_is_better": true,
+      "unit": "percent",
+      "formula": "mean accuracy of equivalence and ring_system_scaffold",
+      "components": [
+        {
+          "dataset": "chemcotbench_mol_und_equivalence",
+          "metric": "accuracy",
+          "value": 54.0
+        },
+        {
+          "dataset": "chemcotbench_mol_und_ring_system_scaffold",
+          "metric": "accuracy",
+          "value": 53.33
+        }
+      ]
+    }
+  ],
+  "workspace": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__chemcotbench_mol_und__run-2/validation_sweep/candidates/durable_checkpoint__rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060__step-66__7d1cd4152917/workspace"
+}

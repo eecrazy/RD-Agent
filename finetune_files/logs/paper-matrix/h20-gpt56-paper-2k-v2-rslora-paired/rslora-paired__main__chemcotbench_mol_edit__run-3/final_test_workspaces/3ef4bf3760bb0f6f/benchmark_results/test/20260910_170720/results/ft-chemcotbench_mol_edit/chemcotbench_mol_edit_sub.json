@@ -1,0 +1,910 @@
+{
+    "correct_rate": 63.33333333333333,
+    "valid_rate": 93.33333333333333,
+    "tanimoto_similarity": 76.78286730878054,
+    "correct_count": 19.0,
+    "valid_count": 28.0,
+    "total_count": 30.0,
+    "details": [
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_30",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a protonated amine ([NH+]) in a six-membered ring, a thiophene-like aromatic system (c2c(sc3...)), a thiol (-SH) group (s in sc3), a sulfoxide (S in sc3), a cyclohexane ring (C4CCCCC4), and a ketone (=O). The thiol is part of the aromatic system.\nFunctional group identification: The thiol (-SH) is located at the sulfur atom in the aromatic system (position: sc3nc(S)...). The hydroxyl (-OH) must replace the thiol after deletion.\nDeletion strategy: Re"
+            ],
+            "pred_smiles": [
+                "C[NH+]1CCc2c(sc3nc(O)n(C4CCCCC4)c(=O)c23)C1"
+            ],
+            "source": [
+                "C[NH+]1CCc2c(sc3nc(S)n(C4CCCCC4)c(=O)c23)C1"
+            ],
+            "gold": [
+                "C[NH+]1CCc2c(sc3nc(O)n(C4CCCCC4)c(=O)c23)C1"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                "thiol"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_31",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a protonated amine ([NH+]), a thioether (S-C), a ketone (C=O), an imine (N=C), a substituted benzene ring with a chlorine atom, and a cyclohexane-like ring system. The hydroxyl group is part of the ketone (C(O)=N).\nFunctional group identification: The hydroxyl group is located on the carbon adjacent to the ketone in the structure: C(O)=N. The aldehyde group (-CHO) must be added to a terminal carbon or a position that allows stable bonding.\nDeletion "
+            ],
+            "pred_smiles": [
+                "CC[NH+]1CCc2c(sc3c2C=O=N[C@H](c2cccc(Cl)c2)N3)C1CC=O"
+            ],
+            "source": [
+                "CC[NH+]1CCc2c(sc3c2C(O)=N[C@H](c2cccc(Cl)c2)N3)C1"
+            ],
+            "gold": [
+                "CC[NH+]1CCc2c(sc3c2C(C=O)=N[C@H](c2cccc(Cl)c2)N3)C1"
+            ],
+            "group_a": [
+                "aldehyde"
+            ],
+            "group_b": [
+                "hydroxyl"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_32",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a methoxy group (CO-), a sulfonyl group (S(=O)(=O)), a tertiary amine (N), a cyclohexane ring fused to a benzene ring with a chlorine substituent, and a protonated ammonium group ([NH+]). The aromatic systems and functional groups are interconnected via aliphatic chains and heteroatoms.\nFunctional group identification: Halo groups (F, Cl) are located on the benzene ring (F at position 2, Cl at position 6 of the benzene ring). The nitrile group (C#N)"
+            ],
+            "pred_smiles": [
+                "COc1cc(C#N)ccc1S(=O)(=O)NCCC1=c2cccc(Cl)c2=[NH+][C@H]1C"
+            ],
+            "source": [
+                "COc1cc(F)ccc1S(=O)(=O)NCCC1=c2cccc(Cl)c2=[NH+][C@H]1C"
+            ],
+            "gold": [
+                "COc1cc(C#N)ccc1S(=O)(=O)NCCC1=c2cccc(Cl)c2=[NH+][C@H]1C"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                "halo"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_33",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a bicyclic structure with a pyrimidine-like ring system. Key functional groups include: (1) an aldehyde group (C=O) attached to a benzene ring (Oc2ccc(C=O)cc2OCC), (2) ether linkages (Oc2...), (3) ketones (c(=O)), and (4) tertiary amines (n(C)). The aldehyde is part of the substituent on the benzene ring.\nFunctional group identification: The aldehyde group is located on the benzene ring at the position 'Oc2ccc(C=O)cc2OCC'. The carbonyl (C=O) is dire"
+            ],
+            "pred_smiles": [
+                "C=CCn1c(Oc2ccc(Cl)cc2OCC)nc2c1c(=O)n(C)c(=O)n2C"
+            ],
+            "source": [
+                "C=CCn1c(Oc2ccc(C=O)cc2OCC)nc2c1c(=O)n(C)c(=O)n2C"
+            ],
+            "gold": [
+                "C=CCn1c(Oc2ccc(Br)cc2OCC)nc2c1c(=O)n(C)c(=O)n2C"
+            ],
+            "group_a": [
+                "halo"
+            ],
+            "group_b": [
+                "aldehyde"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.7966101694915254
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_34",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central aromatic ring (likely a pyridine derivative) with substituents: methyl groups, a carbonyl-linked amine-containing side chain, and a thiophene ring substituted with a nitrile and amine groups. The nitrile group is part of the substituent on the thiophene ring.\nFunctional group identification: The nitrile group (-C#N) is located on the thiophene ring at the position: c3c(sc(N)c3C#N). The nitro group (-NO2) must replace the nitrile group to s"
+            ],
+            "pred_smiles": [
+                "Cc1nc(C)c(C(=O)N2CCc3c(sc(N)c3NO)C2)o1"
+            ],
+            "source": [
+                "Cc1nc(C)c(C(=O)N2CCc3c(sc(N)c3C#N)C2)o1"
+            ],
+            "gold": [
+                "Cc1nc(C)c(C(=O)N2CCc3c(sc(N)c3[N+](=O)[O-])C2)o1"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                "nitrile"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.6842105263157895
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_35",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a nitrile group (N#C), a thiazole ring (c1sc2...), an amide group (NC(=O)), and a cyclohexane-like ring (CCCC2). The nitrile is attached to the thiazole's aromatic carbon, and the amide is part of a bicyclic system.\nFunctional group identification: The nitrile group is located at the first carbon of the thiazole ring (N#Cc1...). The amide group is part of the substituent on the thiazole's nitrogen (NC(=O)...).\nDeletion strategy: Remove the nitrile g"
+            ],
+            "pred_smiles": [
+                "O=C(O)c1c(NC(=O)C2(c3ccccc3)CCCC2)sc2c1CCCC2"
+            ],
+            "source": [
+                "N#Cc1c(NC(=O)C2(c3ccccc3)CCCC2)sc2c1CCCC2"
+            ],
+            "gold": [
+                "O=C(O)c1c(NC(=O)C2(c3ccccc3)CCCC2)sc2c1CCCC2"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                "nitrile"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_36",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central benzene ring with substituents: a ketone (O=C), chlorine (Cl), a methoxy group (OC), and a thiazole ring (nnsc) with a chlorine substituent. The ketone is attached to the benzene ring, and the methoxy group is connected to the thiazole ring.\nFunctional group identification: The aldehyde group (-CHO) is not explicitly present in the input SMILES. However, the ketone (O=C) is a carbonyl group, which is chemically similar but not an aldehyde."
+            ],
+            "pred_smiles": [
+                "O=S(c1cc(Cl)c2ccccc2c1OCc1nnsc1Cl)c1ccccc1"
+            ],
+            "source": [
+                "O=Cc1cc(Cl)c2ccccc2c1OCc1nnsc1Cl"
+            ],
+            "gold": [
+                "Sc1cc(Cl)c2ccccc2c1OCc1nnsc1Cl"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                "aldehyde"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.6346153846153846
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_37",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains an ethoxy group (CCO-), a nitro group ([N+](=O)[O-]), a nitroso group (/C=N/), an amide (NC(=O)), and a deprotonated oxygen ([O-]). The aromatic ring has substituents at specific positions.\nFunctional group identification: The nitro group is located on the aromatic ring at position 5 (SMILES substring: [N+](=O)[O-]). The nitroso group is part of the substituent at position 2 (CCOc1.../C=N/...).\nDeletion strategy: The nitro group is removed by deleti"
+            ],
+            "pred_smiles": [
+                "CCOc1cc(/C=N/NC(=O)OC)cc(C#N)c1[O-]"
+            ],
+            "source": [
+                "CCOc1cc(/C=N/NC(=O)OC)cc([N+](=O)[O-])c1[O-]"
+            ],
+            "gold": [
+                "CCOc1cc(/C=N/NC(=O)OC)cc(C#N)c1[O-]"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                "nitro"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_38",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a quaternary ammonium group ([NH+]), a benzyl group (Cc1ccccc1), a secondary alcohol ([C@@H]), and a thiol (-SH) group in the CS moiety. The thiol is part of the sulfur-containing group at the terminal end of the structure.\nFunctional group identification: The thiol (-SH) is located in the terminal CS group. The halo group (e.g., -Cl, -Br) will replace the sulfur atom in this position.\nDeletion strategy: The thiol group is removed by deleting the su"
+            ],
+            "pred_smiles": [
+                "CC[NH+](Cc1ccccc1)C[C@@H](C)CCl"
+            ],
+            "source": [
+                "CC[NH+](Cc1ccccc1)C[C@@H](C)CS"
+            ],
+            "gold": [
+                "CC[NH+](Cc1ccccc1)C[C@@H](C)CBr"
+            ],
+            "group_a": [
+                "halo"
+            ],
+            "group_b": [
+                "thiol"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.7058823529411765
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_39",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a pyridine ring (c1ccc...cn1) with a carbonyl group (O=C) at position 1. Attached to the pyridine is an ethylene glycol ether (OCCO) linked to a benzene ring (c2ccccc2). The aldehyde group is part of the carbonyl (O=C) attached to the pyridine.\nFunctional group identification: The aldehyde group is located at the carbonyl (O=C) bonded to the pyridine ring. The nitrile group (-C#N) must be added to a position that maintains molecular stability, such "
+            ],
+            "pred_smiles": [
+                "N#Cc1ccc(OCCOc2ccccc2)cn1"
+            ],
+            "source": [
+                "O=Cc1ccc(OCCOc2ccccc2)cn1"
+            ],
+            "gold": [
+                "N#Cc1ccc(OCCOc2ccccc2)cn1"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                "aldehyde"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_40",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a cyclohexane ring with a protonated amine ([NH2+]), two chiral carbons ([C@@H]), a sulfonyl group (S(=O)(=O)), and a nitro group ([N+](=O)[O-]) attached to a benzene ring. The nitro group is the target for deletion, and the aldehyde (-CHO) must be added.\nFunctional group identification: The nitro group is located on the benzene ring at the position 'c1ccc([N+](=O)[O-])cc1'. The aldehyde addition requires a suitable site, such as a terminal carbon o"
+            ],
+            "pred_smiles": [
+                "CC(=O)c1ccc([N+](=O)[O-])cc1S(=O)(=O)C1CC[NH2+]C(C@@H)CC1"
+            ],
+            "source": [
+                "C[NH2+][C@@H]1CCC[C@@H]1CCS(=O)(=O)c1ccc([N+](=O)[O-])cc1"
+            ],
+            "gold": [
+                "C[NH2+][C@@H]1CCC[C@@H]1CCS(=O)(=O)c1ccc(C=O)cc1"
+            ],
+            "group_a": [
+                "aldehyde"
+            ],
+            "group_b": [
+                "nitro"
+            ],
+            "pred_valid": [
+                false
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_41",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a methyl ester (COC(=O)), a central benzene ring substituted with an amide-linked piperazine ring (NC(=O)C2CCN(C(=O)O)CC2). The piperazine ring includes a secondary amide (C(=O)O) and a tertiary amine (N(C(=O)O)).\nFunctional group identification: The carboxyl group (-COOH) is located on the tertiary amine nitrogen in the piperazine ring (N(C(=O)O)). The nitrile group (-C#N) must replace a hydrogen atom or substitute a functional group.\nDeletion stra"
+            ],
+            "pred_smiles": [
+                "COC(=O)c1ccc(NC(=O)C2CCN(C#N)CC2)cc1"
+            ],
+            "source": [
+                "COC(=O)c1ccc(NC(=O)C2CCN(C(=O)O)CC2)cc1"
+            ],
+            "gold": [
+                "COC(=O)c1ccc(NC(=O)C2CCN(C#N)CC2)cc1"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                "carboxyl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_42",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a bicyclic structure with a cyclohexane ring fused to a protonated amine ([NH+]) and a thiol (-SH) group. The thiol is part of a side chain attached to the amine, represented by the SMILES segment 'CC2(CS)CCC2'. The main structure includes a cyclohexane ring with a chiral carbon (C@H) and a protonated amine.\nFunctional group identification: The thiol (-SH) group is located in the side chain 'CC2(CS)CCC2', where the sulfur atom is bonded to a carbon "
+            ],
+            "pred_smiles": [
+                "CC[C@@H]1CCC[NH+](CC2CCC2C(=O)[OH])CC1"
+            ],
+            "source": [
+                "CC[C@@H]1CCC[NH+](CC2(CS)CCC2)CC1"
+            ],
+            "gold": [
+                "CC[C@@H]1CCC[NH+](CC2(CC(=O)O)CCC2)CC1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                "thiol"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.48936170212765956
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_43",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a nitro group (O=[N+]([O-])), a benzene ring substituted with a propenyl group (C=C(Cl)Cl), and two chlorine atoms on the double bond. The nitro group is directly attached to the benzene ring.\nFunctional group identification: The nitro group is located at the first carbon of the benzene ring (O=[N+]([O-])c1...). The propenyl group (C=C(Cl)Cl) is attached to the benzene ring at the para position relative to the nitro group.\nDeletion strategy: The nit"
+            ],
+            "pred_smiles": [
+                "[OH]C(=O)c1cccc(C=C(Cl)Cl)c1"
+            ],
+            "source": [
+                "O=[N+]([O-])c1cccc(C=C(Cl)Cl)c1"
+            ],
+            "gold": [
+                "O=C(O)c1cccc(C=C(Cl)Cl)c1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                "nitro"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_44",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central bicyclic structure with a cyclohexane-like ring. Key functional groups include: (1) an amide group (NC=O), (2) two hydroxyl groups (-OH) attached to the bicyclic system, (3) fluorine substituents on the aromatic ring, and (4) chiral centers (C@H).\nFunctional group identification: The hydroxyl groups are located on the bicyclic system: one is part of the [C@@H](C)O substituent on the cyclohexane ring, and the other is part of the [C@@H](C)O"
+            ],
+            "pred_smiles": [
+                "CC(C)CNC(=O)[C@@H](C)Oc1ccc(F)cc1C(=O)[OH]"
+            ],
+            "source": [
+                "CC(C)CNC(=O)[C@@H](C)Oc1ccc(F)cc1[C@@H](C)O"
+            ],
+            "gold": [
+                "CC(C)CNC(=O)[C@@H](C)Oc1ccc(F)cc1[C@@H](C)C(=O)O"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                "hydroxyl"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.7021276595744681
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_45",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central benzene ring substituted with a nitro group ([N+](=O)[O-]), an amide group (NC(=O)), a quaternary ammonium group ([NH+](C)), and a fluorinated benzene ring. The fluorinated benzene ring has two fluorine atoms at adjacent positions.\nFunctional group identification: The 'halo' functional group corresponds to the two fluorine atoms on the fluorinated benzene ring (positions 1 and 4 of the aromatic system). The 'thiol' group (-SH) must be adde"
+            ],
+            "pred_smiles": [
+                "Cc1ccc([N+](=O)[O-])cc1NC(=O)[C@H](C)[NH+](C)Cc1ccc(F)c(S)c1"
+            ],
+            "source": [
+                "Cc1ccc([N+](=O)[O-])cc1NC(=O)[C@H](C)[NH+](C)Cc1ccc(F)c(F)c1"
+            ],
+            "gold": [
+                "Cc1ccc([N+](=O)[O-])cc1NC(=O)[C@H](C)[NH+](C)Cc1ccc(F)c(S)c1"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                "halo"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_46",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a sulfonyl group (S(=O)(=O)), a benzene ring (c1ccccc1), an amide group (C(=O)NC), a secondary amine ([C@H](C)), and a nitrile group (C#N). The nitrile is attached to the carbon adjacent to the amide nitrogen.\nFunctional group identification: The nitrile group is located at the terminal position of the carbon chain: C#N. The amide group is part of the NC[C@H](C) segment, where the nitrogen is bonded to the benzene ring and a secondary carbon.\nDeleti"
+            ],
+            "pred_smiles": [
+                "CC(C)S(=O)(=O)c1ccccc1C(=O)NC(=O)[C@H](C)NO"
+            ],
+            "source": [
+                "CC(C)S(=O)(=O)c1ccccc1C(=O)NC[C@H](C)C#N"
+            ],
+            "gold": [
+                "CC(C)S(=O)(=O)c1ccccc1C(=O)NC[C@H](C)[N+](=O)[O-]"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                "nitrile"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.5102040816326531
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_47",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central aromatic thiophene ring (s1) with substituents: a ketone (O=C), a thiazole-like ring (cn2c(nc3ccccc32)), and a benzene ring (c3ccccc32). The ketone is attached to the thiophene ring.\nFunctional group identification: The aldehyde group (-CHO) is not explicitly present in the input SMILES, but the ketone (O=C) is a plausible target for modification. The carboxyl group (-COOH) must be added to the thiophene ring.\nAdd strategy: The carboxyl gr"
+            ],
+            "pred_smiles": [
+                "O=C([OH])c1cn2c(nc3ccccc32)s1"
+            ],
+            "source": [
+                "O=Cc1cn2c(nc3ccccc32)s1"
+            ],
+            "gold": [
+                "O=C(O)c1cn2c(nc3ccccc32)s1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                "aldehyde"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_48",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a sulfonyl group (S(=O)(=O)), a nitro group ([N+](=O)[O-]), a tertiary amine (N[C@@H]), a cyclohexane-derived ring system (c2c3ccccc3C[C@H]2O), and a benzene ring. The nitro group is attached to the benzene ring, and the thiol (-SH) group is absent in the original structure.\nFunctional group identification: The nitro group is located at the benzene ring position marked by 'c([N+](=O)[O-])c1'. The thiol group must be added to a chemically feasible si"
+            ],
+            "pred_smiles": [
+                "CS(=O)(=O)c1ccc(N[C@@H]2c3ccccc3C[C@H]2O)c([SH]=O)c1"
+            ],
+            "source": [
+                "CS(=O)(=O)c1ccc(N[C@@H]2c3ccccc3C[C@H]2O)c([N+](=O)[O-])c1"
+            ],
+            "gold": [
+                "CS(=O)(=O)c1ccc(N[C@@H]2c3ccccc3C[C@H]2O)c([SH])c1"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                "nitro"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.76
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_49",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central carbon atom bonded to: (1) a methyl group (C), (2) a hydrazine group (N-N), (3) a nitro-substituted furan ring (c1ccc([N+](=O)[O-])o1), and (4) a benzene ring (c1ccccc1). The nitro group ([N+](=O)[O-]) is attached to the furan ring.\nFunctional group identification: The nitro group is located on the furan ring at the position: c1ccc([N+](=O)[O-])o1. The nitrile group (-C#N) must be added to the benzene ring (c1ccccc1) to maintain structural"
+            ],
+            "pred_smiles": [
+                "CN(/N=C/c1ccc(o1)[N+](=O)[O-])c1cccc(C#N)c1"
+            ],
+            "source": [
+                "CN(/N=C/c1ccc([N+](=O)[O-])o1)c1ccccc1"
+            ],
+            "gold": [
+                "CN(/N=C/c1ccc(C#N)o1)c1ccccc1"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                "nitro"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.5
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_50",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a nitrile group (C#C), a thiazole-like heterocycle (n1/c...ccc21), an imine group (=N/), a carbonyl (C=O), a bromine-substituted furan (c2ccc(Br)o2), and a sulfonamide (S(N)(=O)=O). The bromine (halo group) is attached to the furan ring, and the sulfonamide is part of the thiazole system.\nFunctional group identification: The bromine (halo group) is located on the furan ring at position c2ccc(Br)o2. The sulfonamide (S(N)(=O)=O) is part of the thiazol"
+            ],
+            "pred_smiles": [
+                "C#CCn1/c(=N/C(=O)c2ccc(C=O)o2)sc2cc(S(N)(=O)=O)ccc21"
+            ],
+            "source": [
+                "C#CCn1/c(=N/C(=O)c2ccc(Br)o2)sc2cc(S(N)(=O)=O)ccc21"
+            ],
+            "gold": [
+                "C#CCn1/c(=N/C(=O)c2ccc(C=O)o2)sc2cc(S(N)(=O)=O)ccc21"
+            ],
+            "group_a": [
+                "aldehyde"
+            ],
+            "group_b": [
+                "halo"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_51",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a pyrimidine ring (n1ccnc1), a tertiary amine ([C@@H]), two amide groups (NC(=O)), a nitro group ([N+](=O)[O-]), and a chloro-substituted benzene ring (c1ccc(Cl)cc1). The nitro group is attached to the benzene ring connected to the amide groups.\nFunctional group identification: The nitro group is located on the benzene ring at the position 'c1cccc([N+](=O)[O-])c1'. The hydroxyl group must be added to the same aromatic ring to maintain structural coh"
+            ],
+            "pred_smiles": [
+                "Cn1ccnc1[C@@H](NC(=O)CNC(=O)c1cccc([OH])c1)c1ccc(Cl)cc1"
+            ],
+            "source": [
+                "Cn1ccnc1[C@@H](NC(=O)CNC(=O)c1cccc([N+](=O)[O-])c1)c1ccc(Cl)cc1"
+            ],
+            "gold": [
+                "Cn1ccnc1[C@@H](NC(=O)CNC(=O)c1cccc(O)c1)c1ccc(Cl)cc1"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                "nitro"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_52",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a benzene ring with substituents: methoxy (-OCH3), fluorine atoms (halo groups), and a cyclohexane ring (OC2CCCC2) connected via another methoxy group. The core structure is a substituted benzene with two methoxy groups and two fluorine atoms.\nFunctional group identification: The halo groups (F) are located at positions 2 and 5 on the benzene ring. The methoxy groups are at positions 1 and 4. The cyclohexane is attached via a methoxy group at positi"
+            ],
+            "pred_smiles": [
+                "OCc1cc(O)c(OC2CCCC2)c(F)c1"
+            ],
+            "source": [
+                "OCc1cc(F)c(OC2CCCC2)c(F)c1"
+            ],
+            "gold": [
+                "OCc1cc(O)c(OC2CCCC2)c(F)c1"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                "halo"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_53",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a quaternary ammonium group ([NH+]), a benzene ring substituted with a nitrile (C#N), a thiol (-SH) group (represented as CS in SMILES), and a cyclohexane ring with a sulfur atom. The thiol is part of the cyclohexane substituent (CC1(CS)CCC1).\nFunctional group identification: The thiol (-SH) is located on the cyclohexane ring at the position marked by the 'CS' in the SMILES string. The nitrile (C#N) is attached to the benzene ring. Both groups are d"
+            ],
+            "pred_smiles": [
+                "C[NH+](Cc1cccc(C#N)c1)CC1(C#N)CCC1"
+            ],
+            "source": [
+                "C[NH+](Cc1cccc(C#N)c1)CC1(CS)CCC1"
+            ],
+            "gold": [
+                "C[NH+](Cc1cccc(C#N)c1)CC1(C#N)CCC1"
+            ],
+            "group_a": [
+                "nitrile"
+            ],
+            "group_b": [
+                "thiol"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                1.0
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_54",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a bicyclic aromatic system with a methyl group, a ketone (aldehyde precursor), a substituted benzene ring with a chlorine atom, and a fused nitrogen-containing ring. The ketone is part of the bicyclic structure, and the chlorine is attached to a benzene ring.\nFunctional group identification: The aldehyde group is identified as the ketone (C=O) in the bicyclic system. The chlorine atom is located on the benzene ring (-c3ccc(Cl)cc3). The aldehyde is p"
+            ],
+            "pred_smiles": [
+                "Cc1ccn2c(C=O)c(-c3ccc(I)cc3)nc2c1"
+            ],
+            "source": [
+                "Cc1ccn2c(C=O)c(-c3ccc(Cl)cc3)nc2c1"
+            ],
+            "gold": [
+                "Cc1ccn2c(Cl)c(-c3ccc(Cl)cc3)nc2c1"
+            ],
+            "group_a": [
+                "halo"
+            ],
+            "group_b": [
+                "aldehyde"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.5
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_55",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains an ethoxy group (CCO-), a benzene ring, a bicyclic system with a nitrile (C#N), an amide (C(=O)N), and a thioether (OC(=O)S). The bicyclic structure includes a bridge between a carbon and a nitrogen atom.\nFunctional group identification: The nitrile group (C#N) is located on the bridgehead carbon of the bicyclic system (position: C(C#N)=C(N)...). The thiol (-SH) group must replace the nitrile group to maintain valence and structural stability.\nDelet"
+            ],
+            "pred_smiles": [
+                "CCOc1ccc([C@H]2C(S)=C(N)OC(C)=C2C(=O)OCc2ccccc2)cc1"
+            ],
+            "source": [
+                "CCOc1ccc([C@H]2C(C#N)=C(N)OC(C)=C2C(=O)OCc2ccccc2)cc1"
+            ],
+            "gold": [
+                "CCOc1ccc([C@H]2C(CS)=C(N)OC(C)=C2C(=O)OCc2ccccc2)cc1"
+            ],
+            "group_a": [
+                "thiol"
+            ],
+            "group_b": [
+                "nitrile"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.7857142857142857
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_56",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains an ethyl ester (CCOC(=O)), a central aromatic ring substituted with a morpholine-like ring (o1), and a benzene ring (c2ccc(CC#N)cc2) with a nitrile (CC#N) group. The nitrile is attached to the benzene ring via a methylene bridge.\nFunctional group identification: The nitrile group is located on the benzene ring at the position 'c2ccc(CC#N)cc2'. The hydroxyl group must be added to the same benzene ring to maintain structural coherence.\nAdd strategy: T"
+            ],
+            "pred_smiles": [
+                "CCOC(=O)c1ccc(CNC(=O)Nc2ccc(O)cc2)o1"
+            ],
+            "source": [
+                "CCOC(=O)c1ccc(CNC(=O)Nc2ccc(CC#N)cc2)o1"
+            ],
+            "gold": [
+                "CCOC(=O)c1ccc(CNC(=O)Nc2ccc(CCO)cc2)o1"
+            ],
+            "group_a": [
+                "hydroxyl"
+            ],
+            "group_b": [
+                "nitrile"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.7872340425531915
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_57",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central benzene ring substituted with an aldehyde group (O=C), an ether-linked ethyl chain (OCC), a tertiary amine (N2N=C), a thiazole ring (c2cccs2), and a chlorophenyl group (c3ccccc3Cl). The aldehyde is directly attached to the benzene ring.\nFunctional group identification: The aldehyde group is located at the first carbon of the benzene ring (O=Cc1...). The tertiary amine (N2N=C) is part of a bicyclic system involving a thiazole ring. The chlo"
+            ],
+            "pred_smiles": [
+                "O=Cc1ccc(OCC(=O)N2N=C(c3ccccc3Cl)C[C@@H]2c2cccs2)cc1C(=O)O"
+            ],
+            "source": [
+                "O=Cc1ccc(OCC(=O)N2N=C(c3ccccc3Cl)C[C@@H]2c2cccs2)cc1"
+            ],
+            "gold": [
+                "O=C(O)c1ccc(OCC(=O)N2N=C(c3ccccc3Cl)C[C@@H]2c2cccs2)cc1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                "aldehyde"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.7352941176470589
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_58",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains a central benzene ring substituted with methyl groups, a protonated amine ([NH2+]), and a fluorine atom. The side chain includes a secondary benzene ring fused to a cyclohexane-like structure. Key functional groups: halo (F), ammonium ([NH2+]), and aromatic systems.\nFunctional group identification: The halo group (F) is located on the main benzene ring. The ammonium group ([NH2+]) is part of the side chain attached to the central benzene. The cycloh"
+            ],
+            "pred_smiles": [
+                "Cc1cc(C[NH2+]Cc2ccc3c(c2)CCC3)cc(C)c1C(=O)[OH]"
+            ],
+            "source": [
+                "Cc1cc(C[NH2+]Cc2ccc3c(c2)CCC3)cc(C)c1F"
+            ],
+            "gold": [
+                "Cc1cc(C[NH2+]Cc2ccc3c(c2)CCC3)cc(C(=O)O)c1"
+            ],
+            "group_a": [
+                "carboxyl"
+            ],
+            "group_b": [
+                "halo"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                true
+            ],
+            "tanimoto_similarity": [
+                0.6888888888888889
+            ]
+        },
+        {
+            "example_abbr": "chemcotbench_mol_edit_sub_59",
+            "pred_raw": [
+                "Molecule analysis: The input molecule contains an acetamide group (CC(=O)N), a central benzene ring substituted with an amide-linked aromatic system (NC(=O)c2...), and a tertiary alcohol (COc3ccc(C=O)cc3). The tertiary alcohol is part of a benzene ring substituted with a ketone (C=O).\nFunctional group identification: The aldehyde group (-CHO) is not explicitly present in the input SMILES. However, the ketone (C=O) in the tertiary alcohol substituent (COc3ccc(C=O)cc3) is a plausible target for mo"
+            ],
+            "pred_smiles": [
+                "CC(=O)Nc1ccc(NC(=O)c2oc(COc3ccc(NO)cc3)cc2C)cc1"
+            ],
+            "source": [
+                "CC(=O)Nc1ccc(NC(=O)c2oc(COc3ccc(C=O)cc3)cc2C)cc1"
+            ],
+            "gold": [
+                "CC(=O)Nc1ccc(NC(=O)c2oc(COc3ccc([N+](=O)[O-])cc3)cc2C)cc1"
+            ],
+            "group_a": [
+                "nitro"
+            ],
+            "group_b": [
+                "aldehyde"
+            ],
+            "pred_valid": [
+                true
+            ],
+            "correct": [
+                false
+            ],
+            "tanimoto_similarity": [
+                0.7547169811320755
+            ]
+        }
+    ]
+}

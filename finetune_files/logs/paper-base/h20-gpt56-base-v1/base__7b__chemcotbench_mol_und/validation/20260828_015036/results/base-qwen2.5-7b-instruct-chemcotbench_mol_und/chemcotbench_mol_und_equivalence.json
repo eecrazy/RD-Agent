@@ -1,0 +1,556 @@
+{
+    "accuracy": 52.0,
+    "details": {
+        "type": "GEN",
+        "0": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: c1ccc(COc2ccc(OCCn3cnc4ccccc43)cc2)cc1, Molecule B: c1c(COc2ccc(OCCn3c4=C=C=CC=c4nc3)cc2)cccc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "No"
+        },
+        "1": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CSc1c(CC(=O)Nc2ccc(F)cc2)n(Cc2ccccc2)c2ccccc12, Molecule B: c1(c(c2c(cccc2)n1Cc1ccccc1)SC)CC(Nc1ccc(F)cc1)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "2": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cn1nc(C(N)=O)c2c1-c1nc(NCc3ccccc3)ncc1CC2, Molecule B: Cn1nc(c2CCc3cnc(NCc4ccccc4)nc3-c12)CN.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "No"
+        },
+        "3": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C1NC(=O)C(=Cc2ccc(-c3cccc([N+](=O)[O-])c3)o2)S1, Molecule B: C1(SC(NC1=O)=O)=Cc1oc(-c2cccc([N+]([O-])=O)c2)cc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "Yes"
+        },
+        "4": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc2ncnc(NC(C)C)c2cc1OC, Molecule B: c12cc(OC)c(OC)cc2c(NC(C)C)ncn1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "5": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CSc1nc(-c2ccc(F)cc2)c(-c2ccnc(OC(C)C)c2)[nH]1, Molecule B: n1ccc(-c2[nH]c(SC)nc2-c2ccc(cc2)F)cc1OC(C)C.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "6": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(CC2NCCc3c2[nH]c2ccc(SC)cc32)cc1OC, Molecule B: N1C(Cc2ccc(O)c(c2)OC)c2c(CC1)c1c([nH]2)ccc(SC)c1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "7": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC(Nc1cccc(CN2CCOC2=O)c1)C(=O)NC(N)=O, Molecule B: O=C(N)NC(C(C)Nc1cc(ccc1)CN1CCOC1=O)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "8": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CN=C(NC#N)NCCn1nc(-c2ccccc2)ccc1=O, Molecule B: c1(ccccc1)-c1ccc(n(n1)CCNC(=N)NC#N)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "9": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc(N)c(Cl)cc1C(=O)NC1CCN(CC2CCN(C(=S)C(C)C)CC2)CC1OC, Molecule B: C(NC1CCN(CC2CCN(CN2)C(=S)C(C)C)CC1OC)(=O)c1c(cc(c(c1)Cl)N)OC.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "10": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Nc1ccc(Nc2nc(-c3ccc(Cl)cc3)cs2)cc1, Molecule B: c1(-c2ccc(cc2)Cl)csc(n1)Nc1ccc(cc1)N.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "11": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CSc1nc2ccc3nc(NC(=O)c4ccco4)sc3c2s1, Molecule B: n1c2c(sc1SC)c1c(cc2)nc(s1)NC(=O)c1ccco1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "12": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Nc1ccnc(Nc2ccc(Oc3ccc(Cl)cc3)cc2)c1, Molecule B: c1nc(cc(c1)N)Nc1ccc(Oc2ccc(Cl)cc2)cc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "13": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1cc(NC(=O)CN2C(=O)NC(C)(c3ccccc3)C2=O)no1, Molecule B: O=C1NC(C)(C2=C=C=CC=C2)C(N1CC(Nc1noc(c1)C)=O)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "14": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CS(=O)(=O)c1cccc(C(=O)NCc2cccc(-c3cccc(CN4CCNCC4)c3)c2)c1, Molecule B: C1NCCN(Cc2cccc(-c3cc(CNC(c4cccc([SH](=O)=O)c4)=O)ccc3)c2)C1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "15": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CN1CCN(CC(=O)N(C)c2ccc(Sc3ccccc3)cc2)CC1, Molecule B: C(N1CCNCC1)C(N(c1ccc(cc1)Sc1ccccc1)C)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "16": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CN(C)S(=O)(=O)CCc1ccc(NC(=O)c2ncc(C#N)[nH]2)c(C2=CCCCC2)c1, Molecule B: c1c(C2=CCCCC2)c(NCc2[nH]c(cn2)C#N)ccc1CCS(=O)(=O)N(C)C.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "17": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(NC(=O)Nc2ccc(N(C)c3ncnc4cc(OC)c(OC)cc34)cc2)cc1, Molecule B: c1c(ccc(c1)OC)NC(Nc1ccc(cc1)N(c1ncnc2cc(OC)c(ON)cc12)C)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "18": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Nc1ccc(-c2nnc(NC(=O)Nc3ccc(Cl)c(Cl)c3)s2)cc1, Molecule B: c1(c(Cl)cc(NC(Nc2nnc(s2)-c2ccc(N)cc2)=O)cc1)Cl.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "Yes"
+        },
+        "19": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC(C)c1ccccc1OCCN1CCC(NS(=O)(=O)c2ccccc2)CC1, Molecule B: c1cc(S(NC2CCN(CCOc3c(C(C)C)cccc3)CN2)(=O)=O)ccc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "20": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(C=CC(=O)Nc2cc(-c3c(-c4ccc(F)cc4)nc(SC)n3C)ccn2)cc1, Molecule B: c1(-c2c(-c3ccc(F)cc3)nc(SC)n2C)cc(NCC=Cc2ccc(cc2)OC)ncc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "No"
+        },
+        "21": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc2c(cc1OC)-c1cc(Nc3c(Cl)cccc3Cl)nc(=O)n1CC2, Molecule B: c1(cccc(c1Nc1nc(n2c(-c3cc(OC)c(cc3CC2)OC)c1)=O)Cl)Cl.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "22": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(CSc1cccc[n+]1[O-])Nc1ccccc1Oc1ccccc1, Molecule B: c1ccc[n+](c1SCC(Nc1c(cccc1)Oc1ccccc1)=O)[O-].\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "23": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C1c2ccccc2C(=O)N1CCOC(=S)Nc1ccc(F)cc1F, Molecule B: S=C(NC1C(F)=CS(=CC=1)F)OCCN1C(=O)c2c(cccc2)C1=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "No"
+        },
+        "24": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1c(F)ccc(C(=O)Nc2cc(C(=O)O)ccc2N2CCN(C)CC2)c1Cl, Molecule B: c1(cc(ccc1N1CCN(C)CC1)C(O)=O)NC(=O)c1ccc(c(c1Cl)C)F.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "25": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCC(C)Nc1ncnc2cc(OC)c(OC)cc12, Molecule B: n1cnc(NC(C)CC)c2cc(c(cc12)OS)OC.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "26": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(-c2nc(NCC(=O)N3CCCCC3)sc2-c2ccc(OC)cc2)cc1, Molecule B: s1c(c(nc1NCC(N1CCCCC1)=O)-c1ccc(cc1)O)-c1ccc(OC)cc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "27": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc2ncnc(N(C)c3ccc(F)c(Cl)c3)c2cc1OC, Molecule B: Clc1c(F)ccc(c1)N(c1ncnc2cc(OC)c(cc12)OC)C.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "28": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1cc(C#N)cc(C(=O)c2c(C(C)C)c(=O)[nH]c(=O)n2Cc2cc(N)nc(F)c2F)c1, Molecule B: O=C(c1cc(cc(C#N)c1)C)c1n(c([nH]c(=O)c1CC)=O)Cc1cc(N)nc(c1F)F.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "29": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1nc(C#Cc2cnc(SC(C)(C)C)nc2)cs1, Molecule B: s1cc(C#Cc2cnc(nc2)OC(C)(C)C)nc1C.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "30": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CN(CCCNc1ccnc2cc(Cl)ccc12)C(=O)c1ccccc1, Molecule B: C(N(C(c1ccccc1)=O)C)CCNc1ccnc2cc(ccc12)Cl.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "31": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCc1ccc(OC(C)=O)c(C(=O)c2ccc(C)cc2)c1, Molecule B: c1c(ccc(c1)C(=O)c1cc(CC)ccc1OC(C)=O)C.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "32": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: c1ccc(-c2cc(NCc3cccnc3)n3nccc3n2)cc1, Molecule B: c1c(cccc1)-c1cc(n2c(ccn2)n1)NCC1C=C=C=NC=1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "33": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1cc(C)cc(NC(=O)Nc2ccc(NS(N)(=O)=O)cc2)c1, Molecule B: O=C(Nc1ccc(cc1)NS(N)(=O)=O)Nc1cc(C)cc(c1)C.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"No\"\n}",
+            "predictions": "{\n    \"output\": \"No\"\n}",
+            "references": "Yes"
+        },
+        "34": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1cc2ncnc(N3CCN(C(=O)Nc4ccccn4)CC3)c2cc1OC, Molecule B: c1(NC(=O)N2CCN(CC2)c2ncnc3c2cc(c(c3)OC)OC)ncccc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "35": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(NCCCN1CCOCC1)c1ccc2c(=O)n(Cc3ccc(Cl)cc3)c(=O)[nH]c2c1, Molecule B: c1c(C(=O)NCCCN2CCOCC2)ccc2c(=O)n(c(=O)[nH]c21)Cc1ccc(Cl)cc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "36": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: NC(CCC(=O)O)C(=O)Nc1ccc(Cl)cc1C(=O)c1ccc[nH]1, Molecule B: N(c1ccc(Cl)cc1C(=O)c1ccc[nH]1)CC(CCC(O)=O)N.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "37": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: COc1ccc(S(=O)(=O)N2CCC3(CC2)CC(=O)c2ccccc2O3)cc1OC, Molecule B: C1(c2ccccc2OC2(C1)CCN(S(=O)(c1ccc(OC)c(c1)OC)=O)CC2)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "38": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: NC(=O)OC(CCN1CCN(c2ccc([N+](=O)[O-])cc2)CC1)c1ccccc1, Molecule B: c1ccccc1C(CCN1CCN(c2ccc(cc2)[N+]([O-])=O)CC1)OC(=O)N.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "Yes"
+        },
+        "39": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCOC(=O)CN1C(=O)SC(=Cc2ccc(-c3ccc(Cl)cc3Cl)o2)C1=O, Molecule B: Clc1cc(ccc1-c1oc(C=C2SC(N(C2=O)CC(OCC)=O)=O)cc1)Cl.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "40": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cn1c(=O)c(-c2ccccc2)nc2cncnc21, Molecule B: n1(C)c(c(nc2c1nccc2)-c1ccccc1)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "41": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC(NC(=O)C1CCN(Cc2cccc(NC(=O)c3ccc(Cl)cc3)c2)CC1)C1CCCCC1, Molecule B: C1CCCC(C1)C(C)NC(C1CCN(Cc2cc(ccc2)NC(c2ccc(Cl)cc2)=O)CC1)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "42": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CON(C)C(NC(C)=O)C(=O)NCc1ccccc1, Molecule B: N(C(C(NCc1ccccc1)=O)NC(=O)C)(NC)C.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "43": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: Cc1c(NC(=O)c2ccc(S(=O)(=O)Nc3ccccc3F)cc2)c(=O)n(-c2ccccc2)n1C, Molecule B: c1cc(NS(c2ccc(C(=O)Nc3c(n(C)n(c3=O)-c3ccccc3)C)cc2)(=O)=O)c(F)cc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "44": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC(C)n1cnc2c(Nc3cccc(Cl)c3)ncnc21, Molecule B: n1cnc(c2c1n(CC)cn2)Nc1cc(Cl)ccc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"Yes\"\n}",
+            "predictions": "{\n    \"output\": \"Yes\"\n}",
+            "references": "No"
+        },
+        "45": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CCC(Oc1ccccc1)C(=O)Nc1nnc(S(=O)(=O)N2CCCC2)s1, Molecule B: O=S(N1CCCC1)(c1sc(nn1)NC(=O)C(CC)Oc1ccccc1)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        },
+        "46": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC(C)n1cnc2c(NCc3ccc(-c4ccccc4)cc3)nc(N(CCO)CCO)nc21, Molecule B: C(N(c1nc(c2ncn(c2n1)CC)NCc1ccc(-c2ccccc2)cc1)CCO)CO.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "47": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: NC(=O)c1cccc2c(NCc3cccc(Nc4ncccn4)c3)ncnc12, Molecule B: n1c(nccc1)Nc1cccc(c1)CNC1=S2C=CC=C(C2=NC=N1)C(N)=O.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "48": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: O=C(O)c1ccc(S(=O)(=O)N(Cc2ccccc2)Cc2ccc(O)cc2)cc1, Molecule B: c1ccccc1CN(Cc1ccc(cc1)O)S(=O)c1ccc(C(O)=O)cc1.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "No"
+        },
+        "49": {
+            "prompt": [
+                {
+                    "role": "HUMAN",
+                    "prompt": "You are a chemical assistent. Given two molecule SMILES, Please Determine whether these two Molecules are the same. Input: Molecule A SMILES string, Molecule B SMILES string. Output: yes / no. \nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Yes / No\"\n}\nMolecule A: CC1C2Cc3ccc(N)cc3C1(C)CCN2, Molecule B: C1NC2Cc3ccc(cc3C(C)(C2C)C1)N.\n"
+                }
+            ],
+            "origin_prediction": "{\n    \"output\": \"no\"\n}",
+            "predictions": "{\n    \"output\": \"no\"\n}",
+            "references": "Yes"
+        }
+    }
+}

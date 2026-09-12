@@ -1,0 +1,102 @@
+{
+    "0": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Sc1sccc1/C=N/c1ccc2ccccc2c1, Functional Group to delete: thiol.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains a thiophene ring (Sc1sccc1) connected to a vinyl group (C=N) and a biphenyl system (c1ccc2ccccc2c1). The thiol (-SH) group is part of the thiophene ring's sulfur atom.\nfunctional group identification: The thiol group is identified as the sulfur atom (S) in the thiophene ring. The SMILES substring 'Sc1sccc1' confirms the sulfur's position as part of the aromatic ring.\ndelete strategy: To delete the thiol group, the sulfur atom (S) in the thiophene ring is replaced with a carbon atom (C) to retain aromaticity. This converts the thiophene (5-membered aromatic ring with S) into a benzene ring (6-membered aromatic ring with C).\nfeasibility analysis: Replacing sulfur with carbon in aromatic systems is chemically plausible in SMILES manipulation, though synthetic feasibility may vary. The resulting benzene ring maintains aromatic stability, and the rest of the structure (C=N and biphenyl) remains intact.\n{\"output\":\"CC(=C(C=N)Sc1ccc2ccccc2c1)\"}",
+        "gold": "c1sccc1/C=N/c1ccc2ccccc2c1"
+    },
+    "1": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Nc1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-], Functional Group to delete: amine.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains a bicyclic aromatic system with a sulfonamide group (S(=O)(=O)[O-]), an amide group (C(=O)[nH]), and an aromatic amine (Nc1...). The sulfonamide and amide are part of the fused bicyclic core, while the amine is attached to the first aromatic ring.\nfunctional group identification: The specified functional group 'amine' corresponds to the aromatic amine group (Nc1cc2...) in the SMILES string. The nitrogen atom is bonded to the first aromatic ring and the bicyclic system.\ndelete strategy: To delete the amine group, the nitrogen atom (N) in the aromatic amine (Nc1...) must be removed. The adjacent aromatic carbons (c1 and c2) are reconnected to form a continuous aromatic ring, preserving the bicyclic structure.\nfeasibility analysis: This modification is chemically viable as it retains aromaticity and avoids introducing unstable intermediates. The resulting structure maintains the sulfonamide and amide groups, ensuring stability.\n{\"output\":\"O=[SH]c1cc2c(c1)C(=O)[nH]c2\"}",
+        "gold": "c1cc2[nH]c(=O)[nH]c2cc1S(=O)(=O)[O-]"
+    },
+    "2": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@]2(O)CCCC[C@@H]2C1, Functional Group to delete: hydroxyl.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains an amide group (O=C-N), a bicyclic system with a fused cyclohexane and pyrrolidine-like ring, a ketone (C=O), and a hydroxyl (-OH) group attached to a chiral carbon in the bicyclic system. The hydroxyl is part of a stereogenic center in the [C@] and [C@@H] notations.\nfunctional group identification: The hydroxyl group (-OH) is located on the carbon adjacent to the bicyclic system's bridgehead, specifically at the position denoted by the [C@] notation in the SMILES string (N1CC[C@]2(O)...). This hydroxyl is a substituent on the bicyclic framework.\ndelete strategy: To delete the hydroxyl group, the oxygen atom (O) attached to the chiral carbon in the bicyclic system (C@) must be removed. This converts the [C@] notation (indicating a hydroxyl-substituted carbon) to a standard [C] notation, preserving the bicyclic structure and stereochemistry of the remaining substituents.\nfeasibility analysis: Removing the hydroxyl group is chemically feasible, as it does not disrupt the core bicyclic framework or critical bonds. The resulting structure retains stereochemical integrity at other centers, and the absence of the hydroxyl group avoids potential steric or electronic conflicts.\n{\"output\":\"O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@]2CCCC[C@@H]2C1\"}",
+        "gold": "O=C(Cn1nc2c(cc1=O)CCCC2)N1CC[C@H]2CCCC[C@@H]2C1"
+    },
+    "3": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: COC(=O)c1ccc(NC(=O)C2CCN(C(=O)O)CC2)cc1, Functional Group to delete: carboxyl.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains a methyl ester (COC(=O)), a benzene ring, an amide group (NC(=O)), and a piperidine ring with a carboxylate group (C(=O)O). The carboxyl group to delete is part of the carboxylate (-COO) in the piperidine substituent.\nfunctional group identification: The carboxyl group is located in the piperidine ring substituent as part of the C(=O)O moiety. The oxygen in the carboxylate is bonded to the piperidine carbon adjacent to the nitrogen.\ndelete strategy: To delete the carboxyl group, the oxygen atom in the carboxylate (C(=O)O) is removed, converting it to a methyl group (C). This replaces the -COO group with a -CH2 group on the piperidine ring.\nfeasibility analysis: This modification is chemically viable as it replaces the carboxylate with a methyl group, retaining the ring structure. The resulting molecule avoids introducing unstable intermediates or violating valence rules.\n{\"output\":\"COC(=O)c1ccc(NC(=O)C2CCN(C(=O)C)CC2)cc1\"}",
+        "gold": "COC(=O)c1ccc(NC(=O)C2CCNCC2)cc1"
+    },
+    "4": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(Cn1nnc(-c2ccccc2Cl)n1)N/N=C/c1cc(Cl)ccc1O, Functional Group to delete: amide.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains an amide group (O=C-N), a thioamide-like group (N/N=C), a chlorinated aromatic ring (-c2ccccc2Cl), and a hydroxyl group (O) on another aromatic ring. The core structure includes a central carbon connected to an amide, a thioamide-like group, and a chlorinated aromatic ring.\nfunctional group identification: The amide group is located at the central carbon: O=C(Cn1nnc(-c2ccccc2Cl)n1). The carbonyl (O=C) is bonded to a carbon that is part of a triazole ring (n1nnc...n1) and a chlorinated benzene ring (-c2ccccc2Cl).\ndelete strategy: To delete the amide group, the carbonyl oxygen (O=C) and its adjacent carbon (C) must be removed. The remaining bonds are adjusted to maintain connectivity. The triazole ring (n1nnc...n1) and chlorinated benzene (-c2ccccc2Cl) are retained and reconnected via the nitrogen atom in the triazole ring.\nfeasibility analysis: This modification is chemically viable as it preserves valence and connectivity. The resulting structure replaces the amide with a direct bond between the triazole nitrogen and the chlorinated benzene, forming a stable substituted triazole derivative.\n{\"output\":\"Nc1nnc(-c2ccccc2Cl)n1-c1cc(Cl)ccc1O\"}",
+        "gold": "Cn1nnc(-c2ccccc2Cl)n1.N/N=C/c1cc(Cl)ccc1O"
+    },
+    "5": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(Nc1ccc(Nc2ccccc2)cc1)c1ccc(O)nc1, Functional Group to delete: amine.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains an amide group (O=C-N), two aromatic rings, and a hydroxyl group (-OH) on one of the rings. The amine group to delete is part of the secondary amine (Nc2ccccc2) attached to the central aromatic ring.\nfunctional group identification: The specified functional group 'amine' corresponds to the secondary amine (-NH-) in the SMILES string. This group is located at the central aromatic ring (Nc2ccccc2), connecting the main ring to the hydroxyl-substituted aromatic ring.\ndelete strategy: To delete the amine group, the nitrogen atom (N) in the secondary amine (Nc2ccccc2) is removed, and the adjacent aromatic ring (c2ccccc2) is directly bonded to the central aromatic ring. This replaces the -NH- bridge with a direct C-C bond.\nfeasibility analysis: This modification is chemically viable as it replaces the amine bridge with a direct aromatic connection, forming a biphenyl-like structure. The resulting molecule retains aromaticity and avoids steric or electronic conflicts.\n{\"output\":\"O=C(Nc1ccc(Nc2ccccc2)cc1)c1ccccc1\"}",
+        "gold": "O=C(Nc1ccccc1)c1ccc(O)nc1"
+    },
+    "6": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: SCC1(COC2CCCC2)CC1, Functional Group to delete: thiol.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule (SCC1(COC2CCCC2)CC1) contains a cyclopropane ring (C1CC1) with substituents: a methylthio group (S-) and a methoxy-substituted cyclopentane (COC2CCCC2). The thiol (-SH) group is explicitly present as the terminal -S- in the methylthio substituent.\nfunctional group identification: The thiol group (-SH) is located at the terminal sulfur atom in the methylthio group (S-). The sulfur is bonded to the cyclopropane ring and the oxygen-containing substituent (COC2CCCC2).\ndelete strategy: To delete the thiol group, the sulfur atom (S) must be removed. The methylthio group (S-) will be converted to a methyl group (C), preserving the cyclopropane ring structure and the methoxy-substituted cyclopentane.\nfeasibility analysis: Removing the sulfur from the methylthio group is chemically feasible, as it results in a stable methyl group. The rest of the molecule (cyclopropane and cyclopentane) remains intact, ensuring structural stability.\n{\"output\":\"CCC1(COC2CCCC2)CC1\"}",
+        "gold": "CC1(COC2CCCC2)CC1"
+    },
+    "7": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: Cc1ccc(O[C@@H](C)C(=O)NC(N)=O)c(C=O)n1, Functional Group to delete: aldehyde.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains a substituted benzene ring with a methyl group, a hydroxyl group attached to a bicyclic system (including a tetrahydrofuran-like ring and a urea group), and an aldehyde group (C=O) attached to the aromatic ring. The aldehyde is explicitly part of the aromatic substituent.\nfunctional group identification: The aldehyde group is located at the aromatic ring position adjacent to the methyl group. Its SMILES representation is 'C=O' directly bonded to the aromatic carbon (position 4 of the benzene ring).\ndelete strategy: To delete the aldehyde group, the 'C=O' substituent on the aromatic ring is removed. The aromatic carbon previously bonded to the aldehyde retains its double bond to the benzene ring, and the remaining hydrogen is implicit in the SMILES notation.\nfeasibility analysis: Removing the aldehyde group is chemically feasible as it does not disrupt the aromaticity of the benzene ring. The resulting structure remains stable, with the aromatic system and other substituents (e.g., methyl, hydroxyl-bicyclic groups) intact.\n{\"output\":\"Cc1ccc(O[C@@H](C)C(=O)NC(N)=O)cc1\"}",
+        "gold": "Cc1ccc(O[C@@H](C)C(=O)NC(N)=O)cn1"
+    },
+    "8": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: N#CCC[C@H](C#N)CN1CCc2c(cccc2N2CCOC2=O)C1, Functional Group to delete: nitrile.\n"
+            }
+        ],
+        "prediction": "{\"output\":\"O=C1c2ccccc2N2CCOC2=O)C1\"}",
+        "gold": "N#CCC[C@H](C)CN1CCc2c(cccc2N2CCOC2=O)C1"
+    },
+    "9": {
+        "origin_prompt": [
+            {
+                "role": "HUMAN",
+                "prompt": "You are a chemical assistent. Given the SMILES structural formula of a molecule, help me DELETE a specified functional group and output the modified SMILES sequence of the molecule. Input: Molecule SMILES string, Functional Group Name. Output: Modified Molecule SMILES string.\nYour response must be directly parsable JSON format:\n{\n    \"output\": \"Modified Molecule SMILES\"\n}\nInput Molecule: O=C(NCc1nncn1C1CC1)Nc1cccc(Cl)c1F, Functional Group to delete: halo.\n"
+            }
+        ],
+        "prediction": "molecule analysis: The input molecule contains an amide group (O=C-N), a triazole ring (c1nncn1), a cyclopropane ring (C1CC1), and a substituted benzene ring with Cl and F substituents. The functional groups include the amide, triazole, cyclopropane, and halo (Cl/F) groups.\nfunctional group identification: The halo groups (Cl and F) are located on the benzene ring (positions 4 and 5, respectively, in the 'Nc1cccc(Cl)c1F' segment). The Cl is explicitly specified as the group to delete.\ndelete strategy: Remove the Cl atom from the benzene ring while retaining the F substituent. The benzene ring notation 'c1cccc(Cl)c1F' becomes 'c1cccccc1F' after deletion, as the Cl is replaced by an implicit hydrogen (omitted in SMILES).\nfeasibility analysis: Chemically feasible. Deleting a halogen substituent from an aromatic ring is common in dehalogenation reactions. The remaining F substituent and aromaticity are preserved.\n{\"output\":\"O=C(NCc1nncn1C1CC1)Nc1cccccc1F\"}",
+        "gold": "O=C(NCc1nncn1C1CC1)Nc1cccc(Cl)c1"
+    }
+}

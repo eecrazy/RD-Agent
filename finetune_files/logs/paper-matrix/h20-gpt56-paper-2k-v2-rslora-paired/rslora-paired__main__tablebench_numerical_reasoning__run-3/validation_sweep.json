@@ -1,0 +1,51 @@
+{
+  "baseline_only": false,
+  "benchmark": "tablebench_numerical_reasoning",
+  "candidate_count": 2,
+  "candidate_results": [
+    {
+      "candidate_id": "durable_checkpoint__rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214__step-375__df3d97d9a8fd",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_numerical_reasoning__run-3/validation_sweep/candidates/durable_checkpoint__rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214__step-375__df3d97d9a8fd/result.json",
+      "state": "succeeded"
+    },
+    {
+      "candidate_id": "durable_output__rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214__6f0adb21aade",
+      "result_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_numerical_reasoning__run-3/validation_sweep/candidates/durable_output__rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214__6f0adb21aade/result.json",
+      "state": "succeeded"
+    }
+  ],
+  "candidate_set_changed_during_sweep": false,
+  "candidate_set_signature": "d44b27e3bc84bc2c0a26583e77ae01084bc28340146f7dda69453366dcfd55b0",
+  "completed_count": 2,
+  "expected_samples": 2000,
+  "experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-3",
+  "held_out_test_used": false,
+  "initial_candidate_set_signature": "d44b27e3bc84bc2c0a26583e77ae01084bc28340146f7dda69453366dcfd55b0",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "pairing_artifact_signature": "720153c76d49b8443b7bc6afe23cab1a31711deff08862183683b777308364f5",
+  "provisional_selection": {
+    "candidate_id": "durable_checkpoint__rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214__step-375__df3d97d9a8fd",
+    "formal_training_evidence_signature": "4d3678b23231d8a25965f38db6bae3dd572d08dfb54b231c76f18dfcd73f2590",
+    "mean_ordinal_rank": 1.0,
+    "model_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2-rslora-paired/rslora-paired__main__tablebench_numerical_reasoning__run-3/workspace/.ft_model_checkpoints/rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214/output/checkpoint-375",
+    "selection_metrics": [
+      {
+        "formula": "unweighted mean accuracy across released dataset views",
+        "higher_is_better": true,
+        "label": "Acc",
+        "metric": "accuracy",
+        "unit": "percent",
+        "value": 21.0
+      }
+    ],
+    "selection_signature": "ecd83b79508121cf5fc43656a49509e7f8b5512f91011a8c8453552c41745414"
+  },
+  "schema_version": 1,
+  "search_state": "succeeded",
+  "selection_profile": "main",
+  "state": "complete",
+  "training_policy": "rslora",
+  "unavailable_candidates": [],
+  "updated_at": "2026-09-10T19:18:26.004317+08:00",
+  "validation_range": "[:min(100, len(index_list)//2)]"
+}

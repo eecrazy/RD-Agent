@@ -1,0 +1,131 @@
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/transformers/utils/hub.py:110: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/data/github/RD-Agent/finetune_files/conda_envs/opencompass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+08/28 01:59:23 - OpenCompass - INFO - Current exp folder: /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/test/20260828_015923
+08/28 01:59:23 - OpenCompass - WARNING - SlurmRunner is not used, so the partition argument is ignored.
+08/28 01:59:23 - OpenCompass - INFO - Partitioned into 6 tasks.
+  0%|          | 0/6 [00:00<?, ?it/s]                                     launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_drd] on GPU 6
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:45<03:47, 45.57s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_gsk] on GPU 6
+ 17%|█▋        | 1/6 [00:46<03:47, 45.57s/it] 33%|███▎      | 2/6 [01:31<03:04, 46.03s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_jnk] on GPU 6
+ 33%|███▎      | 2/6 [01:32<03:04, 46.03s/it] 50%|█████     | 3/6 [02:30<02:35, 51.74s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_logp] on GPU 6
+ 50%|█████     | 3/6 [02:31<02:35, 51.74s/it] 67%|██████▋   | 4/6 [03:04<01:29, 44.95s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_qed] on GPU 6
+ 67%|██████▋   | 4/6 [03:05<01:29, 44.95s/it] 83%|████████▎ | 5/6 [03:39<00:41, 41.35s/it]                                             launch OpenICLInfer[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_solubility] on GPU 6
+ 83%|████████▎ | 5/6 [03:40<00:41, 41.35s/it]100%|██████████| 6/6 [04:30<00:00, 44.56s/it]100%|██████████| 6/6 [04:30<00:00, 45.12s/it]
+08/28 02:03:54 - OpenCompass - WARNING - Default to dump eval details, it might take extraspace to save all the evaluation details. Set --dump-eval-details False to skip the details dump
+08/28 02:03:54 - OpenCompass - INFO - Partitioned into 6 tasks.
+  0%|          | 0/6 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_drd] on CPU 
+  0%|          | 0/6 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_gsk] on CPU 
+  0%|          | 0/6 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_jnk] on CPU 
+  0%|          | 0/6 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_logp] on CPU 
+  0%|          | 0/6 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_qed] on CPU 
+  0%|          | 0/6 [00:00<?, ?it/s]                                     launch OpenICLEval[base-qwen2.5-7b-instruct-chemcotbench_mol_opt/chemcotbench_mol_opt_solubility] on CPU 
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:15<01:16, 15.31s/it] 33%|███▎      | 2/6 [00:16<00:27,  6.75s/it] 50%|█████     | 3/6 [00:16<00:11,  3.88s/it] 67%|██████▋   | 4/6 [00:16<00:04,  2.42s/it]100%|██████████| 6/6 [00:16<00:00,  1.19s/it]100%|██████████| 6/6 [00:16<00:00,  2.82s/it]
+dataset                          version    metric             mode      base-qwen2.5-7b-instruct-chemcotbench_mol_opt
+-------------------------------  ---------  -----------------  ------  -----------------------------------------------
+chemcotbench_mol_opt_drd         1fe37c     mean_improvement   gen                                                0.00
+chemcotbench_mol_opt_drd         1fe37c     success_rate       gen                                                0.00
+chemcotbench_mol_opt_drd         1fe37c     best_rate          gen                                                0.00
+chemcotbench_mol_opt_drd         1fe37c     valid_smiles_rate  gen                                               70.00
+chemcotbench_mol_opt_drd         1fe37c     valid_score_rate   gen                                                0.00
+chemcotbench_mol_opt_drd         1fe37c     scaffold_hard      gen                                               20.00
+chemcotbench_mol_opt_drd         1fe37c     scaffold_soft      gen                                               40.36
+chemcotbench_mol_opt_drd         1fe37c     total_count        gen                                               50.00
+chemcotbench_mol_opt_gsk         1fe37c     mean_improvement   gen                                                0.00
+chemcotbench_mol_opt_gsk         1fe37c     success_rate       gen                                                0.00
+chemcotbench_mol_opt_gsk         1fe37c     best_rate          gen                                                0.00
+chemcotbench_mol_opt_gsk         1fe37c     valid_smiles_rate  gen                                               60.00
+chemcotbench_mol_opt_gsk         1fe37c     valid_score_rate   gen                                                0.00
+chemcotbench_mol_opt_gsk         1fe37c     scaffold_hard      gen                                               28.00
+chemcotbench_mol_opt_gsk         1fe37c     scaffold_soft      gen                                               40.23
+chemcotbench_mol_opt_gsk         1fe37c     total_count        gen                                               50.00
+chemcotbench_mol_opt_jnk         1fe37c     mean_improvement   gen                                                0.00
+chemcotbench_mol_opt_jnk         1fe37c     success_rate       gen                                                0.00
+chemcotbench_mol_opt_jnk         1fe37c     best_rate          gen                                                0.00
+chemcotbench_mol_opt_jnk         1fe37c     valid_smiles_rate  gen                                               54.00
+chemcotbench_mol_opt_jnk         1fe37c     valid_score_rate   gen                                                0.00
+chemcotbench_mol_opt_jnk         1fe37c     scaffold_hard      gen                                               12.00
+chemcotbench_mol_opt_jnk         1fe37c     scaffold_soft      gen                                               22.58
+chemcotbench_mol_opt_jnk         1fe37c     total_count        gen                                               50.00
+chemcotbench_mol_opt_logp        1fe37c     mean_improvement   gen                                                0.07
+chemcotbench_mol_opt_logp        1fe37c     success_rate       gen                                               40.00
+chemcotbench_mol_opt_logp        1fe37c     best_rate          gen                                               20.00
+chemcotbench_mol_opt_logp        1fe37c     valid_smiles_rate  gen                                               74.00
+chemcotbench_mol_opt_logp        1fe37c     valid_score_rate   gen                                               74.00
+chemcotbench_mol_opt_logp        1fe37c     scaffold_hard      gen                                               52.00
+chemcotbench_mol_opt_logp        1fe37c     scaffold_soft      gen                                               64.49
+chemcotbench_mol_opt_logp        1fe37c     total_count        gen                                               50.00
+chemcotbench_mol_opt_qed         1fe37c     mean_improvement   gen                                                0.10
+chemcotbench_mol_opt_qed         1fe37c     success_rate       gen                                               52.00
+chemcotbench_mol_opt_qed         1fe37c     best_rate          gen                                               18.00
+chemcotbench_mol_opt_qed         1fe37c     valid_smiles_rate  gen                                               68.00
+chemcotbench_mol_opt_qed         1fe37c     valid_score_rate   gen                                               68.00
+chemcotbench_mol_opt_qed         1fe37c     scaffold_hard      gen                                               20.00
+chemcotbench_mol_opt_qed         1fe37c     scaffold_soft      gen                                               35.02
+chemcotbench_mol_opt_qed         1fe37c     total_count        gen                                               50.00
+chemcotbench_mol_opt_solubility  1fe37c     mean_improvement   gen                                                0.49
+chemcotbench_mol_opt_solubility  1fe37c     success_rate       gen                                               46.00
+chemcotbench_mol_opt_solubility  1fe37c     best_rate          gen                                               30.00
+chemcotbench_mol_opt_solubility  1fe37c     valid_smiles_rate  gen                                               70.00
+chemcotbench_mol_opt_solubility  1fe37c     valid_score_rate   gen                                               70.00
+chemcotbench_mol_opt_solubility  1fe37c     scaffold_hard      gen                                               20.00
+chemcotbench_mol_opt_solubility  1fe37c     scaffold_soft      gen                                               39.33
+chemcotbench_mol_opt_solubility  1fe37c     total_count        gen                                               50.00
+08/28 02:04:11 - OpenCompass - INFO - write summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/test/20260828_015923/summary/summary_20260828_015923.txt
+08/28 02:04:11 - OpenCompass - INFO - write csv to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/test/20260828_015923/summary/summary_20260828_015923.csv
+
+
+The markdown format results is as below:
+
+| dataset | version | metric | mode | base-qwen2.5-7b-instruct-chemcotbench_mol_opt |
+|----- | ----- | ----- | ----- | -----|
+| chemcotbench_mol_opt_drd | 1fe37c | mean_improvement | gen | 0.00 |
+| chemcotbench_mol_opt_drd | 1fe37c | success_rate | gen | 0.00 |
+| chemcotbench_mol_opt_drd | 1fe37c | best_rate | gen | 0.00 |
+| chemcotbench_mol_opt_drd | 1fe37c | valid_smiles_rate | gen | 70.00 |
+| chemcotbench_mol_opt_drd | 1fe37c | valid_score_rate | gen | 0.00 |
+| chemcotbench_mol_opt_drd | 1fe37c | scaffold_hard | gen | 20.00 |
+| chemcotbench_mol_opt_drd | 1fe37c | scaffold_soft | gen | 40.36 |
+| chemcotbench_mol_opt_drd | 1fe37c | total_count | gen | 50.00 |
+| chemcotbench_mol_opt_gsk | 1fe37c | mean_improvement | gen | 0.00 |
+| chemcotbench_mol_opt_gsk | 1fe37c | success_rate | gen | 0.00 |
+| chemcotbench_mol_opt_gsk | 1fe37c | best_rate | gen | 0.00 |
+| chemcotbench_mol_opt_gsk | 1fe37c | valid_smiles_rate | gen | 60.00 |
+| chemcotbench_mol_opt_gsk | 1fe37c | valid_score_rate | gen | 0.00 |
+| chemcotbench_mol_opt_gsk | 1fe37c | scaffold_hard | gen | 28.00 |
+| chemcotbench_mol_opt_gsk | 1fe37c | scaffold_soft | gen | 40.23 |
+| chemcotbench_mol_opt_gsk | 1fe37c | total_count | gen | 50.00 |
+| chemcotbench_mol_opt_jnk | 1fe37c | mean_improvement | gen | 0.00 |
+| chemcotbench_mol_opt_jnk | 1fe37c | success_rate | gen | 0.00 |
+| chemcotbench_mol_opt_jnk | 1fe37c | best_rate | gen | 0.00 |
+| chemcotbench_mol_opt_jnk | 1fe37c | valid_smiles_rate | gen | 54.00 |
+| chemcotbench_mol_opt_jnk | 1fe37c | valid_score_rate | gen | 0.00 |
+| chemcotbench_mol_opt_jnk | 1fe37c | scaffold_hard | gen | 12.00 |
+| chemcotbench_mol_opt_jnk | 1fe37c | scaffold_soft | gen | 22.58 |
+| chemcotbench_mol_opt_jnk | 1fe37c | total_count | gen | 50.00 |
+| chemcotbench_mol_opt_logp | 1fe37c | mean_improvement | gen | 0.07 |
+| chemcotbench_mol_opt_logp | 1fe37c | success_rate | gen | 40.00 |
+| chemcotbench_mol_opt_logp | 1fe37c | best_rate | gen | 20.00 |
+| chemcotbench_mol_opt_logp | 1fe37c | valid_smiles_rate | gen | 74.00 |
+| chemcotbench_mol_opt_logp | 1fe37c | valid_score_rate | gen | 74.00 |
+| chemcotbench_mol_opt_logp | 1fe37c | scaffold_hard | gen | 52.00 |
+| chemcotbench_mol_opt_logp | 1fe37c | scaffold_soft | gen | 64.49 |
+| chemcotbench_mol_opt_logp | 1fe37c | total_count | gen | 50.00 |
+| chemcotbench_mol_opt_qed | 1fe37c | mean_improvement | gen | 0.10 |
+| chemcotbench_mol_opt_qed | 1fe37c | success_rate | gen | 52.00 |
+| chemcotbench_mol_opt_qed | 1fe37c | best_rate | gen | 18.00 |
+| chemcotbench_mol_opt_qed | 1fe37c | valid_smiles_rate | gen | 68.00 |
+| chemcotbench_mol_opt_qed | 1fe37c | valid_score_rate | gen | 68.00 |
+| chemcotbench_mol_opt_qed | 1fe37c | scaffold_hard | gen | 20.00 |
+| chemcotbench_mol_opt_qed | 1fe37c | scaffold_soft | gen | 35.02 |
+| chemcotbench_mol_opt_qed | 1fe37c | total_count | gen | 50.00 |
+| chemcotbench_mol_opt_solubility | 1fe37c | mean_improvement | gen | 0.49 |
+| chemcotbench_mol_opt_solubility | 1fe37c | success_rate | gen | 46.00 |
+| chemcotbench_mol_opt_solubility | 1fe37c | best_rate | gen | 30.00 |
+| chemcotbench_mol_opt_solubility | 1fe37c | valid_smiles_rate | gen | 70.00 |
+| chemcotbench_mol_opt_solubility | 1fe37c | valid_score_rate | gen | 70.00 |
+| chemcotbench_mol_opt_solubility | 1fe37c | scaffold_hard | gen | 20.00 |
+| chemcotbench_mol_opt_solubility | 1fe37c | scaffold_soft | gen | 39.33 |
+| chemcotbench_mol_opt_solubility | 1fe37c | total_count | gen | 50.00 |
+
+08/28 02:04:11 - OpenCompass - INFO - write markdown summary to /data/github/RD-Agent/finetune_files/logs/paper-base/h20-gpt56-base-v1/base__7b__chemcotbench_mol_opt/test/20260828_015923/summary/summary_20260828_015923.md

@@ -1,0 +1,2130 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T20:31:08.538631+08:00",
+  "suite": "main-rslora-paired",
+  "training_policy": "rslora",
+  "formal_training_contract": {
+    "schema_version": 1,
+    "sample_count": 2000,
+    "require_complete_epoch_schedule": true,
+    "method": "rslora",
+    "paired_source_method": "lora",
+    "only_yaml_change": "use_rslora: false -> true"
+  },
+  "paired_comparison": {
+    "schema_version": 1,
+    "run_kind": "ordinary_lora_to_rslora",
+    "source_matrix_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2",
+    "source_matrix_manifest_sha256": "2a707d9f15c65ada77d9a93c893da4b7f06d5759580af8f91187ed7ad0739c3d",
+    "source_task_count": 39,
+    "paired_task_count": 39,
+    "paired_workspace_count": 43
+  },
+  "benchmark_assets": {
+    "aime25": {
+      "id": "benchmark-aime2025",
+      "revision": "a6ad95f611d72cf628a80b58bd0432ef6638f958",
+      "dataset_path": "pinned/aime2025/aime2025.jsonl"
+    },
+    "panorama_par4pc": {
+      "id": "benchmark-panorama",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "dataset_path": "pinned/panorama"
+    },
+    "panorama_noc4pc": {
+      "id": "benchmark-panorama",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "dataset_path": "pinned/panorama"
+    },
+    "panorama_pi4pc": {
+      "id": "benchmark-panorama",
+      "revision": "5c40de5fb1de842d3a44ec4b9f5bb9c44d47a77d",
+      "dataset_path": "pinned/panorama"
+    },
+    "chemcotbench_mol_und": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "chemcotbench_mol_edit": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "chemcotbench_mol_opt": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "chemcotbench_reaction": {
+      "id": "benchmark-chemcotbench",
+      "revision": "4cfab96c6f511a504519e2cc003521b6afbac338",
+      "dataset_path": "pinned/chemcotbench"
+    },
+    "FinanceIQ_gen": {
+      "id": "benchmark-financeiq",
+      "revision": "fca1d9ceb6925041264d211b9ddf7264e8145248",
+      "dataset_path": "pinned/financeiq"
+    },
+    "tablebench_data_analysis": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    },
+    "tablebench_fact_checking": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    },
+    "tablebench_numerical_reasoning": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    },
+    "tablebench_visualization": {
+      "id": "benchmark-tablebench",
+      "revision": "a23c244f9ccae1ea238d614fe7620984707e411a",
+      "dataset_path": "pinned/tablebench"
+    }
+  },
+  "tasks": [
+    {
+      "experiment_id": "rslora-paired/main/FinanceIQ_gen/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "FinanceIQ_gen",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/FinanceIQ_gen/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/FinanceIQ_gen/run-1",
+            "paired_experiment_id": "rslora-paired/main/FinanceIQ_gen/run-1",
+            "source_workspace_id": "9afb3a9bff57034002cf1d182e0dbf47",
+            "paired_workspace_id": "rslora__9afb3a9bff57034002cf1d182e0dbf47__18964949bb70",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "18964949bb70daa523bccced78d3e383921086d919ee05362b0742896b6c4416",
+            "source_train_yaml_sha256": "be91ea26d4115ee39d20c5dfbe3770aee8704ae0f9cff5ba7b4807e45e4f92bc",
+            "paired_train_yaml_sha256": "49f1e21eb385d38b75ba5105ad9d25c1ef648ca602b34319745e105be4bba995",
+            "masked_train_yaml_signature": "be635a3f019117665d65562066fba9d42f5894a2f87e191a2d93db08f8a5d6fd",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "4d7fef8e357b4bf0c0abf1f7c41b2f5151f1f5ee649fe9554c2ed68a5981d771"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "782a80ae7714dd1ac3e8d840a2fd92efd12cbf27068f0384029cf11129cd938e"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "7eb39b64050ba2a6f7f93d96dbe0b9b72255a5db6c285aa40623012f9d5387d1"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "337c038c557f8081c19d558790638742949029443ce3cb030b89b9f6d7d73696"
+              }
+            ],
+            "input_contract_signature": "f5655d72107433853348bc318593f2bf289831bba1fe606904098276d01b3f43"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/FinanceIQ_gen/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "FinanceIQ_gen",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/FinanceIQ_gen/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/FinanceIQ_gen/run-2",
+            "paired_experiment_id": "rslora-paired/main/FinanceIQ_gen/run-2",
+            "source_workspace_id": "8491abf8b4ee00bb01f01b1701df695d",
+            "paired_workspace_id": "rslora__8491abf8b4ee00bb01f01b1701df695d__b1d41ae4917c",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "b1d41ae4917c3a35011038d95d0e7441d763c41c642d18a09bc15ae4a2b52bc4",
+            "source_train_yaml_sha256": "be91ea26d4115ee39d20c5dfbe3770aee8704ae0f9cff5ba7b4807e45e4f92bc",
+            "paired_train_yaml_sha256": "49f1e21eb385d38b75ba5105ad9d25c1ef648ca602b34319745e105be4bba995",
+            "masked_train_yaml_signature": "be635a3f019117665d65562066fba9d42f5894a2f87e191a2d93db08f8a5d6fd",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "4d7fef8e357b4bf0c0abf1f7c41b2f5151f1f5ee649fe9554c2ed68a5981d771"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "782a80ae7714dd1ac3e8d840a2fd92efd12cbf27068f0384029cf11129cd938e"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "7eb39b64050ba2a6f7f93d96dbe0b9b72255a5db6c285aa40623012f9d5387d1"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "337c038c557f8081c19d558790638742949029443ce3cb030b89b9f6d7d73696"
+              }
+            ],
+            "input_contract_signature": "a1962c477f8b44aefea53975eeccd652a4c0308bc3889ace9454c4cc405fcc65"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/FinanceIQ_gen/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "FinanceIQ_gen",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/FinanceIQ_gen/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/FinanceIQ_gen/run-3",
+            "paired_experiment_id": "rslora-paired/main/FinanceIQ_gen/run-3",
+            "source_workspace_id": "08a60e438bcf417fbead4b0f5b56efd6",
+            "paired_workspace_id": "rslora__08a60e438bcf417fbead4b0f5b56efd6__fb0f64ed4e30",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "fb0f64ed4e30e6634a085ca11980ecd0c0ccf1586d417ca334e102435b7006c7",
+            "source_train_yaml_sha256": "d82b6118527ed1e7382978ece1fc0d49d30801c7cb43378c20eaf0b7be9960d1",
+            "paired_train_yaml_sha256": "8403d7d876ec6de30cd7549ea7fa61e355ec3f7d5a848f5bf1cffc7029b275ea",
+            "masked_train_yaml_signature": "4cb3fbc214799245aa15fe8f65250198141c00eaa97e063a21fd82115188b688",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "b740d023180b8a824004acdce44ee7178b2d780b50249f7a4ab316686ce6cfd0"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "05827f019f3bdacca0fdf1d867c36443adc2075ce382f8c72ca74fcba988d27a"
+              },
+              {
+                "path": "data_val.json",
+                "sha256": "8c45726e37b59a52c8400b0609b405261d9055323ace428229210edf8a209636"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "8a8781bd927098d389dac874be9d9767dc022dfef87eee2aeb8d1d03caa02c19"
+              }
+            ],
+            "input_contract_signature": "3f4cdf8db66442e077de788587e3ef0ee125d369de7b5d86775d5ce840b5e7a2"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/aime25/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "aime25",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/aime25/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/aime25/run-1",
+            "paired_experiment_id": "rslora-paired/main/aime25/run-1",
+            "source_workspace_id": "5d1061d3d5cc4ce89e18ac6e44fa8b8c",
+            "paired_workspace_id": "rslora__5d1061d3d5cc4ce89e18ac6e44fa8b8c__0d7a98d6a5cd",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "0d7a98d6a5cd3391c07c80567e3c29355f96f37e9259ee4a3a28682d7804c0e8",
+            "source_train_yaml_sha256": "20ddbf75c3113b7c2ee4cdb62d4328d8d0ca7708e5456dbb79a4c45069ce0924",
+            "paired_train_yaml_sha256": "681490de0542f4b1e6983f5e2cbccda7fe7656dee4df90919682c271f4534f10",
+            "masked_train_yaml_signature": "a6735520856c4401b261e913408c615a66dbbf5f4f787cbe910d3d66ac8e6e91",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "673a74cf15885b37ea5f7660f1f896f72c0960e7ae05045273fcf4d49b64488d"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "846f39e08cb21c7d2aebb52008c4fbe367ee9fdfb49b5511f9a991044531be80"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "a495903b0c8b9a8d74e3b6eedb7f0ccd726e6a3ee130b9e4b2fbeff883d558c0"
+              }
+            ],
+            "input_contract_signature": "caf0c3e47ef9becc504a675d5a08afdc3e2588a07f6ffdc50ff5f1637ba9401b"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/aime25/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "aime25",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/aime25/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/aime25/run-2",
+            "paired_experiment_id": "rslora-paired/main/aime25/run-2",
+            "source_workspace_id": "9c3b6c5ab08f4870b09c2ba2790243d0",
+            "paired_workspace_id": "rslora__9c3b6c5ab08f4870b09c2ba2790243d0__3616c1debf5c",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "3616c1debf5c69f9c01c2c2b394694d0680cef9fa553201714297ca12a48f652",
+            "source_train_yaml_sha256": "7e3eb72cc93ec959a234d7eff5d34902951cccd35fb1f151f3df155d5e9be862",
+            "paired_train_yaml_sha256": "ff1d78133adc302652a88b16b8b1c49929b433d625d94d953786b26f007b9a61",
+            "masked_train_yaml_signature": "1ff5b24d3f7d0fe2b55a5570dc3c27b3b747a7c4102e9b0ebf868c00441b4b5c",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "8b98e63617d1f83bf7e5097c8238c3f17f850ad72c5f8e4475cc8167560ad95a"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "23b7fcbe05fb0580ee63cc8fda10dc9ad34d70a322e31e3be4210992e73697cc"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              }
+            ],
+            "input_contract_signature": "841de521e74913079487d7d70f067dbef7466a6e8df1c112b560c3bb7e171eda"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/aime25/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "aime25",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/aime25/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/aime25/run-3",
+            "paired_experiment_id": "rslora-paired/main/aime25/run-3",
+            "source_workspace_id": "1664ee835e457741920723de28814cf5",
+            "paired_workspace_id": "rslora__1664ee835e457741920723de28814cf5__d09c872a321e",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "d09c872a321ea327ba8c153fe845ce74a90c20e9289849010b269fae974c654c",
+            "source_train_yaml_sha256": "2bad89bc14cc4e42240dd552830a4194e77fd8f327483c2a2e4e7cb44d1385c0",
+            "paired_train_yaml_sha256": "76f1949903cf4015e5e2cf62fbca0492df273c8b27253b9a2de496e5abdf7a01",
+            "masked_train_yaml_signature": "8e9b24805c2f7122cef8267421ef7ae2f1494bc1c025fd495c78549d160c54e4",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "153ae04f99613b8eb344d69ba6580b102ebdd6ddd8c81e778288e86557437476"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "09bf40fa03ec0d51ad7f783b5bfb84d9940b047c733f091296d34289812f5620"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "a3b63411c327c20f04a8828ddefa7110394349fdbfa3756b3139d7d544c09747"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "3f593a2204aeb5cbcf8d63b49cd81473dc335cd8c826f6aff7b22cc933226f6e"
+              }
+            ],
+            "input_contract_signature": "1997222132c62fd30d5e76f7a9bd8ea5f1a5231b71415a42a938f3b590fdcf22"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_edit",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_edit/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_edit/run-1",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-1",
+            "source_workspace_id": "56a89ae4c4bb4985935c3610df11723b",
+            "paired_workspace_id": "rslora__56a89ae4c4bb4985935c3610df11723b__c0bf4bc77eea",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "c0bf4bc77eea7c88c95cf27782b32233d1a0be90dd069bd26905332d97125ef6",
+            "source_train_yaml_sha256": "2684fd02749704b3df473e930671c566f7b14e3877955faf99f8a6c7af094378",
+            "paired_train_yaml_sha256": "2ea2be9d72995c89cf885d383210ced42737f320573cef51161ec49fe3997b0c",
+            "masked_train_yaml_signature": "8791c9462611f5b8fbe2fbe38273adb6c7ca6383286e39f2ebe2fb68ec7ad7df",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "c73d9601d7516135649d9b134bb81661c38edceae94f43d4433c0a4774cdd00c"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "797ffa8894d4b8842aecfe348f8257d6c7a6b26bb158c755b3949d10a51e2579"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3706f28a9e75afeb0eb416993dca418bf3b1d0999f582e1fd286bc1b8f2bac01"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "aeb5501b16379023473d1478f76cceddeff9ec90d197582ce7ec331b5c4cc095"
+              }
+            ],
+            "input_contract_signature": "bc69fb3f5ddd01b1b1be1f9f75fe7c7d5209ae0d26d96b661e0d3512ce8cd762"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_edit",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_edit/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_edit/run-2",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+            "source_workspace_id": "5c7be5f4995943f2b2ced2092c4109f0",
+            "paired_workspace_id": "rslora__5c7be5f4995943f2b2ced2092c4109f0__5656527bcc33",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "5656527bcc33e9c3a8190f8f8a2a7b0d37e7c03b411f807c5fc6458055229d1d",
+            "source_train_yaml_sha256": "27481b4d4e5d2f627646360af7e4b1d259b33a3bf828de7a169cb347cb1f2746",
+            "paired_train_yaml_sha256": "a94c2b6e5a8233a28b3b3a910a5f4ab50b914323e16f62b3969e4cebeab96391",
+            "masked_train_yaml_signature": "73cda04ca6abcfa75d56d626fd8d3c5b652fb86c69fe201e00a9021e559a46e0",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "1456a07ec602f4ccb6b43b5dfcfc905da3ef29b15802536c96d346a166002b56"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "a45937b4677c370cdb85ec28909b97e9cfa28c0687a9b2951d7c3f20a08620d5"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "4b480fcedd616a509e44f3e4baf466d16f5c82b91d8f7ce0aba0c4e07816c1c8"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "ad5c9a20ca09cd171c0c80815b38a268cc92fa2e33015fe05c0461954a18053f"
+              }
+            ],
+            "input_contract_signature": "8e921503201b2377e4213de0866521da9f0c8ff5a3adb965761b8dbb34905418"
+          },
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_edit/run-2",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-2",
+            "source_workspace_id": "dd4ccfae55b14310bd3c3732859ca684",
+            "paired_workspace_id": "rslora__dd4ccfae55b14310bd3c3732859ca684__67459b4d7adc",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "67459b4d7adca4bdf37346d16930da8e18581f638979166391643491733cbd2a",
+            "source_train_yaml_sha256": "e4d2aa5177f5deba08527f5ab2a5a0d17a70f42de6b01aa599394f0c78737487",
+            "paired_train_yaml_sha256": "46ee9d2cc778e1fee62eb98015c33464e856246c0fef13b82750ec7bdc0bb15f",
+            "masked_train_yaml_signature": "c53615f47d9656602722e934e26906915759e31794fead3495851bc523ba1edc",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "94e6d7ebae54e5f019eb39140177883e1ed11a070781ff321eb69b339677d6c9"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "a0912fc5b7f1ec0d62eb6458c39ad32fcfbaa646be7644e08a9598a370d8e8c4"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "4b480fcedd616a509e44f3e4baf466d16f5c82b91d8f7ce0aba0c4e07816c1c8"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "c2572659b5b46eef249e58e4e7c1dc66896cf779329daf59206db6627ec18d91"
+              }
+            ],
+            "input_contract_signature": "d35cd8b35a3eee9a7340fd910f8f05fe340e1d33b865b9706fff31db903e6b36"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_edit",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_edit/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_edit/run-3",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_edit/run-3",
+            "source_workspace_id": "b86e7fa79da145e597196d87d64d5fde",
+            "paired_workspace_id": "rslora__b86e7fa79da145e597196d87d64d5fde__fc7bf92b82c3",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "fc7bf92b82c38eb93276be05af651340e08cc49ae89a2160b575f9bfa1b00f3b",
+            "source_train_yaml_sha256": "02258342e6c429f191ae8cd407f8d129b626d43622d14f010a0cbdc4ccf316a6",
+            "paired_train_yaml_sha256": "86a90f9b7abae687197d2609fa16b7153bad5844ccf039196989d9ec35a81e0e",
+            "masked_train_yaml_signature": "daa740f616b648a207b561ca5a4edd2ba5e9d6bf34aad8c7ce9fe0757231b998",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "105b938426fdb97a2fba3877a0edd267b63ad118fb58dbaa7725566aadb0f064"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "41c797800c1eb16f52195336e9314ccc7bb074c408065688d52c8b29ade369d1"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "f242b29e46b5e6c1c7d4a6bf464a60a0f8da69124463c518c66ae49baf4e3efe"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3ffb90d7cfd40a19965e71aef54894324111e4d546b91b065d12602cadbefc77"
+              }
+            ],
+            "input_contract_signature": "ca8cecc8eb7cfd1eeefd2e32022c3a37008593169ff7cafe4a0510b03e3f1da3"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_opt",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_opt/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_opt/run-1",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-1",
+            "source_workspace_id": "93b422671cb74e74b076ad9e45ae41cd",
+            "paired_workspace_id": "rslora__93b422671cb74e74b076ad9e45ae41cd__6e2afc1eec1c",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "6e2afc1eec1c1bf55e21a2152df8803b501cd0c820e83ca4b1b20aa654195ed5",
+            "source_train_yaml_sha256": "fb680ecd9683bf021d5b42c53edcf8d98d09ece47302055687bcdd062846395b",
+            "paired_train_yaml_sha256": "87527b29abae4b880c40c53e0081f8ace365c17ebc86d83dccc09072a8dcabd2",
+            "masked_train_yaml_signature": "ce8132dbb6f7c8a0d5bfe23beb290f29a30f7e3e1781927091ed196db171f8ba",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "415a623c253edcbd5d7c72ba013340f697d4e3320009866c3c8bf5c146329b94"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "2cae8c308a79753fd59b46e865482b68eb723de7c11161e1589308ae6d396d78"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "60a20b04a6efee3b1f3d5642e5b3eec8b5caaf4288a2765d8bdef31007fcf8fe"
+              }
+            ],
+            "input_contract_signature": "91068168d4031794d400533a9ef9363011014e793451772148d4a670e05d27f9"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_opt",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_opt/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_opt/run-2",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-2",
+            "source_workspace_id": "687117bc6bcb4bff9cf47abeff30bc79",
+            "paired_workspace_id": "rslora__687117bc6bcb4bff9cf47abeff30bc79__d6a3a5febd61",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "d6a3a5febd6133fd0adddf55884aa6be08a59e9e61705979f439e610fd2715e9",
+            "source_train_yaml_sha256": "ed9d429d8eceede7737e9314c9ce4e5cec186a8cb3a1dd4bcccdd7e082dc05f0",
+            "paired_train_yaml_sha256": "608c506d64a83a59aed8649a795ef75cf4ef505abf14504bce7de04ddc875c13",
+            "masked_train_yaml_signature": "dcbf08397982b64a19c6e90e93962933077d7cf436c8bf0758714d2c6b1845ed",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "be08718b21bbca1e4d4e6d91e2a125321d6cf7391de78a0a3a194515ce3a8135"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "1a517edfaa96ece9686626dc855aab1dfd7d2a6c041bebe99b66a3a8cbde5fb6"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "67f028c9a5d961d0ea3a2aabc5200d7166dbf0ec13643cab18cd541f583fc809"
+              }
+            ],
+            "input_contract_signature": "735687badf4e4d6c85e6cc22a22be1d785d645d53b832001e83eb98ebce4543f"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_opt",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_opt/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_opt/run-3",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_opt/run-3",
+            "source_workspace_id": "393a42ebead54b59b021e6f4b6bac914",
+            "paired_workspace_id": "rslora__393a42ebead54b59b021e6f4b6bac914__09e7e7bf6199",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "09e7e7bf6199bfe850a838e673c5c4e7f27259104e89186c8145195a23be6d0d",
+            "source_train_yaml_sha256": "b3c47537ca016721ea8f99798df7307cf4de4b7ef65f65908ad93c7204fac4d4",
+            "paired_train_yaml_sha256": "0abfa2aa4eae8535b9f4fc94e2963722e6c11b26b1d5079d6b000547352d4ccf",
+            "masked_train_yaml_signature": "ee8fff585ced71d4d11daac7d8fee9a1f30333e4f9de32fd1746e8d424050b99",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "7fc7ce8cb4ae5b5789a0efd25f62aa35aaa3727e3b271ac4a5c2bc064742a59a"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "4a787cc8bece0925e7ed3abb28aab1144512a3786fe1c924320a6d281006d7ac"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "afa4c316b635e6e0b04b634ffe9caa83d269f9d06d6f6a52d22e1069d05781cc"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3ffb90d7cfd40a19965e71aef54894324111e4d546b91b065d12602cadbefc77"
+              }
+            ],
+            "input_contract_signature": "694581cd28e6187d66684461d8c8d4e51e4cc1b845c2c0d7b0544eb5926f5a64"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_und",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_und/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_und/run-1",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-1",
+            "source_workspace_id": "6f365674cebacf12682be924dbdc2ce0",
+            "paired_workspace_id": "rslora__6f365674cebacf12682be924dbdc2ce0__84a62eadad38",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "84a62eadad38c4862df3ce0114e71f2711d1087601e5b8792fbcc53d7d7ee9b5",
+            "source_train_yaml_sha256": "3112f8e261ea5f052bb0389826fa69d916ef2bf5ba9639b4d04c2e496dec8051",
+            "paired_train_yaml_sha256": "60de7a1320d608d790afc03a7b0bd368efea6c52ed3a5693ee366dbdbcf602d8",
+            "masked_train_yaml_signature": "b1f24c473ad8368e0f3e9958c01147c88dd370f967b3f6a361503a2e3b2268fd",
+            "input_files": [
+              {
+                "path": "data_stats.json",
+                "sha256": "1d8bfa4ff4996faa604ead355244cf9c99305fe72e3e1dcb7520871b931713ec"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "8a6ec374ce993a3f10eb08e1270ef1e6a042524dedec50ec7630bc954847390b"
+              },
+              {
+                "path": "processed_data_train_full.json",
+                "sha256": "99a54b4d98509e11a10b516544e8a62b0c328b1597cfb468a8f165d7561ba145"
+              },
+              {
+                "path": "processed_data_validation_full.json",
+                "sha256": "0edc23a02294cc4e0335507e9f23ae7b15bfd3a46f02c8859421892dfa8a0a24"
+              }
+            ],
+            "input_contract_signature": "927623b6c66cb906eb1b9b16a759930847e858ea67fa55a141e4cbb1adb4fc08"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_und",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_und/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_und/run-2",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-2",
+            "source_workspace_id": "61e567d6babe4dfcafccc7ba5f4f5b67",
+            "paired_workspace_id": "rslora__61e567d6babe4dfcafccc7ba5f4f5b67__0874937a6060",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "0874937a606099138c73b2bc098202ccfd1e807cf345b1a9cb46489cc6ce51da",
+            "source_train_yaml_sha256": "2c7b4a17c50bf52b8f98e278083ae2219388be7d5d078ae01f981346dafca932",
+            "paired_train_yaml_sha256": "549f6524ac8309d8444aea135e5637a47f59ec868c920cc9046d25780f8c63ca",
+            "masked_train_yaml_signature": "9ef6097a0b34f445fc4a82b3c53447d2d0fdbd5ddddf24de7bd2a024bbbc069f",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "6fe7547efe376abf65d55e3db3bee8efda5609619496ec47d981d73b4ee7e411"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "5a0cbe4c27707b714638f301e2f1e8adf748831a818b19ffd9df6849bf1b9e05"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              }
+            ],
+            "input_contract_signature": "efd986bcae34e61baaa7a0726619183c144f89ed88da2c5a384e27e6f783ec33"
+          },
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_und/run-2",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-2",
+            "source_workspace_id": "ee13a5f350394f458b1c7f4f91055f6f",
+            "paired_workspace_id": "rslora__ee13a5f350394f458b1c7f4f91055f6f__8aa14a27b539",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "8aa14a27b5396733d5201d9df68c1436c8dc45b47f71ec97bdcf9883f45213cf",
+            "source_train_yaml_sha256": "047593919eb000cdb756e97af11e6c05eba11bf61ed362af44bd193c707551e3",
+            "paired_train_yaml_sha256": "1f685ab2b30c058760271a07a40031a272ea7d5fdfd5d7f64978ead3e40d28b4",
+            "masked_train_yaml_signature": "dacb6b35dc013aa94a4e8707a4a9c4d7a46f36169d47103af05d8df79f91efe7",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "6e5ca3e089dd19be3350148d438e9afac81106564fc7f7ced698bfd483655044"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "1c56a3eb897424605e47db5158dd3669da7fd34d38cd47ee1072441d91db38bf"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "67f028c9a5d961d0ea3a2aabc5200d7166dbf0ec13643cab18cd541f583fc809"
+              }
+            ],
+            "input_contract_signature": "4aa0f659d90f515d8a9a81170caa467d40d0f6fd87ef1dc2c3e21ea86bd9a625"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_mol_und",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_mol_und/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_mol_und/run-3",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_mol_und/run-3",
+            "source_workspace_id": "00f23b27df5a4877afefe701d18225c7",
+            "paired_workspace_id": "rslora__00f23b27df5a4877afefe701d18225c7__7f469d6e63d7",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "7f469d6e63d78efe081adb2e45daf36cc9d913f2430d0ac8a195bd93fc5e2df1",
+            "source_train_yaml_sha256": "313038383bfbb60660ad304598ab9d20d0859f54f31e8e953a47d4a3941aebec",
+            "paired_train_yaml_sha256": "3d830447a67e1583a5ffcbf3a94fac04c5c6056ad736223376aa5a8a66564bcd",
+            "masked_train_yaml_signature": "827539a94022998ce8b6e84efc4d7083e9009f9cc74a09c8e3dbf89edae27168",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "a9162b5d3ddbf16f3f8c46859057e240aa440b03fffedc4f0c563c90e7d2996b"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "7d0bfd067e75d821e497b55e088fd8297a94351f1a4c8c35d7ceccee7d4321a6"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              }
+            ],
+            "input_contract_signature": "09ecf83b2fa5bf1e38398077aece8dcc5ea43d6251a708af730266b39120a099"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_reaction",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_reaction/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_reaction/run-1",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_reaction/run-1",
+            "source_workspace_id": "0087c1c9f2fd4c25baf344d76087f4be",
+            "paired_workspace_id": "rslora__0087c1c9f2fd4c25baf344d76087f4be__59d42268decb",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "59d42268decb3265180d574152fd1aaa9ac37632d56d8a024c2fcc0d531ca448",
+            "source_train_yaml_sha256": "6be383408daec1aa1e8080b504de01f79ac9fd6d9e2085acc1532de50bc1e4a5",
+            "paired_train_yaml_sha256": "ea7c49405ad13f8661c18ac2a3c5815fd631b7f4fa638d15c8c912a85237e845",
+            "masked_train_yaml_signature": "e86ebf1d077e986f3914c19b6dbf5d5e107f2b19cf9d6540bb326d8339614836",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "74199092f696b29de748c1c3b5cf78c8f27284454db681b4ae727281d45e1651"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "815ba3e7037b20963d72725af5e35320f2d3f86681223957ea763fe8af857bda"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "67f028c9a5d961d0ea3a2aabc5200d7166dbf0ec13643cab18cd541f583fc809"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "ae71c8042185c2d62852a688f2575844b1082f19be6e3821527ffccd16fe4d7c"
+              }
+            ],
+            "input_contract_signature": "630e59ae97c1137e5f1e5ba7918a54fc9e46b580ccdade461ea2864f42bca76d"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_reaction",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_reaction/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_reaction/run-2",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_reaction/run-2",
+            "source_workspace_id": "3527d34256004efabe7858c08197c802",
+            "paired_workspace_id": "rslora__3527d34256004efabe7858c08197c802__59e66068a6d7",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "59e66068a6d759a0047a182d6176c5a95ffd95bdd64d1a0d4f9003ac25bec9a1",
+            "source_train_yaml_sha256": "22330ee1c75337a25474fcdb31aec06d94751a34e38b9f0f369bbdda8a9fded3",
+            "paired_train_yaml_sha256": "2a8886f4439ce5e8848f17653bb8f4e56b54087cbc8c807ef02dc3d5950dc343",
+            "masked_train_yaml_signature": "4c607dd9cb5629683a6fabbf6055c09a7c64a3f5f54cdfe85a646d5242def85b",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "222a9c89b3c9e3ea7b73775a339043e8bbfea03321b90e197a185571835c54ef"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "298e43fc643697309e1e0a95b67afddbbc2c1215280a56d06cc8f639319fd505"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "0e84196c4527036bf40e629b33e0bb654c194a9376453f0038c5cd2a0a909c5e"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "ab26f36e35f01b9c4a69a8845ba2b6cfd7eeeecd44469c323d33ad84de7b8823"
+              }
+            ],
+            "input_contract_signature": "f28e65e07e4b0562e7e8f3e2c4fdda16776842a6a3dd14db052a5bb39aa4a3ef"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/chemcotbench_reaction/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "chemcotbench_reaction",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/chemcotbench_reaction/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_reaction/run-3",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_reaction/run-3",
+            "source_workspace_id": "257e016df3394a86be2e0af87c66185e",
+            "paired_workspace_id": "rslora__257e016df3394a86be2e0af87c66185e__4cfc04c9c399",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "4cfc04c9c3994790b0d4256cde414cfc0855a6a066687d8851554c369ee2467d",
+            "source_train_yaml_sha256": "7dc36176b78989bfa362976b6e4ba2b264cb5757c2fef29df6dfe51e5f8424e2",
+            "paired_train_yaml_sha256": "21031a8502151b95fda2f28d645e538c3fa1780a96aaabc13df433c3b95533ab",
+            "masked_train_yaml_signature": "e6dba8a08aea52427d651f2429b56ccbd3200ed52584d3975f7f31effe7c5567",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "d5109c8c256ca1fb7266ed48f4bea93f5297f4ea76d7f995ffcad256319ade16"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "53bb320ea4279f0a76d03fc03e1ca2722aed8dc86dd10f5f62e113b2aebe0e8b"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "864cc6e42340888f0bed8ad0d79d6ecc5f9bd4497d16fd28208822432868e9c1"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "c1ca408b0163f4c1e31a60817e62570e82b6083df5c60c37088692d4c4b14a07"
+              }
+            ],
+            "input_contract_signature": "1dc101a7890d7d0a49c2b61eb10a4c9495bd4a38a6e65f6f923ca4444fd337e4"
+          },
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/chemcotbench_reaction/run-3",
+            "paired_experiment_id": "rslora-paired/main/chemcotbench_reaction/run-3",
+            "source_workspace_id": "66a67991e91e4b81a21eaee1a9f60241",
+            "paired_workspace_id": "rslora__66a67991e91e4b81a21eaee1a9f60241__be80595f19b6",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "be80595f19b6222dd51a1c8c905051a9b248382d5fde26009a1b77a455481db1",
+            "source_train_yaml_sha256": "806445e2ea571d7b4d9e9deb0d63e3a781e9caeed2e54fd6b5d1a0a729bdb148",
+            "paired_train_yaml_sha256": "fc076c34654919558c3cff2092abaaa4bb8ece1b8ed7d9134373a37f78419307",
+            "masked_train_yaml_signature": "edfb2b8be66035c7d85667e897ec5371fdef277e10c2e8f0c2b8acd0b8ebefc9",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "5142c74a1ccffc93b46d48d59204399ff3b98fcae3ef07dc94af4ba315ca87eb"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "ee45fd6ac85c3ec1825456a7043df444e48e38026b67f62d41e388900533e4cb"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              }
+            ],
+            "input_contract_signature": "1b67f52a9ba1be85400809f359a6231ff1fb927fcde4e7588f6dfeae10395a3f"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_noc4pc/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_noc4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_noc4pc/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_noc4pc/run-1",
+            "paired_experiment_id": "rslora-paired/main/panorama_noc4pc/run-1",
+            "source_workspace_id": "244a353b00b24eb5b96224d73eb2f191",
+            "paired_workspace_id": "rslora__244a353b00b24eb5b96224d73eb2f191__f4ca4f3b27d5",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "f4ca4f3b27d5a534ef61c6249b384cf39391d1ecb3a19cf0bcb1eec0c0e0e5ac",
+            "source_train_yaml_sha256": "3b35eb7194bfbd92e9f6018e226de36a542f57c5b49389ba1676d18184019f96",
+            "paired_train_yaml_sha256": "70f89f40732c6669d7afe4f586f00c6f682f2d556d8f92c94c8720c9d49435f8",
+            "masked_train_yaml_signature": "c009715a04a8618452f49fd0b1c34d2d249d7987bf105c38364775ccba05190e",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "c2d0e1d06375b6b3a5030a166085fa4d1c2983b893d2bd1256a8d2dda1e5a21c"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "ac2954a52a84cb2ab22d054c92078eecec499cb1c0f36b4091b610931dd17859"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "429b8f85008611e8b8cb13fb3ad4f864ea83ce4de00e67fe8ece81bb4e6fcb4c"
+              }
+            ],
+            "input_contract_signature": "df7e02b623d451dbb342792d395ac64276a82d86e6c42abd606a0583013f1807"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_noc4pc/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_noc4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_noc4pc/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_noc4pc/run-2",
+            "paired_experiment_id": "rslora-paired/main/panorama_noc4pc/run-2",
+            "source_workspace_id": "34381f41067c41729fe1e1d34fe9c711",
+            "paired_workspace_id": "rslora__34381f41067c41729fe1e1d34fe9c711__74ca876a7c07",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "74ca876a7c07ce94add77dfb97b898fef19776a3f2d37b542b39e39762092abe",
+            "source_train_yaml_sha256": "cd3e0b65db5d9d33642c949b57a17909c6c0e2c582a7730b8515823d6866e01a",
+            "paired_train_yaml_sha256": "6a6d5f72397f215ffa74cda19349565227f255f7624dbb320d93c61564432ac9",
+            "masked_train_yaml_signature": "c944ed942d83a5c2b388fc0aa9a5b016a6cda535c1164f6ded133e35ee9ac9cd",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "16e3cd62403a1ad540bb9aa55e4d67f15c4074639127ee56ce9d45c9bdceb052"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "bca9b065d00be08f83ac931f30c38e62ae86a1b528980b00fa54fde5bb71c518"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "67f028c9a5d961d0ea3a2aabc5200d7166dbf0ec13643cab18cd541f583fc809"
+              }
+            ],
+            "input_contract_signature": "60d252e7f7cabd25e6aee4100cb0b894876ff7c91750bd7fa2a3b5caed3732f3"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_noc4pc/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_noc4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_noc4pc/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_noc4pc/run-3",
+            "paired_experiment_id": "rslora-paired/main/panorama_noc4pc/run-3",
+            "source_workspace_id": "e99740f1378c4a2191d5293ed8b6e081",
+            "paired_workspace_id": "rslora__e99740f1378c4a2191d5293ed8b6e081__d8f6710c4160",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "d8f6710c4160614c9ff0e0271a096326583fa0dcae9d0537a19b9560463447ea",
+            "source_train_yaml_sha256": "6a647c955ef90ad2af60eab2ff7e2eb5559bf1f91050746e3339582b9e3cf650",
+            "paired_train_yaml_sha256": "0c39653ec85d509dd607209cbf2f380825c1aad62bf567bc8115b34ee0ed8731",
+            "masked_train_yaml_signature": "008ec216c71a7033bcd07aff437ff8ff56c495b1fb7e8e577661d93985b5f814",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "d6247b21c64f779723d574a3796d7e51a51707e36f0ac255a383c254c955e6f6"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "ee92225ee2ab1857b17495eb3eb144450eb1fae5a88447e3066630511e28a681"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "62157bdb3450ff4f2f650d0af8de6558bcf108acd345fd7ea6a70569c3bf717f"
+              }
+            ],
+            "input_contract_signature": "0ed8ce2977e277e6a20cd4295ab91884ab438ac866d0379147bf32eb27409946"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_par4pc/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_par4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_par4pc/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_par4pc/run-1",
+            "paired_experiment_id": "rslora-paired/main/panorama_par4pc/run-1",
+            "source_workspace_id": "073af76ba8b44a63847bbcac3bf05420",
+            "paired_workspace_id": "rslora__073af76ba8b44a63847bbcac3bf05420__437902f298a0",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "437902f298a089b6c82260f25af5373e15a442a3973bd16fbf98835d3f9d134e",
+            "source_train_yaml_sha256": "6abe7271ac65f867f454875ca97fbadd904fd857fef6e5d9ee12704d0520d5fb",
+            "paired_train_yaml_sha256": "b31e8e651cb6dbad75547be824a083305ca97f0db1c2fb5597aa626fcb1a1eb3",
+            "masked_train_yaml_signature": "bc7c53096cfba7ed0999921938ac9c68c3677cc5c237ab07f51538a9803da4dd",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "d02104d62eb1fc15932a252811d4bcf7a41fced3ef6d39c9109391484528ce59"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "b6881f971cd6944f7306ce71290cb4476994ce0e0e60ec3369b6b2bf905dd9c2"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "4dbbe4e83022f48942cd40c79eaaf97a2f64380a39dd58597983f7bde2efc351"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3ffb90d7cfd40a19965e71aef54894324111e4d546b91b065d12602cadbefc77"
+              }
+            ],
+            "input_contract_signature": "ba3e152db1a88b8135f8ca404bae2f6b9767afd7eefebb1ff70e32328c59c332"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_par4pc/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_par4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_par4pc/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_par4pc/run-2",
+            "paired_experiment_id": "rslora-paired/main/panorama_par4pc/run-2",
+            "source_workspace_id": "d372572e7a4f36f84bef3d14c85a061f",
+            "paired_workspace_id": "rslora__d372572e7a4f36f84bef3d14c85a061f__8c066834086b",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "8c066834086b96b44a42bad00f4d19720b310475ef40e60b83e53a83050ccb69",
+            "source_train_yaml_sha256": "6abe7271ac65f867f454875ca97fbadd904fd857fef6e5d9ee12704d0520d5fb",
+            "paired_train_yaml_sha256": "b31e8e651cb6dbad75547be824a083305ca97f0db1c2fb5597aa626fcb1a1eb3",
+            "masked_train_yaml_signature": "bc7c53096cfba7ed0999921938ac9c68c3677cc5c237ab07f51538a9803da4dd",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "d02104d62eb1fc15932a252811d4bcf7a41fced3ef6d39c9109391484528ce59"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "b6881f971cd6944f7306ce71290cb4476994ce0e0e60ec3369b6b2bf905dd9c2"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "4dbbe4e83022f48942cd40c79eaaf97a2f64380a39dd58597983f7bde2efc351"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "8f23aa99ded28bc3e340f704334d8198f6a540edcc4cbf7b288870267a55e916"
+              }
+            ],
+            "input_contract_signature": "724c54d25a301f875b825b558957f8339b225bda5d5f87c9bf34da5d8b306071"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_par4pc/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_par4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_par4pc/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_par4pc/run-3",
+            "paired_experiment_id": "rslora-paired/main/panorama_par4pc/run-3",
+            "source_workspace_id": "43ea613355eb71e72b5f59d6db7bffd4",
+            "paired_workspace_id": "rslora__43ea613355eb71e72b5f59d6db7bffd4__cc829fa43417",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "cc829fa43417f6bda435aa43b6e54ddc61dbed8beb69a038aa5973144bd304ff",
+            "source_train_yaml_sha256": "6abe7271ac65f867f454875ca97fbadd904fd857fef6e5d9ee12704d0520d5fb",
+            "paired_train_yaml_sha256": "b31e8e651cb6dbad75547be824a083305ca97f0db1c2fb5597aa626fcb1a1eb3",
+            "masked_train_yaml_signature": "bc7c53096cfba7ed0999921938ac9c68c3677cc5c237ab07f51538a9803da4dd",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "d02104d62eb1fc15932a252811d4bcf7a41fced3ef6d39c9109391484528ce59"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "b6881f971cd6944f7306ce71290cb4476994ce0e0e60ec3369b6b2bf905dd9c2"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "4dbbe4e83022f48942cd40c79eaaf97a2f64380a39dd58597983f7bde2efc351"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "8f23aa99ded28bc3e340f704334d8198f6a540edcc4cbf7b288870267a55e916"
+              }
+            ],
+            "input_contract_signature": "5b00b4010bd0541040e7e9a4924512e6c8a173114137ef46dce762af485409c4"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_pi4pc/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_pi4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_pi4pc/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_pi4pc/run-1",
+            "paired_experiment_id": "rslora-paired/main/panorama_pi4pc/run-1",
+            "source_workspace_id": "8c0d7b3c0dcab9f711effd452cf5c926",
+            "paired_workspace_id": "rslora__8c0d7b3c0dcab9f711effd452cf5c926__15e4af1aedee",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "15e4af1aedee710e6b7e15cecb722e2e4731d172dbd3cdcf26d22f052f2451b6",
+            "source_train_yaml_sha256": "6ad837e4a5af4546290a858b2b9ab62e7bc3e5d396c97e9b52b89606586e4a10",
+            "paired_train_yaml_sha256": "56f50459f7a84fd3a1ab404a5dc7a09380eaacbffab4738f3b58506e47fff4b6",
+            "masked_train_yaml_signature": "35a937de4cc5667783cbefb4c94e7fdc6ebe3401f3ade9978369044f99d967b1",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "e588b933d58cc92b45e58154d9d0dd2a651ef33e7501456c08d8810213c62ef0"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "b7617b42c350c3c47ba2dd2297f9f4aa86d8370ff86da4bc50f59a946b9201dd"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "a3b63411c327c20f04a8828ddefa7110394349fdbfa3756b3139d7d544c09747"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "5618db795ed6f365a12de42958e39f8a28d055f86b1ae594a92f5b54e17eb20a"
+              }
+            ],
+            "input_contract_signature": "dd81dcbad1b4b452d5dd6f40c1e3d9a78565be782fa088664a22b52e56d073df"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_pi4pc/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_pi4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_pi4pc/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_pi4pc/run-2",
+            "paired_experiment_id": "rslora-paired/main/panorama_pi4pc/run-2",
+            "source_workspace_id": "92739247514f498fb5ebf0921106ebfb",
+            "paired_workspace_id": "rslora__92739247514f498fb5ebf0921106ebfb__d69a89a644e0",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "d69a89a644e079621b90933b0506904be71459fa0b5f76dea537c0e95f1b760c",
+            "source_train_yaml_sha256": "07af87bcc048cbb890e12f86352fc3b5255b8ccb1a82d2a85b1de4419fca257d",
+            "paired_train_yaml_sha256": "dad03db9fcaa4d86285861905ecabd7dc4b03221b862acdef9884af306d0d248",
+            "masked_train_yaml_signature": "28137ec627a79f8aef4ed35fe9d43693ec36682f30041e229e7947d798a6ca7b",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "e588b933d58cc92b45e58154d9d0dd2a651ef33e7501456c08d8810213c62ef0"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "b7617b42c350c3c47ba2dd2297f9f4aa86d8370ff86da4bc50f59a946b9201dd"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "67f028c9a5d961d0ea3a2aabc5200d7166dbf0ec13643cab18cd541f583fc809"
+              }
+            ],
+            "input_contract_signature": "f38bca0f931f1fd86137c48440fb6620749c1b9d7ee0cd4e42ed2945106de6dd"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/panorama_pi4pc/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "panorama_pi4pc",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/panorama_pi4pc/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/panorama_pi4pc/run-3",
+            "paired_experiment_id": "rslora-paired/main/panorama_pi4pc/run-3",
+            "source_workspace_id": "d4ae9fb4f2044059a8af39faf1b961fe",
+            "paired_workspace_id": "rslora__d4ae9fb4f2044059a8af39faf1b961fe__49115c952aa8",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "49115c952aa8219b57665deda6dc557c54f044b93346dbadfc0be22e406d363c",
+            "source_train_yaml_sha256": "7e14e39579b74556e7c83928d9930b6d16e7b746108a9b91038e326a43482213",
+            "paired_train_yaml_sha256": "774263a6c2306873e342e0408d45415cadc96878bf0a5ce9c1f922f10a197037",
+            "masked_train_yaml_signature": "0e845a71e09dc2af13f95950911880ce779df3d4f5e0851dd1adadf896c4112f",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "2efe10f1aa0f351285fe4c72049bd399106336e9a01d028fb5419bcbba8e7180"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "dc81911139c49de7a6bcc4c91cee31b3872c4f0e23a27c7bc1f0593f9fdfa103"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              }
+            ],
+            "input_contract_signature": "af350aa94b48e8bf5cd67451f86f0f514a32d78df043ca76170a6140154116d0"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_data_analysis/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_data_analysis",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_data_analysis/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_data_analysis/run-1",
+            "paired_experiment_id": "rslora-paired/main/tablebench_data_analysis/run-1",
+            "source_workspace_id": "6c2e11bd4579126d5eb8b44ac7bbb49e",
+            "paired_workspace_id": "rslora__6c2e11bd4579126d5eb8b44ac7bbb49e__bbf3f632da2c",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "bbf3f632da2c5db611f20fb3e9ecf4991ac281091021029a41a9a47cc6e2a2c9",
+            "source_train_yaml_sha256": "ea990974057ca7d091e4dd5fa19e7cf4996a8bfc6d004557157ae089d3e10cb0",
+            "paired_train_yaml_sha256": "c93d141a9c680f2bf77bd0eded55b2d474f9c60b6d7331456f3ff3223520b516",
+            "masked_train_yaml_signature": "f0b7852df4647e5c4a59236b9c0c37c0bb9a6c79649db7457329362128a2d8f0",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "6dd4577e57aab3e36e6c79bfd0eef030e26fbf248a044675e342d9289d50a913"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "e427d702ca479714fa69f5d3e706f9040497a2140a9d800d3871aa36f09edcce"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "93d05507698fa38838026d7cc27ea3bfd63c5eb8b7a9b3783757153e882cf22c"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "8f23aa99ded28bc3e340f704334d8198f6a540edcc4cbf7b288870267a55e916"
+              }
+            ],
+            "input_contract_signature": "2a7a022ace230e43d1e76a4ec0863b633aec1162be1895e622236913436855ad"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_data_analysis/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_data_analysis",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_data_analysis/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_data_analysis/run-2",
+            "paired_experiment_id": "rslora-paired/main/tablebench_data_analysis/run-2",
+            "source_workspace_id": "12ac0c194c460d219dd8753a8e7ec395",
+            "paired_workspace_id": "rslora__12ac0c194c460d219dd8753a8e7ec395__d8acb664ef6a",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "d8acb664ef6a5b441236cf4b31909fb27a64b91164b6e273fd2ac590c4a5bfb2",
+            "source_train_yaml_sha256": "ea990974057ca7d091e4dd5fa19e7cf4996a8bfc6d004557157ae089d3e10cb0",
+            "paired_train_yaml_sha256": "c93d141a9c680f2bf77bd0eded55b2d474f9c60b6d7331456f3ff3223520b516",
+            "masked_train_yaml_signature": "f0b7852df4647e5c4a59236b9c0c37c0bb9a6c79649db7457329362128a2d8f0",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "6dd4577e57aab3e36e6c79bfd0eef030e26fbf248a044675e342d9289d50a913"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "e427d702ca479714fa69f5d3e706f9040497a2140a9d800d3871aa36f09edcce"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "93d05507698fa38838026d7cc27ea3bfd63c5eb8b7a9b3783757153e882cf22c"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "8f23aa99ded28bc3e340f704334d8198f6a540edcc4cbf7b288870267a55e916"
+              }
+            ],
+            "input_contract_signature": "311a75caa4db028d5417af4ffba1becebb7dca4160008bfcd3d8a587bdd3eb29"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_data_analysis/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_data_analysis",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_data_analysis/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_data_analysis/run-3",
+            "paired_experiment_id": "rslora-paired/main/tablebench_data_analysis/run-3",
+            "source_workspace_id": "2951a9f61d214a86a4e61b8dc77378e3",
+            "paired_workspace_id": "rslora__2951a9f61d214a86a4e61b8dc77378e3__4e0711844f0d",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "4e0711844f0da6b28975ddd70ebd05a3c766b18e0843a5e3f513436a7601e679",
+            "source_train_yaml_sha256": "ea990974057ca7d091e4dd5fa19e7cf4996a8bfc6d004557157ae089d3e10cb0",
+            "paired_train_yaml_sha256": "c93d141a9c680f2bf77bd0eded55b2d474f9c60b6d7331456f3ff3223520b516",
+            "masked_train_yaml_signature": "f0b7852df4647e5c4a59236b9c0c37c0bb9a6c79649db7457329362128a2d8f0",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "6dd4577e57aab3e36e6c79bfd0eef030e26fbf248a044675e342d9289d50a913"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "e427d702ca479714fa69f5d3e706f9040497a2140a9d800d3871aa36f09edcce"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "93d05507698fa38838026d7cc27ea3bfd63c5eb8b7a9b3783757153e882cf22c"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3ffb90d7cfd40a19965e71aef54894324111e4d546b91b065d12602cadbefc77"
+              }
+            ],
+            "input_contract_signature": "d949c4618064cbb90a78f602ca5d93afb0a5808b38cf84ee87020efc86113596"
+          },
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_data_analysis/run-3",
+            "paired_experiment_id": "rslora-paired/main/tablebench_data_analysis/run-3",
+            "source_workspace_id": "537be1bf254847ebb3a67714aa5ab40b",
+            "paired_workspace_id": "rslora__537be1bf254847ebb3a67714aa5ab40b__40acf834e839",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "40acf834e839aff14767412622246770a6cc250c8ff1b7850f7811d6c427da0a",
+            "source_train_yaml_sha256": "c7335b268df54ee9c0835d9c94e1f568a999d8b4d85951fde2c038a57a214ee0",
+            "paired_train_yaml_sha256": "a007aa2f9f3c65a9fe6c3296a68d834c26b4adf1bce876debaefd5de4b5b167d",
+            "masked_train_yaml_signature": "a182522d5c829697685527c3ad2c7abf3be5820bdfac6de1d8af1f7e7be274f1",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "337de0509808dab21617e571d849a9a978a3b117c5c9edc9705553c177458a46"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "c30040b963aa17eabed55ab8d60c476a15f5ca22823e8ca6050c602bffcd6485"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "ac83c79a7010a52a48f09d18c7dbb2433c823bab433d89e5a0a619196221cf5b"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3ffb90d7cfd40a19965e71aef54894324111e4d546b91b065d12602cadbefc77"
+              }
+            ],
+            "input_contract_signature": "f2a45e98135d33d1c7416f2b76298b33aea849007c58b497e083ea08aadd5610"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_fact_checking/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_fact_checking",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_fact_checking/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_fact_checking/run-1",
+            "paired_experiment_id": "rslora-paired/main/tablebench_fact_checking/run-1",
+            "source_workspace_id": "09d3a9c0791a419bbe3f53b6bdc2b542",
+            "paired_workspace_id": "rslora__09d3a9c0791a419bbe3f53b6bdc2b542__2546e1fcd056",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "2546e1fcd056d2bcb2085f4e72026bbeb61a838627dfa5f200eb7dc3e7ead275",
+            "source_train_yaml_sha256": "296c1fee95e11cd4a2a37978649369e566dd89a8840cd52c62d8cacce20b7196",
+            "paired_train_yaml_sha256": "5f4318dda7925bfb8a0a730c8e8bccd9aca04aa0a6513680dd2eaad759447982",
+            "masked_train_yaml_signature": "82aa94f75181a9d315afc2e2e2e1815af099a22543caa72a30c78512cb12eb17",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "3869701f549ed0b617b49f329b42a005d3aa6b53df1b6317e166bf8b16de46b5"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "3bc15613e7eff49b91e18c5c4c51d6cff51b5d7d52899acda56f14c2e2342d12"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "7b5203b0e3883356b6cdebe93bbdec83629e4480fd109dde7561cd68b5fbfad3"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3ffb90d7cfd40a19965e71aef54894324111e4d546b91b065d12602cadbefc77"
+              }
+            ],
+            "input_contract_signature": "702cc4033e19e462cf48f4ab9c99e130d0a561da7c1657b62b586fd10975bdb4"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_fact_checking/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_fact_checking",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_fact_checking/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_fact_checking/run-2",
+            "paired_experiment_id": "rslora-paired/main/tablebench_fact_checking/run-2",
+            "source_workspace_id": "f207bcd1a17c4594b941a4d411afa53e",
+            "paired_workspace_id": "rslora__f207bcd1a17c4594b941a4d411afa53e__58b0b2cbf501",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "58b0b2cbf501bced028b92aa5d566ab899aafa8d5529a58ec084c6616212afe1",
+            "source_train_yaml_sha256": "6b413a05ca814b95f2953ac9b66289ffd1060dcbed9606ac601f2a73d0b12338",
+            "paired_train_yaml_sha256": "e67e9a8ad1897bca179d23c15e5d5a3f424f764b8f4a7b56547f75b75e14b9d6",
+            "masked_train_yaml_signature": "c75bd0a7d82841f5f6fb02be57211881f3bd785f8654f8f07529221f8056a2f5",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "9953dbb0ca25f02ed23d3e66fde8b1cfec138b70051421e44d13cb3c99b76662"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "6aa033489c8fab21cdaefa30ef7d297d6f389a65044fbc8e621f11b02d1ab463"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "67f028c9a5d961d0ea3a2aabc5200d7166dbf0ec13643cab18cd541f583fc809"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "9a12a65fb06f247e07e52a4b464dd1785d70d662f9fd019a6cf4e8ec55d792bb"
+              }
+            ],
+            "input_contract_signature": "af47bbb33846cab0167247b74e06af298f28919d84e4feb7ac0e3cba5b865e2b"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_fact_checking/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_fact_checking",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_fact_checking/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_fact_checking/run-3",
+            "paired_experiment_id": "rslora-paired/main/tablebench_fact_checking/run-3",
+            "source_workspace_id": "aa4538eafd7c4b2e839731041a6c47cb",
+            "paired_workspace_id": "rslora__aa4538eafd7c4b2e839731041a6c47cb__b0346f87b734",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "b0346f87b734a44e1dbdfa916bc4c6711d7a85634311e1eafe71f1975fa586ba",
+            "source_train_yaml_sha256": "88b93ec7bf5caa6223c37b14a8f02a62ae44c69103a56ccd937e5d2315782389",
+            "paired_train_yaml_sha256": "e1daec0ec35f0a5c999f1a93c8686851e89183deeb537f11006afa26adc955d2",
+            "masked_train_yaml_signature": "c81a97477b304d3eb3db815cce3e02fa1866981f57ed9d2f29db75848c200885",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "3ecd90aec8e01daef4c429631b3330ebda62effef2b70f414fe58f700f3d999c"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "1a23e6b7a966cadc3229a55fb9136edded2aa70c7eb60f79f4aae68cb8147bbb"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "62157bdb3450ff4f2f650d0af8de6558bcf108acd345fd7ea6a70569c3bf717f"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "f3ac6c01d40e779c0ef695fb37c3d8ec68e3f9f434e14c095ac1f8a1f759bd72"
+              }
+            ],
+            "input_contract_signature": "1110bbb5b213b8a600bb432e5c9404beb09ecd4a633a7927ce12682f5a73b8c8"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_numerical_reasoning",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_numerical_reasoning/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_numerical_reasoning/run-1",
+            "paired_experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-1",
+            "source_workspace_id": "5a9d14f080c34aea9c5ab7a050d99463",
+            "paired_workspace_id": "rslora__5a9d14f080c34aea9c5ab7a050d99463__9f7d9e270321",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "9f7d9e270321b98ead1875679208f7c222af00a65aea9b623d2d16518d73ae03",
+            "source_train_yaml_sha256": "21ccf1610be98ce426410caa5d68869359c879733071b871eb911c5c108ca4fb",
+            "paired_train_yaml_sha256": "95f55c0d32376aa98c966d767f7ba84b0f4d55406ecdbd7fe624a4b2ca842ad4",
+            "masked_train_yaml_signature": "35674aef07bcc3cbe6de0dbd718fb0b6c51468dbac2bf0f522a1543d4b2c93d2",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "c200e9332fa6d8f030e8cbecb2f6d19ea1e600317197cfdb52a0d20905ec3f60"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "d2e6c587f9421b26ef7af413db8f13d22999b85c4d1ce05509c3fd492b9aac37"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              },
+              {
+                "path": "validation.json",
+                "sha256": "fd67e5725679000c63b9f055750448aec3bae9b06c01e9a03ab9d4ed658f82bd"
+              }
+            ],
+            "input_contract_signature": "46b1a5cd722e655e77666fc201119fcbd9324af750bcbdeb833913efb7ecb492"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_numerical_reasoning",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_numerical_reasoning/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_numerical_reasoning/run-2",
+            "paired_experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-2",
+            "source_workspace_id": "44054002f3b643c9ae9a5c8f9126ca91",
+            "paired_workspace_id": "rslora__44054002f3b643c9ae9a5c8f9126ca91__e7056be6212a",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "e7056be6212ab470da7b27d5dca7798a280f994dd1b09cf4c754ed366ee96dbc",
+            "source_train_yaml_sha256": "0dd3b84d5bb63a998365e8ad3e666a46cadb043bf421d3380963a7f5518eaea5",
+            "paired_train_yaml_sha256": "e87ed7b377d0dd8adc666cf1aeb6615ce90af4153ae430b1b415fc0b1f15e6a8",
+            "masked_train_yaml_signature": "e370cc8c31941a3319740a718e0363bc41b225b36f9daa5cf056f77b89c50b35",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "820cb4613ef6d2212b9ff3140f7575faa9016ee3a9b396aff9de00b4d1dc3a67"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "0d63660243b3e52a64dca02bc9642b969cac5b61dd78fb9f7b1e602c229bbb34"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "67f028c9a5d961d0ea3a2aabc5200d7166dbf0ec13643cab18cd541f583fc809"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "f3120b91d3e09407d4527e5f5f997c21092fe7005ff6af36dc7005de1446ee3d"
+              }
+            ],
+            "input_contract_signature": "c169b2c7c21398f50320c9dc29e580019745430e233b92aa59360c7cd4a515b4"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_numerical_reasoning",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_numerical_reasoning/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_numerical_reasoning/run-3",
+            "paired_experiment_id": "rslora-paired/main/tablebench_numerical_reasoning/run-3",
+            "source_workspace_id": "1e53c372bdef4f1d91dc77a19fb087c3",
+            "paired_workspace_id": "rslora__1e53c372bdef4f1d91dc77a19fb087c3__ad8dcc6c2214",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "ad8dcc6c2214fc92f588afb02c6d0350e7bd3523976371c5260fc3b98a2bba21",
+            "source_train_yaml_sha256": "b8a8b473f194ecc251f8b58f58aa38aec3bd1ffa5165ce2fec7f1c5fe2f5380f",
+            "paired_train_yaml_sha256": "1bd077d35884b65257a961a9d73d5f31c91905487a8a92d3d6febb10ef4a2d9e",
+            "masked_train_yaml_signature": "a86ef504fc4c6eb714bcc70510b937f1151d08bb0653c9cd3f4be55a15836701",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "45b287ec7add5bd72af4d3f89698914b5a6a52c753d546ad3adcf482bf3b629a"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "a7b04e59fe0d777dce8f2d154570e88f3bced49de4c54ad5f7d352865ca2c917"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "acc3795f67cd17f87814f4bc529712346fe7c97b945c5e452da86227445469be"
+              }
+            ],
+            "input_contract_signature": "b05ff28a0d0d06ebb257882b056535474841f45cb422ebaec42ec54ca15ee3ea"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_visualization/run-1",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_visualization",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_visualization/run-1",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_visualization/run-1",
+            "paired_experiment_id": "rslora-paired/main/tablebench_visualization/run-1",
+            "source_workspace_id": "bff0d73c7ec170e13c23df36c1d4d994",
+            "paired_workspace_id": "rslora__bff0d73c7ec170e13c23df36c1d4d994__3ed668de4a33",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "3ed668de4a332300198016de2c93a116d0603dd5a02296a7209bca9a6226be8c",
+            "source_train_yaml_sha256": "3c61a2c3369eef9b074b05559266afb061d0224f1976e84fc46d402e490fc3e8",
+            "paired_train_yaml_sha256": "294c8bc121ab74558642d3e5ec69c0e6663ef10a325bc791eefc524b2199d75b",
+            "masked_train_yaml_signature": "6e0c1b0a023cbc58d7346ffe4ae61ae9d10d95bcfcf9b4d822f336eb247748ee",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "da42b42b4d5dda2f38f41f91ef63873b179696afa007917133031df3f9f57d82"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "838e326fd7b94f168f68c417d9cb8e71d9fcda89c625e6151d0150aeb7d38b78"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "a3b63411c327c20f04a8828ddefa7110394349fdbfa3756b3139d7d544c09747"
+              },
+              {
+                "path": "validation_data.json",
+                "sha256": "f67c163c917e2b49e4f0f0c9599e33f6b58e05291a878b8557de5da6aa2f826c"
+              }
+            ],
+            "input_contract_signature": "0c729a2aab83cde475064f9a2cb741f9e713c0547443b7d2a6798d258c8518df"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_visualization/run-2",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_visualization",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_visualization/run-2",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_visualization/run-2",
+            "paired_experiment_id": "rslora-paired/main/tablebench_visualization/run-2",
+            "source_workspace_id": "e9824c0d04cd49c5aca4ce2ae6ebe731",
+            "paired_workspace_id": "rslora__e9824c0d04cd49c5aca4ce2ae6ebe731__9219f3acf72e",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "9219f3acf72ee7ee05a601205dfb9befb6c44412f7c88dbb9e608257800c3262",
+            "source_train_yaml_sha256": "5a91c0046611a657c2d80d6a866b00859570ff4a832f6eaac5a0631fb6157245",
+            "paired_train_yaml_sha256": "3d625588c9d31783b2463faaf07bc4563c8bbd37c499717f161cf2be58c3f3f5",
+            "masked_train_yaml_signature": "afeb49bb6670e59e511bec9a8110b99adcd52449e46221f4228fca2486c80144",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "4d5050c0af77db84b32f9d2f958110489447056674d4d7110bc3fb765870d581"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "d5602cf7b9d0a100c2c42a31df89b99a850e8a8e1dbb5e56a2a2aa612492fe4a"
+              },
+              {
+                "path": "data_validation.json",
+                "sha256": "ad0a394fb60d5a886a7ac57b1494ba0587ec8f7bd13d93b10b5d5e5dc2ea6031"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "3ffb90d7cfd40a19965e71aef54894324111e4d546b91b065d12602cadbefc77"
+              }
+            ],
+            "input_contract_signature": "cdeb9d8bf360b6b6fb0873a995a7a5c3893056cd07f3183e95f798262c80879b"
+          }
+        ]
+      }
+    },
+    {
+      "experiment_id": "rslora-paired/main/tablebench_visualization/run-3",
+      "suite": "main-rslora-paired",
+      "benchmark": "tablebench_visualization",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "planner": "gpt-5.2",
+      "data_limit": 2000,
+      "timeout": "12h",
+      "formal_expected_samples": 2000,
+      "pairing": {
+        "source_experiment_id": "main/tablebench_visualization/run-3",
+        "expected_pairs": [
+          {
+            "schema_version": 1,
+            "source_experiment_id": "main/tablebench_visualization/run-3",
+            "paired_experiment_id": "rslora-paired/main/tablebench_visualization/run-3",
+            "source_workspace_id": "0b0ad9ad35294494945d11600beb7f13",
+            "paired_workspace_id": "rslora__0b0ad9ad35294494945d11600beb7f13__4d7afa9fbf7d",
+            "source_training_policy": "paper",
+            "source_training_method": "lora",
+            "paired_training_policy": "rslora",
+            "paired_training_method": "rslora",
+            "expected_samples": 2000,
+            "source_evidence_signature": "4d7afa9fbf7d6da8d97a84b2a77959db96570c4efe7f79cf7cb14076fac00360",
+            "source_train_yaml_sha256": "143986e82e5ab82fe1aca1aedca207861bb62985e084bd9bc6f1db10fead8e42",
+            "paired_train_yaml_sha256": "8c53fc6700b2a599ce5a7b548be49089b016bb2d1895ff21fff7ce6623c622f2",
+            "masked_train_yaml_signature": "2d01a4c8b7a942eebfed5aab38517bce89ecc9bfb45ba239171dfe94311c9bba",
+            "input_files": [
+              {
+                "path": "data.json",
+                "sha256": "71916df21b8fc9b1633d75511a08b246adf4dc43010163d6bacdbbf4a9e7e85d"
+              },
+              {
+                "path": "data_stats.json",
+                "sha256": "3ef52cc32aa3f6710c1ebf586d79979370160d7150e03ca74b7f1e83f4508fb8"
+              },
+              {
+                "path": "dataset_info.json",
+                "sha256": "1208ff0cc57b7c0a16ab9d91db4586aa44865707c1ee3715f853b6f74234bb0b"
+              }
+            ],
+            "input_contract_signature": "63de14093072d9504cbeb2ed0474c3933fa12a3b17c389c9a82f5f822c7f2510"
+          }
+        ]
+      }
+    }
+  ]
+}

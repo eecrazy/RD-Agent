@@ -1,0 +1,2250 @@
+{
+  "action_counts": {
+    "archive": 0,
+    "create_on_resume": 0,
+    "keep": 0,
+    "repair_status": 16
+  },
+  "active_python_processes": [
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/panorama_noc4pc/run-2",
+      "kind": "worker",
+      "pid": 161042,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_noc4pc__run-2/workspace"
+    },
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/aime25/run-1",
+      "kind": "worker",
+      "pid": 809986,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark aime25 --benchmark-description AIME 2025 (American Invitational Mathematics Examination) - Advanced high school math competition problems requiring creative problem-solving. Each answer is an integer 0-999. Topics include number theory, algebra, geometry, trigonometry, probability, and combinatorics. Problems require multi-step reasoning and often have elegant solutions. Paper-primary model-selection metric: accuracy (higher is better); other reported fields are diagnostic and must not override an accuracy regression. Expected Output Format: Put final answer within \\boxed{}, e.g., \\boxed{42}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/aime25/run-1",
+      "kind": "worker",
+      "pid": 2591175,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark panorama_par4pc --benchmark-description PAR4PC (Prior Art Retrieval for Patent Claims) - Given a patent claim, retrieve the most relevant prior art patents from a candidate pool. Requires understanding claim scope, identifying technical similarities, and ranking patents by relevance for potential 35 USC 102/103 rejections. Paper-primary model-selection metric: macro-F1 (higher is better); accuracy or retrieval diagnostics must not override a macro-F1 regression. Expected Output Format: Return JSON: {\"answer\": \"A\"} for single patent or {\"answer\": [\"A\", \"C\"]} for multiple patents (codes A-H). --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/panorama_par4pc/run-1",
+      "kind": "worker",
+      "pid": 2591177,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_par4pc__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark panorama_noc4pc --benchmark-description NOC4PC (Novelty/Obviousness Classification) - Classify patent claims as ALLOW (patentable), 102 (anticipated/lacks novelty), or 103 (obvious). Requires applying patent law standards: 102 when single reference discloses all elements, 103 when combination of references with motivation makes claim obvious to skilled artisan. Paper-primary model-selection metric: macro-F1 (higher is better); accuracy or class-level diagnostics must not override a macro-F1 regression. Expected Output Format: Return JSON: {\"code\": \"ALLOW\"} or {\"code\": \"102\"} or {\"code\": \"103\"}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/panorama_noc4pc/run-1",
+      "kind": "worker",
+      "pid": 2591179,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_noc4pc__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark aime25 --benchmark-description AIME 2025 (American Invitational Mathematics Examination) - Advanced high school math competition problems requiring creative problem-solving. Each answer is an integer 0-999. Topics include number theory, algebra, geometry, trigonometry, probability, and combinatorics. Problems require multi-step reasoning and often have elegant solutions. Paper-primary model-selection metric: accuracy (higher is better); other reported fields are diagnostic and must not override an accuracy regression. Expected Output Format: Put final answer within \\boxed{}, e.g., \\boxed{42}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/aime25/run-2",
+      "kind": "worker",
+      "pid": 2591205,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-2/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark aime25 --benchmark-description AIME 2025 (American Invitational Mathematics Examination) - Advanced high school math competition problems requiring creative problem-solving. Each answer is an integer 0-999. Topics include number theory, algebra, geometry, trigonometry, probability, and combinatorics. Problems require multi-step reasoning and often have elegant solutions. Paper-primary model-selection metric: accuracy (higher is better); other reported fields are diagnostic and must not override an accuracy regression. Expected Output Format: Put final answer within \\boxed{}, e.g., \\boxed{42}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 48h --path /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-3/trace/__session__/0/1_coding",
+      "experiment_id": "main/aime25/run-3",
+      "kind": "worker",
+      "pid": 3073630,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-3/workspace"
+    },
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/aime25/run-3",
+      "kind": "worker",
+      "pid": 3074724,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-3/workspace"
+    },
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/aime25/run-2",
+      "kind": "worker",
+      "pid": 3432261,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-2/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/finetune_files/conda_envs/llm_finetune/bin/python ./process_data.py",
+      "experiment_id": null,
+      "kind": "worker",
+      "pid": 3727458,
+      "workspace_path": null
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark panorama_noc4pc --benchmark-description NOC4PC (Novelty/Obviousness Classification) - Classify patent claims as ALLOW (patentable), 102 (anticipated/lacks novelty), or 103 (obvious). Requires applying patent law standards: 102 when single reference discloses all elements, 103 when combination of references with motivation makes claim obvious to skilled artisan. Paper-primary model-selection metric: macro-F1 (higher is better); accuracy or class-level diagnostics must not override a macro-F1 regression. Expected Output Format: Return JSON: {\"code\": \"ALLOW\"} or {\"code\": \"102\"} or {\"code\": \"103\"}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/panorama_noc4pc/run-2",
+      "kind": "worker",
+      "pid": 3811162,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_noc4pc__run-2/workspace"
+    }
+  ],
+  "blocking_active_python_processes": [
+    {
+      "command": "/data/github/RD-Agent/finetune_files/conda_envs/llm_finetune/bin/python ./process_data.py",
+      "experiment_id": null,
+      "kind": "worker",
+      "pid": 3727458,
+      "workspace_path": null
+    }
+  ],
+  "datasets": [],
+  "generated_at": "2026-09-09T03:27:24.372373+08:00",
+  "matrix_sha256": "2a707d9f15c65ada77d9a93c893da4b7f06d5759580af8f91187ed7ad0739c3d",
+  "matrix_task_count": 39,
+  "only_pattern": "^(?:main/panorama_pi4pc/run-1|main/chemcotbench_mol_und/run-1|main/chemcotbench_mol_edit/run-1|main/chemcotbench_mol_opt/run-1|main/chemcotbench_reaction/run-1|main/FinanceIQ_gen/run-1|main/tablebench_data_analysis/run-1|main/tablebench_fact_checking/run-1|main/tablebench_numerical_reasoning/run-1|main/tablebench_visualization/run-1|main/chemcotbench_mol_edit/run-2|main/chemcotbench_reaction/run-2|main/FinanceIQ_gen/run-2|main/tablebench_data_analysis/run-2|main/tablebench_visualization/run-2|main/chemcotbench_mol_edit/run-3)$",
+  "repair_task_count": 16,
+  "retry_task_count": 0,
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2",
+  "schema_version": 2,
+  "selected_experiment_ids": [
+    "main/FinanceIQ_gen/run-1",
+    "main/FinanceIQ_gen/run-2",
+    "main/chemcotbench_mol_edit/run-1",
+    "main/chemcotbench_mol_edit/run-2",
+    "main/chemcotbench_mol_edit/run-3",
+    "main/chemcotbench_mol_opt/run-1",
+    "main/chemcotbench_mol_und/run-1",
+    "main/chemcotbench_reaction/run-1",
+    "main/chemcotbench_reaction/run-2",
+    "main/panorama_pi4pc/run-1",
+    "main/tablebench_data_analysis/run-1",
+    "main/tablebench_data_analysis/run-2",
+    "main/tablebench_fact_checking/run-1",
+    "main/tablebench_numerical_reasoning/run-1",
+    "main/tablebench_visualization/run-1",
+    "main/tablebench_visualization/run-2"
+  ],
+  "status_counts": {
+    "failed": 16
+  },
+  "strict_task_count": 0,
+  "task_count": 16,
+  "tasks": [
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/panorama_pi4pc/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "15e4af1aedee710e6b7e15cecb722e2e4731d172dbd3cdcf26d22f052f2451b6",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:54:49.460646+00:00",
+            "experiment_id": "main/panorama_pi4pc/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/workspace/.ft_model_checkpoints/8c0d7b3c0dcab9f711effd452cf5c926/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/workspace/.ft_model_checkpoints/8c0d7b3c0dcab9f711effd452cf5c926/formal_training",
+          "training_method": "lora",
+          "workspace_id": "8c0d7b3c0dcab9f711effd452cf5c926",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/workspace/8c0d7b3c0dcab9f711effd452cf5c926"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:54:49.460646+00:00",
+          "experiment_id": "main/panorama_pi4pc/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "05dbd43c8683f9b4c353bf03edc4722e0e2d50b29d47f00c1636f2cd508fefae"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "81a0f98f3e0ec180fe826b98dab8f105f98c5394b631e8eaabfe70de95ca80ab",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "panorama_pi4pc",
+        "data_limit": 2000,
+        "experiment_id": "main/panorama_pi4pc/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_und/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "84a62eadad38c4862df3ce0114e71f2711d1087601e5b8792fbcc53d7d7ee9b5",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:20:03.275329+00:00",
+            "experiment_id": "main/chemcotbench_mol_und/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 33,
+          "max_steps": 33,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/workspace/.ft_model_checkpoints/6f365674cebacf12682be924dbdc2ce0/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/workspace/.ft_model_checkpoints/6f365674cebacf12682be924dbdc2ce0/formal_training",
+          "training_method": "lora",
+          "workspace_id": "6f365674cebacf12682be924dbdc2ce0",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/workspace/6f365674cebacf12682be924dbdc2ce0"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:20:03.275329+00:00",
+          "experiment_id": "main/chemcotbench_mol_und/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "4dc506c899ee706e23a50779bebc5f55ebda651dbfff212bbc9a54a7c325ef57"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "2ea18eae1b12c404e1f4790e05a07c6142929be430f74a67887c4249748857fe",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_und",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_und/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_edit/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "c0bf4bc77eea7c88c95cf27782b32233d1a0be90dd069bd26905332d97125ef6",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T09:52:04.469087+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 189,
+          "max_steps": 189,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/workspace/.ft_model_checkpoints/56a89ae4c4bb4985935c3610df11723b/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/workspace/.ft_model_checkpoints/56a89ae4c4bb4985935c3610df11723b/formal_training",
+          "training_method": "lora",
+          "workspace_id": "56a89ae4c4bb4985935c3610df11723b",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/workspace/56a89ae4c4bb4985935c3610df11723b"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T09:52:04.469087+00:00",
+          "experiment_id": "main/chemcotbench_mol_edit/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "9e23928556a5eec644f0e68db18f926b637c09816a3105c19a6fce7b1d3c4df4"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "0f20dda50fe5180db90ac97f1879fe96c6f962bf9a9ddca5884409c5befff340",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_edit",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_edit/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_opt/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "6e2afc1eec1c1bf55e21a2152df8803b501cd0c820e83ca4b1b20aa654195ed5",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T07:29:00.395996+00:00",
+            "experiment_id": "main/chemcotbench_mol_opt/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/workspace/.ft_model_checkpoints/93b422671cb74e74b076ad9e45ae41cd/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/workspace/.ft_model_checkpoints/93b422671cb74e74b076ad9e45ae41cd/formal_training",
+          "training_method": "lora",
+          "workspace_id": "93b422671cb74e74b076ad9e45ae41cd",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/workspace/93b422671cb74e74b076ad9e45ae41cd"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T07:29:00.395996+00:00",
+          "experiment_id": "main/chemcotbench_mol_opt/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "e92c30d6ba9aa7a68aa30dc1f85ba4d82d74d07d9f3f7d5d76145215b6e3f74a"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "c4354d2a5220aedeefa89caa21157ead8b749857a7d2955601e7bef932cfad55",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_opt",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_opt/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_reaction/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "59d42268decb3265180d574152fd1aaa9ac37632d56d8a024c2fcc0d531ca448",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T07:40:18.716846+00:00",
+            "experiment_id": "main/chemcotbench_reaction/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 93,
+          "max_steps": 93,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/workspace/.ft_model_checkpoints/0087c1c9f2fd4c25baf344d76087f4be/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/workspace/.ft_model_checkpoints/0087c1c9f2fd4c25baf344d76087f4be/formal_training",
+          "training_method": "lora",
+          "workspace_id": "0087c1c9f2fd4c25baf344d76087f4be",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/workspace/0087c1c9f2fd4c25baf344d76087f4be"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T07:40:18.716846+00:00",
+          "experiment_id": "main/chemcotbench_reaction/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "ea24e47708f7b169f9d958e44d7f100803fbe5d9ae24a94ca0ba4ad938cad6e5"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "c06bf4c039f89c1dd744de3a58589eb511e99789504209dc83db53cf6c3b7bf8",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_reaction",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_reaction/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/FinanceIQ_gen/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "18964949bb70daa523bccced78d3e383921086d919ee05362b0742896b6c4416",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:20:03.268135+00:00",
+            "experiment_id": "main/FinanceIQ_gen/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 189,
+          "max_steps": 189,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/workspace/.ft_model_checkpoints/9afb3a9bff57034002cf1d182e0dbf47/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/workspace/.ft_model_checkpoints/9afb3a9bff57034002cf1d182e0dbf47/formal_training",
+          "training_method": "lora",
+          "workspace_id": "9afb3a9bff57034002cf1d182e0dbf47",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/workspace/9afb3a9bff57034002cf1d182e0dbf47"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:20:03.268135+00:00",
+          "experiment_id": "main/FinanceIQ_gen/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "d4577ad55ec7efa00de31c4e5260fd2cbb554ab6682eee0e3ef8b5752e928727"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "32c1cfe596391caf69a9d8d7eaee9bf0e194a8a27143a2498550b840027ca47b",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "FinanceIQ_gen",
+        "data_limit": 2000,
+        "experiment_id": "main/FinanceIQ_gen/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_data_analysis/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "bbf3f632da2c5db611f20fb3e9ecf4991ac281091021029a41a9a47cc6e2a2c9",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:54:49.295166+00:00",
+            "experiment_id": "main/tablebench_data_analysis/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 33,
+          "max_steps": 33,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/workspace/.ft_model_checkpoints/6c2e11bd4579126d5eb8b44ac7bbb49e/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/workspace/.ft_model_checkpoints/6c2e11bd4579126d5eb8b44ac7bbb49e/formal_training",
+          "training_method": "lora",
+          "workspace_id": "6c2e11bd4579126d5eb8b44ac7bbb49e",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/workspace/6c2e11bd4579126d5eb8b44ac7bbb49e"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:54:49.295166+00:00",
+          "experiment_id": "main/tablebench_data_analysis/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "9b76c7a848f714c3e346c3f9038403c4e5048fdc9500b9e6cff06cd438ac09c2"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "8e4e2a36626d84202edc474eb23bc2e443d8650571574ac1ede50c4079080112",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_data_analysis",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_data_analysis/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_fact_checking/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "2546e1fcd056d2bcb2085f4e72026bbeb61a838627dfa5f200eb7dc3e7ead275",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T07:28:29.713302+00:00",
+            "experiment_id": "main/tablebench_fact_checking/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/workspace/.ft_model_checkpoints/09d3a9c0791a419bbe3f53b6bdc2b542/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/workspace/.ft_model_checkpoints/09d3a9c0791a419bbe3f53b6bdc2b542/formal_training",
+          "training_method": "lora",
+          "workspace_id": "09d3a9c0791a419bbe3f53b6bdc2b542",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/workspace/09d3a9c0791a419bbe3f53b6bdc2b542"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T07:28:29.713302+00:00",
+          "experiment_id": "main/tablebench_fact_checking/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "fffb5ce94254459d3040b43c525f429de97c8b2f304dcc4cabc59d6a130d3bb0"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "293f25ba936c2d3852880552bae4cbf652f918843d2fcfbc4a6b5f3d7cc949d8",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_fact_checking",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_fact_checking/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "9f7d9e270321b98ead1875679208f7c222af00a65aea9b623d2d16518d73ae03",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T11:52:56.697677+00:00",
+            "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/workspace/.ft_model_checkpoints/5a9d14f080c34aea9c5ab7a050d99463/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/workspace/.ft_model_checkpoints/5a9d14f080c34aea9c5ab7a050d99463/formal_training",
+          "training_method": "lora",
+          "workspace_id": "5a9d14f080c34aea9c5ab7a050d99463",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/workspace/5a9d14f080c34aea9c5ab7a050d99463"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T11:52:56.697677+00:00",
+          "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "ace87a65843f51bb205855770306cbd73a33ce80e2254538db2e714a36ab9405"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "ec9508eb76988927cc2e6204f127e18d3d0a4009ae376e6ee2a24488334db617",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_numerical_reasoning",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_visualization/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "3ed668de4a332300198016de2c93a116d0603dd5a02296a7209bca9a6226be8c",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:20:03.329983+00:00",
+            "experiment_id": "main/tablebench_visualization/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/workspace/.ft_model_checkpoints/bff0d73c7ec170e13c23df36c1d4d994/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/workspace/.ft_model_checkpoints/bff0d73c7ec170e13c23df36c1d4d994/formal_training",
+          "training_method": "lora",
+          "workspace_id": "bff0d73c7ec170e13c23df36c1d4d994",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/workspace/bff0d73c7ec170e13c23df36c1d4d994"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:20:03.329983+00:00",
+          "experiment_id": "main/tablebench_visualization/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "41c4f388b99e1cf7bd2668ad29d2f9fe10bcc201a3caf390c5250ca1798a0f66"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "c92f3d5cc3aa9d7853a8b8220829a4cf6337031408c3409a1ca19da3827e0204",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_visualization",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_visualization/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 2,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_edit/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "5656527bcc33e9c3a8190f8f8a2a7b0d37e7c03b411f807c5fc6458055229d1d",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T10:52:01.841071+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 500,
+          "max_steps": 500,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/5c7be5f4995943f2b2ced2092c4109f0/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/5c7be5f4995943f2b2ced2092c4109f0/formal_training",
+          "training_method": "lora",
+          "workspace_id": "5c7be5f4995943f2b2ced2092c4109f0",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/5c7be5f4995943f2b2ced2092c4109f0"
+        },
+        {
+          "evidence_signature": "67459b4d7adca4bdf37346d16930da8e18581f638979166391643491733cbd2a",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T10:52:01.841071+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 1250,
+          "max_steps": 1250,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/dd4ccfae55b14310bd3c3732859ca684/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/dd4ccfae55b14310bd3c3732859ca684/formal_training",
+          "training_method": "lora",
+          "workspace_id": "dd4ccfae55b14310bd3c3732859ca684",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/dd4ccfae55b14310bd3c3732859ca684"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T10:52:01.841071+00:00",
+          "experiment_id": "main/chemcotbench_mol_edit/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "2bc2c84459b7e29c1eeb21aaf0ae9c5c96c802d092df0d09772867fdd683461b"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "7be207c7d828e98ddd5d839f17cf841e31f8d49b0f858ba75c377fdfb3e4633c",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 2,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_edit",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_edit/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_reaction/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "59e66068a6d759a0047a182d6176c5a95ffd95bdd64d1a0d4f9003ac25bec9a1",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T10:39:02.998269+00:00",
+            "experiment_id": "main/chemcotbench_reaction/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/workspace/.ft_model_checkpoints/3527d34256004efabe7858c08197c802/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/workspace/.ft_model_checkpoints/3527d34256004efabe7858c08197c802/formal_training",
+          "training_method": "lora",
+          "workspace_id": "3527d34256004efabe7858c08197c802",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/workspace/3527d34256004efabe7858c08197c802"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T10:39:02.998269+00:00",
+          "experiment_id": "main/chemcotbench_reaction/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "df7b0e18a0adda2e412e9b80c65ba5c00ba442d978fd7e1d5f7ed4d564b30354"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "70d26bc7136cd5edd8412c371646500cb82114551244cb5cac8f42a73e0d5ebb",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_reaction",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_reaction/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/FinanceIQ_gen/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "b1d41ae4917c3a35011038d95d0e7441d763c41c642d18a09bc15ae4a2b52bc4",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-07T22:18:14.365191+00:00",
+            "experiment_id": "main/FinanceIQ_gen/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 189,
+          "max_steps": 189,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/workspace/.ft_model_checkpoints/8491abf8b4ee00bb01f01b1701df695d/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/workspace/.ft_model_checkpoints/8491abf8b4ee00bb01f01b1701df695d/formal_training",
+          "training_method": "lora",
+          "workspace_id": "8491abf8b4ee00bb01f01b1701df695d",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/workspace/8491abf8b4ee00bb01f01b1701df695d"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-07T22:18:14.365191+00:00",
+          "experiment_id": "main/FinanceIQ_gen/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "4155769ac17e73ca85a7a2c7f584b6eae7b0e859deca9517c3fb37016baea2c0"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "94166e90afffb409262e8e8d217f1688680a711b0e524672ae9331bcf4fd4c29",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "FinanceIQ_gen",
+        "data_limit": 2000,
+        "experiment_id": "main/FinanceIQ_gen/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_data_analysis/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "d8acb664ef6a5b441236cf4b31909fb27a64b91164b6e273fd2ac590c4a5bfb2",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:54:49.287920+00:00",
+            "experiment_id": "main/tablebench_data_analysis/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 33,
+          "max_steps": 33,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/workspace/.ft_model_checkpoints/12ac0c194c460d219dd8753a8e7ec395/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/workspace/.ft_model_checkpoints/12ac0c194c460d219dd8753a8e7ec395/formal_training",
+          "training_method": "lora",
+          "workspace_id": "12ac0c194c460d219dd8753a8e7ec395",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/workspace/12ac0c194c460d219dd8753a8e7ec395"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:54:49.287920+00:00",
+          "experiment_id": "main/tablebench_data_analysis/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "8e710cbf499c1979d3be6906cf3b0b3f3f1f17116cf13a95e08a08cb3cb0470b"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "31b82ff50c07070ca735443d21196cfb650565804ff777264a04510dd596d45c",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_data_analysis",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_data_analysis/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_visualization/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "9219f3acf72ee7ee05a601205dfb9befb6c44412f7c88dbb9e608257800c3262",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T11:57:24.430626+00:00",
+            "experiment_id": "main/tablebench_visualization/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/workspace/.ft_model_checkpoints/e9824c0d04cd49c5aca4ce2ae6ebe731/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/workspace/.ft_model_checkpoints/e9824c0d04cd49c5aca4ce2ae6ebe731/formal_training",
+          "training_method": "lora",
+          "workspace_id": "e9824c0d04cd49c5aca4ce2ae6ebe731",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/workspace/e9824c0d04cd49c5aca4ce2ae6ebe731"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T11:57:24.430626+00:00",
+          "experiment_id": "main/tablebench_visualization/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "cde2b4b9114a9c806824eb14cfbc7558c8affcade0e410cbf0f14a189d217a75"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "3062a79c4cd5bf7d2cfd8fe659fb91914de676e31ee28bdd9cbd37eb8f58c536",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_visualization",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_visualization/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_edit/run-3",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "fc7bf92b82c38eb93276be05af651340e08cc49ae89a2160b575f9bfa1b00f3b",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T13:47:26.420645+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-3",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 252,
+          "max_steps": 252,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/workspace/.ft_model_checkpoints/b86e7fa79da145e597196d87d64d5fde/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/workspace/.ft_model_checkpoints/b86e7fa79da145e597196d87d64d5fde/formal_training",
+          "training_method": "lora",
+          "workspace_id": "b86e7fa79da145e597196d87d64d5fde",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/workspace/b86e7fa79da145e597196d87d64d5fde"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T13:47:26.420645+00:00",
+          "experiment_id": "main/chemcotbench_mol_edit/run-3",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "84a9e17652edc83805364bd40d5275f8c324735873cc28ba809a5186d796b089"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "d286235ba7b3d3bcc407c410dd40ab3f3c6f939adeeb5f3e2e9ab28f37c57331",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_edit",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_edit/run-3",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3",
+      "training_policy": "paper"
+    }
+  ],
+  "training_policy": "paper"
+}
+Traceback (most recent call last):
+  File "<stdin>", line 24, in <module>
+  File "/data/github/RD-Agent/reproduction/ft_agent/prepare_matrix_retry.py", line 999, in main
+    validate_apply_preconditions(plan, current_active)
+  File "/data/github/RD-Agent/reproduction/ft_agent/prepare_matrix_retry.py", line 980, in validate_apply_preconditions
+    raise RetryPreparationError(message)
+prepare_matrix_retry.RetryPreparationError: Selected matrix tasks are still active; refusing retry preparation: pid=3727458 task=<unassigned>
+{
+  "action_counts": {
+    "archive": 0,
+    "create_on_resume": 0,
+    "keep": 0,
+    "repair_status": 16
+  },
+  "active_python_processes": [
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/panorama_noc4pc/run-2",
+      "kind": "worker",
+      "pid": 161042,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_noc4pc__run-2/workspace"
+    },
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/aime25/run-1",
+      "kind": "worker",
+      "pid": 809986,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark aime25 --benchmark-description AIME 2025 (American Invitational Mathematics Examination) - Advanced high school math competition problems requiring creative problem-solving. Each answer is an integer 0-999. Topics include number theory, algebra, geometry, trigonometry, probability, and combinatorics. Problems require multi-step reasoning and often have elegant solutions. Paper-primary model-selection metric: accuracy (higher is better); other reported fields are diagnostic and must not override an accuracy regression. Expected Output Format: Put final answer within \\boxed{}, e.g., \\boxed{42}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/aime25/run-1",
+      "kind": "worker",
+      "pid": 2591175,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark panorama_par4pc --benchmark-description PAR4PC (Prior Art Retrieval for Patent Claims) - Given a patent claim, retrieve the most relevant prior art patents from a candidate pool. Requires understanding claim scope, identifying technical similarities, and ranking patents by relevance for potential 35 USC 102/103 rejections. Paper-primary model-selection metric: macro-F1 (higher is better); accuracy or retrieval diagnostics must not override a macro-F1 regression. Expected Output Format: Return JSON: {\"answer\": \"A\"} for single patent or {\"answer\": [\"A\", \"C\"]} for multiple patents (codes A-H). --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/panorama_par4pc/run-1",
+      "kind": "worker",
+      "pid": 2591177,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_par4pc__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark panorama_noc4pc --benchmark-description NOC4PC (Novelty/Obviousness Classification) - Classify patent claims as ALLOW (patentable), 102 (anticipated/lacks novelty), or 103 (obvious). Requires applying patent law standards: 102 when single reference discloses all elements, 103 when combination of references with motivation makes claim obvious to skilled artisan. Paper-primary model-selection metric: macro-F1 (higher is better); accuracy or class-level diagnostics must not override a macro-F1 regression. Expected Output Format: Return JSON: {\"code\": \"ALLOW\"} or {\"code\": \"102\"} or {\"code\": \"103\"}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/panorama_noc4pc/run-1",
+      "kind": "worker",
+      "pid": 2591179,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_noc4pc__run-1/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark aime25 --benchmark-description AIME 2025 (American Invitational Mathematics Examination) - Advanced high school math competition problems requiring creative problem-solving. Each answer is an integer 0-999. Topics include number theory, algebra, geometry, trigonometry, probability, and combinatorics. Problems require multi-step reasoning and often have elegant solutions. Paper-primary model-selection metric: accuracy (higher is better); other reported fields are diagnostic and must not override an accuracy regression. Expected Output Format: Put final answer within \\boxed{}, e.g., \\boxed{42}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/aime25/run-2",
+      "kind": "worker",
+      "pid": 2591205,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-2/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark aime25 --benchmark-description AIME 2025 (American Invitational Mathematics Examination) - Advanced high school math competition problems requiring creative problem-solving. Each answer is an integer 0-999. Topics include number theory, algebra, geometry, trigonometry, probability, and combinatorics. Problems require multi-step reasoning and often have elegant solutions. Paper-primary model-selection metric: accuracy (higher is better); other reported fields are diagnostic and must not override an accuracy regression. Expected Output Format: Put final answer within \\boxed{}, e.g., \\boxed{42}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 48h --path /data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-3/trace/__session__/0/1_coding",
+      "experiment_id": "main/aime25/run-3",
+      "kind": "worker",
+      "pid": 3073630,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-3/workspace"
+    },
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/aime25/run-3",
+      "kind": "worker",
+      "pid": 3074724,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-3/workspace"
+    },
+    {
+      "command": "python ./process_data.py",
+      "experiment_id": "main/aime25/run-2",
+      "kind": "worker",
+      "pid": 3432261,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__aime25__run-2/workspace"
+    },
+    {
+      "command": "/data/github/RD-Agent/finetune_files/conda_envs/llm_finetune/bin/python ./process_data.py",
+      "experiment_id": "main/panorama_noc4pc/run-3",
+      "kind": "worker",
+      "pid": 3727458,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_noc4pc__run-3/workspace/e99740f1378c4a2191d5293ed8b6e081"
+    },
+    {
+      "command": "/data/github/RD-Agent/.venv/bin/python /data/github/RD-Agent/rdagent/app/finetune/llm/loop.py --benchmark panorama_noc4pc --benchmark-description NOC4PC (Novelty/Obviousness Classification) - Classify patent claims as ALLOW (patentable), 102 (anticipated/lacks novelty), or 103 (obvious). Requires applying patent law standards: 102 when single reference discloses all elements, 103 when combination of references with motivation makes claim obvious to skilled artisan. Paper-primary model-selection metric: macro-F1 (higher is better); accuracy or class-level diagnostics must not override a macro-F1 regression. Expected Output Format: Return JSON: {\"code\": \"ALLOW\"} or {\"code\": \"102\"} or {\"code\": \"103\"}. --base-model Qwen/Qwen2.5-7B-Instruct --upper-data-size-limit 2000 --timeout 12h",
+      "experiment_id": "main/panorama_noc4pc/run-2",
+      "kind": "worker",
+      "pid": 3811162,
+      "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_noc4pc__run-2/workspace"
+    }
+  ],
+  "blocking_active_python_processes": [],
+  "datasets": [],
+  "generated_at": "2026-09-09T03:28:02.628675+08:00",
+  "matrix_sha256": "2a707d9f15c65ada77d9a93c893da4b7f06d5759580af8f91187ed7ad0739c3d",
+  "matrix_task_count": 39,
+  "only_pattern": "^(?:main/panorama_pi4pc/run-1|main/chemcotbench_mol_und/run-1|main/chemcotbench_mol_edit/run-1|main/chemcotbench_mol_opt/run-1|main/chemcotbench_reaction/run-1|main/FinanceIQ_gen/run-1|main/tablebench_data_analysis/run-1|main/tablebench_fact_checking/run-1|main/tablebench_numerical_reasoning/run-1|main/tablebench_visualization/run-1|main/chemcotbench_mol_edit/run-2|main/chemcotbench_reaction/run-2|main/FinanceIQ_gen/run-2|main/tablebench_data_analysis/run-2|main/tablebench_visualization/run-2|main/chemcotbench_mol_edit/run-3)$",
+  "repair_task_count": 16,
+  "retry_task_count": 0,
+  "run_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2",
+  "schema_version": 2,
+  "selected_experiment_ids": [
+    "main/FinanceIQ_gen/run-1",
+    "main/FinanceIQ_gen/run-2",
+    "main/chemcotbench_mol_edit/run-1",
+    "main/chemcotbench_mol_edit/run-2",
+    "main/chemcotbench_mol_edit/run-3",
+    "main/chemcotbench_mol_opt/run-1",
+    "main/chemcotbench_mol_und/run-1",
+    "main/chemcotbench_reaction/run-1",
+    "main/chemcotbench_reaction/run-2",
+    "main/panorama_pi4pc/run-1",
+    "main/tablebench_data_analysis/run-1",
+    "main/tablebench_data_analysis/run-2",
+    "main/tablebench_fact_checking/run-1",
+    "main/tablebench_numerical_reasoning/run-1",
+    "main/tablebench_visualization/run-1",
+    "main/tablebench_visualization/run-2"
+  ],
+  "status_counts": {
+    "failed": 16
+  },
+  "strict_task_count": 0,
+  "task_count": 16,
+  "tasks": [
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/panorama_pi4pc/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "15e4af1aedee710e6b7e15cecb722e2e4731d172dbd3cdcf26d22f052f2451b6",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:54:49.460646+00:00",
+            "experiment_id": "main/panorama_pi4pc/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/workspace/.ft_model_checkpoints/8c0d7b3c0dcab9f711effd452cf5c926/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/workspace/.ft_model_checkpoints/8c0d7b3c0dcab9f711effd452cf5c926/formal_training",
+          "training_method": "lora",
+          "workspace_id": "8c0d7b3c0dcab9f711effd452cf5c926",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/workspace/8c0d7b3c0dcab9f711effd452cf5c926"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:54:49.460646+00:00",
+          "experiment_id": "main/panorama_pi4pc/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "05dbd43c8683f9b4c353bf03edc4722e0e2d50b29d47f00c1636f2cd508fefae"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "81a0f98f3e0ec180fe826b98dab8f105f98c5394b631e8eaabfe70de95ca80ab",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "panorama_pi4pc",
+        "data_limit": 2000,
+        "experiment_id": "main/panorama_pi4pc/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__panorama_pi4pc__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_und/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "84a62eadad38c4862df3ce0114e71f2711d1087601e5b8792fbcc53d7d7ee9b5",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:20:03.275329+00:00",
+            "experiment_id": "main/chemcotbench_mol_und/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 33,
+          "max_steps": 33,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/workspace/.ft_model_checkpoints/6f365674cebacf12682be924dbdc2ce0/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/workspace/.ft_model_checkpoints/6f365674cebacf12682be924dbdc2ce0/formal_training",
+          "training_method": "lora",
+          "workspace_id": "6f365674cebacf12682be924dbdc2ce0",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/workspace/6f365674cebacf12682be924dbdc2ce0"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:20:03.275329+00:00",
+          "experiment_id": "main/chemcotbench_mol_und/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "4dc506c899ee706e23a50779bebc5f55ebda651dbfff212bbc9a54a7c325ef57"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "2ea18eae1b12c404e1f4790e05a07c6142929be430f74a67887c4249748857fe",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_und",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_und/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_und__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_edit/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "c0bf4bc77eea7c88c95cf27782b32233d1a0be90dd069bd26905332d97125ef6",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T09:52:04.469087+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 189,
+          "max_steps": 189,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/workspace/.ft_model_checkpoints/56a89ae4c4bb4985935c3610df11723b/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/workspace/.ft_model_checkpoints/56a89ae4c4bb4985935c3610df11723b/formal_training",
+          "training_method": "lora",
+          "workspace_id": "56a89ae4c4bb4985935c3610df11723b",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/workspace/56a89ae4c4bb4985935c3610df11723b"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T09:52:04.469087+00:00",
+          "experiment_id": "main/chemcotbench_mol_edit/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "9e23928556a5eec644f0e68db18f926b637c09816a3105c19a6fce7b1d3c4df4"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "0f20dda50fe5180db90ac97f1879fe96c6f962bf9a9ddca5884409c5befff340",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_edit",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_edit/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_opt/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "6e2afc1eec1c1bf55e21a2152df8803b501cd0c820e83ca4b1b20aa654195ed5",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T07:29:00.395996+00:00",
+            "experiment_id": "main/chemcotbench_mol_opt/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/workspace/.ft_model_checkpoints/93b422671cb74e74b076ad9e45ae41cd/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/workspace/.ft_model_checkpoints/93b422671cb74e74b076ad9e45ae41cd/formal_training",
+          "training_method": "lora",
+          "workspace_id": "93b422671cb74e74b076ad9e45ae41cd",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/workspace/93b422671cb74e74b076ad9e45ae41cd"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T07:29:00.395996+00:00",
+          "experiment_id": "main/chemcotbench_mol_opt/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "e92c30d6ba9aa7a68aa30dc1f85ba4d82d74d07d9f3f7d5d76145215b6e3f74a"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "c4354d2a5220aedeefa89caa21157ead8b749857a7d2955601e7bef932cfad55",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_opt",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_opt/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_opt__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_reaction/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "59d42268decb3265180d574152fd1aaa9ac37632d56d8a024c2fcc0d531ca448",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T07:40:18.716846+00:00",
+            "experiment_id": "main/chemcotbench_reaction/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 93,
+          "max_steps": 93,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/workspace/.ft_model_checkpoints/0087c1c9f2fd4c25baf344d76087f4be/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/workspace/.ft_model_checkpoints/0087c1c9f2fd4c25baf344d76087f4be/formal_training",
+          "training_method": "lora",
+          "workspace_id": "0087c1c9f2fd4c25baf344d76087f4be",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/workspace/0087c1c9f2fd4c25baf344d76087f4be"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T07:40:18.716846+00:00",
+          "experiment_id": "main/chemcotbench_reaction/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "ea24e47708f7b169f9d958e44d7f100803fbe5d9ae24a94ca0ba4ad938cad6e5"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "c06bf4c039f89c1dd744de3a58589eb511e99789504209dc83db53cf6c3b7bf8",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_reaction",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_reaction/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/FinanceIQ_gen/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "18964949bb70daa523bccced78d3e383921086d919ee05362b0742896b6c4416",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:20:03.268135+00:00",
+            "experiment_id": "main/FinanceIQ_gen/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 189,
+          "max_steps": 189,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/workspace/.ft_model_checkpoints/9afb3a9bff57034002cf1d182e0dbf47/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/workspace/.ft_model_checkpoints/9afb3a9bff57034002cf1d182e0dbf47/formal_training",
+          "training_method": "lora",
+          "workspace_id": "9afb3a9bff57034002cf1d182e0dbf47",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/workspace/9afb3a9bff57034002cf1d182e0dbf47"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:20:03.268135+00:00",
+          "experiment_id": "main/FinanceIQ_gen/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "d4577ad55ec7efa00de31c4e5260fd2cbb554ab6682eee0e3ef8b5752e928727"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "32c1cfe596391caf69a9d8d7eaee9bf0e194a8a27143a2498550b840027ca47b",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "FinanceIQ_gen",
+        "data_limit": 2000,
+        "experiment_id": "main/FinanceIQ_gen/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_data_analysis/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "bbf3f632da2c5db611f20fb3e9ecf4991ac281091021029a41a9a47cc6e2a2c9",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:54:49.295166+00:00",
+            "experiment_id": "main/tablebench_data_analysis/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 33,
+          "max_steps": 33,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/workspace/.ft_model_checkpoints/6c2e11bd4579126d5eb8b44ac7bbb49e/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/workspace/.ft_model_checkpoints/6c2e11bd4579126d5eb8b44ac7bbb49e/formal_training",
+          "training_method": "lora",
+          "workspace_id": "6c2e11bd4579126d5eb8b44ac7bbb49e",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/workspace/6c2e11bd4579126d5eb8b44ac7bbb49e"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:54:49.295166+00:00",
+          "experiment_id": "main/tablebench_data_analysis/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "9b76c7a848f714c3e346c3f9038403c4e5048fdc9500b9e6cff06cd438ac09c2"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "8e4e2a36626d84202edc474eb23bc2e443d8650571574ac1ede50c4079080112",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_data_analysis",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_data_analysis/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_fact_checking/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "2546e1fcd056d2bcb2085f4e72026bbeb61a838627dfa5f200eb7dc3e7ead275",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T07:28:29.713302+00:00",
+            "experiment_id": "main/tablebench_fact_checking/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/workspace/.ft_model_checkpoints/09d3a9c0791a419bbe3f53b6bdc2b542/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/workspace/.ft_model_checkpoints/09d3a9c0791a419bbe3f53b6bdc2b542/formal_training",
+          "training_method": "lora",
+          "workspace_id": "09d3a9c0791a419bbe3f53b6bdc2b542",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/workspace/09d3a9c0791a419bbe3f53b6bdc2b542"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T07:28:29.713302+00:00",
+          "experiment_id": "main/tablebench_fact_checking/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "fffb5ce94254459d3040b43c525f429de97c8b2f304dcc4cabc59d6a130d3bb0"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "293f25ba936c2d3852880552bae4cbf652f918843d2fcfbc4a6b5f3d7cc949d8",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_fact_checking",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_fact_checking/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_fact_checking__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "9f7d9e270321b98ead1875679208f7c222af00a65aea9b623d2d16518d73ae03",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T11:52:56.697677+00:00",
+            "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/workspace/.ft_model_checkpoints/5a9d14f080c34aea9c5ab7a050d99463/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/workspace/.ft_model_checkpoints/5a9d14f080c34aea9c5ab7a050d99463/formal_training",
+          "training_method": "lora",
+          "workspace_id": "5a9d14f080c34aea9c5ab7a050d99463",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/workspace/5a9d14f080c34aea9c5ab7a050d99463"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T11:52:56.697677+00:00",
+          "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "ace87a65843f51bb205855770306cbd73a33ce80e2254538db2e714a36ab9405"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "ec9508eb76988927cc2e6204f127e18d3d0a4009ae376e6ee2a24488334db617",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_numerical_reasoning",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_numerical_reasoning/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_numerical_reasoning__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_visualization/run-1",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "3ed668de4a332300198016de2c93a116d0603dd5a02296a7209bca9a6226be8c",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:20:03.329983+00:00",
+            "experiment_id": "main/tablebench_visualization/run-1",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/workspace/.ft_model_checkpoints/bff0d73c7ec170e13c23df36c1d4d994/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/workspace/.ft_model_checkpoints/bff0d73c7ec170e13c23df36c1d4d994/formal_training",
+          "training_method": "lora",
+          "workspace_id": "bff0d73c7ec170e13c23df36c1d4d994",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/workspace/bff0d73c7ec170e13c23df36c1d4d994"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:20:03.329983+00:00",
+          "experiment_id": "main/tablebench_visualization/run-1",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "41c4f388b99e1cf7bd2668ad29d2f9fe10bcc201a3caf390c5250ca1798a0f66"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "c92f3d5cc3aa9d7853a8b8220829a4cf6337031408c3409a1ca19da3827e0204",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_visualization",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_visualization/run-1",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-1",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 2,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_edit/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "5656527bcc33e9c3a8190f8f8a2a7b0d37e7c03b411f807c5fc6458055229d1d",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T10:52:01.841071+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 500,
+          "max_steps": 500,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/5c7be5f4995943f2b2ced2092c4109f0/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/5c7be5f4995943f2b2ced2092c4109f0/formal_training",
+          "training_method": "lora",
+          "workspace_id": "5c7be5f4995943f2b2ced2092c4109f0",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/5c7be5f4995943f2b2ced2092c4109f0"
+        },
+        {
+          "evidence_signature": "67459b4d7adca4bdf37346d16930da8e18581f638979166391643491733cbd2a",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T10:52:01.841071+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 1250,
+          "max_steps": 1250,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/dd4ccfae55b14310bd3c3732859ca684/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/.ft_model_checkpoints/dd4ccfae55b14310bd3c3732859ca684/formal_training",
+          "training_method": "lora",
+          "workspace_id": "dd4ccfae55b14310bd3c3732859ca684",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/workspace/dd4ccfae55b14310bd3c3732859ca684"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T10:52:01.841071+00:00",
+          "experiment_id": "main/chemcotbench_mol_edit/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "2bc2c84459b7e29c1eeb21aaf0ae9c5c96c802d092df0d09772867fdd683461b"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "7be207c7d828e98ddd5d839f17cf841e31f8d49b0f858ba75c377fdfb3e4633c",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 2,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_edit",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_edit/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_reaction/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "59e66068a6d759a0047a182d6176c5a95ffd95bdd64d1a0d4f9003ac25bec9a1",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T10:39:02.998269+00:00",
+            "experiment_id": "main/chemcotbench_reaction/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/workspace/.ft_model_checkpoints/3527d34256004efabe7858c08197c802/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/workspace/.ft_model_checkpoints/3527d34256004efabe7858c08197c802/formal_training",
+          "training_method": "lora",
+          "workspace_id": "3527d34256004efabe7858c08197c802",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/workspace/3527d34256004efabe7858c08197c802"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T10:39:02.998269+00:00",
+          "experiment_id": "main/chemcotbench_reaction/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "df7b0e18a0adda2e412e9b80c65ba5c00ba442d978fd7e1d5f7ed4d564b30354"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "70d26bc7136cd5edd8412c371646500cb82114551244cb5cac8f42a73e0d5ebb",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_reaction",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_reaction/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_reaction__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/FinanceIQ_gen/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "b1d41ae4917c3a35011038d95d0e7441d763c41c642d18a09bc15ae4a2b52bc4",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-07T22:18:14.365191+00:00",
+            "experiment_id": "main/FinanceIQ_gen/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 189,
+          "max_steps": 189,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/workspace/.ft_model_checkpoints/8491abf8b4ee00bb01f01b1701df695d/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/workspace/.ft_model_checkpoints/8491abf8b4ee00bb01f01b1701df695d/formal_training",
+          "training_method": "lora",
+          "workspace_id": "8491abf8b4ee00bb01f01b1701df695d",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/workspace/8491abf8b4ee00bb01f01b1701df695d"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-07T22:18:14.365191+00:00",
+          "experiment_id": "main/FinanceIQ_gen/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "4155769ac17e73ca85a7a2c7f584b6eae7b0e859deca9517c3fb37016baea2c0"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "94166e90afffb409262e8e8d217f1688680a711b0e524672ae9331bcf4fd4c29",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "FinanceIQ_gen",
+        "data_limit": 2000,
+        "experiment_id": "main/FinanceIQ_gen/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__FinanceIQ_gen__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_data_analysis/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "d8acb664ef6a5b441236cf4b31909fb27a64b91164b6e273fd2ac590c4a5bfb2",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T15:54:49.287920+00:00",
+            "experiment_id": "main/tablebench_data_analysis/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 33,
+          "max_steps": 33,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/workspace/.ft_model_checkpoints/12ac0c194c460d219dd8753a8e7ec395/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/workspace/.ft_model_checkpoints/12ac0c194c460d219dd8753a8e7ec395/formal_training",
+          "training_method": "lora",
+          "workspace_id": "12ac0c194c460d219dd8753a8e7ec395",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/workspace/12ac0c194c460d219dd8753a8e7ec395"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T15:54:49.287920+00:00",
+          "experiment_id": "main/tablebench_data_analysis/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "8e710cbf499c1979d3be6906cf3b0b3f3f1f17116cf13a95e08a08cb3cb0470b"
+      },
+      "retry_reasons": [
+        "state='failed'",
+        "status_records_formal_errors",
+        "status_evidence_signatures_mismatch",
+        "status_formal_method_mismatch",
+        "status_method_lock_mismatch"
+      ],
+      "status_sha256": "31b82ff50c07070ca735443d21196cfb650565804ff777264a04510dd596d45c",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_data_analysis",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_data_analysis/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_data_analysis__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/tablebench_visualization/run-2",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "9219f3acf72ee7ee05a601205dfb9befb6c44412f7c88dbb9e608257800c3262",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T11:57:24.430626+00:00",
+            "experiment_id": "main/tablebench_visualization/run-2",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 375,
+          "max_steps": 375,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/workspace/.ft_model_checkpoints/e9824c0d04cd49c5aca4ce2ae6ebe731/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/workspace/.ft_model_checkpoints/e9824c0d04cd49c5aca4ce2ae6ebe731/formal_training",
+          "training_method": "lora",
+          "workspace_id": "e9824c0d04cd49c5aca4ce2ae6ebe731",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/workspace/e9824c0d04cd49c5aca4ce2ae6ebe731"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T11:57:24.430626+00:00",
+          "experiment_id": "main/tablebench_visualization/run-2",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "cde2b4b9114a9c806824eb14cfbc7558c8affcade0e410cbf0f14a189d217a75"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "3062a79c4cd5bf7d2cfd8fe659fb91914de676e31ee28bdd9cbd37eb8f58c536",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "tablebench_visualization",
+        "data_limit": 2000,
+        "experiment_id": "main/tablebench_visualization/run-2",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__tablebench_visualization__run-2",
+      "training_policy": "paper"
+    },
+    {
+      "action": "repair_status",
+      "durable_record_count": 1,
+      "durable_repair_reasons": [],
+      "durable_repairable": true,
+      "durable_scan_errors": [],
+      "experiment_id": "main/chemcotbench_mol_edit/run-3",
+      "formal_expected_samples": 2000,
+      "formal_training_evidence": [
+        {
+          "evidence_signature": "fc7bf92b82c38eb93276be05af651340e08cc49ae89a2160b575f9bfa1b00f3b",
+          "expected_samples": 2000,
+          "formal_training_method_lock": {
+            "created_at": "2026-09-08T13:47:26.420645+00:00",
+            "experiment_id": "main/chemcotbench_mol_edit/run-3",
+            "schema_version": 1,
+            "training_method": "lora",
+            "training_policy": "paper"
+          },
+          "global_step": 252,
+          "max_steps": 252,
+          "output_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/workspace/.ft_model_checkpoints/b86e7fa79da145e597196d87d64d5fde/output",
+          "provenance_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/workspace/.ft_model_checkpoints/b86e7fa79da145e597196d87d64d5fde/formal_training",
+          "training_method": "lora",
+          "workspace_id": "b86e7fa79da145e597196d87d64d5fde",
+          "workspace_path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/workspace/b86e7fa79da145e597196d87d64d5fde"
+        }
+      ],
+      "method_lock": {
+        "path": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3/formal_training_method.json",
+        "record": {
+          "created_at": "2026-09-08T13:47:26.420645+00:00",
+          "experiment_id": "main/chemcotbench_mol_edit/run-3",
+          "schema_version": 1,
+          "training_method": "lora",
+          "training_policy": "paper"
+        },
+        "sha256": "84a9e17652edc83805364bd40d5275f8c324735873cc28ba809a5186d796b089"
+      },
+      "retry_reasons": [
+        "state='failed'"
+      ],
+      "status_sha256": "d286235ba7b3d3bcc407c410dd40ab3f3c6f939adeeb5f3e2e9ab28f37c57331",
+      "status_state": "failed",
+      "strict": false,
+      "strict_record_count": 1,
+      "strict_scan_errors": [],
+      "task_manifest": {
+        "benchmark": "chemcotbench_mol_edit",
+        "data_limit": 2000,
+        "experiment_id": "main/chemcotbench_mol_edit/run-3",
+        "formal_expected_samples": 2000,
+        "model": "Qwen/Qwen2.5-7B-Instruct",
+        "planner": "gpt-5.2",
+        "suite": "main",
+        "timeout": "12h"
+      },
+      "task_root": "/data/github/RD-Agent/finetune_files/logs/paper-matrix/h20-gpt56-paper-2k-v2/main__chemcotbench_mol_edit__run-3",
+      "training_policy": "paper"
+    }
+  ],
+  "training_policy": "paper"
+}
+Prepared retry archive: /data/github/RD-Agent/finetune_files/quarantine/matrix-retries/h20-gpt56-paper-2k-v2/20260909T032802+0800
